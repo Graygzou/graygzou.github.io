@@ -51,6 +51,7 @@ a:hover
 	margin-top: 60px;
 }
 
+/* First part of games*/
 #game
 {
   display: flex;
@@ -58,9 +59,18 @@ a:hover
 	margin-top:42px;
 }
 
+.first-item
+{
+  order: -1;
+  text-align: right;
+  margin-right: 30px;
+  margin-left: 0px;
+}
+
 #game a
 {
   align-self: center;
+  width:20%;
 }
 
 #gifgame
@@ -69,9 +79,11 @@ a:hover
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
 	border-radius: 20px;
-	width:175px;
-	height:150px;
-
+  width: 100%;
+  max-width: 220px;
+  min-width: 100px;
+  max-height: 220px;
+  min-height: 100px;
 	-webkit-box-shadow: 0px 2px 6px 0px rgba(44,46,80,0.25);
 	-moz-box-shadow: 0px 2px 6px 0px rgba(44,46,80,0.25);
 	box-shadow: 0px 2px 6px 0px rgba(44,46,80,0.25);
@@ -82,9 +94,11 @@ a:hover
   width: 66px;
 }
 
-#textgame
+.textgame
 {
-	display:inline-block;
+	display:flex;
+  flex-direction: column;
+  justify-content: center;
 	/*height: 175px;*/
 	margin-left: 30px;
   width: 75%;
@@ -133,20 +147,22 @@ a:hover
 	color: #fff;
 	font-family: consolas;
 	font-size: 18px;
-	margin-top: -10px;
 }
 
 #top
 {
-	display:block;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 	margin-left: 40px;
 	margin-top: 40px;
 }
 
 
-#link
+.link
 {
-	display:inline-block;
+  display: inline-block;
 	//background-color: #00ff00;
 	width:170px;
 	height:50px;
@@ -154,10 +170,18 @@ a:hover
 	color: #fff;
 	font-family: consolas;
 	font-size: 22px;
-
+  text-align: center;
 }
 
-#iconlink
+.link a
+{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconlink
 {
 	display:inline-block;
 	border:1px solid #;
@@ -169,14 +193,16 @@ a:hover
 	float:left;
 }
 
-#textlink
+.textlink
 {
-	width: 100px;
-	margin-left: 65px;
+  display: inline-block;
+  text-align: left;
+  min-width: 100px;
+  margin-left: 10px;
 	margin-top: 11px;
 }
 
-#link a:hover
+.link a:hover
 {
 
 	//font-weight: bold;
@@ -187,6 +213,8 @@ a:hover
 
 
 }
+
+/* Second parts of games */
 
 #minimain
 {
@@ -241,5 +269,4 @@ a:hover
 	color: #fff;
 	font-family: consolas;
 	font-size: 16px;
-	margin-top: -5px;
 }
