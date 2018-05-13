@@ -74,10 +74,12 @@ a:hover
 .game a
 {
   align-self: center;
+  position: relative;
 }
 
 #gifgame
 {
+
 	border:1px solid #;
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
@@ -90,6 +92,20 @@ a:hover
 	-webkit-box-shadow: 0px 2px 6px 0px rgba(44,46,80,0.25);
 	-moz-box-shadow: 0px 2px 6px 0px rgba(44,46,80,0.25);
 	box-shadow: 0px 2px 6px 0px rgba(44,46,80,0.25);
+}
+
+.playicon
+{
+  opacity: 0;
+  margin: auto;
+  width: 100%;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.game > a:hover :nth-child(2)
+{
+  opacity: 1.0;
 }
 
 .projectIcon
@@ -244,14 +260,13 @@ a:hover
 .externallinks
 {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
 }
 
 .externallinks a
 {
-  width: 200px;
-  margin-bottom: 10px;
+  margin-right: 10px;
 }
 
 .externallinks a:hover
