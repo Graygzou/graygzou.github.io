@@ -96,13 +96,13 @@
 
       <!-- First section -->
       <div class="game">
-        <a href="javascript:;" id="playButton">
-          <img src="resources/gif/buoyancy.gif" id="penguin" class="gifgame">
+        <a href="javascript:;" id="playButtonPenguin">
+          <img src="resources/gif/buoyancy.gif" class="gifgame">
           <i class="fas fa-play playicon fa-4x"></i>
         </a>
         <div class="textgame">
           <div class="titlegame">
-            <a href="projets.html?penguinpanic"><img src="resources/image/penguin.png" class="projectIcon"> Penguin Panic!</a>
+            <a href="projets.html?penguinpanic">Penguin Panic!</a>
           </div>
           <div class="infogame">
             <div>
@@ -199,10 +199,13 @@
 
       <!-- Second section -->
       <div class="game">
-        <a href=""><img src="resources/gif/buoyancy.gif" id="metenorage" class="gifgame"><i class="fas fa-play playicon fa-4x"></i></a>
+        <a href="javascript:;" id="playButtonMetenorage">
+          <img src="resources/gif/buoyancy.gif" class="gifgame">
+          <i class="fas fa-play playicon fa-4x"></i>
+        </a>
         <div class="textgame">
           <div class="titlegame">
-            <a href="projets.html?braincontrol"><img src="resources/image/zombie.png" class="projectIcon"> Metenorage </a>
+            <a href="projets.html?braincontrol">Metenorage </a>
           </div>
           <div class="infogame">
             <div>
@@ -257,10 +260,13 @@
       </div>
 
       <div class="game">
-        <a href="projets.html?nativeruins"><img src="resources/gif/waves.gif" id="raven" class="gifgame"><i class="fas fa-play playicon fa-4x"></i></a>
+        <a href="javascript:;" id="playButtonRaven">
+          <img src="resources/gif/waves.gif" class="gifgame">
+          <i class="fas fa-play playicon fa-4x"></i>
+        </a>
         <div class="textgame">
           <div class="titlegame">
-            <a href="projets.html?penguinpanic"><img src="resources/image/spider.png" class="projectIcon"> Raven</a>
+            <a href="projets.html?penguinpanic">Raven</a>
           </div>
           <div class="infogame">
             <div>
@@ -358,27 +364,15 @@
       <!-- Modal content -->
       <div class="modal-content">
         <span id="close">&times;</span>
-        <iframe id="penguin" src="https://www.youtube.com/embed/2tzLruIYMcg?enablejsapi=1&version=3&playerapiid=ytplayer" allowfullscreen="allowfullscreen"
+        <iframe src="https://www.youtube.com/embed/2tzLruIYMcg?enablejsapi=1" allowfullscreen="allowfullscreen"
         mozallowfullscreen="mozallowfullscreen"
         msallowfullscreen="msallowfullscreen"
         oallowfullscreen="oallowfullscreen"
         webkitallowfullscreen="webkitallowfullscreen" id="video">
-        </iframe>
-        <iframe id="metenorage" src="https://www.youtube.com/embed/2tzLruIYMcg?enablejsapi=1&version=3&playerapiid=ytplayer" allowfullscreen="allowfullscreen"
-        mozallowfullscreen="mozallowfullscreen"
-        msallowfullscreen="msallowfullscreen"
-        oallowfullscreen="oallowfullscreen"
-        webkitallowfullscreen="webkitallowfullscreen" id="video">
-        </iframe>
-        <iframe id="raven" src="https://www.youtube.com/embed/2tzLruIYMcg?enablejsapi=1&version=3&playerapiid=ytplayer" allowfullscreen="allowfullscreen"
-        mozallowfullscreen="mozallowfullscreen"
-        msallowfullscreen="msallowfullscreen"
-        oallowfullscreen="oallowfullscreen"
-        webkitallowfullscreen="webkitallowfullscreen" id="video">
-        </iframe>
-      </div>
+      </iframe>
     </div>
   </div>
+</div>
 
 
 </body>
@@ -389,7 +383,7 @@
 
 // Inject YouTube API script
 var tag = document.createElement('script');
-tag.src = "https://www.youtube.com/player_api";
+tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
@@ -411,15 +405,27 @@ var modal = document.getElementById('myModal');
 // Get the <span> element that closes the modal
 var span = document.getElementById("close");
 
-
+function onPlayerReady(event) {
   // bind events
-  var playButton = document.getElementById("playButton");
-  console.log("ici");
-  playButton.addEventListener("click", function() {
-    console.log("click");
+  var playButtonPenguin = document.getElementById("playButtonPenguin");
+  playButtonPenguin.addEventListener("click", function() {
     modal.style.display = "block";
-    document.getElementById(event.target.id).style.display = "block";
     player.playVideo();
+    player.loadVideoByUrl('https://www.youtube.com/v/2tzLruIYMcg?version=3',0,'large');
+  });
+
+  var playButtonMetenorage = document.getElementById("playButtonMetenorage");
+  playButtonMetenorage.addEventListener("click", function() {
+    modal.style.display = "block";
+    player.playVideo();
+    player.loadVideoByUrl('https://www.youtube.com/v/ORAGPZGMJg4?version=3',0,'large');
+  });
+
+  var playButtonRaven = document.getElementById("playButtonRaven");
+  playButtonRaven.addEventListener("click", function() {
+    modal.style.display = "block";
+    player.playVideo();
+    player.loadVideoByUrl('https://www.youtube.com/v/ORAGPZGMJg4?version=3',0,'large');
   });
 
   var pauseButton = document.getElementById("close");
@@ -427,15 +433,16 @@ var span = document.getElementById("close");
     modal.style.display = "none";
     player.pauseVideo();
   });
-  /*
+}
 
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-      player.pauseVideo();
-    }
-  }*/
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    player.pauseVideo();
+  }
+}
+
 
 </script>
 </html>
