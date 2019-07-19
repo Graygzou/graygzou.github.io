@@ -1,5 +1,4 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -15,7 +14,6 @@
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="resources/image/chat.ico">
-
 </head>
 <body>
   <div id="content">
@@ -351,9 +349,7 @@
 
 
       <p id="intro">
-        “People call me a perfectionist, but I'm not. I'm a rightist. I do something until it's right, and then I move on to the next thing.”
-        <br>
-        - James Cameron
+        “Jack of all trades, master of none.”
       </p>
 
     </div>
@@ -375,9 +371,293 @@
 </div>
 
 
+<img src="https://github.com/Graygzou/native-ruins/blob/master/Images/TransformationWheel.png">
+<img src="https://api.github.com/repos/Graygzou/native-ruins/contents/Images/TransformationWheel.png?ref=master">
+<img src="https://api.github.com/repos/Graygzou/native-ruins/contents/Images/TransformationWheel.png?ref=master">
+<img src="https://raw.githubusercontent.com/Graygzou/native-ruins/master/Images/TransformationWheel.png">
+
 </body>
 
 <!-- JS -->
+<script type="text/javascript">
+function displayRepos(response) {
+  var meta = response.meta;
+  var data = response.data;
+  console.log(meta);
+  console.log(data);
+
+  data.forEach(displayRepo);
+}
+
+var isFirst = true;
+
+function displayRepo(repoJSON, index, array) {
+
+  if(!repoJSON["private"] && repoJSON["has_pages"]) {
+
+    console.log(repoJSON["name"] + "\n" + repoJSON["description"] + "\n" + repoJSON["html_url"] + "\n" + repoJSON["language"] + "\n" + repoJSON["updated_at"] + "\n");
+
+    var d = new Date(repoJSON["updated_at"]);
+    console.log(d.getDate() + '/' + (d.getMonth()+1) + '/' + d.getFullYear());
+
+    // Retrive the game div
+    var mainGameDiv = document.getElementById('minimainleft');
+
+    if(false) {
+      // Create a div for a game/project I want to highlight with a bigger picture than other
+      mainGameDiv.append(CreateGame(repoJSON));
+    } else {
+      // Create a div for a secondary game/project with a smaller picture with more left indentation.
+      mainGameDiv.append(CreateMiniRepositoryThumbnail(repoJSON));
+    }
+  }
+}
+
+function CreateGame(repoJSON) {
+  // TODO
+}
+
+function CreateMiniRepositoryThumbnail(repoJSON) {
+  //var miniMainLeftDiv = CreateElement("div", "minimainleft");
+    var gameDiv = null;
+    if(isFirst) {
+      isFirst = false;
+      gameDiv = CreateElement("div", null, "game");
+    } else {
+      gameDiv = CreateElement("div", null, "minigame");
+    }
+      var imageThumbnail = CreateImage(repoJSON, gameDiv);
+      var textGameDiv = CreateElement("div", null, "textgame");
+        var title = CreateTitle(repoJSON);
+        var infoGameDiv = CreateElement("div", null, "infogame");
+          var div = CreateElement("div");
+            var descriptionDiv = CreateElement("div", "minidescgame", null, repoJSON["description"]);
+            var topicsDiv = RequestTopics(repoJSON);
+          div.append(descriptionDiv);
+        infoGameDiv.append(div);
+      textGameDiv.appendChild(title);
+      textGameDiv.appendChild(infoGameDiv);
+    gameDiv.appendChild(imageThumbnail);
+    gameDiv.appendChild(textGameDiv);
+  //miniMainLeftDiv.appendChild(gameDiv);
+
+  return gameDiv;
+}
+
+function CreateTitle(repoJSON) {
+  var miniTitleGameDiv = CreateElement("div", null, "minititlegame");
+  var titleLink = CreateElement("a", null, null, repoJSON["name"]);
+  miniTitleGameDiv.append(titleLink);
+  return miniTitleGameDiv;
+}
+
+function RequestImage(repoJSON) {
+  /*
+  BlobBuilder = window.MozBlobBuilder || window.WebKitBlobBuilder || window.BlobBuilder;
+  var url                 = "https://api.github.com/repos/Graygzou/native-ruins/contents/Images/TransformationWheel.png";
+  var request             = new XMLHttpRequest();
+  request.open ("GET", url, false);
+  request.responseType    = "arraybuffer";
+  request.send (null);
+
+  if (request.status === 200) {
+    var bb              = new BlobBuilder ();
+    bb.append (request.response); // Note: not request.responseText
+
+    var blob            = bb.getBlob ('image/png');
+    var reader          = new FileReader ();
+    reader.onload       = function (zFR_Event) {
+        $("body").prepend ('<p>New image: <img src="' + zFR_Event.target.result + '"></p>')
+    };
+
+    reader.readAsDataURL (blob);
+  }*/
+
+
+  // Create a new request object
+  var request = new XMLHttpRequest();
+  // Initialize a request
+  request.onload = CreateImage();
+  //+ repoJSON["name"] +
+  var url = "https://raw.githubusercontent.com/Graygzou/native-ruins/master/Images/TransformationWheel.png";
+  request.open('get', url);
+  request.responseType = 'blob';
+  // Send it
+  request.send();
+
+  /*
+  var xhr = new XMLHttpRequest();
+
+		xhr.open('GET', 'https://api.github.com/repos/Graygzou/native-ruins/contents/Images/TransformationWheel.png', true);
+
+		xhr.onload = function(){
+			var img = new Image();
+			var response = xhr.responseText;
+			var binary = ""
+
+      console.log(response);
+
+			for(i=0;i<response.length;i++){
+				binary += String.fromCharCode(response.charCodeAt(i) & 0xff);
+			}
+
+			img.src = 'data:image/jpeg;base64,' + btoa(binary);
+
+			var canvas = document.getElementById('showImage');
+			var context = canvas.getContext('2d');
+
+			context.drawImage(img,0,0);
+			var snapshot = canvas.toDataURL("image/png");
+			var twinImage = document.getElementById('twinImg');
+			twinImage.src = snapshot;
+
+		}
+
+		xhr.overrideMimeType('text/plain; charset=x-user-defined');
+		xhr.send();
+    */
+    /*
+    // Standard XHR to load an image
+      var body = document.querySelector('body'),
+          myImage = new Image();
+
+      myImage.crossOrigin = ""; // or "anonymous"
+
+      var request = new XMLHttpRequest();
+      request.open('GET', 'https://api.github.com/repos/Graygzou/native-ruins/contents/Images/TransformationWheel.png');
+      request.responseType = 'blob';
+
+      // When the request loads, check whether it was successful
+      request.onload = function () {
+          if (request.status === 200) {
+              // If successful, resolve the promise by passing back the request response
+              //resolve(request.response);
+              console.log(request.response)
+              var imageURL = window.URL.createObjectURL(request.response);
+              myImage.src = imageURL;
+              body.appendChild(myImage);
+          } else {
+              // If it fails, reject the promise with a error message
+              reject(new Error('Image didn\'t load successfully; error code:' + request.statusText));
+          }
+      };
+
+      request.onerror = function () {
+          // Also deal with the case when the entire request fails to begin with
+          // This is probably a network error, so reject the promise with an appropriate message
+          reject(new Error('There was a network error.'));
+      };
+
+      // Send the request
+      request.send();
+    */
+}
+
+function CreateImage(repoJSON) {
+  console.log(this);
+
+  var img = CreateElement("img", "minipicgame");
+  img.src = "https://raw.githubusercontent.com/Graygzou/" + repoJSON["name"] + "/master/Images/TransformationWheel.png";
+  return img;
+}
+
+function RequestTopics(repoJSON) {
+  var infoGameDiv = CreateElement("div", null, "tagsgame");
+
+  // Create a new request object
+  var request = new XMLHttpRequest();
+  // Initialize a request
+  request.onload = CreateTopics;
+  var url = "https://api.github.com/repos/Graygzou/" + repoJSON["name"] + "/topics";
+  request.open('get', url);
+  //request.setRequestHeader("Content-Type", "application/vnd.github.VERSION.html+json");
+  request.setRequestHeader("Accept", "application/vnd.github.mercy-preview+json");
+  // Send it
+  request.send();
+}
+
+function CreateTopics() {
+  // `this` will refer to the `XMLHTTPRequest` object that executes this function
+  console.log(this.responseText);
+}
+
+function CreateElement(elementType, idAttribute = null, classAttribute = null, text = null) {
+  var resultDiv = document.createElement(elementType);
+
+  if(idAttribute != null) {
+    resultDiv.setAttribute("id", idAttribute);
+  }
+
+  if(classAttribute != null) {
+    resultDiv.setAttribute("class", classAttribute);
+  }
+
+  var textNode = null;
+  if(text != null) {
+    textNode = document.createTextNode(text);
+    resultDiv.appendChild(textNode);
+  }
+
+  return resultDiv;
+}
+
+/*
+<div id="minimainleft">
+  <div class="game">
+    <a href=""><img src="resources/image/native-ruins.png" id="minipicgame"></a>
+    <div class="textgame">
+      <div class="minititlegame">
+        <a href="">Native Ruins</a>
+      </div>
+      <div class="infogame">
+        <div>
+          <div id="minidescgame">
+            3D open world where you have to solve puzzles in order to escape an island. Game Engine made with the LWJGL library.
+          </div>
+          <div class=tagsgame>
+            <span class="tag">Unity</span>
+            <span class="tag">C#</span>
+            <span class="tag">3D</span>
+            <span class="tag">Open-World</span>
+            <span class="tag">Adventure</span>
+            <span class="tag">Puzzles</span>
+            <span class="tag">Steering Behavior</span>
+            <span class="tag">Finite State Machine</span>
+            <span class="tag">CutScenes</span>
+            <span class="tag">Physical inventory</span>
+          </div>
+        </div>
+        <div class="externallinks right">
+          <a href="https://github.com/Graygzou/native-ruins"><i class="fab fa-github fa-2x"></i></a>
+          <a href="http://gregoireboiron.alwaysdata.net/projets.html?nativeruins"><i class="fas fa-globe fa-2x"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+*/
+
+function doesFileExist(urlToFile) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('HEAD', urlToFile, false);
+    xhr.send();
+
+    if (xhr.status == "404") {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+function toto(response) {
+  var meta = response.meta;
+  var data = response.data;
+  console.log(meta);
+  console.log(data);
+}
+
+</script>
+<script src="https://api.github.com/repos/Graygzou/Image-based-meshing/git/blobs?callback=toto"></script>
+<script src="https://api.github.com/users/Graygzou/repos?callback=displayRepos"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
 <script>
 
@@ -442,7 +722,5 @@ window.onclick = function(event) {
     player.pauseVideo();
   }
 }
-
-
 </script>
 </html>
