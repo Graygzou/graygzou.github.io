@@ -4,9 +4,7 @@ python:
   - "3.7"
 # command to install dependencies
 install:
-  - pip install requests==2.22.0
-  - pip install ruamel.yaml==0.15.100
-  - pip install pytest
+  - pip install -r requirements.txt
 
 script:
   - python websiteGen.py GITHUB_API_TOKEN
