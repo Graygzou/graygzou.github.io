@@ -127,7 +127,7 @@ def addRepository(file, username, jsonRepo, isHighlighted, githubToken):
         file.write("""              <h2 class="titlegame">""")
     else:
         file.write("""              <h2 class="minititlegame">""")
-    file.write("""                <a href="">""" + jsonRepo["name"] + """</a>""")
+    file.write("""                <a href=\"""" + jsonRepo["homepage"] + """/">""" + jsonRepo["name"] + """</a>""")
     file.write("""                <img alt="Website" src="https://img.shields.io/website/https/github.com/""" + username + """/""" + jsonRepo["name"] + """.svg\">""")
     file.write("""              </h2>""")
     file.write("""              <div class="floatSide">""")
