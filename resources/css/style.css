@@ -8,14 +8,8 @@
 
 html
 {
-  background: #000; /* Old browsers */
-  background: -moz-linear-gradient(top,  #000 10%, #3737d1 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%,#3737d1), color-stop(100%,#dc5494)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #000 10%,#3737d1 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #000 10%,#3737d1 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #000 10%,#3737d1 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  #000 10%,#3737d1 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f886bc', endColorstr='#3737d1',GradientType=0 ); /* IE6-9 */
+  background: #222;
+  background-color: #113;
 }
 
 
@@ -32,7 +26,7 @@ a
 
 a:hover
 {
-	color: #f0050f;
+	color: #9a9a4d;
 	text-decoration: none;
 }
 
@@ -62,7 +56,7 @@ h1
 {
   display: flex;
   flex-direction: row;
-	margin-top:42px;
+	margin-top: 22px;
 }
 
 /* Helpers */
@@ -284,9 +278,10 @@ h1
   color: white;
   padding-left: 5px;
   padding-right: 5px;
+  border-radius: 5px;
   /*border-radius: 8px;*/
 
-  background-color: rgb(1, 41, 53);
+  background-color: rgb(105, 120, 3);
   border: 2px solid rgb(1, 41, 53);
 }
 
@@ -309,7 +304,7 @@ h1
 
 .externallinks a:hover
 {
-	color: #f0050f;
+	color: #9a9a4d;
 	text-decoration: none;
 }
 
@@ -324,7 +319,6 @@ h1
 {
 	display:block;
 	margin-left: 10%;
-	margin-top: 60px;
 }
 
 #minimainright
