@@ -36,6 +36,12 @@ a:hover
 	text-decoration: none;
 }
 
+h1
+{
+  color: white;
+  text-align: center;
+}
+
 #content
 {
 	display:block;
@@ -46,9 +52,9 @@ a:hover
 #main
 {
 	display:block;
-	margin-left: 60px;
-	margin-top: 60px;
-  margin-right: 60px;
+	padding-left: 4%;
+	padding-top: 60px;
+  margin-right: 1%;
 }
 
 /* First part of games*/
@@ -79,18 +85,18 @@ a:hover
 
 .gifgame
 {
-	border:1px solid #;
-	-webkit-border-radius: 20px;
-	-moz-border-radius: 20px;
-	border-radius: 20px;
+  border:1px solid #;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
   width: 100%;
-  max-width: 220px;
-  min-width: 100px;
-  max-height: 220px;
-  min-height: 100px;
-	-webkit-box-shadow: 0px 2px 6px 0px rgba(44,46,80,0.25);
-	-moz-box-shadow: 0px 2px 6px 0px rgba(44,46,80,0.25);
-	box-shadow: 0px 2px 6px 0px rgba(44,46,80,0.25);
+  max-width: 150px;
+  min-width: 150px;
+  max-height: 150px;
+  min-height: 150px;
+  -webkit-box-shadow: 0px 2px 6px 0px rgba(44,46,80,0.25);
+  -moz-box-shadow: 0px 2px 6px 0px rgba(44,46,80,0.25);
+  box-shadow: 0px 2px 6px 0px rgba(44,46,80,0.25);
 }
 
 .playicon
@@ -112,6 +118,15 @@ a:hover
   width: 66px;
 }
 
+.repoHeader
+{
+  display:flex;
+  flex-direction: row;
+  align-self: left;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .textgame
 {
 	display:flex;
@@ -125,12 +140,24 @@ a:hover
   width: 100%;
 }
 
+/*
+.floatSide
+{
+  display:inline;
+  width: auto;
+  text-align: center;
+}*/
+
 .titlegame
 {
 	color: #fff;
 	font-family: 'Noto Serif';
 	font-style: italic;
 	font-size: 60px;
+  /* Remove h2 style */
+  margin: 0;
+  font-weight: normal;
+
 	/*margin-top: 10px;*/
 	/*letter-spacing: 6px;*/
 
@@ -141,8 +168,6 @@ a:hover
 	color: #fff;
 	font-family: consolas;
 	font-size: 24px;
-	margin-top: 60px;
-	margin-bottom: 60px;
 	text-align: center;
 
 }
@@ -217,8 +242,6 @@ a:hover
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 	border-radius: 6px;
-	width:50px;
-	height:50px;
 	float:left;
 }
 
@@ -231,6 +254,15 @@ a:hover
 	margin-top: 11px;
 }
 
+.repositoryFooter
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: white;
+}
+
 .link a:hover
 {
 
@@ -239,22 +271,28 @@ a:hover
 
 .tagsgame
 {
-  margin-top: 10px;
+  margin-top: 5px;
   line-height: 1.5em;
 }
 
 .tag
 {
+  padding: .3em .9em;
   font-family: Tahoma, Helvetica, Georgia, Arial;
   font-size: 0.75em;
   font-weight: 600;
   color: white;
   padding-left: 5px;
   padding-right: 5px;
-  border-radius: 8px;
+  /*border-radius: 8px;*/
 
   background-color: rgb(1, 41, 53);
   border: 2px solid rgb(1, 41, 53);
+}
+
+.contributorIcon
+{
+  width: 20px;
 }
 
 .externallinks
@@ -305,7 +343,7 @@ a:hover
 }
 
 
-#minipicgame
+.minipicgame
 {
 	display:inline-block;
 	border:1px solid #;
@@ -313,7 +351,9 @@ a:hover
 	-moz-border-radius: 10px;
 	border-radius: 10px;
 	width:90px;
+  min-width: 70px;
 	height:90px;
+  min-height: 70px;
 	float:left;
 
 	-webkit-box-shadow: 0px 1px 5px 0px rgba(44,46,80,0.2);
@@ -323,11 +363,15 @@ a:hover
 
 .minititlegame
 {
+  display: inline-block;
 	color: #fff;
 	font-family: 'Noto Serif';
 	font-style: italic;
 	font-size: 34px;
 	letter-spacing: 4px;
+  /* Remove h2 style */
+  margin: 0;
+  font-weight: normal;
 }
 
 #minidescgame
