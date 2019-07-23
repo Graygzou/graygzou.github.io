@@ -72,7 +72,7 @@ def addRepositoryTopics(file, username, jsonRepo, githubToken):
 # ----------------------------------------------------------------------------------
 def addContributors(file, username, jsonRepo, githubToken):
     url = "https://api.github.com/repos/" + username + "/" + jsonRepo["name"] + "/contributors"
-    headers = {'content-type': 'application/json', 'Accept-Charset': 'UTF-8', 'Authorization': 'token' + githubToken}
+    headers = {'content-type': 'application/json', 'Accept-Charset': 'UTF-8', 'Authorization': 'token ' + githubToken}
     response = requests.get(url, headers=headers)
     contributorsJson = response.json()
     for currentContributor in contributorsJson:
