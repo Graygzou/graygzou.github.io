@@ -4,9 +4,8 @@ python:
   - "3.7"
 # command to install dependencies
 install:
-  - pip install requests=2.22.0
-  - pip install ruamel.yaml=0.15.100
-  - pip install url
+  - pip install requests==2.22.0
+  - pip install ruamel.yaml==0.15.100
 # command to run tests
 script:
   - websiteGen.py GITHUB_API_TOKEN
