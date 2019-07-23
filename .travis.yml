@@ -6,6 +6,10 @@ python:
 install:
   - pip install requests==2.22.0
   - pip install ruamel.yaml==0.15.100
+  - pip install pytest
 # command to run tests
 script:
-  - websiteGen.py GITHUB_API_TOKEN
+  - py.test -v --color=yes --exitfirst --showlocals --durations=5
+
+after_success:
+  - python websiteGen.py GITHUB_API_TOKEN
