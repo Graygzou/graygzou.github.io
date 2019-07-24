@@ -211,7 +211,7 @@ def addHtmlMainSection(file, githubToken):
 def addHtmlTopNav(file):
     # create the array for each
     icons = ["fas fa-user-circle", "fas fa-code", "fas fa-calendar-alt", "fab fa-github", "fab fa-linkedin-in", "fas fa-bolt"];
-    links = ["", "", "", "", "", ""]
+    links = ["", "", "", "https://github.com/Graygzou", "https://www.linkedin.com/in/gregoire-boiron/", "https://gamejolt.com/@GrayGzou"]
     description = ["About", "Skills", "Timeline", "Github", "Linkedin", "GameJolt"]
     
     file.write("""  <h1> Grégoire Boiron Portfolio </h1>""" + endOfFile)
