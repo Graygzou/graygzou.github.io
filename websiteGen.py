@@ -218,7 +218,7 @@ def addHtmlTopNav(file):
     description = ["About", "Skills", "Timeline", "Github", "Linkedin", "GameJolt"]
 
     file.write("""  <h1> Grégoire Boiron Portfolio </h1>""" + endOfFile)
-    file.write("""  <h2> /!\ ..Still under Construction.. /!\ </h2>""" + endOfFile)
+    file.write("""  <h1> /!\ ..still under construction.. /!\ </h1>""" + endOfFile)
     file.write("""  <div id="content">""" + endOfFile)
     file.write("""      <div id="top">""" + endOfFile)
     for i in range(0, len(icons)):
