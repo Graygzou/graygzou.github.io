@@ -96,7 +96,10 @@ def addRepositoryFooter(file, username, jsonRepo, githubToken):
     file.write("""            <footer>""")
     file.write("""              <div class="repositoryFooter">""")
     file.write("""                <div>""")
-    file.write("""                  <i class="fas fa-circle" style=\"""" + findLanguageColor(jsonRepo['language'], githubToken) + """\"></i> """ + jsonRepo['language'])
+    if jsonRepo.get('language') != None:
+        file.write("""                  <i class="fas fa-circle" style=\"""" + findLanguageColor(jsonRepo['language'], githubToken) + """\"></i> """ + jsonRepo['language'])
+    else:
+        file.write("""                  <i class="fas fa-circle" style="color: black;"></i> Undefined""")
     file.write("""                </div>""")
     file.write("""                <div>""")
     file.write("""                  <i class="fas fa-star"></i> """ + str(jsonRepo['stargazers_count']))
@@ -155,14 +158,14 @@ def addRepository(file, username, jsonRepo, isHighlighted, githubToken):
 def containHighlightTag(currentRepository, username, githubToken):
     isHighlighted = False
     tagPattern = "Contributors"
-    
+
     # Check if this repository should be highlighted or not
     url = "https://raw.githubusercontent.com/" + username + "/" + currentRepository["name"] + "/master/README.md"
     headers = {'content-type': 'application/json', 'Accept-Charset': 'UTF-8', "Authorization": "token " + githubToken}
     reponse = requests.get(url, headers=headers)
     if not reponse == None:
         isHighlighted = reponse.text.find(tagPattern) != -1
-        
+
     return isHighlighted
 
 # ----------------------------------------------------------------------------------
@@ -213,7 +216,7 @@ def addHtmlTopNav(file):
     icons = ["fas fa-user-circle", "fas fa-code", "fas fa-calendar-alt", "fab fa-github", "fab fa-linkedin-in", "fas fa-bolt"];
     links = ["", "", "", "https://github.com/Graygzou", "https://www.linkedin.com/in/gregoire-boiron/", "https://gamejolt.com/@GrayGzou"]
     description = ["About", "Skills", "Timeline", "Github", "Linkedin", "GameJolt"]
-    
+
     file.write("""  <h1> Grégoire Boiron Portfolio </h1>""" + endOfFile)
     file.write("""  <div id="content">""" + endOfFile)
     file.write("""      <div id="top">""" + endOfFile)
@@ -236,7 +239,7 @@ def addHtmlTopNav(file):
 # ----------------------------------------------------------------------------------
 def addHtmlBody(file, githubToken):
     file.write("""<body>""" + endOfFile)
-    
+
     addHtmlTopNav(file)
     addHtmlMainSection(file, githubToken)
 
