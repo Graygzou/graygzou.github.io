@@ -121,7 +121,7 @@ def addRepositoryFooter(file, username, jsonRepo, githubToken):
 def addRepository(file, username, jsonRepo, isHighlighted, githubToken):
     print("    Generate repository " + jsonRepo["name"] + "...")
     file.write("""        <article class="game">""" + endOfFile)
-    file.write("""          <a href=\"""" + "https://" + username + ".github.io/" + jsonRepo["name"] + "/" + """\">""" + endOfFiles)
+    file.write("""          <a href=\"""" + "https://" + username + ".github.io/" + jsonRepo["name"] + "/" + """\">""" + endOfFile)
     createThumbnailImage(file, username, jsonRepo, isHighlighted, githubToken);
     file.write("""          </a>""")
     file.write("""          <div class="textgame">""" + endOfFile)
