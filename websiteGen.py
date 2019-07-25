@@ -6,10 +6,10 @@
 # This file should maybe be created by reading an html file..
 # Will see later on.
 
-import sys          # To get command line arguments
-import os           # for IO files
+import sys                          # To get command line arguments
+import os                           # for IO files
 from ruamel.yaml import YAML        # for github languages
-import requests     # Useful to make curl request to github API
+import requests                     # Useful to make curl request to github API
 from pathlib import Path
 
 # Static const variables
@@ -62,10 +62,10 @@ def addRepositoryTopics(file, username, jsonRepo, githubToken):
     headers = {'content-type': 'application/json', 'Accept-Charset': 'UTF-8', "Accept": "application/vnd.github.mercy-preview+json", "Authorization": "token " + githubToken}
     r = requests.get(url, headers=headers)
     topicsResponse = r.json()
-    file.write("""                <div class=tagsgame>""")
+    file.write("""                <div class=tagsgame>""" + endOfFile)
     for currentTag in topicsResponse['names']:
-        file.write("""                  <span class="tag">""" + currentTag + """</span>""")
-    file.write("""                </div>""")
+        file.write("""                  <span class="tag">""" + currentTag + """</span>""" + endOfFile)
+    file.write("""                </div>""" + endOfFile)
 
 # ----------------------------------------------------------------------------------
 #                       addContributors
@@ -76,7 +76,7 @@ def addContributors(file, username, jsonRepo, githubToken):
     response = requests.get(url, headers=headers)
     contributorsJson = response.json()
     for currentContributor in contributorsJson:
-        file.write("""                  <img src=\"""" + currentContributor["avatar_url"] + """\" class="contributorIcon" >""")
+        file.write("""                  <img src=\"""" + currentContributor["avatar_url"] + """\" class="contributorIcon" >""" + endOfFile)
 
 # ----------------------------------------------------------------------------------
 #                       findLanguageColor
@@ -93,26 +93,26 @@ def findLanguageColor(colorName, githubToken):
 #                       addRepositoryFooters
 # ----------------------------------------------------------------------------------
 def addRepositoryFooter(file, username, jsonRepo, githubToken):
-    file.write("""            <footer>""")
-    file.write("""              <div class="repositoryFooter">""")
-    file.write("""                <div>""")
+    file.write("""            <footer>""" + endOfFile)
+    file.write("""              <div class="repositoryFooter">""" + endOfFile)
+    file.write("""                <div>""" + endOfFile)
     if jsonRepo.get('language') != None:
-        file.write("""                  <i class="fas fa-circle" style=\"""" + findLanguageColor(jsonRepo['language'], githubToken) + """\"></i> """ + jsonRepo['language'])
+        file.write("""                  <i class="fas fa-circle" style=\"""" + findLanguageColor(jsonRepo['language'], githubToken) + """\"></i> """ + jsonRepo['language'] + endOfFile)
     else:
-        file.write("""                  <i class="fas fa-circle" style="color: black;"></i> Undefined""")
-    file.write("""                </div>""")
-    file.write("""                <div>""")
-    file.write("""                  <i class="fas fa-star"></i> """ + str(jsonRepo['stargazers_count']))
-    file.write("""                </div>""")
-    file.write("""                <div>""")
-    file.write("""                  <i class="fas fa-code-branch"></i> """ + str(jsonRepo['forks_count']))
-    file.write("""                </div>""")
-    file.write("""                <div>""")
+        file.write("""                  <i class="fas fa-circle" style="color: black;"></i> Undefined""" + endOfFile)
+    file.write("""                </div>""" + endOfFile)
+    file.write("""                <div>""" + endOfFile)
+    file.write("""                  <i class="fas fa-star"></i> """ + str(jsonRepo['stargazers_count']) + endOfFile)
+    file.write("""                </div>""" + endOfFile)
+    file.write("""                <div>""" + endOfFile)
+    file.write("""                  <i class="fas fa-code-branch"></i> """ + str(jsonRepo['forks_count']) + endOfFile)
+    file.write("""                </div>""" + endOfFile)
+    file.write("""                <div>""" + endOfFile)
     file.write("""                  Built by""")
     addContributors(file, username, jsonRepo, githubToken)
-    file.write("""                </div>""")
-    file.write("""           </div>""")
-    file.write("""        </footer>""")
+    file.write("""                </div>""" + endOfFile)
+    file.write("""           </div>""" + endOfFile)
+    file.write("""        </footer>""" + endOfFile)
 
 # ----------------------------------------------------------------------------------
 #                           addRepository
@@ -120,34 +120,34 @@ def addRepositoryFooter(file, username, jsonRepo, githubToken):
 # ----------------------------------------------------------------------------------
 def addRepository(file, username, jsonRepo, isHighlighted, githubToken):
     print("    Generate repository " + jsonRepo["name"] + "...")
-    file.write("""        <article class="game">""")
-    file.write("""          <a href=\"""" + "https://" + username + ".github.io/" + jsonRepo["name"] + "/" + """\">""")
+    file.write("""        <article class="game">""" + endOfFile)
+    file.write("""          <a href=\"""" + "https://" + username + ".github.io/" + jsonRepo["name"] + "/" + """\">""" + endOfFiles)
     createThumbnailImage(file, username, jsonRepo, isHighlighted, githubToken);
     file.write("""          </a>""")
-    file.write("""          <div class="textgame">""")
-    file.write("""            <div class=repoHeader>""")
+    file.write("""          <div class="textgame">""" + endOfFile)
+    file.write("""            <div class=repoHeader>""" + endOfFile)
     if isHighlighted:
-        file.write("""              <h2 class="titlegame">""")
+        file.write("""              <h2 class="titlegame">""" + endOfFile)
     else:
-        file.write("""              <h2 class="minititlegame">""")
-    file.write("""                <a href=\"""" + jsonRepo["homepage"] + """\">""" + jsonRepo["name"] + """</a>""")
-    file.write("""                <img alt="Website" src="https://img.shields.io/website/https/github.com/""" + username + """/""" + jsonRepo["name"] + """.svg\">""")
-    file.write("""              </h2>""")
-    file.write("""              <div class="floatSide">""")
-    file.write("""                <a href="https://github.com/""" + username + """/""" + jsonRepo["name"] + """\"><i class="fab fa-github fa-2x"></i></a>""")
-    file.write("""              </div>""")
-    file.write("""            </div>""")
-    file.write("""            <div class="infogame">""")
+        file.write("""              <h2 class="minititlegame">""" + endOfFile)
+    file.write("""                <a href=\"""" + jsonRepo["homepage"] + """\">""" + jsonRepo["name"] + """</a>""" + endOfFile)
+    file.write("""                <img alt="Website" src="https://img.shields.io/website/https/github.com/""" + username + """/""" + jsonRepo["name"] + """.svg\">""" + endOfFile)
+    file.write("""              </h2>""" + endOfFile)
+    file.write("""              <div class="floatSide">""" + endOfFile)
+    file.write("""                <a href="https://github.com/""" + username + """/""" + jsonRepo["name"] + """\"><i class="fab fa-github fa-2x"></i></a>""" + endOfFile)
+    file.write("""              </div>""" + endOfFile)
+    file.write("""            </div>""" + endOfFile)
+    file.write("""            <div class="infogame">""" + endOfFile)
     file.write("""              <div>""")
     file.write("""                <div id="minidescgame">""")
-    file.write("""                  """ + (jsonRepo["description"] if bool(jsonRepo["description"].strip()) else "---"))
-    file.write("""                </div>""")
+    file.write("""                  """ + (jsonRepo["description"] if bool(jsonRepo["description"].strip()) else "---") + endOfFile)
+    file.write("""                </div>""" + endOfFile)
     addRepositoryTopics(file, username, jsonRepo, githubToken)
-    file.write("""              </div>""")
-    file.write("""            </div>""")
+    file.write("""              </div>""" + endOfFile)
+    file.write("""            </div>""" + endOfFile)
     addRepositoryFooter(file, username, jsonRepo, githubToken)
-    file.write("""          </div>""")
-    file.write("""        </article>""")
+    file.write("""          </div>""" + endOfFile)
+    file.write("""        </article>""" + endOfFile)
     print("    Finished repository " + jsonRepo["name"] + " generation.")
 
 # ----------------------------------------------------------------------------------
@@ -183,10 +183,10 @@ def addRepositorySection(file, username, githubToken):
             # Check which layout we should apply
             isHighlighted = containHighlightTag(currentRepository, username, githubToken)
             if not isHighlighted:
-                file.write("""      <div id="minimainleft">""")
+                file.write("""      <div id="minimainleft">""" + endOfFile)
             addRepository(file, username, currentRepository, isHighlighted, githubToken)
             if not isHighlighted:
-                file.write("""      </div>""")
+                file.write("""      </div>""" + endOfFile)
 
 # ----------------------------------------------------------------------------------
 #                           addHtmlMainSection
@@ -195,18 +195,18 @@ def addHtmlMainSection(file, githubToken):
     # Change those fields in order to customize the generation
     username = ['Graygzou', 'dyga-entertainment']
 
-    file.write("""    <div id="main">""")
-    file.write("""      <p id="intro">""")
-    file.write("""        Hi ! Check out the projects I made ! Most of them are available on GitHub.""")
-    file.write("""      </p>""")
+    file.write("""    <div id="main">""" + endOfFile)
+    file.write("""      <p id="intro">""" + endOfFile)
+    file.write("""        Hi ! Check out the projects I made ! Most of them are available on GitHub.""" + endOfFile)
+    file.write("""      </p>""" + endOfFile)
     for i in range(0, len(username)):
         print("Generate the current user " + username[i] + "...")
         addRepositorySection(file, username[i], githubToken)
         print("Finish generation for user " + username[i] + ".")
-    file.write("""      <p id="intro">""")
-    file.write("""          “Jack of all trades, master of none.”""")
-    file.write("""      </p>""")
-    file.write("""    </div>""")
+    file.write("""      <p id="intro">""" + endOfFile)
+    file.write("""          “Jack of all trades, master of none.”""" + endOfFile)
+    file.write("""      </p>""" + endOfFile)
+    file.write("""    </div>""" + endOfFile)
 
 # ----------------------------------------------------------------------------------
 #                           addHtmlTopNav
@@ -218,22 +218,20 @@ def addHtmlTopNav(file):
     description = ["About", "Skills", "Timeline", "Github", "Linkedin", "GameJolt"]
 
     file.write("""  <h1> Grégoire Boiron Portfolio </h1>""" + endOfFile)
-    file.write("""  <h1> /!\ ..still under construction.. /!\ </h1>""" + endOfFile)
-    file.write("""  <div id="content">""" + endOfFile)
-    file.write("""      <div id="top">""" + endOfFile)
+    file.write("""  <h1> /!\  still under construction  /!\ </h1>""" + endOfFile)
+    file.write("""  <nav id="top">""" + endOfFile)
     for i in range(0, len(icons)):
         file.write("""      <div class="link">""" + endOfFile)
-        file.write("""        <a href=""" + links[i] + """>""" + endOfFile)   # TODO
+        file.write("""        <a href=""" + links[i] + """>""" + endOfFile)
         file.write("""          <span class="iconlink">""" + endOfFile)
         file.write("""            <i class=" """ + icons[i] + """ fa-2x"></i>""" + endOfFile)
-        file.write("""          </span>""");
-        file.write("""          <div class="textlink">""");
+        file.write("""          </span>""" + endOfFile);
+        file.write("""          <div class="textlink">""" + endOfFile);
         file.write("""            """ + description[i]);
-        file.write("""          </div>""");
-        file.write("""        </a>""");
-        file.write("""      </div>""");
-    file.write("""      </div>""" + endOfFile)
-    file.write("""  </div>""" + endOfFile)
+        file.write("""          </div>""" + endOfFile);
+        file.write("""        </a>""" + endOfFile);
+        file.write("""      </div>""" + endOfFile);
+    file.write("""  </nav>""" + endOfFile)
 
 # ----------------------------------------------------------------------------------
 #                           addHtmlBody
