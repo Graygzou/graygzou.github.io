@@ -130,7 +130,11 @@ def addRepository(file, username, jsonRepo, isHighlighted, githubToken):
         file.write("""              <h2 class="titlegame">""" + endOfFile)
     else:
         file.write("""              <h2 class="minititlegame">""" + endOfFile)
-    file.write("""                <a href=\"""" + jsonRepo["homepage"] + """\">""" + jsonRepo["name"] + """</a>""" + endOfFile)
+    try:
+        file.write("""                <a href=\"""" + jsonRepo["homepage"] + """\">""" + jsonRepo["name"] + """</a>""" + endOfFile)
+    except:
+        print("jsonRepo["homepage"] might be null for the repository = " + jsonRepo["name"] + ".")
+        print("Please check that you added a page to the website section next to the repository description !")
     file.write("""                <img alt="Website" src="https://img.shields.io/website/https/github.com/""" + username + """/""" + jsonRepo["name"] + """.svg\">""" + endOfFile)
     file.write("""              </h2>""" + endOfFile)
     file.write("""              <div class="floatSide">""" + endOfFile)
@@ -214,11 +218,11 @@ def addHtmlMainSection(file, githubToken):
 def addHtmlTopNav(file):
     # create the array for each
     icons = ["fas fa-user-circle", "fas fa-code", "fas fa-calendar-alt", "fab fa-github", "fab fa-linkedin-in", "fas fa-bolt"];
-    links = ["", "", "", "https://github.com/Graygzou", "https://www.linkedin.com/in/gregoire-boiron/", "https://gamejolt.com/@GrayGzou"]
+    links = ["about.html", "", "", "https://github.com/Graygzou", "https://www.linkedin.com/in/gregoire-boiron/", "https://gamejolt.com/@GrayGzou"]
     description = ["About", "Skills", "Timeline", "Github", "Linkedin", "GameJolt"]
 
     file.write("""  <h1> Grégoire Boiron Portfolio </h1>""" + endOfFile)
-    file.write("""  <h1> /!\  still under construction  /!\ </h1>""" + endOfFile)
+    file.write("""  <h1> <!>   Still under construction   <!> </h1>""" + endOfFile)
     file.write("""  <nav id="top">""" + endOfFile)
     for i in range(0, len(icons)):
         file.write("""      <div class="link">""" + endOfFile)
