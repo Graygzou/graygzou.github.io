@@ -133,7 +133,7 @@ def addRepository(file, username, jsonRepo, isHighlighted, githubToken):
     try:
         file.write("""                <a href=\"""" + jsonRepo["homepage"] + """\">""" + jsonRepo["name"] + """</a>""" + endOfFile)
     except:
-        print("jsonRepo["homepage"] might be null for the repository = " + jsonRepo["name"] + ".")
+        print("jsonRepo[homepage] might be null for the repository = " + jsonRepo["name"] + ".")
         print("Please check that you added a page to the website section next to the repository description !")
     file.write("""                <img alt="Website" src="https://img.shields.io/website/https/github.com/""" + username + """/""" + jsonRepo["name"] + """.svg\">""" + endOfFile)
     file.write("""              </h2>""" + endOfFile)
