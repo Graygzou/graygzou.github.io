@@ -118,7 +118,7 @@ a {
   .social-media-list &:hover {
     text-decoration: none;
 
-    .username {
+    .svg-icon {
       text-decoration: underline;
     }
   }
@@ -218,8 +218,11 @@ pre {
 }
 
 .social-media-list {
+  li {
+    float: left;
+  }
   li + li {
-    padding-top: 5px;
+    padding-left: 5px;
   }
 }
 

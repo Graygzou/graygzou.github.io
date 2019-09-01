@@ -4,7 +4,7 @@
 .site-header {
   border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
-  min-height: $spacing-unit * 1.865;
+  min-height: $spacing-unit * 3.865;
 
   // Positioning context for the mobile navigation icon
   position: relative;
@@ -16,7 +16,6 @@
   line-height: $base-line-height * $base-font-size * 2.25;
   letter-spacing: -1px;
   margin-bottom: 0;
-  float: left;
 
   &,
   &:visited {
@@ -26,7 +25,7 @@
 
 .site-nav {
   float: right;
-  line-height: $base-line-height * $base-font-size * 2.25;
+  line-height: $base-line-height * $base-font-size * 4.55;
 
   .nav-trigger {
       display: none;
@@ -118,7 +117,17 @@
 .contact-list,
 .social-media-list {
   list-style: none;
+  margin-top: $spacing-unit / 3.5;
   margin-left: 0;
+}
+
+.profil-header {
+  display: inline-block;
+}
+
+.profil-description {
+  margin: 0;
+  margin-top: -$spacing-unit / 3;
 }
 
 .footer-col-wrapper {
@@ -184,6 +193,10 @@
   @include relative-font-size(2);
 }
 
+.bloc-aside {
+  float: right;
+}
+
 .post-list-heading {
   @include relative-font-size(1.75);
 }
@@ -207,6 +220,20 @@
   @include relative-font-size(1.5);
 }
 
+.home {
+  display: inline-block;
+  width: 75%;
+
+  section {
+    margin-bottom: 10px;
+  }
+}
+
+.home-section {
+  background-color: lightgray;
+  border-radius: 1%;
+  padding: 1%;
+}
 
 
 /**
