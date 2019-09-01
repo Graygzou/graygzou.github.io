@@ -32,17 +32,24 @@ kramdown:
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Grégoire Boiron
+profil_description: Programmer Generalist at iLLOGIKA
 email: gregoire.boiron@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Grégoire Boiron's personal site.
   Contains my portfolio, my projects and my own blog.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: GrayGzou
-github_username:  Graygzou
-linkedin_username: gregoire-boiron
-gamejolt_username: GrayGzou
-itch_io_username: graygzou
+social_tags:
+  - name: twitter
+    path: https://twitter.com/GrayGzou
+  - name: github
+    path: https://github.com/Graygzou
+  - name: linkedin
+    path: https://www.linkedin.com/in/gregoire-boiron/
+  - name: gamejolt
+    path: https://gamejolt.com/@GrayGzou
+  - name: itch-dot-io
+    path: https://graygzou.itch.io/
 
 # Build settings
 markdown: kramdown
@@ -54,6 +61,7 @@ plugins:
   - jemoji
   - jekyll-redirect-from
   - jekyll-sitemap
+  - jekyll-paginate
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
