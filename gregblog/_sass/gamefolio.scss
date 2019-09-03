@@ -26,6 +26,8 @@ $content-width:    1000px !default;
 $on-palm:          600px !default;
 $on-laptop:        800px !default;
 
+$content-aside:    200px !default;
+
 // Use media queries like this:
 // @include media-query($on-palm) {
 //   .wrapper {
@@ -47,5 +49,6 @@ $on-laptop:        800px !default;
 @import
   "gamefolio/base",
   "gamefolio/layout",
-  "gamefolio/syntax-highlighting"
+  "gamefolio/syntax-highlighting",
+  "gamefolio/project-page"
 ;
