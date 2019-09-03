@@ -1,0 +1,46 @@
+/* header override */
+
+.post-header {
+  text-align: center;
+}
+
+
+/*  	Overview Section    */
+/*
+#overview_section {
+	display: block;
+}*/
+
+.overview_table {
+	display: inline-block;
+	/*min-width: 20%;*/
+  width: $content-aside;
+	vertical-align: top;
+	text-align: left;
+}
+
+
+.overview_table > div {
+	margin-bottom: 10px;
+}
+
+.table_title {
+	font-size: 120%;
+	font-family: 'customfont';
+}
+
+/* main article */
+
+.description_side {
+	display: inline-block;
+	font-size: 110%;
+	max-width: calc((#{$content-width} - (#{$spacing-unit} * 3)) - #{$content-aside});
+	text-align: left;
+	vertical-align: top;
+}
+
+iframe {
+	display: inline-block;
+	max-width: 100%;
+	vertical-align: middle;
+}
