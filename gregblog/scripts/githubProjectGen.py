@@ -12,8 +12,9 @@ from pathlib import Path
 
 # Static const variables
 endOfFile = '\n'
-folder = ".\_project-pages\\"
+folder = "..\_project-pages\\"
 page_layout = "project-page"
+postFileName = ".markdown"
 
 # -----------------------------------------------------
 #                       createThumbnailImage
@@ -49,7 +50,7 @@ def addRepositoryTopics(username, jsonRepo, githubToken):
     tags = []
     for currentTag in topicsResponse['names']:
         tags.append(currentTag)
-    print("tags: " + str(tags))
+    return str(tags)
 
 
 # ----------------------------------------------------------------------------------
@@ -93,8 +94,9 @@ def generateRepoMdPage(file, currentRepository, username, githubToken):
         file.write(key + ": " + str(githubValue) + endOfFile)
 
     file.write("last-update-days: " + str((datetime.now() - lastUpdate).days) + endOfFile)
-    # End of the Front Matter
+    file.write("tags: " + str(addRepositoryTopics(username, currentRepository, githubToken)) + endOfFile)
     file.write("""---""" + endOfFile)
+    # End of the Front Matter
 
     # Write default template
     file.write("""<!---""" + endOfFile)
@@ -171,7 +173,7 @@ def generateUserRepos(username, githubToken):
         os.makedirs(folder)
     
     for currentRepository in jsonRepo:
-        filename = currentRepository["name"] + "-test.markdown"
+        filename = currentRepository["name"] + postFileName
         
         #if currentRepository["name"] == "Metenorage" or currentRepository["name"] == "Brain-Control":
         print(currentRepository["name"])
@@ -181,15 +183,16 @@ def generateUserRepos(username, githubToken):
         if(not isPrivate and hasGithubPages):
                 
             # Open the existing file or create it
-            my_file = Path(filename)
-            if my_file.is_file():
+            if os.path.isfile(folder + filename):
                 # Modify the font matters of the file since it already exists
                 # (we do not want to override the content of the file !)
+                print("Update in progress....")
                 updateRepoMdPage(filename, currentRepository, username, githubToken)
             else:
                 # Create the file from scratch and generate the front matters part
                 file = open(folder + filename,'w')
                 generateRepoMdPage(file, currentRepository, username, githubToken)
+                print("Generation in progress....")
 
 
 # ----------------------------------------------------------------------------------
@@ -230,7 +233,7 @@ def addRepositorySection(username, githubToken):
                         elif line.startswith("title:"):
                             print("title : " + currentRepository["name"])
                         elif line.startswith("tags:"):
-                            addRepositoryTopics(username, currentRepository, githubToken)
+                            print("tags: " + addRepositoryTopics(username, currentRepository, githubToken))
                         else:
                             assign = False
                             for field in fields:
@@ -273,7 +276,7 @@ def addJekyllFrontMatter(githubToken):
 # ----------------------------------------------------------------------------------
 if __name__ == "__main__":
     #githubToken = sys.argv[1]
-    githubToken = "c8b0b3fb4e0d89e5c9b2d4e2d0f15b0b62f3b060"
+    githubToken = ""
     print("Launch static website generation...")
 
     print("Start the code gen...")

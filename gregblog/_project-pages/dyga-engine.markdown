@@ -1,12 +1,12 @@
 ---
 layout: project-page
-title: Battle-Simulator
-description: Battle simulator made with the game engine JMonkey, using a graph model as back-end
+title : dyga-engine
+description: 2D game engine which allows to build platformer and puzzle games.
 language: Java
-stargazers-count: 2
+stargazers-count: 0
 forks-count: 0
-updated-at: 2019-07-23 00:54:32
-last-update-days: 44
+updated-at: 2019-07-15 00:43:59
+last-update-days: 53
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>
