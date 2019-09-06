@@ -1,12 +1,12 @@
 ---
 layout: project-page
-title: Brain-Control
-description: Top down 2D game, made with Unity engine for the WonderJam 2018.
-language: C#
+title : Advent-of-Code
+description: My solutions for Advent of Code (AoC) challenges.
+language: Lua
 stargazers-count: 0
 forks-count: 0
-updated-at: 2019-07-22 23:20:54
-last-update-days: 44
+updated-at: 2019-07-23 02:08:58
+last-update-days: 45
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

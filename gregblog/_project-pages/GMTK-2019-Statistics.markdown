@@ -1,12 +1,12 @@
 ---
 layout: project-page
-title: penguin-panic
-description: 3D exploration, arcade game made for the Ubisoft Game Lab Competition 2018
+title : GMTK-2019-Statistics
+description: A bunch of statistics from the 2019 edition of the Game Maker ToolKit Game Jam
 language: None
 stargazers-count: 0
 forks-count: 0
-updated-at: 2019-07-25 03:46:05
-last-update-days: 42
+updated-at: 2019-08-18 01:16:29
+last-update-days: 19
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

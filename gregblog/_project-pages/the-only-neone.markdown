@@ -1,17 +1,26 @@
 ---
 layout: project-page
-title:  "The Only NeOne"
-date:   2018-05-01 00:00:00 -0400
-platforms: Windows PC
-engines: Unreal
+title : the-only-neOne
+description: 3D Grid based Maze game made in 48 hours for the GMTK GameJam 2019
+language: None
+stargazers-count: 0
+forks-count: 0
+updated-at: 2019-08-18 01:33:36
+last-update-days: 19
+platforms: Windows PC, WebGL
+engines: Unity
 tools: [Market Store, Gimp]
-duration: "2 months and half"
+duration: "48 hours"
 team-size: 4
 main-roles: [3Cs Programmer, Gameplay Programmer, Level Designer]
 github-link: https://github.com/dyga-entertainment/spida-phobia
 video-link: https://www.youtube.com/embed/-BDVJ9IO2uk
 itch-io-link: https://dzamani.itch.io/the-only-neone
 ---
+<!---
+Gregoire Boiron <gregoire.boiron@gmail.com>
+Copyright (c) 2018 Gregoire Boiron  All Rights Reserved.
+--->
 
 Overview
 --------------------
@@ -23,8 +32,8 @@ We're pround to finish #109 overall for this jam !
 
 Screenshots
 --------------------
-TODO: Add images ?
+In Progress.
 
 Detailed Info
 --------------------
-In progress.
+In Progress.

@@ -1,12 +1,12 @@
 ---
 layout: project-page
-title: GMTK-2019-Statistics
-description: A bunch of statistics from the 2019 edition of the Game Maker ToolKit Game Jam
-language: None
+title : Graygzou.github.io
+description: Github portfolio made from scratch.
+language: HTML
 stargazers-count: 0
 forks-count: 0
-updated-at: 2019-08-18 01:16:29
-last-update-days: 18
+updated-at: 2019-08-18 01:39:33
+last-update-days: 19
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>
