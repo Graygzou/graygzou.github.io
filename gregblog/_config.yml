@@ -51,6 +51,11 @@ social_tags:
   - name: itch-dot-io
     path: https://graygzou.itch.io/
 
+collections:
+  project-pages:
+    output: true
+    #sort_by: last_update
+
 # Build settings
 markdown: kramdown
 #theme: minima # Should change that ?
