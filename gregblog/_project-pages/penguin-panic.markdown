@@ -2,11 +2,14 @@
 layout: project-page
 title : penguin-panic
 description: 3D exploration, arcade game made for the Ubisoft Game Lab Competition 2018
+color: black
+color: #000000
+color: #000000
 language: None
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-25 03:46:05
-last-update-days: 43
+last-update-days: 44
 platforms: Windows PC
 engines: Unity
 tools: [Asset Store]
@@ -14,6 +17,7 @@ duration: "2 months"
 team-size: 8
 main-roles: ["R&D", "AI Programmer", "UI Programmer", "Game Programmer", "Animator"]
 gamejolt-link: https://gamejolt.com/games/penguin-panic/330630
+tags: []
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

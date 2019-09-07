@@ -2,11 +2,15 @@
 layout: project-page
 title : Advent-of-Code
 description: My solutions for Advent of Code (AoC) challenges.
+color: #000080
+color: #000080
+color: #000080
 language: Lua
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-23 02:08:58
-last-update-days: 45
+last-update-days: 46
+tags: ['lua', 'aoc', 'advent-of-code']
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>
@@ -24,4 +28,3 @@ In Progress.
 Detailed Info
 --------------------
 In Progress.
-

@@ -7,6 +7,7 @@
 import os
 from xml.dom import minidom
 
+DIRECTORY_PATH = "../assets/icons/"
 FILE_PREFIX = "gamefolio-"
 FILE_POSTFIX = "-icons.svg"
 
@@ -47,14 +48,14 @@ def addSvgFile( file, svgPath, filename ):
 #
 ####################################################################
 # For each folder
-directory = "./"
-for dirfilename in os.listdir(directory):
-    currentPath = os.path.join(directory, dirfilename)
+for dirfilename in os.listdir(DIRECTORY_PATH):
+    currentPath = os.path.join(DIRECTORY_PATH, dirfilename)
     if os.path.isdir(currentPath):
 
         # Create the global svg file that will hold all the directory svg images
-        print(FILE_PREFIX + dirfilename + FILE_POSTFIX)
-        file = open(FILE_PREFIX + dirfilename + FILE_POSTFIX, "w")
+        currentFileName = DIRECTORY_PATH + FILE_PREFIX + dirfilename + FILE_POSTFIX
+        print(currentFileName)
+        file = open(currentFileName, "w")
 
         # Write the header of the doc
         file.write("""<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">""" + ESCAPE)

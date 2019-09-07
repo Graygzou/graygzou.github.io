@@ -2,11 +2,15 @@
 layout: project-page
 title : Brain-Control
 description: Top down 2D game, made with Unity engine for the WonderJam 2018.
+color: #178600
+color: #178600
+color: #178600
 language: C#
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-22 23:20:54
-last-update-days: 45
+last-update-days: 46
+tags: ['unity', '2d-game', 'survival-game', 'multiplayer-game', 'kill-zombies', 'steering-behaviors']
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>
@@ -24,4 +28,3 @@ In Progress.
 Detailed Info
 --------------------
 In Progress.
-
