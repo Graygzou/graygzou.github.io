@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
+#
 # Grégoire Boiron <gregoire.boiron@gmail.com>
-# Copyright (c) 2018 Grégoire Boiron  All Rights Reserved.
+# Copyright (c) 2018-2019 Grégoire Boiron  All Rights Reserved.
+#
 
 import sys                          # To get command line arguments
 import os                           # for IO files
@@ -12,7 +14,7 @@ from pathlib import Path
 
 # Static const variables
 endOfFile = '\n'
-folder = "..\_project-pages\\"
+FOLDER_PATH = "..\_project-pages\\"
 page_layout = "project-page"
 postFileName = ".markdown"
 
@@ -47,22 +49,21 @@ def addRepositoryTopics(username, jsonRepo, githubToken):
     headers = {'content-type': 'application/json', 'Accept-Charset': 'UTF-8', "Accept": "application/vnd.github.mercy-preview+json", "Authorization": "token " + githubToken}
     r = requests.get(url, headers=headers)
     topicsResponse = r.json()
-    tags = []
-    for currentTag in topicsResponse['names']:
-        tags.append(currentTag)
-    return str(tags)
-
+    return topicsResponse['names']
 
 # ----------------------------------------------------------------------------------
 #                       findLanguageColor
 # ----------------------------------------------------------------------------------
-def findLanguageColor(colorName, githubToken):
+def findLanguageColor(languageName, githubToken):
     url = "https://raw.githubusercontent.com/github/linguist/master/lib/linguist/languages.yml"
     headers = {'content-type': 'application/json', 'Accept-Charset': 'UTF-8', "Accept": "application/vnd.github.mercy-preview+json", "Authorization": "token " + githubToken}
     response = requests.get(url, headers=headers)
     yaml = YAML()
     data = yaml.load(response.text)
-    return "color:" + data[colorName]['color'].strip() + ";"
+    color = "#000000"
+    if languageName in data:
+        color = data[languageName]['color'].strip()
+    return color
 
 
 # ----------------------------------------------------------------------------------
@@ -87,10 +88,13 @@ def generateRepoMdPage(file, currentRepository, username, githubToken):
     for key in frontMatterToGithubDict:
         githubValue = currentRepository[frontMatterToGithubDict[key].replace('-', '_')]
         if key == "updated-at":
+            # Add special field to know number of days it has been updated
             githubValue = datetime.strptime(githubValue, "%Y-%m-%dT%H:%M:%SZ")
             githubValue.strftime('%A %b %d, %Y at %H:%M GMT')
-            # Add special field to know number of days it has been updated
             lastUpdate = githubValue
+        if key == "language":
+            # Add the color in the same
+            file.write("""color: """ + str(findLanguageColor(finalStr, githubToken)) + endOfFile)
         file.write(key + ": " + str(githubValue) + endOfFile)
 
     file.write("last-update-days: " + str((datetime.now() - lastUpdate).days) + endOfFile)
@@ -101,7 +105,7 @@ def generateRepoMdPage(file, currentRepository, username, githubToken):
     # Write default template
     file.write("""<!---""" + endOfFile)
     file.write("""Gregoire Boiron <gregoire.boiron@gmail.com>""" + endOfFile)
-    file.write("""Copyright (c) 2018 Gregoire Boiron  All Rights Reserved.""" + endOfFile)
+    file.write("""Copyright (c) 2018-2019 Gregoire Boiron  All Rights Reserved.""" + endOfFile)
     file.write("""--->""" + endOfFile + endOfFile)
     
     file.write("""Overview""" + endOfFile)
@@ -126,7 +130,7 @@ def updateRepoMdPage(filename, currentRepository, username, githubToken):
     lastUpdate = ""
     started = False
     skip = False
-    for line in fileinput.input(folder + filename, inplace=1):
+    for line in fileinput.input(FOLDER_PATH + filename, inplace=1):
         if skip:
             print(line.rstrip())
         elif line.startswith('---'):
@@ -141,7 +145,8 @@ def updateRepoMdPage(filename, currentRepository, username, githubToken):
             elif line.startswith("title:"):
                 print("title : " + currentRepository["name"])
             elif line.startswith("tags:"):
-                addRepositoryTopics(username, currentRepository, githubToken)
+                array = addRepositoryTopics(username, currentRepository, githubToken)
+                print("tags: " + str(array))
             else:
                 assign = False
                 for field in fields:
@@ -149,15 +154,17 @@ def updateRepoMdPage(filename, currentRepository, username, githubToken):
                         assign = True
                         finalStr = currentRepository[field.replace('-', '_')]
                         if field == "updated-at":
+                            # Add special field to know number of days it has been updated
                             finalStr = datetime.strptime(finalStr, "%Y-%m-%dT%H:%M:%SZ")
                             finalStr.strftime('%A %b %d, %Y at %H:%M GMT')
-                            # Add special field to know number of days it has been updated
                             lastUpdate = finalStr
+                        if field == "language":
+                            # Add the color in the same
+                            print("color: " + str(findLanguageColor(finalStr, githubToken)))
                         print(field + ": " + str(finalStr))
                         break
                 if not assign:
                     print(line.rstrip())
-
 
 # ----------------------------------------------------------------------------------
 #                            generateUserRepos
@@ -169,8 +176,8 @@ def generateUserRepos(username, githubToken):
     jsonRepo = r.json()
 
     # Create the folder if it doesn't exist yet
-    if not os.path.exists(folder):
-        os.makedirs(folder)
+    if not os.path.exists(FOLDER_PATH):
+        os.makedirs(FOLDER_PATH)
     
     for currentRepository in jsonRepo:
         filename = currentRepository["name"] + postFileName
@@ -183,72 +190,16 @@ def generateUserRepos(username, githubToken):
         if(not isPrivate and hasGithubPages):
                 
             # Open the existing file or create it
-            if os.path.isfile(folder + filename):
+            if os.path.isfile(FOLDER_PATH + filename):
                 # Modify the font matters of the file since it already exists
                 # (we do not want to override the content of the file !)
                 print("Update in progress....")
                 updateRepoMdPage(filename, currentRepository, username, githubToken)
             else:
                 # Create the file from scratch and generate the front matters part
-                file = open(folder + filename,'w')
+                file = open(FOLDER_PATH + filename,'w')
                 generateRepoMdPage(file, currentRepository, username, githubToken)
                 print("Generation in progress....")
-
-
-# ----------------------------------------------------------------------------------
-#                            addRepositorySection
-# ----------------------------------------------------------------------------------
-def addRepositorySection(username, githubToken):
-    fields = ["description", "language", "stargazers-count", "forks-count", "updated-at"]
-    
-    url = "https://api.github.com/users/" + username + "/repos"
-    headers = {'content-type': 'application/json', 'Accept-Charset': 'UTF-8', "Authorization": "token " + githubToken}
-    r = requests.get(url, headers=headers)
-    jsonRepo = r.json()
-    for currentRepository in jsonRepo:
-        if currentRepository["name"] == "Metenorage" or currentRepository["name"] == "Brain-Control":
-            print(currentRepository["name"])
-            
-            # Open the existing file or create it
-            #file = open(currentRepository["name"] + ".markdown",'r+')
-            
-            isPrivate = currentRepository["private"]
-            hasGithubPages = currentRepository["has_pages"]
-            if(not isPrivate and hasGithubPages):
-                started = False
-                skip = False
-                lastUpdate = ""
-                for line in fileinput.input(currentRepository["name"] + ".markdown", inplace=1):
-                    if skip:
-                        print(line.rstrip())
-                    elif line.startswith('---'):
-                        if not started:
-                            started = True
-                        else:
-                            skip = True
-                        print(line.rstrip())
-                    else:
-                        if line.startswith("last-update-days"):
-                            print("last-update-days: " + str((datetime.now() - lastUpdate).days))
-                        elif line.startswith("title:"):
-                            print("title : " + currentRepository["name"])
-                        elif line.startswith("tags:"):
-                            print("tags: " + addRepositoryTopics(username, currentRepository, githubToken))
-                        else:
-                            assign = False
-                            for field in fields:
-                                if line.startswith(field):
-                                    assign = True
-                                    finalStr = currentRepository[field.replace('-', '_')]
-                                    if field == "updated-at":
-                                        finalStr = datetime.strptime(finalStr, "%Y-%m-%dT%H:%M:%SZ")
-                                        finalStr.strftime('%A %b %d, %Y at %H:%M GMT')
-                                        # Add special field to know number of days it has been updated
-                                        lastUpdate = finalStr
-                                    print(field + ": " + str(finalStr))
-                                    break
-                            if not assign:
-                                print(line.rstrip())
 
 # ----------------------------------------------------------------------------------
 #                           addHtmlMainSection
@@ -276,7 +227,7 @@ def addJekyllFrontMatter(githubToken):
 # ----------------------------------------------------------------------------------
 if __name__ == "__main__":
     #githubToken = sys.argv[1]
-    githubToken = ""
+    githubToken = "6b548620b813af56d067a9d264d21e463e9fa368"
     print("Launch static website generation...")
 
     print("Start the code gen...")
