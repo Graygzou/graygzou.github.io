@@ -20,6 +20,7 @@ postFileName = ".markdown"
 
 # -----------------------------------------------------
 #                       createThumbnailImage
+# ...WIP...
 # -----------------------------------------------------
 def createThumbnailImage(file, username, jsonRepo, isHighlighted, githubToken):
     htmlIdUsed = "minipicgame"
@@ -50,6 +51,7 @@ def addRepositoryTopics(username, jsonRepo, githubToken):
     r = requests.get(url, headers=headers)
     topicsResponse = r.json()
     return topicsResponse['names']
+#enddef
 
 # ----------------------------------------------------------------------------------
 #                       findLanguageColor
@@ -63,16 +65,19 @@ def findLanguageColor(languageName, githubToken):
     color = "#000000"
     if languageName in data:
         color = data[languageName]['color'].strip()
+    #endif
     return color
-
+#enddef
 
 # ----------------------------------------------------------------------------------
-#                       generateRepoMdPage
+#                       printContentTemplate
+#
+# Write front matter (header)
 # ----------------------------------------------------------------------------------
-def generateRepoMdPage(file, currentRepository, username, githubToken):
-    # Dictionnary that hold :
-    #   - KEY = string used in the front matters.
-    #   - VALUE = github API key.
+def generateFrontMatter():
+    ## Dictionnary that hold :
+    ##   - KEY = string used in the front matters.
+    ##   - VALUE = github API key.
     frontMatterToGithubDict = {
         "title": "name",
         "description": "description",
@@ -82,27 +87,33 @@ def generateRepoMdPage(file, currentRepository, username, githubToken):
         "updated-at": "updated-at",
     }
     
-    # Start Front Matters
     file.write("""---""" + endOfFile)
     file.write("""layout: """ + page_layout + endOfFile)
     for key in frontMatterToGithubDict:
         githubValue = currentRepository[frontMatterToGithubDict[key].replace('-', '_')]
         if key == "updated-at":
-            # Add special field to know number of days it has been updated
+            ## Add special field to know number of days it has been updated
             githubValue = datetime.strptime(githubValue, "%Y-%m-%dT%H:%M:%SZ")
             githubValue.strftime('%A %b %d, %Y at %H:%M GMT')
             lastUpdate = githubValue
-        if key == "language":
-            # Add the color in the same
+        elif key == "language":
+            ## Add the color in the same
             file.write("""color: """ + str(findLanguageColor(finalStr, githubToken)) + endOfFile)
+        #endif
         file.write(key + ": " + str(githubValue) + endOfFile)
+    #endfor
 
     file.write("last-update-days: " + str((datetime.now() - lastUpdate).days) + endOfFile)
     file.write("tags: " + str(addRepositoryTopics(username, currentRepository, githubToken)) + endOfFile)
     file.write("""---""" + endOfFile)
-    # End of the Front Matter
+#enddef
 
-    # Write default template
+# ----------------------------------------------------------------------------------
+#                       printContentTemplate
+#
+# Write default template
+# ----------------------------------------------------------------------------------
+def printContentTemplate():
     file.write("""<!---""" + endOfFile)
     file.write("""Gregoire Boiron <gregoire.boiron@gmail.com>""" + endOfFile)
     file.write("""Copyright (c) 2018-2019 Gregoire Boiron  All Rights Reserved.""" + endOfFile)
@@ -119,52 +130,94 @@ def generateRepoMdPage(file, currentRepository, username, githubToken):
     file.write("""Detailed Info""" + endOfFile)
     file.write("""--------------------""" + endOfFile)
     file.write("""In Progress.""" + endOfFile + endOfFile)
+#enddef
+
+# ----------------------------------------------------------------------------------
+#                       generateRepoMdPage
+# ----------------------------------------------------------------------------------
+def generateRepoMdPage(file, currentRepository, username, githubToken):
+    generateFrontMatter()
+    printContentTemplate()
+#enddef
     
 
 # ----------------------------------------------------------------------------------
-#                            updateRepoMdPage
+#                       updateFrontMatters
 # ----------------------------------------------------------------------------------
-def updateRepoMdPage(filename, currentRepository, username, githubToken):
-    fields = ["description", "language", "stargazers-count", "forks-count", "updated-at"]
-    
+def updateFrontMatters(line, currentRepository, username, githubToken):
+    regular_fields = ["description", "language", "stargazers-count", "forks-count", "updated-at"]
+    computed_fields = ["last-update-days", "title", "tags"]
+
+    ## Check if we should add 
+    for field in computed_fields:
+        if line.startswith(field):
+            if field == computed_fields[0]:
+                print(field + ": " + str((datetime.now() - lastUpdate).days))
+            elif field == computed_fields[1]:
+                print(field + ": " + currentRepository["name"])
+            elif field == computed_fields[2]:
+                array = addRepositoryTopics(username, currentRepository, githubToken)
+                print(field + ": " + str(array))
+            #endif
+        #endif
+    #endfor
+    else:
+        has_changed = False  ## Allow to print the end if no change has been made
+        for field in regular_fields:
+            if line.startswith(field):
+                has_changed = True
+
+                ## Retrieve the new value to update the field
+                finalStr = currentRepository[field.replace('-', '_')]
+
+                ## Add special field to know number of days it has been updated
+                if field == "updated-at":
+                    finalStr = datetime.strptime(finalStr, "%Y-%m-%dT%H:%M:%SZ")
+                    finalStr.strftime('%A %b %d, %Y at %H:%M GMT')
+                    lastUpdate = finalStr
+                #endif
+
+                ## Update the current field with the new value
+                print(field + ": " + str(finalStr))
+                        
+                ## Add the color if the language is 
+                if field == "language":
+                    print("color: " + str(findLanguageColor(finalStr, githubToken)))
+                #endif
+                break
+
+                ## Print the line is nothing has been made yet
+                if not has_changed:
+                    print(line.rstrip())
+                #endif
+            #endif
+        #endfor
+    #endif
+#enddef
+
+# ----------------------------------------------------------------------------------
+#                            updateRepoMdPage
+#
+# Update the front matters of the project jekyll post (in markdown)
+# ----------------------------------------------------------------------------------
+def updateRepoMdPage(filename, currentRepository, username, githubToken):   
     lastUpdate = ""
-    started = False
-    skip = False
+    started, skip = False, False
     for line in fileinput.input(FOLDER_PATH + filename, inplace=1):
-        if skip:
+        if skip:    ## to skip the rest of the document
             print(line.rstrip())
-        elif line.startswith('---'):
+        elif line.startswith('---'): ## Special behavior when we detect starting/ending of front matters 
             if not started:
                 started = True
             else:
                 skip = True
+            #endif
             print(line.rstrip())
-        else:
-            if line.startswith("last-update-days"):
-                print("last-update-days: " + str((datetime.now() - lastUpdate).days))
-            elif line.startswith("title:"):
-                print("title : " + currentRepository["name"])
-            elif line.startswith("tags:"):
-                array = addRepositoryTopics(username, currentRepository, githubToken)
-                print("tags: " + str(array))
-            else:
-                assign = False
-                for field in fields:
-                    if line.startswith(field):
-                        assign = True
-                        finalStr = currentRepository[field.replace('-', '_')]
-                        if field == "updated-at":
-                            # Add special field to know number of days it has been updated
-                            finalStr = datetime.strptime(finalStr, "%Y-%m-%dT%H:%M:%SZ")
-                            finalStr.strftime('%A %b %d, %Y at %H:%M GMT')
-                            lastUpdate = finalStr
-                        if field == "language":
-                            # Add the color in the same
-                            print("color: " + str(findLanguageColor(finalStr, githubToken)))
-                        print(field + ": " + str(finalStr))
-                        break
-                if not assign:
-                    print(line.rstrip())
+        else:   ## Update the front matters
+            updateFrontMatters(line, currentRepository, username, githubToken)
+        #endif
+    #endfor
+#enddef
 
 # ----------------------------------------------------------------------------------
 #                            generateUserRepos
@@ -175,43 +228,49 @@ def generateUserRepos(username, githubToken):
     r = requests.get(url, headers=headers)
     jsonRepo = r.json()
 
-    # Create the folder if it doesn't exist yet
+    ## Create the folder if it doesn't exist yet
     if not os.path.exists(FOLDER_PATH):
         os.makedirs(FOLDER_PATH)
     
     for currentRepository in jsonRepo:
         filename = currentRepository["name"] + postFileName
-        
-        #if currentRepository["name"] == "Metenorage" or currentRepository["name"] == "Brain-Control":
+
+        ## Debug
         print(currentRepository["name"])
 
         isPrivate = currentRepository["private"]
         hasGithubPages = currentRepository["has_pages"]
         if(not isPrivate and hasGithubPages):
                 
-            # Open the existing file or create it
+            ## Open the existing file or create it
             if os.path.isfile(FOLDER_PATH + filename):
-                # Modify the font matters of the file since it already exists
-                # (we do not want to override the content of the file !)
+                ## Modify the font matters of the file since it already exists
+                ## (we do not want to override the content of the file !)
                 print("Update in progress....")
                 updateRepoMdPage(filename, currentRepository, username, githubToken)
             else:
-                # Create the file from scratch and generate the front matters part
+                ## Create the file from scratch and generate the front matters part
                 file = open(FOLDER_PATH + filename,'w')
                 generateRepoMdPage(file, currentRepository, username, githubToken)
                 print("Generation in progress....")
+            #endif
+        #endif
+    #endfor
+#enddef
 
 # ----------------------------------------------------------------------------------
 #                           addHtmlMainSection
 # ----------------------------------------------------------------------------------
 def addHtmlMainSection(githubToken):
-    # Change those fields in order to customize the generation
+    ## Change those fields in order to customize the generation
     username = ['Graygzou', 'dyga-entertainment']
 
     for i in range(0, len(username)):
         print("Generate the current user " + username[i] + "...")
         generateUserRepos(username[i], githubToken)
         print("Finish generation for user " + username[i] + ".")
+    #endfor
+#enddef
 
 
 # ----------------------------------------------------------------------------------
@@ -219,6 +278,7 @@ def addHtmlMainSection(githubToken):
 # ----------------------------------------------------------------------------------
 def addJekyllFrontMatter(githubToken):
     addHtmlMainSection(githubToken)
+#endef
 
 # ----------------------------------------------------------------------------------
 #                                main
@@ -226,10 +286,11 @@ def addJekyllFrontMatter(githubToken):
 # Arguments : (Github Token)
 # ----------------------------------------------------------------------------------
 if __name__ == "__main__":
-    #githubToken = sys.argv[1]
+    ##githubToken = sys.argv[1]
     githubToken = "6b548620b813af56d067a9d264d21e463e9fa368"
     print("Launch static website generation...")
 
     print("Start the code gen...")
     addJekyllFrontMatter(githubToken)
     print("Code gen ended.")
+#endif
