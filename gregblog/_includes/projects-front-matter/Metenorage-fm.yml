@@ -1,0 +1,7 @@
+platforms: Windows
+tools: [Intellij, LWJGL, JBullet]
+duration: "1 months"
+team-size: 4
+main-roles: [Engine Programmer, Game Programmeur]
+github-link: https://github.com/Graygzou/Metenorage
+youtube-link: https://www.youtube.com/embed/ORAGPZGMJg4

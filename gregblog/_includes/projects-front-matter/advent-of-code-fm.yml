@@ -1,0 +1,6 @@
+platforms: Windows
+tools: [Lua]
+duration: "1 month"
+team-size: 7
+main-roles: [Programmer]
+github-link: https://github.com/Graygzou/brain-control

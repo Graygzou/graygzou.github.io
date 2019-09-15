@@ -4,15 +4,20 @@ layout: default
 <article class="post h-entry" itemscope itemtype="http://schema.org/VideoGame">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name">{{ page.title | escape }}</h1>
+    <div class="project-thumbnail">
+      <h1 class="project-title p-name" itemprop="name">{{ page.title | replace: '-', ' ' | capitalize | escape }}</h1>
+      {% capture image_path %}/assets/project-images/{{ page.title }}/{{ page.title }}.png{% endcapture %}
+      <img class="thumbnail-img" src="{{ image_path }}"/>
+    </div>
+    <p class="project-description">{{ page.description }}</p>
     <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
+      {%- for date in page.key-dates -%}
+        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          {{ date | date: date_format }}
+        </time>
+      {%- endfor -%}
+    </p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
@@ -25,22 +30,26 @@ layout: default
           {%- endfor -%}
         </ul>
       </div>
-      <div>
-        <span class="table_title">Engine:</span>
-        <ul>
-          {%- for engine in page.engines -%}
-            <li itemscope itemtype="https://schema.org/Thing"><span itemprop="name">{{ engine }}</span></li>
-          {%- endfor -%}
-        </ul>
-      </div>
-      <div>
-        <span class="table_title">Tools Used:</span>
-        <ul>
-          {%- for tool in page.tools -%}
-            <li itemscope itemtype="https://schema.org/Thing"><span itemprop="name">{{ tool }}</span></li>
-          {%- endfor -%}
-        </ul>
-      </div>
+      {%- if page.engines -%}
+        <div>
+          <span class="table_title">Engine:</span>
+          <ul>
+            {%- for engine in page.engines -%}
+              <li itemscope itemtype="https://schema.org/Thing"><span itemprop="name">{{ engine }}</span></li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      {%- endif -%}
+      {%- if page.tools -%}
+        <div>
+          <span class="table_title">Tools Used:</span>
+          <ul>
+            {%- for tool in page.tools -%}
+              <li itemscope itemtype="https://schema.org/Thing"><span itemprop="name">{{ tool }}</span></li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      {%- endif -%}
       <div>
         <span class="table_title">Duration:</span>
         <ul>
@@ -67,10 +76,10 @@ layout: default
       {{ content }}
 
       <!-- Should use jekyll tag to place it in the right place. -->
-      {%- if page.video-link -%}
+      {%- if page.youtube-link -%}
     	  <!--<section id="gameplay_section">-->
   	    <h2><span class="fa fa-gamepad" aria-hidden="true"></span> Gameplay video</h2>
-    		<iframe width="500" height="300" src="{{ page.video-link }}" allowfullscreen="allowfullscreen"
+    		<iframe width="500" height="300" src="{{ page.youtube-link }}" allowfullscreen="allowfullscreen"
     										   	mozallowfullscreen="mozallowfullscreen"
     	     										msallowfullscreen="msallowfullscreen"
           											oallowfullscreen="oallowfullscreen"

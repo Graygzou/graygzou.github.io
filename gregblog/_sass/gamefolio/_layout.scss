@@ -231,13 +231,6 @@
   }
 }
 
-.home-section {
-  background-color: lightgray;
-  border-radius: 1%;
-  padding: 1%;
-}
-
-
 /**
  * Posts
  */
@@ -287,14 +280,78 @@
  * Posts Projects
  */
 
+.project-thumbnail {
+  position: relative;
+}
+
+.project-title {
+  @include relative-font-size(4.625);
+  letter-spacing: -1px;
+  line-height: 1;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 15px;
+  border: 3px solid black;
+  text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;
+
+  @include media-query($on-laptop) {
+    @include relative-font-size(4.25);
+  }
+
+  white-space: nowrap;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.project-description {
+  @include relative-font-size(1.225);
+  letter-spacing: -1px;
+  line-height: 1;
+
+  @include media-query($on-laptop) {
+    @include relative-font-size(1);
+  }
+
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.thumbnail-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border: 5px solid black;
+  text-align: center;
+}
+
 .project-li {
   padding: 1%;
   border-radius: 2px;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   border-bottom: 0;
   margin-bottom: 0 !important;
+  height: 140px;
+  vertical-align: middle;
+
+  img {
+    float: left;
+    max-width: 140px;
+    min-width: 140px;
+    max-height: 140px;
+    min-height: 140px;
+    margin-right: 1%;
+  }
+  .project-content {
+    height: 100%;
+    padding-top: 1%;  /* Should be remove... */
+    vertical-align: middle;
+  }
   &:last-child {
-    border-bottom: 1px solid black;
+    /*border-bottom: 1px solid black;*/
   }
 }
 
@@ -316,6 +373,7 @@
   padding-right: 5px;
   border-radius: 5px;
   margin-right: 5px;
+  /*white-space: nowrap;*/
   /*border-radius: 8px;*/
 
   //background-color: rgb(105, 120, 3);
@@ -328,7 +386,7 @@
   justify-content: space-between;
   //margin-top: 10px;
   div {
-    flex-basis: 33%;
+    flex-basis: 25%;
     &:last-child{
       flex-basis: auto;
     }
@@ -338,4 +396,45 @@
 .svg-project {
   vertical-align: bottom;
   padding-bottom: 4px;
+}
+
+
+/**
+ * About
+ */
+.about-content {
+  text-align: center;
+  figure {
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+}
+
+.about-img {
+  text-align: center;
+  width: 30%;
+}
+
+
+/**
+ * Home page
+ */
+.home-li {
+  margin-bottom: 0 !important;
+  height: 150px;
+
+  img {
+    float: left;
+    width: 150px;
+  }
+
+  div {
+    vertical-align: middle;
+
+    ul {
+      margin: 0 auto;
+      list-style: none;
+    }
+  }
 }

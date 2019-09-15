@@ -1,0 +1,7 @@
+platforms: Windows
+engines: Unreal
+tools: [Steam VR, Market Store, Gimp]
+duration: "2 months and half"
+team-size: 4
+main-roles: [Project Manager, Game Programmer, Game Designer]
+github-link: https://github.com/dyga-entertainment/spida-phobia
