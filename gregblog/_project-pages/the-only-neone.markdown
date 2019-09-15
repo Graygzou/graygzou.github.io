@@ -1,43 +1,30 @@
 ---
 layout: project-page
-title : the-only-neOne
+title: the-only-neone
 description: 3D Grid based Maze game made in 48 hours for the GMTK GameJam 2019
-color: black
-color: #000000
-color: #000000
+color: "#000000"
 language: None
 stargazers-count: 0
 forks-count: 0
-updated-at: 2019-08-18 01:33:36
-last-update-days: 20
-platforms: Windows PC, WebGL
-engines: Unity
-tools: [Market Store, Gimp]
+updated-at: 2019-08-17 20:18:14
+last-update-days: 28
+tags: []
+platforms: [Windows, WebGL]
+engines: Unity3D
+tools: [Shader Graph, Rewired]
 duration: "48 hours"
 team-size: 4
 main-roles: [3Cs Programmer, Gameplay Programmer, Level Designer]
-github-link: https://github.com/dyga-entertainment/spida-phobia
-video-link: https://www.youtube.com/embed/-BDVJ9IO2uk
+github-link: https://github.com/Graygzou/the-only-neOne
 itch-io-link: https://dzamani.itch.io/the-only-neone
-tags: []
+youtube-link: https://www.youtube.com/embed/-BDVJ9IO2uk
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>
-Copyright (c) 2018 Gregoire Boiron  All Rights Reserved.
+Copyright (c) 2018-2019 Gregoire Boiron  All Rights Reserved.
 --->
 
-Overview
---------------------
-"The only NeOne" is a 3D Grid based Maze game. This application has been completed for the GMTK GameJam 2019 organized by Mark Brown. The official itch.io website of this event is the following : GMTK GameJam 2019.
-
-Clear levels by reaching the exit, but there's a twist! You can only press and hold your move commands ONCE. Study the enemy's patterns, keep track of your paths you take and figure out how to reach the exit! The game is available both for Windows client and also WebGL meaning you don't need to download anything. All you have to do is to open the game page and you start playing our game !
-
-We're pround to finish #109 overall for this jam !
-
-Screenshots
---------------------
-In Progress.
-
-Detailed Info
---------------------
-In Progress.
+{% capture my_include %}
+{% include projects-content/the-only-neone-content.markdown %}
+{% endcapture %}
+{{ my_include | markdownify }}

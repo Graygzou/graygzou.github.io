@@ -1,0 +1,6 @@
+platforms: Web
+tools: [jekyll, liquid, python]
+duration: "In progress"
+team-size: 1
+main-roles: [Front-End Programmeur, Tools Programmer]
+github-link: https://graygzou.github.io/

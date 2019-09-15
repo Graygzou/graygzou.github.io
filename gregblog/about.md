@@ -1,18 +1,35 @@
 ---
-layout: page
+layout: about
 title: About
 permalink: /about/
+order: 4
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Hello There !
+==================
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+![This is me !]({{site.url}}/assets/images/gregoire-boiron.jpg){: .about-img }
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+I'm Grégoire Boiron, Software Engineer since 2019. After trying many disciplines thanks to internships, I found myselft landing in the video game industry.
+And I'm still in it so far !
+
+You can follow me on a lot of social media :
+
+More about myself
+==================
+
+I spent a lot of my spare time trying and learning stuff I find interesting (and there is A TON OF intersting things out there...). 
+
+When I'm not doing that I exercise and don't miss an occasion to practice any kind of sports alone or with friends.
+I also spent some time playing video games and petting my 4 years old black cat Lilo :
+
+![My beautiful cat Lilo]({{site.url}}/assets/images/lilo3-1.jpg){: .about-img }
+![My beautiful cat Lilo]({{site.url}}/assets/images/lilo-1.jpg){: .about-img }
+![My beautiful cat Lilo]({{site.url}}/assets/images/lilo2-1.jpg){: .about-img }
 
 
-[jekyll-organization]: https://github.com/jekyll
+
+
+Side Note
+==================
+ This website is still under construction. Any bugs should be corrected soon.
