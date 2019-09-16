@@ -1,6 +1,0 @@
-platforms: Windows
-tools: [Visual Studio, Lua]
-duration: "1 month"
-team-size: 6
-main-roles: [Project Manager, IA Programmer, Gameplay Programmer]
-github-link: https://github.com/Graygzou/raven

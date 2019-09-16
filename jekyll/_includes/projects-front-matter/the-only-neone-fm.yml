@@ -1,9 +1,0 @@
-platforms: [Windows, WebGL]
-engines: Unity3D
-tools: [Shader Graph, Rewired]
-duration: "48 hours"
-team-size: 4
-main-roles: [3Cs Programmer, Gameplay Programmer, Level Designer]
-github-link: https://github.com/Graygzou/the-only-neOne
-itch-io-link: https://dzamani.itch.io/the-only-neone
-youtube-link: https://www.youtube.com/embed/-BDVJ9IO2uk

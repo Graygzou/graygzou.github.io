@@ -1,6 +1,0 @@
-platforms: Windows
-tools: [Intellij, Swing]
-duration: "In progress"
-team-size: 1
-main-roles: [Engine Programmer]
-github-link: https://github.com/dyga-entertainment/dyga-engine
