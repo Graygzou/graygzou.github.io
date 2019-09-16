@@ -28,7 +28,7 @@ branches:
 deploy:
   provider: script
   script: travis-wait-improved --timeout 30m ./scripts/build.sh
-  skip_cleanup: false
+  skip_cleanup: true
   github_token: ${BOT_DEPLOY_TOKEN}  # Set in the settings page of your repository, as a secure variable
   keep_history: true
   target_branch: live
