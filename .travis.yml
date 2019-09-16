@@ -3,6 +3,10 @@ language: python
 python:
   - "3.7"
 
+env:
+  global:
+    - JEKYLL_ENV=production
+
 # reduce log clutter
 cache: bundler
 
@@ -20,7 +24,7 @@ script:
   - set -e # Enable error reporting to the console
   - cd scripts
   - find -name "*.py" -exec python {} ${GITHUB_API_TOKEN} \;
-  - (cd jekyll && JEKYLL_ENV=production bundle exec jekyll build --destination site)
+  - (cd jekyll && bundle exec jekyll build --destination site)
 
 branches:
   except:
