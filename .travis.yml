@@ -11,6 +11,10 @@ script:
   - cd scripts
   - find -name "*.py" -exec python {} ${GITHUB_API_TOKEN} \;
 
+branches:
+  except:
+  - live
+
 deploy:
   provider: pages
   skip_cleanup: true
@@ -18,7 +22,7 @@ deploy:
   keep_history: true
   target_branch: master
   on:
-    branch: live
+    branch: master
 
 # command to run tests
 #script:
