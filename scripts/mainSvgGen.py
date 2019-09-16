@@ -1,5 +1,7 @@
+# -*- coding: utf-8 -*-
 #############################################################################
 # Grégoire Boiron <gregoire.boiron@gmail.com>
+# Copyright (c) 2018-2019 Grégoire Boiron  All Rights Reserved.
 #
 # Create main svg files that contains all images that belong to a category
 #############################################################################
@@ -7,7 +9,7 @@
 import os
 from xml.dom import minidom
 
-DIRECTORY_PATH = "../assets/icons/"
+DIRECTORY_PATH = "../jekyll/assets/icons/"
 FILE_PREFIX = "gamefolio-"
 FILE_POSTFIX = "-icons.svg"
 
