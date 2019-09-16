@@ -4,7 +4,7 @@
 set -e
 
 # Checkout `master` and remove everything.
-git clone https://${GITHUB_DEPLOY_TOKEN}@github.com/Graygzou/graygzou.github.io.git ../graygzou.github.io.live
+git clone https://${BOT_DEPLOY_TOKEN}@github.com/Graygzou/graygzou.github.io.git ../graygzou.github.io.live
 cd ../graygzou.github.io.live
 git checkout live
 rm -rf *
@@ -19,12 +19,12 @@ cp ../graygzou.github.io/.travis.yml .
 git config user.name "Graygzou-bot"
 
 # If debug is needed, uncomment this line. It will allow to connect remotly to the travis TRAVIS_BUILD_NUMBER
-curl https://www.teleconsole.com/get.sh | sh
-teleconsole
+#curl https://www.teleconsole.com/get.sh | sh
+#teleconsole
 
 # Commit and push generated content to `master` branch.
-#git status
-#git add -A .
-#git status
-#git commit -a -m "Travis #$TRAVIS_BUILD_NUMBER"
-#git push --quiet origin `master` > /dev/null 2>&1
+git status
+git add -A .
+git status
+git commit -a -m "Travis deployment #$TRAVIS_BUILD_NUMBER"
+git push --quiet origin `live` > /dev/null 2>&1
