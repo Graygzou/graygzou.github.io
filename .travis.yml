@@ -8,10 +8,8 @@ install:
   - pip install -r requirements.txt
 
 script:
-  - cd scripts/
-  - for f in *.py; do
-      python "$f" ${GITHUB_API_TOKEN}
-    done
+  - cd scripts
+  - find -name "*.py" -exec python {} ${GITHUB_API_TOKEN} \;
 
 deploy:
   provider: pages
