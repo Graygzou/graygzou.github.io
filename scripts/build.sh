@@ -4,24 +4,23 @@
 set -e
 
 # Checkout `master` and remove everything.
-#git clone https://${GH_TOKEN}@github.com/Graygzou/graygzou.github.io.git ../graygzou.github.io.master
-#cd ../graygzou.github.io.master
-#git checkout master
-#rm -rf *
+git clone https://${GITHUB_DEPLOY_TOKEN}@github.com/Graygzou/graygzou.github.io.git ../graygzou.github.io.live
+cd ../graygzou.github.io.live
+git checkout live
+rm -rf *
 
 # Copy generated HTML site from source branch in original repository.
 # Now the `master` branch will contain only the contents of the _site directory.
-#cp -R ../graygzou.github.io/_site/* .
+cp -R ../graygzou.github.io/_site/* .
 
 # Make sure we have the updated .travis.yml file so tests won't run on master.
-#cp ../savaslabs.github.io/.travis.yml .
+cp ../graygzou.github.io/.travis.yml .
 #git config user.email ${GH_EMAIL}
-#git config user.name "savas-bot"
+git config user.name "Graygzou-bot"
 
 # If debug is needed, uncomment this line. It will allow to connect remotly to the travis TRAVIS_BUILD_NUMBER
-#curl https://www.teleconsole.com/get.sh | sh
-#teleconsole
-
+curl https://www.teleconsole.com/get.sh | sh
+teleconsole
 
 # Commit and push generated content to `master` branch.
 #git status
