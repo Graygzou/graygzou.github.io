@@ -7,13 +7,13 @@ python:
 cache: bundler
 
 before_install:
-  - gem update bundler
+  - cd jekyll && gem update bundler
 
 # command to install dependencies
 # This was obtained by running $pip freeze > requirements.txt
 install:
   - pip install -r requirements.txt
-  - bundle install
+  - cd jekyll && bundle install
 
 script:
   - set -e # Enable error reporting to the console
@@ -25,7 +25,8 @@ branches:
   - live
 
 deploy:
-  provider: pages
+  provider: script
+  script: "./scripts/build.sh"
   skip_cleanup: true
   github_token: ${GITHUB_DEPLOY_TOKEN}  # Set in the settings page of your repository, as a secure variable
   keep_history: true
