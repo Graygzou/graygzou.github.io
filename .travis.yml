@@ -20,7 +20,7 @@ script:
   - set -e # Enable error reporting to the console
   - cd scripts
   - find -name "*.py" -exec python {} ${GITHUB_API_TOKEN} \;
-  - JEKYLL_ENV=production bundle exec jekyll build --destination site
+  - (cd jekyll && JEKYLL_ENV=production bundle exec jekyll build --destination site)
 
 branches:
   except:
@@ -29,7 +29,7 @@ branches:
 deploy:
   provider: pages
   verbose: true
-  local_dir: ./jekyll/_site
+  local_dir: ./jekyll/site
   skip_cleanup: true
   github_token: ${GITHUB_DEPLOY_TOKEN}  # Set in the settings page of your repository, as a secure variable
   keep_history: true
