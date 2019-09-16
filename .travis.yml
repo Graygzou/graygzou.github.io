@@ -26,7 +26,7 @@ branches:
 
 deploy:
   provider: script
-  script: "./scripts/build.sh"
+  script: travis-wait-improved --timeout 30m ./scripts/build.sh
   skip_cleanup: true
   github_token: ${GITHUB_DEPLOY_TOKEN}  # Set in the settings page of your repository, as a secure variable
   keep_history: true
