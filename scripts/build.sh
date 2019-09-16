@@ -18,6 +18,10 @@ set -e
 #git config user.email ${GH_EMAIL}
 #git config user.name "savas-bot"
 
+# If debug is needed, uncomment this line. It will allow to connect remotly to the travis TRAVIS_BUILD_NUMBER
+#curl https://www.teleconsole.com/get.sh | sh
+#teleconsole
+
 # Commit and push generated content to `master` branch.
 #git status
 #git add -A .

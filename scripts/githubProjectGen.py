@@ -16,8 +16,8 @@ from pathlib import Path
 
 # Static const variables
 endOfFile = '\n'
-FOLDER_REL_PATH = "..\\jekyll\\_project-pages\\"
-ADDIT_FM_FOLDER_REL_PATH = "..\\jekyll\\_includes\\projects-front-matter\\"
+FOLDER_REL_PATH = "../jekyll/_project-pages/"
+ADDIT_FM_FOLDER_REL_PATH = "../jekyll/_includes/projects-front-matter/"
 PAGE_LAYOUT = "project-page"
 postFileName = ".markdown"
 DEFAULT_REPO_COLOR = "#000000"
