@@ -7,13 +7,13 @@ python:
 cache: bundler
 
 before_install:
-  - cd jekyll && gem update bundler
+  - (cd jekyll && gem update bundler)
 
 # command to install dependencies
 # This was obtained by running $pip freeze > requirements.txt
 install:
   - pip install -r requirements.txt
-  - cd jekyll && bundle install
+  - (cd jekyll && bundle install)
 
 script:
   - set -e # Enable error reporting to the console
