@@ -3,12 +3,15 @@ language: python
 python:
   - "3.7"
 # command to install dependencies
-# This was obtain by running $pip freeze > requirements.txt
+# This was obtained by running $pip freeze > requirements.txt
 install:
   - pip install -r requirements.txt
 
 script:
-  - python websiteGen.py ${GITHUB_API_TOKEN}
+  - cd scripts/
+  - for f in *.py; do
+      python "$f" ${GITHUB_API_TOKEN}
+    done
 
 deploy:
   provider: pages
@@ -17,7 +20,7 @@ deploy:
   keep_history: true
   target_branch: master
   on:
-    branch: master
+    branch: live
 
 # command to run tests
 #script:
