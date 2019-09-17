@@ -24,7 +24,7 @@ The gameplay of Raven is similar of a Quake-style deathmatch. When starting the 
 
 Screenshots
 --------------------
-TODO: Add images ?
+In progress
 
 Detailed Info
 --------------------

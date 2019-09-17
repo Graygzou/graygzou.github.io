@@ -23,7 +23,7 @@ You play as survivors from a deadly virus which turn humans into zombies. Your o
 
 Screenshots
 --------------------
-TODO: Add images ?
+In progress
 
 Detailed Info
 --------------------

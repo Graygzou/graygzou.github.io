@@ -21,7 +21,7 @@ This application is design to help people scared by spiders. The player can go t
 
 Screenshots
 --------------------
-TODO: Add images ?
+In Progress
 
 Detailed Info
 --------------------
