@@ -15,7 +15,7 @@ We're pround to finish #109 overall for this jam !
 
 Screenshots
 --------------------
-TODO: Add images ?
+In coming
 
 Detailed Info
 --------------------
