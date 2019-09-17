@@ -9,7 +9,7 @@ Wonderful website I made using jekyll and liquid to build what I want. Using Git
 
 Screenshots
 --------------------
-TODO: Add images ?
+Navigate the site directly, it's more fun right?
 
 Detailed Info
 --------------------
