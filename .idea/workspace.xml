@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b6d0991-ca97-49ed-8583-7856f3d6434a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/jekyll/_layouts/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_layouts/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_sass/gamefolio/_layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_sass/gamefolio/_layout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/blog/_posts/2019-07-27-welcome-to-jekyll - Copy.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/blog/_posts/2019-07-27-welcome-to-jekyll.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/blog/_posts/2019-08-27-welcome-to-jekyll.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/helpers/project-links" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/helpers/project-links" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,11 +33,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jekyll/_sass/gamefolio/_layout.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="171">
-              <caret line="224" column="24" lean-forward="true" selection-start-line="224" selection-start-column="24" selection-end-line="224" selection-end-column="24" />
+              <caret line="224" column="24" selection-start-line="224" selection-start-column="24" selection-end-line="224" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jekyll/_includes/helpers/project-links">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="17">
+                <caret line="1" column="80" selection-start-line="1" selection-start-column="80" selection-end-line="1" selection-end-column="80" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -77,18 +85,6 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/spida-phobia/spida-phobia-banner.png">
           <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jekyll/_educations/uqac.markdown">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="68">
-                <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="10" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -139,7 +135,6 @@
         <option value="$PROJECT_DIR$/gregblog/_sass/gamefolio/_layout.scss" />
         <option value="$PROJECT_DIR$/gregblog/scripts/githubProjectGen.py" />
         <option value="$PROJECT_DIR$/jekyll/_project-pages/lode-runner.markdown" />
-        <option value="$PROJECT_DIR$/jekyll/_includes/helpers/project-links" />
         <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/lode-runner-content.markdown" />
         <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/battle-simulator-content.markdown" />
         <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/advent-of-code-content.markdown" />
@@ -180,6 +175,7 @@
         <option value="$PROJECT_DIR$/jekyll/assets/images/experiences/enac.svg" />
         <option value="$PROJECT_DIR$/jekyll/_layouts/home.html" />
         <option value="$PROJECT_DIR$/jekyll/_sass/gamefolio/_layout.scss" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/helpers/project-links" />
       </list>
     </option>
   </component>
@@ -210,19 +206,14 @@
               <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="jekyll" type="462c0819:PsiDirectoryNode" />
-              <item name="_educations" type="462c0819:PsiDirectoryNode" />
+              <item name="_includes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="jekyll" type="462c0819:PsiDirectoryNode" />
-              <item name="_experiences" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="jekyll" type="462c0819:PsiDirectoryNode" />
-              <item name="_layouts" type="462c0819:PsiDirectoryNode" />
+              <item name="_includes" type="462c0819:PsiDirectoryNode" />
+              <item name="helpers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -311,12 +302,12 @@
       <workItem from="1568495096468" duration="21322000" />
       <workItem from="1568559341103" duration="22229000" />
       <workItem from="1568677568811" duration="50000" />
-      <workItem from="1568678708496" duration="8500000" />
+      <workItem from="1568678708496" duration="8733000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52112000" />
+    <option name="totallyTimeSpent" value="52345000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="73" y="-7" width="1470" height="878" extended-state="6" />
@@ -357,16 +348,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/advent-of-code-content.markdown">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="255">
-            <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/brain-control-content.markdown">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -749,7 +730,17 @@
     <entry file="file://$PROJECT_DIR$/jekyll/_sass/gamefolio/_layout.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
-          <caret line="224" column="24" lean-forward="true" selection-start-line="224" selection-start-column="24" selection-end-line="224" selection-end-column="24" />
+          <caret line="224" column="24" selection-start-line="224" selection-start-column="24" selection-end-line="224" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/helpers/project-links">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="17">
+            <caret line="1" column="80" selection-start-line="1" selection-start-column="80" selection-end-line="1" selection-end-column="80" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
