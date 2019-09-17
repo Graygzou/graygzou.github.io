@@ -5,10 +5,12 @@ Copyright (c) 2018 Gregoire Boiron  All Rights Reserved.
 
 Overview
 --------------------
-In Progress
+Advent of Code is an Advent calendar of small programming puzzles for a variety of skill sets and skill levels that can be solved in any programming language we like. 
+People use this event as a speed contest, practice problems, or to challenge each other for example.
 
 ### Project Goals
-In Progress
+* Challenge myself
+* Discover Lua language
 
 {% capture links_include %}
 {% include helpers/project-links %}
@@ -17,7 +19,7 @@ In Progress
 
 Screenshots
 --------------------
-TODO: Add images ?
+In Progress
 
 Detailed Info
 --------------------
