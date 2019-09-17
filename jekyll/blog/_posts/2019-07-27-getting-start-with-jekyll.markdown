@@ -1,9 +1,11 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Getting start with Jekyll"
 date:   2019-07-27 20:26:29 -0400
 categories: jekyll update
 ---
+
+This is a draft post for now. Don't mind about what is here.
 
 Ref: https://jekyllrb.com/tutorials/using-jekyll-with-bundler/
 

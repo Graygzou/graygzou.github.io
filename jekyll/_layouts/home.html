@@ -17,13 +17,12 @@ layout: default
   {%- include educations.html -%}
 
 </div>
-
+<!--
 {%- if site.posts.size > 0 -%}
   <aside class="bloc-aside">
     <h2 class="post-list-heading">{{ page.list_title | default: "Latest Posts" }}</h2>
     <ul class="post-list">
       {%- for post in site.posts -%}
-        <!-- Only show the 3 latests post here -->
         {%- if forloop.index <= 3 -%}
         <li>
           {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
@@ -44,3 +43,4 @@ layout: default
     <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
   </aside>
 {%- endif -%}
+-->
