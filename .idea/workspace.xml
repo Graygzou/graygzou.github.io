@@ -54,7 +54,9 @@
         <entry file="file://$PROJECT_DIR$/jekyll/_project-pages/Metenorage.markdown">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor />
+              <first_editor relative-caret-position="408">
+                <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+              </first_editor>
               <second_editor />
             </state>
           </provider>
@@ -132,7 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/gregblog/projects.md" />
         <option value="$PROJECT_DIR$/gregblog/blog.md" />
         <option value="$PROJECT_DIR$/gregblog/about.md" />
         <option value="$PROJECT_DIR$/gregblog/_includes/header.html" />
@@ -183,6 +184,7 @@
         <option value="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/the-only-neone-fm.yml" />
         <option value="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/battle-simulator-fm.yml" />
         <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/jekyll/_project-pages/Metenorage.markdown" />
       </list>
     </option>
   </component>
@@ -295,16 +297,15 @@
       <workItem from="1568495096468" duration="21322000" />
       <workItem from="1568559341103" duration="22229000" />
       <workItem from="1568677568811" duration="50000" />
-      <workItem from="1568678708496" duration="3213000" />
+      <workItem from="1568678708496" duration="3853000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46825000" />
+    <option name="totallyTimeSpent" value="47465000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="73" y="-7" width="1470" height="878" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -649,7 +650,9 @@
     <entry file="file://$PROJECT_DIR$/jekyll/_project-pages/Metenorage.markdown">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor />
+          <first_editor relative-caret-position="408">
+            <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+          </first_editor>
           <second_editor />
         </state>
       </provider>
