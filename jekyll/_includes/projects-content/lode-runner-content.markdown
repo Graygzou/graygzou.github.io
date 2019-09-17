@@ -15,7 +15,10 @@ Lode Runner is composed of severals levels presented in a single screen. The pla
 * Make simple, yet effective, artificial intelligences for enemies.
 * Make a self-taught game.
 
-<span class="table_title">Github Link</span>: <a href="https://github.com/Graygzou/lode-runner">Lode Runner Project</a>.
+{% capture links_include %}
+{% include helpers/project-links %}
+{% endcapture %}
+{{ links_include | markdownify }}
 
 Screenshots
 --------------------

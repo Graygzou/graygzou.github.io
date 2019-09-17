@@ -9,6 +9,10 @@ Penguin Panic is a 3D multiplayers exploration game. It has been made for the Ub
 
 Since the competition isn't over, it's better to not reveal the actual story behind the game. Sorry about it.
 
+{% capture links_include %}
+{% include helpers/project-links %}
+{% endcapture %}
+{{ links_include | markdownify }}
 
 ### Constraints
 * The game needs to highlight a real social cause.

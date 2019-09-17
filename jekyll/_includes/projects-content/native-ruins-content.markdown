@@ -15,6 +15,11 @@ You play as Judy, a young 23 years old woman, who wake up on a desert island. He
 * Apply game design practices, game balancing, etc.
 * Apply SCRUM method to provide quick and regular feedbacks.
 
+{% capture links_include %}
+{% include helpers/project-links %}
+{% endcapture %}
+{{ links_include | markdownify }}
+
 <span class="table_title">Github Link</span>: <a href="https://github.com/Graygzou/native-ruins">NATIVE RUINS Project</a>.
 
 Game Design Document

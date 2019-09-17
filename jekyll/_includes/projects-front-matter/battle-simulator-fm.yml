@@ -4,6 +4,7 @@ tools: [MongoDB, GraphX]
 duration: "2 months"
 team-size: 3
 main-roles: [Back-end Programmer, Gameplay Programmer, Front-end Programmeur]
-github-link: https://github.com/dyga-entertainment/spida-phobia
 video-link: https://www.youtube.com/embed/-BDVJ9IO2uk
-itch-io-link: https://dzamani.itch.io/the-only-neone
+project_links:
+  - name: github
+    url: https://github.com/Graygzou/battle-simulator

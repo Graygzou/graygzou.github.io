@@ -4,4 +4,6 @@ tools: [Unity, Asset Store]
 duration: "48 hours"
 team-size: 7
 main-roles: [IA Programmer, Gameplay Programmer]
-github-link: https://github.com/Graygzou/brain-control
+project_links:
+  - name: github
+    url: https://github.com/Graygzou/brain-control

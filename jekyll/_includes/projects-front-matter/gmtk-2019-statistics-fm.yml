@@ -2,4 +2,6 @@ platforms: Web
 duration: "In progress"
 team-size: 1
 main-roles: []
-github-link:
+project_links:
+  - name: github
+    url: https://github.com/Graygzou/gmtk-2019-statistics

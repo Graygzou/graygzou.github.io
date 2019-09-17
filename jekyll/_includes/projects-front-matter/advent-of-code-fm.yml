@@ -3,4 +3,6 @@ tools: [Lua]
 duration: "1 month"
 team-size: 7
 main-roles: [Programmer]
-github-link: https://github.com/Graygzou/brain-control
+project_links:
+  - name: github
+    url: https://github.com/Graygzou/advent-of-code

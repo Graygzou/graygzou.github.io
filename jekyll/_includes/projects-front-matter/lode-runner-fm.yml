@@ -4,4 +4,6 @@ tools: [Eclipse]
 duration: "3 months"
 team-size: 4
 main-roles: [Project Manager, Engine Programmer, Gameplay Programmeur]
-github-link: https://github.com/dyga-entertainment/lode-runner
+project_links:
+  - name: github
+    url: https://github.com/dyga-entertainment/lode-runner

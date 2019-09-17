@@ -10,6 +10,11 @@ In progress
 ##### Project Goals
 In progress
 
+{% capture links_include %}
+{% include helpers/project-links %}
+{% endcapture %}
+{{ links_include | markdownify }}
+
 Screenshots
 --------------------
 TODO: Add images ?

@@ -10,7 +10,10 @@ In Progress
 ### Project Goals
 In Progress
 
-<span class="table_title">Github Link</span>: <a href="https://github.com/Graygzou/Raven-IA">RAVEN Project</a>.
+{% capture links_include %}
+{% include helpers/project-links %}
+{% endcapture %}
+{{ links_include | markdownify }}
 
 Screenshots
 --------------------

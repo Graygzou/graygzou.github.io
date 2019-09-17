@@ -11,6 +11,11 @@ Clear levels by reaching the exit, but there's a twist! You can only press and h
 
 We're pround to finish #109 overall for this jam !
 
+{% capture links_include %}
+{% include helpers/project-links %}
+{% endcapture %}
+{{ links_include | markdownify }}
+
 <span class="table_title">Github Link</span>: <a href="https://github.com/Graygzou/Raven-IA">RAVEN Project</a>.
 
 Screenshots

@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b6d0991-ca97-49ed-8583-7856f3d6434a" name="Default Changelist" comment="" />
+    <list default="true" id="5b6d0991-ca97-49ed-8583-7856f3d6434a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/jekyll/_includes/helpers/project-links" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/Metenorage-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/Metenorage-content.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/advent-of-code-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/advent-of-code-content.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/battle-simulator-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/battle-simulator-content.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/brain-control-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/brain-control-content.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/dyga-engine-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/dyga-engine-content.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/gmtk-2019-statistics-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/gmtk-2019-statistics-content.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/graygzou.github.io-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/graygzou.github.io-content.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/lode-runner-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/lode-runner-content.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/native-ruins-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/native-ruins-content.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/penguin-panic-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/penguin-panic-content.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/raven-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/raven-content.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/spida-phobia-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/spida-phobia-content.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/the-only-neone-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/the-only-neone-content.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/Metenorage-fm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/Metenorage-fm.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/advent-of-code-fm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/advent-of-code-fm.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/battle-simulator-fm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/battle-simulator-fm.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/brain-control-fm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/brain-control-fm.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/dyga-engine-fm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/dyga-engine-fm.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/gmtk-2019-statistics-fm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/gmtk-2019-statistics-fm.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/graygzou.github.io-fm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/graygzou.github.io-fm.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/lode-runner-fm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/lode-runner-fm.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/native-ruins-fm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/native-ruins-fm.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/penguin-panic-fm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/penguin-panic-fm.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/raven-fm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/raven-fm.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/spida-phobia-fm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/spida-phobia-fm.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/the-only-neone-fm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/the-only-neone-fm.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_project-pages/lode-runner.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_project-pages/lode-runner.markdown" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,7 +42,98 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-front-matter/brain-control-fm.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="8" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-front-matter/battle-simulator-fm.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-front-matter/advent-of-code-fm.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-front-matter/graygzou.github.io-fm.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" selection-start-line="5" selection-end-line="7" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-front-matter/lode-runner-fm.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="8" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-front-matter/Metenorage-fm.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="8" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-front-matter/native-ruins-fm.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" selection-start-line="7" selection-end-line="9" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-front-matter/penguin-panic-fm.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="10" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-front-matter/raven-fm.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" selection-start-line="5" selection-end-line="7" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-front-matter/the-only-neone-fm.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -39,34 +160,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/gregblog/_includes/projects-front-matter/Battle-Simulator-fm.yml" />
-        <option value="$PROJECT_DIR$/gregblog/_includes/projects-front-matter/brain-control-fm.yml" />
-        <option value="$PROJECT_DIR$/gregblog/_includes/projects-front-matter/dyga-engine-fm.yml" />
-        <option value="$PROJECT_DIR$/gregblog/_includes/projects-front-matter/graygzou.github.io-fm.yml" />
-        <option value="$PROJECT_DIR$/gregblog/_includes/projects-front-matter/lode-runner-fm.yml" />
-        <option value="$PROJECT_DIR$/gregblog/_includes/projects-front-matter/penguin-panic-fm.yml" />
-        <option value="$PROJECT_DIR$/gregblog/_includes/projects-front-matter/raven-fm.yml" />
-        <option value="$PROJECT_DIR$/gregblog/_includes/projects-front-matter/spida-phobia-fm.yml" />
-        <option value="$PROJECT_DIR$/gregblog/_includes/projects-front-matter/the-only-neone-fm.yml" />
-        <option value="$PROJECT_DIR$/gregblog/_includes/projects-front-matter/gmtk-2019-statistics-fm.yml" />
-        <option value="$PROJECT_DIR$/gregblog/_includes/projects-front-matter/Metenorage-fm.yml" />
-        <option value="$PROJECT_DIR$/gregblog/_includes/projects-content/metenorage-content.markdown" />
-        <option value="$PROJECT_DIR$/gregblog/_includes/projects-content/battle-simulator-content.markdown" />
-        <option value="$PROJECT_DIR$/gregblog/_includes/projects-content/advent-of-code-content.markdown" />
-        <option value="$PROJECT_DIR$/gregblog/_includes/projects-content/brain-control-content.markdown" />
-        <option value="$PROJECT_DIR$/gregblog/_includes/projects-content/dyga-engine-content.markdown" />
-        <option value="$PROJECT_DIR$/gregblog/_includes/projects-content/gmtk-2019-statistics-content.markdown" />
-        <option value="$PROJECT_DIR$/gregblog/_includes/projects-content/the-only-neone-content.markdown" />
-        <option value="$PROJECT_DIR$/gregblog/_includes/projects-content/graygzou.github.io-content.markdown" />
-        <option value="$PROJECT_DIR$/gregblog/_includes/projects-content/lode-runner-content.markdown" />
-        <option value="$PROJECT_DIR$/gregblog/_includes/projects-content/penguin-panic-content.markdown" />
-        <option value="$PROJECT_DIR$/gregblog/_includes/projects-content/spida-phobia-content.markdown" />
-        <option value="$PROJECT_DIR$/gregblog/assets/icons/regular/history.svg" />
-        <option value="$PROJECT_DIR$/gregblog/_includes/projects-front-matter/native-ruins-fm.yml" />
-        <option value="$PROJECT_DIR$/gregblog/_layouts/project-page.html" />
-        <option value="$PROJECT_DIR$/gregblog/_layouts/about.html" />
-        <option value="$PROJECT_DIR$/gregblog/_includes/projects-content/native-ruins-content.markdown" />
-        <option value="$PROJECT_DIR$/gregblog/_includes/projects-content/raven-content.markdown" />
         <option value="$PROJECT_DIR$/gregblog/index.md" />
         <option value="$PROJECT_DIR$/gregblog/projects.md" />
         <option value="$PROJECT_DIR$/gregblog/blog.md" />
@@ -90,16 +183,34 @@
         <option value="$PROJECT_DIR$/gregblog/_experiences/irit.markdown" />
         <option value="$PROJECT_DIR$/gregblog/_sass/gamefolio/_layout.scss" />
         <option value="$PROJECT_DIR$/gregblog/scripts/githubProjectGen.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/Graygzou.github.io.iml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/jekyll/_project-pages/lode-runner.markdown" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/helpers/project-links" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/lode-runner-content.markdown" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/battle-simulator-content.markdown" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/advent-of-code-content.markdown" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/brain-control-content.markdown" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/dyga-engine-content.markdown" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/gmtk-2019-statistics-content.markdown" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/graygzou.github.io-content.markdown" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/Metenorage-content.markdown" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/native-ruins-content.markdown" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/penguin-panic-content.markdown" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/raven-content.markdown" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/spida-phobia-content.markdown" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/the-only-neone-content.markdown" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/lode-runner-fm.yml" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/advent-of-code-fm.yml" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/brain-control-fm.yml" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/dyga-engine-fm.yml" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/gmtk-2019-statistics-fm.yml" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/graygzou.github.io-fm.yml" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/Metenorage-fm.yml" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/native-ruins-fm.yml" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/penguin-panic-fm.yml" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/raven-fm.yml" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/spida-phobia-fm.yml" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/the-only-neone-fm.yml" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/battle-simulator-fm.yml" />
       </list>
     </option>
   </component>
@@ -107,14 +218,13 @@
     <option name="x" value="755" />
     <option name="y" value="-10" />
     <option name="width" value="1040" />
-    <option name="height" value="1099" />
+    <option name="height" value="1100" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -122,10 +232,55 @@
               <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="jekyll" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="jekyll" type="462c0819:PsiDirectoryNode" />
+              <item name="_includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="jekyll" type="462c0819:PsiDirectoryNode" />
+              <item name="_includes" type="462c0819:PsiDirectoryNode" />
+              <item name="helpers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="jekyll" type="462c0819:PsiDirectoryNode" />
+              <item name="_includes" type="462c0819:PsiDirectoryNode" />
+              <item name="projects-content" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="jekyll" type="462c0819:PsiDirectoryNode" />
+              <item name="_includes" type="462c0819:PsiDirectoryNode" />
+              <item name="projects-front-matter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="jekyll" type="462c0819:PsiDirectoryNode" />
+              <item name="_layouts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="jekyll" type="462c0819:PsiDirectoryNode" />
+              <item name="_project-pages" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -168,16 +323,18 @@
       <workItem from="1568495096468" duration="21322000" />
       <workItem from="1568559341103" duration="22229000" />
       <workItem from="1568677568811" duration="50000" />
+      <workItem from="1568678708496" duration="1988000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43612000" />
+    <option name="totallyTimeSpent" value="45600000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="73" y="-7" width="1470" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20425531" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -211,39 +368,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gregblog/_includes/projects-content/the-only-neone-content.markdown" />
-    <entry file="file://$PROJECT_DIR$/gregblog/_project-pages/Metenorage.markdown" />
-    <entry file="file://$PROJECT_DIR$/gregblog/_includes/projects-content/gmtk-2019-statistics-content.markdown" />
-    <entry file="file://$PROJECT_DIR$/gregblog/_includes/projects-content/metenorage-content.markdown" />
-    <entry file="file://$PROJECT_DIR$/gregblog/assets/icons/regular/circle.svg" />
-    <entry file="file://$PROJECT_DIR$/gregblog/assets/icons/regular/history.svg" />
-    <entry file="file://$PROJECT_DIR$/gregblog/assets/icons/regular/code-fork.svg" />
-    <entry file="file://$PROJECT_DIR$/gregblog/blog/_posts/2019-07-27-welcome-to-jekyll.markdown" />
-    <entry file="file://$PROJECT_DIR$/gregblog/_layouts/blog.html" />
-    <entry file="file://$PROJECT_DIR$/gregblog/_project-pages/native-ruins.markdown" />
-    <entry file="file://$PROJECT_DIR$/gregblog/_project-pages/battle-simulator.markdown" />
-    <entry file="file://$PROJECT_DIR$/gregblog/_includes/projects-front-matter/native-ruins-fm.yml" />
-    <entry file="file://$PROJECT_DIR$/gregblog/_sass/gamefolio/_syntax-highlighting.scss" />
-    <entry file="file://$PROJECT_DIR$/gregblog/_sass/gamefolio/_base.scss" />
-    <entry file="file://$PROJECT_DIR$/gregblog/_includes/projects-front-matter/graygzou.github.io-fm.yml" />
-    <entry file="file://$PROJECT_DIR$/gregblog/_layouts/about.html" />
-    <entry file="file://$PROJECT_DIR$/gregblog/_project-pages/gmtk-2019-statistics.markdown" />
-    <entry file="file://$PROJECT_DIR$/gregblog/_includes/projects-content/native-ruins-content.markdown" />
-    <entry file="file://$PROJECT_DIR$/gregblog/_includes/projects-content/raven-content.markdown" />
-    <entry file="file://$PROJECT_DIR$/gregblog/_layouts/post.html" />
-    <entry file="file://$PROJECT_DIR$/gregblog/_layouts/default.html" />
-    <entry file="file://$PROJECT_DIR$/gregblog/about.md" />
-    <entry file="file://$PROJECT_DIR$/gregblog/_layouts/page.html" />
-    <entry file="file://$PROJECT_DIR$/gregblog/blog.md" />
-    <entry file="file://$PROJECT_DIR$/gregblog/_project-pages/advent-of-code.markdown" />
-    <entry file="file://$PROJECT_DIR$/gregblog/index.md" />
-    <entry file="file://$PROJECT_DIR$/gregblog/assets/images/experiences/illogika.png" />
-    <entry file="file://$PROJECT_DIR$/gregblog/assets/images/experiences/IRIT.jpg" />
-    <entry file="file://$PROJECT_DIR$/gregblog/assets/images/experiences/illogika.svg" />
-    <entry file="file://$PROJECT_DIR$/gregblog/projects.md" />
-    <entry file="file://$PROJECT_DIR$/gregblog/_layouts/home.html" />
-    <entry file="file://$PROJECT_DIR$/gregblog/_includes/projects-front-matter/advent-of-code-fm.yml" />
-    <entry file="file://$PROJECT_DIR$/gregblog/_educations/enseeiht.markdown" />
     <entry file="file://$PROJECT_DIR$/gregblog/_includes/header.html" />
     <entry file="file://$PROJECT_DIR$/gregblog/_includes/head.html" />
     <entry file="file://$PROJECT_DIR$/gregblog/_educations/DUT.markdown" />
@@ -262,5 +386,285 @@
     <entry file="file://$PROJECT_DIR$/gregblog/_experiences/irit.markdown" />
     <entry file="file://$PROJECT_DIR$/gregblog/_sass/gamefolio/_layout.scss" />
     <entry file="file://$PROJECT_DIR$/gregblog/scripts/githubProjectGen.py" />
+    <entry file="file://$PROJECT_DIR$/jekyll/about.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="170">
+            <caret line="10" column="64" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="65" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_layouts/project-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-918" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/social.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="50" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_project-pages/advent-of-code.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="391">
+            <caret line="23" selection-start-line="23" selection-end-line="26" selection-end-column="30" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/helpers/project-links">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="34">
+            <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/battle-simulator-content.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="272">
+            <caret line="16" selection-start-line="16" selection-end-line="16" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/advent-of-code-content.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="255">
+            <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/brain-control-content.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="306">
+            <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/dyga-engine-content.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="255">
+            <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/gmtk-2019-statistics-content.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="255">
+            <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/graygzou.github.io-content.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="204">
+            <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/lode-runner-content.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="289">
+            <caret line="17" selection-start-line="17" selection-end-line="20" selection-end-column="33" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/Metenorage-content.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="357">
+            <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/native-ruins-content.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="340">
+            <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/penguin-panic-content.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="238">
+            <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/raven-content.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="340">
+            <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/spida-phobia-content.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="289">
+            <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/the-only-neone-content.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="272">
+            <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_project-pages/lode-runner.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="289">
+            <caret line="17" selection-start-line="17" selection-end-line="19" selection-end-column="50" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-front-matter/spida-phobia-fm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="8" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-front-matter/gmtk-2019-statistics-fm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="6" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-front-matter/dyga-engine-fm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="7" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-front-matter/brain-control-fm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="8" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-front-matter/battle-simulator-fm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-front-matter/graygzou.github.io-fm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="7" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-front-matter/lode-runner-fm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="8" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-front-matter/Metenorage-fm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="8" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-front-matter/native-ruins-fm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="9" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-front-matter/penguin-panic-fm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="10" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-front-matter/raven-fm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="7" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-front-matter/the-only-neone-fm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-front-matter/advent-of-code-fm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

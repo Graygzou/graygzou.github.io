@@ -1,0 +1,3 @@
+{%- for link in page.project_links -%}
+    {{ link.name }} Link : [{{ page.title }}]({{link.url}}){: .table_title }
+{%- endfor -%}

@@ -4,4 +4,8 @@ tools: [Asset Store]
 duration: "2 months"
 team-size: 8
 main-roles: [R&D, AI Programmer, UI Programmer, Game Programmeur, Animator]
-gamejolt-link: https://gamejolt.com/games/penguin-panic/330630
+project_links:
+  - name: github
+    url: https://github.com/Graygzou/penguin-panic
+  - name: gamejolt
+    url: https://gamejolt.com/games/penguin-panic/330630

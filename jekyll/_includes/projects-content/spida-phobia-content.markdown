@@ -12,6 +12,11 @@ Spida-Phobia is a 3D Virtual Reality application made for a school project at th
 
 This application is design to help people scared by spiders. The player can go through differents levels that involve different type of spiders. Visual of spiders can change (color, behavior, size). Each level contains a unique environment. Finally, haptic vibration are used to emphasis the immersion.
 
+{% capture links_include %}
+{% include helpers/project-links %}
+{% endcapture %}
+{{ links_include | markdownify }}
+
 <span class="table_title">Github Link</span>: <a href="https://github.com/Graygzou/Raven-IA">RAVEN Project</a>.
 
 Screenshots

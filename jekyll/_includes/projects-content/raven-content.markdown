@@ -15,6 +15,11 @@ The gameplay of Raven is similar of a Quake-style deathmatch. When starting the 
 * Improved the game by adding more modes (team deathmatch, 1vs1)
 * Improved the game by adding more features (weapons, maps, ...).
 
+{% capture links_include %}
+{% include helpers/project-links %}
+{% endcapture %}
+{{ links_include | markdownify }}
+
 <span class="table_title">Github Link</span>: <a href="https://github.com/Graygzou/Raven-IA">RAVEN Project</a>.
 
 Screenshots
