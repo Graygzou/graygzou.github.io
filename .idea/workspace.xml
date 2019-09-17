@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b6d0991-ca97-49ed-8583-7856f3d6434a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_educations/DUT.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_educations/DUT.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_educations/enseeiht.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_educations/enseeiht.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_educations/uqac.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_educations/uqac.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_experiences/illogika.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_experiences/illogika.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_experiences/irit.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_experiences/irit.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_experiences/latecoere.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_experiences/latecoere.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/educations.html" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/educations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/experiences.html" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/experiences.html" afterDir="false" />
-    </list>
+    <list default="true" id="5b6d0991-ca97-49ed-8583-7856f3d6434a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,12 +305,12 @@
       <workItem from="1568495096468" duration="21322000" />
       <workItem from="1568559341103" duration="22229000" />
       <workItem from="1568677568811" duration="50000" />
-      <workItem from="1568678708496" duration="6537000" />
+      <workItem from="1568678708496" duration="6979000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50149000" />
+    <option name="totallyTimeSpent" value="50591000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="73" y="-7" width="1470" height="878" extended-state="6" />
