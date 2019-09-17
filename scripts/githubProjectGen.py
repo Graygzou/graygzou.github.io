@@ -126,7 +126,7 @@ def addAdditionalFrontMatter(file, currentRepository):
     for line in additionalFile:
         file.write(line)
     # Add a dummy line break to be sure the front matter will not conflict with the rest
-    file.write("")
+    file.write(endOfFile)
 #enddef
 
 # ----------------------------------------------------------------------------------
