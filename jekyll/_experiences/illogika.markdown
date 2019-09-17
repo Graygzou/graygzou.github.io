@@ -2,7 +2,8 @@
 title: iLLOGIKA
 logo: /assets/images/experiences/illogika.svg
 role: Generalist Programmer
-dates: 2018-2019
+start-date: 2018
+end-date: 2019
 link: https://www.illogika.com/
 description: Work on video game projects like Cuphead.
 ---

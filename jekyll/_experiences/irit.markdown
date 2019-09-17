@@ -2,7 +2,8 @@
 title: Toulouse Institute of Computer Science Research
 logo: /assets/images/experiences/IRIT.jpg
 role: Computer Science Intern
-dates: 2015-2016
+start-date: 2017
+end-date: 2017
 link: https://www.irit.fr/
 description: Prove Of Concept (POC) using Copernicus satellite images, for the purpose of studying agricultural soils.
 ---

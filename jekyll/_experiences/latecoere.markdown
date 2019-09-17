@@ -2,7 +2,8 @@
 title: Latecoere
 logo: /assets/images/experiences/latecoere.png
 role: Computer Science Intern
-dates: 2013-2015
+start-date: 2016
+end-date: 2016
 link: https://www.latecoere.aero/
 description: Prove Of Concept (POC) of a better visualization of PLM (Product Lifecycle Management) using graphs.
 keywords: 

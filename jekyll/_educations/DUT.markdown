@@ -2,7 +2,8 @@
 title: Higher National Diploma in Computer Science
 logo: /assets/images/educations/iut.jpg
 description: Valedictorian
-dates: 2013-2015
+start-date: 2013
+end-date: 2015
 localization: UT3, Toulouse, FR
 link: http://iut.ups-tlse.fr/
 ---

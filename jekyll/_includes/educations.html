@@ -2,16 +2,15 @@
   <h2 class="page-heading">Education</h2>
   <div>
     <ul class="post-list">
-      {%- for education in site.educations -%}
-        <!-- Only show the 3 latests post here -->
-        {%- if forloop.index <= 3 -%}
+      {% assign sorted_education = site.educations | sort:"start-date" | reverse %}
+      {%- for education in sorted_education -%}
           <li class="home-li">
             <img src="{{ education.logo }}"/>
             <div>
                 <h3 class="project-heading post-link">{{ education.title | escape }}</h3>
                 <ul>
                     <li class="post-meta">{{ education.description }}</li>
-                    <li class="post-meta">{{ education.dates }}</li>
+                    <li class="post-meta">{{ education.start-date }}-{{ education.end-date }}</li>
                     <li class="post-meta">{{ education.localization }}</li>
                     <li class="post-meta"><a href="{{ experience.link }}">{{ education.link }}</a></li>
                 </ul>
@@ -20,7 +19,6 @@
                 {%- endif -%}
             </div>
           </li>
-        {%- endif -%}
       {%- endfor -%}
     </ul>
   </div>

@@ -2,7 +2,8 @@
 title: Master Degree in Video Game
 logo: /assets/images/educations/uqac2.png
 description: Dual degree, Specialized in Video Game development.
-dates: 2017-2019
+start-date: 2017
+end-date: 2019
 localization: UQAC, Quebec CA
 link: https://www.uqac.ca/
 ---
