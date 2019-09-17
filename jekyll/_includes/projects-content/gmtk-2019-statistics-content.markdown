@@ -5,10 +5,13 @@ Copyright (c) 2018 Gregoire Boiron  All Rights Reserved.
 
 Overview
 --------------------
-In progress
+Crawl the site : <a href="https://itch.io/jam/gmtk-2019">GMTK-2019</a> to get some statistics about the event.   
+Get the average score of the participants and some other data.
 
 ##### Project Goals
-In progress
+* Discover how to crawl a website
+* Analyse some data
+* Discover new games thanks to criterias
 
 {% capture links_include %}
 {% include helpers/project-links %}
@@ -17,7 +20,7 @@ In progress
 
 Screenshots
 --------------------
-TODO: Add images ?
+In coming
 
 Detailed Info
 --------------------
