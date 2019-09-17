@@ -5,7 +5,7 @@ Copyright (c) 2018 Grégoire Boiron  All Rights Reserved.
 
 Overview
 --------------------
-Native Ruins is a 3D survival game made for a school project at the Université du Québec &#224 Chicoutimi (UQAC). The course is the following : <a href="http://cours.uqac.ca/8INF871">Design Principles and Video Games Development (8INF955)</a>.
+Native Ruins is a 3D survival game made for a school project at the Université du Québec &#224 Chicoutimi (UQAC). The course is the following : <a href="https://cours.uqac.ca/8INF955">Design Principles and Video Games Development (8INF955)</a>.
 
 You play as Judy, a young 23 years old woman, who wake up on a desert island. Her goal is simple : escape the island. To done it, she will need wood, rope and a sail to build a raft. As she goes throught her adventure, she will discover totems that will give her more habilities usefull for archive her goal.
 
