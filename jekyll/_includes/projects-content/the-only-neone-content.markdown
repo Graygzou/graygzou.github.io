@@ -16,8 +16,6 @@ We're pround to finish #109 overall for this jam !
 {% endcapture %}
 {{ links_include | markdownify }}
 
-<span class="table_title">Github Link</span>: <a href="https://github.com/Graygzou/Raven-IA">RAVEN Project</a>.
-
 Screenshots
 --------------------
 In coming

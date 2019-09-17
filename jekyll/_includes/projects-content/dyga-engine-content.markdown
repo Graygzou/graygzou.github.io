@@ -5,7 +5,7 @@ Copyright (c) 2018 Gregoire Boiron  All Rights Reserved.
 
 Overview
 --------------------
-In progress
+2D game engine which allows to build platformer and puzzle games.
 
 ### Project Goals
 In progress
@@ -17,7 +17,7 @@ In progress
 
 Screenshots
 --------------------
-TODO: Add images ?
+In progress
 
 Detailed Info
 --------------------

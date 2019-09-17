@@ -18,9 +18,6 @@ You play as survivors from a deadly virus which turn humans into zombies. Your o
 {% endcapture %}
 {{ links_include | markdownify }}
 
-<span class="table_title">Gamejolt Link</span>: <a href="https://gamejolt.com/games/BrainControl/323988">Brain Control Link</a>
-<span class="table_title">Github Link</span>: <a href="https://github.com/Graygzou/brain-control">Project Link</a>
-
 Screenshots
 --------------------
 In progress

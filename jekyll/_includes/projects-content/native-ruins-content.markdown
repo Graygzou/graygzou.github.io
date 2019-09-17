@@ -20,8 +20,6 @@ You play as Judy, a young 23 years old woman, who wake up on a desert island. He
 {% endcapture %}
 {{ links_include | markdownify }}
 
-<span class="table_title">Github Link</span>: <a href="https://github.com/Graygzou/native-ruins">NATIVE RUINS Project</a>.
-
 Game Design Document
 --------------------
 For more details about the game and the core mechanics, take a look at the Game Design Document. Some details were modified due to deadlines. This document contains 8 sections which are the following :

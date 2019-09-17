@@ -27,8 +27,6 @@ You play the leader penguin of this colony. Your mission: return the Glacier to 
 * The game needs to include a multiplayer aspect.
 * The game needs to be played with an XBOX 360 controller.
 
-<span class="table_title">Github Link</span>: <a href="https://github.com/Graygzou/penguin-panic">PENGUIN PANIC Project</a>.
-
 Screenshots
 --------------------
 In progress.

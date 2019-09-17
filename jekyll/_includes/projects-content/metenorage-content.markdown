@@ -21,8 +21,6 @@ We implements this engine in Java with the framework <a href="https://www.lwjgl.
 {% endcapture %}
 {{ links_include | markdownify }}
 
-<span class="table_title">Github Link</span>: <a href="https://github.com/Graygzou/Metenorage">METENORAGE Project</a>.
-
 Screenshots
 --------------------
 In progress.
