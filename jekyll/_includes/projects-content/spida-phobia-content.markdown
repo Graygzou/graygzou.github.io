@@ -17,8 +17,6 @@ This application is design to help people scared by spiders. The player can go t
 {% endcapture %}
 {{ links_include | markdownify }}
 
-<span class="table_title">Github Link</span>: <a href="https://github.com/Graygzou/Raven-IA">RAVEN Project</a>.
-
 Screenshots
 --------------------
 In Progress
