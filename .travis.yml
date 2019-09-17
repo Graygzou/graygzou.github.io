@@ -12,13 +12,13 @@ cache: bundler
 
 before_install:
   - gem install bundler
+  - pip install -r requirements.txt
   - (cd scripts && find -name "*.py" -exec python {} ${GITHUB_API_TOKEN} \;)
-  - (cd jekyll && gem update bundler)
 
 # command to install dependencies
 # This was obtained by running $pip freeze > requirements.txt
 install:
-  - pip install -r requirements.txt
+  - (cd jekyll && gem update bundler)
   - (cd jekyll && bundle check || bundle install)
 
 script:
