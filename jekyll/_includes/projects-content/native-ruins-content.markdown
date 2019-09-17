@@ -44,7 +44,7 @@ Click here to take a look at the GDD : <a href="Game Design Document - Native Ru
 
 Screenshots
 --------------------
-TODO: Add images ?
+In coming.
 
 Detailed Info
 --------------------
