@@ -1,5 +1,7 @@
 ---
 title: ENAC
+full-name: French Civil Aviation University
+localisation: Toulouse, France
 logo: /assets/images/experiences/enac.svg
 role: Computer Science Intern
 start-date: 2015

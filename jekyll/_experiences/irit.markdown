@@ -1,5 +1,7 @@
 ---
-title: Toulouse Institute of Computer Science Research
+title: IRIT
+full-name: Toulouse Institute of Computer Science Research
+localisation: Toulouse, France
 logo: /assets/images/experiences/IRIT.jpg
 role: Computer Science Intern
 start-date: 2017

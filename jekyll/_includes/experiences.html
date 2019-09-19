@@ -9,10 +9,50 @@
           <div>
             <h3 class="project-heading post-link">{{ experience.title | escape }}</h3>
             <ul>
-              <li class="post-meta">{{ experience.role }}</li>
-              <li class="post-meta">{{ experience.description }}</li>
-              <li class="post-meta">{{ experience.start-date }}-{{ experience.end-date }}</li>
-              <li class="post-meta"><a href="{{ experience.link }}">{{ experience.link }}</a></li>
+              <li class="post-meta">
+                <div>
+                  <span class="role">{{ experience.role }}</span>
+                  <br>
+                  <span>{{ experience.description }}</span>
+                </div>
+              </li>
+
+              <li class="post-meta">
+                <table>
+                  <tr>
+                    <td>
+                      <svg class="svg-icon">
+                        <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#building">
+                        </use>
+                      </svg>
+                      {{ experience.full-name }}
+                    </td>
+                    <td>
+                      <svg class="svg-icon">
+                        <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#map-marker">
+                        </use>
+                      </svg>
+                      {{ experience.localisation }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <svg class="svg-icon">
+                        <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#calendar">
+                        </use>
+                      </svg>
+                      {{ experience.start-date }}-{{ experience.end-date }}
+                    </td>
+                    <td>
+                      <svg class="svg-icon">
+                        <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#link">
+                        </use>
+                      </svg>
+                      <a href="{{ experience.link }}">{{ experience.link }}</a>
+                    </td>
+                  </tr>
+                </table>
+              </li>
             </ul>
             {%- if site.show_excerpts -%}
             {{ experience.excerpt }}

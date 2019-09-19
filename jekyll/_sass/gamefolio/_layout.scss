@@ -213,6 +213,25 @@
 .post-meta {
   font-size: $small-font-size;
   color: $grey-color;
+
+  table {
+    width: auto;
+    margin: 0;
+    border: 0;
+    td {
+      border: 0;
+      padding: 0;
+      min-width: 150px;
+      width: $content-width;
+    }
+  }
+
+  div {
+    padding-bottom: 5px;
+    .role {
+      font-weight: bold;
+    }
+  }
 }
 
 .post-link {
@@ -423,7 +442,7 @@
  */
 .home-li {
   margin-bottom: 0 !important;
-  height: 150px;
+  min-height: 150px;
 
   img {
     float: left;
