@@ -1,9 +1,11 @@
 ---
-title: Higher National Diploma in Computer Science
+title: IUT 'A' Paul Sabatier
 logo: /assets/images/educations/iut.jpg
-description: Valedictorian
+description: Higher National Diploma in Computer Science
+additional-info: Valedictorian / Participated twice to the event Nuit de l'info
 start-date: 2013
 end-date: 2015
+full-name: IUT 'A' Paul Sabatier
 localization: UT3, Toulouse, FR
 link: http://iut.ups-tlse.fr/
 ---

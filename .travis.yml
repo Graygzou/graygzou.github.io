@@ -3,10 +3,6 @@ language: python
 python:
   - "3.7"
 
-env:
-  global:
-    - JEKYLL_ENV=production
-
 # reduce log clutter
 cache: bundler
 
@@ -23,7 +19,7 @@ install:
 
 script:
   - set -e # Enable error reporting to the console
-  - (cd jekyll && bundle exec jekyll build --destination site)
+  - (cd jekyll && JEKYLL_ENV=production bundle exec jekyll build --destination site)
 
 branches:
   except:

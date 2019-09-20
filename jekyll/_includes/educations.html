@@ -9,10 +9,53 @@
             <div>
                 <h3 class="project-heading post-link">{{ education.title | escape }}</h3>
                 <ul>
-                    <li class="post-meta">{{ education.description }}</li>
-                    <li class="post-meta">{{ education.start-date }}-{{ education.end-date }}</li>
-                    <li class="post-meta">{{ education.localization }}</li>
-                    <li class="post-meta"><a href="{{ experience.link }}">{{ education.link }}</a></li>
+                    <!--<li class="post-meta">{{ education.description }}</li>-->
+                    <!--<li class="post-meta">{{ education.start-date }}-{{ education.end-date }}</li>-->
+                    <!--<li class="post-meta">{{ education.localization }}</li>-->
+                    <!--<li class="post-meta"><a href="{{ experience.link }}">{{ education.link }}</a></li>-->
+                    <li class="post-meta">
+                        <div>
+                            <span class="role">{{ education.description }}</span>
+                            <br>
+                            <span>{{ education.additional-info }}</span>
+                        </div>
+                    </li>
+                    <li class="post-meta">
+                        <table>
+                            <tr>
+                                <td>
+                                    <svg class="svg-icon">
+                                        <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#building">
+                                        </use>
+                                    </svg>
+                                    {{ education.full-name }}
+                                </td>
+                                <td>
+                                    <svg class="svg-icon">
+                                        <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#map-marker">
+                                        </use>
+                                    </svg>
+                                    {{ education.localization }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <svg class="svg-icon">
+                                        <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#calendar">
+                                        </use>
+                                    </svg>
+                                    {{ education.start-date }}-{{ education.end-date }}
+                                </td>
+                                <td>
+                                    <svg class="svg-icon">
+                                        <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#link">
+                                        </use>
+                                    </svg>
+                                    <a href="{{ experience.link }}">{{ education.link }}</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </li>
                 </ul>
                 {%- if site.show_excerpts -%}
                   {{ education.excerpt }}
