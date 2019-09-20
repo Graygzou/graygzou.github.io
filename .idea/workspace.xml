@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b6d0991-ca97-49ed-8583-7856f3d6434a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_educations/DUT.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_educations/DUT.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_educations/enseeiht.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_educations/enseeiht.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_educations/uqac.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_educations/uqac.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/educations.html" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/educations.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -113,8 +107,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+            <state relative-caret-position="442">
+              <caret line="38" column="19" lean-forward="true" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -205,11 +199,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="791" />
-    <option name="y" value="40" />
-    <option name="width" value="1040" />
-    <option name="height" value="1100" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="767" />
+    <option name="y" value="17" />
+    <option name="width" value="1164" />
+    <option name="height" value="977" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -329,18 +323,18 @@
       <workItem from="1568677568811" duration="50000" />
       <workItem from="1568678708496" duration="8925000" />
       <workItem from="1568848050367" duration="8078000" />
-      <workItem from="1568934863583" duration="4284000" />
+      <workItem from="1568934863583" duration="5145000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64899000" />
+    <option name="totallyTimeSpent" value="65760000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="73" y="-7" width="1470" height="878" extended-state="6" />
+    <frame x="614" y="14" width="931" height="781" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20567375" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33295062" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -685,8 +679,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        <state relative-caret-position="442">
+          <caret line="38" column="19" lean-forward="true" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
         </state>
       </provider>
     </entry>

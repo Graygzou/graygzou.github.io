@@ -33,6 +33,8 @@ deploy:
   github_token: ${GITHUB_DEPLOY_TOKEN}  # Set in the settings page of your repository, as a secure variable
   keep_history: true
   target_branch: master
+  email: ${GITHUB_BOT_MAIL}
+  name: ${GITHUB_BOT_NAME}
   on:
     branch: develop
 
