@@ -6,15 +6,19 @@ color: "#e34c26"
 language: HTML
 stargazers-count: 0
 forks-count: 0
-updated-at: 2019-09-08 16:21:52
-last-update-days: 6
+updated-at: 2019-09-21 03:10:43
+last-update-days: -1
 tags: ['portfolio', 'html-css', 'javascript', 'python', 'code-generation', 'github-api']
+category: 'side'
 platforms: Web
 tools: [jekyll, liquid, python]
 duration: "In progress"
 team-size: 1
 main-roles: [Front-End Programmeur, Tools Programmer]
-github-link: https://graygzou.github.io/
+project_links:
+  - name: github
+    url: https://graygzou.github.io/
+
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

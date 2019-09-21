@@ -340,7 +340,8 @@ def updateProjectPages(githubToken):
 # Arguments : (Github Token)
 # ----------------------------------------------------------------------------------
 if __name__ == "__main__":
-    githubToken = sys.argv[1]
+    githubToken = "3b5fe8ce744677c4d15d0d3c1b12c41ab8093783"
+    #githubToken = sys.argv[1]
     print("Launch static website generation...")
 
     print("Start the code gen...")

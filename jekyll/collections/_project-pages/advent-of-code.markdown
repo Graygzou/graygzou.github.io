@@ -7,14 +7,18 @@ language: Lua
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-23 02:08:56
-last-update-days: 54
+last-update-days: 59
 tags: ['lua', 'aoc', 'advent-of-code']
+category: 'side'
 platforms: Windows
 tools: [Lua]
 duration: "1 month"
 team-size: 7
 main-roles: [Programmer]
-github-link: https://github.com/Graygzou/brain-control
+project_links:
+  - name: github
+    url: https://github.com/Graygzou/advent-of-code
+
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

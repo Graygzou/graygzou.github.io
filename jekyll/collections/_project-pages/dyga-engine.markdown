@@ -7,14 +7,17 @@ language: Java
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-15 00:43:57
-last-update-days: 62
+last-update-days: 67
 tags: ['game-engine', '2d-game-engine', 'swing-gui', 'maven', 'bintray']
+category: 'side'
 platforms: Windows
 tools: [Intellij, Swing]
 duration: "In progress"
 team-size: 1
 main-roles: [Engine Programmer]
-github-link: https://github.com/dyga-entertainment/dyga-engine
+project_links:
+  - name: github
+    url: https://github.com/dyga-entertainment/dyga-engine
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

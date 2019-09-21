@@ -7,15 +7,20 @@ language: None
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-25 03:46:03
-last-update-days: 52
+last-update-days: 57
 tags: []
+category: 'school'
 platforms: Windows
 engines: Unity3D
 tools: [Asset Store]
 duration: "2 months"
 team-size: 8
 main-roles: [R&D, AI Programmer, UI Programmer, Game Programmeur, Animator]
-gamejolt-link: https://gamejolt.com/games/penguin-panic/330630
+project_links:
+  - name: github
+    url: https://github.com/Graygzou/penguin-panic
+  - name: gamejolt
+    url: https://gamejolt.com/games/penguin-panic/330630
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

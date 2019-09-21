@@ -7,13 +7,16 @@ language: None
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-08-14 01:14:49
-last-update-days: 32
+last-update-days: 37
 tags: []
+category: 'side'
 platforms: Web
 duration: "In progress"
 team-size: 1
 main-roles: []
-github-link:
+project_links:
+  - name: github
+    url: https://github.com/Graygzou/gmtk-2019-statistics
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

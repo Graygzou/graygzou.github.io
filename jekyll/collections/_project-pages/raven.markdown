@@ -7,14 +7,17 @@ language: C++
 stargazers-count: 1
 forks-count: 0
 updated-at: 2019-07-22 23:23:09
-last-update-days: 54
+last-update-days: 60
 tags: ['artificial-intelligence', 'top-down-shooter', 'neural-network', 'fuzzilogic', 'goal-oriented-action-planning', 'steering-behaviors']
+category: 'school'
 platforms: Windows
 tools: [Visual Studio, Lua]
 duration: "1 month"
 team-size: 6
 main-roles: [Project Manager, IA Programmer, Gameplay Programmer]
-github-link: https://github.com/Graygzou/raven
+project_links:
+  - name: github
+    url: https://github.com/Graygzou/raven
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

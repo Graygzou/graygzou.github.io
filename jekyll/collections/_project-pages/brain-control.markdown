@@ -7,15 +7,21 @@ language: C#
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-24 00:24:25
-last-update-days: 53
+last-update-days: 58
 tags: ['unity', '2d-game', 'survival-game', 'multiplayer-game', 'kill-zombies', 'steering-behaviors']
+category: 'side'
 platforms: Windows
 engines: Unity3D
 tools: [Unity, Asset Store]
 duration: "48 hours"
 team-size: 7
 main-roles: [IA Programmer, Gameplay Programmer]
-github-link: https://github.com/Graygzou/brain-control
+project_links:
+  - name: github
+    url: https://github.com/Graygzou/brain-control
+  - name: gamejolt
+    url: https://gamejolt.com/games/BrainControl/323988
+
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

@@ -7,17 +7,21 @@ language: None
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-08-17 20:18:14
-last-update-days: 28
+last-update-days: 34
 tags: []
+category: 'side'
 platforms: [Windows, WebGL]
 engines: Unity3D
 tools: [Shader Graph, Rewired]
 duration: "48 hours"
 team-size: 4
 main-roles: [3Cs Programmer, Gameplay Programmer, Level Designer]
-github-link: https://github.com/Graygzou/the-only-neOne
-itch-io-link: https://dzamani.itch.io/the-only-neone
 youtube-link: https://www.youtube.com/embed/-BDVJ9IO2uk
+project_links:
+  - name: github
+    url: https://github.com/Graygzou/the-only-neOne
+  - name: itch-io
+    url: https://dzamani.itch.io/the-only-neone
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

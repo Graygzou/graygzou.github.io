@@ -4,30 +4,34 @@ layout: default
 
 <div class="home">
     {%- if page.title -%}
-
+        <h1 class="page-heading">{{ page.title }}</h1>
     {%- endif -%}
 
     {{ content }}
 
-    {% assign color = false %}
-    {% assign groups = site.my_collection | group_by: "category" | sort: "name" %}
-    {% for group in groups %}
     <!-- Iterate on the project-page collection -->
     {%- if site.project-pages.size > 0 -%}
-    <h1 class="page-heading">{{ group.name }} Projects</h1>
+    {% assign groups = site.project-pages | group_by: "category" | sort: "name" %}
+    {% for group in groups %}
+    {% assign current_color = '#e8e8e880' %}
+    {%- if forloop.index0 != 0 -%}
+        <br/>
+    {%- endif -%}
+    <h2 class="page-heading">{{ group.name | capitalize }} Projects</h2>
+    <hr>
     <div>
         {% assign sorted_pages = group.items | sort:"last-update-days" %}
         {%- for page in sorted_pages -%}
 
-        {% assign new_section = forloop.index0 | modulo:2 %}
+        {% assign new_section = forloop.index | minus:1 | modulo:2 %}
         {%- if new_section == 0 -%}
-        {%- if color == true -%}
-        {% assign color = false %}
-        <div class="project-line" style="background-color: #e8e8e880;">
-        {%- else -%}
-        {% assign color = true %}
-        <div class="project-line">
-        {%- endif -%}
+            {%- if current_color == '#e8e8e880' -%}
+                {% assign current_color = '#ffffff' %}
+                <div style="background-color: {{ current_color }} ;">
+            {%- else -%}
+                {% assign current_color = '#e8e8e880' %}
+                <div class="project-line" style="background-color: {{ current_color }} ;">
+            {%- endif -%}
         {%- endif -%}
             <div class="project-li">
                 {% capture image_path %}/assets/project-images/{{ page.title }}/{{ page.title }}.png{% endcapture %}
@@ -93,10 +97,9 @@ layout: default
             </div>
         {%- if new_section == 1 -%}
         </div>
-      {%- endif -%}
-      {%- endfor -%}
-      </div>
-    {%- endif -%}
+        {%- endif -%}
+        {%- endfor -%}
     </div>
     {% endfor %}
+    {%- endif -%}
 </div>
