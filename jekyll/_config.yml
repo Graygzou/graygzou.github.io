@@ -36,7 +36,7 @@ profil_description: Programmer Generalist at iLLOGIKA
 email: gregoire.boiron@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Grégoire Boiron's personal site.
-  Contains my portfolio, my projects and my own blog.
+  Host my portfolio, links to my projects and my own blog.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 social_tags:

@@ -365,11 +365,19 @@
     min-height: 140px;
     margin-right: 1%;
   }
-  .project-content {
+  .project-container {
     height: 100%;
     padding-top: 1%;  /* Should be remove... */
     vertical-align: middle;
+    display: block;
   }
+  .project-content {
+    min-height: 140px;
+  }
+  .project-language{
+    float: right;
+  }
+
   &:last-child {
     /*border-bottom: 1px solid black;*/
   }
@@ -382,11 +390,13 @@
 .tagsgame {
   //float: right;
   //margin-top: 5px;
-  line-height: 1.5em;
+  //line-height: 1.5em;
 }
 
-.tag {
-  padding: .1em .1em;
+.tag
+{
+  padding: 0 .1em 0 .1em;
+  display: inline-block;
   font-size: 0.75em;
   color: black;
   padding-left: 5px;
