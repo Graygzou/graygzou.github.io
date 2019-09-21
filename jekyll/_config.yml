@@ -51,6 +51,7 @@ social_tags:
   - name: itch-dot-io
     path: https://graygzou.itch.io/
 
+collections_dir: collections
 collections:
   project-pages:
     output: true

@@ -3,95 +3,100 @@ layout: default
 ---
 
 <div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+    {%- if page.title -%}
 
-  {{ content }}
+    {%- endif -%}
 
-  <!-- Iterate on the project-page collection -->
-  {%- if site.project-pages.size > 0 -%}
-    <!--<ul class="post-list">-->
-      <table>
-      {% assign sorted_pages = site.project-pages | sort:"last-update-days" %}
-      {%- for page in sorted_pages -%}
+    {{ content }}
 
-      {% assign new_section = forloop.index0 | modulo:2 %}
-      {%- if new_section == 0 -%}
-      <!--<li class="project-li">-->
-          <tr class="project-li">
-      {%- endif -%}
-            <td>
-        {% capture image_path %}/assets/project-images/{{ page.title }}/{{ page.title }}.png{% endcapture %}
-        <img src="{{ image_path }}"/>
-        <div class="project-container">
-          <div class="project-content">
-              <!-- Indicate what the main language used in this project  -->
-              <div class="project-language">
-                  <svg class="svg-icon svg-project" style="fill: {{ page.color }};">
-                      <use xlink:href="{{ '/assets/icons/gamefolio-regular-icons.svg#circle' }}">
-                      </use>
-                  </svg>
-                  <span>{{ page.language }}</span>
-              </div>
-              <!-- change the layout like github print his page -->
-              <h3 class="project-heading">
-                <a class="post-link" href="{{ page.url | relative_url }}">
-                  {{ page.title | replace: '-', ' ' | capitalize | escape }}
-                </a>
-              </h3>
-              <span class="post-meta">{{ page.description }}</span>
-              {% assign total_char_count = 0 %}
-              <div class="tagsgame">
-                {% assign sorted_tags = page.tags | sort:'size' %}
-                {%- for tag in sorted_tags -%}
-                    {% assign char_count = tag | size %}
-                    {% assign total_char_count = total_char_count | plus: char_count %}
-                    {%- if total_char_count < 60 -%}
-                        <span class="tag">{{ tag }}</span>
-                    {%-  endif -%}
-                {%- endfor -%}
-              </div>
-          </div>
-          <div class="repositoryFooter">
-            <!-- Indicate how many starts this repository received -->
-            <div>
-              <svg class="svg-icon svg-project" style="fill: black;">
-                <use xlink:href="{{ '/assets/icons/gamefolio-regular-icons.svg#star' }}">
-                </use>
-              </svg>
-              <span>{{ page.stargazers-count }}</span>
+    {% assign color = false %}
+    {% assign groups = site.my_collection | group_by: "category" | sort: "name" %}
+    {% for group in groups %}
+    <!-- Iterate on the project-page collection -->
+    {%- if site.project-pages.size > 0 -%}
+    <h1 class="page-heading">{{ group.name }} Projects</h1>
+    <div>
+        {% assign sorted_pages = group.items | sort:"last-update-days" %}
+        {%- for page in sorted_pages -%}
+
+        {% assign new_section = forloop.index0 | modulo:2 %}
+        {%- if new_section == 0 -%}
+        {%- if color == true -%}
+        {% assign color = false %}
+        <div class="project-line" style="background-color: #e8e8e880;">
+        {%- else -%}
+        {% assign color = true %}
+        <div class="project-line">
+        {%- endif -%}
+        {%- endif -%}
+            <div class="project-li">
+                {% capture image_path %}/assets/project-images/{{ page.title }}/{{ page.title }}.png{% endcapture %}
+                <img src="{{ image_path }}"/>
+                <div class="project-container">
+                    <div class="project-content">
+                        <!-- Indicate what the main language used in this project  -->
+                        <div class="project-language">
+                            <svg class="svg-icon svg-project" style="fill: {{ page.color }};">
+                                <use xlink:href="{{ '/assets/icons/gamefolio-regular-icons.svg#circle' }}"></use>
+                            </svg>
+                            <span>{{ page.language }}</span>
+                        </div>
+                        <!-- change the layout like github print his page -->
+                        <h3 class="project-heading">
+                            <a class="post-link" href="{{ page.url | relative_url }}">
+                                {{ page.title | replace: '-', ' ' | capitalize | escape }}
+                            </a>
+                        </h3>
+                        <span class="post-meta">{{ page.description }}</span>
+                        {% assign total_char_count = 0 %}
+                        <div class="tagsgame">
+                            {% assign sorted_tags = page.tags | sort:'size' %}
+                            {%- for tag in sorted_tags -%}
+                            {% assign char_count = tag | size %}
+                            {% assign total_char_count = total_char_count | plus: char_count %}
+                            {%- if total_char_count < 60 -%}
+                            <span class="tag">{{ tag }}</span>
+                            {%-  endif -%}
+                            {%- endfor -%}
+                        </div>
+                    </div>
+                <div class="repositoryFooter">
+                    <!-- Indicate how many starts this repository received -->
+                    <div>
+                        <svg class="svg-icon svg-project" style="fill: black;">
+                            <use xlink:href="{{ '/assets/icons/gamefolio-regular-icons.svg#star' }}">
+                            </use>
+                        </svg>
+                        <span>{{ page.stargazers-count }}</span>
+                    </div>
+                    <!-- Indicate the number of fork on this repository -->
+                    <div>
+                        <svg class="svg-icon svg-project" style="fill: black;">
+                            <use xlink:href="{{ '/assets/icons/gamefolio-regular-icons.svg#code-fork' }}">
+                            </use>
+                        </svg>
+                        <span>{{ page.forks-count }}</span>
+                    </div>
+                    <!-- Indicate how many days past since any update on that repository -->
+                    <div>
+                        <svg class="svg-icon svg-project" style="fill: black;">
+                            <use xlink:href="{{ '/assets/icons/gamefolio-regular-icons.svg#history' }}">
+                            </use>
+                        </svg>
+                        <span>{{ page.last-update-days }} days ago</span>
+                    </div>
+                </div>
+                    {%- if site.show_excerpts -%}
+                    {{ page.excerpt }}
+                    {%- endif -%}
+                </div>
             </div>
-            <!-- Indicate the number of fork on this repository -->
-            <div>
-              <svg class="svg-icon svg-project" style="fill: black;">
-                <use xlink:href="{{ '/assets/icons/gamefolio-regular-icons.svg#code-fork' }}">
-                </use>
-              </svg>
-              <span>{{ page.forks-count }}</span>
-            </div>
-            <!-- Indicate how many days past since any update on that repository -->
-            <div>
-              <svg class="svg-icon svg-project" style="fill: black;">
-                <use xlink:href="{{ '/assets/icons/gamefolio-regular-icons.svg#history' }}">
-                </use>
-              </svg>
-              <span>{{ page.last-update-days }} days ago</span>
-            </div>
-         </div>
-
-          {%- if site.show_excerpts -%}
-            {{ page.excerpt }}
-          {%- endif -%}
+        {%- if new_section == 1 -%}
         </div>
-            </td>
-      {%- if new_section == 1 -%}
-          </tr>
-      <!--</li>-->
       {%- endif -%}
       {%- endfor -%}
-      </table>
-    <!--</ul>-->
-  {%- endif -%}
-
+      </div>
+    {%- endif -%}
+    </div>
+    {% endfor %}
 </div>

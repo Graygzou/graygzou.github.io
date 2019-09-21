@@ -1,3 +1,4 @@
+category: 'school'
 platforms: Windows
 engines: JMonkey
 tools: [MongoDB, GraphX]

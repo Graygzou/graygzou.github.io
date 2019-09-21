@@ -1,3 +1,4 @@
+category: 'side'
 platforms: Web
 tools: [jekyll, liquid, python]
 duration: "In progress"

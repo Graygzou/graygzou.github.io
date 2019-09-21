@@ -1,3 +1,4 @@
+category: 'side'
 platforms: [Windows, WebGL]
 engines: Unity3D
 tools: [Shader Graph, Rewired]
