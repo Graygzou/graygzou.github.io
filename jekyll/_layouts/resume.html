@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+  </header>
+
+  <div class="about-content">
+    {{ content }}
+
+    <object data="/assets/CV_GregoireBoiron.pdf" type="application/pdf" width="800" height="1200">
+      <embed src="assets/CV_GregoireBoiron.pdf" width="600px" height="500px" />
+      <p>This browser does not support PDFs. Please download the PDF to view it:
+        <a href="assets/CV_GregoireBoiron.pdf">Download PDF</a>.</p>
+      </embed>
+    </object>
+
+  </div>
+
+</article>

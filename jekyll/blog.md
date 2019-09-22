@@ -2,7 +2,7 @@
 layout: blog
 title: Blog
 permalink: /blog/
-order: 3
+order: 4
 ---
 
 Welcome to my personal blog.
