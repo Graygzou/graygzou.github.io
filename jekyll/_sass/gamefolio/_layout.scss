@@ -456,7 +456,7 @@
 }
 
 .svg-project {
-  vertical-align: bottom;
+  vertical-align: middle;
   padding-bottom: 4px;
 }
 
@@ -482,6 +482,26 @@
 /**
  * Home page
  */
+.home-section {
+  position: relative;
+  padding-bottom: 30px;
+
+  > a {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #e8e8e8;
+    text-align: center;
+    float: right;
+    border-radius: 4px;
+    padding: 5px;
+    cursor: pointer;
+  }
+}
+
+
+
 .home-li {
   margin-bottom: 0 !important;
   min-height: 150px;

@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b6d0991-ca97-49ed-8583-7856f3d6434a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/jekyll/_layouts/cv.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jekyll/cv.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jekyll/_sass/gamefolio/_layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_sass/gamefolio/_layout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/about.md" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/about.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/blog.md" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/blog.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/assets/icons/gamefolio-regular-icons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/assets/icons/gamefolio-regular-icons.svg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,54 +21,33 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jekyll/_layouts/projects.html">
+        <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="238">
+              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#svg#0;n#a#0;n#section#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jekyll/index.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/jekyll/_includes/project-thumbnail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="47" column="10" selection-start-line="44" selection-start-column="4" selection-end-line="47" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jekyll/blog.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="68">
-                <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/jekyll/cv.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="51">
-                <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/jekyll/assets/icons/regular/map-marker.svg">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jekyll/_layouts/cv.html">
+        <entry file="file://$PROJECT_DIR$/jekyll/_layouts/resume.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
               <caret line="11" selection-start-line="11" selection-end-line="11" />
@@ -79,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jekyll/_sass/gamefolio/_layout.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="579">
-              <caret line="504" column="14" selection-start-line="504" selection-start-column="14" selection-end-line="504" selection-end-column="14" />
+            <state relative-caret-position="259">
+              <caret line="495" column="17" lean-forward="true" selection-start-line="495" selection-start-column="17" selection-end-line="495" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -92,15 +68,12 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tag</find>
-      <find>page_paths</find>
       <find>education</find>
       <find>gray</find>
       <find>home-li</find>
       <find>non</find>
       <find>home-project-list</find>
       <find>Important</find>
-      <find>home-</find>
       <find>heigh</find>
       <find>experience</find>
       <find>home</find>
@@ -122,6 +95,9 @@
       <find>project-li</find>
       <find>img</find>
       <find>$on-small-screen</find>
+      <find>home-section</find>
+      <find>home-</find>
+      <find>svg-</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -130,9 +106,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/jekyll/_experiences/irit.markdown" />
-        <option value="$PROJECT_DIR$/jekyll/_experiences/latecoere.markdown" />
-        <option value="$PROJECT_DIR$/jekyll/assets/icons/regular/calendar.svg" />
         <option value="$PROJECT_DIR$/jekyll/assets/icons/regular/briefcase.svg" />
         <option value="$PROJECT_DIR$/jekyll/assets/icons/regular/circle.svg" />
         <option value="$PROJECT_DIR$/jekyll/assets/icons/regular/code-fork.svg" />
@@ -171,16 +144,19 @@
         <option value="$PROJECT_DIR$/jekyll/_layouts/project-page.html" />
         <option value="$PROJECT_DIR$/jekyll/collections/_project-pages/the-only-neone.markdown" />
         <option value="$PROJECT_DIR$/jekyll/_sass/gamefolio.scss" />
-        <option value="$PROJECT_DIR$/jekyll/_includes/projects.html" />
         <option value="$PROJECT_DIR$/jekyll/_includes/project-thumbnail.html" />
         <option value="$PROJECT_DIR$/jekyll/_sass/gamefolio/_project-page.scss" />
         <option value="$PROJECT_DIR$/jekyll/_layouts/projects.html" />
         <option value="$PROJECT_DIR$/jekyll/blog.md" />
         <option value="$PROJECT_DIR$/jekyll/about.md" />
         <option value="$PROJECT_DIR$/jekyll/CV.md" />
-        <option value="$PROJECT_DIR$/jekyll/_sass/gamefolio/_layout.scss" />
         <option value="$PROJECT_DIR$/jekyll/_layouts/cv.html" />
         <option value="$PROJECT_DIR$/jekyll/cv.md" />
+        <option value="$PROJECT_DIR$/jekyll/assets/icons/regular/plus.svg" />
+        <option value="$PROJECT_DIR$/jekyll/assets/icons/regular/plus-circle.svg" />
+        <option value="$PROJECT_DIR$/jekyll/assets/icons/regular/angle-double-right.svg" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects.html" />
+        <option value="$PROJECT_DIR$/jekyll/_sass/gamefolio/_layout.scss" />
       </list>
     </option>
   </component>
@@ -218,12 +194,6 @@
               <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="jekyll" type="462c0819:PsiDirectoryNode" />
-              <item name="_layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="jekyll" type="462c0819:PsiDirectoryNode" />
               <item name="_sass" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -238,6 +208,21 @@
               <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="jekyll" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="jekyll" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="icons" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="jekyll" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="icons" type="462c0819:PsiDirectoryNode" />
+              <item name="regular" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -302,12 +287,12 @@
       <workItem from="1568934863583" duration="6416000" />
       <workItem from="1569022091201" duration="14894000" />
       <workItem from="1569095697445" duration="3122000" />
-      <workItem from="1569102027813" duration="13012000" />
+      <workItem from="1569102027813" duration="15083000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98059000" />
+    <option name="totallyTimeSpent" value="100130000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="73" y="-7" width="1470" height="878" extended-state="6" />
@@ -348,46 +333,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jekyll/_includes/disqus_comments.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_includes/educations.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="62" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/collections/_educations/DUT.markdown">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="68">
-            <caret line="4" column="53" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/collections/_educations/uqac.markdown">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="68">
-            <caret line="4" column="65" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/collections/_educations/enseeiht.markdown">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="153">
-            <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jekyll/_includes/head.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -586,13 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_sass/gamefolio/_base.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jekyll/_sass/gamefolio.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
@@ -616,24 +554,6 @@
     <entry file="file://$PROJECT_DIR$/jekyll/_includes/icon-github.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_sass/gamefolio/_project-page.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_layouts/projects.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jekyll/collections/_project-pages/dyga-engine.markdown">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -641,13 +561,6 @@
             <caret line="26" selection-start-line="26" selection-end-line="29" selection-end-column="30" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="28" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -671,19 +584,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_includes/project-thumbnail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="106" selection-start-line="3" selection-start-column="106" selection-end-line="3" selection-end-column="106" />
-          <folding>
-            <element signature="n#style#0;n#svg#0;n#div#0;n#div#1;n#li#0;n#ul#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#svg#0;n#div#1;n#div#1;n#li#0;n#ul#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#svg#0;n#div#2;n#div#1;n#li#0;n#ul#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#svg#0;n#div#3;n#div#1;n#li#0;n#ul#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jekyll/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -702,27 +602,88 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_sass/gamefolio/_layout.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="504" column="14" selection-start-line="504" selection-start-column="14" selection-end-line="504" selection-end-column="14" />
+    <entry file="file://$PROJECT_DIR$/jekyll/resume.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="102">
+            <caret line="6" selection-start-line="6" selection-end-line="6" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_layouts/cv.html">
+    <entry file="file://$PROJECT_DIR$/jekyll/_layouts/projects.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-50">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_sass/gamefolio/_base.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_sass/gamefolio/_syntax-highlighting.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_sass/gamefolio/_project-page.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/icons/regular/plus-circle.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/icons/regular/plus.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/icons/regular/angle-double-right.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_layouts/resume.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/cv.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="51">
-            <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/icons/regular/map-marker.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/project-thumbnail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="47" column="10" selection-start-line="44" selection-start-column="4" selection-end-line="47" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding>
+            <element signature="n#style#0;n#svg#0;n#a#0;n#section#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_sass/gamefolio/_layout.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="495" column="17" lean-forward="true" selection-start-line="495" selection-start-column="17" selection-end-line="495" selection-end-column="17" />
         </state>
       </provider>
     </entry>
