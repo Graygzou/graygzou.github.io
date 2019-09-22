@@ -184,7 +184,8 @@
     margin-left: 0;
     list-style: none;
     text-align: center;
-    > li {
+
+    .project-li {
       margin-bottom: $spacing-unit;
       width: 100%;
       img {
