@@ -179,7 +179,20 @@
   }
 }
 
-
+@include media-query($on-small-screen) {
+  .project-list {
+    margin-left: 0;
+    list-style: none;
+    text-align: center;
+    > li {
+      margin-bottom: $spacing-unit;
+      width: 100%;
+      img {
+        float: none;
+      }
+    }
+  }
+}
 
 /**
  * Page content
@@ -202,6 +215,15 @@
 }
 
 .post-list {
+  margin-left: 0;
+  list-style: none;
+
+  > li {
+    margin-bottom: $spacing-unit;
+  }
+}
+
+.project-list {
   margin-left: 0;
   list-style: none;
 
@@ -354,15 +376,11 @@
 
 .project-li {
   padding: 1%;
-  border-radius: 2px;
-  /*border: 1px solid black;*/
-  border-bottom: 0;
   margin-bottom: 0 !important;
-  min-height: 140px;
-  min-width: 150px;
   vertical-align: top;
   display: inline-block;
   width: 47%;
+  min-width: 150px;
 
   img {
     float: left;
@@ -392,6 +410,11 @@
 
 .project-heading {
   margin: 0;
+  word-break: break-word;
+  a {
+    display: inline-block;
+    min-width: 60%;
+  }
 }
 
 .tagsgame {
@@ -418,12 +441,13 @@
 }
 
 .repositoryFooter {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  //display: flex;
+  //flex-direction: row;
+  //justify-content: space-between;
   //margin-top: 10px;
   div {
-    flex-basis: 25%;
+    //flex-basis: 25%;
+    display: inline-block;
     &:last-child{
       flex-basis: auto;
     }

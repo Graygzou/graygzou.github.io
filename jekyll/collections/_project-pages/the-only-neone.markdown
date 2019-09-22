@@ -2,13 +2,9 @@
 layout: project-page
 title: the-only-neone
 description: 3D Grid based Maze game made in 48 hours for the GMTK GameJam 2019
-color: "#000000"
-language: None
-stargazers-count: 0
-forks-count: 0
-updated-at: 2019-08-17 20:18:14
-last-update-days: 34
-tags: []
+color: "#178600"
+language: C#
+tags: ['unity3d', 'gamejam', 'gmtk2019', 'puzzle-game']
 category: 'side'
 platforms: [Windows, WebGL]
 engines: Unity3D
