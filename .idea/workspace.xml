@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b6d0991-ca97-49ed-8583-7856f3d6434a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jekyll/_includes/educations.html" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/educations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_layouts/resume.html" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_layouts/resume.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jekyll/_includes/experiences.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="50" column="123" lean-forward="true" selection-start-line="50" selection-start-column="73" selection-end-line="50" selection-end-column="123" />
+            <state relative-caret-position="253">
+              <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -54,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/jekyll/_includes/educations.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="392">
-              <caret line="53" column="81" selection-start-line="53" selection-start-column="81" selection-end-line="53" selection-end-column="81" />
+              <caret line="53" column="79" selection-start-line="53" selection-start-column="79" selection-end-line="53" selection-end-column="79" />
             </state>
           </provider>
         </entry>
@@ -142,7 +140,6 @@
       <find>home-project-list</find>
       <find>Important</find>
       <find>heigh</find>
-      <find>experience</find>
       <find>home</find>
       <find>post-meta</find>
       <find>tags</find>
@@ -165,6 +162,7 @@
       <find>home-section</find>
       <find>home-</find>
       <find>svg-</find>
+      <find>experience</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -221,8 +219,8 @@
         <option value="$PROJECT_DIR$/jekyll/collections/_educations/DUT.markdown" />
         <option value="$PROJECT_DIR$/jekyll/collections/_educations/enseeiht.markdown" />
         <option value="$PROJECT_DIR$/jekyll/collections/_educations/uqac.markdown" />
-        <option value="$PROJECT_DIR$/jekyll/_includes/experiences.html" />
         <option value="$PROJECT_DIR$/jekyll/_layouts/resume.html" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/experiences.html" />
         <option value="$PROJECT_DIR$/jekyll/_includes/educations.html" />
       </list>
     </option>
@@ -335,12 +333,12 @@
       <workItem from="1569022091201" duration="14894000" />
       <workItem from="1569095697445" duration="3122000" />
       <workItem from="1569102027813" duration="15275000" />
-      <workItem from="1569165474926" duration="3934000" />
+      <workItem from="1569165474926" duration="4783000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104256000" />
+    <option name="totallyTimeSpent" value="105105000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="73" y="-7" width="1470" height="878" extended-state="6" />
@@ -672,16 +670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/collections/_experiences/illogika.markdown">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="136">
-            <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jekyll/collections/_experiences/latecoere.markdown">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -712,11 +700,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/collections/_educations/uqac.markdown">
+    <entry file="file://$PROJECT_DIR$/jekyll/collections/_experiences/illogika.markdown">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="153">
-            <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+          <first_editor relative-caret-position="136">
+            <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
           </first_editor>
           <second_editor />
         </state>
@@ -727,6 +715,16 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="153">
             <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="28" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/collections/_educations/uqac.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="153">
+            <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
           </first_editor>
           <second_editor />
         </state>
@@ -744,15 +742,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jekyll/_includes/experiences.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="50" column="123" lean-forward="true" selection-start-line="50" selection-start-column="73" selection-end-line="50" selection-end-column="123" />
+        <state relative-caret-position="253">
+          <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jekyll/_includes/educations.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
-          <caret line="53" column="81" selection-start-line="53" selection-start-column="81" selection-end-line="53" selection-end-column="81" />
+          <caret line="53" column="79" selection-start-line="53" selection-start-column="79" selection-end-line="53" selection-end-column="79" />
         </state>
       </provider>
     </entry>
