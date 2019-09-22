@@ -485,22 +485,27 @@
 .home-section {
   position: relative;
   padding-bottom: 30px;
-
-  > a {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background: #e8e8e8;
-    text-align: center;
-    float: right;
-    border-radius: 4px;
-    padding: 5px;
-    cursor: pointer;
-  }
 }
 
+.button-link {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #e8e8e8;
+  text-align: center;
+  float: right;
+  border-radius: 4px;
+  padding: 5px;
+  cursor: pointer;
+}
 
+.resume-link {
+  background: #e8e8e8;
+  border-radius: 4px;
+  padding: 5px;
+  cursor: pointer;
+}
 
 .home-li {
   margin-bottom: 0 !important;
@@ -519,8 +524,4 @@
       list-style: none;
     }
   }
-}
-
-object {
-  width: 100%;
 }
