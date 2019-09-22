@@ -7,7 +7,7 @@ start-date: 2013
 end-date: 2015
 full-name: IUT 'A' Paul Sabatier
 localization: UT3, Toulouse, FR
-link: http://iut.ups-tlse.fr/
+link: iut.ups-tlse.fr
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

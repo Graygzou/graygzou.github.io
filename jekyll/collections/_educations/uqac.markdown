@@ -7,7 +7,7 @@ start-date: 2017
 end-date: 2019
 full-name: Université du Québec à Chicoutimi
 localization: UQAC, Quebec CA
-link: https://www.uqac.ca/
+link: www.uqac.ca
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

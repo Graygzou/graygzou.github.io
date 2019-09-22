@@ -7,7 +7,7 @@ start-date: 2015
 end-date: 2017
 full-name: École nationale supérieure d'électrotechnique, d'électronique, d'informatique, d'hydraulique et des télécommunications
 localization: ENSEEIHT, Toulouse, FR
-link: http://www.enseeiht.fr
+link: www.enseeiht.fr
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>
