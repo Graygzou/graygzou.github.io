@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b6d0991-ca97-49ed-8583-7856f3d6434a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/educations.html" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/educations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/experiences.html" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/experiences.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_educations/DUT.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_educations/DUT.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_educations/enseeiht.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_educations/enseeiht.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_educations/uqac.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_educations/uqac.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_experiences/enac.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_experiences/enac.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_experiences/illogika.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_experiences/illogika.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_experiences/irit.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_experiences/irit.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_experiences/latecoere.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_experiences/latecoere.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_layouts/resume.html" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_layouts/resume.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jekyll/_layouts/resume.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="255">
+              <caret line="15" column="112" selection-start-line="15" selection-start-column="112" selection-end-line="15" selection-end-column="112" />
             </state>
           </provider>
         </entry>
@@ -65,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jekyll/_includes/educations.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="50" column="92" selection-start-line="50" selection-start-column="92" selection-end-line="50" selection-end-column="92" />
+            <state relative-caret-position="18">
+              <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -128,7 +120,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/jekyll/assets/icons/regular/star.svg" />
         <option value="$PROJECT_DIR$/jekyll/assets/icons/regular/tasks.svg" />
         <option value="$PROJECT_DIR$/jekyll/assets/icons/regular/times.svg" />
         <option value="$PROJECT_DIR$/jekyll/assets/icons/regular/building.svg" />
@@ -179,6 +170,7 @@
         <option value="$PROJECT_DIR$/jekyll/collections/_educations/uqac.markdown" />
         <option value="$PROJECT_DIR$/jekyll/_includes/experiences.html" />
         <option value="$PROJECT_DIR$/jekyll/_includes/educations.html" />
+        <option value="$PROJECT_DIR$/jekyll/_layouts/resume.html" />
       </list>
     </option>
   </component>
@@ -211,6 +203,12 @@
               <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="jekyll" type="462c0819:PsiDirectoryNode" />
               <item name="_includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="jekyll" type="462c0819:PsiDirectoryNode" />
+              <item name="_layouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -309,12 +307,12 @@
       <workItem from="1569022091201" duration="14894000" />
       <workItem from="1569095697445" duration="3122000" />
       <workItem from="1569102027813" duration="15275000" />
-      <workItem from="1569165474926" duration="2467000" />
+      <workItem from="1569165474926" duration="2661000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102789000" />
+    <option name="totallyTimeSpent" value="102983000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="73" y="-7" width="1470" height="878" extended-state="6" />
@@ -632,13 +630,6 @@
     <entry file="file://$PROJECT_DIR$/jekyll/assets/icons/regular/map-marker.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_layouts/resume.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jekyll/collections/_experiences/illogika.markdown">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -725,8 +716,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jekyll/_includes/educations.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="50" column="92" selection-start-line="50" selection-start-column="92" selection-end-line="50" selection-end-column="92" />
+        <state relative-caret-position="18">
+          <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_layouts/resume.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="112" selection-start-line="15" selection-start-column="112" selection-end-line="15" selection-end-column="112" />
         </state>
       </provider>
     </entry>
