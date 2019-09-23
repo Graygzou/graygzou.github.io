@@ -32,6 +32,7 @@ kramdown:
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Grégoire Boiron
+birthday_year: 1994
 profil_description: Programmer Generalist at iLLOGIKA
 email: gregoire.boiron@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
