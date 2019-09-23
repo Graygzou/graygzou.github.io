@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b6d0991-ca97-49ed-8583-7856f3d6434a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_layouts/resume.html" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_layouts/resume.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jekyll/_sass/gamefolio/_layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_sass/gamefolio/_layout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/resume.md" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/resume.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jekyll/_layouts/resume.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="87" selection-start-line="15" selection-start-column="87" selection-end-line="15" selection-end-column="87" />
+            <state relative-caret-position="306">
+              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
               <folding>
                 <element signature="n#style#0;n#object#0;n#div#0;n#article#0;n#!!top" expanded="true" />
               </folding>
@@ -63,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jekyll/_sass/gamefolio/_layout.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="503" column="22" selection-start-line="503" selection-start-column="22" selection-end-line="503" selection-end-column="22" />
+            <state relative-caret-position="579">
+              <caret line="530" column="17" selection-start-line="530" selection-start-column="17" selection-end-line="530" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -76,7 +73,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>education</find>
       <find>gray</find>
       <find>home-li</find>
       <find>non</find>
@@ -106,6 +102,7 @@
       <find>svg-</find>
       <find>experience</find>
       <find>home-section</find>
+      <find>obje</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -163,8 +160,8 @@
         <option value="$PROJECT_DIR$/jekyll/_includes/educations.html" />
         <option value="$PROJECT_DIR$/jekyll/resume.md" />
         <option value="$PROJECT_DIR$/jekyll/_includes/projects.html" />
-        <option value="$PROJECT_DIR$/jekyll/_sass/gamefolio/_layout.scss" />
         <option value="$PROJECT_DIR$/jekyll/_layouts/resume.html" />
+        <option value="$PROJECT_DIR$/jekyll/_sass/gamefolio/_layout.scss" />
       </list>
     </option>
   </component>
@@ -274,18 +271,18 @@
       <workItem from="1569022091201" duration="14894000" />
       <workItem from="1569095697445" duration="3122000" />
       <workItem from="1569102027813" duration="15275000" />
-      <workItem from="1569165474926" duration="8378000" />
+      <workItem from="1569165474926" duration="9259000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108700000" />
+    <option name="totallyTimeSpent" value="109581000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="73" y="-7" width="1470" height="878" extended-state="6" />
+    <frame x="55" y="-7" width="1488" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21914893" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21638656" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -616,13 +613,6 @@
     <entry file="file://$PROJECT_DIR$/jekyll/_layouts/home.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_includes/experiences.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -630,13 +620,6 @@
           <folding>
             <element signature="n#style#0;n#svg#0;n#a#0;n#section#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_includes/educations.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1004">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
         </state>
       </provider>
     </entry>
@@ -660,13 +643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_sass/gamefolio/_layout.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="503" column="22" selection-start-line="503" selection-start-column="22" selection-end-line="503" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jekyll/_layouts/projects.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -684,13 +660,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/educations.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1004">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/experiences.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/jekyll/_layouts/resume.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="87" selection-start-line="15" selection-start-column="87" selection-end-line="15" selection-end-column="87" />
+        <state relative-caret-position="306">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
           <folding>
             <element signature="n#style#0;n#object#0;n#div#0;n#article#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_sass/gamefolio/_layout.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="579">
+          <caret line="530" column="17" selection-start-line="530" selection-start-column="17" selection-end-line="530" selection-end-column="17" />
         </state>
       </provider>
     </entry>
