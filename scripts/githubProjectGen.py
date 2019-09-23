@@ -108,7 +108,7 @@ def generateFrontMatter(currentRepository, username, githubToken):
         #endif
         finalStr += key + ": " + str(githubValue) + endOfFile
     #endfor
-    finalStr += "last-update-days: " + str((datetime.now() - lastUpdate).days) + endOfFile
+    finalStr += "last-update-days: " + str(max((datetime.now() - lastUpdate).days, 0)) + endOfFile
     finalStr += "tags: " + str(addRepositoryTopics(username, currentRepository, githubToken))
     return finalStr
 #enddef
@@ -212,7 +212,7 @@ def updateFrontMattersAtLine(line, currentRepository, username, githubToken):
                 if field == "language":
                     finalLineStr += "color: " + str(findLanguageColor(finalStr, githubToken)) + endOfFile
                 elif field == "updated-at":
-                    finalLineStr += "last-update-days: " + str((datetime.now() - lastUpdate).days) + endOfFile
+                    finalLineStr += "last-update-days: " + str(max((datetime.now() - lastUpdate).days, 0)) + endOfFile
                 #endif
 
                 break # break the loop because we already match a field on that line
@@ -339,12 +339,14 @@ def updateProjectPages(githubToken):
 # Main function
 # Arguments : (Github Token)
 # ----------------------------------------------------------------------------------
-if __name__ == "__main__":
-    githubToken = "3b5fe8ce744677c4d15d0d3c1b12c41ab8093783"
-    #githubToken = sys.argv[1]
+def main(githubToken):
     print("Launch static website generation...")
 
     print("Start the code gen...")
     updateProjectPages(githubToken)
     print("Code gen ended.")
+#enddef
+
+if __name__ == "__main__":
+    main(sys.argv[1])
 #endif

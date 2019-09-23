@@ -7,7 +7,7 @@ language: Java
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-15 00:43:57
-last-update-days: 67
+last-update-days: 69
 tags: ['game-engine', '2d-game-engine', 'swing-gui', 'maven', 'bintray']
 category: 'side'
 platforms: Windows

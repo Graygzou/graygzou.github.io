@@ -6,8 +6,8 @@ color: "#e34c26"
 language: HTML
 stargazers-count: 0
 forks-count: 0
-updated-at: 2019-09-21 03:10:43
-last-update-days: -1
+updated-at: 2019-09-23 00:23:01
+last-update-days: 0
 tags: ['portfolio', 'html-css', 'javascript', 'python', 'code-generation', 'github-api']
 category: 'side'
 platforms: Web

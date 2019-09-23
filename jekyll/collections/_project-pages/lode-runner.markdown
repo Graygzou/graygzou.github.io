@@ -7,7 +7,7 @@ language: Java
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-22 23:27:41
-last-update-days: 60
+last-update-days: 61
 tags: ['video-game', '2d-platformer-game', 'puzzle-game', 'dygaengine']
 category: 'school'
 platforms: Windows

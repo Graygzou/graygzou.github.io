@@ -7,7 +7,7 @@ language: Lua
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-23 02:08:56
-last-update-days: 59
+last-update-days: 61
 tags: ['lua', 'aoc', 'advent-of-code']
 category: 'side'
 platforms: Windows

@@ -7,7 +7,7 @@ language: C++
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-23 01:53:04
-last-update-days: 59
+last-update-days: 61
 tags: ['virtual-reality', 'aracnophobia', 'unreal-engine-4', 'simulation']
 category: 'school'
 platforms: Windows

@@ -7,8 +7,8 @@ language: C#
 stargazers-count: 1
 forks-count: 3
 updated-at: 2019-07-23 00:51:26
-last-update-days: 59
-tags: ['unity', 'survival-game', 'open-world-game', 'finite-state-machine', 'steering-behaviors', 'third-person-game', 'game-development']
+last-update-days: 61
+tags: ['survival-game', 'open-world-game', 'finite-state-machine', 'steering-behaviors', 'third-person-game', 'game-development', 'unity3d']
 category: 'school'
 platforms: Windows
 engines: Unity 3D

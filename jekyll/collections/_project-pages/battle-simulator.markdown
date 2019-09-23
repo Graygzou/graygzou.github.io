@@ -7,7 +7,7 @@ language: Java
 stargazers-count: 2
 forks-count: 0
 updated-at: 2019-07-23 00:54:31
-last-update-days: 59
+last-update-days: 61
 tags: ['scala', 'jmonkeyengine3', 'battle-simulator', 'graphx', 'parallelization', 'graph', 'game']
 category: 'school'
 platforms: Windows

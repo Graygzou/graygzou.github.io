@@ -7,7 +7,7 @@ language: Java
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-22 23:24:54
-last-update-days: 60
+last-update-days: 61
 tags: ['game-engine', 'lwjgl', 'entity-component-system', 'opengl', 'openal', 'jbullet', 'glfw']
 category: 'school'
 platforms: Windows
