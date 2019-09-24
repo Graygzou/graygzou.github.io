@@ -2,13 +2,16 @@
 layout: project-page
 title: advent-of-code
 description: My solutions for Advent of Code (AoC) challenges.
-color: "#000080"
-language: Lua
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-23 02:08:56
-last-update-days: 61
+last-update-days: 62
 tags: ['lua', 'aoc', 'advent-of-code']
+languages: 
+  - name: Lua
+    percentage: 100.0
+    color: "#000080"
+
 category: 'side'
 platforms: Windows
 tools: [Lua]

@@ -2,13 +2,22 @@
 layout: project-page
 title: spida-phobia
 description: Virtual Reality simulation that helps people suffering from arachnophobia.
-color: "#f34b7d"
-language: C++
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-23 01:53:04
-last-update-days: 61
+last-update-days: 62
 tags: ['virtual-reality', 'aracnophobia', 'unreal-engine-4', 'simulation']
+languages: 
+  - name: C++
+    percentage: 96.7
+    color: "#f34b7d"
+  - name: C#
+    percentage: 3.1
+    color: "#178600"
+  - name: C
+    percentage: 0.2
+    color: "#555555"
+
 category: 'school'
 platforms: Windows
 engines: Unreal

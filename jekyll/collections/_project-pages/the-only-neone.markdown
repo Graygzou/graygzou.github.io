@@ -4,6 +4,16 @@ title: the-only-neone
 description: 3D Grid based Maze game made in 48 hours for the GMTK GameJam 2019
 color: "#178600"
 language: C#
+languages:
+    - name: C#
+      percentage: 61.4
+      color: green
+    - name: ShaderLab
+      percentage: 20.6
+      color: yellow
+    - name: HLSL
+      percentage: 7.5
+      color: gray
 tags: ['unity3d', 'gamejam', 'gmtk2019', 'puzzle-game']
 category: 'side'
 platforms: [Windows, WebGL]

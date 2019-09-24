@@ -2,13 +2,13 @@
 layout: project-page
 title: penguin-panic
 description: 3D exploration, arcade game made for the Ubisoft Game Lab Competition 2018
-color: "#000000"
-language: None
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-25 03:46:03
-last-update-days: 59
+last-update-days: 60
 tags: []
+languages: 
+
 category: 'school'
 platforms: Windows
 engines: Unity3D

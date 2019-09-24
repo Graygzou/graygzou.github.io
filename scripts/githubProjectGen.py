@@ -50,12 +50,33 @@ def createThumbnailImage(file, username, jsonRepo, isHighlighted, githubToken):
 # <!> Warning : This use a preview request meaning it might change in the feature
 # ----------------------------------------------------------------------------------
 def addRepositoryTopics(username, jsonRepo, githubToken):
-    htmlIdUsed = "gifgame"
     url = "https://api.github.com/repos/" + username + "/" + jsonRepo["name"] + "/topics"
     headers = {'content-type': 'application/json', 'Accept-Charset': 'UTF-8', "Accept": "application/vnd.github.mercy-preview+json", "Authorization": "token " + githubToken}
     r = requests.get(url, headers=headers)
     topicsResponse = r.json()
     return topicsResponse['names']
+#enddef
+
+# ----------------------------------------------------------------------------------
+#                       addRepositoryLanguages
+#
+# Request and create all the GitHub languages
+# ----------------------------------------------------------------------------------
+def addRepositoryLanguages(username, jsonRepo, githubToken):
+    languagesStr = ""
+    url = "https://api.github.com/repos/" + username + "/" + jsonRepo["name"] + "/languages"
+    headers = {'content-type': 'application/json', 'Accept-Charset': 'UTF-8', "Authorization": "token " + githubToken}
+    r = requests.get(url, headers=headers)
+    topicsResponse = r.json()
+    sum_all_ponderation = sum(topicsResponse.values())
+    print(sum_all_ponderation)
+
+    for language in topicsResponse:
+        languagesStr += "  - name: " + str(language) + endOfFile
+        languagesStr += "    percentage: " + str(round((topicsResponse[language] * 100) / sum_all_ponderation, 1)) + endOfFile
+        languagesStr += "    color: " + str(findLanguageColor(language, githubToken)) + endOfFile
+    #endfor
+    return languagesStr
 #enddef
 
 # ----------------------------------------------------------------------------------
@@ -69,7 +90,12 @@ def findLanguageColor(languageName, githubToken):
     data = yaml.load(response.text)
     color = DEFAULT_REPO_COLOR
     if languageName in data:
-        color = data[languageName]['color'].strip()
+        print(data[languageName].get('color'))
+        if data.get(languageName) == None or data[languageName].get('color') == None:
+            color = "#ccc"
+        else:
+            color = data[languageName]['color'].strip()
+        #endif
     #endif
     return "\"" + color + "\""
 #enddef
@@ -86,7 +112,6 @@ def generateFrontMatter(currentRepository, username, githubToken):
     frontMatterToGithubDict = {
         "title": "name",
         "description": "description",
-        "language": "language",
         "stargazers-count": "stargazers-count",
         "forks-count": "forks-count",
         "updated-at": "pushed_at",
@@ -102,14 +127,12 @@ def generateFrontMatter(currentRepository, username, githubToken):
             githubValue = datetime.strptime(githubValue, "%Y-%m-%dT%H:%M:%SZ")
             githubValue.strftime('%A %b %d, %Y at %H:%M GMT')
             lastUpdate = githubValue
-        elif key == "language":
-            ## Add the color in the same
-            finalStr += "color: " + str(findLanguageColor(githubValue, githubToken)) + endOfFile
         #endif
         finalStr += key + ": " + str(githubValue) + endOfFile
     #endfor
     finalStr += "last-update-days: " + str(max((datetime.now() - lastUpdate).days, 0)) + endOfFile
-    finalStr += "tags: " + str(addRepositoryTopics(username, currentRepository, githubToken))
+    finalStr += "tags: " + str(addRepositoryTopics(username, currentRepository, githubToken)) + endOfFile
+    finalStr += "languages: " + endOfFile + str(addRepositoryLanguages(username, currentRepository, githubToken))
     return finalStr
 #enddef
 

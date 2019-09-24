@@ -18,6 +18,48 @@ layout: default
         </time>
       {%- endfor -%}
     </p>
+
+    {% assign percentage_covered = 0.0 %}
+    <div class="linguist_bar">
+      {%- for language in page.languages -%}
+        {%- if forloop.index < 7 or language.percentage > 1.0 -%}
+          {% assign percentage_covered = percentage_covered | plus:language.percentage %}
+          <div style="background: {{ language.color }}; width: {{ language.percentage }}%;"></div>
+        {%- endif -%}
+      {%- endfor -%}
+
+      <!-- Combine all the languages together to avoid having too much stuff at the end -->
+      {%- if percentage_covered < 100.0 -%}
+        <div style="background: #ccc; width: {{ 100.0 | minus:percentage_covered }}%;"></div>
+      {%- endif -%}
+
+    </div>
+    <div class="linguist_legend">
+      {%- for language in page.languages -%}
+        {%- if forloop.index < 7 or language.percentage > 1.0 -%}
+          <div>
+            <svg class="svg-icon svg-project" style="fill: {{ language.color }};">
+              <use xlink:href="{{ '/assets/icons/gamefolio-regular-icons.svg#circle' }}">
+              </use>
+            </svg>
+            <span class="language_name">{{ language.name }}</span>
+            <span class="language_percentage">{{ language.percentage }}%</span>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+
+      <!-- Combine all the languages together to avoid having too much stuff at the end -->
+      {%- if percentage_covered < 100.0 -%}
+        <div>
+          <svg class="svg-icon svg-project" style="fill: {{ language.color }};">
+            <use xlink:href="{{ '/assets/icons/gamefolio-regular-icons.svg#circle' }}">
+            </use>
+          </svg>
+          <span class="language_name">Others</span>
+          <span class="language_percentage">{{ 100.0 | minus:percentage_covered }}%</span>
+        </div>
+      {%- endif -%}
+    </div>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">

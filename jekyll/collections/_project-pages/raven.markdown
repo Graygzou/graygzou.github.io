@@ -2,13 +2,49 @@
 layout: project-page
 title: raven
 description: Top down 2D game, similar to a Quake-style deathmatch.
-color: "#f34b7d"
-language: C++
 stargazers-count: 1
 forks-count: 0
 updated-at: 2019-07-22 23:23:09
-last-update-days: 61
+last-update-days: 62
 tags: ['artificial-intelligence', 'top-down-shooter', 'neural-network', 'fuzzilogic', 'goal-oriented-action-planning', 'steering-behaviors']
+languages: 
+  - name: C++
+    percentage: 39.2
+    color: "#f34b7d"
+  - name: C
+    percentage: 35.5
+    color: "#555555"
+  - name: HTML
+    percentage: 22.3
+    color: "#e34c26"
+  - name: Lua
+    percentage: 0.8
+    color: "#000080"
+  - name: Makefile
+    percentage: 0.7
+    color: "#427819"
+  - name: Python
+    percentage: 0.6
+    color: "#3572A5"
+  - name: Roff
+    percentage: 0.4
+    color: "#ecdebe"
+  - name: CSS
+    percentage: 0.2
+    color: "#563d7c"
+  - name: PostScript
+    percentage: 0.1
+    color: "#da291c"
+  - name: Clarion
+    percentage: 0.0
+    color: "#db901e"
+  - name: Batchfile
+    percentage: 0.0
+    color: "#C1F12E"
+  - name: Objective-C
+    percentage: 0.0
+    color: "#438eff"
+
 category: 'school'
 platforms: Windows
 tools: [Visual Studio, Lua]

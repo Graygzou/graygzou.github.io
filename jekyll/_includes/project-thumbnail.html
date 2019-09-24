@@ -20,13 +20,14 @@
 </div>
 <div class="repositoryFooter">
   <!-- Indicate what the main language used in this project  -->
-  {%- if project.language -%}
+  {%- if project.languages -%}
+  {% assign main_language = project.languages | first %}
   <div>
-    <svg class="svg-icon svg-project" style="fill: {{ project.color }};">
+    <svg class="svg-icon svg-project" style="fill: {{ main_language.color }};">
       <use xlink:href="{{ '/assets/icons/gamefolio-regular-icons.svg#circle' }}">
       </use>
     </svg>
-    <span>{{ project.language }}</span>
+    <span>{{ main_language.name }}</span>
   </div>
   {%- endif -%}
   <!-- Indicate how many starts this repository received -->

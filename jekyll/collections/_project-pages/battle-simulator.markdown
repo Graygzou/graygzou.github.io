@@ -2,13 +2,19 @@
 layout: project-page
 title: battle-simulator
 description: Battle simulator made with JMonkey, using a graph model as back-end
-color: "#b07219"
-language: Java
 stargazers-count: 2
 forks-count: 0
 updated-at: 2019-07-23 00:54:31
-last-update-days: 61
+last-update-days: 62
 tags: ['scala', 'jmonkeyengine3', 'battle-simulator', 'graphx', 'parallelization', 'graph', 'game']
+languages: 
+  - name: Java
+    percentage: 86.2
+    color: "#b07219"
+  - name: Scala
+    percentage: 13.8
+    color: "#c22d40"
+
 category: 'school'
 platforms: Windows
 engines: JMonkey
