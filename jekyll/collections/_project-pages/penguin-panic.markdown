@@ -7,7 +7,19 @@ forks-count: 0
 updated-at: 2019-07-25 03:46:03
 last-update-days: 60
 tags: []
-languages: 
+languages:
+  - name: C#
+    percentage: 80.87
+    color: "#178600"
+  - name: HLSL
+    percentage: 11.25
+    color: "#ccc"
+  - name: ShaderLab
+    percentage: 7.7
+    color: "#ccc"
+  - name: GLSL
+    percentage: 0.19
+    color: "#ccc"
 
 category: 'school'
 platforms: Windows

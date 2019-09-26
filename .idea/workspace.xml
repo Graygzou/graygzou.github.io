@@ -6,23 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5b6d0991-ca97-49ed-8583-7856f3d6434a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/project-thumbnail.html" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/project-thumbnail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_layouts/project-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_layouts/project-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_sass/gamefolio/_project-page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_sass/gamefolio/_project-page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/advent-of-code.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/advent-of-code.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/battle-simulator.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/battle-simulator.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/brain-control.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/brain-control.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/dyga-engine.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/dyga-engine.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/gmtk-2019-statistics.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/gmtk-2019-statistics.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/graygzou.github.io.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/graygzou.github.io.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/lode-runner.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/lode-runner.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/metenorage.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/metenorage.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/native-ruins.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/native-ruins.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/penguin-panic.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/penguin-panic.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/raven.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/raven.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/spida-phobia.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/spida-phobia.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/the-only-neone.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/the-only-neone.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/githubProjectGen.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/githubProjectGen.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -304,12 +287,12 @@
       <workItem from="1569102027813" duration="15275000" />
       <workItem from="1569165474926" duration="10195000" />
       <workItem from="1569199594069" duration="3929000" />
-      <workItem from="1569274364863" duration="8505000" />
+      <workItem from="1569274364863" duration="9080000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122951000" />
+    <option name="totallyTimeSpent" value="123526000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="-7" width="1487" height="878" extended-state="6" />
