@@ -2,7 +2,8 @@
   <h2 class="page-heading">Projects Overview</h2>
   <div>
     <ul class="project-list">
-      {% assign sorted_pages = site.project-pages | sort:"last-update-days" %}
+      <!--{% assign sorted_pages = site.project-pages | sort:"last-update-days" %}-->
+      {% assign sorted_pages = site.project-pages | where: "pinned", "true" %}
       {%- for project in sorted_pages -%}
         <!-- Only show the 3 latests post here -->
         {%- if forloop.index <= 4 -%}

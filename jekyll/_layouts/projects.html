@@ -17,10 +17,11 @@ layout: default
     {%- if forloop.index0 != 0 -%}
         <br/>
     {%- endif -%}
-    <h2 class="page-heading">{{ group.name | capitalize }} Projects</h2>
+    <h2 class="page-heading">{{ group.name | capitalize }} projects</h2>
     <hr>
     <ul class="project-list">
-        {% assign sorted_pages = group.items | sort:"last-update-days" %}
+        <!--{% assign sorted_pages = group.items | sort:"last-update-days" %}-->
+        {% assign sorted_pages = group.items | sort:"priority" %}
         {%- for project in sorted_pages -%}
 
         {% assign new_section = forloop.index | minus:1 | modulo:2 %}

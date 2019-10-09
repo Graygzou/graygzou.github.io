@@ -114,6 +114,57 @@ layout: default
       </div>
     </aside>
 
+    <!--<aside class="overview_table">
+      <div>
+        <span class="table_title">Platform:</span>
+        <ul>
+          {%- for platform in page.platforms -%}
+          <li itemprop="gamePlatform">{{ platform }}</li>
+          {%- endfor -%}
+        </ul>
+      </div>
+      {%- if page.engines -%}
+      <div>
+        <span class="table_title">Engine:</span>
+        <ul>
+          {%- for engine in page.engines -%}
+          <li itemscope itemtype="https://schema.org/Thing"><span itemprop="name">{{ engine }}</span></li>
+          {%- endfor -%}
+        </ul>
+      </div>
+      {%- endif -%}
+      {%- if page.tools -%}
+      <div>
+        <span class="table_title">Tools Used:</span>
+        <ul>
+          {%- for tool in page.tools -%}
+          <li itemscope itemtype="https://schema.org/Thing"><span itemprop="name">{{ tool }}</span></li>
+          {%- endfor -%}
+        </ul>
+      </div>
+      {%- endif -%}
+      <div>
+        <span class="table_title">Duration:</span>
+        <ul>
+          <li>{{ page.duration }}</li>
+        </ul>
+      </div>
+      <div>
+        <span class="table_title">Team Size:</span>
+        <ul>
+          <li>{{ page.team-size }}</li>
+        </ul>
+      </div>
+      <div>
+        <span class="table_title">Main Role:</span>
+        <ul>
+          {%- for role in page.main-roles -%}
+          <li>{{ role }}</li>
+          {%- endfor -%}
+        </ul>
+      </div>
+    </aside>-->
+
     <article class="description_side">
       {{ content }}
 

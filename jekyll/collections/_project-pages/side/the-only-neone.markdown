@@ -16,19 +16,19 @@ languages:
       color: gray
 tags: ['unity3d', 'gamejam', 'gmtk2019', 'puzzle-game']
 category: 'side'
+pinned: true
 platforms: [Windows, WebGL]
 engines: Unity3D
-tools: [Shader Graph, Rewired]
+tools: [Shader Graph, Rewired, ProGrids]
 duration: "48 hours"
 team-size: 4
 main-roles: [3Cs Programmer, Gameplay Programmer, Level Designer]
 youtube-link: https://www.youtube.com/embed/-BDVJ9IO2uk
 project_links:
-  - name: github
-    url: https://github.com/Graygzou/the-only-neOne
   - name: itch-io
     url: https://dzamani.itch.io/the-only-neone
 ---
+
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>
 Copyright (c) 2018-2019 Gregoire Boiron  All Rights Reserved.

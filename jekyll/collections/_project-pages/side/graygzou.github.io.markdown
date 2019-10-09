@@ -4,24 +4,24 @@ title: graygzou.github.io
 description: Github portfolio made from scratch.
 stargazers-count: 0
 forks-count: 0
-updated-at: 2019-09-23 22:39:21
-last-update-days: 0
+updated-at: 2019-10-04 02:04:24
+last-update-days: 4
 tags: ['portfolio', 'html-css', 'javascript', 'python', 'code-generation', 'github-api']
 languages: 
   - name: HTML
-    percentage: 43.4
+    percentage: 43.9
     color: "#e34c26"
   - name: Python
-    percentage: 22.9
+    percentage: 23.4
     color: "#3572A5"
   - name: CSS
-    percentage: 22.2
+    percentage: 21.7
     color: "#563d7c"
   - name: Ruby
-    percentage: 10.2
+    percentage: 9.8
     color: "#701516"
   - name: Shell
-    percentage: 1.3
+    percentage: 1.2
     color: "#89e051"
 
 category: 'side'

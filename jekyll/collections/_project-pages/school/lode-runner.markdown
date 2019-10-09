@@ -5,7 +5,7 @@ description: 2D platformer and puzzle game made with DygaEngine based on the ori
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-22 23:27:41
-last-update-days: 62
+last-update-days: 77
 tags: ['video-game', '2d-platformer-game', 'puzzle-game', 'dygaengine']
 languages: 
   - name: Java

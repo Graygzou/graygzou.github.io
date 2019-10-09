@@ -141,15 +141,21 @@ def generateFrontMatter(currentRepository, username, githubToken):
 #
 # Copy the additional front matter to the final merged file.
 # ----------------------------------------------------------------------------------
-def addAdditionalFrontMatter(file, currentRepository):
+def addAdditionalFrontMatter(currentRepository):
+    content = ""
+    category = "other"
     print(ADDIT_FM_FOLDER_REL_PATH + currentRepository["name"] + "-fm.yml")
     
     filePath = ADDIT_FM_FOLDER_REL_PATH + currentRepository["name"] + "-fm.yml"
     additionalFile = open(filePath,'r')
     for line in additionalFile:
-        file.write(line)
+        content += line
+        field = line.split(':');
+        if field[0] == "category":
+            category = field[1].strip().replace('\'', '')
     # Add a dummy line break to be sure the front matter will not conflict with the rest
-    file.write(endOfFile)
+    content += endOfFile
+    return category, content
 #enddef
 
 # ----------------------------------------------------------------------------------
@@ -157,27 +163,32 @@ def addAdditionalFrontMatter(file, currentRepository):
 #
 # Write default template
 # ----------------------------------------------------------------------------------
-def printContentTemplate(file, currentRepository):
-    file.write("""<!---""" + endOfFile)
-    file.write("""Gregoire Boiron <gregoire.boiron@gmail.com>""" + endOfFile)
-    file.write("""Copyright (c) 2018-2019 Gregoire Boiron  All Rights Reserved.""" + endOfFile)
-    file.write("""--->""" + endOfFile + endOfFile)
-    
-    file.write("""{% capture my_include %}""" + endOfFile)
-    file.write("""{% include projects-content/""" + currentRepository["name"] + """-content.markdown %}""" + endOfFile)
-    file.write("""{% endcapture %}""" + endOfFile)
-    file.write("""{{ my_include | markdownify }}""" + endOfFile)
+def printContentTemplate(currentRepository):
+    content = """<!---""" + endOfFile
+    content += """Gregoire Boiron <gregoire.boiron@gmail.com>""" + endOfFile
+    content += """Copyright (c) 2018-2019 Gregoire Boiron  All Rights Reserved.""" + endOfFile
+    content += """--->""" + endOfFile + endOfFile
+
+    content += """{% capture my_include %}""" + endOfFile
+    content += """{% include projects-content/""" + currentRepository["name"] + """-content.markdown %}""" + endOfFile
+    content += """{% endcapture %}""" + endOfFile
+    content += """{{ my_include | markdownify }}""" + endOfFile
+
+    return content
 #enddef
 
 # ----------------------------------------------------------------------------------
 #                       generateRepoMdPage
 # ----------------------------------------------------------------------------------
-def generateRepoMdPage(file, currentRepository, username, githubToken):
-    file.write("---" + endOfFile)
-    file.write(generateFrontMatter(currentRepository, username, githubToken) + endOfFile)
-    addAdditionalFrontMatter(file, currentRepository)
-    file.write("---" + endOfFile)
-    printContentTemplate(file, currentRepository)
+def generateRepoMdPage(currentRepository, username, githubToken):
+    content = "---" + endOfFile
+    content += generateFrontMatter(currentRepository, username, githubToken) + endOfFile
+    category, additionalFrontMatter = addAdditionalFrontMatter(currentRepository)
+    content += additionalFrontMatter
+    content += "---" + endOfFile
+    content += printContentTemplate(currentRepository)
+
+    return category, content
 #enddef
     
 
@@ -331,9 +342,12 @@ def generateUserRepos(username, githubToken):
                 #    print("Update ended !")
                 #else:
                 ## Create the file from scratch and generate the front matters part
-                file = open(FOLDER_REL_PATH + filename,'w')
+
                 print(" >>> Generation of " + currentRepository["name"] + " in progress...")
-                generateRepoMdPage(file, currentRepository, username, githubToken)
+                category, content = generateRepoMdPage(currentRepository, username, githubToken)
+                print("category = " + category)
+                file = open(FOLDER_REL_PATH + category + '/' + filename,'w')
+                file.write(content)
                 print(" >>> Generation ended !")
                 file.close()
                 #endif
