@@ -9,7 +9,7 @@ Brain Control is a top down 2D game, similar to a Quake-style deathmatch. This a
 
 You play as survivors from a deadly virus which turn humans into zombies. Your objective is to be the last survival alive to be able to build an army of zombies. Players can't attack each other directly and have to use zombies to do so. Each time a zombie is killed by one player, it resurrect, thanks to the bullets they used. Once resurrected, he attacks the other player. Moreover, each players is losing life over time and can only gain back some by killing standard zombies.
 
-### Constraints
+#### Constraints
 * Theme : Order and Disorder.
 * Imposed words : Arcade, Survival, Multiplayers.
 

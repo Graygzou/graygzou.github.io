@@ -9,7 +9,7 @@ Native Ruins is a 3D survival game made for a school project at the Université 
 
 You play as Judy, a young 23 years old woman, who wake up on a desert island. Her goal is simple : escape the island. To done it, she will need wood, rope and a sail to build a raft. As she goes throught her adventure, she will discover totems that will give her more habilities usefull for archive her goal.
 
-### Project Goals
+#### Project Goals
 * Apply basics principles of game development with tools used in industry.
 * earn video games development cycle and basics analystics documents.
 * Apply game design practices, game balancing, etc.

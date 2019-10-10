@@ -8,7 +8,7 @@ Overview
 Crawl the site : <a href="https://itch.io/jam/gmtk-2019">GMTK-2019</a> to get some statistics about the event.   
 Get the average score of the participants and some other data.
 
-##### Project Goals
+#### Project Goals
 * Discover how to crawl a website
 * Analyse some data
 * Discover new games thanks to criterias

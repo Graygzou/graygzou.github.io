@@ -11,6 +11,12 @@ Clear levels by reaching the exit, but there's a twist! You can only press and h
 
 We're pround to finish #109 overall for this jam !
 
+#### Project Goals
+* Challenge myself
+* Participate to my second GameJam
+* Work on my weaknesses (work fast and be result oriented).
+* Comeback on pure prototyping.
+
 {% capture links_include %}
 {% include helpers/project-links %}
 {% endcapture %}

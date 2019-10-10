@@ -7,7 +7,7 @@ Overview
 --------------------
 2D game engine which allows to build platformer and puzzle games.
 
-### Project Goals
+#### Project Goals
 In progress
 
 {% capture links_include %}

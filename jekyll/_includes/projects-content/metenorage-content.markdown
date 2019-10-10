@@ -9,7 +9,7 @@ Metenorage is a Java engine made for a school project at the Université du Qué
 
 We implements this engine in Java with the framework <a href="https://www.lwjgl.org/">LWJGL</a> (Lightweight Java Game Library). We chose to based our engine on a Entity-Component-System (ECS) architecture because of his modularity and flexibility.
 
-### Project Goals
+#### Project Goals
 * Create a game engine which is modular and flexible.
 * Enable users to create 2D and 3D games.
 * Implements basics systems to create simple games.

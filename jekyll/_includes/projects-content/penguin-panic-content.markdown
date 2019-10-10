@@ -21,7 +21,7 @@ You play the leader penguin of this colony. Your mission: return the Glacier to 
 {% endcapture %}
 {{ links_include | markdownify }}
 
-### Constraints
+#### Constraints
 * The game needs to highlight a real social cause.
 * The game needs to include an AI that change depending on players behaviors.
 * The game needs to include a multiplayer aspect.

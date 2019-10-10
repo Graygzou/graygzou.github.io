@@ -16,7 +16,6 @@ tools: [Rewired]
 duration: "48 hours"
 team-size: 4
 main-roles: [Gameplay Programmer, UI Programmer]
-youtube-link: https://www.youtube.com/embed/-BDVJ9IO2uk
 project_links:
   - name: ludum-dare
     url: https://ldjam.com/events/ludum-dare/45/colosseum-overcharge

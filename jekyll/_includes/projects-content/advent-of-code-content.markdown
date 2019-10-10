@@ -8,9 +8,9 @@ Overview
 Advent of Code is an Advent calendar of small programming puzzles for a variety of skill sets and skill levels that can be solved in any programming language we like. 
 People use this event as a speed contest, practice problems, or even to challenge each other. It's made by Eric Wastl and 2018 was the 4th edition.
 
-### Project Goals
+#### Project Goals
 * Challenge myself.
-* Discover the language Lua.
+* Discover new things (new language, new problems, etc.)
 * Share with my friends possible solutions and optimizations.
 
 {% capture links_include %}
@@ -18,44 +18,61 @@ People use this event as a speed contest, practice problems, or even to challeng
 {% endcapture %}
 {{ links_include | markdownify }}
 
-Detailed Info
---------------------
-I decided to go with Lua which was new to me. 
-All my friends choose C# or C++ which were the main languages we work most of the time.
+:memo: Table of contents
+---------------------------------
+1. [2017 Edition](#2017)
+2. [2018 Edition](#2018)
+    1. [Summary Board](#2018-board)
 
-### Motivation behing Lua
-The good part was to learn a new language. I've already seen a bit of lua in a previous project (Raven)
-but I did not have the chance to really play with it. So I decided it was a good time to do so. 
+<a name="2017"></a> 2017 Edition
+---------------------------------
+---------------------------------
+I started out this section without completing the 2018 edition because I wanted to practice my C++.
+But I move on to something else since then.
 
-I also heard some companies were using lua as a scripting language for their game / engine. 
-Sp I guess, It's always good to have more than one string to your bow.
+To be continued.
 
-### The bad side
+<a name="2018"></a> 2018 Edition
+---------------------------------
+---------------------------------
+### Blog post
+I wrote a small article about my experience. You can find it here: [blog article]({% post_url /blog/2019-10-09-advent-of-code-2018 %})
 
-1) Lua is great in term of scripting. But not so great to deal with some kind of problems. 
-In fact, sometimes puzzles were easy to solve with a bit of abtraction. 
-And, it's not something really straight forward in lua.
+### Personal progression
+Since it was my first year doing this challenge, I did not try to rush my solutions.   
+I would rather spend on more day on a problem by thinking about it and come up with a better solution than previously.
+   
+Plus me and my friends were more fighting for concise solutions than submission time. 
 
-2) I'd something did "reinvent the wheel". Like sorting an array with a bubble sort. 
-Or even apply a function to all element of an array. Those things require extra work compare to a language that already offers helpers functions to do it.
+#### <a name="2018-board"></a> Summary Board:
 
-### What I had to do
+| Days  |      Names      |  Stars |  Completions* |
+|------:|:-------------|:------:|------:|
+|   1   | [Chronal Calibration](https://adventofcode.com/2018/day/1) | :star: :star: | 64717 |
+|   2   | [Inventory Management System](https://adventofcode.com/2018/day/2) | :star: :star: | 51497 |
+|   3   | [No Matter How You Slice It](https://adventofcode.com/2018/day/3) | :star: :star: | 39646 |
+|   4   | [Repose Record](https://adventofcode.com/2018/day/4) |               | 28990 |
+|   5   | [Alchemical Reduction]((https://adventofcode.com/2018/day/5)) | :star: :star: | 29452 |
+|   6   | [Chronal Coordinates]((https://adventofcode.com/2018/day/6)) | :star: :star: | 20361 |
+|   7   | [The Sum of Its Parts]((https://adventofcode.com/2018/day/7)) | :star: :star: | 16790 |
+|   8   | [Memory Maneuver]((https://adventofcode.com/2018/day/8)) | :star: :star: | 16440 |
+|   9   | [Marble Mania]((https://adventofcode.com/2018/day/9)) | :star: :star: | 14291 |
+|  10   | [The Stars Align](https://adventofcode.com/2018/day/10) | :star: :star: | 14576 |
+|  11   | [Chronal Charge](https://adventofcode.com/2018/day/11) | :star: :star: | 13616 |
+|  12   | [Subterranean Sustainability](https://adventofcode.com/2018/day/12) | :star: :star: | 11382 |
+|  13   | [Mine Cart Madness](https://adventofcode.com/2018/day/13) | :star: :star: | 9690 |
+|  14   | [Chocolate Charts](https://adventofcode.com/2018/day/14) | :star: :star: | 9850 |
+|  15   | [Beverage Bandits](https://adventofcode.com/2018/day/15) | :star: :star: | 5364 |
+|  16   | [Chronal Classification](https://adventofcode.com/2018/day/16) | :star: :star: | 7420 |
+|  17   | [Reservoir Research]((https://adventofcode.com/2018/day/17)) | :star: :star: | 5157 |
+|  18   | [Settlers of The North Pole](https://adventofcode.com/2018/day/18) | :star: :star: | 6477 |
+|  19   | [Go With The Flow](https://adventofcode.com/2018/day/19) |               | 4897 |
+|  20   | [A Regular Map](https://adventofcode.com/2018/day/20) | :star: :star: | 4154 |
+|  21   | [Chronal Conversion](https://adventofcode.com/2018/day/21) |               | 3775 |
+|  22   | [Mode Maze](https://adventofcode.com/2018/day/22) |               | 3546 |
+|  23   | [Experimental Emergency Teleportation](https://adventofcode.com/2018/day/23) |               | 3100 |
+|  24   | [Immune System Simulator 20XX](https://adventofcode.com/2018/day/24) |               | 3129 |
+|  25   | [Four-Dimensional Adventure](https://adventofcode.com/2018/day/25) |               | 2587 |
 
- - Write a lot of unit test:  
-Since I split my work into many function without any classes, I had to make sure every function was doing what is was supposed to do.
-To solve that problem I commit myself to write unit tests and make sure it pass before submitting something. 
-Because, if you didn't know, the more you submit to a challenge, the longer you will wait before being able to submit another answer.
-
- - Add Comments everywhere:  
-I'm a person that love comments. I find myself writing some in order to organize my thinking when I do something. 
-But in that case, it helps me even more with all the boiler plate code I needed to write.
-
- - Keep thinking of other possible solutions:  
-Some problems were thouther than others. But some were computionally expensive. 
-Meaning I had to rethink about my solution in order to be able to find the right solution. 
-Also, some could contains patterns that could possibly avoid having to refactor and just find the solution right away (with a little bit of calculus for example)
- 
-### Conclusion
-I find myself not finished the AoC 2018. 
-Even if I see it as a bit of a failure, I've learned a lot and challenge myself once again.
-I keep some good memories from this experience and will do the next edition for sure.
+\* number of persons that completed both challenges of the corresponding day.   
+Those values might not be accurate since there is no API requests made to gather them.

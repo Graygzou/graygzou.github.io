@@ -9,7 +9,7 @@ Raven is a top down 2D game, similar to a Quake-style deathmatch. It is original
 
 The gameplay of Raven is similar of a Quake-style deathmatch. When starting the game, severals bots spawned controlled by similar AI trying to win, by killing as many bots as possible. Bots can also pick up health or weapons if needed. The player could also take control of a bot by clicking on it. Ones the bot is controlled, some actions were possible like firing, switching weapons, etc.
 
-### Project Goals
+#### Project Goals
 * Learn and apply AI techniques used in video games.
 * Try making a neural network to train an AI.
 * Improved the game by adding more modes (team deathmatch, 1vs1)

@@ -9,7 +9,7 @@ Overview
 
 Lode Runner is composed of severals levels presented in a single screen. The player character, Jake Peril, has to collect all the treasure (golds with different value) and reach the exit. "Mad Monks" are also here to protected treasures by capturing Jake. Those wears red robes.
 
-### Project Goals
+#### Project Goals
 * Validate Object-Oriented Programming skills.
 * Use design patterns in the game.
 * Make simple, yet effective, artificial intelligences for enemies.

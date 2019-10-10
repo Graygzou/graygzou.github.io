@@ -9,7 +9,7 @@ Overview
 
 An Arena Couch game where the goal is to destroy your friends by knocking them into dangerous objects! As the game progresses your little robot that started with nothing will be able to upgrade and use new mechanics in hopes of winning the next round !
 
-### Project Goals
+#### Project Goals
 * Challenge myself
 * First participation of the Ludum Dare GameJam
 * Work with a pluridisciplanary team members, who I've never worked before.
