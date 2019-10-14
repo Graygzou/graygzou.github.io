@@ -1,1 +1,226 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-10-11T01:57:00+00:00</updated><id>/feed.xml</id><title type="html">Grégoire Boiron</title><subtitle>Grégoire Boiron's personal site. Host my portfolio, links to my projects and my own blog.</subtitle></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-10-14T20:14:43+00:00</updated><id>/feed.xml</id><title type="html">Grégoire Boiron</title><subtitle>Grégoire Boiron's personal site. Host my portfolio, links to my projects and my own blog.</subtitle><entry><title type="html">Advent Of Code 2018</title><link href="/blog/challenges/2019/10/10/advent-of-code-2018.html" rel="alternate" type="text/html" title="Advent Of Code 2018" /><published>2019-10-10T00:00:00+00:00</published><updated>2019-10-10T00:00:00+00:00</updated><id>/blog/challenges/2019/10/10/advent-of-code-2018</id><content type="html" xml:base="/blog/challenges/2019/10/10/advent-of-code-2018.html">&lt;p&gt;Little blog post (almost a year after my participation..) about my first participation to this event.&lt;/p&gt;
+
+&lt;h2 id=&quot;backstory&quot;&gt;Backstory&lt;/h2&gt;
+&lt;p&gt;A collegue told me about this event and the blast he had when doing it with others co-workers.
+Just by hearing the evelator pitch I was sold right away. (challenges, puzzles, computer science :heart:)&lt;/p&gt;
+
+&lt;p&gt;I was crazy enought to decided to do it in Lua. 
+Compare to all my co-workers (4 of them) that choose C# or C++ which were the main languages we work most of the time.&lt;/p&gt;
+
+&lt;p&gt;Feel free to check all my solutions for each year in my &lt;a href=&quot;https://github.com/Graygzou/advent-of-code&quot;&gt;Github Repository&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;why-lua-&quot;&gt;Why Lua ?&lt;/h4&gt;
+&lt;p&gt;You might ask yourself why so much pain ?&lt;br /&gt;
+Well, I wanted learn something new. I wasn’t going to compete with speed but more like “beautiful solutions”.
+I’ve already seen a bit of lua in a previous project (Raven) but I did not have the chance to really play with it. 
+So I decided it was a good time to do so !&lt;/p&gt;
+
+&lt;p&gt;I also heard some companies were using lua as a scripting language for their game / engine. 
+Sp I guess, It’s always good to have more than one string to your bow.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-counter-part&quot;&gt;The counter part&lt;/h4&gt;
+&lt;p&gt;1) Lua is great in term of scripting. But not so great to deal with some kind of problems. 
+In fact, sometimes puzzles were easy to solve with a bit of abtraction. 
+And, it’s not something really straight forward in lua.&lt;/p&gt;
+
+&lt;p&gt;2) I’d something did “reinvent the wheel”. Like sorting an array with a bubble sort. 
+Or even apply a function to all element of an array. Those things require extra work compare to a language that already offers helpers functions to do it.&lt;/p&gt;
+
+&lt;h3 id=&quot;overcome-lua-weaknesses&quot;&gt;Overcome Lua weaknesses&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Write a lot of unit test:&lt;br /&gt;
+Since I split my work into many function without any classes, I had to make sure every function was doing what is was supposed to do.
+To solve that problem I commit myself to write unit tests and make sure it pass before submitting something. 
+Because, if you didn’t know, the more you submit to a challenge, the longer you will wait before being able to submit another answer.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Add Comments everywhere:&lt;br /&gt;
+I’m a person that love comments. I find myself writing some in order to organize my thinking when I do something. 
+But in that case, it helps me even more with all the boiler plate code I needed to write.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Don’t hesitate to create a &lt;code class=&quot;highlighter-rouge&quot;&gt;Utils&lt;/code&gt; functions: &lt;br /&gt;
+I found myself writing some generic functions into &lt;code class=&quot;highlighter-rouge&quot;&gt;Utils&lt;/code&gt; file because it was useful in more than one challenge.
+I would not spent minutes / hours have to rewrite and test it again.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Keep thinking of other possible solutions:&lt;br /&gt;
+Some problems were thouther than others. But some were computionally expensive. 
+Meaning I had to rethink about my solution in order to be able to find the right solution. 
+Also, some could contains patterns that could possibly avoid having to refactor and just find the solution right away (with a little bit of calculus for example)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;favorite-puzzles&quot;&gt;Favorite puzzles&lt;/h3&gt;
+&lt;p&gt;In progress.&lt;/p&gt;
+
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;I find myself not finished the AoC 2018. 
+Even if I see it as a bit of a failure, I’ve learned a lot and challenge myself once again.
+I keep some good memories from this experience and will do the next edition for sure.&lt;/p&gt;</content><author><name></name></author><summary type="html">Little blog post (almost a year after my participation..) about my first participation to this event.</summary></entry><entry><title type="html">Tips and Tricks C++</title><link href="/blog/c++/2019/09/28/tips-and-tricks-ccp.html" rel="alternate" type="text/html" title="Tips and Tricks C++" /><published>2019-09-28T20:15:00+00:00</published><updated>2019-09-28T20:15:00+00:00</updated><id>/blog/c++/2019/09/28/tips-and-tricks-ccp</id><content type="html" xml:base="/blog/c++/2019/09/28/tips-and-tricks-ccp.html">&lt;h2 id=&quot;static--keyword&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;static&lt;/code&gt;  keyword&lt;/h2&gt;
+&lt;p&gt;Values are stored at class level and not at instance level.
+You have to initialize static variable outside the class in order to reserve the memory.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class C {
+    static int i;
+    static int j;
+}
+
+// Initialize the two static variables (with or without a value)
+// Should be put at the top of the declaration (.cpp) file
+int C::i = 1;
+int C::j;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Note: If you declare a global &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt; after static variables init, you can acceess it with &lt;code class=&quot;highlighter-rouge&quot;&gt;::i&lt;/code&gt;.
+Example:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int i = 20
+int C::i = 10;
+int C::j = 5;
+
+int g = C::j + ::i; // g = 25
+int p = C::j + i;   // p = 15
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;/!\ Static method can only use static declarations.&lt;/p&gt;
+
+&lt;h2 id=&quot;const-keyword&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;const&lt;/code&gt; keyword&lt;/h2&gt;
+&lt;p&gt;Cannot be modified : attempt to do so directly is a compile-time error.
+Modifing it indirectly (modifying const obj through ref or pointer to non const-type) results in undefined behavior.&lt;/p&gt;
+
+&lt;p&gt;A const need to be defined when declared aka &lt;code class=&quot;highlighter-rouge&quot;&gt;const int x = 5; // without = 5 this will not compile&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;volatile-keyword&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;volatile&lt;/code&gt; keyword&lt;/h2&gt;
+&lt;p&gt;Volatile is a hint to the implementation to avoid aggressive optimization involving the object because the value of the object might be changed by means undetectable by an implementation.&lt;/p&gt;
+
+&lt;h2 id=&quot;mutable-keyword&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;mutable&lt;/code&gt; keyword&lt;/h2&gt;
+&lt;p&gt;Permits modification of the class member declared mutable even if the containing
+object is declared const.&lt;/p&gt;
+
+&lt;h2 id=&quot;inline-keyword&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;inline&lt;/code&gt; keyword&lt;/h2&gt;
+&lt;p&gt;All functions declared &lt;strong&gt;inside&lt;/strong&gt; the class/struct/union definition (.h) is an inline function like so :&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class A
+{
+public:
+    inline int test() // redundant use of inline
+    {
+        // this function is automatically inline
+        // function body
+    }
+};
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Inline functions declaration can also be declared inside the .h but &lt;strong&gt;outside&lt;/strong&gt; the class definition.
+But you need to also declare the signature of this function inside the class definition. An example of this:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class A
+{
+public:
+    int test(); // declare the function
+};
+
+inline int A::test() // use inline prefix
+{
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;define&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;#define&lt;/code&gt;&lt;/h2&gt;
+
+&lt;h2 id=&quot;arguments&quot;&gt;arguments&lt;/h2&gt;
+
+&lt;h2 id=&quot;constructors&quot;&gt;constructors&lt;/h2&gt;
+
+&lt;h2 id=&quot;class&quot;&gt;class&lt;/h2&gt;
+&lt;p&gt;You can create instances of a classe either&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;statically (Use class name as a type) &lt;code class=&quot;highlighter-rouge&quot;&gt;MyClass myClass;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;dynamically (Use operator new followed by the class name and optionally arguments between parentheses) &lt;code class=&quot;highlighter-rouge&quot;&gt;MyClass myClass = new MyClass(arg1, arg2);&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;storage-class-specifiers&quot;&gt;Storage class specifiers&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;auto: automatic storage duration.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;register: pareil que auto + hint compiler to place obj in processor’s register.&lt;/li&gt;
+  &lt;li&gt;static: static or thread storage duration and internal linkage&lt;/li&gt;
+  &lt;li&gt;extern: same as static except external linkage&lt;/li&gt;
+  &lt;li&gt;thread_local: thread storage duration&lt;/li&gt;
+  &lt;li&gt;mutage: does not affect storage duration or linkage. (const/votatile)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;possible-linkages&quot;&gt;Possible linkages&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;no linkage&lt;/strong&gt; : Can be referred  only from the scope it is in. &lt;br /&gt;
+Contains: basic property when declaring local variables + member functions not declared &lt;em&gt;extern&lt;/em&gt;. Just like typedefs, enumerations, and enumerators declared in the block scope.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;internal linkage&lt;/strong&gt;: Can be referred to from all scopes in the current translation unit.  &lt;br /&gt;
+Contains: static variables, functions, or function templates. Non-volatile const variables (also constexpr) not declare &lt;em&gt;extern&lt;/em&gt;. All names in unnamed namespace.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;external linkage&lt;/strong&gt;: Can be referred to from the scopes in the other translation units. &lt;br /&gt;
+Contains: variables not list above. Enumerations. Names of classes, members function, static data members. Names of all templates not listed above.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;external&quot;&gt;external&lt;/h2&gt;
+&lt;p&gt;Basically, &lt;code class=&quot;highlighter-rouge&quot;&gt;extern&lt;/code&gt; is a keyword in C++ language that tells to the compiler that definition of a particular variable is exists elsewhere.
+The counter part of &lt;code class=&quot;highlighter-rouge&quot;&gt;extern&lt;/code&gt; is &lt;code class=&quot;highlighter-rouge&quot;&gt;static&lt;/code&gt; which tells the variables is only visible to that file/class (depending on where it is declared).&lt;/p&gt;
+
+&lt;h2 id=&quot;void&quot;&gt;void&lt;/h2&gt;
+&lt;p&gt;pointers to void and functions returning type void (procedures in other languages) are permitted. Like so&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;void* ptr;          // void pointer
+ptr = fct;          // Store a void function in this pointer
+((void(*)())ptr)(); // Call the function pointed
+
+void fct () {
+  ...
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;This can be used to mask the original pointer value :&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; int n = 1;
+ int* p1 = &amp;amp;n;
+ void* pv = p1;
+ int* p2 = static_cast&amp;lt;int*&amp;gt;(pv);
+ std::cout &amp;lt;&amp;lt; *p2 &amp;lt;&amp;lt; '\n';            // prints 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;tips&quot;&gt;Tips&lt;/h1&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;string* a, b;&lt;/code&gt; : only &lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt; is a string pointer. &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt; is only a string.
+&lt;code class=&quot;highlighter-rouge&quot;&gt;string* a, *b;&lt;/code&gt; : both &lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt; are string pointers.&lt;/p&gt;</content><author><name></name></author><summary type="html">static keyword Values are stored at class level and not at instance level. You have to initialize static variable outside the class in order to reserve the memory. ``` class C { static int i; static int j; }</summary></entry><entry><title type="html">Getting start with Jekyll</title><link href="/blog/jekyll/update/2019/07/28/getting-start-with-jekyll.html" rel="alternate" type="text/html" title="Getting start with Jekyll" /><published>2019-07-28T00:26:29+00:00</published><updated>2019-07-28T00:26:29+00:00</updated><id>/blog/jekyll/update/2019/07/28/getting-start-with-jekyll</id><content type="html" xml:base="/blog/jekyll/update/2019/07/28/getting-start-with-jekyll.html">&lt;p&gt;This is a draft post for now. Don’t mind about what is here.&lt;/p&gt;
+
+&lt;p&gt;Ref: https://jekyllrb.com/tutorials/using-jekyll-with-bundler/&lt;/p&gt;
+
+&lt;p&gt;What you need to do :&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle install --path vendor/bundle
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;if already installed run&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle update
+or
+$ bundle add jekyll
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;then run&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle exec jekyll new --force --skip-bundle .
+$ bundle install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Finally run
+&lt;code class=&quot;highlighter-rouge&quot;&gt;$ bundle exec jekyll serve&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;%%%%%%%%
+Ref: https://jekyllrb.com/docs/themes/#overriding-theme-defaults&lt;/p&gt;
+
+&lt;p&gt;Create own theme (overriding existing one)&lt;/p&gt;
+
+&lt;p&gt;First find the one you already using. To do that simply run&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle show &amp;lt;theme name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;like &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle show minima&lt;/code&gt; which is jekyll default theme.&lt;/p&gt;
+
+&lt;p&gt;Give you all the file you need to override to create your theme.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:
+The README.md is a really good source of knowledge.&lt;/p&gt;</content><author><name></name></author><summary type="html">This is a draft post for now. Don’t mind about what is here.</summary></entry></feed>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Tips and Tricks C++ | Grégoire Boiron</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Tips and Tricks C++" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="static keyword Values are stored at class level and not at instance level. You have to initialize static variable outside the class in order to reserve the memory. ``` class C { static int i; static int j; }" />
+<meta property="og:description" content="static keyword Values are stored at class level and not at instance level. You have to initialize static variable outside the class in order to reserve the memory. ``` class C { static int i; static int j; }" />
+<link rel="canonical" href="/blog/c++/2019/09/28/tips-and-tricks-ccp.html" />
+<meta property="og:url" content="/blog/c++/2019/09/28/tips-and-tricks-ccp.html" />
+<meta property="og:site_name" content="Grégoire Boiron" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-09-28T20:15:00+00:00" />
+<script type="application/ld+json">
+{"description":"static keyword Values are stored at class level and not at instance level. You have to initialize static variable outside the class in order to reserve the memory. ``` class C { static int i; static int j; }","dateModified":"2019-09-28T20:15:00+00:00","datePublished":"2019-09-28T20:15:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/blog/c++/2019/09/28/tips-and-tricks-ccp.html"},"@type":"BlogPosting","url":"/blog/c++/2019/09/28/tips-and-tricks-ccp.html","headline":"Tips and Tricks C++","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Grégoire Boiron" /><script>
+//if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-148345166-1', 'auto');
+  ga('send', 'pageview');
+//}
+</script>
+  
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper">
+<div class="profil-header">
+      <a class="site-title" rel="author" href="/">Grégoire Boiron</a>
+
+      <p class="profil-description">Programmer Generalist at iLLOGIKA</p>
+      <ul class="social-media-list">
+<li>
+            <a href="https://twitter.com/GrayGzou">
+              <svg class="svg-icon">
+                <use xlink:href="/assets/icons/gamefolio-social-icons.svg#twitter">
+                </use>
+              </svg>
+            </a>
+          </li>
+<li>
+            <a href="https://github.com/Graygzou">
+              <svg class="svg-icon">
+                <use xlink:href="/assets/icons/gamefolio-social-icons.svg#github">
+                </use>
+              </svg>
+            </a>
+          </li>
+<li>
+            <a href="https://www.linkedin.com/in/gregoire-boiron/">
+              <svg class="svg-icon">
+                <use xlink:href="/assets/icons/gamefolio-social-icons.svg#linkedin">
+                </use>
+              </svg>
+            </a>
+          </li>
+<li>
+            <a href="https://gamejolt.com/@GrayGzou">
+              <svg class="svg-icon">
+                <use xlink:href="/assets/icons/gamefolio-social-icons.svg#gamejolt">
+                </use>
+              </svg>
+            </a>
+          </li>
+<li>
+            <a href="https://graygzou.itch.io/">
+              <svg class="svg-icon">
+                <use xlink:href="/assets/icons/gamefolio-social-icons.svg#itch-dot-io">
+                </use>
+              </svg>
+            </a>
+          </li>
+</ul>
+    </div>
+<nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+<a class="page-link" href="/">Home</a><a class="page-link" href="/projects/">Projects</a><a class="page-link" href="/resume/">Resume</a><a class="page-link" href="/blog/">Blog</a><a class="page-link" href="/about/">About</a>
+</div>
+      </nav>
+</div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Tips and Tricks C++</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-09-28T20:15:00+00:00" itemprop="datePublished">Sep 28, 2019
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="static--keyword">
+<code class="highlighter-rouge">static</code>  keyword</h2>
+<p>Values are stored at class level and not at instance level.
+You have to initialize static variable outside the class in order to reserve the memory.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class C {
+    static int i;
+    static int j;
+}
+
+// Initialize the two static variables (with or without a value)
+// Should be put at the top of the declaration (.cpp) file
+int C::i = 1;
+int C::j;
+</code></pre></div></div>
+<p>Note: If you declare a global <code class="highlighter-rouge">i</code> after static variables init, you can acceess it with <code class="highlighter-rouge">::i</code>.
+Example:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int i = 20
+int C::i = 10;
+int C::j = 5;
+
+int g = C::j + ::i; // g = 25
+int p = C::j + i;   // p = 15
+</code></pre></div></div>
+
+<p>/!\ Static method can only use static declarations.</p>
+
+<h2 id="const-keyword">
+<code class="highlighter-rouge">const</code> keyword</h2>
+<p>Cannot be modified : attempt to do so directly is a compile-time error.
+Modifing it indirectly (modifying const obj through ref or pointer to non const-type) results in undefined behavior.</p>
+
+<p>A const need to be defined when declared aka <code class="highlighter-rouge">const int x = 5; // without = 5 this will not compile</code></p>
+
+<h2 id="volatile-keyword">
+<code class="highlighter-rouge">volatile</code> keyword</h2>
+<p>Volatile is a hint to the implementation to avoid aggressive optimization involving the object because the value of the object might be changed by means undetectable by an implementation.</p>
+
+<h2 id="mutable-keyword">
+<code class="highlighter-rouge">mutable</code> keyword</h2>
+<p>Permits modification of the class member declared mutable even if the containing
+object is declared const.</p>
+
+<h2 id="inline-keyword">
+<code class="highlighter-rouge">inline</code> keyword</h2>
+<p>All functions declared <strong>inside</strong> the class/struct/union definition (.h) is an inline function like so :</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class A
+{
+public:
+    inline int test() // redundant use of inline
+    {
+        // this function is automatically inline
+        // function body
+    }
+};
+
+</code></pre></div></div>
+<p>Inline functions declaration can also be declared inside the .h but <strong>outside</strong> the class definition.
+But you need to also declare the signature of this function inside the class definition. An example of this:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class A
+{
+public:
+    int test(); // declare the function
+};
+
+inline int A::test() // use inline prefix
+{
+}
+</code></pre></div></div>
+
+<h2 id="define"><code class="highlighter-rouge">#define</code></h2>
+
+<h2 id="arguments">arguments</h2>
+
+<h2 id="constructors">constructors</h2>
+
+<h2 id="class">class</h2>
+<p>You can create instances of a classe either</p>
+<ul>
+  <li>statically (Use class name as a type) <code class="highlighter-rouge">MyClass myClass;</code>
+</li>
+  <li>dynamically (Use operator new followed by the class name and optionally arguments between parentheses) <code class="highlighter-rouge">MyClass myClass = new MyClass(arg1, arg2);</code>
+</li>
+</ul>
+
+<h2 id="storage-class-specifiers">Storage class specifiers</h2>
+<ul>
+  <li>
+    <p>auto: automatic storage duration.</p>
+  </li>
+  <li>register: pareil que auto + hint compiler to place obj in processor’s register.</li>
+  <li>static: static or thread storage duration and internal linkage</li>
+  <li>extern: same as static except external linkage</li>
+  <li>thread_local: thread storage duration</li>
+  <li>mutage: does not affect storage duration or linkage. (const/votatile)</li>
+</ul>
+
+<h2 id="possible-linkages">Possible linkages</h2>
+<ul>
+  <li>
+    <p><strong>no linkage</strong> : Can be referred  only from the scope it is in. <br>
+Contains: basic property when declaring local variables + member functions not declared <em>extern</em>. Just like typedefs, enumerations, and enumerators declared in the block scope.</p>
+  </li>
+  <li>
+    <p><strong>internal linkage</strong>: Can be referred to from all scopes in the current translation unit.  <br>
+Contains: static variables, functions, or function templates. Non-volatile const variables (also constexpr) not declare <em>extern</em>. All names in unnamed namespace.</p>
+  </li>
+  <li>
+    <p><strong>external linkage</strong>: Can be referred to from the scopes in the other translation units. <br>
+Contains: variables not list above. Enumerations. Names of classes, members function, static data members. Names of all templates not listed above.</p>
+  </li>
+</ul>
+
+<h2 id="external">external</h2>
+<p>Basically, <code class="highlighter-rouge">extern</code> is a keyword in C++ language that tells to the compiler that definition of a particular variable is exists elsewhere.
+The counter part of <code class="highlighter-rouge">extern</code> is <code class="highlighter-rouge">static</code> which tells the variables is only visible to that file/class (depending on where it is declared).</p>
+
+<h2 id="void">void</h2>
+<p>pointers to void and functions returning type void (procedures in other languages) are permitted. Like so</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void* ptr;          // void pointer
+ptr = fct;          // Store a void function in this pointer
+((void(*)())ptr)(); // Call the function pointed
+
+void fct () {
+  ...
+}
+</code></pre></div></div>
+<p>This can be used to mask the original pointer value :</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> int n = 1;
+ int* p1 = &amp;n;
+ void* pv = p1;
+ int* p2 = static_cast&lt;int*&gt;(pv);
+ std::cout &lt;&lt; *p2 &lt;&lt; '\n';            // prints 1
+</code></pre></div></div>
+
+<h1 id="tips">Tips</h1>
+<p><code class="highlighter-rouge">string* a, b;</code> : only <code class="highlighter-rouge">a</code> is a string pointer. <code class="highlighter-rouge">b</code> is only a string.
+<code class="highlighter-rouge">string* a, *b;</code> : both <code class="highlighter-rouge">a</code> and <code class="highlighter-rouge">b</code> are string pointers.</p>
+
+
+  </div>
+<a class="u-url" href="/blog/c++/2019/09/28/tips-and-tricks-ccp.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Grégoire Boiron</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Grégoire Boiron</li>
+<li><a class="u-email" href="mailto:gregoire.boiron@gmail.com">gregoire.boiron@gmail.com</a></li>
+</ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+<ul class="social-media-list">
+<!-- Personal social medias --><!-- Test icons -->
+</ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Grégoire Boiron's personal site. Host my portfolio, links to my projects and my own blog.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

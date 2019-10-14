@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>advent-of-code | Grégoire Boiron</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="advent-of-code" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="My solutions for Advent of Code (AoC) challenges." />
+<meta property="og:description" content="My solutions for Advent of Code (AoC) challenges." />
+<link rel="canonical" href="/project-pages/side/advent-of-code.html" />
+<meta property="og:url" content="/project-pages/side/advent-of-code.html" />
+<meta property="og:site_name" content="Grégoire Boiron" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-10-14T20:14:43+00:00" />
+<script type="application/ld+json">
+{"description":"My solutions for Advent of Code (AoC) challenges.","dateModified":"2019-10-14T20:14:43+00:00","datePublished":"2019-10-14T20:14:43+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/project-pages/side/advent-of-code.html"},"@type":"BlogPosting","url":"/project-pages/side/advent-of-code.html","headline":"advent-of-code","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Grégoire Boiron" /><script>
+//if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-148345166-1', 'auto');
+  ga('send', 'pageview');
+//}
+</script>
+  
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper">
+<div class="profil-header">
+      <a class="site-title" rel="author" href="/">Grégoire Boiron</a>
+
+      <p class="profil-description">Programmer Generalist at iLLOGIKA</p>
+      <ul class="social-media-list">
+<li>
+            <a href="https://twitter.com/GrayGzou">
+              <svg class="svg-icon">
+                <use xlink:href="/assets/icons/gamefolio-social-icons.svg#twitter">
+                </use>
+              </svg>
+            </a>
+          </li>
+<li>
+            <a href="https://github.com/Graygzou">
+              <svg class="svg-icon">
+                <use xlink:href="/assets/icons/gamefolio-social-icons.svg#github">
+                </use>
+              </svg>
+            </a>
+          </li>
+<li>
+            <a href="https://www.linkedin.com/in/gregoire-boiron/">
+              <svg class="svg-icon">
+                <use xlink:href="/assets/icons/gamefolio-social-icons.svg#linkedin">
+                </use>
+              </svg>
+            </a>
+          </li>
+<li>
+            <a href="https://gamejolt.com/@GrayGzou">
+              <svg class="svg-icon">
+                <use xlink:href="/assets/icons/gamefolio-social-icons.svg#gamejolt">
+                </use>
+              </svg>
+            </a>
+          </li>
+<li>
+            <a href="https://graygzou.itch.io/">
+              <svg class="svg-icon">
+                <use xlink:href="/assets/icons/gamefolio-social-icons.svg#itch-dot-io">
+                </use>
+              </svg>
+            </a>
+          </li>
+</ul>
+    </div>
+<nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+<a class="page-link" href="/">Home</a><a class="page-link" href="/projects/">Projects</a><a class="page-link" href="/resume/">Resume</a><a class="page-link" href="/blog/">Blog</a><a class="page-link" href="/about/">About</a>
+</div>
+      </nav>
+</div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/VideoGame">
+
+  <header class="post-header">
+    <div class="project-thumbnail">
+      <h1 class="project-title p-name" itemprop="name">Advent of code</h1>
+      
+      <img class="thumbnail-img" src="/assets/project-images/advent-of-code/advent-of-code-banner.png">
+    </div>
+    <p class="project-description">My solutions for Advent of Code (AoC) challenges.</p>
+    <p class="post-meta"></p>
+
+    
+    <div class="linguist_bar">
+          <div style="background: #000080; width: 100.0%;"></div>
+<!-- Combine all the languages together to avoid having too much stuff at the end -->
+</div>
+    <div class="linguist_legend">
+<div>
+            <svg class="svg-icon svg-project" style="fill: #000080;">
+              <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#circle">
+              </use>
+            </svg>
+            <span class="language_name">Lua</span>
+            <span class="language_percentage">100.0%</span>
+          </div>
+<!-- Combine all the languages together to avoid having too much stuff at the end -->
+</div>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <aside class="overview_table">
+      <div>
+        <span class="table_title">Platform:</span>
+        <ul><li itemprop="gamePlatform">Windows</li></ul>
+      </div>
+<div>
+          <span class="table_title">Tools Used:</span>
+          <ul><li itemscope itemtype="https://schema.org/Thing"><span itemprop="name">Lua</span></li></ul>
+        </div>
+<div>
+        <span class="table_title">Duration:</span>
+        <ul>
+          <li>1 month</li>
+        </ul>
+      </div>
+      <div>
+        <span class="table_title">Team Size:</span>
+        <ul><li>Programmer : 1</li></ul>
+      </div>
+      <div>
+        <span class="table_title">Main Role:</span>
+        <ul><li>Programmer</li></ul>
+      </div>
+    </aside>
+
+    <!--<aside class="overview_table">
+      <div>
+        <span class="table_title">Platform:</span>
+        <ul><li itemprop="gamePlatform">Windows</li></ul>
+      </div><div>
+        <span class="table_title">Tools Used:</span>
+        <ul><li itemscope itemtype="https://schema.org/Thing"><span itemprop="name">Lua</span></li></ul>
+      </div><div>
+        <span class="table_title">Duration:</span>
+        <ul>
+          <li>1 month</li>
+        </ul>
+      </div>
+      <div>
+        <span class="table_title">Team Size:</span>
+        <ul>
+          <li>{"role"=>"Programmer", "amount"=>1}</li>
+        </ul>
+      </div>
+      <div>
+        <span class="table_title">Main Role:</span>
+        <ul><li>Programmer</li></ul>
+      </div>
+    </aside>-->
+
+    <article class="description_side">
+      <!---
+Gregoire Boiron <gregoire.boiron@gmail.com>
+Copyright (c) 2018-2019 Gregoire Boiron  All Rights Reserved.
+--->
+
+<!---
+Gregoire Boiron <gregoire.boiron@gmail.com>
+Copyright (c) 2018 Gregoire Boiron  All Rights Reserved.
+--->
+
+<h2 id="overview">Overview</h2>
+<p>Advent of Code is an Advent calendar of small programming puzzles for a variety of skill sets and skill levels that can be solved in any programming language we like. 
+People use this event as a speed contest, practice problems, or even to challenge each other. It’s made by Eric Wastl and 2018 was the 4th edition.</p>
+
+<h4 id="project-goals">Project Goals</h4>
+<ul>
+  <li>Challenge myself.</li>
+  <li>Discover new things (new language, new problems, etc.)</li>
+  <li>Share with my friends possible solutions and optimizations.</li>
+</ul>
+
+<p>github Link : <a href="https://github.com/Graygzou/advent-of-code" class="table_title">advent-of-code</a>  <br></p>
+
+<h2 id="memo-table-of-contents">
+<img class="emoji" title=":memo:" alt=":memo:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4dd.png" height="20" width="20"> Table of contents</h2>
+<ol>
+  <li><a href="#2017">2017 Edition</a></li>
+  <li>
+<a href="#2018">2018 Edition</a>
+    <ol>
+      <li><a href="#2018-board">Summary Board</a></li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="-2017-edition">
+<a name="2017"></a> 2017 Edition</h2>
+<hr>
+
+<p>I started out this section without completing the 2018 edition because I wanted to practice my C++.
+But I move on to something else since then.</p>
+
+<p>To be continued.</p>
+
+<h2 id="-2018-edition">
+<a name="2018"></a> 2018 Edition</h2>
+<hr>
+
+<h3 id="blog-post">Blog post</h3>
+<p>I wrote a small article about my experience. You can find it here: <a href="/blog/challenges/2019/10/10/advent-of-code-2018.html">blog article</a></p>
+
+<h3 id="personal-progression">Personal progression</h3>
+<p>Since it was my first year doing this challenge, I did not try to rush my solutions. <br>
+I would rather spend on more day on a problem by thinking about it and come up with a better solution than previously.</p>
+
+<p>Plus me and my friends were more fighting for concise solutions than submission time.</p>
+
+<h4 id="-summary-board">
+<a name="2018-board"></a> Summary Board:</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: right">Days</th>
+      <th style="text-align: left">Names</th>
+      <th style="text-align: center">Stars</th>
+      <th style="text-align: right">Completions*</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: right">1</td>
+      <td style="text-align: left"><a href="https://adventofcode.com/2018/day/1">Chronal Calibration</a></td>
+      <td style="text-align: center">
+<img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20"> <img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20">
+</td>
+      <td style="text-align: right">64717</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">2</td>
+      <td style="text-align: left"><a href="https://adventofcode.com/2018/day/2">Inventory Management System</a></td>
+      <td style="text-align: center">
+<img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20"> <img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20">
+</td>
+      <td style="text-align: right">51497</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">3</td>
+      <td style="text-align: left"><a href="https://adventofcode.com/2018/day/3">No Matter How You Slice It</a></td>
+      <td style="text-align: center">
+<img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20"> <img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20">
+</td>
+      <td style="text-align: right">39646</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">4</td>
+      <td style="text-align: left"><a href="https://adventofcode.com/2018/day/4">Repose Record</a></td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right">28990</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">5</td>
+      <td style="text-align: left"><a href="(https://adventofcode.com/2018/day/5)">Alchemical Reduction</a></td>
+      <td style="text-align: center">
+<img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20"> <img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20">
+</td>
+      <td style="text-align: right">29452</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">6</td>
+      <td style="text-align: left"><a href="(https://adventofcode.com/2018/day/6)">Chronal Coordinates</a></td>
+      <td style="text-align: center">
+<img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20"> <img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20">
+</td>
+      <td style="text-align: right">20361</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">7</td>
+      <td style="text-align: left"><a href="(https://adventofcode.com/2018/day/7)">The Sum of Its Parts</a></td>
+      <td style="text-align: center">
+<img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20"> <img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20">
+</td>
+      <td style="text-align: right">16790</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">8</td>
+      <td style="text-align: left"><a href="(https://adventofcode.com/2018/day/8)">Memory Maneuver</a></td>
+      <td style="text-align: center">
+<img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20"> <img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20">
+</td>
+      <td style="text-align: right">16440</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">9</td>
+      <td style="text-align: left"><a href="(https://adventofcode.com/2018/day/9)">Marble Mania</a></td>
+      <td style="text-align: center">
+<img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20"> <img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20">
+</td>
+      <td style="text-align: right">14291</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">10</td>
+      <td style="text-align: left"><a href="https://adventofcode.com/2018/day/10">The Stars Align</a></td>
+      <td style="text-align: center">
+<img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20"> <img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20">
+</td>
+      <td style="text-align: right">14576</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">11</td>
+      <td style="text-align: left"><a href="https://adventofcode.com/2018/day/11">Chronal Charge</a></td>
+      <td style="text-align: center">
+<img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20"> <img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20">
+</td>
+      <td style="text-align: right">13616</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">12</td>
+      <td style="text-align: left"><a href="https://adventofcode.com/2018/day/12">Subterranean Sustainability</a></td>
+      <td style="text-align: center">
+<img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20"> <img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20">
+</td>
+      <td style="text-align: right">11382</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">13</td>
+      <td style="text-align: left"><a href="https://adventofcode.com/2018/day/13">Mine Cart Madness</a></td>
+      <td style="text-align: center">
+<img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20"> <img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20">
+</td>
+      <td style="text-align: right">9690</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">14</td>
+      <td style="text-align: left"><a href="https://adventofcode.com/2018/day/14">Chocolate Charts</a></td>
+      <td style="text-align: center">
+<img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20"> <img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20">
+</td>
+      <td style="text-align: right">9850</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">15</td>
+      <td style="text-align: left"><a href="https://adventofcode.com/2018/day/15">Beverage Bandits</a></td>
+      <td style="text-align: center">
+<img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20"> <img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20">
+</td>
+      <td style="text-align: right">5364</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">16</td>
+      <td style="text-align: left"><a href="https://adventofcode.com/2018/day/16">Chronal Classification</a></td>
+      <td style="text-align: center">
+<img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20"> <img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20">
+</td>
+      <td style="text-align: right">7420</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">17</td>
+      <td style="text-align: left"><a href="(https://adventofcode.com/2018/day/17)">Reservoir Research</a></td>
+      <td style="text-align: center">
+<img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20"> <img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20">
+</td>
+      <td style="text-align: right">5157</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">18</td>
+      <td style="text-align: left"><a href="https://adventofcode.com/2018/day/18">Settlers of The North Pole</a></td>
+      <td style="text-align: center">
+<img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20"> <img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20">
+</td>
+      <td style="text-align: right">6477</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">19</td>
+      <td style="text-align: left"><a href="https://adventofcode.com/2018/day/19">Go With The Flow</a></td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right">4897</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">20</td>
+      <td style="text-align: left"><a href="https://adventofcode.com/2018/day/20">A Regular Map</a></td>
+      <td style="text-align: center">
+<img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20"> <img class="emoji" title=":star:" alt=":star:" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" height="20" width="20">
+</td>
+      <td style="text-align: right">4154</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">21</td>
+      <td style="text-align: left"><a href="https://adventofcode.com/2018/day/21">Chronal Conversion</a></td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right">3775</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">22</td>
+      <td style="text-align: left"><a href="https://adventofcode.com/2018/day/22">Mode Maze</a></td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right">3546</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">23</td>
+      <td style="text-align: left"><a href="https://adventofcode.com/2018/day/23">Experimental Emergency Teleportation</a></td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right">3100</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">24</td>
+      <td style="text-align: left"><a href="https://adventofcode.com/2018/day/24">Immune System Simulator 20XX</a></td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right">3129</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">25</td>
+      <td style="text-align: left"><a href="https://adventofcode.com/2018/day/25">Four-Dimensional Adventure</a></td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right">2587</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>* number of persons that completed both challenges of the corresponding day. <br>
+Those values might not be accurate since there is no API requests made to gather them.</p>
+
+
+
+      <!-- Should use jekyll tag to place it in the right place. --></article>
+  </div>
+<a class="u-url" href="/project-pages/side/advent-of-code.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Grégoire Boiron</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Grégoire Boiron</li>
+<li><a class="u-email" href="mailto:gregoire.boiron@gmail.com">gregoire.boiron@gmail.com</a></li>
+</ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+<ul class="social-media-list">
+<!-- Personal social medias --><!-- Test icons -->
+</ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Grégoire Boiron's personal site. Host my portfolio, links to my projects and my own blog.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

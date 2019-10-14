@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Advent Of Code 2018 | Grégoire Boiron</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Advent Of Code 2018" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Little blog post (almost a year after my participation..) about my first participation to this event." />
+<meta property="og:description" content="Little blog post (almost a year after my participation..) about my first participation to this event." />
+<link rel="canonical" href="/blog/challenges/2019/10/10/advent-of-code-2018.html" />
+<meta property="og:url" content="/blog/challenges/2019/10/10/advent-of-code-2018.html" />
+<meta property="og:site_name" content="Grégoire Boiron" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-10-10T00:00:00+00:00" />
+<script type="application/ld+json">
+{"description":"Little blog post (almost a year after my participation..) about my first participation to this event.","dateModified":"2019-10-10T00:00:00+00:00","datePublished":"2019-10-10T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/blog/challenges/2019/10/10/advent-of-code-2018.html"},"@type":"BlogPosting","url":"/blog/challenges/2019/10/10/advent-of-code-2018.html","headline":"Advent Of Code 2018","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Grégoire Boiron" /><script>
+//if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-148345166-1', 'auto');
+  ga('send', 'pageview');
+//}
+</script>
+  
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper">
+<div class="profil-header">
+      <a class="site-title" rel="author" href="/">Grégoire Boiron</a>
+
+      <p class="profil-description">Programmer Generalist at iLLOGIKA</p>
+      <ul class="social-media-list">
+<li>
+            <a href="https://twitter.com/GrayGzou">
+              <svg class="svg-icon">
+                <use xlink:href="/assets/icons/gamefolio-social-icons.svg#twitter">
+                </use>
+              </svg>
+            </a>
+          </li>
+<li>
+            <a href="https://github.com/Graygzou">
+              <svg class="svg-icon">
+                <use xlink:href="/assets/icons/gamefolio-social-icons.svg#github">
+                </use>
+              </svg>
+            </a>
+          </li>
+<li>
+            <a href="https://www.linkedin.com/in/gregoire-boiron/">
+              <svg class="svg-icon">
+                <use xlink:href="/assets/icons/gamefolio-social-icons.svg#linkedin">
+                </use>
+              </svg>
+            </a>
+          </li>
+<li>
+            <a href="https://gamejolt.com/@GrayGzou">
+              <svg class="svg-icon">
+                <use xlink:href="/assets/icons/gamefolio-social-icons.svg#gamejolt">
+                </use>
+              </svg>
+            </a>
+          </li>
+<li>
+            <a href="https://graygzou.itch.io/">
+              <svg class="svg-icon">
+                <use xlink:href="/assets/icons/gamefolio-social-icons.svg#itch-dot-io">
+                </use>
+              </svg>
+            </a>
+          </li>
+</ul>
+    </div>
+<nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+<a class="page-link" href="/">Home</a><a class="page-link" href="/projects/">Projects</a><a class="page-link" href="/resume/">Resume</a><a class="page-link" href="/blog/">Blog</a><a class="page-link" href="/about/">About</a>
+</div>
+      </nav>
+</div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Advent Of Code 2018</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-10-10T00:00:00+00:00" itemprop="datePublished">Oct 10, 2019
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Little blog post (almost a year after my participation..) about my first participation to this event.</p>
+
+<h2 id="backstory">Backstory</h2>
+<p>A collegue told me about this event and the blast he had when doing it with others co-workers.
+Just by hearing the evelator pitch I was sold right away. (challenges, puzzles, computer science <img class="emoji" title=":heart:" alt=":heart:" src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png" height="20" width="20">)</p>
+
+<p>I was crazy enought to decided to do it in Lua. 
+Compare to all my co-workers (4 of them) that choose C# or C++ which were the main languages we work most of the time.</p>
+
+<p>Feel free to check all my solutions for each year in my <a href="https://github.com/Graygzou/advent-of-code">Github Repository</a>.</p>
+
+<h4 id="why-lua-">Why Lua ?</h4>
+<p>You might ask yourself why so much pain ?<br>
+Well, I wanted learn something new. I wasn’t going to compete with speed but more like “beautiful solutions”.
+I’ve already seen a bit of lua in a previous project (Raven) but I did not have the chance to really play with it. 
+So I decided it was a good time to do so !</p>
+
+<p>I also heard some companies were using lua as a scripting language for their game / engine. 
+Sp I guess, It’s always good to have more than one string to your bow.</p>
+
+<h4 id="the-counter-part">The counter part</h4>
+<p>1) Lua is great in term of scripting. But not so great to deal with some kind of problems. 
+In fact, sometimes puzzles were easy to solve with a bit of abtraction. 
+And, it’s not something really straight forward in lua.</p>
+
+<p>2) I’d something did “reinvent the wheel”. Like sorting an array with a bubble sort. 
+Or even apply a function to all element of an array. Those things require extra work compare to a language that already offers helpers functions to do it.</p>
+
+<h3 id="overcome-lua-weaknesses">Overcome Lua weaknesses</h3>
+
+<ul>
+  <li>
+    <p>Write a lot of unit test:<br>
+Since I split my work into many function without any classes, I had to make sure every function was doing what is was supposed to do.
+To solve that problem I commit myself to write unit tests and make sure it pass before submitting something. 
+Because, if you didn’t know, the more you submit to a challenge, the longer you will wait before being able to submit another answer.</p>
+  </li>
+  <li>
+    <p>Add Comments everywhere:<br>
+I’m a person that love comments. I find myself writing some in order to organize my thinking when I do something. 
+But in that case, it helps me even more with all the boiler plate code I needed to write.</p>
+  </li>
+  <li>
+    <p>Don’t hesitate to create a <code class="highlighter-rouge">Utils</code> functions: <br>
+I found myself writing some generic functions into <code class="highlighter-rouge">Utils</code> file because it was useful in more than one challenge.
+I would not spent minutes / hours have to rewrite and test it again.</p>
+  </li>
+  <li>
+    <p>Keep thinking of other possible solutions:<br>
+Some problems were thouther than others. But some were computionally expensive. 
+Meaning I had to rethink about my solution in order to be able to find the right solution. 
+Also, some could contains patterns that could possibly avoid having to refactor and just find the solution right away (with a little bit of calculus for example)</p>
+  </li>
+</ul>
+
+<h3 id="favorite-puzzles">Favorite puzzles</h3>
+<p>In progress.</p>
+
+<h3 id="conclusion">Conclusion</h3>
+<p>I find myself not finished the AoC 2018. 
+Even if I see it as a bit of a failure, I’ve learned a lot and challenge myself once again.
+I keep some good memories from this experience and will do the next edition for sure.</p>
+
+
+  </div>
+<a class="u-url" href="/blog/challenges/2019/10/10/advent-of-code-2018.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Grégoire Boiron</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Grégoire Boiron</li>
+<li><a class="u-email" href="mailto:gregoire.boiron@gmail.com">gregoire.boiron@gmail.com</a></li>
+</ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+<ul class="social-media-list">
+<!-- Personal social medias --><!-- Test icons -->
+</ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Grégoire Boiron's personal site. Host my portfolio, links to my projects and my own blog.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
