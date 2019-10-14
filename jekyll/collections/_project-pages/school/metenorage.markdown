@@ -5,7 +5,7 @@ description: A 3D voxel engine (ECS) based on LWJGL and JBullet.
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-22 23:24:54
-last-update-days: 77
+last-update-days: 83
 tags: ['game-engine', 'lwjgl', 'entity-component-system', 'opengl', 'openal', 'jbullet', 'glfw']
 languages: 
   - name: Java
@@ -19,7 +19,9 @@ category: 'school'
 platforms: Windows
 tools: [Intellij, LWJGL, JBullet]
 duration: "1 months"
-team-size: 4
+team-size:
+  - role: Programmers
+    amount: 4
 main-roles: [Engine Programmer, Game Programmeur]
 youtube-link: https://www.youtube.com/embed/ORAGPZGMJg4
 project_links:

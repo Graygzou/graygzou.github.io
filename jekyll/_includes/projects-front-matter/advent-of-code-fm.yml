@@ -2,7 +2,9 @@ category: 'side'
 platforms: Windows
 tools: [Lua]
 duration: "1 month"
-team-size: 1
+team-size:
+  - role: Programmer
+    amount: 1
 main-roles: [Programmer]
 project_links:
   - name: github

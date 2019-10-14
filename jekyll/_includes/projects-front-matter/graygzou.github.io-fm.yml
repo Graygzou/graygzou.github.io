@@ -2,7 +2,9 @@ category: 'side'
 platforms: Web
 tools: [jekyll, liquid, python]
 duration: "In progress"
-team-size: 1
+team-size:
+  - role: Programmer
+    amount: 1
 main-roles: [Front-End Programmeur, Tools Programmer]
 project_links:
   - name: github

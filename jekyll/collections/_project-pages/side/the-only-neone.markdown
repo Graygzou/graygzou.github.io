@@ -21,7 +21,11 @@ platforms: [Windows, WebGL]
 engines: Unity3D
 tools: [Shader Graph, Rewired, ProGrids]
 duration: "48 hours"
-team-size: 4
+team-size:
+  - role: Programmers
+    amount: 3
+  - role: Game-Designer
+    amount: 1
 main-roles: [3Cs Programmer, Gameplay Programmer, Level Designer]
 youtube-link: https://www.youtube.com/embed/-BDVJ9IO2uk
 project_links:

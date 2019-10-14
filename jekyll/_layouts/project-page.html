@@ -101,7 +101,9 @@ layout: default
       <div>
         <span class="table_title">Team Size:</span>
         <ul>
-          <li>{{ page.team-size }}</li>
+          {%- for group in page.team-size -%}
+            <li>{{ group.role }} : {{ group.amount }}</li>
+          {%- endfor -%}
         </ul>
       </div>
       <div>

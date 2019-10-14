@@ -22,7 +22,9 @@ platforms: Windows
 engines: Unity3D
 tools: [Asset Store]
 duration: "2 months"
-team-size: 8
+team-size:
+  - role: Programmers
+    amount: 8
 main-roles: [R&D, AI Programmer, UI Programmer, Game Programmeur, Animator]
 project_links:
   - name: gamejolt

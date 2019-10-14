@@ -5,7 +5,7 @@ description: Battle simulator made with JMonkey, using a graph model as back-end
 stargazers-count: 2
 forks-count: 0
 updated-at: 2019-07-23 00:54:31
-last-update-days: 77
+last-update-days: 83
 tags: ['scala', 'jmonkeyengine3', 'battle-simulator', 'graphx', 'parallelization', 'graph', 'game']
 languages: 
   - name: Java
@@ -20,7 +20,9 @@ platforms: Windows
 engines: JMonkey
 tools: [MongoDB, GraphX]
 duration: "2 months"
-team-size: 3
+team-size:
+  - role: Programmer
+    amount: 3
 main-roles: [Back-end Programmer, Gameplay Programmer, Front-end Programmeur]
 video-link: https://www.youtube.com/embed/-BDVJ9IO2uk
 project_links:

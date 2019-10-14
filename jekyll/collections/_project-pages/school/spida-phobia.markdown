@@ -5,7 +5,7 @@ description: Virtual Reality simulation that helps people suffering from arachno
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-23 01:53:04
-last-update-days: 77
+last-update-days: 83
 tags: ['virtual-reality', 'aracnophobia', 'unreal-engine-4', 'simulation']
 languages: 
   - name: C++
@@ -23,7 +23,9 @@ platforms: Windows
 engines: Unreal
 tools: [Steam VR, Market Store, Gimp]
 duration: "2 months and half"
-team-size: 4
+team-size:
+  - role: Programmers
+    amount: 4
 main-roles: [Project Manager, Game Programmer, Game Designer]
 project_links:
   - name: github

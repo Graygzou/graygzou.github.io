@@ -3,7 +3,9 @@ platforms: Windows
 engines: Unity3D
 tools: [Unity, Asset Store]
 duration: "48 hours"
-team-size: 7
+team-size:
+  - role: Programmer
+    amount: 7
 main-roles: [IA Programmer, Gameplay Programmer]
 project_links:
   - name: github

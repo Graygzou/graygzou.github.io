@@ -4,8 +4,8 @@ title: graygzou.github.io
 description: Github portfolio made from scratch.
 stargazers-count: 0
 forks-count: 0
-updated-at: 2019-10-04 02:04:24
-last-update-days: 4
+updated-at: 2019-10-11 01:57:15
+last-update-days: 3
 tags: ['portfolio', 'html-css', 'javascript', 'python', 'code-generation', 'github-api']
 languages: 
   - name: HTML
@@ -28,7 +28,9 @@ category: 'side'
 platforms: Web
 tools: [jekyll, liquid, python]
 duration: "In progress"
-team-size: 1
+team-size:
+  - role: Programmer
+    amount: 1
 main-roles: [Front-End Programmeur, Tools Programmer]
 project_links:
   - name: github

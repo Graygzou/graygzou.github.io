@@ -3,7 +3,9 @@ platforms: Windows
 engines: Unity 3D
 tools: [Asset Store, Mixamo, Gimp]
 duration: "1 months"
-team-size: 4
+team-size:
+  - role: Programmers
+    amount: 4
 main-roles: [AI Programmer, Animator, Game Programmeur]
 youtube-link: https://www.youtube.com/embed/2tzLruIYMcg
 project_links:

@@ -3,7 +3,9 @@ platforms: Windows
 engines: JMonkey
 tools: [MongoDB, GraphX]
 duration: "2 months"
-team-size: 3
+team-size:
+  - role: Programmer
+    amount: 3
 main-roles: [Back-end Programmer, Gameplay Programmer, Front-end Programmeur]
 video-link: https://www.youtube.com/embed/-BDVJ9IO2uk
 project_links:
