@@ -5,9 +5,11 @@ Copyright (c) 2018 Grégoire Boiron  All Rights Reserved.
 
 Overview
 --------------------
-Native Ruins is a 3D survival game made for a school project at the Université du Québec &#224 Chicoutimi (UQAC). The course is the following : <a href="https://cours.uqac.ca/8INF955">Design Principles and Video Games Development (8INF955)</a>.
+Native Ruins is a 3D survival game made for a school project at the Université du Québec à Chicoutimi (UQAC). 
+The course is the following : [Design Principles and Video Games Development (8INF955)](https://cours.uqac.ca/8INF955).
 
-You play as Judy, a young 23 years old woman, who wake up on a desert island. Her goal is simple : escape the island. To done it, she will need wood, rope and a sail to build a raft. As she goes throught her adventure, she will discover totems that will give her more habilities usefull for archive her goal.
+You play as Judy, a young 23 years old woman, who wake up on a desert island. Her goal is simple : escape the island. 
+To done it, she will need wood, rope and a sail to build a raft. As she goes throught her adventure, she will discover totems that will give her more habilities usefull for archive her goal.
 
 #### Project Goals
 * Apply basics principles of game development with tools used in industry.
@@ -47,7 +49,7 @@ Click here to take a look at the GDD : <a href="Game Design Document - Native Ru
 
 Screenshots
 --------------------
-In coming.
+In progress
 
 Detailed Info
 --------------------
@@ -194,6 +196,8 @@ Finally, we created an action puzzle where the player has to destroy rocks with 
 </div>
 
 ### Dialogues & Cutscenes
-Finally, we decided to creates in-game cutscenes to have a better user-experience. We made a complex first cut-scene with player animations, dialogues and the game's credits.
+Finally, we decided to creates in-game cutscenes to have a better user-experience. 
+We made a complex first cut-scene with player animations, dialogues and the game's credits.
 
-To make it, we implemented managers, that contains data structures, which take care of animations transitions or dialogues order. Others animations and dialogues are available when Judy discovers new items or when hints are needed.
+To make it, we implemented managers, that contains data structures, which take care of animations transitions or dialogues order. 
+Others animations and dialogues are available when Judy discovers new items or when hints are needed.

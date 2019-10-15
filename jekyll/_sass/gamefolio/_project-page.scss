@@ -67,6 +67,26 @@
 	vertical-align: top;
 }
 
+.bloc-images {
+	img {
+		width: 49%;
+	}
+}
+
+
+.carousel {
+	text-align: center;
+}
+
+.carousel-img {
+	width: 20%;
+	height: 20%;
+
+	&:hover {
+		transform: scale(2.5);
+	}
+}
+
 iframe {
 	display: inline-block;
 	max-width: 100%;

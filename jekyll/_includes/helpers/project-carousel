@@ -1,0 +1,10 @@
+<section class="carousel">
+    {% assign image_files = site.static_files | where: "carousel", true %}
+    {%- for image in image_files -%}
+        {% assign project_name = image.path | replace: '/assets/project-images/', '' | split: '/' %}
+        {%- if project_name[0] == page.title -%}
+            <img class="carousel-img" src="{{ image.path }}" href="{{ image.path }}"/>
+        {%- endif -%}
+    {%- endfor -%}
+</section>
+

@@ -88,3 +88,12 @@ google_analytics: UA-148345166-1
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+
+# Declare all the paths for carousel images.
+
+defaults:
+  - scope:
+      path: "assets/project-images/*/carousel"
+    values:
+      carousel: true
