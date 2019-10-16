@@ -27,10 +27,7 @@ The player character, Jake Peril, has to collect all the treasure (golds with di
 
 Screenshots
 --------------------
-{% capture carousel_include %}
 {% include helpers/project-carousel %}
-{% endcapture %}
-{{ carousel_include }}
 
 Detailed Info
 --------------------

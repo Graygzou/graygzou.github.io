@@ -17,7 +17,7 @@ In progress
 
 Screenshots
 --------------------
-In progress
+{% include helpers/project-carousel %}
 
 Detailed Info
 --------------------

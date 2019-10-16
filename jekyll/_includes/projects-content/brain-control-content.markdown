@@ -20,7 +20,7 @@ You play as survivors from a deadly virus which turn humans into zombies. Your o
 
 Screenshots
 --------------------
-In progress
+{% include helpers/project-carousel %}
 
 Detailed Info
 --------------------

@@ -19,7 +19,7 @@ We used it to compute a small turn based game with dungeon and dragons entities.
 
 Screenshots
 --------------------
-In Progress
+{% include helpers/project-carousel %}
 
 Detailed Info
 --------------------

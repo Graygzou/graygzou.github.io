@@ -29,7 +29,7 @@ You play the leader penguin of this colony. Your mission: return the Glacier to 
 
 Screenshots
 --------------------
-In progress.
+{% include helpers/project-carousel %}
 
 Detailed Info
 --------------------

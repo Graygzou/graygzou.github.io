@@ -25,7 +25,7 @@ We choose to based our engine on a Entity-Component-System (ECS) architecture be
 
 Screenshots
 --------------------
-In progress.
+{% include helpers/project-carousel %}
 
 Detailed Info
 --------------------

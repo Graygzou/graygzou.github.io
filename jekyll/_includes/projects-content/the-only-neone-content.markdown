@@ -24,7 +24,7 @@ We're pround to finish #109 overall for this jam !
 
 Screenshots
 --------------------
-In coming
+{% include helpers/project-carousel %}
 
 Detailed Info
 --------------------

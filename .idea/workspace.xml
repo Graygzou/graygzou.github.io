@@ -6,9 +6,42 @@
   <component name="ChangeListManager">
     <list default="true" id="5b6d0991-ca97-49ed-8583-7856f3d6434a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/helpers/project-carousel" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/helpers/project-carousel" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_layouts/project-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_layouts/project-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_sass/gamefolio/_project-page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_sass/gamefolio/_project-page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/battle-simulator-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/battle-simulator-content.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/brain-control-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/brain-control-content.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/dyga-engine-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/dyga-engine-content.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/gmtk-2019-statistics-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/gmtk-2019-statistics-content.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/lode-runner-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/lode-runner-content.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/metenorage-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/metenorage-content.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/native-ruins-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/native-ruins-content.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/penguin-panic-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/penguin-panic-content.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/spida-phobia-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/spida-phobia-content.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/the-only-neone-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/the-only-neone-content.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/assets/project-images/metenorage/editor1.png" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/assets/project-images/metenorage/carousel/editor1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/assets/project-images/metenorage/editor2.png" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/assets/project-images/metenorage/carousel/editor2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/assets/project-images/metenorage/editor3.png" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/assets/project-images/metenorage/carousel/editor3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/assets/project-images/metenorage/editor4.png" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/assets/project-images/metenorage/carousel/editor4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/assets/project-images/metenorage/editor5.png" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/assets/project-images/metenorage/carousel/editor5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/assets/project-images/metenorage/editor6.png" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/assets/project-images/metenorage/carousel/editor6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/assets/project-images/metenorage/metenorage1.png" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/assets/project-images/metenorage/carousel/metenorage1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/assets/project-images/metenorage/metenorage2.png" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/assets/project-images/metenorage/carousel/metenorage2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/assets/project-images/metenorage/metenorage3.png" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/assets/project-images/metenorage/carousel/metenorage3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/assets/project-images/metenorage/metenorage4.png" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/assets/project-images/metenorage/carousel/metenorage4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/assets/project-images/metenorage/metenorage5.png" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/assets/project-images/metenorage/carousel/metenorage5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/assets/project-images/metenorage/metenorage6.png" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/assets/project-images/metenorage/carousel/metenorage6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/assets/project-images/metenorage/metenorage7.png" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/assets/project-images/metenorage/carousel/metenorage7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/assets/project-images/metenorage/metenorage8.png" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/assets/project-images/metenorage/carousel/metenorage8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/assets/project-images/metenorage/metenorage9.png" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/assets/project-images/metenorage/carousel/metenorage9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/Animals.png" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/carousel/Animals.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/Bag.png" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/carousel/Bag.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/Bears.png" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/carousel/Bears.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/Bow.png" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/carousel/Bow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/CampFire.png" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/carousel/CampFire.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/Crafts.png" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/carousel/Crafts.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/Judy.png" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/carousel/Judy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/Judy2.png" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/carousel/Judy2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/Menu.png" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/carousel/Menu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/Stick.png" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/carousel/Stick.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/Wheel.png" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/carousel/Wheel.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,36 +54,102 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/lode-runner-content.markdown">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="391">
+                <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/graygzou.github.io-content.markdown">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/gmtk-2019-statistics-content.markdown">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="374">
+                <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/carousel/Menu.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/jekyll/_layouts/project-page.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="212" column="33" lean-forward="true" selection-start-line="212" selection-start-column="33" selection-end-line="212" selection-end-column="33" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#header#0;n#article#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#header#0;n#article#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#svg#0;n#div#0;n#div#2;n#header#0;n#article#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#svg#0;n#div#1;n#div#2;n#header#0;n#article#0;n#!!top" expanded="true" />
-                <element signature="e#6708#6715#1" expanded="true" />
-              </folding>
+        <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/spida-phobia/Museum.PNG">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/dyga-engine-content.markdown">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="323">
+                <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jekyll/_includes/helpers/project-carousel">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="48" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
+        <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/colosseum-overcharge.markdown">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-102" />
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jekyll/_sass/gamefolio/_project-page.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="111" column="21" selection-start-line="111" selection-start-column="21" selection-end-line="111" selection-end-column="21" />
+        <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/brain-control-content.markdown">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="374">
+                <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/battle-simulator-content.markdown">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="357">
+                <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/advent-of-code-content.markdown">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-204" />
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -97,7 +196,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/jekyll/index.md" />
         <option value="$PROJECT_DIR$/jekyll/_includes/google-analytics.html" />
         <option value="$PROJECT_DIR$/jekyll/collections/_project-pages/the-only-neone.markdown" />
@@ -113,12 +211,6 @@
         <option value="$PROJECT_DIR$/jekyll/collections/_project-pages/professional/project2.markdown" />
         <option value="$PROJECT_DIR$/jekyll/collections/blog/_posts/2019-10-09-advent-of-code-2018.markdown" />
         <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/advent-of-code-content.markdown" />
-        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/battle-simulator-content.markdown" />
-        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/brain-control-content.markdown" />
-        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/dyga-engine-content.markdown" />
-        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/gmtk-2019-statistics-content.markdown" />
-        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/penguin-panic-content.markdown" />
-        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/the-only-neone-content.markdown" />
         <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/colosseum-overcharge.markdown" />
         <option value="$PROJECT_DIR$/jekyll/collections/_project-pages/side/colosseum-overcharge.markdown" />
         <option value="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/lode-runner-fm.yml" />
@@ -139,15 +231,22 @@
         <option value="$PROJECT_DIR$/jekyll/collections/_project-pages/professional/cuphead.markdown" />
         <option value="$PROJECT_DIR$/jekyll/collections/_project-pages/professional/project3.markdown" />
         <option value="$PROJECT_DIR$/jekyll/collections/_educations/juda.markdown" />
-        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/native-ruins-content.markdown" />
-        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/metenorage-content.markdown" />
         <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/raven-content.markdown" />
         <option value="$PROJECT_DIR$/jekyll/Gemfile" />
         <option value="$PROJECT_DIR$/jekyll/_config.yml" />
-        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/lode-runner-content.markdown" />
         <option value="$PROJECT_DIR$/jekyll/_sass/gamefolio/_project-page.scss" />
         <option value="$PROJECT_DIR$/jekyll/_includes/helpers/project-carousel" />
         <option value="$PROJECT_DIR$/jekyll/_layouts/project-page.html" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/metenorage-content.markdown" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/native-ruins-content.markdown" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/penguin-panic-content.markdown" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/spida-phobia-content.markdown" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/the-only-neone-content.markdown" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/lode-runner-content.markdown" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/dyga-engine-content.markdown" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/brain-control-content.markdown" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/battle-simulator-content.markdown" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/gmtk-2019-statistics-content.markdown" />
       </list>
     </option>
   </component>
@@ -186,47 +285,13 @@
               <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="jekyll" type="462c0819:PsiDirectoryNode" />
               <item name="_includes" type="462c0819:PsiDirectoryNode" />
-              <item name="helpers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="jekyll" type="462c0819:PsiDirectoryNode" />
-              <item name="_layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="jekyll" type="462c0819:PsiDirectoryNode" />
-              <item name="_sass" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="jekyll" type="462c0819:PsiDirectoryNode" />
-              <item name="_sass" type="462c0819:PsiDirectoryNode" />
-              <item name="gamefolio" type="462c0819:PsiDirectoryNode" />
+              <item name="projects-content" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="jekyll" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="jekyll" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="project-images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="jekyll" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="project-images" type="462c0819:PsiDirectoryNode" />
-              <item name="raven" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -244,19 +309,19 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Git\WebProjects\Graygzou.github.io\jekyll\assets\project-images\raven" />
-      <recent name="D:\Git\WebProjects\Graygzou.github.io\jekyll\assets\project-images\lode-runner\other" />
-      <recent name="D:\Git\WebProjects\Graygzou.github.io\jekyll\assets\project-images\lode-runner\carousel" />
-      <recent name="D:\Git\WebProjects\Graygzou.github.io\jekyll\assets\project-images\raven\carousel" />
-      <recent name="D:\Git\WebProjects\Graygzou.github.io\jekyll\assets\project-images\lode-runner" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Git\WebProjects\Graygzou.github.io\jekyll\_includes\helpers" />
       <recent name="D:\Git\WebProjects\Graygzou.github.io\jekyll\collections\_educations" />
       <recent name="D:\Git\WebProjects\Graygzou.github.io\jekyll\collections\blog\_posts" />
       <recent name="D:\Git\WebProjects\Graygzou.github.io\jekyll\assets\project-images\unannonced-title" />
       <recent name="D:\Git\WebProjects\Graygzou.github.io\jekyll\assets\project-images\cuphead" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Git\WebProjects\Graygzou.github.io\jekyll\assets\project-images\native-ruins\carousel" />
+      <recent name="D:\Git\WebProjects\Graygzou.github.io\jekyll\assets\project-images\native-ruins" />
+      <recent name="D:\Git\WebProjects\Graygzou.github.io\jekyll\assets\project-images\metenorage\carousel" />
+      <recent name="D:\Git\WebProjects\Graygzou.github.io\jekyll\assets\project-images\raven" />
+      <recent name="D:\Git\WebProjects\Graygzou.github.io\jekyll\assets\project-images\lode-runner\other" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -300,16 +365,15 @@
       <workItem from="1570670049788" duration="7534000" />
       <workItem from="1571071728835" duration="3943000" />
       <workItem from="1571142723622" duration="22926000" />
-      <workItem from="1571215036667" duration="4807000" />
+      <workItem from="1571215036667" duration="6242000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191496000" />
+    <option name="totallyTimeSpent" value="192931000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="-7" width="1488" height="878" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -379,100 +443,137 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-front-matter/advent-of-code-fm.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-front-matter/battle-simulator-fm.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/Gemfile.lock">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_sass/gamefolio/_syntax-highlighting.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_sass/gamefolio/_layout.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="264" column="6" selection-start-line="264" selection-start-column="6" selection-end-line="264" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_sass/gamefolio/_base.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="112" column="2" lean-forward="true" selection-start-line="112" selection-start-column="2" selection-end-line="112" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/carousel/1vs1-1.png">
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/Enigme3.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/other/dodge1.png">
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/enigme3noted.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/other/dodge2.png">
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/Enigme4.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/other/fight1.png">
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/enigme4noted.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/other/fight2.png">
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/FSM.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/other/image4.png">
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/image3.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/other/image14.png">
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/image12.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/other/image15.png">
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/image26.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/other/image17.png">
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/carousel/Judy.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/other/image18.png">
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/carousel/Judy2.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/other/image23.png">
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/native-ruins-banner.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/raven.png">
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/carousel/Stick.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/carousel/team1.png">
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/carousel/Wheel.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/other/image28.png">
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/native-ruins.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/collections/_project-pages/school/raven.markdown">
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/metenorage/carousel/editor1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/metenorage/carousel/editor3.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/metenorage/carousel/editor4.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/metenorage/carousel/editor5.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/metenorage/carousel/editor6.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/metenorage/metenorage.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/metenorage/carousel/metenorage1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/metenorage/carousel/metenorage2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/metenorage/carousel/metenorage4.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/metenorage/carousel/metenorage6.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/metenorage/metenorage16.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/metenorage/metenorage23.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/metenorage/metenorage-banner.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/metenorage/metenorage25.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/metenorage/metenorage24.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/metenorage/metenorage22.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/metenorage/metenorage11.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/metenorage/metenorage12.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/metenorage/metenorage14.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/metenorage/metenorage18.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/metenorage/metenorage19.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/metenorage-content.markdown">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-153" />
+          <first_editor relative-caret-position="306">
+            <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/native-ruins-content.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="459">
+            <caret line="51" column="38" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/penguin-panic-content.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="495">
+            <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+          </first_editor>
           <second_editor />
         </state>
       </provider>
@@ -480,8 +581,28 @@
     <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/raven-content.markdown">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="241">
+          <first_editor relative-caret-position="408">
             <caret line="30" selection-start-line="30" selection-end-line="30" selection-end-column="38" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/spida-phobia-content.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="357">
+            <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/the-only-neone-content.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="442">
+            <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
           </first_editor>
           <second_editor />
         </state>
@@ -490,113 +611,82 @@
     <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/lode-runner-content.markdown">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="309">
-            <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+          <first_editor relative-caret-position="391">
+            <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="98" column="20" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/graygzou.github.io-content.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/carousel/1vs1-2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/carousel/image22.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/carousel/image27.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/carousel/image29.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/carousel/image26.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/carousel/image21.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/carousel/learningBot2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/carousel/learningBot.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/carousel/miss-aim.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/weapon-fuzzy.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/carousel/team3.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/carousel/team2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/results.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/ammo-fuzzy.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/raven-banner.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_includes/head.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_layouts/default.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_includes/header.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/goals-composite.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/network.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/carousel/new-map.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/raven/raven-big.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_sass/gamefolio/_project-page.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="111" column="21" selection-start-line="111" selection-start-column="21" selection-end-line="111" selection-end-column="21" />
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/dyga-engine-content.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="323">
+            <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_includes/helpers/project-carousel">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="48" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/colosseum-overcharge.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-102" />
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_layouts/project-page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="212" column="33" lean-forward="true" selection-start-line="212" selection-start-column="33" selection-end-line="212" selection-end-column="33" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#header#0;n#article#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#header#0;n#article#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#svg#0;n#div#0;n#div#2;n#header#0;n#article#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#svg#0;n#div#1;n#div#2;n#header#0;n#article#0;n#!!top" expanded="true" />
-            <element signature="e#6708#6715#1" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/brain-control-content.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="374">
+            <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/battle-simulator-content.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="357">
+            <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/advent-of-code-content.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-204" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/gmtk-2019-statistics-content.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="374">
+            <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/native-ruins/carousel/Menu.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/spida-phobia/Museum.PNG">
+      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
 </project>

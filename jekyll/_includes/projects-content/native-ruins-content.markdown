@@ -49,7 +49,7 @@ Click here to take a look at the GDD : <a href="Game Design Document - Native Ru
 
 Screenshots
 --------------------
-In progress
+{% include helpers/project-carousel %}
 
 Detailed Info
 --------------------

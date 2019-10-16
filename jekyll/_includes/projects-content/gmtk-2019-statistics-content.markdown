@@ -18,10 +18,6 @@ Get the average score of the participants and some other data.
 {% endcapture %}
 {{ links_include | markdownify }}
 
-Screenshots
---------------------
-In coming
-
 Detailed Info
 --------------------
 In progress
