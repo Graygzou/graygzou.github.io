@@ -13,9 +13,9 @@
 <meta property="og:url" content="/project-pages/professional/cuphead.html" />
 <meta property="og:site_name" content="Grégoire Boiron" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-10-15T21:29:21+00:00" />
+<meta property="article:published_time" content="2019-10-16T10:10:27+00:00" />
 <script type="application/ld+json">
-{"description":"UI polish and bugs fixes related to the localization of the game","dateModified":"2019-10-15T21:29:21+00:00","datePublished":"2019-10-15T21:29:21+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/project-pages/professional/cuphead.html"},"@type":"BlogPosting","url":"/project-pages/professional/cuphead.html","headline":"cuphead","@context":"http://schema.org"}</script>
+{"description":"UI polish and bugs fixes related to the localization of the game","dateModified":"2019-10-16T10:10:27+00:00","datePublished":"2019-10-16T10:10:27+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/project-pages/professional/cuphead.html"},"@type":"BlogPosting","url":"/project-pages/professional/cuphead.html","headline":"cuphead","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Grégoire Boiron" /><script>
 //if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
@@ -272,8 +272,51 @@ To give an order of size Cuphead is :</li>
 
       <!-- Should use jekyll tag to place it in the right place. --></article>
   </div>
+
+  <!-- Trigger the Modal -->
+  <!--<img id="myImg" src="img_snow.jpg" alt="Snow" style="width:100%;max-width:300px">-->
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- The Close Button -->
+    <span class="close">×</span>
+
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01">
+
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
+  </div>
 <a class="u-url" href="/project-pages/professional/cuphead.html" hidden></a>
 </article>
+
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  modal.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+  function zoom(element){
+    modal.style.display = "block";
+    console.log(element.src);
+    console.log(element.alt)
+    modalImg.src = element.src;
+    captionText.innerHTML = element.alt;
+  }
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+</script>
 
       </div>
     </main><footer class="site-footer h-card">
