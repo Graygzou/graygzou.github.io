@@ -185,9 +185,52 @@ layout: default
     </article>
   </div>
 
+  <!-- Trigger the Modal -->
+  <!--<img id="myImg" src="img_snow.jpg" alt="Snow" style="width:100%;max-width:300px">-->
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- The Close Button -->
+    <span class="close">&times;</span>
+
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01">
+
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
+  </div>
+
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
   {%- endif -%}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
+
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  modal.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+  function zoom(element){
+    modal.style.display = "block";
+    console.log(element.src);
+    console.log(element.alt)
+    modalImg.src = element.src;
+    captionText.innerHTML = element.alt;
+  }
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+</script>
