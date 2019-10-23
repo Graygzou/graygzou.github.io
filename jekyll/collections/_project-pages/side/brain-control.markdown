@@ -52,8 +52,8 @@ project_links:
   - name: gamejolt
     url: https://gamejolt.com/games/BrainControl/323988
 constraints:
-  - "Theme\: Order and Disorder."
-  - "Imposed words\: Arcade, Survival, Multiplayers."
+  - "Theme: Order and Disorder."
+  - "Imposed words: Arcade, Survival, Multiplayers."
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

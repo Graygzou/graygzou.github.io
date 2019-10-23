@@ -6,48 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5b6d0991-ca97-49ed-8583-7856f3d6434a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/advent-of-code-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/advent-of-code-content.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/battle-simulator-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/battle-simulator-content.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/brain-control-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/brain-control-content.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/colosseum-overcharge.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/colosseum-overcharge.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/dyga-engine-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/dyga-engine-content.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/gmtk-2019-statistics-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/gmtk-2019-statistics-content.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/graygzou.github.io-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/graygzou.github.io-content.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/lode-runner-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/lode-runner-content.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/metenorage-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/metenorage-content.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/native-ruins-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/native-ruins-content.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/penguin-panic-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/penguin-panic-content.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/raven-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/raven-content.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/spida-phobia-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/spida-phobia-content.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/the-only-neone-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/the-only-neone-content.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/advent-of-code-fm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/advent-of-code-fm.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/battle-simulator-fm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/battle-simulator-fm.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/brain-control-fm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/brain-control-fm.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/dyga-engine-fm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/dyga-engine-fm.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/gmtk-2019-statistics-fm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/gmtk-2019-statistics-fm.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/graygzou.github.io-fm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/graygzou.github.io-fm.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/lode-runner-fm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/lode-runner-fm.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/metenorage-fm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/metenorage-fm.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/native-ruins-fm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/native-ruins-fm.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/raven-fm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/raven-fm.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/spida-phobia-fm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/spida-phobia-fm.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_layouts/project-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_layouts/project-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_sass/gamefolio/_project-page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_sass/gamefolio/_project-page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/school/battle-simulator.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/school/battle-simulator.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/school/lode-runner.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/school/lode-runner.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/school/metenorage.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/school/metenorage.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/school/native-ruins.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/school/native-ruins.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/school/penguin-panic.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/school/penguin-panic.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/school/raven.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/school/raven.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/school/spida-phobia.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/school/spida-phobia.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/side/advent-of-code.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/side/advent-of-code.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/side/brain-control.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/side/brain-control.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/side/colosseum-overcharge.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/side/colosseum-overcharge.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/side/dyga-engine.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/side/dyga-engine.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/side/gmtk-2019-statistics.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/side/gmtk-2019-statistics.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/side/graygzou.github.io.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/side/graygzou.github.io.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/side/the-only-neone.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/side/the-only-neone.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/githubProjectGen.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/githubProjectGen.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +49,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/spida-phobia-content.markdown">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -98,6 +57,27 @@
                 <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/brain-control-content.markdown">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="68">
+                <caret line="4" selection-start-line="4" selection-end-line="4" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-front-matter/brain-control-fm.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="32" lean-forward="true" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -116,7 +96,7 @@
         <entry file="file://$PROJECT_DIR$/jekyll/collections/_project-pages/side/the-only-neone.markdown">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="461">
+              <first_editor relative-caret-position="816">
                 <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
               </first_editor>
               <second_editor />
@@ -196,7 +176,6 @@
         <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/battle-simulator-content.markdown" />
         <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/brain-control-content.markdown" />
         <option value="$PROJECT_DIR$/jekyll/_layouts/project-page.html" />
-        <option value="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/brain-control-fm.yml" />
         <option value="$PROJECT_DIR$/jekyll/collections/_project-pages/side/colosseum-overcharge.markdown" />
         <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/colosseum-overcharge.markdown" />
         <option value="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/dyga-engine-fm.yml" />
@@ -217,13 +196,14 @@
         <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/the-only-neone-content.markdown" />
         <option value="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/spida-phobia-fm.yml" />
         <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/spida-phobia-content.markdown" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/brain-control-fm.yml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="70" />
     <option name="width" value="1470" />
-    <option name="height" value="1088" />
+    <option name="height" value="1089" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -385,18 +365,19 @@
       <workItem from="1571142723622" duration="22926000" />
       <workItem from="1571215036667" duration="6242000" />
       <workItem from="1571583268066" duration="596000" />
-      <workItem from="1571830242075" duration="17561000" />
+      <workItem from="1571830242075" duration="17618000" />
+      <workItem from="1571858856848" duration="115000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="211088000" />
+    <option name="totallyTimeSpent" value="211260000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="-7" width="1488" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21918768" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22268908" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -572,23 +553,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/brain-control-content.markdown">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="68">
-            <caret line="4" selection-start-line="4" selection-end-line="4" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-front-matter/brain-control-fm.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jekyll/collections/_project-pages/side/colosseum-overcharge.markdown">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -745,30 +709,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/collections/_project-pages/side/the-only-neone.markdown">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="461">
-            <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/the-only-neone-content.markdown">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="68">
             <caret line="4" selection-start-line="4" selection-end-line="4" />
           </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/collections/_project-pages/school/spida-phobia.markdown">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
           <second_editor />
         </state>
       </provider>
@@ -780,6 +726,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/collections/_project-pages/school/spida-phobia.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/collections/_project-pages/side/the-only-neone.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="816">
+            <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/spida-phobia-content.markdown">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -787,6 +751,23 @@
             <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/brain-control-content.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="68">
+            <caret line="4" selection-start-line="4" selection-end-line="4" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-front-matter/brain-control-fm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="32" lean-forward="true" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
         </state>
       </provider>
     </entry>
