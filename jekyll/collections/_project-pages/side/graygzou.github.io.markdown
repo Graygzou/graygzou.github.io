@@ -1,30 +1,31 @@
 ---
 layout: project-page
 title: graygzou.github.io
-description: Github portfolio made from scratch.
+description:  Github portfolio made from scratch.
 stargazers-count: 0
 forks-count: 0
-updated-at: 2019-10-11 01:57:15
-last-update-days: 3
+updated-at: 2019-10-23 11:59:14
+last-update-days: 0
 tags: ['portfolio', 'html-css', 'javascript', 'python', 'code-generation', 'github-api']
 languages: 
   - name: HTML
-    percentage: 43.9
+    percentage: 44.8
     color: "#e34c26"
   - name: Python
-    percentage: 23.4
+    percentage: 22.6
     color: "#3572A5"
   - name: CSS
-    percentage: 21.7
+    percentage: 22.2
     color: "#563d7c"
   - name: Ruby
-    percentage: 9.8
+    percentage: 9.3
     color: "#701516"
   - name: Shell
     percentage: 1.2
     color: "#89e051"
 
 category: 'side'
+pitch: "Wonderful website I made using jekyll and liquid to build what I want. Using Github API also."
 platforms: Web
 tools: [jekyll, liquid, python]
 duration: "In progress"
@@ -35,7 +36,10 @@ main-roles: [Front-End Programmeur, Tools Programmer]
 project_links:
   - name: github
     url: https://graygzou.github.io/
-
+goals:
+  - Automatise my website to avoid spending hours to update it.
+  - Learn Jekyll and Liquid tag system.
+  - Build an automatisation flow to run all kind of stuffs before deploying it to GitHub.
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

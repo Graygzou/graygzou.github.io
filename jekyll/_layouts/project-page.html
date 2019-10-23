@@ -63,6 +63,8 @@ layout: default
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
+    <h2>Overview</h2>
+
     <aside class="overview_table">
       <div>
         <span class="table_title">Platform:</span>
@@ -167,21 +169,49 @@ layout: default
       </div>
     </aside>-->
 
-    <article class="description_side">
-      {{ content }}
+    <div class="side_overview">
+
+      <h4>Project Pitch</h4>
+      {{ page.pitch | markdownify }}
+
+      {%- if page.goals -%}
+      <h4>Project Goals</h4>
+      <ul class="ul_goal">
+        {%- for goal in page.goals -%}
+        <li>&rarr; {{ goal }}</li>
+        {%- endfor -%}
+      </ul>
+      {%- endif -%}
+
+      {%- if page.constraints -%}
+      <h4>Project Constaints</h4>
+      <ul class="ul_goal">
+        {%- for constraint in page.constraints -%}
+        <li>&rarr; {{ constraint }}</li>
+        {%- endfor -%}
+      </ul>
+      {%- endif -%}
+
+      {% include helpers/project-links %}
+    </div>
+
+    <article class="detailed_description">
 
       <!-- Should use jekyll tag to place it in the right place. -->
       {%- if page.youtube-link -%}
-    	  <!--<section id="gameplay_section">-->
-  	    <h2><span class="fa fa-gamepad" aria-hidden="true"></span> Gameplay video</h2>
-    		<iframe width="500" height="300" src="{{ page.youtube-link }}" allowfullscreen="allowfullscreen"
-    										   	mozallowfullscreen="mozallowfullscreen"
-    	     										msallowfullscreen="msallowfullscreen"
-          											oallowfullscreen="oallowfullscreen"
-          											webkitallowfullscreen="webkitallowfullscreen">
-    		</iframe>
-    	  <!--</section>-->
+      <h2><span class="fa fa-gamepad" aria-hidden="true"></span> Gameplay video</h2>
+      <section class="gameplay_section">
+        <iframe width="500" height="300" src="{{ page.youtube-link }}" allowfullscreen="allowfullscreen"
+                mozallowfullscreen="mozallowfullscreen"
+                msallowfullscreen="msallowfullscreen"
+                oallowfullscreen="oallowfullscreen"
+                webkitallowfullscreen="webkitallowfullscreen">
+        </iframe>
+      </section>
       {%- endif -%}
+
+      {{ content }}
+
     </article>
   </div>
 

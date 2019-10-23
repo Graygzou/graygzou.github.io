@@ -10,6 +10,13 @@ languages:
       color: green
 tags: ['unity3d', 'gamejam', 'gmtk2019', 'puzzle-game']
 category: 'side'
+pitch: "Colosseum Overcharge is a 2.5D multiplayers brawler. This game has been made for the Ludum Dare 45 (2019). 
+        The official website of this event is the following: Ludum dare 45.
+        <br/><br/>
+        An Arena Couch game where the goal is to destroy your friends by knocking them into dangerous objects! 
+        As the game progresses your little robot that started with nothing will be able to upgrade and use new mechanics in hopes of winning the next round !
+        <br/><br/>
+        * We only worked for 48 hours since we were working the monday (we took a bit of time on that day to fix small bugs and submit the project)"
 platforms: [Windows]
 engines: Unity3D
 tools: [Rewired, ProBuilder]
@@ -27,6 +34,12 @@ main-roles: [Gameplay Programmer, UI Programmer]
 project_links:
   - name: ludum-dare
     url: https://ldjam.com/events/ludum-dare/45/colosseum-overcharge
+goals:
+  - "Challenge myself"
+  - "First participation of the Ludum Dare GameJam"
+  - "Work with a pluridisciplanary team members, who I've never worked before."
+constraints:
+  - "Theme: start with nothing"
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

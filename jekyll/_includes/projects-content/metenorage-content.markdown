@@ -3,26 +3,6 @@ Grégoire Boiron <gregoire.boiron@gmail.com>
 Copyright (c) 2018 Grégoire Boiron  All Rights Reserved.
 --->
 
-Overview
---------------------
-Metenorage is a Java engine made for a school project at the Université du Québec à Chicoutimi (UQAC). 
-The course is the following : [Game Engines Principles (8INF871)](http://cours.uqac.ca/8INF871).
-
-We implemented this engine in Java with the framework [LWJGL](https://www.lwjgl.org/) (Lightweight Java Game Library). 
-We choose to based our engine on a Entity-Component-System (ECS) architecture because of his modularity and flexibility.
-
-#### Project Goals
-* Create a game engine which is modular and flexible.
-* Enable users to create 2D and 3D games.
-* Implements basics systems to create simple games.
-* Keep the engine "clean" by splitting it from metadata (scripts and resources).
-* Facilitate the creation of games with an editor.
-
-{% capture links_include %}
-{% include helpers/project-links %}
-{% endcapture %}
-{{ links_include | markdownify }}
-
 Screenshots
 --------------------
 {% include helpers/project-carousel %}

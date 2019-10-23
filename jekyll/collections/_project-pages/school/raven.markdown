@@ -5,7 +5,7 @@ description: Top down 2D game, similar to a Quake-style deathmatch.
 stargazers-count: 1
 forks-count: 0
 updated-at: 2019-07-22 23:23:09
-last-update-days: 83
+last-update-days: 92
 tags: ['artificial-intelligence', 'top-down-shooter', 'neural-network', 'fuzzilogic', 'goal-oriented-action-planning', 'steering-behaviors']
 languages: 
   - name: C++
@@ -46,6 +46,15 @@ languages:
     color: "#438eff"
 
 category: 'school'
+pitch: "Raven is a top down 2D game, similar to a Quake-style deathmatch.
+        It is originaly made by Mat Bucklandin his book, Programming Game AI By Example.
+        This application has been completed for a school project at the Université du Québec à Chicoutimi (UQAC).
+        The course is the following: [Artificial Intelligence for Video Games (8IAR125)](http://cours.uqac.ca/8IAR125).
+
+        The gameplay of Raven is similar of a Quake-style deathmatch.
+        When starting the game, severals bots spawned controlled by similar AI trying to win, by killing as many bots as possible.
+        Bots can also pick up health or weapons if needed. The player could also take control of a bot by clicking on it.
+        Ones the bot is controlled, some actions were possible like firing, switching weapons, etc."
 platforms: Windows
 tools: [Visual Studio, Lua]
 duration: "1 month"
@@ -56,6 +65,11 @@ main-roles: [Project Manager, IA Programmer, Gameplay Programmer]
 project_links:
   - name: github
     url: https://github.com/Graygzou/raven
+goals:
+  - Learn and apply AI techniques used in video games.
+  - Try making a neural network to train an AI.
+  - Improved the game by adding more modes (team deathmatch, 1vs1)
+  - Improved the game by adding more features (weapons, maps, ...).
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

@@ -1,4 +1,6 @@
 category: 'side'
+pitch: "Crawl the site : [GMTK-2019](https://itch.io/jam/gmtk-2019) to get some statistics about the event.
+        Get the average score of the participants and some other data."
 platforms: Web
 duration: "In progress"
 team-size: 1
@@ -6,3 +8,7 @@ main-roles: []
 project_links:
   - name: github
     url: https://github.com/Graygzou/gmtk-2019-statistics
+goals:
+  - Discover how to crawl a website
+  - Analyse some data
+  - Discover new games thanks to criterias

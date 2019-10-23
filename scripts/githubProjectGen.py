@@ -347,7 +347,15 @@ def generateUserRepos(username, githubToken):
                 category, content = generateRepoMdPage(currentRepository, username, githubToken)
                 print("category = " + category)
                 file = open(FOLDER_REL_PATH + category + '/' + filename,'w')
-                file.write(content)
+
+                # Remove emoji from the string
+                emoji_pattern = re.compile("["
+                                           u"\U0001F600-\U0001F64F"  # emoticons
+                                           u"\U0001F300-\U0001F5FF"  # symbols & pictographs
+                                           u"\U0001F680-\U0001F6FF"  # transport & map symbols
+                                           u"\U0001F1E0-\U0001F1FF"  # flags (iOS)
+                                           "]+", flags=re.UNICODE)
+                file.write(emoji_pattern.sub(r'', content))
                 print(" >>> Generation ended !")
                 file.close()
                 #endif

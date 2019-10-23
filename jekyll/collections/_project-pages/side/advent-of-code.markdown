@@ -5,7 +5,7 @@ description: My solutions for Advent of Code (AoC) challenges.
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-23 02:08:56
-last-update-days: 83
+last-update-days: 92
 tags: ['lua', 'aoc', 'advent-of-code']
 languages: 
   - name: Lua
@@ -13,6 +13,9 @@ languages:
     color: "#000080"
 
 category: 'side'
+pitch: "Advent of Code is an Advent calendar of small programming puzzles for a variety of skill sets and skill levels that can be solved in any programming language we like.
+        People use this event as a speed contest, practice problems, or even to challenge each other.
+        It's made by Eric Wastl and 2018 was the 4th edition."
 platforms: Windows
 tools: [Lua]
 duration: "1 month"
@@ -23,7 +26,10 @@ main-roles: [Programmer]
 project_links:
   - name: github
     url: https://github.com/Graygzou/advent-of-code
-
+goals:
+  - "Challenge myself."
+  - "Discover new things (new language, new problems, etc.)"
+  - "Share with my friends possible solutions and optimizations."
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

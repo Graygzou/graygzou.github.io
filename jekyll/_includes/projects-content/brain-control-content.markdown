@@ -3,21 +3,6 @@ Grégoire Boiron <gregoire.boiron@gmail.com>
 Copyright (c) 2018 Grégoire Boiron  All Rights Reserved.
 --->
 
-Overview
---------------------
-Brain Control is a top down 2D game, similar to a Quake-style deathmatch. This application has been completed for a Game Jam called the WonderJAM organized by the Université du Québec &#224 Chicoutimi (UQAC). The official website of this event is the following : <a href="http://jam.aemi.ca/">WonderJAM Winter 2018.
-
-You play as survivors from a deadly virus which turn humans into zombies. Your objective is to be the last survival alive to be able to build an army of zombies. Players can't attack each other directly and have to use zombies to do so. Each time a zombie is killed by one player, it resurrect, thanks to the bullets they used. Once resurrected, he attacks the other player. Moreover, each players is losing life over time and can only gain back some by killing standard zombies.
-
-#### Constraints
-* Theme : Order and Disorder.
-* Imposed words : Arcade, Survival, Multiplayers.
-
-{% capture links_include %}
-{% include helpers/project-links %}
-{% endcapture %}
-{{ links_include | markdownify }}
-
 Screenshots
 --------------------
 {% include helpers/project-carousel %}

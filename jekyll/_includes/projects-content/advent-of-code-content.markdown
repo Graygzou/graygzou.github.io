@@ -3,21 +3,6 @@ Gregoire Boiron <gregoire.boiron@gmail.com>
 Copyright (c) 2018 Gregoire Boiron  All Rights Reserved.
 --->
 
-Overview
---------------------
-Advent of Code is an Advent calendar of small programming puzzles for a variety of skill sets and skill levels that can be solved in any programming language we like. 
-People use this event as a speed contest, practice problems, or even to challenge each other. It's made by Eric Wastl and 2018 was the 4th edition.
-
-#### Project Goals
-* Challenge myself.
-* Discover new things (new language, new problems, etc.)
-* Share with my friends possible solutions and optimizations.
-
-{% capture links_include %}
-{% include helpers/project-links %}
-{% endcapture %}
-{{ links_include | markdownify }}
-
 :memo: Table of contents
 ---------------------------------
 1. [2017 Edition](#2017)

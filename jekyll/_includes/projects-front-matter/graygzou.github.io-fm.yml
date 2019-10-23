@@ -1,4 +1,5 @@
 category: 'side'
+pitch: "Wonderful website I made using jekyll and liquid to build what I want. Using Github API also."
 platforms: Web
 tools: [jekyll, liquid, python]
 duration: "In progress"
@@ -9,3 +10,7 @@ main-roles: [Front-End Programmeur, Tools Programmer]
 project_links:
   - name: github
     url: https://graygzou.github.io/
+goals:
+  - Automatise my website to avoid spending hours to update it.
+  - Learn Jekyll and Liquid tag system.
+  - Build an automatisation flow to run all kind of stuffs before deploying it to GitHub.

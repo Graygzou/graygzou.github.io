@@ -40,7 +40,8 @@
 }*/
 
 .overview_table {
-	display: inline-block;
+	float: left;
+	/*display: inline-block;*/
 	/*min-width: 20%;*/
   width: $content-aside;
 	vertical-align: top;
@@ -59,12 +60,23 @@
 
 /* main article */
 
-.description_side {
-	display: inline-block;
+.side_overview {
 	font-size: 110%;
-	max-width: calc((#{$content-width} - (#{$spacing-unit} * 3)) - #{$content-aside});
+	max-width: calc((#{$content-width} - (#{$spacing-unit} * 3)));
 	text-align: left;
 	vertical-align: top;
+}
+
+.detailed_description {
+	display: inline-block;
+}
+
+.gameplay_section {
+	text-align: center;
+}
+
+.ul_goal {
+	list-style-type: none;
 }
 
 .bloc-images {

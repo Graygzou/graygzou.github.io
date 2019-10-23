@@ -5,7 +5,7 @@ description: 2D game engine which allows to build platformer and puzzle games.
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-15 00:43:57
-last-update-days: 91
+last-update-days: 100
 tags: ['game-engine', '2d-game-engine', 'swing-gui', 'maven', 'bintray']
 languages: 
   - name: Java
@@ -13,6 +13,7 @@ languages:
     color: "#b07219"
 
 category: 'side'
+pitch: "2D game engine which allows to build platformer and puzzle games."
 platforms: Windows
 tools: [Intellij, Swing]
 duration: "In progress"

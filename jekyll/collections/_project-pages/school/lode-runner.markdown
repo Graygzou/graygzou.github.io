@@ -5,7 +5,7 @@ description: 2D platformer and puzzle game made with DygaEngine based on the ori
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-22 23:27:41
-last-update-days: 83
+last-update-days: 92
 tags: ['video-game', '2d-platformer-game', 'puzzle-game', 'dygaengine']
 languages: 
   - name: Java
@@ -13,6 +13,14 @@ languages:
     color: "#b07219"
 
 category: 'school'
+pitch: "Lode Runner - The Legend Return is a platform game published by Broderbund in 1983.
+         Unlike others platforms published at the same time, Lode Runner - The Legend Return is more a puzzle-oriented platform game.
+         We decided to reproduced this game for a school project at the Higher educational institution in Toulouse (ENSEEIHT).
+         The course was an object-oriented programming course.
+
+         Lode Runner is composed of several levels presented in a single screen.
+         The player character, Jake Peril, has to collect all the treasure (golds with different value) and reach the exit.
+         Mad Monks are also here to protected treasures by capturing Jake. Those wears red robes."
 platforms: Windows
 engines: dyga-engine
 tools: [Eclipse]
@@ -24,7 +32,11 @@ main-roles: [Project Manager, Engine Programmer, Gameplay Programmeur]
 project_links:
   - name: github
     url: https://github.com/dyga-entertainment/lode-runner
-
+goals:
+  - Validate Object-Oriented Programming skills.
+  - Use design patterns in the game.
+  - Make simple, yet effective, artificial intelligences for enemies.
+  - Make a self-taught game.
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

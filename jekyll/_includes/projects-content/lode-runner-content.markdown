@@ -3,28 +3,6 @@ Grégoire Boiron <gregoire.boiron@gmail.com>
 Copyright (c) 2018 Grégoire Boiron  All Rights Reserved.
 --->
 
-Overview
---------------------
-"Lode Runner - The Legend Return" is a platform game published by Broderbund in 1983. 
-Unlike others platforms published at the same time, "Lode Runner - The Legend Return" is more a puzzle-oriented platform game. 
-We decided to reproduced this game for a school project at the Higher educational institution in Toulouse (ENSEEIHT). 
-The course was an object-oriented programming course.
-
-Lode Runner is composed of several levels presented in a single screen. 
-The player character, Jake Peril, has to collect all the treasure (golds with different value) and reach the exit. 
-"Mad Monks" are also here to protected treasures by capturing Jake. Those wears red robes.
-
-#### Project Goals
-* Validate Object-Oriented Programming skills.
-* Use design patterns in the game.
-* Make simple, yet effective, artificial intelligences for enemies.
-* Make a self-taught game.
-
-{% capture links_include %}
-{% include helpers/project-links %}
-{% endcapture %}
-{{ links_include | markdownify }}
-
 Screenshots
 --------------------
 {% include helpers/project-carousel %}
