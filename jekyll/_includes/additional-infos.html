@@ -1,25 +1,31 @@
+{% assign info_groups = site.additional-infos | group_by: "category" %}
+{% for info_group in info_groups %}
 <section class="home-section">
-  <h2 class="page-heading">Experiences</h2>
+
+  <h2 class="page-heading">{{ info_group.name | capitalize }}</h2>
   <div>
     <ul class="post-list">
-      {% assign sorted_experiences = site.experiences | sort:"start-date" | reverse %}
-      {%- for experience in sorted_experiences -%}
+      {% assign sorted_infos = info_group.items | sort:"start-dates", "first" | reverse %}
+
+      {%- for info in sorted_infos -%}
+        <!--{{ info.start-dates[0] }}-->
         <li class="home-li">
-          <img src="{{ experience.logo }}"/>
+          <img src="{{ info.logo }}"/>
           <div>
-            <h3 class="project-heading post-link">{{ experience.title | escape }}</h3>
+            <h3 class="project-heading post-link">{{ info.title | escape }}</h3>
             <ul>
               <li class="post-meta">
                 <div>
-                  <span class="role">{{ experience.role }}</span>
+                  <span class="role">{{ info.sub-title }}</span>
                   <br>
-                  <span>{{ experience.description }}</span>
+                  <span>{{ info.description }}</span>
                 </div>
               </li>
 
               <li class="post-meta">
                 <table>
                   <tr>
+                    <!--
                     <td>
                       <svg class="svg-icon">
                         <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#building">
@@ -27,12 +33,13 @@
                       </svg>
                       {{ experience.full-name }}
                     </td>
+                    -->
                     <td>
                       <svg class="svg-icon">
                         <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#map-marker">
                         </use>
                       </svg>
-                      {{ experience.localisation }}
+                      {{ info.localisation }}
                     </td>
                   </tr>
                   <tr>
@@ -41,21 +48,33 @@
                         <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#calendar">
                         </use>
                       </svg>
-                      {{ experience.start-date }}-{{ experience.end-date }}
+                      {{ info.start-dates | join: ', ' }}
+                      {%- if info.end-date -%}
+                        -{{ info.end-date }}
+                      {%- endif -%}
                     </td>
+                  </tr>
+                  <tr>
                     <td>
                       <svg class="svg-icon">
                         <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#link">
                         </use>
                       </svg>
-                      <a href="{{ experience.link }}">{{ experience.link | remove_first:'https://' | remove_first:'http://' }}</a>
+                      <a href="{{ experience.link }}">
+                        {% assign link_name = info.link | remove_first:'https://' | remove_first:'http://' %}
+                        {%- if link_name.size < 25 -%}
+                          {{ link_name }}
+                        {%- else -%}
+                          {{ info.title | escape }}
+                        {%- endif -%}
+                      </a>
                     </td>
                   </tr>
                 </table>
               </li>
             </ul>
             {%- if site.show_excerpts -%}
-            {{ experience.excerpt }}
+            {{ info.excerpt }}
             {%- endif -%}
           </div>
         </li>
@@ -63,3 +82,5 @@
     </ul>
   </div>
 </section>
+<hr>
+{%- endfor -%}

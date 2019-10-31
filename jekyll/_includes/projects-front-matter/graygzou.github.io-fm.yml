@@ -10,7 +10,8 @@ main-roles: [Front-End Programmeur, Tools Programmer]
 project_links:
   - name: github
     url: https://graygzou.github.io/
-goals:
-  - Automatise my website to avoid spending hours to update it.
-  - Learn Jekyll and Liquid tag system.
-  - Build an automatisation flow to run all kind of stuffs before deploying it to GitHub.
+additional-sections:
+  - name: goals
+    list: ["Automatise my website to avoid spending hours to update it.",
+           "Learn Jekyll and Liquid tag system.",
+           "Build an automatisation flow to run all kind of stuffs before deploying it to GitHub."]

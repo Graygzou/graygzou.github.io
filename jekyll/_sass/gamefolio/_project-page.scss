@@ -46,11 +46,22 @@
   width: $content-aside;
 	vertical-align: top;
 	text-align: left;
+
+	div {
+		margin-bottom: 10px;
+	}
 }
 
+@include media-query($on-small-screen) {
+	.overview_table {
+		display: inherit;
+		width: 100%;
 
-.overview_table > div {
-	margin-bottom: 10px;
+		div {
+			display: inline-block;
+			width: 49%;
+		}
+	}
 }
 
 .table_title {
@@ -58,8 +69,15 @@
 	font-family: 'customfont';
 }
 
-/* main article */
+.social-media-links {
+	list-style: none;
+	margin: 0;
+	li {
+		display: inline-block;
+	}
+}
 
+/* main article */
 .side_overview {
 	font-size: 110%;
 	max-width: calc((#{$content-width} - (#{$spacing-unit} * 3)));

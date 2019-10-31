@@ -34,12 +34,13 @@ main-roles: [Gameplay Programmer, UI Programmer]
 project_links:
   - name: ludum-dare
     url: https://ldjam.com/events/ludum-dare/45/colosseum-overcharge
-goals:
-  - "Challenge myself"
-  - "First participation of the Ludum Dare GameJam"
-  - "Work with a pluridisciplanary team members, who I've never worked before."
-constraints:
-  - "Theme: start with nothing"
+additional-sections:
+  - name: goals
+    list: ["Challenge myself",
+           "First participation of the Ludum Dare GameJam",
+           "Work with a pluridisciplanary team members, who I've never worked before."]
+  - name: constraints
+    list: ["Theme: start with nothing"]
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

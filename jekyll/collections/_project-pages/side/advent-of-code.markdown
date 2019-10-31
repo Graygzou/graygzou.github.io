@@ -5,7 +5,7 @@ description: My solutions for Advent of Code (AoC) challenges.
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-23 02:08:56
-last-update-days: 92
+last-update-days: 100
 tags: ['lua', 'aoc', 'advent-of-code']
 languages: 
   - name: Lua
@@ -26,10 +26,11 @@ main-roles: [Programmer]
 project_links:
   - name: github
     url: https://github.com/Graygzou/advent-of-code
-goals:
-  - "Challenge myself."
-  - "Discover new things (new language, new problems, etc.)"
-  - "Share with my friends possible solutions and optimizations."
+additional-sections:
+  - name: goals
+    list: ["Challenge myself.",
+           "Discover new things (new language, new problems, etc.)",
+           "Share with my friends possible solutions and optimizations."]
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

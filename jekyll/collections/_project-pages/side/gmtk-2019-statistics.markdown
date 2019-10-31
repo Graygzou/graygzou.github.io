@@ -5,7 +5,7 @@ description: A bunch of statistics from the 2019 edition of the Game Maker ToolK
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-08-14 01:14:49
-last-update-days: 70
+last-update-days: 78
 tags: []
 languages: 
 
@@ -23,6 +23,11 @@ goals:
   - Discover how to crawl a website
   - Analyse some data
   - Discover new games thanks to criterias
+additional-sections:
+  - name: goals
+    list: ["Discover how to crawl a website",
+           "Analyse some data",
+           "Discover new games thanks to criterias"]
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

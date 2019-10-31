@@ -18,8 +18,9 @@ main-roles: [Project Manager, Engine Programmer, Gameplay Programmeur]
 project_links:
   - name: github
     url: https://github.com/dyga-entertainment/lode-runner
-goals:
-  - Validate Object-Oriented Programming skills.
-  - Use design patterns in the game.
-  - Make simple, yet effective, artificial intelligences for enemies.
-  - Make a self-taught game.
+additional-sections:
+  - name: goals
+    list: ["Validate Object-Oriented Programming skills.",
+           "Use design patterns in the game.",
+           "Make simple, yet effective, artificial intelligences for enemies.",
+           "Make a self-taught game."]

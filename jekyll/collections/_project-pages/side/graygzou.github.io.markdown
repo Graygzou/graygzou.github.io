@@ -4,8 +4,8 @@ title: graygzou.github.io
 description:  Github portfolio made from scratch.
 stargazers-count: 0
 forks-count: 0
-updated-at: 2019-10-23 19:25:24
-last-update-days: 0
+updated-at: 2019-10-25 01:58:29
+last-update-days: 6
 tags: ['portfolio', 'html-css', 'javascript', 'python', 'code-generation', 'github-api']
 languages: 
   - name: HTML
@@ -36,10 +36,11 @@ main-roles: [Front-End Programmeur, Tools Programmer]
 project_links:
   - name: github
     url: https://graygzou.github.io/
-goals:
-  - Automatise my website to avoid spending hours to update it.
-  - Learn Jekyll and Liquid tag system.
-  - Build an automatisation flow to run all kind of stuffs before deploying it to GitHub.
+additional-sections:
+  - name: goals
+    list: ["Automatise my website to avoid spending hours to update it.",
+           "Learn Jekyll and Liquid tag system.",
+           "Build an automatisation flow to run all kind of stuffs before deploying it to GitHub."]
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

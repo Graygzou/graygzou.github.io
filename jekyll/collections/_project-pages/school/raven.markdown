@@ -5,7 +5,7 @@ description: Top down 2D game, similar to a Quake-style deathmatch.
 stargazers-count: 1
 forks-count: 0
 updated-at: 2019-07-22 23:23:09
-last-update-days: 92
+last-update-days: 100
 tags: ['artificial-intelligence', 'top-down-shooter', 'neural-network', 'fuzzilogic', 'goal-oriented-action-planning', 'steering-behaviors']
 languages: 
   - name: C++
@@ -65,11 +65,12 @@ main-roles: [Project Manager, IA Programmer, Gameplay Programmer]
 project_links:
   - name: github
     url: https://github.com/Graygzou/raven
-goals:
-  - Learn and apply AI techniques used in video games.
-  - Try making a neural network to train an AI.
-  - Improved the game by adding more modes (team deathmatch, 1vs1)
-  - Improved the game by adding more features (weapons, maps, ...).
+additional-sections:
+  - name: goals
+    list: ["Learn and apply AI techniques used in video games.",
+           "Try making a neural network to train an AI.",
+           "Improved the game by adding more modes (team deathmatch, 1vs1)",
+           "Improved the game by adding more features (weapons, maps, ...)."]
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

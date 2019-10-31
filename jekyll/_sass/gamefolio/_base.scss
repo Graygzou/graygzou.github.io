@@ -97,6 +97,9 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
 }
 
+h2 {
+  border-bottom: 2px solid black;
+}
 
 
 /**
@@ -209,11 +212,12 @@ pre {
  */
 
 .svg-icon {
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-    fill: #{$grey-color};
-    padding-right: 5px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  fill: #{$grey-color};
+  padding-right: 5px;
+  vertical-align: text-bottom;
 }
 
 .social-media-list {

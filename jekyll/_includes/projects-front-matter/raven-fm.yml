@@ -18,8 +18,9 @@ main-roles: [Project Manager, IA Programmer, Gameplay Programmer]
 project_links:
   - name: github
     url: https://github.com/Graygzou/raven
-goals:
-  - Learn and apply AI techniques used in video games.
-  - Try making a neural network to train an AI.
-  - Improved the game by adding more modes (team deathmatch, 1vs1)
-  - Improved the game by adding more features (weapons, maps, ...).
+additional-sections:
+  - name: goals
+    list: ["Learn and apply AI techniques used in video games.",
+           "Try making a neural network to train an AI.",
+           "Improved the game by adding more modes (team deathmatch, 1vs1)",
+           "Improved the game by adding more features (weapons, maps, ...)."]

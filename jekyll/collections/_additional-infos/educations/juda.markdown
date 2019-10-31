@@ -1,13 +1,14 @@
 ---
 title: Juda High School
 logo: /assets/images/educations/juda.jpg
-description: Spent one year (Junior Year)
+sub-title: Spent one year (Junior Year)
 additional-info: Received "Honor" degree during 3 trimesters (have at least B).
-start-date: 2011
+start-dates: [2011]
 end-date: 2012
 full-name: Juda School District
-localization: Juda, WI, USA
+localisation: Juda, WI, USA
 link: http://www.judaschool.com/
+category: 'educations'
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

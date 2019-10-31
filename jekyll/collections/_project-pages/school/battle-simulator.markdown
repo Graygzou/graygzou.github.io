@@ -5,7 +5,7 @@ description: Battle simulator made with JMonkey, using a graph model as back-end
 stargazers-count: 2
 forks-count: 0
 updated-at: 2019-07-23 00:54:31
-last-update-days: 92
+last-update-days: 100
 tags: ['scala', 'jmonkeyengine3', 'battle-simulator', 'graphx', 'parallelization', 'graph', 'game']
 languages: 
   - name: Java
@@ -30,10 +30,11 @@ video-link: https://www.youtube.com/embed/-BDVJ9IO2uk
 project_links:
   - name: github
     url: https://github.com/Graygzou/battle-simulator
-goals:
-  - "Understand graphs strength in the parallelization of tasks"
-  - "Compute a small turn based game with dungeon and dragons entities"
-  - "Learn JMonkey engine"
+additional-sections:
+  - name: goals
+    list: ["Understand graphs strength in the parallelization of tasks",
+           "Compute a small turn based game with dungeon and dragons entities",
+           "Learn JMonkey engine"]
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

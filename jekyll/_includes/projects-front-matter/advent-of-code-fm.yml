@@ -12,7 +12,8 @@ main-roles: [Programmer]
 project_links:
   - name: github
     url: https://github.com/Graygzou/advent-of-code
-goals:
-  - "Challenge myself."
-  - "Discover new things (new language, new problems, etc.)"
-  - "Share with my friends possible solutions and optimizations."
+additional-sections:
+  - name: goals
+    list: ["Challenge myself.",
+           "Discover new things (new language, new problems, etc.)",
+           "Share with my friends possible solutions and optimizations."]

@@ -12,3 +12,8 @@ goals:
   - Discover how to crawl a website
   - Analyse some data
   - Discover new games thanks to criterias
+additional-sections:
+  - name: goals
+    list: ["Discover how to crawl a website",
+           "Analyse some data",
+           "Discover new games thanks to criterias"]

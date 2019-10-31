@@ -57,9 +57,7 @@ collections:
   project-pages:
     output: true
     #sort_by: last_update
-  educations:
-    output: false
-  experiences:
+  additional-infos:
     output: false
 
 # Build settings

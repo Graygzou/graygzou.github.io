@@ -9,6 +9,10 @@ Screenshots
 
 Detailed Info
 --------------------
+When starting the game, severals bots spawned controlled by similar AI trying to win, by killing as many bots as possible.
+Bots can also pick up health or weapons if needed. The player could also take control of a bot by clicking on it.
+Ones the bot is controlled, some actions were possible like firing, switching weapons, etc.
+        
 All the below techniques were already in the game or added by the team into Raven.
 
 The final goal was to make bots behave like human as much as possible and create the illusion to playing against thinking humans.

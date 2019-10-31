@@ -5,7 +5,7 @@ description: 3D third-person game, made with Unity engine.
 stargazers-count: 2
 forks-count: 3
 updated-at: 2019-07-23 00:51:26
-last-update-days: 92
+last-update-days: 100
 tags: ['survival-game', 'open-world-game', 'finite-state-machine', 'steering-behaviors', 'third-person-game', 'game-development', 'unity3d']
 languages: 
   - name: C#
@@ -64,11 +64,12 @@ key-dates:
   - 2019-01-20 20:26:29 -0400
   - 2019-08-20 20:26:29 -0400
   - 2019-03-20 20:26:29 -0400
-goals:
-  - "Apply basics principles of game development with tools used in industry"
-  - "Earn video games development cycle and basics analystics documents"
-  - "Apply game design practices, game balancing, etc."
-  - "Apply SCRUM method to provide quick and regular feedbacks"
+additional-sections:
+  - name: goals
+    list: ["Apply basics principles of game development with tools used in industry",
+           "Earn video games development cycle and basics analystics documents",
+           "Apply game design practices, game balancing, etc.",
+           "Apply SCRUM method to provide quick and regular feedbacks"]
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

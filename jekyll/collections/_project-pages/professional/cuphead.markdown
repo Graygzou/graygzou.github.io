@@ -9,6 +9,15 @@ languages:
     color: "#178600"
 tags: ['unity3d', 'UI related to localization', 'UI integration', 'Bugs fixes', 'Tools']
 category: 'professional'
+pitch: "_Cuphead_ is a 2D Run and gun game published by StudioMDHR in 2017.
+         His gameplay is centered around continual boss fights, with interspersed run and gun levels.
+         <br/>
+         <br/>
+         I worked on the major patch of April 2019 which contains, the nintendo switch released, Mugman mode and localization in 11 languages of the game.
+         Most of my work where on the UI to fix bugs related to all the new languages in the game.
+         <br/>
+         <br/>
+         More details of this game can be found here : [wikipedia](https://en.wikipedia.org/wiki/Cuphead)"
 pinned: true
 platforms: Windows, Linux, Mac, Nintendo Switch
 engines: Unity3D
@@ -24,6 +33,11 @@ main-roles: [UI Programmer, Game Programmeur]
 project_links:
   #- name: steam
   #  url: todo
+additional-sections:
+  - name: tasks
+    list: ["Work on an existing projects and polish it.",
+           "Adapt UI per languages but keep the English version unchanged.",
+           "Integrate assets in the game for the specific languages."]
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

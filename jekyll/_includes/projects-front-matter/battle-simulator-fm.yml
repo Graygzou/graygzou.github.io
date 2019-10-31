@@ -13,7 +13,8 @@ video-link: https://www.youtube.com/embed/-BDVJ9IO2uk
 project_links:
   - name: github
     url: https://github.com/Graygzou/battle-simulator
-goals:
-  - "Understand graphs strength in the parallelization of tasks"
-  - "Compute a small turn based game with dungeon and dragons entities"
-  - "Learn JMonkey engine"
+additional-sections:
+  - name: goals
+    list: ["Understand graphs strength in the parallelization of tasks",
+           "Compute a small turn based game with dungeon and dragons entities",
+           "Learn JMonkey engine"]

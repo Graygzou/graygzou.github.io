@@ -22,6 +22,7 @@ project_links:
     url: https://github.com/Graygzou/brain-control
   - name: gamejolt
     url: https://gamejolt.com/games/BrainControl/323988
-constraints:
-  - "Theme: Order and Disorder."
-  - "Imposed words: Arcade, Survival, Multiplayers."
+additional-sections:
+  - name: contraints
+    list: ["Theme: Order and Disorder.",
+           "Imposed words: Arcade, Survival, Multiplayers."]

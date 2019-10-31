@@ -5,7 +5,7 @@ description: 2D platformer and puzzle game made with DygaEngine based on the ori
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-22 23:27:41
-last-update-days: 92
+last-update-days: 100
 tags: ['video-game', '2d-platformer-game', 'puzzle-game', 'dygaengine']
 languages: 
   - name: Java
@@ -32,11 +32,12 @@ main-roles: [Project Manager, Engine Programmer, Gameplay Programmeur]
 project_links:
   - name: github
     url: https://github.com/dyga-entertainment/lode-runner
-goals:
-  - Validate Object-Oriented Programming skills.
-  - Use design patterns in the game.
-  - Make simple, yet effective, artificial intelligences for enemies.
-  - Make a self-taught game.
+additional-sections:
+  - name: goals
+    list: ["Validate Object-Oriented Programming skills.",
+           "Use design patterns in the game.",
+           "Make simple, yet effective, artificial intelligences for enemies.",
+           "Make a self-taught game."]
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

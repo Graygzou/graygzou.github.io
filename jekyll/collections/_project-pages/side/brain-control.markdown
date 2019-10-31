@@ -5,7 +5,7 @@ description: Top down 2D game, made with Unity engine for the WonderJam 2018.
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-24 00:24:25
-last-update-days: 91
+last-update-days: 99
 tags: ['unity', '2d-game', 'survival-game', 'multiplayer-game', 'kill-zombies', 'steering-behaviors']
 languages: 
   - name: C#
@@ -51,9 +51,10 @@ project_links:
     url: https://github.com/Graygzou/brain-control
   - name: gamejolt
     url: https://gamejolt.com/games/BrainControl/323988
-constraints:
-  - "Theme: Order and Disorder."
-  - "Imposed words: Arcade, Survival, Multiplayers."
+additional-sections:
+  - name: contraints
+    list: ["Theme: Order and Disorder.",
+           "Imposed words: Arcade, Survival, Multiplayers."]
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

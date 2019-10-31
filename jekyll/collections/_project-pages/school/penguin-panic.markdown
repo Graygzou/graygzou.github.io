@@ -41,11 +41,12 @@ main-roles: [R&D, AI Programmer, UI Programmer, Game Programmeur, Animator]
 project_links:
   - name: gamejolt
     url: https://gamejolt.com/games/penguin-panic/330630
-constraints:
-  - The game needs to highlight a real social cause.
-  - The game needs to include an AI that change depending on players behaviors.
-  - The game needs to include a multiplayer aspect.
-  - The game needs to be played with an XBOX 360 controller.
+additional-sections:
+  - name: contraints
+    list: ["The game needs to highlight a real social cause.",
+           "The game needs to include an AI that change depending on players behaviors.",
+           "The game needs to include a multiplayer aspect.",
+           "The game needs to be played with an XBOX 360 controller."]
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

@@ -341,6 +341,10 @@
     @include relative-font-size(4.25);
   }
 
+  @include media-query($on-small-screen + 100) {
+    @include relative-font-size(2.25);
+  }
+
   white-space: nowrap;
   margin: 0;
   position: absolute;
@@ -478,13 +482,11 @@
   width: 30%;
 }
 
-
 /**
  * Home page
  */
 .home-section {
   position: relative;
-  padding-bottom: 30px;
 }
 
 .button-link {
@@ -511,6 +513,9 @@
 .home-li {
   margin-bottom: 0 !important;
   min-height: 150px;
+  width: 47%;
+  display: inline-block;
+  vertical-align: top;
 
   img {
     float: left;
@@ -525,6 +530,11 @@
       list-style: none;
     }
   }
+}
+
+.extra-space
+{
+  padding-bottom: 30px;
 }
 
 object {

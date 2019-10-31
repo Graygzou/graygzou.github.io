@@ -17,3 +17,8 @@ main-roles: [Project Manager, Game Programmer, Game Designer]
 project_links:
   - name: github
     url: https://github.com/dyga-entertainment/spida-phobia
+additional-sections:
+  - name: goals
+    list: ["Learn Unreal Engine 4.",
+           "Make my first VR application",
+           "Gamify a concept like phobias in order to make help people."]

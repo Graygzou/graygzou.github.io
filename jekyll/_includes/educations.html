@@ -15,13 +15,18 @@
                     <!--<li class="post-meta"><a href="{{ experience.link }}">{{ education.link }}</a></li>-->
                     <li class="post-meta">
                         <div>
+                            <svg class="svg-icon">
+                                <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#graduation-cap">
+                                </use>
+                            </svg>
                             <span class="role">{{ education.description }}</span>
-                            <br>
-                            <span>{{ education.additional-info }}</span>
+                            <!--<br>
+                            <span>{{ education.additional-info }}</span>-->
                         </div>
                     </li>
                     <li class="post-meta">
                         <table>
+                            <!--
                             <tr>
                                 <td>
                                     <svg class="svg-icon">
@@ -30,6 +35,9 @@
                                     </svg>
                                     {{ education.full-name }}
                                 </td>
+                            </tr>
+                            -->
+                            <tr>
                                 <td>
                                     <svg class="svg-icon">
                                         <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#map-marker">
@@ -46,6 +54,8 @@
                                     </svg>
                                     {{ education.start-date }}-{{ education.end-date }}
                                 </td>
+                            </tr>
+                            <tr>
                                 <td>
                                     <svg class="svg-icon">
                                         <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#link">
