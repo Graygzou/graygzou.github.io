@@ -60,6 +60,7 @@
 		div {
 			display: inline-block;
 			width: 49%;
+			vertical-align: top;
 		}
 	}
 }
@@ -187,5 +188,85 @@ iframe {
 @media only screen and (max-width: 700px){
 	.modal-content {
 		width: 80%;
+	}
+}
+
+/* Native Ruins puzzles */
+.puzzle {
+	margin: 0 auto;
+	padding: 2%;
+	margin-bottom: 2%;
+	display: block;
+	text-align: center;
+	background-color: lightgray;
+
+	div {
+		display: inline-block;
+		text-align: left;
+		vertical-align: super;
+		width: 29%;
+
+		h4 {
+			margin: 0;
+			font-weight: bold;
+		}
+
+		table {
+			text-align: center;
+		}
+
+		ol {
+			padding-left: 20px;
+			margin: 0;
+			min-width: 50%;
+		}
+	}
+
+	img {
+		vertical-align: top;
+		width: 70%;
+		display: inline-block;
+		border-radius: 10px;
+	}
+
+	tbody {
+		display: block;
+		text-align: left;
+
+		td {
+			border: none;
+			padding: 0;
+		}
+	}
+
+	table {
+		border: none;
+
+		.bloc > img {
+			padding: 5px;
+			width: 40px;
+		}
+	}
+}
+
+.puzzle-subtitles {
+	display: block;
+	font-style: italic;
+	border-bottom: 2px solid black;
+	margin-bottom: 2%;
+}
+
+.horizontal-list li {
+	display: inline;
+	list-style-type: circle;
+}
+
+.bloc-images {
+	display: block;
+	text-align: center;
+
+	img {
+		display: inline-block;
+		width: 40%;
 	}
 }

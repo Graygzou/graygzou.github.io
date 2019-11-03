@@ -1,6 +1,6 @@
 <!---
 Grégoire Boiron <gregoire.boiron@gmail.com>
-Copyright (c) 2018 Grégoire Boiron  All Rights Reserved.
+Copyright (c) 2018-2019 Grégoire Boiron  All Rights Reserved.
 --->
 
 Screenshots

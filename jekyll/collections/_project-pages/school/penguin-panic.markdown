@@ -17,12 +17,13 @@ languages:
     percentage: 0.19
     color: "#ccc"
 category: 'school'
-pitch: "Penguin Panic is a 3D multiplayer exploration game. 
+pitch: "_Penguin Panic_ is a 3D multiplayer exploration game. 
         It has been made for the Ubisoft Game Lab Competition 2018. 
         A brief description of this event is available here: [Ubisoft Game Lab Competition](https://montreal.ubisoft.com/en/our-engagements/education/university/game-lab-competition).
-        
-        **Award of the Best Technical Challenge and Innovation.**   
-        
+        <br/>
+        **Won the Best Technical Challenge and Innovation Award.**   
+        <br/>
+        <br/>
         Our story takes place in 2042s. Human activity has continued to spread, bringing with it the progression of global warming.   
         The Arctic is falling apart and the North Pole is drifting in the ocean.   
         While the situation is critical, a duo of scientists who study the glacial regions makes a strange discovery: the penguins are organizing to bring the Glacier to the North Pole!   

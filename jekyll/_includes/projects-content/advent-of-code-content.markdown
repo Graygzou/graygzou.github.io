@@ -1,6 +1,6 @@
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>
-Copyright (c) 2018 Gregoire Boiron  All Rights Reserved.
+Copyright (c) 2018-2019 Gregoire Boiron  All Rights Reserved.
 --->
 
 :memo: Table of contents
@@ -11,14 +11,12 @@ Copyright (c) 2018 Gregoire Boiron  All Rights Reserved.
 
 <a name="2017"></a> 2017 Edition
 ---------------------------------
----------------------------------
 I started out this section without completing the 2018 edition because I wanted to practice my C++.
 But I move on to something else since then.
 
 To be continued.
 
 <a name="2018"></a> 2018 Edition
----------------------------------
 ---------------------------------
 ### Blog post
 I wrote a small article about my experience. You can find it here: [blog article]({% post_url /blog/2019-10-09-advent-of-code-2018 %})

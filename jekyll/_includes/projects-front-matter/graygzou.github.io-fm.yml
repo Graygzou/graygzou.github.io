@@ -6,7 +6,7 @@ duration: "In progress"
 team-size:
   - role: Programmer
     amount: 1
-main-roles: [Front-End Programmeur, Tools Programmer]
+main-roles: [Front-End Programmer, Tools Programmer, Theme Programmer]
 project_links:
   - name: github
     url: https://graygzou.github.io/
@@ -14,4 +14,7 @@ additional-sections:
   - name: goals
     list: ["Automatise my website to avoid spending hours to update it.",
            "Learn Jekyll and Liquid tag system.",
+           "Use GitHub API to synchronize projects data directly from GitHub."
            "Build an automatisation flow to run all kind of stuffs before deploying it to GitHub."]
+  - name: constraints
+    list: ["Don't own a server yet so no back-end can be used."]

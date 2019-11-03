@@ -201,6 +201,10 @@
 .page-content {
   padding: $spacing-unit 0;
   flex: 1;
+
+  h2 {
+    border-bottom: 2px solid black;
+  }
 }
 
 .page-heading {

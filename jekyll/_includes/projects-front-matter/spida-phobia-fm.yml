@@ -2,7 +2,8 @@ category: 'school'
 pitch: "Spida-Phobia is a 3D Virtual Reality application made for a school project at the Université du Québec à Chicoutimi (UQAC).
         The course is the following : 3D interaction and virtual reality (8INF849).
         <br/>
-        This application is design to help people scared by spiders.
+        <br/>
+        This application is design to help people scared of spiders.
         The player can go through differents levels that involve different type of spiders.
         Visual of spiders can change (color, behavior, size). Each level contains a unique environment.
         Finally, haptic vibration are used to emphasis the immersion."
@@ -21,4 +22,4 @@ additional-sections:
   - name: goals
     list: ["Learn Unreal Engine 4.",
            "Make my first VR application",
-           "Gamify a concept like phobias in order to make help people."]
+           "Gamify a concept like phobias in order to help people."]

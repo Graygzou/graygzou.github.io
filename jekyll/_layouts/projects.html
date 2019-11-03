@@ -18,7 +18,6 @@ layout: default
         <br/>
     {%- endif -%}
     <h2 class="page-heading">{{ group.name | capitalize }} projects</h2>
-    <hr>
     <ul class="project-list">
         <!--{% assign sorted_pages = group.items | sort:"last-update-days" %}-->
         {% assign sorted_pages = group.items | sort:"priority" %}
