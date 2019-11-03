@@ -35,7 +35,7 @@ project_links:
   #  url: todo
 additional-sections:
   - name: tasks
-    list: ["Adapt UI\/text per language to have",
+    list: ["Adapt UI and text per language to have",
            "Integrate assets in the game for the specific languages.",
            "Correct bugs like UI animations, devices (controllers), etc."]
   - name: constraints
