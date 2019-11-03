@@ -40,7 +40,7 @@ additional-sections:
   - name: goals
     list: ["Automatise my website to avoid spending hours to update it.",
            "Learn Jekyll and Liquid tag system.",
-           "Build an automatisation flow to run all kind of stuffs before deploying it to GitHub."]
+           "Build an automatization flow to run all kind of stuffs before deploying it to GitHub."]
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>
