@@ -13,9 +13,9 @@
 <meta property="og:url" content="/project-pages/school/penguin-panic.html" />
 <meta property="og:site_name" content="Grégoire Boiron" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-11-01T01:58:15+00:00" />
+<meta property="article:published_time" content="2019-11-03T20:31:30+00:00" />
 <script type="application/ld+json">
-{"description":"3D exploration, arcade game made for the Ubisoft Game Lab Competition 2018","dateModified":"2019-11-01T01:58:15+00:00","datePublished":"2019-11-01T01:58:15+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/project-pages/school/penguin-panic.html"},"@type":"BlogPosting","url":"/project-pages/school/penguin-panic.html","headline":"penguin-panic","@context":"http://schema.org"}</script>
+{"description":"3D exploration, arcade game made for the Ubisoft Game Lab Competition 2018","dateModified":"2019-11-03T20:31:30+00:00","datePublished":"2019-11-03T20:31:30+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/project-pages/school/penguin-panic.html"},"@type":"BlogPosting","url":"/project-pages/school/penguin-panic.html","headline":"penguin-panic","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Grégoire Boiron" /><script>
 //if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
@@ -157,8 +157,18 @@
   <div class="post-content e-content" itemprop="articleBody">
     <h2>Overview</h2>
 
-    <aside class="overview_table">
-      <div>
+    <aside class="overview_table"><div>
+        <span class="table_title">Links:</span>
+        <ul class="social-media-links"><li>
+            <a href="https://gamejolt.com/games/penguin-panic/330630">
+              <svg class="svg-icon">
+                <use xlink:href="/assets/icons/gamefolio-social-icons.svg#gamejolt">
+                </use>
+              </svg>
+            </a>
+          </li></ul>
+      </div>
+<div>
         <span class="table_title">Platform:</span>
         <ul><li itemprop="gamePlatform">Windows</li></ul>
       </div>
@@ -223,17 +233,15 @@
     <div class="side_overview">
 
       <h4>Project Pitch</h4>
-      <p>Penguin Panic is a 3D multiplayer exploration game. It has been made for the Ubisoft Game Lab Competition 2018. A brief description of this event is available here: <a href="https://montreal.ubisoft.com/en/our-engagements/education/university/game-lab-competition">Ubisoft Game Lab Competition</a>.
-<strong>Award of the Best Technical Challenge and Innovation.</strong>
-Our story takes place in 2042s. Human activity has continued to spread, bringing with it the progression of global warming. The Arctic is falling apart and the North Pole is drifting in the ocean. While the situation is critical, a duo of scientists who study the glacial regions makes a strange discovery: the penguins are organizing to bring the Glacier to the North Pole! Amazed by what they have in front of them, the two scientists have a revelation: the courage of these little penguins could well inspire the whole world! They decided to launch a broadcast on a real-time streaming platform very popular in recent years: Twatch.tv. You play the leader penguin of this colony. Your mission: return the Glacier to the North Pole to save the Arctic!</p>
-<h4>Project Constaints</h4>
+      <p><em>Penguin Panic</em> is a 3D multiplayer exploration game. It has been made for the Ubisoft Game Lab Competition 2018. A brief description of this event is available here: <a href="https://montreal.ubisoft.com/en/our-engagements/education/university/game-lab-competition">Ubisoft Game Lab Competition</a>. <br> <strong>Won the Best Technical Challenge and Innovation Award.</strong> <br> <br> Our story takes place in 2042s. Human activity has continued to spread, bringing with it the progression of global warming. The Arctic is falling apart and the North Pole is drifting in the ocean. While the situation is critical, a duo of scientists who study the glacial regions makes a strange discovery: the penguins are organizing to bring the Glacier to the North Pole! Amazed by what they have in front of them, the two scientists have a revelation: the courage of these little penguins could well inspire the whole world! They decided to launch a broadcast on a real-time streaming platform very popular in recent years: Twatch.tv. You play the leader penguin of this colony. Your mission: return the Glacier to the North Pole to save the Arctic!</p>
+<h4>Project contraints</h4>
       <ul class="ul_goal">
 <li>→ The game needs to highlight a real social cause.</li>
 <li>→ The game needs to include an AI that change depending on players behaviors.</li>
 <li>→ The game needs to include a multiplayer aspect.</li>
 <li>→ The game needs to be played with an XBOX 360 controller.</li>
-</ul>gamejolt Link : [penguin-panic](https://gamejolt.com/games/penguin-panic/330630){: .table_title }  <br>
-    </div>
+</ul>
+</div>
 
     <article class="detailed_description">
 
@@ -244,7 +252,7 @@ Copyright (c) 2018-2019 Gregoire Boiron  All Rights Reserved.
 
 <!---
 Grégoire Boiron <gregoire.boiron@gmail.com>
-Copyright (c) 2018 Grégoire Boiron  All Rights Reserved.
+Copyright (c) 2018-2019 Grégoire Boiron  All Rights Reserved.
 --->
 
 <h2 id="screenshots">Screenshots</h2>
@@ -252,7 +260,53 @@ Copyright (c) 2018 Grégoire Boiron  All Rights Reserved.
     </section>
 
 <h2 id="detailed-info">Detailed Info</h2>
-<p>We developed an adaptive AI that spawns elements (chunks, killer whales, penguins) in the game depending on the behavior of the players.</p>
+
+<h3 id="what-ive-done">What I’ve done</h3>
+
+<h4 id="player-controller--animations">Player Controller / Animations</h4>
+<p>I help in the first version of the player controller. 
+Moving from a state to another (walking, swimming, sliding), adapt the speed, the animation, etc.
+I also made some of the penguin animations since we lack of artists/animators in the team.</p>
+
+<h4 id="water-simulation">Water simulation</h4>
+<p>At the beginning of the project, we wanted to have our gameplay heavily based on the water of the game.
+Indeed, since most of it was supposed to be penguins in the water, pushing ice chunks, swimming and creating waves.</p>
+
+<p>We had many hypothesis from the start. 
+We knew we were going to use a mesh and move vertices in order to create the water but it will not be enough to generate waves.
+To have random waves we thought about <code class="highlighter-rouge">perlin noise</code>. 
+It could create the height map that would correspond on the position of each vertex on given time.
+At mid-project we realize that a technique called that use <code class="highlighter-rouge">Fast Fourier Transform</code> could generate an ocean.
+But we thought this technique alone will not be enough to deal with waves and water interactions.</p>
+
+<p>We found a paper about <code class="highlighter-rouge">IWave algorithm</code> and dig more into it. Paper can be found <a href="http://jerrytessendorf.blogspot.com/2011/10/interactive-water-surfaces-jerry.html">here</a>.
+We also study a physic based buoyancy to match the water perfectly. 
+Our sources comes from Gamasutra and can be found <a href="https://www.gamasutra.com/view/news/237528/Water_interaction_model_for_boats_in_video_games.php">here</a>.</p>
+
+<p>Even if we put a lot of works into it, we did not managed to have something efficient and .
+We decided to not include it in the final version of the game to avoid to many problems later on.</p>
+
+<h4 id="adaptative-ai">Adaptative AI</h4>
+<p>We developed an adaptive AI because it was a constraints.
+We decided to make it spawns elements (chunks, killer whales, penguins) depending on the player behavior.</p>
+
+<p>Since the game is multiplayer, we isolate two behaviours:</p>
+<ul>
+  <li>Collaborative behavior.</li>
+  <li>Competitive behavior.</li>
+</ul>
+
+<p>So the AI will study players actions and decisions in order to attribute them a score corresponding to a specific behavior. 
+The below chart summarize the meaning of the score each players can get. 
+If the score is negative it means he’s in a collaborative mindset. If the score is positive then the player is considered as competitive.
+<img src="/assets/project-images/penguin-panic/adaptativeAi.png" alt="player behavior"></p>
+
+<p>This score will change depending on the action on each players. 
+For example if the player with the most penguins followers decide to eat a fish his score will increase (competitive). 
+But if he decided to give a penguin to the other player than his score will decrease (cooperative).</p>
+
+<p>The most consecutive action in a specific behavior, the more weight will be attribute to the decrease/increase.
+I helped implementing this system and also some tools related to it like the spawning grid useful for the AI to spawn objects.</p>
 
 
 
