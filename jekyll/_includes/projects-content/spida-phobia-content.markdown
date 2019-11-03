@@ -9,18 +9,24 @@ Screenshots
 
 Detailed Info
 --------------------
-We build 4 different levels with progressive "difficulty" in order to help player get used to spiders.
-1. The first level correspond to "The Museum": In this level, you can only see inanimate spiders with glasses.
+We build 4 different levels with progressive "difficulty" in order to help player get used to spiders:
+* The museum
+* The playground
+* The house
+* The cave
 
-2. The second level is "The Playground": Once again, only inanimate spiders are present. 
+#### Levels description
+1. The Museum: In this level, you can only see inanimate spiders with glasses.
+
+2. The Playground: Once again, only inanimate spiders are present. 
 But this time, you can directly interact with it by holding, study closely and throwing them if you wish.
 This allows the player to get use to small spiders but also bigger one.
 It also gamify this first interaction of the player with spiders.
 
-3. The third level is "The House": In this level, there is moving spiders. But they are in vivarium. 
+3. The House: In this level, there is moving spiders. But they are in vivarium. 
 The players can choose to pick them up or not.
 
-4. Finally the last level is "The Cave": This is the spookiest level since the light not very bright.
+4. The Cave: This is the harder level since it happens in a dark room.
 You can find a mix of both inanimate and moving spiders. 
 Also for the first time in the application, spiders can spawn from the ceiling.
 Note that we expected only really confident players will reach this level.
@@ -52,4 +58,4 @@ We did underestimate how much work we needed on that part in the beginning of th
 Finally, we still managed to create an application that can be a first step to fight against arachnophobia. 
 As an example, 2 developers of the team did not like spiders so much before doing the application. 
 It was sometimes painful to test the application with huge spiders. 
-But by doing the whole application levels per levels both found it easier to do.
+But, by doing the whole application levels per levels, the 2 members found it easier to complete.
