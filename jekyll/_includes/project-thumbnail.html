@@ -3,7 +3,7 @@
  -->
 {% capture image_path %}/assets/project-images/{{ project.title }}/{{ project.title }}-thumbnail.png{% endcapture %}
 <div class="test-li">
-  <img src="{{ image_path }}"/>
+  <img src="{{ image_path }}" alt="{{ project.title }}-thumbnail"/>
   <div>
     <h3 class="project-heading">
       <a class="post-link" href="{{ project.url | relative_url }}">

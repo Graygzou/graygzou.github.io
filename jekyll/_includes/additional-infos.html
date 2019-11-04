@@ -10,7 +10,7 @@
       {%- for info in sorted_infos -%}
         <!--{{ info.start-dates[0] }}-->
         <li class="home-li">
-          <img src="{{ info.logo }}"/>
+          <img src="{{ info.logo }}" alt="{{ info.title }}-thumbnail"/>
           <div>
             <h3 class="project-heading post-link">{{ info.title | escape }}</h3>
             <ul>
