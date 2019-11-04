@@ -7,7 +7,7 @@ layout: default
     <div class="project-thumbnail">
       <h1 class="project-title p-name" itemprop="name">{{ page.title | replace: '-', ' ' | capitalize | escape }}</h1>
       {% capture image_path %}/assets/project-images/{{ page.title }}/{{ page.title }}-banner.png{% endcapture %}
-      <img class="thumbnail-img" src="{{ image_path }}"/>
+      <img class="thumbnail-img" src="{{ image_path }}" alt="{{ page.title }}-banner"/>
     </div>
     <p class="project-description">{{ page.description }}</p>
     <p class="post-meta">
