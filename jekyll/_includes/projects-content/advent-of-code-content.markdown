@@ -35,11 +35,11 @@ Plus me and my friends were more fighting for concise solutions than submission 
 |   2   | [Inventory Management System](https://adventofcode.com/2018/day/2) | :star: :star: | 51497 |
 |   3   | [No Matter How You Slice It](https://adventofcode.com/2018/day/3) | :star: :star: | 39646 |
 |   4   | [Repose Record](https://adventofcode.com/2018/day/4) |               | 28990 |
-|   5   | [Alchemical Reduction]((https://adventofcode.com/2018/day/5)) | :star: :star: | 29452 |
-|   6   | [Chronal Coordinates]((https://adventofcode.com/2018/day/6)) | :star: :star: | 20361 |
-|   7   | [The Sum of Its Parts]((https://adventofcode.com/2018/day/7)) | :star: :star: | 16790 |
-|   8   | [Memory Maneuver]((https://adventofcode.com/2018/day/8)) | :star: :star: | 16440 |
-|   9   | [Marble Mania]((https://adventofcode.com/2018/day/9)) | :star: :star: | 14291 |
+|   5   | [Alchemical Reduction](https://adventofcode.com/2018/day/5) | :star: :star: | 29452 |
+|   6   | [Chronal Coordinates](https://adventofcode.com/2018/day/6) | :star: :star: | 20361 |
+|   7   | [The Sum of Its Parts](https://adventofcode.com/2018/day/7) | :star: :star: | 16790 |
+|   8   | [Memory Maneuver](https://adventofcode.com/2018/day/8) | :star: :star: | 16440 |
+|   9   | [Marble Mania](https://adventofcode.com/2018/day/9) | :star: :star: | 14291 |
 |  10   | [The Stars Align](https://adventofcode.com/2018/day/10) | :star: :star: | 14576 |
 |  11   | [Chronal Charge](https://adventofcode.com/2018/day/11) | :star: :star: | 13616 |
 |  12   | [Subterranean Sustainability](https://adventofcode.com/2018/day/12) | :star: :star: | 11382 |
@@ -47,7 +47,7 @@ Plus me and my friends were more fighting for concise solutions than submission 
 |  14   | [Chocolate Charts](https://adventofcode.com/2018/day/14) | :star: :star: | 9850 |
 |  15   | [Beverage Bandits](https://adventofcode.com/2018/day/15) | :star: :star: | 5364 |
 |  16   | [Chronal Classification](https://adventofcode.com/2018/day/16) | :star: :star: | 7420 |
-|  17   | [Reservoir Research]((https://adventofcode.com/2018/day/17)) | :star: :star: | 5157 |
+|  17   | [Reservoir Research](https://adventofcode.com/2018/day/17) | :star: :star: | 5157 |
 |  18   | [Settlers of The North Pole](https://adventofcode.com/2018/day/18) | :star: :star: | 6477 |
 |  19   | [Go With The Flow](https://adventofcode.com/2018/day/19) |               | 4897 |
 |  20   | [A Regular Map](https://adventofcode.com/2018/day/20) | :star: :star: | 4154 |
