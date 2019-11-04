@@ -13,9 +13,9 @@
 <meta property="og:url" content="/project-pages/school/raven.html" />
 <meta property="og:site_name" content="Grégoire Boiron" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-11-03T22:47:07+00:00" />
+<meta property="article:published_time" content="2019-11-04T13:27:34+00:00" />
 <script type="application/ld+json">
-{"description":"Top down 2D game, similar to a Quake-style deathmatch.","dateModified":"2019-11-03T22:47:07+00:00","datePublished":"2019-11-03T22:47:07+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/project-pages/school/raven.html"},"@type":"BlogPosting","url":"/project-pages/school/raven.html","headline":"raven","@context":"http://schema.org"}</script>
+{"description":"Top down 2D game, similar to a Quake-style deathmatch.","dateModified":"2019-11-04T13:27:34+00:00","datePublished":"2019-11-04T13:27:34+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/project-pages/school/raven.html"},"@type":"BlogPosting","url":"/project-pages/school/raven.html","headline":"raven","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Grégoire Boiron" /><script>
 //if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
@@ -104,7 +104,7 @@
     <div class="project-thumbnail">
       <h1 class="project-title p-name" itemprop="name">Raven</h1>
       
-      <img class="thumbnail-img" src="/assets/project-images/raven/raven-banner.png">
+      <img class="thumbnail-img" src="/assets/project-images/raven/raven-banner.png" alt="raven-banner">
     </div>
     <p class="project-description">Top down 2D game, similar to a Quake-style deathmatch.</p>
     <p class="post-meta"></p>
@@ -224,33 +224,7 @@
       </div>
     </aside>
 
-    <!--<aside class="overview_table">
-      <div>
-        <span class="table_title">Platform:</span>
-        <ul><li itemprop="gamePlatform">Windows</li></ul>
-      </div><div>
-        <span class="table_title">Tools Used:</span>
-        <ul><li itemscope itemtype="https://schema.org/Thing"><span itemprop="name">Visual Studio</span></li><li itemscope itemtype="https://schema.org/Thing"><span itemprop="name">Lua</span></li></ul>
-      </div><div>
-        <span class="table_title">Duration:</span>
-        <ul>
-          <li>1 month</li>
-        </ul>
-      </div>
-      <div>
-        <span class="table_title">Team Size:</span>
-        <ul>
-          <li>{"role"=>"Programmers", "amount"=>6}</li>
-        </ul>
-      </div>
-      <div>
-        <span class="table_title">Main Role:</span>
-        <ul><li>Project Manager</li><li>IA Programmer</li><li>Gameplay Programmer</li></ul>
-      </div>
-    </aside>-->
-
     <div class="side_overview">
-
       <h4>Project Pitch</h4>
       <p>Raven is a top down 2D game, similar to a Quake-style deathmatch. It is originaly made by Mat Bucklandin his book, Programming Game AI By Example. This application has been completed for a school project at the Université du Québec à Chicoutimi (UQAC). The course is the following: <a href="http://cours.uqac.ca/8IAR125">Artificial Intelligence for Video Games (8IAR125)</a>.
 The gameplay of Raven is similar of a Quake-style deathmatch. When starting the game, severals bots spawned controlled by similar AI trying to win, by killing as many bots as possible. Bots can also pick up health or weapons if needed. The player could also take control of a bot by clicking on it. Ones the bot is controlled, some actions were possible like firing, switching weapons, etc.</p>
@@ -305,7 +279,7 @@ Ones the bot is controlled, some actions were possible like firing, switching we
 This brain used goal-driven behavior to tell the bot what he should do right now based on game entries.</p>
 
 <h4 id="goal-decomposition">Goal decomposition</h4>
-<p><img class="class-diagram" src="/assets/project-images/raven/goals-composite.png"></p>
+<p><img class="class-diagram" src="/assets/project-images/raven/goals-composite.png" alt="goals-composite"></p>
 
 <p>This process works just like the human brain : if you want to achieve something, you will decomposed this goal into many sub-goals easier to solve than the first one. 
 And if it’s not enough yet, keep doing this until sub-goals granularity are simple enough to be code by a function or a line of code. 
@@ -336,8 +310,8 @@ Fuzzy logic is initially used to put values on vague linguistic terms like “sm
 By adding fuzzy rules to it, we will be able to compute the final value which will tell the bot, based on a final fuzzy set, which weapon is the best right now.</p>
 
 <div class="bloc-images">
-    <img src="/assets/project-images/raven/ammo-fuzzy.png">
-    <img src="/assets/project-images/raven/weapon-fuzzy.png">
+    <img src="/assets/project-images/raven/ammo-fuzzy.png" alt="ammo-fuzzy">
+    <img src="/assets/project-images/raven/weapon-fuzzy.png" alt="weapon-fuzzy">
 </div>
 
 <h4 id="neural-network">Neural Network</h4>
@@ -357,8 +331,8 @@ To make sure the net was trained, we made tests with other data than our trainin
 We’ve find out that our learning process were doing good and we finally tested it in-game.</p>
 
 <div class="bloc-images">
-    <img src="/assets/project-images/raven/network.png">
-    <img src="/assets/project-images/raven/results.png">
+    <img src="/assets/project-images/raven/network.png" alt="network">
+    <img src="/assets/project-images/raven/results.png" alt="results">
 </div>
 
 <p>The final results were correct since the learning bot shoot at the other bots. 
@@ -379,7 +353,7 @@ We even noticed that his score were slightly higher than the average.</p>
     <span class="close">×</span>
 
     <!-- Modal Content (The Image) -->
-    <img class="modal-content" id="img01">
+    <img class="modal-content" id="imgZoom" alt="imgZoom" data-proofer-ignore>
 
     <!-- Modal Caption (Image Text) -->
     <div id="caption"></div>
@@ -395,13 +369,12 @@ We even noticed that his score were slightly higher than the average.</p>
   }
 
   // Get the image and insert it inside the modal - use its "alt" text as a caption
-  var modalImg = document.getElementById("img01");
+  var modalImg = document.getElementById("imgZoom");
   var captionText = document.getElementById("caption");
   function zoom(element){
     modal.style.display = "block";
-    console.log(element.src);
-    console.log(element.alt)
     modalImg.src = element.src;
+    modalImg.alt = element.alt;
     captionText.innerHTML = element.alt;
   }
 

@@ -13,9 +13,9 @@
 <meta property="og:url" content="/project-pages/professional/cuphead.html" />
 <meta property="og:site_name" content="Grégoire Boiron" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-11-03T22:47:07+00:00" />
+<meta property="article:published_time" content="2019-11-04T13:27:34+00:00" />
 <script type="application/ld+json">
-{"description":"UI polish and bugs fixes related to the localization of the game","dateModified":"2019-11-03T22:47:07+00:00","datePublished":"2019-11-03T22:47:07+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/project-pages/professional/cuphead.html"},"@type":"BlogPosting","url":"/project-pages/professional/cuphead.html","headline":"cuphead","@context":"http://schema.org"}</script>
+{"description":"UI polish and bugs fixes related to the localization of the game","dateModified":"2019-11-04T13:27:34+00:00","datePublished":"2019-11-04T13:27:34+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/project-pages/professional/cuphead.html"},"@type":"BlogPosting","url":"/project-pages/professional/cuphead.html","headline":"cuphead","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Grégoire Boiron" /><script>
 //if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
@@ -104,7 +104,7 @@
     <div class="project-thumbnail">
       <h1 class="project-title p-name" itemprop="name">Cuphead</h1>
       
-      <img class="thumbnail-img" src="/assets/project-images/cuphead/cuphead-banner.png">
+      <img class="thumbnail-img" src="/assets/project-images/cuphead/cuphead-banner.png" alt="cuphead-banner">
     </div>
     <p class="project-description">UI polish and bugs fixes related to the localization of the game</p>
     <p class="post-meta"></p>
@@ -172,43 +172,14 @@
       </div>
     </aside>
 
-    <!--<aside class="overview_table">
-      <div>
-        <span class="table_title">Platform:</span>
-        <ul><li itemprop="gamePlatform">Windows, Linux, Mac, Nintendo Switch</li></ul>
-      </div><div>
-        <span class="table_title">Engine:</span>
-        <ul><li itemscope itemtype="https://schema.org/Thing"><span itemprop="name">Unity3D</span></li></ul>
-      </div><div>
-        <span class="table_title">Tools Used:</span>
-        <ul><li itemscope itemtype="https://schema.org/Thing"><span itemprop="name">Rewired</span></li><li itemscope itemtype="https://schema.org/Thing"><span itemprop="name">TextMeshPro Git</span></li><li itemscope itemtype="https://schema.org/Thing"><span itemprop="name">Steam Upload</span></li><li itemscope itemtype="https://schema.org/Thing"><span itemprop="name">JIRA</span></li><li itemscope itemtype="https://schema.org/Thing"><span itemprop="name">SDEV (Switch)</span></li><li itemscope itemtype="https://schema.org/Thing"><span itemprop="name">Paint.net</span></li><li itemscope itemtype="https://schema.org/Thing"><span itemprop="name">Jenkins</span></li></ul>
-      </div><div>
-        <span class="table_title">Duration:</span>
-        <ul>
-          <li>4 months</li>
-        </ul>
-      </div>
-      <div>
-        <span class="table_title">Team Size:</span>
-        <ul>
-          <li>{"role"=>"Programmer", "amount"=>"1 (on site)"}{"role"=>"Producer", "amount"=>"1 (on site)"}</li>
-        </ul>
-      </div>
-      <div>
-        <span class="table_title">Main Role:</span>
-        <ul><li>UI Programmer</li><li>Game Programmeur</li></ul>
-      </div>
-    </aside>-->
-
     <div class="side_overview">
-
       <h4>Project Pitch</h4>
       <p><em>Cuphead</em> is a 2D Run and gun game published by StudioMDHR in 2017. His gameplay is centered around continual boss fights, with interspersed run and gun levels. <br> <br> I worked on the major patch of April 2019 which contains, the nintendo switch released, Mugman mode and localization in 11 languages of the game. Most of my work where on the UI to fix bugs related to all the new languages in the game. <br> <br> More details of this game can be found here : <a href="https://en.wikipedia.org/wiki/Cuphead">wikipedia</a></p>
 <h4>Project tasks</h4>
       <ul class="ul_goal">
 <li>→ Adapt UI and text per language to have</li>
 <li>→ Integrate assets in the game for the specific languages.</li>
-<li>→ Correct bugs like UI animations, devices (controllers), etc.</li>
+<li>→ Correct bugs like UI animations, controllers, etc.</li>
 </ul>
 <h4>Project constraints</h4>
       <ul class="ul_goal">
@@ -298,7 +269,7 @@ In 11 new languages !-->
     <span class="close">×</span>
 
     <!-- Modal Content (The Image) -->
-    <img class="modal-content" id="img01">
+    <img class="modal-content" id="imgZoom" alt="imgZoom" data-proofer-ignore>
 
     <!-- Modal Caption (Image Text) -->
     <div id="caption"></div>
@@ -314,13 +285,12 @@ In 11 new languages !-->
   }
 
   // Get the image and insert it inside the modal - use its "alt" text as a caption
-  var modalImg = document.getElementById("img01");
+  var modalImg = document.getElementById("imgZoom");
   var captionText = document.getElementById("caption");
   function zoom(element){
     modal.style.display = "block";
-    console.log(element.src);
-    console.log(element.alt)
     modalImg.src = element.src;
+    modalImg.alt = element.alt;
     captionText.innerHTML = element.alt;
   }
 
