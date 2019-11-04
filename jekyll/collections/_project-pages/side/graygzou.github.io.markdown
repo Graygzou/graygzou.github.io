@@ -4,21 +4,21 @@ title: graygzou.github.io
 description:  Github portfolio made from scratch.
 stargazers-count: 0
 forks-count: 0
-updated-at: 2019-10-25 01:58:29
-last-update-days: 6
+updated-at: 2019-11-03 21:36:25
+last-update-days: 0
 tags: ['portfolio', 'html-css', 'javascript', 'python', 'code-generation', 'github-api']
 languages: 
   - name: HTML
-    percentage: 44.9
+    percentage: 45.0
     color: "#e34c26"
-  - name: Python
-    percentage: 22.9
-    color: "#3572A5"
   - name: CSS
-    percentage: 22.0
+    percentage: 22.9
     color: "#563d7c"
+  - name: Python
+    percentage: 22.2
+    color: "#3572A5"
   - name: Ruby
-    percentage: 9.1
+    percentage: 8.9
     color: "#701516"
   - name: Shell
     percentage: 1.1
@@ -32,7 +32,7 @@ duration: "In progress"
 team-size:
   - role: Programmer
     amount: 1
-main-roles: [Front-End Programmeur, Tools Programmer]
+main-roles: [Front-End Programmer, Tools Programmer, Theme Programmer]
 project_links:
   - name: github
     url: https://graygzou.github.io/
@@ -40,7 +40,10 @@ additional-sections:
   - name: goals
     list: ["Automatise my website to avoid spending hours to update it.",
            "Learn Jekyll and Liquid tag system.",
+           "Use GitHub API to synchronize projects data directly from GitHub."
            "Build an automatization flow to run all kind of stuffs before deploying it to GitHub."]
+  - name: constraints
+    list: ["Don't own a server yet so no back-end can be used."]
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

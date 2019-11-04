@@ -5,8 +5,8 @@ description: Virtual Reality simulation that helps people suffering from arachno
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-23 01:53:04
-last-update-days: 100
-tags: ['virtual-reality', 'arachnophobia', 'unreal-engine-4', 'simulation']
+last-update-days: 103
+tags: ['virtual-reality', 'aracnophobia', 'unreal-engine-4', 'simulation']
 languages: 
   - name: C++
     percentage: 96.7
@@ -19,12 +19,12 @@ languages:
     color: "#555555"
 
 category: 'school'
-pitch: "_Spida-Phobia_ is a 3D Virtual Reality application made for a school project at the Université du Québec à Chicoutimi (UQAC).
+pitch: "Spida-Phobia is a 3D Virtual Reality application made for a school project at the Université du Québec à Chicoutimi (UQAC).
         The course is the following : 3D interaction and virtual reality (8INF849).
         <br/>
         <br/>
-        This application is design to help people scared by spiders.
-        The player can go through different levels that involve different type of spiders.
+        This application is design to help people scared of spiders.
+        The player can go through differents levels that involve different type of spiders.
         Visual of spiders can change (color, behavior, size). Each level contains a unique environment.
         Finally, haptic vibration are used to emphasis the immersion."
 platforms: Windows
@@ -42,7 +42,7 @@ additional-sections:
   - name: goals
     list: ["Learn Unreal Engine 4.",
            "Make my first VR application",
-           "Gamify a concept like phobias in order to make help people."]
+           "Gamify a concept like phobias in order to help people."]
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

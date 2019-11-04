@@ -37,7 +37,7 @@ additional-sections:
   - name: tasks
     list: ["Adapt UI and text per language to have",
            "Integrate assets in the game for the specific languages.",
-           "Correct bugs like UI animations, devices (controllers), etc."]
+           "Correct bugs like UI animations, controllers, etc."]
   - name: constraints
     list: ["The English version must stay unchanged.",
            "The client must accept all the changes made (via screenshots)."]

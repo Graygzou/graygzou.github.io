@@ -5,7 +5,7 @@ description: 3D third-person game, made with Unity engine.
 stargazers-count: 2
 forks-count: 3
 updated-at: 2019-07-23 00:51:26
-last-update-days: 100
+last-update-days: 103
 tags: ['survival-game', 'open-world-game', 'finite-state-machine', 'steering-behaviors', 'third-person-game', 'game-development', 'unity3d']
 languages: 
   - name: C#

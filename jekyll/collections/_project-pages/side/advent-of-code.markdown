@@ -5,7 +5,7 @@ description: My solutions for Advent of Code (AoC) challenges.
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-23 02:08:56
-last-update-days: 100
+last-update-days: 103
 tags: ['lua', 'aoc', 'advent-of-code']
 languages: 
   - name: Lua
