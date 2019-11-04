@@ -23,10 +23,12 @@ GEM
       http_parser.rb (~> 0.6.0)
     ethon (0.12.0)
       ffi (>= 1.3.0)
+    eventmachine (1.2.7)
     eventmachine (1.2.7-x64-mingw32)
     execjs (2.7.0)
     faraday (0.15.4)
       multipart-post (>= 1.2, < 3)
+    ffi (1.11.1)
     ffi (1.11.1-x64-mingw32)
     forwardable-extended (2.6.0)
     gemoji (3.0.1)
@@ -84,6 +86,14 @@ GEM
     html-pipeline (2.12.0)
       activesupport (>= 2)
       nokogiri (>= 1.4)
+    html-proofer (3.13.0)
+      addressable (~> 2.3)
+      mercenary (~> 0.3)
+      nokogiri (~> 1.10)
+      parallel (~> 1.3)
+      rainbow (~> 3.0)
+      typhoeus (~> 1.3)
+      yell (~> 2.0)
     http_parser.rb (0.6.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
@@ -205,13 +215,17 @@ GEM
       jekyll-seo-tag (~> 2.1)
     minitest (5.11.3)
     multipart-post (2.1.1)
+    nokogiri (1.10.4)
+      mini_portile2 (~> 2.4.0)
     nokogiri (1.10.4-x64-mingw32)
       mini_portile2 (~> 2.4.0)
     octokit (4.14.0)
       sawyer (~> 0.8.0, >= 0.5.3)
+    parallel (1.18.0)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (3.1.1)
+    rainbow (3.0.0)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
@@ -219,7 +233,7 @@ GEM
     ruby-enum (0.7.2)
       i18n
     ruby_dep (1.5.0)
-    rubyzip (1.2.3)
+    rubyzip (2.0.0)
     safe_yaml (1.0.5)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
@@ -240,12 +254,15 @@ GEM
       tzinfo (>= 1.0.0)
     unicode-display_width (1.6.0)
     wdm (0.1.1)
+    yell (2.2.0)
 
 PLATFORMS
+  ruby
   x64-mingw32
 
 DEPENDENCIES
   github-pages
+  html-proofer
   jekyll-paginate
   jemoji
   tzinfo (~> 1.2)
