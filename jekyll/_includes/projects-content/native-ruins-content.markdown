@@ -92,9 +92,9 @@ Those will be later add, thanks to spirit totems.
     <h4>Native Ruins</h4>
     <span class="puzzle-subtitles">Enigme 1 - First jumping puzzle</span>
     <table>
-	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/jump2.png"> Jumping actions</td> </tr>
-	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/run2.png">Running actions</td> </tr>
-	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/totem.png">Bear Totem</td> </tr>
+	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/jump2.png" alt="jump icon"> Jumping actions</td> </tr>
+	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/run2.png" alt="run icon">Running actions</td> </tr>
+	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/totem.png" alt="totem icon">Bear Totem</td> </tr>
     </table>
     <span class="puzzle-subtitles">Puzzle solution :</span>
     <ol>
@@ -107,7 +107,7 @@ Those will be later add, thanks to spirit totems.
 	    <li>Press E to obtain the bear totem.</li>
     </ol>
   </div>
-  <img src="/assets/project-images/native-ruins/enigme1noted.png">
+  <img src="/assets/project-images/native-ruins/enigme1noted.png" alt="puzzle 1">
 </div>
 
 The second puzzle requires all the spirit totems : 
@@ -115,17 +115,15 @@ the bear totem and the wolf totem.
 That's why, it's the last puzzle in the game.
 
 <div class="puzzle">
-  <img src="/assets/project-images/native-ruins/enigme4noted.png">
+  <img src="/assets/project-images/native-ruins/enigme4noted.png" alt="puzzle 4">
   <div>
     <h4>Native Ruins</h4>
     <span class="puzzle-subtitles">Enigme 4 - Second jumping puzzle</span>
     <table>
-	    <tr>
-		    <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/jump2.png">Jumping actions</td>
-	    </tr>
-	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/run2.png">Running actions</td> </tr>
-	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/TS.png">Transformation Switch</td> </tr>
-	    <tr> <td class="bloc"> <img src="/assets/project-images/native-ruins/Puzzle-icons/rope.png"> Rope</td> </tr>
+	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/jump2.png" alt="jump icon">Jumping actions</td> </tr>
+	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/run2.png" alt="run icon">Running actions</td> </tr>
+	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/TS.png" alt="transformation switch">Transformation Switch</td> </tr>
+	    <tr> <td class="bloc"> <img src="/assets/project-images/native-ruins/Puzzle-icons/rope.png" alt="rope icon"> Rope</td> </tr>
     </table>
     <span class="puzzle-subtitles">Puzzle solution :</span>
     <ol>
@@ -152,10 +150,10 @@ This helps keep the puzzles order we decided.
     <h4>Native Ruins</h4>
     <span class="puzzle-subtitles">Enigme 2 - Mirror puzzle</span>
     <table>
-	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/laser.png">Laser beam</td> </tr>
-	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/bear1.png">Moving bears initial positions</td> </tr>
-	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/bear2.png">Right position</td> </tr>
-	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/sail.png">Sail</td> </tr>
+	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/laser.png" alt="laser icon">Laser beam</td> </tr>
+	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/bear1.png" alt="initial bear pos icon">Moving bears initial positions</td> </tr>
+	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/bear2.png" alt="final bear pos icon">Right position</td> </tr>
+	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/sail.png" alt="sail icon">Sail</td> </tr>
     </table>
     <span class="puzzle-subtitles">Puzzle solution :</span>
     <ol>
@@ -166,7 +164,7 @@ This helps keep the puzzles order we decided.
 	    <li>Once the gate's open, Press E near the sail to pick it up.</li>
     </ol>
   </div>
-  <img src="/assets/project-images/native-ruins/enigme2noted.png">
+  <img src="/assets/project-images/native-ruins/enigme2noted.png" alt="puzzle 2">
 </div>
 
 #### Action puzzle
@@ -174,13 +172,13 @@ Finally, we created an action puzzle where the player has to destroy rocks with 
 This puzzle is simple but it's the player's job to find out by himself the correct way.
 
 <div class="puzzle">
-  <img src="/assets/project-images/native-ruins/enigme3noted.png">
+  <img src="/assets/project-images/native-ruins/enigme3noted.png" alt="puzzle 3">
   <div>
     <h4>Native Ruins</h4>
     <span class="puzzle-subtitles">Enigme 3 - </span>
     <table>
-	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/circle.png">imaged Breakable rocks</td> </tr>
-	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/totem.png">Wolf Totem</td> </tr>
+	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/circle.png" alt="circle">imaged Breakable rocks</td> </tr>
+	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/totem.png" alt="totem icon">Wolf Totem</td> </tr>
     </table>
     <span class="puzzle-subtitles">Puzzle solution :</span>
     <ol>
