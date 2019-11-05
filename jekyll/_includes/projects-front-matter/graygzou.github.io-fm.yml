@@ -17,4 +17,5 @@ additional-sections:
            "Use GitHub API to synchronize projects data directly from GitHub.",
            "Build an automatization flow to run all kind of stuffs before deploying it to GitHub."]
   - name: constraints
-    list: ["Don't own a server yet so no back-end can be used."]
+    list: ["Using GitHub page to host it so no back-end can be used.",
+           "Don't own an address so have to use the standard GitHub one."]
