@@ -23,7 +23,7 @@ before_script:
 
 script:
   - ./scripts/cibuild.sh
-  - ./scripts/reduceimagessize.sh
+  - ./scripts/postprocess.sh
 
 branches:
   except:

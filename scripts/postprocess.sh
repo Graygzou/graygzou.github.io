@@ -23,8 +23,8 @@ rename "s/fs8//g" ./jekyll/assets/project-images/*.png
 
 # If debug is needed, uncomment this line.
 # It will allow to connect remotly to the travis TRAVIS_BUILD_NUMBER
-curl https://www.teleconsole.com/get.sh | sh
-teleconsole
+# curl https://www.teleconsole.com/get.sh | sh
+# teleconsole
 
 # ====================
 # JPG COMPRESSION
@@ -33,3 +33,10 @@ teleconsole
 # See https://github.com/google/guetzli for more info
 # Run the exe for each jpg found
 #find -depth -name "*.jpg" -exec guetzli --verbose {} {}
+
+
+# ====================
+# HTML PROOFER
+# ====================
+# Check that everything is ok with htmlproofer
+bundle exec htmlproofer site --url-ignore "https://www.linkedin.com/in/gregoire-boiron/,https://www.latecoere.aero/en/"
