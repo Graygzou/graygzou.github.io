@@ -24,7 +24,6 @@ before_script:
 script:
   - ./scripts/cibuild.sh
   - ./scripts/postprocess.sh
-  - bundle exec htmlproofer site --url-ignore "https://www.linkedin.com/in/gregoire-boiron/,https://www.latecoere.aero/en/"
 
 branches:
   except:

@@ -34,4 +34,6 @@ rename "s/fs8//g" ./jekyll/assets/project-images/*.png
 # HTML PROOFER
 # ====================
 # Check that everything is ok with htmlproofer
-# Must be execute in the travis.yml because it's easier to access the Gemfile.
+# Must first enter jekyll folder to access the Gemfile.
+cd jekyll
+bundle exec htmlproofer site --url-ignore "https://www.linkedin.com/in/gregoire-boiron/,https://www.latecoere.aero/en/"
