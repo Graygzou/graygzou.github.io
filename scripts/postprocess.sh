@@ -6,11 +6,6 @@ set -e
 # ====================
 # PNG COMPRESSION
 # ====================
-# For all the png in the project run https://pngquant.org/pngquant.tar.bz2
-curl -o pngquant.tar.bz2 "https://pngquant.org/pngquant.tar.bz2"
-# Create a folder that will hold the tool
-mkdir pngquant
-tar -xvf pngquant.tar.bz2 -C ./pngquant
 # This will create duplicate of images with -fs8 at the end of the file
 echo "Run pngquant command"
 find ./jekyll/assets/project-images/ -name "*.png" -exec pngquant --force {} \;
