@@ -3,6 +3,9 @@
 # Enable error reporting to the console.
 set -e
 
+curl https://www.teleconsole.com/get.sh | sh
+teleconsole
+
 # ====================
 # PNG COMPRESSION
 # ====================
