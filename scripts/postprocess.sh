@@ -14,10 +14,10 @@ echo "Run pngquant command"
 find jekyll/site/assets/project-images/ -name "*.png" -exec pngquant --force {} \;
 # Remove the previous image not optimized
 echo "Remove the previous image not optimized"
-find jekyll/site/assets/project-images/ -not -name "*fs8.png" -exec rm {} \;
+find jekyll/site/assets/project-images/ -name "*.png" -not -name "*fs8.png" -exec rm {} \;
 # Rename the file generate to match previous version
 echo "Rename compressed images to match declarations"
-rename "s/fs8//g" jekyll/site/assets/project-images/*.png
+find jekyll/site/assets/project-images/ -name "*.png" -exec rename "s/-fs8//g" {} \;
 
 # If debug is needed, uncomment this line.
 # It will allow to connect remotly to the travis TRAVIS_BUILD_NUMBER
