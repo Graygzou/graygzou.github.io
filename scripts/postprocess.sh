@@ -21,8 +21,8 @@ rename "s/fs8//g" jekyll/site/assets/project-images/*.png
 
 # If debug is needed, uncomment this line.
 # It will allow to connect remotly to the travis TRAVIS_BUILD_NUMBER
-# curl https://www.teleconsole.com/get.sh | sh
-# teleconsole
+curl https://www.teleconsole.com/get.sh | sh
+teleconsole
 
 # ====================
 # JPG COMPRESSION
