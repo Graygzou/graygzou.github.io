@@ -3,21 +3,21 @@
 # Enable error reporting to the console.
 set -e
 
-curl https://www.teleconsole.com/get.sh | sh
-teleconsole
+#curl https://www.teleconsole.com/get.sh | sh
+#teleconsole
 
 # ====================
 # PNG COMPRESSION
 # ====================
 # This will create duplicate of images with -fs8 at the end of the file
 echo "Run pngquant command"
-find site/assets/project-images/ -name "*.png" -exec pngquant --force {} \;
+find jekyll/site/assets/project-images/ -name "*.png" -exec pngquant --force {} \;
 # Remove the previous image not optimized
 echo "Remove the previous image not optimized"
-find site/assets/project-images/ -not -name "*fs8.png" -exec rm {} \;
+find jekyll/site/assets/project-images/ -not -name "*fs8.png" -exec rm {} \;
 # Rename the file generate to match previous version
 echo "Rename compressed images to match declarations"
-rename "s/fs8//g" site/assets/project-images/*.png
+rename "s/fs8//g" jekyll/site/assets/project-images/*.png
 
 # If debug is needed, uncomment this line.
 # It will allow to connect remotly to the travis TRAVIS_BUILD_NUMBER
