@@ -23,15 +23,15 @@ find jekyll/site/assets/project-images/ -name "*.png" -exec rename "s/-fs8//g" {
 
 # If debug is needed, uncomment this line.
 # It will allow to connect remotly to the travis TRAVIS_BUILD_NUMBER
-# curl https://www.teleconsole.com/get.sh | sh
-# teleconsole
+curl https://www.teleconsole.com/get.sh | sh
+teleconsole
 
 # ========================================
 # JPG COMPRESSION WITH GUETZLI
 # ========================================
 # For all the jpg in the project run Guetzli.
 # See https://github.com/google/guetzli for more info
-find jekyll/site/assets/ -name "*.jpg" -exec guetzli --verbose {} {} \;
+find jekyll/site/assets/ -name "*.jpg" -exec guetzli/bin/Release/guetzli --verbose {} {} \;
 
 # ====================
 # HTML PROOFER
