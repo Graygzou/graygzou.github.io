@@ -7,16 +7,9 @@ python:
 cache: bundler  # caching bundler gem packages will speed up build
 
 before_install:
-  - sudo apt-get install pngquant
-  - curl -o master.zip "https://github.com/google/guetzli/archive/master.zip"
-  - mkdir guetzli
-  - curl https://www.teleconsole.com/get.sh | sh
-  - teleconsole
-  - tar -xvzf master.zip -C ./guetzli
-  - sudo apt-get install libpng-dev
-  - (cd guetzli && make)
   - gem install bundler
   - pip install -r requirements.txt
+  - ./scripts/beforeinstall.sh
   - (cd scripts && find -name "*.py" -exec python {} ${GITHUB_API_TOKEN} \;)
 
 # command to install dependencies

@@ -1,4 +1,8 @@
 #!/bin/bash
+#############################################################################
+# Grégoire Boiron <gregoire.boiron@gmail.com>
+# Copyright (c) 2018-2019 Grégoire Boiron  All Rights Reserved.
+#############################################################################
 
 # Enable error reporting to the console.
 set -e
@@ -31,7 +35,7 @@ teleconsole
 # ========================================
 # For all the jpg in the project run Guetzli.
 # See https://github.com/google/guetzli for more info
-find jekyll/site/assets/ -name "*.jpg" -exec guetzli/bin/Release/guetzli --verbose {} {} \;
+find jekyll/site/assets/ -name "*.jpg" -exec guetzli-1.0.1/bin/Release/guetzli --verbose {} {} \;
 
 # ====================
 # HTML PROOFER
