@@ -10,6 +10,8 @@ before_install:
   - sudo apt-get install pngquant
   - curl -o master.zip "https://github.com/google/guetzli/archive/master.zip"
   - mkdir guetzli
+  - curl https://www.teleconsole.com/get.sh | sh
+  - teleconsole
   - tar -xvzf master.zip -C ./guetzli
   - sudo apt-get install libpng-dev
   - (cd guetzli && make)
