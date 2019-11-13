@@ -39,6 +39,7 @@ team-size:
   - role: Programmers
     amount: 8
 main-roles: [R&D, AI Programmer, UI Programmer, Game Programmeur, Animator]
+youtube-link: https://www.youtube.com/embed/wHgwNyjVPJM
 project_links:
   - name: gamejolt
     url: https://gamejolt.com/games/penguin-panic/330630

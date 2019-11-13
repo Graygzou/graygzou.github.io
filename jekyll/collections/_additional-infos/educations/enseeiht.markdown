@@ -1,6 +1,6 @@
 ---
 title: ENSEEIHT
-logo: /assets/images/educations/n7.png
+logo: /assets/images/educations/n7.svg
 sub-title: Engineering Degree specialized in Computer Science and Applied Mathematics.
 additional-info: Members of N7Consulting / Participated twice to the Google Hash Code competition. 
 start-dates: [2015]

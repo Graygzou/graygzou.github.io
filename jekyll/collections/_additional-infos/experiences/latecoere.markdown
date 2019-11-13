@@ -2,7 +2,7 @@
 title: Latecoere
 full-name: Groupe Latécoère
 localisation: Toulouse, France
-logo: /assets/images/experiences/latecoere.png
+logo: /assets/images/experiences/latecoere.svg
 sub-title: Computer Science Intern
 start-dates: [2016]
 end-date: 2016

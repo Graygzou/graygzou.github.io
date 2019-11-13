@@ -1,6 +1,6 @@
 ---
 title: Game Lab Competition
-logo: /assets/images/challenges/ubisoft.png
+logo: /assets/images/challenges/ubisoft.svg
 sub-title: Won "Best technical challenge and innovation" award.
 start-dates: [2018]
 localisation: UQAC, Chicoutimi, CA
