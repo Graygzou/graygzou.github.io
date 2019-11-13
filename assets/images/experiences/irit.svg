@@ -1,0 +1,26 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created using Krita: http://krita.org -->
+<svg xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:krita="http://krita.org/namespaces/svg/krita"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    width="43.2pt"
+    height="43.2pt"
+    viewBox="-5 -5 53.2 50.2">
+<defs/>
+<g id="group0" transform="matrix(0.631359619940324 0 0 0.631359596447009 2.609726443769 0.273436258799445)" fill="none">
+  <circle id="shape0" transform="translate(0, 1.122)" r="29.899" cx="29.899" cy="29.899" fill="#ff4c00"/>
+  <circle id="shape1" transform="translate(12.499, 18.339)" r="3.234" cx="3.234" cy="3.234" fill="#ffffff"/>
+  <rect id="shape2" transform="translate(34.184, 26.495)" fill="#ffffff" width="3.517" height="16.878"/>
+  <rect id="shape3" transform="translate(11.331, 26.495)" fill="#ffffff" width="3.515" height="16.878"/>
+  <rect id="shape4" transform="translate(7.814, 26.495)" fill="#ffffff" width="7.032" height="3.516"/>
+  <g id="group1" fill="none">
+   <rect id="shape5" transform="translate(16.956, 26.495)" fill="#ffffff" width="3.516" height="16.878"/>
+   <rect id="shape6" transform="translate(16.956, 26.495)" fill="#ffffff" width="6.329" height="3.516"/>
+  </g>
+  <rect id="shape7" transform="translate(44.028, 27.198)" fill="#ffffff" width="3.517" height="16.175"/>
+  <path id="shape8" transform="translate(22.582, 26.495)" fill="#ffffff" d="M9.704 5.594C9.704 2.345 8.423 0 3.091 0L2.648 0L2.635 3.516L2.932 3.516C5.059 3.516 5.928 4.033 5.928 5.999C5.93 7.92 5.016 8.437 2.979 8.437L0 8.437L0 11.439L2.48 11.438L5.555 17.067L9.53 17.064L6.151 10.998C8.963 10.105 9.704 7.925 9.704 5.594Z"/>
+  <rect id="shape9" transform="translate(39.458, 26.495)" fill="#ffffff" width="12.658" height="3.516"/>
+ </g>
+</svg>
