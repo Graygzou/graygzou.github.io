@@ -33,6 +33,7 @@ kramdown:
 # in the templates via {{ site.myvariable }}.
 title: Grégoire Boiron
 birthday_year: 1994
+city: France
 profil_description: Programmer Generalist at iLLOGIKA
 email: gregoire.boiron@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"

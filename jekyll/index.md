@@ -11,5 +11,5 @@ order: 1
 
 Welcome to my website, portfolio, blog, and many more !
 
-I'm Grégoire Boiron, a {{ site.time | date: '%Y' | minus:site.birthday_year }} years old game developer who currently live in Montreal, CA.   
+I'm Grégoire Boiron, a {{ site.time | date: '%Y' | minus:site.birthday_year }} years old game developer who currently live in {{ site.city }}.   
 Feel free to check out my projects on Github or chat with me on social network ! 
