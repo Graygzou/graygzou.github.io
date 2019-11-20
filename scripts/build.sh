@@ -29,4 +29,4 @@ git status
 git add scripts/grammarBotResults.txt
 git status
 git commit -a -m "Upload grammarbot results to develop for build #$TRAVIS_BUILD_NUMBER"
-git push --quiet origin `master` > /dev/null 2>&1
+git push
