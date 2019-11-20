@@ -1,7 +1,5 @@
-<!---
-Grégoire Boiron <gregoire.boiron@gmail.com>
-Copyright (c) 2018-2019 Grégoire Boiron  All Rights Reserved.
---->
+<!--- Grégoire Boiron <gregoire.boiron@gmail.com> --->
+<!--- Copyright (c) 2018-2019 Grégoire Boiron  All Rights Reserved. --->
 
 Screenshots
 --------------------
