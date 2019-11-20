@@ -1,0 +1,450 @@
+Detected language: en-US
+Results for ..\jekyll\_includes\projects-content\advent-of-code-content.markdown:
+==================================================================================
+    Category:{'GRAMMAR'}
+        Rule:{'CD_NN'}
+            Word: {'Simulator'}, Index Offset: {'1382'}, Possible Replacements: ['Simulators']
+    Category:{'PUNCTUATION'}
+        Rule:{'PUNCTUATION_PARAGRAPH_END'}
+            Word: {'Board'}, Index Offset: {'66'}, Possible Replacements: ['Board.', 'Board!', 'Board?', 'Board:', 'Board,', 'Board;']
+            Word: {'article'}, Index Offset: {'346'}, Possible Replacements: ['article.', 'article!', 'article?', 'article:', 'article,', 'article;']
+    Category:{'TYPOGRAPHY'}
+        Rule:{'WHITESPACE_RULE'}
+            Word: {'  '}, Index Offset: {'461'}, Possible Replacements: [' ']
+            Word: {'   '}, Index Offset: {'583'}, Possible Replacements: [' ']
+            Word: {'  '}, Index Offset: {'1515'}, Possible Replacements: [' ']
+    Category:{'TYPOS'}
+        Rule:{'MORFOLOGIK_RULE_EN_US'}
+            Word: {'Chronal'}, Index Offset: {'723'}, Possible Replacements: ['Coronal']
+            Word: {'Chronal'}, Index Offset: {'873'}, Possible Replacements: ['Coronal']
+            Word: {'Chronal'}, Index Offset: {'1001'}, Possible Replacements: ['Coronal']
+            Word: {'Chronal'}, Index Offset: {'1138'}, Possible Replacements: ['Coronal']
+            Word: {'Chronal'}, Index Offset: {'1278'}, Possible Replacements: ['Coronal']
+
+Detected language: en-US
+Results for ..\jekyll\_includes\projects-content\battle-simulator-content.markdown:
+==================================================================================
+    Category:{'PUNCTUATION'}
+        Rule:{'PUNCTUATION_PARAGRAPH_END'}
+            Word: {'Info'}, Index Offset: {'24'}, Possible Replacements: ['Info.', 'Info!', 'Info?', 'Info:', 'Info,', 'Info;']
+
+Detected language: en-US
+Results for ..\jekyll\_includes\projects-content\brain-control-content.markdown:
+==================================================================================
+    Category:{'CASING'}
+        Rule:{'UPPERCASE_SENTENCE_START'}
+            Word: {'this'}, Index Offset: {'719'}, Possible Replacements: ['This']
+    Category:{'GRAMMAR'}
+        Rule:{'DID_BASEFORM'}
+            Word: {'received'}, Index Offset: {'397'}, Possible Replacements: ['receive']
+    Category:{'PUNCTUATION'}
+        Rule:{'PUNCTUATION_PARAGRAPH_END'}
+            Word: {'Info'}, Index Offset: {'24'}, Possible Replacements: ['Info.', 'Info!', 'Info?', 'Info:', 'Info,', 'Info;']
+    Category:{'TYPOS'}
+        Rule:{'CONFUSION_RULE'}
+            Word: {'though'}, Index Offset: {'438'}, Possible Replacements: ['thought']
+            Word: {'and'}, Index Offset: {'531'}, Possible Replacements: ['an']
+        Rule:{'MORFOLOGIK_RULE_EN_US'}
+            Word: {'Pathfinding'}, Index Offset: {'33'}, Possible Replacements: ['Pathfinder', 'Pathfinders']
+            Word: {'wallavoidance'}, Index Offset: {'704'}, Possible Replacements: ['wall avoidance']
+            Word: {'wallavoidance'}, Index Offset: {'793'}, Possible Replacements: ['wall avoidance']
+
+Detected language: en-US
+Results for ..\jekyll\_includes\projects-content\colosseum-overcharge.markdown:
+==================================================================================
+    Category:{'PUNCTUATION'}
+        Rule:{'PUNCTUATION_PARAGRAPH_END'}
+            Word: {'Progress'}, Index Offset: {'16'}, Possible Replacements: ['Progress.', 'Progress!', 'Progress?', 'Progress:', 'Progress,', 'Progress;']
+    Category:{'TYPOS'}
+        Rule:{'MORFOLOGIK_RULE_EN_US'}
+            Word: {'buzy'}, Index Offset: {'367'}, Possible Replacements: ['busy', 'buy', 'bury', 'buzz', 'buoy', 'Suzy', 'BUY']
+            Word: {'remotly'}, Index Offset: {'398'}, Possible Replacements: ['remotely']
+
+Detected language: en-US
+Results for ..\jekyll\_includes\projects-content\dyga-engine-content.markdown:
+==================================================================================
+    Category:{'PUNCTUATION'}
+        Rule:{'PUNCTUATION_PARAGRAPH_END'}
+            Word: {'Info'}, Index Offset: {'24'}, Possible Replacements: ['Info.', 'Info!', 'Info?', 'Info:', 'Info,', 'Info;']
+
+Detected language: en-US
+Results for ..\jekyll\_includes\projects-content\gmtk-2019-statistics-content.markdown:
+==================================================================================
+
+Detected language: en-US
+Results for ..\jekyll\_includes\projects-content\graygzou.github.io-content.markdown:
+==================================================================================
+    Category:{'GRAMMAR'}
+        Rule:{'A_INFINITVE'}
+            Word: {'the generate'}, Index Offset: {'1666'}, Possible Replacements: []
+        Rule:{'A_LOT_OF_NN'}
+            Word: {'a lot of feature'}, Index Offset: {'343'}, Possible Replacements: ['a lot of features']
+        Rule:{'DID_BASEFORM'}
+            Word: {'seems'}, Index Offset: {'2684'}, Possible Replacements: ['seem']
+    Category:{'PUNCTUATION'}
+        Rule:{'PUNCTUATION_PARAGRAPH_END'}
+            Word: {'Info'}, Index Offset: {'73'}, Possible Replacements: ['Info.', 'Info!', 'Info?', 'Info:', 'Info,', 'Info;']
+    Category:{'TYPOGRAPHY'}
+        Rule:{'COMMA_PARENTHESIS_WHITESPACE'}
+            Word: {' .'}, Index Offset: {'1440'}, Possible Replacements: ['.']
+        Rule:{'WHITESPACE_RULE'}
+            Word: {'   '}, Index Offset: {'1329'}, Possible Replacements: [' ']
+    Category:{'TYPOS'}
+        Rule:{'CAN_SETUP'}
+            Word: {'is setup'}, Index Offset: {'1141'}, Possible Replacements: ['is set up']
+        Rule:{'CONFUSION_RULE'}
+            Word: {'use'}, Index Offset: {'137'}, Possible Replacements: ['used']
+            Word: {'is'}, Index Offset: {'2443'}, Possible Replacements: ['his']
+        Rule:{'MORFOLOGIK_RULE_EN_US'}
+            Word: {'jekyllthemes'}, Index Offset: {'239'}, Possible Replacements: []
+            Word: {'jekyll'}, Index Offset: {'476'}, Possible Replacements: ['Jekyll']
+            Word: {'Github'}, Index Offset: {'776'}, Possible Replacements: ['GitHub']
+            Word: {'Github'}, Index Offset: {'793'}, Possible Replacements: ['GitHub']
+            Word: {'github'}, Index Offset: {'867'}, Possible Replacements: ['GitHub', 'git hub']
+            Word: {'Cron'}, Index Offset: {'1120'}, Possible Replacements: ['Iron', 'Crown', 'Corn', 'Crop', 'Con', 'Crow', 'Aron', 'Coon', 'Crone', 'Crony', 'Croon', 'Creon', 'Ron', 'Pron', 'Tron', 'Cr on', 'CON', 'CRN', 'CRO', 'CROM', 'CROS']
+            Word: {'_The'}, Index Offset: {'1133'}, Possible Replacements: ['the']
+            Word: {'correctly_'}, Index Offset: {'1170'}, Possible Replacements: ['correctly']
+            Word: {'xml'}, Index Offset: {'1442'}, Possible Replacements: ['XML', 'ml', 'XL', 'XXL', 'x ml', 'AML', 'BML', 'CML', 'EML', 'GML', 'ML', 'MML', 'PML', 'SML', 'UML', 'VML', 'WML', 'XMP', 'XMS', 'XYL']
+            Word: {'svg'}, Index Offset: {'1477'}, Possible Replacements: ['avg', 'VG', 'sag', 'SVN', 'SVG', 'AVG', 'BVG', 'CVG', 'HVG', 'IVG', 'LVG', 'PVG', 'SAG', 'SBG', 'SEG', 'SFG', 'SG', 'SGG', 'SHG', 'SIG', 'SLG', 'SMG', 'SNG', 'SPG', 'SSG', 'STG', 'SVA', 'SVB', 'SVC', 'SVD', 'SVE', 'SVGA', 'SVI', 'SVK', 'SVL', 'SVM', 'SVP', 'SVR', 'SVT']
+            Word: {'jekyll'}, Index Offset: {'1542'}, Possible Replacements: ['Jekyll']
+            Word: {'jekyll'}, Index Offset: {'1557'}, Possible Replacements: ['Jekyll']
+            Word: {'htmlproofer'}, Index Offset: {'1611'}, Possible Replacements: []
+            Word: {'endup'}, Index Offset: {'2411'}, Possible Replacements: ['endue', 'end up']
+
+Detected language: en-US
+Results for ..\jekyll\_includes\projects-content\lode-runner-content.markdown:
+==================================================================================
+    Category:{'GRAMMAR'}
+        Rule:{'EVERY_EACH_SINGULAR'}
+            Word: {'items'}, Index Offset: {'177'}, Possible Replacements: ['item']
+        Rule:{'HAVE_PART_AGREEMENT'}
+            Word: {'write'}, Index Offset: {'918'}, Possible Replacements: ['written']
+        Rule:{'MANY_NN'}
+            Word: {'Several AI'}, Index Offset: {'611'}, Possible Replacements: ['Several AIs', 'Several ais']
+    Category:{'PUNCTUATION'}
+        Rule:{'PUNCTUATION_PARAGRAPH_END'}
+            Word: {'Info'}, Index Offset: {'24'}, Possible Replacements: ['Info.', 'Info!', 'Info?', 'Info:', 'Info,', 'Info;']
+            Word: {'World'}, Index Offset: {'332'}, Possible Replacements: ['World.', 'World!', 'World?', 'World:', 'World,', 'World;']
+    Category:{'TYPOGRAPHY'}
+        Rule:{'WHITESPACE_RULE'}
+            Word: {'  '}, Index Offset: {'684'}, Possible Replacements: [' ']
+    Category:{'TYPOS'}
+        Rule:{'MORFOLOGIK_RULE_EN_US'}
+            Word: {'ZQSD'}, Index Offset: {'373'}, Possible Replacements: ['ZLSD']
+
+Detected language: en-US
+Results for ..\jekyll\_includes\projects-content\metenorage-content.markdown:
+==================================================================================
+    Category:{'GRAMMAR'}
+        Rule:{'DID_BASEFORM'}
+            Word: {'plugged'}, Index Offset: {'101'}, Possible Replacements: ['plug']
+        Rule:{'TO_NON_BASE'}
+            Word: {'implements'}, Index Offset: {'969'}, Possible Replacements: ['implement']
+    Category:{'PUNCTUATION'}
+        Rule:{'COMMA_COMPOUND_SENTENCE'}
+            Word: {'clips but'}, Index Offset: {'897'}, Possible Replacements: ['clips, but']
+        Rule:{'PUNCTUATION_PARAGRAPH_END'}
+            Word: {'Info'}, Index Offset: {'24'}, Possible Replacements: ['Info.', 'Info!', 'Info?', 'Info:', 'Info,', 'Info;']
+    Category:{'TYPOS'}
+        Rule:{'CONFUSION_RULE'}
+            Word: {'main'}, Index Offset: {'1725'}, Possible Replacements: ['man']
+        Rule:{'MORFOLOGIK_RULE_EN_US'}
+            Word: {'JBullet'}, Index Offset: {'403'}, Possible Replacements: ['Bullet']
+            Word: {'rigidbody'}, Index Offset: {'477'}, Possible Replacements: ['rigid body']
+            Word: {'rigidbody'}, Index Offset: {'559'}, Possible Replacements: ['rigid body']
+            Word: {'LWJGL'}, Index Offset: {'657'}, Possible Replacements: ['LGL']
+            Word: {'throught'}, Index Offset: {'1206'}, Possible Replacements: ['through', 'thought', 'through t']
+        Rule:{'SAVE_SAFE'}
+            Word: {'save'}, Index Offset: {'1677'}, Possible Replacements: ['safe']
+
+Detected language: en-US
+Results for ..\jekyll\_includes\projects-content\native-ruins-content.markdown:
+==================================================================================
+    Category:{'CASING'}
+        Rule:{'UPPERCASE_SENTENCE_START'}
+            Word: {'lift'}, Index Offset: {'3952'}, Possible Replacements: ['Lift']
+    Category:{'COLLOCATIONS'}
+        Rule:{'INDEPENDENTLY_FROM_OF'}
+            Word: {'independent from'}, Index Offset: {'1109'}, Possible Replacements: ['independent of']
+        Rule:{'IN_A_ISLAND'}
+            Word: {'in the island'}, Index Offset: {'877'}, Possible Replacements: ['on the island']
+    Category:{'GRAMMAR'}
+        Rule:{'ALLOW_TO'}
+            Word: {'to make'}, Index Offset: {'2147'}, Possible Replacements: ['making']
+        Rule:{'DID_BASEFORM'}
+            Word: {'used'}, Index Offset: {'1721'}, Possible Replacements: ['use']
+            Word: {'used'}, Index Offset: {'2386'}, Possible Replacements: ['use']
+        Rule:{'NON3PRS_VERB'}
+            Word: {'implements'}, Index Offset: {'939'}, Possible Replacements: ['implement']
+        Rule:{'PLURAL_VERB_AFTER_THIS'}
+            Word: {'This allow'}, Index Offset: {'2136'}, Possible Replacements: ['This allows']
+        Rule:{'TO_NON_BASE'}
+            Word: {'implements'}, Index Offset: {'1631'}, Possible Replacements: ['implement']
+            Word: {'implements'}, Index Offset: {'2070'}, Possible Replacements: ['implement']
+            Word: {'creates'}, Index Offset: {'5817'}, Possible Replacements: ['create']
+    Category:{'PUNCTUATION'}
+        Rule:{'PUNCTUATION_PARAGRAPH_END'}
+            Word: {'Info'}, Index Offset: {'669'}, Possible Replacements: ['Info.', 'Info!', 'Info?', 'Info:', 'Info,', 'Info;']
+    Category:{'TYPOGRAPHY'}
+        Rule:{'COPYRIGHT'}
+            Word: {'(C)'}, Index Offset: {'903'}, Possible Replacements: ['©']
+        Rule:{'WHITESPACE_RULE'}
+            Word: {'    '}, Index Offset: {'369'}, Possible Replacements: [' ']
+            Word: {'    '}, Index Offset: {'399'}, Possible Replacements: [' ']
+            Word: {'	    '}, Index Offset: {'409'}, Possible Replacements: ['\t']
+            Word: {'	    '}, Index Offset: {'435'}, Possible Replacements: ['\t']
+            Word: {'	    '}, Index Offset: {'470'}, Possible Replacements: ['\t']
+            Word: {'	    '}, Index Offset: {'495'}, Possible Replacements: ['\t']
+            Word: {'    '}, Index Offset: {'532'}, Possible Replacements: [' ']
+            Word: {'  '}, Index Offset: {'628'}, Possible Replacements: [' ']
+            Word: {'    '}, Index Offset: {'996'}, Possible Replacements: [' ']
+            Word: {'    '}, Index Offset: {'1269'}, Possible Replacements: [' ']
+            Word: {'    '}, Index Offset: {'1299'}, Possible Replacements: [' ']
+            Word: {'	    '}, Index Offset: {'1309'}, Possible Replacements: ['\t']
+            Word: {'	    '}, Index Offset: {'1374'}, Possible Replacements: ['\t']
+            Word: {'	    '}, Index Offset: {'1398'}, Possible Replacements: ['\t']
+            Word: {'	    '}, Index Offset: {'1458'}, Possible Replacements: ['\t']
+            Word: {'    '}, Index Offset: {'1525'}, Possible Replacements: [' ']
+            Word: {'  '}, Index Offset: {'2999'}, Possible Replacements: [' ']
+            Word: {'     '}, Index Offset: {'3035'}, Possible Replacements: [' ']
+            Word: {'     '}, Index Offset: {'3042'}, Possible Replacements: [' ']
+            Word: {'     '}, Index Offset: {'3049'}, Possible Replacements: [' ']
+            Word: {'    '}, Index Offset: {'3055'}, Possible Replacements: [' ']
+            Word: {'    '}, Index Offset: {'3100'}, Possible Replacements: [' ']
+            Word: {'	    '}, Index Offset: {'3123'}, Possible Replacements: ['\t']
+            Word: {'	    '}, Index Offset: {'3164'}, Possible Replacements: ['\t']
+            Word: {'	    '}, Index Offset: {'3199'}, Possible Replacements: ['\t']
+            Word: {'	    '}, Index Offset: {'3240'}, Possible Replacements: ['\t']
+            Word: {'	    '}, Index Offset: {'3322'}, Possible Replacements: ['\t']
+            Word: {'	    '}, Index Offset: {'3379'}, Possible Replacements: ['\t']
+            Word: {'    '}, Index Offset: {'3418'}, Possible Replacements: [' ']
+            Word: {'  '}, Index Offset: {'3798'}, Possible Replacements: [' ']
+            Word: {'     '}, Index Offset: {'3835'}, Possible Replacements: [' ']
+            Word: {'     '}, Index Offset: {'3842'}, Possible Replacements: [' ']
+            Word: {'     '}, Index Offset: {'3849'}, Possible Replacements: [' ']
+            Word: {'     '}, Index Offset: {'3856'}, Possible Replacements: [' ']
+            Word: {'    '}, Index Offset: {'3862'}, Possible Replacements: [' ']
+            Word: {'    '}, Index Offset: {'3907'}, Possible Replacements: [' ']
+            Word: {'	    '}, Index Offset: {'3947'}, Possible Replacements: ['\t']
+            Word: {'	    '}, Index Offset: {'4000'}, Possible Replacements: ['\t']
+            Word: {'	    '}, Index Offset: {'4062'}, Possible Replacements: ['\t']
+            Word: {'    '}, Index Offset: {'4095'}, Possible Replacements: [' ']
+            Word: {'   '}, Index Offset: {'4113'}, Possible Replacements: [' ']
+            Word: {'  '}, Index Offset: {'4649'}, Possible Replacements: [' ']
+            Word: {'     '}, Index Offset: {'4678'}, Possible Replacements: [' ']
+            Word: {'     '}, Index Offset: {'4685'}, Possible Replacements: [' ']
+            Word: {'     '}, Index Offset: {'4692'}, Possible Replacements: [' ']
+            Word: {'     '}, Index Offset: {'4699'}, Possible Replacements: [' ']
+            Word: {'    '}, Index Offset: {'4705'}, Possible Replacements: [' ']
+            Word: {'    '}, Index Offset: {'4750'}, Possible Replacements: [' ']
+            Word: {'	    '}, Index Offset: {'4778'}, Possible Replacements: ['\t']
+            Word: {'	    '}, Index Offset: {'4827'}, Possible Replacements: ['\t']
+            Word: {'	    '}, Index Offset: {'4910'}, Possible Replacements: ['\t']
+            Word: {'	    '}, Index Offset: {'4972'}, Possible Replacements: ['\t']
+            Word: {'    '}, Index Offset: {'5036'}, Possible Replacements: [' ']
+            Word: {'  '}, Index Offset: {'5490'}, Possible Replacements: [' ']
+            Word: {'     '}, Index Offset: {'5506'}, Possible Replacements: [' ']
+            Word: {'     '}, Index Offset: {'5513'}, Possible Replacements: [' ']
+            Word: {'    '}, Index Offset: {'5519'}, Possible Replacements: [' ']
+            Word: {'    '}, Index Offset: {'5564'}, Possible Replacements: [' ']
+            Word: {'	    '}, Index Offset: {'5592'}, Possible Replacements: ['\t']
+            Word: {'    '}, Index Offset: {'5647'}, Possible Replacements: [' ']
+            Word: {'	    '}, Index Offset: {'5702'}, Possible Replacements: ['\t']
+            Word: {'    '}, Index Offset: {'5742'}, Possible Replacements: [' ']
+            Word: {'   '}, Index Offset: {'5760'}, Possible Replacements: [' ']
+    Category:{'TYPOS'}
+        Rule:{'CONFUSION_RULE'}
+            Word: {'way'}, Index Offset: {'1909'}, Possible Replacements: ['was']
+            Word: {'animals'}, Index Offset: {'2116'}, Possible Replacements: ['animal']
+        Rule:{'MORFOLOGIK_RULE_EN_US'}
+            Word: {'td'}, Index Offset: {'244'}, Possible Replacements: ['TD', 'to', 'CD', 'ad', 'Ltd', 'ID', 'SD', 'Ted', 'id', 'JD', 'PD', 'TV', 'ta', 'FD', 'AD', 'Tod', 'ts', 'TDD', 'tad', 'ted', 'ETD', 'MD', 'Cd', 'D', 'DD', 'Ed', 'Gd', 'Md', 'ND', 'Nd', 'OD', 'Pd', 'RD', 'Rd', 'STD', 'T', 'TA', 'TB', 'TM', 'TN', 'TX', 'Ta', 'Tad', 'Tb', 'Tc', 'Te', 'Th', 'Ti', 'Tl', 'Tm', 'Tu', 'Ty', 'VD', 'd', 'dd', 'ed', 'ltd', 'pd', 'rd', 'std', 't', 'tb', 'ti', 'tn', 'tr', 'yd', 't d', '1D', '2D', '3D', '4D', '8D', 'ATD', 'BD', 'HD', 'KTD', 'LD', 'LTD', 'MTD', 'NTD', 'RTD', 'TAD', 'TBD', 'TC', 'TCD', 'TDA', 'TDC', 'TDE', 'TDF', 'TDG', 'TDI', 'TDM', 'TDP', 'TDR', 'TDS', 'TDT', 'TED', 'TF', 'TG', 'TGD', 'TH', 'THD', 'TI', 'TID', 'TJ', 'TK', 'TKD', 'TL', 'TLD', 'TMD', 'TND', 'TO', 'TP', 'TR', 'TS', 'TSD', 'TT', 'TTD', 'TU', 'TW', 'TWD', 'TY', 'TZ', 'WD', 'YTD']
+            Word: {'ul'}, Index Offset: {'251'}, Possible Replacements: ['UL', 'up', 'us', 'UK', 'UV', 'URL', 'ml', 'um', 'Jul', 'uh', 'cl', 'AL', 'Al', 'Cl', 'FL', 'IL', 'L', 'LL', 'Pl', 'Tl', 'U', 'UN', 'US', 'UT', 'Ur', 'Ut', 'XL', 'bl', 'fl', 'kl', 'l', 'll', 'pl', 'u', 'ult', 'u l', 'AUL', 'BUL', 'CL', 'CUL', 'DL', 'GUL', 'HL', 'HUL', 'KUL', 'ML', 'NL', 'OUL', 'PL', 'PUL', 'SL', 'TL', 'UA', 'UAL', 'UC', 'UCL', 'UDL', 'UE', 'UG', 'UI', 'UIL', 'ULC', 'ULG', 'ULK', 'ULM', 'ULR', 'ULT', 'ULX', 'UML', 'UNL', 'UO', 'UP', 'UTL', 'UY', 'UZ', 'YL', 'YUL']
+            Word: {'ul'}, Index Offset: {'375'}, Possible Replacements: ['UL', 'up', 'us', 'UK', 'UV', 'URL', 'ml', 'um', 'Jul', 'uh', 'cl', 'AL', 'Al', 'Cl', 'FL', 'IL', 'L', 'LL', 'Pl', 'Tl', 'U', 'UN', 'US', 'UT', 'Ur', 'Ut', 'XL', 'bl', 'fl', 'kl', 'l', 'll', 'pl', 'u', 'ult', 'u l', 'AUL', 'BUL', 'CL', 'CUL', 'DL', 'GUL', 'HL', 'HUL', 'KUL', 'ML', 'NL', 'OUL', 'PL', 'PUL', 'SL', 'TL', 'UA', 'UAL', 'UC', 'UCL', 'UDL', 'UE', 'UG', 'UI', 'UIL', 'ULC', 'ULG', 'ULK', 'ULM', 'ULR', 'ULT', 'ULX', 'UML', 'UNL', 'UO', 'UP', 'UTL', 'UY', 'UZ', 'YL', 'YUL']
+            Word: {'td'}, Index Offset: {'385'}, Possible Replacements: ['TD', 'to', 'CD', 'ad', 'Ltd', 'ID', 'SD', 'Ted', 'id', 'JD', 'PD', 'TV', 'ta', 'FD', 'AD', 'Tod', 'ts', 'TDD', 'tad', 'ted', 'ETD', 'MD', 'Cd', 'D', 'DD', 'Ed', 'Gd', 'Md', 'ND', 'Nd', 'OD', 'Pd', 'RD', 'Rd', 'STD', 'T', 'TA', 'TB', 'TM', 'TN', 'TX', 'Ta', 'Tad', 'Tb', 'Tc', 'Te', 'Th', 'Ti', 'Tl', 'Tm', 'Tu', 'Ty', 'VD', 'd', 'dd', 'ed', 'ltd', 'pd', 'rd', 'std', 't', 'tb', 'ti', 'tn', 'tr', 'yd', 't d', '1D', '2D', '3D', '4D', '8D', 'ATD', 'BD', 'HD', 'KTD', 'LD', 'LTD', 'MTD', 'NTD', 'RTD', 'TAD', 'TBD', 'TC', 'TCD', 'TDA', 'TDC', 'TDE', 'TDF', 'TDG', 'TDI', 'TDM', 'TDP', 'TDR', 'TDS', 'TDT', 'TED', 'TF', 'TG', 'TGD', 'TH', 'THD', 'TI', 'TID', 'TJ', 'TK', 'TKD', 'TL', 'TLD', 'TMD', 'TND', 'TO', 'TP', 'TR', 'TS', 'TSD', 'TT', 'TTD', 'TU', 'TW', 'TWD', 'TY', 'TZ', 'WD', 'YTD']
+            Word: {'td'}, Index Offset: {'394'}, Possible Replacements: ['TD', 'to', 'CD', 'ad', 'Ltd', 'ID', 'SD', 'Ted', 'id', 'JD', 'PD', 'TV', 'ta', 'FD', 'AD', 'Tod', 'ts', 'TDD', 'tad', 'ted', 'ETD', 'MD', 'Cd', 'D', 'DD', 'Ed', 'Gd', 'Md', 'ND', 'Nd', 'OD', 'Pd', 'RD', 'Rd', 'STD', 'T', 'TA', 'TB', 'TM', 'TN', 'TX', 'Ta', 'Tad', 'Tb', 'Tc', 'Te', 'Th', 'Ti', 'Tl', 'Tm', 'Tu', 'Ty', 'VD', 'd', 'dd', 'ed', 'ltd', 'pd', 'rd', 'std', 't', 'tb', 'ti', 'tn', 'tr', 'yd', 't d', '1D', '2D', '3D', '4D', '8D', 'ATD', 'BD', 'HD', 'KTD', 'LD', 'LTD', 'MTD', 'NTD', 'RTD', 'TAD', 'TBD', 'TC', 'TCD', 'TDA', 'TDC', 'TDE', 'TDF', 'TDG', 'TDI', 'TDM', 'TDP', 'TDR', 'TDS', 'TDT', 'TED', 'TF', 'TG', 'TGD', 'TH', 'THD', 'TI', 'TID', 'TJ', 'TK', 'TKD', 'TL', 'TLD', 'TMD', 'TND', 'TO', 'TP', 'TR', 'TS', 'TSD', 'TT', 'TTD', 'TU', 'TW', 'TWD', 'TY', 'TZ', 'WD', 'YTD']
+            Word: {'ul'}, Index Offset: {'404'}, Possible Replacements: ['UL', 'up', 'us', 'UK', 'UV', 'URL', 'ml', 'um', 'Jul', 'uh', 'cl', 'AL', 'Al', 'Cl', 'FL', 'IL', 'L', 'LL', 'Pl', 'Tl', 'U', 'UN', 'US', 'UT', 'Ur', 'Ut', 'XL', 'bl', 'fl', 'kl', 'l', 'll', 'pl', 'u', 'ult', 'u l', 'AUL', 'BUL', 'CL', 'CUL', 'DL', 'GUL', 'HL', 'HUL', 'KUL', 'ML', 'NL', 'OUL', 'PL', 'PUL', 'SL', 'TL', 'UA', 'UAL', 'UC', 'UCL', 'UDL', 'UE', 'UG', 'UI', 'UIL', 'ULC', 'ULG', 'ULK', 'ULM', 'ULR', 'ULT', 'ULX', 'UML', 'UNL', 'UO', 'UP', 'UTL', 'UY', 'UZ', 'YL', 'YUL']
+            Word: {'Technicals'}, Index Offset: {'475'}, Possible Replacements: ['Technical']
+            Word: {'planification'}, Index Offset: {'517'}, Possible Replacements: ['clarification', 'pacification']
+            Word: {'ul'}, Index Offset: {'538'}, Possible Replacements: ['UL', 'up', 'us', 'UK', 'UV', 'URL', 'ml', 'um', 'Jul', 'uh', 'cl', 'AL', 'Al', 'Cl', 'FL', 'IL', 'L', 'LL', 'Pl', 'Tl', 'U', 'UN', 'US', 'UT', 'Ur', 'Ut', 'XL', 'bl', 'fl', 'kl', 'l', 'll', 'pl', 'u', 'ult', 'u l', 'AUL', 'BUL', 'CL', 'CUL', 'DL', 'GUL', 'HL', 'HUL', 'KUL', 'ML', 'NL', 'OUL', 'PL', 'PUL', 'SL', 'TL', 'UA', 'UAL', 'UC', 'UCL', 'UDL', 'UE', 'UG', 'UI', 'UIL', 'ULC', 'ULG', 'ULK', 'ULM', 'ULR', 'ULT', 'ULX', 'UML', 'UNL', 'UO', 'UP', 'UTL', 'UY', 'UZ', 'YL', 'YUL']
+            Word: {'td'}, Index Offset: {'548'}, Possible Replacements: ['TD', 'to', 'CD', 'ad', 'Ltd', 'ID', 'SD', 'Ted', 'id', 'JD', 'PD', 'TV', 'ta', 'FD', 'AD', 'Tod', 'ts', 'TDD', 'tad', 'ted', 'ETD', 'MD', 'Cd', 'D', 'DD', 'Ed', 'Gd', 'Md', 'ND', 'Nd', 'OD', 'Pd', 'RD', 'Rd', 'STD', 'T', 'TA', 'TB', 'TM', 'TN', 'TX', 'Ta', 'Tad', 'Tb', 'Tc', 'Te', 'Th', 'Ti', 'Tl', 'Tm', 'Tu', 'Ty', 'VD', 'd', 'dd', 'ed', 'ltd', 'pd', 'rd', 'std', 't', 'tb', 'ti', 'tn', 'tr', 'yd', 't d', '1D', '2D', '3D', '4D', '8D', 'ATD', 'BD', 'HD', 'KTD', 'LD', 'LTD', 'MTD', 'NTD', 'RTD', 'TAD', 'TBD', 'TC', 'TCD', 'TDA', 'TDC', 'TDE', 'TDF', 'TDG', 'TDI', 'TDM', 'TDP', 'TDR', 'TDS', 'TDT', 'TED', 'TF', 'TG', 'TGD', 'TH', 'THD', 'TI', 'TID', 'TJ', 'TK', 'TKD', 'TL', 'TLD', 'TMD', 'TND', 'TO', 'TP', 'TR', 'TS', 'TSD', 'TT', 'TTD', 'TU', 'TW', 'TWD', 'TY', 'TZ', 'WD', 'YTD']
+            Word: {'td'}, Index Offset: {'991'}, Possible Replacements: ['TD', 'to', 'CD', 'ad', 'Ltd', 'ID', 'SD', 'Ted', 'id', 'JD', 'PD', 'TV', 'ta', 'FD', 'AD', 'Tod', 'ts', 'TDD', 'tad', 'ted', 'ETD', 'MD', 'Cd', 'D', 'DD', 'Ed', 'Gd', 'Md', 'ND', 'Nd', 'OD', 'Pd', 'RD', 'Rd', 'STD', 'T', 'TA', 'TB', 'TM', 'TN', 'TX', 'Ta', 'Tad', 'Tb', 'Tc', 'Te', 'Th', 'Ti', 'Tl', 'Tm', 'Tu', 'Ty', 'VD', 'd', 'dd', 'ed', 'ltd', 'pd', 'rd', 'std', 't', 'tb', 'ti', 'tn', 'tr', 'yd', 't d', '1D', '2D', '3D', '4D', '8D', 'ATD', 'BD', 'HD', 'KTD', 'LD', 'LTD', 'MTD', 'NTD', 'RTD', 'TAD', 'TBD', 'TC', 'TCD', 'TDA', 'TDC', 'TDE', 'TDF', 'TDG', 'TDI', 'TDM', 'TDP', 'TDR', 'TDS', 'TDT', 'TED', 'TF', 'TG', 'TGD', 'TH', 'THD', 'TI', 'TID', 'TJ', 'TK', 'TKD', 'TL', 'TLD', 'TMD', 'TND', 'TO', 'TP', 'TR', 'TS', 'TSD', 'TT', 'TTD', 'TU', 'TW', 'TWD', 'TY', 'TZ', 'WD', 'YTD']
+            Word: {'ul'}, Index Offset: {'1001'}, Possible Replacements: ['UL', 'up', 'us', 'UK', 'UV', 'URL', 'ml', 'um', 'Jul', 'uh', 'cl', 'AL', 'Al', 'Cl', 'FL', 'IL', 'L', 'LL', 'Pl', 'Tl', 'U', 'UN', 'US', 'UT', 'Ur', 'Ut', 'XL', 'bl', 'fl', 'kl', 'l', 'll', 'pl', 'u', 'ult', 'u l', 'AUL', 'BUL', 'CL', 'CUL', 'DL', 'GUL', 'HL', 'HUL', 'KUL', 'ML', 'NL', 'OUL', 'PL', 'PUL', 'SL', 'TL', 'UA', 'UAL', 'UC', 'UCL', 'UDL', 'UE', 'UG', 'UI', 'UIL', 'ULC', 'ULG', 'ULK', 'ULM', 'ULR', 'ULT', 'ULX', 'UML', 'UNL', 'UO', 'UP', 'UTL', 'UY', 'UZ', 'YL', 'YUL']
+            Word: {'ZQSD'}, Index Offset: {'1035'}, Possible Replacements: ['ZLSD']
+            Word: {'ul'}, Index Offset: {'1275'}, Possible Replacements: ['UL', 'up', 'us', 'UK', 'UV', 'URL', 'ml', 'um', 'Jul', 'uh', 'cl', 'AL', 'Al', 'Cl', 'FL', 'IL', 'L', 'LL', 'Pl', 'Tl', 'U', 'UN', 'US', 'UT', 'Ur', 'Ut', 'XL', 'bl', 'fl', 'kl', 'l', 'll', 'pl', 'u', 'ult', 'u l', 'AUL', 'BUL', 'CL', 'CUL', 'DL', 'GUL', 'HL', 'HUL', 'KUL', 'ML', 'NL', 'OUL', 'PL', 'PUL', 'SL', 'TL', 'UA', 'UAL', 'UC', 'UCL', 'UDL', 'UE', 'UG', 'UI', 'UIL', 'ULC', 'ULG', 'ULK', 'ULM', 'ULR', 'ULT', 'ULX', 'UML', 'UNL', 'UO', 'UP', 'UTL', 'UY', 'UZ', 'YL', 'YUL']
+            Word: {'td'}, Index Offset: {'1285'}, Possible Replacements: ['TD', 'to', 'CD', 'ad', 'Ltd', 'ID', 'SD', 'Ted', 'id', 'JD', 'PD', 'TV', 'ta', 'FD', 'AD', 'Tod', 'ts', 'TDD', 'tad', 'ted', 'ETD', 'MD', 'Cd', 'D', 'DD', 'Ed', 'Gd', 'Md', 'ND', 'Nd', 'OD', 'Pd', 'RD', 'Rd', 'STD', 'T', 'TA', 'TB', 'TM', 'TN', 'TX', 'Ta', 'Tad', 'Tb', 'Tc', 'Te', 'Th', 'Ti', 'Tl', 'Tm', 'Tu', 'Ty', 'VD', 'd', 'dd', 'ed', 'ltd', 'pd', 'rd', 'std', 't', 'tb', 'ti', 'tn', 'tr', 'yd', 't d', '1D', '2D', '3D', '4D', '8D', 'ATD', 'BD', 'HD', 'KTD', 'LD', 'LTD', 'MTD', 'NTD', 'RTD', 'TAD', 'TBD', 'TC', 'TCD', 'TDA', 'TDC', 'TDE', 'TDF', 'TDG', 'TDI', 'TDM', 'TDP', 'TDR', 'TDS', 'TDT', 'TED', 'TF', 'TG', 'TGD', 'TH', 'THD', 'TI', 'TID', 'TJ', 'TK', 'TKD', 'TL', 'TLD', 'TMD', 'TND', 'TO', 'TP', 'TR', 'TS', 'TSD', 'TT', 'TTD', 'TU', 'TW', 'TWD', 'TY', 'TZ', 'WD', 'YTD']
+            Word: {'td'}, Index Offset: {'1294'}, Possible Replacements: ['TD', 'to', 'CD', 'ad', 'Ltd', 'ID', 'SD', 'Ted', 'id', 'JD', 'PD', 'TV', 'ta', 'FD', 'AD', 'Tod', 'ts', 'TDD', 'tad', 'ted', 'ETD', 'MD', 'Cd', 'D', 'DD', 'Ed', 'Gd', 'Md', 'ND', 'Nd', 'OD', 'Pd', 'RD', 'Rd', 'STD', 'T', 'TA', 'TB', 'TM', 'TN', 'TX', 'Ta', 'Tad', 'Tb', 'Tc', 'Te', 'Th', 'Ti', 'Tl', 'Tm', 'Tu', 'Ty', 'VD', 'd', 'dd', 'ed', 'ltd', 'pd', 'rd', 'std', 't', 'tb', 'ti', 'tn', 'tr', 'yd', 't d', '1D', '2D', '3D', '4D', '8D', 'ATD', 'BD', 'HD', 'KTD', 'LD', 'LTD', 'MTD', 'NTD', 'RTD', 'TAD', 'TBD', 'TC', 'TCD', 'TDA', 'TDC', 'TDE', 'TDF', 'TDG', 'TDI', 'TDM', 'TDP', 'TDR', 'TDS', 'TDT', 'TED', 'TF', 'TG', 'TGD', 'TH', 'THD', 'TI', 'TID', 'TJ', 'TK', 'TKD', 'TL', 'TLD', 'TMD', 'TND', 'TO', 'TP', 'TR', 'TS', 'TSD', 'TT', 'TTD', 'TU', 'TW', 'TWD', 'TY', 'TZ', 'WD', 'YTD']
+            Word: {'ul'}, Index Offset: {'1304'}, Possible Replacements: ['UL', 'up', 'us', 'UK', 'UV', 'URL', 'ml', 'um', 'Jul', 'uh', 'cl', 'AL', 'Al', 'Cl', 'FL', 'IL', 'L', 'LL', 'Pl', 'Tl', 'U', 'UN', 'US', 'UT', 'Ur', 'Ut', 'XL', 'bl', 'fl', 'kl', 'l', 'll', 'pl', 'u', 'ult', 'u l', 'AUL', 'BUL', 'CL', 'CUL', 'DL', 'GUL', 'HL', 'HUL', 'KUL', 'ML', 'NL', 'OUL', 'PL', 'PUL', 'SL', 'TL', 'UA', 'UAL', 'UC', 'UCL', 'UDL', 'UE', 'UG', 'UI', 'UIL', 'ULC', 'ULG', 'ULK', 'ULM', 'ULR', 'ULT', 'ULX', 'UML', 'UNL', 'UO', 'UP', 'UTL', 'UY', 'UZ', 'YL', 'YUL']
+            Word: {'Enigme'}, Index Offset: {'1438'}, Possible Replacements: ['Enigma']
+            Word: {'ul'}, Index Offset: {'1531'}, Possible Replacements: ['UL', 'up', 'us', 'UK', 'UV', 'URL', 'ml', 'um', 'Jul', 'uh', 'cl', 'AL', 'Al', 'Cl', 'FL', 'IL', 'L', 'LL', 'Pl', 'Tl', 'U', 'UN', 'US', 'UT', 'Ur', 'Ut', 'XL', 'bl', 'fl', 'kl', 'l', 'll', 'pl', 'u', 'ult', 'u l', 'AUL', 'BUL', 'CL', 'CUL', 'DL', 'GUL', 'HL', 'HUL', 'KUL', 'ML', 'NL', 'OUL', 'PL', 'PUL', 'SL', 'TL', 'UA', 'UAL', 'UC', 'UCL', 'UDL', 'UE', 'UG', 'UI', 'UIL', 'ULC', 'ULG', 'ULK', 'ULM', 'ULR', 'ULT', 'ULX', 'UML', 'UNL', 'UO', 'UP', 'UTL', 'UY', 'UZ', 'YL', 'YUL']
+            Word: {'td'}, Index Offset: {'1541'}, Possible Replacements: ['TD', 'to', 'CD', 'ad', 'Ltd', 'ID', 'SD', 'Ted', 'id', 'JD', 'PD', 'TV', 'ta', 'FD', 'AD', 'Tod', 'ts', 'TDD', 'tad', 'ted', 'ETD', 'MD', 'Cd', 'D', 'DD', 'Ed', 'Gd', 'Md', 'ND', 'Nd', 'OD', 'Pd', 'RD', 'Rd', 'STD', 'T', 'TA', 'TB', 'TM', 'TN', 'TX', 'Ta', 'Tad', 'Tb', 'Tc', 'Te', 'Th', 'Ti', 'Tl', 'Tm', 'Tu', 'Ty', 'VD', 'd', 'dd', 'ed', 'ltd', 'pd', 'rd', 'std', 't', 'tb', 'ti', 'tn', 'tr', 'yd', 't d', '1D', '2D', '3D', '4D', '8D', 'ATD', 'BD', 'HD', 'KTD', 'LD', 'LTD', 'MTD', 'NTD', 'RTD', 'TAD', 'TBD', 'TC', 'TCD', 'TDA', 'TDC', 'TDE', 'TDF', 'TDG', 'TDI', 'TDM', 'TDP', 'TDR', 'TDS', 'TDT', 'TED', 'TF', 'TG', 'TGD', 'TH', 'THD', 'TI', 'TID', 'TJ', 'TK', 'TKD', 'TL', 'TLD', 'TMD', 'TND', 'TO', 'TP', 'TR', 'TS', 'TSD', 'TT', 'TTD', 'TU', 'TW', 'TWD', 'TY', 'TZ', 'WD', 'YTD']
+            Word: {'diagramme'}, Index Offset: {'1797'}, Possible Replacements: ['diagrammed', 'diagram me']
+            Word: {'Enigme'}, Index Offset: {'2991'}, Possible Replacements: ['Enigma']
+            Word: {'ol'}, Index Offset: {'3095'}, Possible Replacements: ['of', 'on', 'or', 'OK', 'old', 'oil', 'oh', 'AOL', 'Sol', 'ml', 'owl', 'ox', 'oz', 'col', 'OE', 'cl', 'ole', 'op', 'AL', 'Al', 'COL', 'Cl', 'Col', 'FL', 'IL', 'L', 'LL', 'O', 'OB', 'OD', 'OH', 'OJ', 'ON', 'OR', 'OS', 'OT', 'Ob', 'Ola', 'Os', 'Oz', 'Pl', 'Pol', 'Tl', 'UL', 'XL', 'bl', 'fl', 'fol', 'kl', 'l', 'll', 'lo', 'o', 'ob', 'oi', 'om', 'ow', 'pl', 'pol', 'sol', 'vol', 'o l', 'CL', 'DL', 'HL', 'HOL', 'LOL', 'ML', 'MOL', 'NL', 'OAL', 'OCL', 'OHL', 'OLA', 'OLF', 'OLO', 'OLP', 'OLT', 'OM', 'OO', 'OPL', 'ORL', 'OSL', 'OUL', 'OWL', 'PL', 'POL', 'ROL', 'SL', 'TL', 'WOL', 'YL']
+            Word: {'ol'}, Index Offset: {'3424'}, Possible Replacements: ['of', 'on', 'or', 'OK', 'old', 'oil', 'oh', 'AOL', 'Sol', 'ml', 'owl', 'ox', 'oz', 'col', 'OE', 'cl', 'ole', 'op', 'AL', 'Al', 'COL', 'Cl', 'Col', 'FL', 'IL', 'L', 'LL', 'O', 'OB', 'OD', 'OH', 'OJ', 'ON', 'OR', 'OS', 'OT', 'Ob', 'Ola', 'Os', 'Oz', 'Pl', 'Pol', 'Tl', 'UL', 'XL', 'bl', 'fl', 'fol', 'kl', 'l', 'll', 'lo', 'o', 'ob', 'oi', 'om', 'ow', 'pl', 'pol', 'sol', 'vol', 'o l', 'CL', 'DL', 'HL', 'HOL', 'LOL', 'ML', 'MOL', 'NL', 'OAL', 'OCL', 'OHL', 'OLA', 'OLF', 'OLO', 'OLP', 'OLT', 'OM', 'OO', 'OPL', 'ORL', 'OSL', 'OUL', 'OWL', 'PL', 'POL', 'ROL', 'SL', 'TL', 'WOL', 'YL']
+            Word: {'img'}, Index Offset: {'3440'}, Possible Replacements: ['IMF', 'IMO', 'imp', 'mg', 'ING', 'Mg', 'i mg', 'IMG', 'AMG', 'BMG', 'CMG', 'DMG', 'FMG', 'GMG', 'IAG', 'IDG', 'IEG', 'ILG', 'IMA', 'IMAG', 'IMB', 'IMC', 'IMD', 'IME', 'IMH', 'IMK', 'IMN', 'IMP', 'IMS', 'IMT', 'IMU', 'IMV', 'IPG', 'IRG', 'ISG', 'IVG', 'MG', 'OMG', 'PMG', 'SMG', 'TMG']
+            Word: {'src'}, Index Offset: {'3444'}, Possible Replacements: ['arc', 'PRC', 'sic', 'sac', 'sec', 'NRC', 'Sec', 'SRO', 'soc', 'ARC', 'IRC', 'RC', 'SAC', 'SC', 'SEC', 'Sc', 'Soc', 'Sr', 'orc', 'SRC', 'BRC', 'CRC', 'DRC', 'ERC', 'FRC', 'GRC', 'HRC', 'JRC', 'LRC', 'MRC', 'QRC', 'RRC', 'SBC', 'SCC', 'SDC', 'SFC', 'SGC', 'SIC', 'SLC', 'SMC', 'SNC', 'SOC', 'SPC', 'SR1', 'SR2', 'SR3', 'SRA', 'SRB', 'SRD', 'SRE', 'SRF', 'SRFC', 'SRI', 'SRM', 'SRP', 'SRS', 'SRT', 'SRU', 'SRV', 'SRX', 'STC', 'SVC', 'SYC', 'Sri', 'TRC', 'WRC']
+            Word: {'projectimages'}, Index Offset: {'3457'}, Possible Replacements: ['project images']
+            Word: {'nativeruins'}, Index Offset: {'3471'}, Possible Replacements: ['native ruins']
+            Word: {'img'}, Index Offset: {'3684'}, Possible Replacements: ['IMF', 'IMO', 'imp', 'mg', 'ING', 'Mg', 'i mg', 'IMG', 'AMG', 'BMG', 'CMG', 'DMG', 'FMG', 'GMG', 'IAG', 'IDG', 'IEG', 'ILG', 'IMA', 'IMAG', 'IMB', 'IMC', 'IMD', 'IME', 'IMH', 'IMK', 'IMN', 'IMP', 'IMS', 'IMT', 'IMU', 'IMV', 'IPG', 'IRG', 'ISG', 'IVG', 'MG', 'OMG', 'PMG', 'SMG', 'TMG']
+            Word: {'src'}, Index Offset: {'3688'}, Possible Replacements: ['arc', 'PRC', 'sic', 'sac', 'sec', 'NRC', 'Sec', 'SRO', 'soc', 'ARC', 'IRC', 'RC', 'SAC', 'SC', 'SEC', 'Sc', 'Soc', 'Sr', 'orc', 'SRC', 'BRC', 'CRC', 'DRC', 'ERC', 'FRC', 'GRC', 'HRC', 'JRC', 'LRC', 'MRC', 'QRC', 'RRC', 'SBC', 'SCC', 'SDC', 'SFC', 'SGC', 'SIC', 'SLC', 'SMC', 'SNC', 'SOC', 'SPC', 'SR1', 'SR2', 'SR3', 'SRA', 'SRB', 'SRD', 'SRE', 'SRF', 'SRFC', 'SRI', 'SRM', 'SRP', 'SRS', 'SRT', 'SRU', 'SRV', 'SRX', 'STC', 'SVC', 'SYC', 'Sri', 'TRC', 'WRC']
+            Word: {'projectimages'}, Index Offset: {'3701'}, Possible Replacements: ['project images']
+            Word: {'nativeruins'}, Index Offset: {'3715'}, Possible Replacements: ['native ruins']
+            Word: {'Enigme'}, Index Offset: {'3790'}, Possible Replacements: ['Enigma']
+            Word: {'ol'}, Index Offset: {'3902'}, Possible Replacements: ['of', 'on', 'or', 'OK', 'old', 'oil', 'oh', 'AOL', 'Sol', 'ml', 'owl', 'ox', 'oz', 'col', 'OE', 'cl', 'ole', 'op', 'AL', 'Al', 'COL', 'Cl', 'Col', 'FL', 'IL', 'L', 'LL', 'O', 'OB', 'OD', 'OH', 'OJ', 'ON', 'OR', 'OS', 'OT', 'Ob', 'Ola', 'Os', 'Oz', 'Pl', 'Pol', 'Tl', 'UL', 'XL', 'bl', 'fl', 'fol', 'kl', 'l', 'll', 'lo', 'o', 'ob', 'oi', 'om', 'ow', 'pl', 'pol', 'sol', 'vol', 'o l', 'CL', 'DL', 'HL', 'HOL', 'LOL', 'ML', 'MOL', 'NL', 'OAL', 'OCL', 'OHL', 'OLA', 'OLF', 'OLO', 'OLP', 'OLT', 'OM', 'OO', 'OPL', 'ORL', 'OSL', 'OUL', 'OWL', 'PL', 'POL', 'ROL', 'SL', 'TL', 'WOL', 'YL']
+            Word: {'ol'}, Index Offset: {'4101'}, Possible Replacements: ['of', 'on', 'or', 'OK', 'old', 'oil', 'oh', 'AOL', 'Sol', 'ml', 'owl', 'ox', 'oz', 'col', 'OE', 'cl', 'ole', 'op', 'AL', 'Al', 'COL', 'Cl', 'Col', 'FL', 'IL', 'L', 'LL', 'O', 'OB', 'OD', 'OH', 'OJ', 'ON', 'OR', 'OS', 'OT', 'Ob', 'Ola', 'Os', 'Oz', 'Pl', 'Pol', 'Tl', 'UL', 'XL', 'bl', 'fl', 'fol', 'kl', 'l', 'll', 'lo', 'o', 'ob', 'oi', 'om', 'ow', 'pl', 'pol', 'sol', 'vol', 'o l', 'CL', 'DL', 'HL', 'HOL', 'LOL', 'ML', 'MOL', 'NL', 'OAL', 'OCL', 'OHL', 'OLA', 'OLF', 'OLO', 'OLP', 'OLT', 'OM', 'OO', 'OPL', 'ORL', 'OSL', 'OUL', 'OWL', 'PL', 'POL', 'ROL', 'SL', 'TL', 'WOL', 'YL']
+            Word: {'Enigme'}, Index Offset: {'4641'}, Possible Replacements: ['Enigma']
+            Word: {'ol'}, Index Offset: {'4745'}, Possible Replacements: ['of', 'on', 'or', 'OK', 'old', 'oil', 'oh', 'AOL', 'Sol', 'ml', 'owl', 'ox', 'oz', 'col', 'OE', 'cl', 'ole', 'op', 'AL', 'Al', 'COL', 'Cl', 'Col', 'FL', 'IL', 'L', 'LL', 'O', 'OB', 'OD', 'OH', 'OJ', 'ON', 'OR', 'OS', 'OT', 'Ob', 'Ola', 'Os', 'Oz', 'Pl', 'Pol', 'Tl', 'UL', 'XL', 'bl', 'fl', 'fol', 'kl', 'l', 'll', 'lo', 'o', 'ob', 'oi', 'om', 'ow', 'pl', 'pol', 'sol', 'vol', 'o l', 'CL', 'DL', 'HL', 'HOL', 'LOL', 'ML', 'MOL', 'NL', 'OAL', 'OCL', 'OHL', 'OLA', 'OLF', 'OLO', 'OLP', 'OLT', 'OM', 'OO', 'OPL', 'ORL', 'OSL', 'OUL', 'OWL', 'PL', 'POL', 'ROL', 'SL', 'TL', 'WOL', 'YL']
+            Word: {'ol'}, Index Offset: {'5042'}, Possible Replacements: ['of', 'on', 'or', 'OK', 'old', 'oil', 'oh', 'AOL', 'Sol', 'ml', 'owl', 'ox', 'oz', 'col', 'OE', 'cl', 'ole', 'op', 'AL', 'Al', 'COL', 'Cl', 'Col', 'FL', 'IL', 'L', 'LL', 'O', 'OB', 'OD', 'OH', 'OJ', 'ON', 'OR', 'OS', 'OT', 'Ob', 'Ola', 'Os', 'Oz', 'Pl', 'Pol', 'Tl', 'UL', 'XL', 'bl', 'fl', 'fol', 'kl', 'l', 'll', 'lo', 'o', 'ob', 'oi', 'om', 'ow', 'pl', 'pol', 'sol', 'vol', 'o l', 'CL', 'DL', 'HL', 'HOL', 'LOL', 'ML', 'MOL', 'NL', 'OAL', 'OCL', 'OHL', 'OLA', 'OLF', 'OLO', 'OLP', 'OLT', 'OM', 'OO', 'OPL', 'ORL', 'OSL', 'OUL', 'OWL', 'PL', 'POL', 'ROL', 'SL', 'TL', 'WOL', 'YL']
+            Word: {'img'}, Index Offset: {'5058'}, Possible Replacements: ['IMF', 'IMO', 'imp', 'mg', 'ING', 'Mg', 'i mg', 'IMG', 'AMG', 'BMG', 'CMG', 'DMG', 'FMG', 'GMG', 'IAG', 'IDG', 'IEG', 'ILG', 'IMA', 'IMAG', 'IMB', 'IMC', 'IMD', 'IME', 'IMH', 'IMK', 'IMN', 'IMP', 'IMS', 'IMT', 'IMU', 'IMV', 'IPG', 'IRG', 'ISG', 'IVG', 'MG', 'OMG', 'PMG', 'SMG', 'TMG']
+            Word: {'src'}, Index Offset: {'5062'}, Possible Replacements: ['arc', 'PRC', 'sic', 'sac', 'sec', 'NRC', 'Sec', 'SRO', 'soc', 'ARC', 'IRC', 'RC', 'SAC', 'SC', 'SEC', 'Sc', 'Soc', 'Sr', 'orc', 'SRC', 'BRC', 'CRC', 'DRC', 'ERC', 'FRC', 'GRC', 'HRC', 'JRC', 'LRC', 'MRC', 'QRC', 'RRC', 'SBC', 'SCC', 'SDC', 'SFC', 'SGC', 'SIC', 'SLC', 'SMC', 'SNC', 'SOC', 'SPC', 'SR1', 'SR2', 'SR3', 'SRA', 'SRB', 'SRD', 'SRE', 'SRF', 'SRFC', 'SRI', 'SRM', 'SRP', 'SRS', 'SRT', 'SRU', 'SRV', 'SRX', 'STC', 'SVC', 'SYC', 'Sri', 'TRC', 'WRC']
+            Word: {'projectimages'}, Index Offset: {'5075'}, Possible Replacements: ['project images']
+            Word: {'nativeruins'}, Index Offset: {'5089'}, Possible Replacements: ['native ruins']
+            Word: {'img'}, Index Offset: {'5376'}, Possible Replacements: ['IMF', 'IMO', 'imp', 'mg', 'ING', 'Mg', 'i mg', 'IMG', 'AMG', 'BMG', 'CMG', 'DMG', 'FMG', 'GMG', 'IAG', 'IDG', 'IEG', 'ILG', 'IMA', 'IMAG', 'IMB', 'IMC', 'IMD', 'IME', 'IMH', 'IMK', 'IMN', 'IMP', 'IMS', 'IMT', 'IMU', 'IMV', 'IPG', 'IRG', 'ISG', 'IVG', 'MG', 'OMG', 'PMG', 'SMG', 'TMG']
+            Word: {'src'}, Index Offset: {'5380'}, Possible Replacements: ['arc', 'PRC', 'sic', 'sac', 'sec', 'NRC', 'Sec', 'SRO', 'soc', 'ARC', 'IRC', 'RC', 'SAC', 'SC', 'SEC', 'Sc', 'Soc', 'Sr', 'orc', 'SRC', 'BRC', 'CRC', 'DRC', 'ERC', 'FRC', 'GRC', 'HRC', 'JRC', 'LRC', 'MRC', 'QRC', 'RRC', 'SBC', 'SCC', 'SDC', 'SFC', 'SGC', 'SIC', 'SLC', 'SMC', 'SNC', 'SOC', 'SPC', 'SR1', 'SR2', 'SR3', 'SRA', 'SRB', 'SRD', 'SRE', 'SRF', 'SRFC', 'SRI', 'SRM', 'SRP', 'SRS', 'SRT', 'SRU', 'SRV', 'SRX', 'STC', 'SVC', 'SYC', 'Sri', 'TRC', 'WRC']
+            Word: {'projectimages'}, Index Offset: {'5393'}, Possible Replacements: ['project images']
+            Word: {'nativeruins'}, Index Offset: {'5407'}, Possible Replacements: ['native ruins']
+            Word: {'Enigme'}, Index Offset: {'5482'}, Possible Replacements: ['Enigma']
+            Word: {'ol'}, Index Offset: {'5559'}, Possible Replacements: ['of', 'on', 'or', 'OK', 'old', 'oil', 'oh', 'AOL', 'Sol', 'ml', 'owl', 'ox', 'oz', 'col', 'OE', 'cl', 'ole', 'op', 'AL', 'Al', 'COL', 'Cl', 'Col', 'FL', 'IL', 'L', 'LL', 'O', 'OB', 'OD', 'OH', 'OJ', 'ON', 'OR', 'OS', 'OT', 'Ob', 'Ola', 'Os', 'Oz', 'Pl', 'Pol', 'Tl', 'UL', 'XL', 'bl', 'fl', 'fol', 'kl', 'l', 'll', 'lo', 'o', 'ob', 'oi', 'om', 'ow', 'pl', 'pol', 'sol', 'vol', 'o l', 'CL', 'DL', 'HL', 'HOL', 'LOL', 'ML', 'MOL', 'NL', 'OAL', 'OCL', 'OHL', 'OLA', 'OLF', 'OLO', 'OLP', 'OLT', 'OM', 'OO', 'OPL', 'ORL', 'OSL', 'OUL', 'OWL', 'PL', 'POL', 'ROL', 'SL', 'TL', 'WOL', 'YL']
+            Word: {'ol'}, Index Offset: {'5748'}, Possible Replacements: ['of', 'on', 'or', 'OK', 'old', 'oil', 'oh', 'AOL', 'Sol', 'ml', 'owl', 'ox', 'oz', 'col', 'OE', 'cl', 'ole', 'op', 'AL', 'Al', 'COL', 'Cl', 'Col', 'FL', 'IL', 'L', 'LL', 'O', 'OB', 'OD', 'OH', 'OJ', 'ON', 'OR', 'OS', 'OT', 'Ob', 'Ola', 'Os', 'Oz', 'Pl', 'Pol', 'Tl', 'UL', 'XL', 'bl', 'fl', 'fol', 'kl', 'l', 'll', 'lo', 'o', 'ob', 'oi', 'om', 'ow', 'pl', 'pol', 'sol', 'vol', 'o l', 'CL', 'DL', 'HL', 'HOL', 'LOL', 'ML', 'MOL', 'NL', 'OAL', 'OCL', 'OHL', 'OLA', 'OLF', 'OLO', 'OLP', 'OLT', 'OM', 'OO', 'OPL', 'ORL', 'OSL', 'OUL', 'OWL', 'PL', 'POL', 'ROL', 'SL', 'TL', 'WOL', 'YL']
+            Word: {'Cutscenes'}, Index Offset: {'5784'}, Possible Replacements: ['Scenes', 'Cuisines', 'Crescents', 'Cuteness', 'Cuticles', 'Outshines', 'Outscores', 'Putsches', 'Outspends']
+            Word: {'ingame'}, Index Offset: {'5825'}, Possible Replacements: ['in game']
+            Word: {'cutscenes'}, Index Offset: {'5832'}, Possible Replacements: ['cut scenes']
+            Word: {'userexperience'}, Index Offset: {'5859'}, Possible Replacements: ['user experience']
+            Word: {'cutscene'}, Index Offset: {'5900'}, Possible Replacements: ['cut scene']
+
+Detected language: en-US
+Results for ..\jekyll\_includes\projects-content\penguin-panic-content.markdown:
+==================================================================================
+    Category:{'GRAMMAR'}
+        Rule:{'ADVISE_VBG'}
+            Word: {'implementing'}, Index Offset: {'2541'}, Possible Replacements: ['to implement', 'implement']
+        Rule:{'AGREEMENT_SENT_START'}
+            Word: {'comes'}, Index Offset: {'1253'}, Possible Replacements: ['come']
+        Rule:{'A_PLURAL'}
+            Word: {'a constraints'}, Index Offset: {'1547'}, Possible Replacements: ['a constraint', 'constraints']
+        Rule:{'BEEN_PART_AGREEMENT'}
+            Word: {'attribute'}, Index Offset: {'2496'}, Possible Replacements: ['attributed']
+        Rule:{'DID_BASEFORM'}
+            Word: {'managed'}, Index Offset: {'1349'}, Possible Replacements: ['manage']
+        Rule:{'EVERY_EACH_SINGULAR'}
+            Word: {'players'}, Index Offset: {'1960'}, Possible Replacements: ['player']
+            Word: {'players'}, Index Offset: {'2189'}, Possible Replacements: ['player']
+        Rule:{'MANY_NN'}
+            Word: {'many hypothesis'}, Index Offset: {'568'}, Possible Replacements: ['many hypotheses', 'many hypothesises']
+        Rule:{'SENTENCE_FRAGMENT'}
+            Word: {'
+If'}, Index Offset: {'1977'}, Possible Replacements: []
+    Category:{'PUNCTUATION'}
+        Rule:{'PUNCTUATION_PARAGRAPH_END'}
+            Word: {'Info'}, Index Offset: {'24'}, Possible Replacements: ['Info.', 'Info!', 'Info?', 'Info:', 'Info,', 'Info;']
+    Category:{'TYPOGRAPHY'}
+        Rule:{'COMMA_PARENTHESIS_WHITESPACE'}
+            Word: {' .'}, Index Offset: {'1388'}, Possible Replacements: ['.']
+        Rule:{'WHITESPACE_RULE'}
+            Word: {'  '}, Index Offset: {'1753'}, Possible Replacements: [' ']
+    Category:{'TYPOS'}
+        Rule:{'MORFOLOGIK_RULE_EN_US'}
+            Word: {'perlin'}, Index Offset: {'767'}, Possible Replacements: ['Berlin', 'Merlin']
+            Word: {'midproject'}, Index Offset: {'884'}, Possible Replacements: ['mid project']
+            Word: {'IWave'}, Index Offset: {'1109'}, Possible Replacements: ['Wave', 'I Wave']
+            Word: {'Adaptative'}, Index Offset: {'1490'}, Possible Replacements: ['Adaptation', 'Adaptive']
+            Word: {'behaviours'}, Index Offset: {'1715'}, Possible Replacements: ['behaviors']
+
+Detected language: en-US
+Results for ..\jekyll\_includes\projects-content\raven-content.markdown:
+==================================================================================
+    Category:{'GRAMMAR'}
+        Rule:{'BEEN_PART_AGREEMENT'}
+            Word: {'chose'}, Index Offset: {'2459'}, Possible Replacements: ['chosen']
+            Word: {'add'}, Index Offset: {'2518'}, Possible Replacements: ['added']
+        Rule:{'DID_BASEFORM'}
+            Word: {'decomposed'}, Index Offset: {'1437'}, Possible Replacements: ['decompose']
+            Word: {'noticed'}, Index Offset: {'1731'}, Possible Replacements: ['notice']
+            Word: {'defined'}, Index Offset: {'2883'}, Possible Replacements: ['define']
+        Rule:{'DOES_NP_VBZ'}
+            Word: {'has'}, Index Offset: {'3624'}, Possible Replacements: ['have']
+            Word: {'has'}, Index Offset: {'3678'}, Possible Replacements: ['have']
+        Rule:{'EVERY_EACH_SINGULAR'}
+            Word: {'bots'}, Index Offset: {'1103'}, Possible Replacements: ['bot']
+        Rule:{'PHRASE_REPETITION'}
+            Word: {'Fuzzy Logic
+Fuzzy logic'}, Index Offset: {'2611'}, Possible Replacements: ['Fuzzy Logic']
+        Rule:{'TO_NON_BASE'}
+            Word: {'to trained'}, Index Offset: {'3860'}, Possible Replacements: ['to train']
+    Category:{'PUNCTUATION'}
+        Rule:{'COMMA_COMPOUND_SENTENCE'}
+            Word: {'data and'}, Index Offset: {'4021'}, Possible Replacements: ['data, and']
+            Word: {'good and'}, Index Offset: {'4104'}, Possible Replacements: ['good, and']
+        Rule:{'PUNCTUATION_PARAGRAPH_END'}
+            Word: {'Info'}, Index Offset: {'24'}, Possible Replacements: ['Info.', 'Info!', 'Info?', 'Info:', 'Info,', 'Info;']
+    Category:{'TYPOS'}
+        Rule:{'CONFUSION_RULE'}
+            Word: {'duel'}, Index Offset: {'922'}, Possible Replacements: ['dual']
+        Rule:{'COULDVE_IRREGULAR_VERB'}
+            Word: {'We've find'}, Index Offset: {'4052'}, Possible Replacements: ["We've found"]
+        Rule:{'MORFOLOGIK_RULE_EN_US'}
+            Word: {'ZQSD'}, Index Offset: {'635'}, Possible Replacements: ['ZLSD']
+            Word: {'deathmatch'}, Index Offset: {'863'}, Possible Replacements: ['deathwatch', 'death match']
+            Word: {'Burnhead'}, Index Offset: {'934'}, Possible Replacements: ['Burned', 'Bulkhead', 'Bullhead']
+            Word: {'goaldriven'}, Index Offset: {'1138'}, Possible Replacements: ['goal driven']
+            Word: {'img'}, Index Offset: {'1246'}, Possible Replacements: ['IMF', 'IMO', 'imp', 'mg', 'ING', 'Mg', 'i mg', 'IMG', 'AMG', 'BMG', 'CMG', 'DMG', 'FMG', 'GMG', 'IAG', 'IDG', 'IEG', 'ILG', 'IMA', 'IMAG', 'IMB', 'IMC', 'IMD', 'IME', 'IMH', 'IMK', 'IMN', 'IMP', 'IMS', 'IMT', 'IMU', 'IMV', 'IPG', 'IRG', 'ISG', 'IVG', 'MG', 'OMG', 'PMG', 'SMG', 'TMG']
+            Word: {'classdiagram'}, Index Offset: {'1257'}, Possible Replacements: ['class diagram']
+            Word: {'src'}, Index Offset: {'1271'}, Possible Replacements: ['arc', 'PRC', 'sic', 'sac', 'sec', 'NRC', 'Sec', 'SRO', 'soc', 'ARC', 'IRC', 'RC', 'SAC', 'SC', 'SEC', 'Sc', 'Soc', 'Sr', 'orc', 'SRC', 'BRC', 'CRC', 'DRC', 'ERC', 'FRC', 'GRC', 'HRC', 'JRC', 'LRC', 'MRC', 'QRC', 'RRC', 'SBC', 'SCC', 'SDC', 'SFC', 'SGC', 'SIC', 'SLC', 'SMC', 'SNC', 'SOC', 'SPC', 'SR1', 'SR2', 'SR3', 'SRA', 'SRB', 'SRD', 'SRE', 'SRF', 'SRFC', 'SRI', 'SRM', 'SRP', 'SRS', 'SRT', 'SRU', 'SRV', 'SRX', 'STC', 'SVC', 'SYC', 'Sri', 'TRC', 'WRC']
+            Word: {'projectimages'}, Index Offset: {'1284'}, Possible Replacements: ['project images']
+            Word: {'goalscomposite'}, Index Offset: {'1329'}, Possible Replacements: ['goals composite']
+            Word: {'subgoals'}, Index Offset: {'1468'}, Possible Replacements: ['sub goals']
+            Word: {'subgoals'}, Index Offset: {'1564'}, Possible Replacements: ['sub goals']
+            Word: {'blocimages'}, Index Offset: {'3152'}, Possible Replacements: ['bloc images']
+            Word: {'img'}, Index Offset: {'3170'}, Possible Replacements: ['IMF', 'IMO', 'imp', 'mg', 'ING', 'Mg', 'i mg', 'IMG', 'AMG', 'BMG', 'CMG', 'DMG', 'FMG', 'GMG', 'IAG', 'IDG', 'IEG', 'ILG', 'IMA', 'IMAG', 'IMB', 'IMC', 'IMD', 'IME', 'IMH', 'IMK', 'IMN', 'IMP', 'IMS', 'IMT', 'IMU', 'IMV', 'IPG', 'IRG', 'ISG', 'IVG', 'MG', 'OMG', 'PMG', 'SMG', 'TMG']
+            Word: {'src'}, Index Offset: {'3174'}, Possible Replacements: ['arc', 'PRC', 'sic', 'sac', 'sec', 'NRC', 'Sec', 'SRO', 'soc', 'ARC', 'IRC', 'RC', 'SAC', 'SC', 'SEC', 'Sc', 'Soc', 'Sr', 'orc', 'SRC', 'BRC', 'CRC', 'DRC', 'ERC', 'FRC', 'GRC', 'HRC', 'JRC', 'LRC', 'MRC', 'QRC', 'RRC', 'SBC', 'SCC', 'SDC', 'SFC', 'SGC', 'SIC', 'SLC', 'SMC', 'SNC', 'SOC', 'SPC', 'SR1', 'SR2', 'SR3', 'SRA', 'SRB', 'SRD', 'SRE', 'SRF', 'SRFC', 'SRI', 'SRM', 'SRP', 'SRS', 'SRT', 'SRU', 'SRV', 'SRX', 'STC', 'SVC', 'SYC', 'Sri', 'TRC', 'WRC']
+            Word: {'projectimages'}, Index Offset: {'3187'}, Possible Replacements: ['project images']
+            Word: {'ammofuzzy'}, Index Offset: {'3227'}, Possible Replacements: ['ammo fuzzy']
+            Word: {'img'}, Index Offset: {'3244'}, Possible Replacements: ['IMF', 'IMO', 'imp', 'mg', 'ING', 'Mg', 'i mg', 'IMG', 'AMG', 'BMG', 'CMG', 'DMG', 'FMG', 'GMG', 'IAG', 'IDG', 'IEG', 'ILG', 'IMA', 'IMAG', 'IMB', 'IMC', 'IMD', 'IME', 'IMH', 'IMK', 'IMN', 'IMP', 'IMS', 'IMT', 'IMU', 'IMV', 'IPG', 'IRG', 'ISG', 'IVG', 'MG', 'OMG', 'PMG', 'SMG', 'TMG']
+            Word: {'src'}, Index Offset: {'3248'}, Possible Replacements: ['arc', 'PRC', 'sic', 'sac', 'sec', 'NRC', 'Sec', 'SRO', 'soc', 'ARC', 'IRC', 'RC', 'SAC', 'SC', 'SEC', 'Sc', 'Soc', 'Sr', 'orc', 'SRC', 'BRC', 'CRC', 'DRC', 'ERC', 'FRC', 'GRC', 'HRC', 'JRC', 'LRC', 'MRC', 'QRC', 'RRC', 'SBC', 'SCC', 'SDC', 'SFC', 'SGC', 'SIC', 'SLC', 'SMC', 'SNC', 'SOC', 'SPC', 'SR1', 'SR2', 'SR3', 'SRA', 'SRB', 'SRD', 'SRE', 'SRF', 'SRFC', 'SRI', 'SRM', 'SRP', 'SRS', 'SRT', 'SRU', 'SRV', 'SRX', 'STC', 'SVC', 'SYC', 'Sri', 'TRC', 'WRC']
+            Word: {'projectimages'}, Index Offset: {'3261'}, Possible Replacements: ['project images']
+            Word: {'weaponfuzzy'}, Index Offset: {'3303'}, Possible Replacements: ['weapon fuzzy']
+            Word: {'perceptron'}, Index Offset: {'3468'}, Possible Replacements: ['perception']
+            Word: {'enemylearning'}, Index Offset: {'3778'}, Possible Replacements: ['enemy learning']
+            Word: {'backpropagation'}, Index Offset: {'3844'}, Possible Replacements: ['back propagation']
+            Word: {'ingame'}, Index Offset: {'4134'}, Possible Replacements: ['in game']
+            Word: {'blocimages'}, Index Offset: {'4155'}, Possible Replacements: ['bloc images']
+            Word: {'img'}, Index Offset: {'4173'}, Possible Replacements: ['IMF', 'IMO', 'imp', 'mg', 'ING', 'Mg', 'i mg', 'IMG', 'AMG', 'BMG', 'CMG', 'DMG', 'FMG', 'GMG', 'IAG', 'IDG', 'IEG', 'ILG', 'IMA', 'IMAG', 'IMB', 'IMC', 'IMD', 'IME', 'IMH', 'IMK', 'IMN', 'IMP', 'IMS', 'IMT', 'IMU', 'IMV', 'IPG', 'IRG', 'ISG', 'IVG', 'MG', 'OMG', 'PMG', 'SMG', 'TMG']
+            Word: {'src'}, Index Offset: {'4177'}, Possible Replacements: ['arc', 'PRC', 'sic', 'sac', 'sec', 'NRC', 'Sec', 'SRO', 'soc', 'ARC', 'IRC', 'RC', 'SAC', 'SC', 'SEC', 'Sc', 'Soc', 'Sr', 'orc', 'SRC', 'BRC', 'CRC', 'DRC', 'ERC', 'FRC', 'GRC', 'HRC', 'JRC', 'LRC', 'MRC', 'QRC', 'RRC', 'SBC', 'SCC', 'SDC', 'SFC', 'SGC', 'SIC', 'SLC', 'SMC', 'SNC', 'SOC', 'SPC', 'SR1', 'SR2', 'SR3', 'SRA', 'SRB', 'SRD', 'SRE', 'SRF', 'SRFC', 'SRI', 'SRM', 'SRP', 'SRS', 'SRT', 'SRU', 'SRV', 'SRX', 'STC', 'SVC', 'SYC', 'Sri', 'TRC', 'WRC']
+            Word: {'projectimages'}, Index Offset: {'4190'}, Possible Replacements: ['project images']
+            Word: {'img'}, Index Offset: {'4243'}, Possible Replacements: ['IMF', 'IMO', 'imp', 'mg', 'ING', 'Mg', 'i mg', 'IMG', 'AMG', 'BMG', 'CMG', 'DMG', 'FMG', 'GMG', 'IAG', 'IDG', 'IEG', 'ILG', 'IMA', 'IMAG', 'IMB', 'IMC', 'IMD', 'IME', 'IMH', 'IMK', 'IMN', 'IMP', 'IMS', 'IMT', 'IMU', 'IMV', 'IPG', 'IRG', 'ISG', 'IVG', 'MG', 'OMG', 'PMG', 'SMG', 'TMG']
+            Word: {'src'}, Index Offset: {'4247'}, Possible Replacements: ['arc', 'PRC', 'sic', 'sac', 'sec', 'NRC', 'Sec', 'SRO', 'soc', 'ARC', 'IRC', 'RC', 'SAC', 'SC', 'SEC', 'Sc', 'Soc', 'Sr', 'orc', 'SRC', 'BRC', 'CRC', 'DRC', 'ERC', 'FRC', 'GRC', 'HRC', 'JRC', 'LRC', 'MRC', 'QRC', 'RRC', 'SBC', 'SCC', 'SDC', 'SFC', 'SGC', 'SIC', 'SLC', 'SMC', 'SNC', 'SOC', 'SPC', 'SR1', 'SR2', 'SR3', 'SRA', 'SRB', 'SRD', 'SRE', 'SRF', 'SRFC', 'SRI', 'SRM', 'SRP', 'SRS', 'SRT', 'SRU', 'SRV', 'SRX', 'STC', 'SVC', 'SYC', 'Sri', 'TRC', 'WRC']
+            Word: {'projectimages'}, Index Offset: {'4260'}, Possible Replacements: ['project images']
+
+Detected language: en-US
+Results for ..\jekyll\_includes\projects-content\spida-phobia-content.markdown:
+==================================================================================
+    Category:{'GRAMMAR'}
+        Rule:{'HE_VERB_AGR'}
+            Word: {'want'}, Index Offset: {'1114'}, Possible Replacements: ['wants', 'wanted']
+    Category:{'PUNCTUATION'}
+        Rule:{'PUNCTUATION_PARAGRAPH_END'}
+            Word: {'Info'}, Index Offset: {'24'}, Possible Replacements: ['Info.', 'Info!', 'Info?', 'Info:', 'Info,', 'Info;']
+            Word: {'features'}, Index Offset: {'1203'}, Possible Replacements: ['features.', 'features!', 'features?', 'features:', 'features,', 'features;']
+        Rule:{'SENT_START_CONJUNCTIVE_LINKING_ADVERB_COMMA'}
+            Word: {'Also'}, Index Offset: {'857'}, Possible Replacements: ['Also,']
+    Category:{'TYPOGRAPHY'}
+        Rule:{'WHITESPACE_RULE'}
+            Word: {'   '}, Index Offset: {'1012'}, Possible Replacements: [' ']
+            Word: {'  '}, Index Offset: {'1224'}, Possible Replacements: [' ']
+            Word: {'  '}, Index Offset: {'1590'}, Possible Replacements: [' ']
+    Category:{'TYPOS'}
+        Rule:{'CONFUSION_RULE'}
+            Word: {'use'}, Index Offset: {'490'}, Possible Replacements: ['used']
+            Word: {'know'}, Index Offset: {'1236'}, Possible Replacements: ['now']
+        Rule:{'MORFOLOGIK_RULE_EN_US'}
+            Word: {'gamify'}, Index Offset: {'540'}, Possible Replacements: ['ramify']
+        Rule:{'TO_COMEBACK'}
+            Word: {'to comeback'}, Index Offset: {'1465'}, Possible Replacements: ['to come back']
+
+Detected language: en-US
+Results for ..\jekyll\_includes\projects-content\the-only-neone-content.markdown:
+==================================================================================
+    Category:{'PUNCTUATION'}
+        Rule:{'PUNCTUATION_PARAGRAPH_END'}
+            Word: {'Info'}, Index Offset: {'24'}, Possible Replacements: ['Info.', 'Info!', 'Info?', 'Info:', 'Info,', 'Info;']
+

@@ -9,7 +9,9 @@ cache: bundler  # caching bundler gem packages will speed up build
 before_install:
   - gem install bundler
   - pip install -r requirements.txt
-  - (cd scripts && find -name "*.py" -exec python {} ${GITHUB_API_TOKEN} \;)
+  - (cd scripts && python mainSvgGen.py ${GITHUB_API_TOKEN} \;)
+  - (cd scripts && python githubProjectGen.py ${GITHUB_API_TOKEN} \;)
+  - (cd scripts && python grammarContentCheck.py ${GITHUB_API_TOKEN} \;)
 
 # command to install dependencies
 # This was obtained by running $pip freeze > requirements.txt
