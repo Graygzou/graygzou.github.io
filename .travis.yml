@@ -11,7 +11,7 @@ before_install:
   - pip install -r requirements.txt
   - (cd scripts && python mainSvgGen.py ${GITHUB_API_TOKEN} \;)
   - (cd scripts && python githubProjectGen.py ${GITHUB_API_TOKEN} \;)
-  - (cd scripts && python grammarContentCheck.py ${GITHUB_API_TOKEN} \;)
+  - (cd scripts && python grammarContentCheck.py ${GRAMMAR_BOT_TOKEN} \;)
 
 # command to install dependencies
 # This was obtained by running $pip freeze > requirements.txt
