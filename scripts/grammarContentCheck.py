@@ -7,13 +7,9 @@
 import time
 import sys                          # To get command line arguments
 import os                           # for IO files
-import fileinput
 import re                           # Regular expression
 import requests                     # Useful to make curl request to github API
-from bs4 import BeautifulSoup
 from pathlib import Path
-
-# import the client library
 from grammarbot import GrammarBotClient
 
 # Static const variables
