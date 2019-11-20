@@ -6,14 +6,14 @@ python:
 # reduce log clutter
 cache: bundler  # caching bundler gem packages will speed up build
 
+# pip install -r requirements.txt => command to install dependencies
+# This was obtained by running $pip freeze > requirements.txt
 before_install:
   - gem install bundler
   - pip install -r requirements.txt
   - (cd scripts && python mainSvgGen.py ${GITHUB_API_TOKEN} \;)
   - (cd scripts && python githubProjectGen.py ${GITHUB_API_TOKEN} \;)
 
-# command to install dependencies
-# This was obtained by running $pip freeze > requirements.txt
 install:
   - (cd jekyll && gem update bundler)
   - (cd jekyll && bundle check || bundle install)
