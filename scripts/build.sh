@@ -40,7 +40,7 @@ git add scripts/grammarBotResults.txt
 # This will avoid to build everytime the bot upload results (since we should trust what it does..)
 NB_FILE_CHANGED="$(git status --porcelain | grep ^[AM] | wc -l)"
 
-if [ ""${NB_FILE_CHANGED}" -gt 0 ]; then
+if [ "${NB_FILE_CHANGED}" -gt 0 ]; then
     git commit -a -m "[skip travis][ignore] Upload grammarbot results to develop for build #$TRAVIS_BUILD_NUMBER"
     git push
 else
