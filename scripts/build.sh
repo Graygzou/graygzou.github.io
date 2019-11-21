@@ -30,5 +30,6 @@ git config user.name ${GITHUB_BOT_NAME}
 git status
 git add scripts/grammarBotResults.txt
 git status
-git commit -a -m "Upload grammarbot results to develop for build #$TRAVIS_BUILD_NUMBER"
+# This will avoid to build everytime the bot upload results (since we should trust what it does..)
+git commit -a -m "[skip travis][ignore] Upload grammarbot results to develop for build #$TRAVIS_BUILD_NUMBER"
 git push
