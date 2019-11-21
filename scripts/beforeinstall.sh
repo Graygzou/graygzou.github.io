@@ -5,7 +5,7 @@
 #############################################################################
 
 # Enable error reporting to the console.
-set -e
+#set -e
 
 #----------------------------------------------------------
 # Download file useful for the images optimization
