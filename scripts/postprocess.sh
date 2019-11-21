@@ -11,8 +11,8 @@ set -e
 # PNG COMPRESSION WITH PNGQUANT
 # ========================================
 echo "travis_fold:start:run_pngquant"
-# This will create duplicate of images with -fs8 at the end of the file
 echo "Run pngquant command"
+# This will create duplicate of images with -fs8 at the end of the file
 find jekyll/site/assets/project-images/ -name "*.png" -exec pngquant --force {} \;
 
 # Remove the previous image not optimized
@@ -33,6 +33,7 @@ echo "travis_fold:end:run_pngquant"
 # JPG COMPRESSION WITH GUETZLI
 # ========================================
 echo "travis_fold:start:run_guetzli"
+echo "Start run guetzli for jpg compression"
 # For all the jpg in the project run Guetzli.
 # See https://github.com/google/guetzli for more info
 find jekyll/site/assets/ -name "*.jpg" -exec guetzli-1.0.1/bin/Release/guetzli --verbose {} {} \;
@@ -42,6 +43,7 @@ echo "travis_fold:end:run_guetzli"
 # HTML PROOFER
 # ====================
 echo "travis_fold:start:run_html_proofer"
+echo "Start html proofer check"
 # Check that everything is ok with htmlproofer
 # Must first enter jekyll folder to access the Gemfile.
 cd jekyll

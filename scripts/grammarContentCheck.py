@@ -210,6 +210,7 @@ def applyAfterTheDeadlineCheck(folderPath):
 # Arguments : (Github Token)
 # ----------------------------------------------------------------------------------
 def main(grammarBotAPIKey):
+    print("travis_fold:start:grammarChecking")
     print(">>>>> Start the grammar checking with After The Deadline...")
 
     # Not anymore...
@@ -221,6 +222,7 @@ def main(grammarBotAPIKey):
     #applyAfterTheDeadlineCheck(BASIC_REL_PATH + BLOG_FOLDER_REL_PATH)
     
     print(">>>>> Grammar checking ended.")
+    print("travis_fold:end:grammarChecking")
 #enddef
 
 if __name__ == "__main__":
