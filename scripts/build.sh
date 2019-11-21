@@ -1,8 +1,13 @@
 #!/bin/bash
+#############################################################################
+# Grégoire Boiron <gregoire.boiron@gmail.com>
+# Copyright (c) 2018-2019 Grégoire Boiron  All Rights Reserved.
+#############################################################################
 
 # Enable error reporting to the console.
 set -e
 
+echo "travis_fold:start:upload_grammar_bot"
 # Checkout `master` and remove everything.
 # This works because the API key can replace your password.
 # see https://stackoverflow.com/questions/23277391/how-to-publish-to-github-pages-from-travis-ci/33125422#33125422
@@ -27,9 +32,14 @@ git config user.name ${GITHUB_BOT_NAME}
 #teleconsole
 
 # Commit and push generated content to `master` branch.
-git status
+#git status
 git add scripts/grammarBotResults.txt
-git status
-# This will avoid to build everytime the bot upload results (since we should trust what it does..)
-git commit -a -m "[skip travis][ignore] Upload grammarbot results to develop for build #$TRAVIS_BUILD_NUMBER"
-git push
+#git status
+if [ git status --porcelain | grep ^[AM] | wc -l -gt 0 ]; then
+  # This will avoid to build everytime the bot upload results (since we should trust what it does..)
+  git commit -a -m "[skip travis][ignore] Upload grammarbot results to develop for build #$TRAVIS_BUILD_NUMBER"
+  git push
+else
+  echo "Nothing to commit, working tree clean. Skip the commit/push commands."
+fi
+echo "travis_fold:end:upload_grammar_bot"
