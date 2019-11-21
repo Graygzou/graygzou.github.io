@@ -4,7 +4,9 @@
 set -e
 
 # Checkout `master` and remove everything.
-git clone https://${GITHUB_BOT_NAME}@github.com/Graygzou/graygzou.github.io.git ../graygzou.github.io.develop
+# This works because the API key can replace your password.
+# see https://stackoverflow.com/questions/23277391/how-to-publish-to-github-pages-from-travis-ci/33125422#33125422
+git clone https://${GITHUB_BOT_NAME}:${BOT_DEPLOY_TOKEN}@github.com/Graygzou/graygzou.github.io.git ../graygzou.github.io.develop
 cd ../graygzou.github.io.develop
 git checkout develop
 
