@@ -1,5 +1,147 @@
 Detected language: en-US
-Results for ..\jekyll\_includes\projects-content\advent-of-code-content.markdown:
+Results for ../jekyll/_includes/projects-content/metenorage-content.markdown:
+==================================================================================
+    Category:{'GRAMMAR'}
+        Rule:{'DID_BASEFORM'}
+            Word: {'plugged'}, Index Offset: {'101'}, Possible Replacements: ['plug']
+        Rule:{'TO_NON_BASE'}
+            Word: {'implements'}, Index Offset: {'969'}, Possible Replacements: ['implement']
+    Category:{'PUNCTUATION'}
+        Rule:{'COMMA_COMPOUND_SENTENCE'}
+            Word: {'clips but'}, Index Offset: {'897'}, Possible Replacements: ['clips, but']
+        Rule:{'PUNCTUATION_PARAGRAPH_END'}
+            Word: {'Info'}, Index Offset: {'24'}, Possible Replacements: ['Info.', 'Info!', 'Info?', 'Info:', 'Info,', 'Info;']
+    Category:{'TYPOS'}
+        Rule:{'CONFUSION_RULE'}
+            Word: {'main'}, Index Offset: {'1725'}, Possible Replacements: ['man']
+        Rule:{'MORFOLOGIK_RULE_EN_US'}
+            Word: {'JBullet'}, Index Offset: {'403'}, Possible Replacements: ['Bullet']
+            Word: {'rigidbody'}, Index Offset: {'477'}, Possible Replacements: ['rigid body']
+            Word: {'rigidbody'}, Index Offset: {'559'}, Possible Replacements: ['rigid body']
+            Word: {'LWJGL'}, Index Offset: {'657'}, Possible Replacements: ['LGL']
+            Word: {'throught'}, Index Offset: {'1206'}, Possible Replacements: ['through', 'thought', 'through t']
+        Rule:{'SAVE_SAFE'}
+            Word: {'save'}, Index Offset: {'1677'}, Possible Replacements: ['safe']
+
+Detected language: en-US
+Results for ../jekyll/_includes/projects-content/colosseum-overcharge.markdown:
+==================================================================================
+    Category:{'PUNCTUATION'}
+        Rule:{'PUNCTUATION_PARAGRAPH_END'}
+            Word: {'Progress'}, Index Offset: {'16'}, Possible Replacements: ['Progress.', 'Progress!', 'Progress?', 'Progress:', 'Progress,', 'Progress;']
+    Category:{'TYPOS'}
+        Rule:{'MORFOLOGIK_RULE_EN_US'}
+            Word: {'buzy'}, Index Offset: {'367'}, Possible Replacements: ['busy', 'buy', 'bury', 'buzz', 'buoy', 'Suzy', 'BUY']
+            Word: {'remotly'}, Index Offset: {'398'}, Possible Replacements: ['remotely']
+
+Detected language: en-US
+Results for ../jekyll/_includes/projects-content/spida-phobia-content.markdown:
+==================================================================================
+    Category:{'GRAMMAR'}
+        Rule:{'HE_VERB_AGR'}
+            Word: {'want'}, Index Offset: {'1114'}, Possible Replacements: ['wants', 'wanted']
+    Category:{'PUNCTUATION'}
+        Rule:{'PUNCTUATION_PARAGRAPH_END'}
+            Word: {'Info'}, Index Offset: {'24'}, Possible Replacements: ['Info.', 'Info!', 'Info?', 'Info:', 'Info,', 'Info;']
+            Word: {'features'}, Index Offset: {'1203'}, Possible Replacements: ['features.', 'features!', 'features?', 'features:', 'features,', 'features;']
+        Rule:{'SENT_START_CONJUNCTIVE_LINKING_ADVERB_COMMA'}
+            Word: {'Also'}, Index Offset: {'857'}, Possible Replacements: ['Also,']
+    Category:{'TYPOGRAPHY'}
+        Rule:{'WHITESPACE_RULE'}
+            Word: {'   '}, Index Offset: {'1012'}, Possible Replacements: [' ']
+            Word: {'  '}, Index Offset: {'1224'}, Possible Replacements: [' ']
+            Word: {'  '}, Index Offset: {'1590'}, Possible Replacements: [' ']
+    Category:{'TYPOS'}
+        Rule:{'CONFUSION_RULE'}
+            Word: {'use'}, Index Offset: {'490'}, Possible Replacements: ['used']
+            Word: {'know'}, Index Offset: {'1236'}, Possible Replacements: ['now']
+        Rule:{'MORFOLOGIK_RULE_EN_US'}
+            Word: {'gamify'}, Index Offset: {'540'}, Possible Replacements: ['ramify']
+        Rule:{'TO_COMEBACK'}
+            Word: {'to comeback'}, Index Offset: {'1465'}, Possible Replacements: ['to come back']
+
+Detected language: en-US
+Results for ../jekyll/_includes/projects-content/lode-runner-content.markdown:
+==================================================================================
+    Category:{'GRAMMAR'}
+        Rule:{'EVERY_EACH_SINGULAR'}
+            Word: {'items'}, Index Offset: {'177'}, Possible Replacements: ['item']
+        Rule:{'HAVE_PART_AGREEMENT'}
+            Word: {'write'}, Index Offset: {'918'}, Possible Replacements: ['written']
+        Rule:{'MANY_NN'}
+            Word: {'Several AI'}, Index Offset: {'611'}, Possible Replacements: ['Several AIs', 'Several ais']
+    Category:{'PUNCTUATION'}
+        Rule:{'PUNCTUATION_PARAGRAPH_END'}
+            Word: {'Info'}, Index Offset: {'24'}, Possible Replacements: ['Info.', 'Info!', 'Info?', 'Info:', 'Info,', 'Info;']
+            Word: {'World'}, Index Offset: {'332'}, Possible Replacements: ['World.', 'World!', 'World?', 'World:', 'World,', 'World;']
+    Category:{'TYPOGRAPHY'}
+        Rule:{'WHITESPACE_RULE'}
+            Word: {'  '}, Index Offset: {'684'}, Possible Replacements: [' ']
+    Category:{'TYPOS'}
+        Rule:{'MORFOLOGIK_RULE_EN_US'}
+            Word: {'ZQSD'}, Index Offset: {'373'}, Possible Replacements: ['ZLSD']
+
+Detected language: en-US
+Results for ../jekyll/_includes/projects-content/penguin-panic-content.markdown:
+==================================================================================
+    Category:{'GRAMMAR'}
+        Rule:{'ADVISE_VBG'}
+            Word: {'implementing'}, Index Offset: {'2541'}, Possible Replacements: ['to implement', 'implement']
+        Rule:{'AGREEMENT_SENT_START'}
+            Word: {'comes'}, Index Offset: {'1253'}, Possible Replacements: ['come']
+        Rule:{'A_PLURAL'}
+            Word: {'a constraints'}, Index Offset: {'1547'}, Possible Replacements: ['a constraint', 'constraints']
+        Rule:{'BEEN_PART_AGREEMENT'}
+            Word: {'attribute'}, Index Offset: {'2496'}, Possible Replacements: ['attributed']
+        Rule:{'DID_BASEFORM'}
+            Word: {'managed'}, Index Offset: {'1349'}, Possible Replacements: ['manage']
+        Rule:{'EVERY_EACH_SINGULAR'}
+            Word: {'players'}, Index Offset: {'1960'}, Possible Replacements: ['player']
+            Word: {'players'}, Index Offset: {'2189'}, Possible Replacements: ['player']
+        Rule:{'MANY_NN'}
+            Word: {'many hypothesis'}, Index Offset: {'568'}, Possible Replacements: ['many hypotheses', 'many hypothesises']
+        Rule:{'SENTENCE_FRAGMENT'}
+            Word: {'
+If'}, Index Offset: {'1977'}, Possible Replacements: []
+    Category:{'PUNCTUATION'}
+        Rule:{'PUNCTUATION_PARAGRAPH_END'}
+            Word: {'Info'}, Index Offset: {'24'}, Possible Replacements: ['Info.', 'Info!', 'Info?', 'Info:', 'Info,', 'Info;']
+    Category:{'TYPOGRAPHY'}
+        Rule:{'COMMA_PARENTHESIS_WHITESPACE'}
+            Word: {' .'}, Index Offset: {'1388'}, Possible Replacements: ['.']
+        Rule:{'WHITESPACE_RULE'}
+            Word: {'  '}, Index Offset: {'1753'}, Possible Replacements: [' ']
+    Category:{'TYPOS'}
+        Rule:{'MORFOLOGIK_RULE_EN_US'}
+            Word: {'perlin'}, Index Offset: {'767'}, Possible Replacements: ['Berlin', 'Merlin']
+            Word: {'midproject'}, Index Offset: {'884'}, Possible Replacements: ['mid project']
+            Word: {'IWave'}, Index Offset: {'1109'}, Possible Replacements: ['Wave', 'I Wave']
+            Word: {'Adaptative'}, Index Offset: {'1490'}, Possible Replacements: ['Adaptation', 'Adaptive']
+            Word: {'behaviours'}, Index Offset: {'1715'}, Possible Replacements: ['behaviors']
+
+Detected language: en-US
+Results for ../jekyll/_includes/projects-content/brain-control-content.markdown:
+==================================================================================
+    Category:{'CASING'}
+        Rule:{'UPPERCASE_SENTENCE_START'}
+            Word: {'this'}, Index Offset: {'719'}, Possible Replacements: ['This']
+    Category:{'GRAMMAR'}
+        Rule:{'DID_BASEFORM'}
+            Word: {'received'}, Index Offset: {'397'}, Possible Replacements: ['receive']
+    Category:{'PUNCTUATION'}
+        Rule:{'PUNCTUATION_PARAGRAPH_END'}
+            Word: {'Info'}, Index Offset: {'24'}, Possible Replacements: ['Info.', 'Info!', 'Info?', 'Info:', 'Info,', 'Info;']
+    Category:{'TYPOS'}
+        Rule:{'CONFUSION_RULE'}
+            Word: {'though'}, Index Offset: {'438'}, Possible Replacements: ['thought']
+            Word: {'and'}, Index Offset: {'531'}, Possible Replacements: ['an']
+        Rule:{'MORFOLOGIK_RULE_EN_US'}
+            Word: {'Pathfinding'}, Index Offset: {'33'}, Possible Replacements: ['Pathfinder', 'Pathfinders']
+            Word: {'wallavoidance'}, Index Offset: {'704'}, Possible Replacements: ['wall avoidance']
+            Word: {'wallavoidance'}, Index Offset: {'793'}, Possible Replacements: ['wall avoidance']
+
+Detected language: en-US
+Results for ../jekyll/_includes/projects-content/advent-of-code-content.markdown:
 ==================================================================================
     Category:{'GRAMMAR'}
         Rule:{'CD_NN'}
@@ -22,57 +164,14 @@ Results for ..\jekyll\_includes\projects-content\advent-of-code-content.markdown
             Word: {'Chronal'}, Index Offset: {'1278'}, Possible Replacements: ['Coronal']
 
 Detected language: en-US
-Results for ..\jekyll\_includes\projects-content\battle-simulator-content.markdown:
+Results for ../jekyll/_includes/projects-content/battle-simulator-content.markdown:
 ==================================================================================
     Category:{'PUNCTUATION'}
         Rule:{'PUNCTUATION_PARAGRAPH_END'}
             Word: {'Info'}, Index Offset: {'24'}, Possible Replacements: ['Info.', 'Info!', 'Info?', 'Info:', 'Info,', 'Info;']
 
 Detected language: en-US
-Results for ..\jekyll\_includes\projects-content\brain-control-content.markdown:
-==================================================================================
-    Category:{'CASING'}
-        Rule:{'UPPERCASE_SENTENCE_START'}
-            Word: {'this'}, Index Offset: {'719'}, Possible Replacements: ['This']
-    Category:{'GRAMMAR'}
-        Rule:{'DID_BASEFORM'}
-            Word: {'received'}, Index Offset: {'397'}, Possible Replacements: ['receive']
-    Category:{'PUNCTUATION'}
-        Rule:{'PUNCTUATION_PARAGRAPH_END'}
-            Word: {'Info'}, Index Offset: {'24'}, Possible Replacements: ['Info.', 'Info!', 'Info?', 'Info:', 'Info,', 'Info;']
-    Category:{'TYPOS'}
-        Rule:{'CONFUSION_RULE'}
-            Word: {'though'}, Index Offset: {'438'}, Possible Replacements: ['thought']
-            Word: {'and'}, Index Offset: {'531'}, Possible Replacements: ['an']
-        Rule:{'MORFOLOGIK_RULE_EN_US'}
-            Word: {'Pathfinding'}, Index Offset: {'33'}, Possible Replacements: ['Pathfinder', 'Pathfinders']
-            Word: {'wallavoidance'}, Index Offset: {'704'}, Possible Replacements: ['wall avoidance']
-            Word: {'wallavoidance'}, Index Offset: {'793'}, Possible Replacements: ['wall avoidance']
-
-Detected language: en-US
-Results for ..\jekyll\_includes\projects-content\colosseum-overcharge.markdown:
-==================================================================================
-    Category:{'PUNCTUATION'}
-        Rule:{'PUNCTUATION_PARAGRAPH_END'}
-            Word: {'Progress'}, Index Offset: {'16'}, Possible Replacements: ['Progress.', 'Progress!', 'Progress?', 'Progress:', 'Progress,', 'Progress;']
-    Category:{'TYPOS'}
-        Rule:{'MORFOLOGIK_RULE_EN_US'}
-            Word: {'buzy'}, Index Offset: {'367'}, Possible Replacements: ['busy', 'buy', 'bury', 'buzz', 'buoy', 'Suzy', 'BUY']
-            Word: {'remotly'}, Index Offset: {'398'}, Possible Replacements: ['remotely']
-
-Detected language: en-US
-Results for ..\jekyll\_includes\projects-content\dyga-engine-content.markdown:
-==================================================================================
-    Category:{'PUNCTUATION'}
-        Rule:{'PUNCTUATION_PARAGRAPH_END'}
-            Word: {'Info'}, Index Offset: {'24'}, Possible Replacements: ['Info.', 'Info!', 'Info?', 'Info:', 'Info,', 'Info;']
-
-Detected language: en-US
-Results for ..\jekyll\_includes\projects-content\gmtk-2019-statistics-content.markdown:
-==================================================================================
-
-Detected language: en-US
-Results for ..\jekyll\_includes\projects-content\graygzou.github.io-content.markdown:
+Results for ../jekyll/_includes/projects-content/graygzou.github.io-content.markdown:
 ==================================================================================
     Category:{'GRAMMAR'}
         Rule:{'A_INFINITVE'}
@@ -112,53 +211,7 @@ Results for ..\jekyll\_includes\projects-content\graygzou.github.io-content.mark
             Word: {'endup'}, Index Offset: {'2411'}, Possible Replacements: ['endue', 'end up']
 
 Detected language: en-US
-Results for ..\jekyll\_includes\projects-content\lode-runner-content.markdown:
-==================================================================================
-    Category:{'GRAMMAR'}
-        Rule:{'EVERY_EACH_SINGULAR'}
-            Word: {'items'}, Index Offset: {'177'}, Possible Replacements: ['item']
-        Rule:{'HAVE_PART_AGREEMENT'}
-            Word: {'write'}, Index Offset: {'918'}, Possible Replacements: ['written']
-        Rule:{'MANY_NN'}
-            Word: {'Several AI'}, Index Offset: {'611'}, Possible Replacements: ['Several AIs', 'Several ais']
-    Category:{'PUNCTUATION'}
-        Rule:{'PUNCTUATION_PARAGRAPH_END'}
-            Word: {'Info'}, Index Offset: {'24'}, Possible Replacements: ['Info.', 'Info!', 'Info?', 'Info:', 'Info,', 'Info;']
-            Word: {'World'}, Index Offset: {'332'}, Possible Replacements: ['World.', 'World!', 'World?', 'World:', 'World,', 'World;']
-    Category:{'TYPOGRAPHY'}
-        Rule:{'WHITESPACE_RULE'}
-            Word: {'  '}, Index Offset: {'684'}, Possible Replacements: [' ']
-    Category:{'TYPOS'}
-        Rule:{'MORFOLOGIK_RULE_EN_US'}
-            Word: {'ZQSD'}, Index Offset: {'373'}, Possible Replacements: ['ZLSD']
-
-Detected language: en-US
-Results for ..\jekyll\_includes\projects-content\metenorage-content.markdown:
-==================================================================================
-    Category:{'GRAMMAR'}
-        Rule:{'DID_BASEFORM'}
-            Word: {'plugged'}, Index Offset: {'101'}, Possible Replacements: ['plug']
-        Rule:{'TO_NON_BASE'}
-            Word: {'implements'}, Index Offset: {'969'}, Possible Replacements: ['implement']
-    Category:{'PUNCTUATION'}
-        Rule:{'COMMA_COMPOUND_SENTENCE'}
-            Word: {'clips but'}, Index Offset: {'897'}, Possible Replacements: ['clips, but']
-        Rule:{'PUNCTUATION_PARAGRAPH_END'}
-            Word: {'Info'}, Index Offset: {'24'}, Possible Replacements: ['Info.', 'Info!', 'Info?', 'Info:', 'Info,', 'Info;']
-    Category:{'TYPOS'}
-        Rule:{'CONFUSION_RULE'}
-            Word: {'main'}, Index Offset: {'1725'}, Possible Replacements: ['man']
-        Rule:{'MORFOLOGIK_RULE_EN_US'}
-            Word: {'JBullet'}, Index Offset: {'403'}, Possible Replacements: ['Bullet']
-            Word: {'rigidbody'}, Index Offset: {'477'}, Possible Replacements: ['rigid body']
-            Word: {'rigidbody'}, Index Offset: {'559'}, Possible Replacements: ['rigid body']
-            Word: {'LWJGL'}, Index Offset: {'657'}, Possible Replacements: ['LGL']
-            Word: {'throught'}, Index Offset: {'1206'}, Possible Replacements: ['through', 'thought', 'through t']
-        Rule:{'SAVE_SAFE'}
-            Word: {'save'}, Index Offset: {'1677'}, Possible Replacements: ['safe']
-
-Detected language: en-US
-Results for ..\jekyll\_includes\projects-content\native-ruins-content.markdown:
+Results for ../jekyll/_includes/projects-content/native-ruins-content.markdown:
 ==================================================================================
     Category:{'CASING'}
         Rule:{'UPPERCASE_SENTENCE_START'}
@@ -187,7 +240,7 @@ Results for ..\jekyll\_includes\projects-content\native-ruins-content.markdown:
             Word: {'Info'}, Index Offset: {'669'}, Possible Replacements: ['Info.', 'Info!', 'Info?', 'Info:', 'Info,', 'Info;']
     Category:{'TYPOGRAPHY'}
         Rule:{'COPYRIGHT'}
-            Word: {'(C)'}, Index Offset: {'903'}, Possible Replacements: ['©']
+            Word: {'(C)'}, Index Offset: {'903'}, Possible Replacements: ['Â©']
         Rule:{'WHITESPACE_RULE'}
             Word: {'    '}, Index Offset: {'369'}, Possible Replacements: [' ']
             Word: {'    '}, Index Offset: {'399'}, Possible Replacements: [' ']
@@ -313,45 +366,25 @@ Results for ..\jekyll\_includes\projects-content\native-ruins-content.markdown:
             Word: {'cutscene'}, Index Offset: {'5900'}, Possible Replacements: ['cut scene']
 
 Detected language: en-US
-Results for ..\jekyll\_includes\projects-content\penguin-panic-content.markdown:
+Results for ../jekyll/_includes/projects-content/the-only-neone-content.markdown:
 ==================================================================================
-    Category:{'GRAMMAR'}
-        Rule:{'ADVISE_VBG'}
-            Word: {'implementing'}, Index Offset: {'2541'}, Possible Replacements: ['to implement', 'implement']
-        Rule:{'AGREEMENT_SENT_START'}
-            Word: {'comes'}, Index Offset: {'1253'}, Possible Replacements: ['come']
-        Rule:{'A_PLURAL'}
-            Word: {'a constraints'}, Index Offset: {'1547'}, Possible Replacements: ['a constraint', 'constraints']
-        Rule:{'BEEN_PART_AGREEMENT'}
-            Word: {'attribute'}, Index Offset: {'2496'}, Possible Replacements: ['attributed']
-        Rule:{'DID_BASEFORM'}
-            Word: {'managed'}, Index Offset: {'1349'}, Possible Replacements: ['manage']
-        Rule:{'EVERY_EACH_SINGULAR'}
-            Word: {'players'}, Index Offset: {'1960'}, Possible Replacements: ['player']
-            Word: {'players'}, Index Offset: {'2189'}, Possible Replacements: ['player']
-        Rule:{'MANY_NN'}
-            Word: {'many hypothesis'}, Index Offset: {'568'}, Possible Replacements: ['many hypotheses', 'many hypothesises']
-        Rule:{'SENTENCE_FRAGMENT'}
-            Word: {'
-If'}, Index Offset: {'1977'}, Possible Replacements: []
     Category:{'PUNCTUATION'}
         Rule:{'PUNCTUATION_PARAGRAPH_END'}
             Word: {'Info'}, Index Offset: {'24'}, Possible Replacements: ['Info.', 'Info!', 'Info?', 'Info:', 'Info,', 'Info;']
-    Category:{'TYPOGRAPHY'}
-        Rule:{'COMMA_PARENTHESIS_WHITESPACE'}
-            Word: {' .'}, Index Offset: {'1388'}, Possible Replacements: ['.']
-        Rule:{'WHITESPACE_RULE'}
-            Word: {'  '}, Index Offset: {'1753'}, Possible Replacements: [' ']
-    Category:{'TYPOS'}
-        Rule:{'MORFOLOGIK_RULE_EN_US'}
-            Word: {'perlin'}, Index Offset: {'767'}, Possible Replacements: ['Berlin', 'Merlin']
-            Word: {'midproject'}, Index Offset: {'884'}, Possible Replacements: ['mid project']
-            Word: {'IWave'}, Index Offset: {'1109'}, Possible Replacements: ['Wave', 'I Wave']
-            Word: {'Adaptative'}, Index Offset: {'1490'}, Possible Replacements: ['Adaptation', 'Adaptive']
-            Word: {'behaviours'}, Index Offset: {'1715'}, Possible Replacements: ['behaviors']
 
 Detected language: en-US
-Results for ..\jekyll\_includes\projects-content\raven-content.markdown:
+Results for ../jekyll/_includes/projects-content/dyga-engine-content.markdown:
+==================================================================================
+    Category:{'PUNCTUATION'}
+        Rule:{'PUNCTUATION_PARAGRAPH_END'}
+            Word: {'Info'}, Index Offset: {'24'}, Possible Replacements: ['Info.', 'Info!', 'Info?', 'Info:', 'Info,', 'Info;']
+
+Detected language: en-US
+Results for ../jekyll/_includes/projects-content/gmtk-2019-statistics-content.markdown:
+==================================================================================
+
+Detected language: en-US
+Results for ../jekyll/_includes/projects-content/raven-content.markdown:
 ==================================================================================
     Category:{'GRAMMAR'}
         Rule:{'BEEN_PART_AGREEMENT'}
@@ -414,37 +447,4 @@ Fuzzy logic'}, Index Offset: {'2611'}, Possible Replacements: ['Fuzzy Logic']
             Word: {'img'}, Index Offset: {'4243'}, Possible Replacements: ['IMF', 'IMO', 'imp', 'mg', 'ING', 'Mg', 'i mg', 'IMG', 'AMG', 'BMG', 'CMG', 'DMG', 'FMG', 'GMG', 'IAG', 'IDG', 'IEG', 'ILG', 'IMA', 'IMAG', 'IMB', 'IMC', 'IMD', 'IME', 'IMH', 'IMK', 'IMN', 'IMP', 'IMS', 'IMT', 'IMU', 'IMV', 'IPG', 'IRG', 'ISG', 'IVG', 'MG', 'OMG', 'PMG', 'SMG', 'TMG']
             Word: {'src'}, Index Offset: {'4247'}, Possible Replacements: ['arc', 'PRC', 'sic', 'sac', 'sec', 'NRC', 'Sec', 'SRO', 'soc', 'ARC', 'IRC', 'RC', 'SAC', 'SC', 'SEC', 'Sc', 'Soc', 'Sr', 'orc', 'SRC', 'BRC', 'CRC', 'DRC', 'ERC', 'FRC', 'GRC', 'HRC', 'JRC', 'LRC', 'MRC', 'QRC', 'RRC', 'SBC', 'SCC', 'SDC', 'SFC', 'SGC', 'SIC', 'SLC', 'SMC', 'SNC', 'SOC', 'SPC', 'SR1', 'SR2', 'SR3', 'SRA', 'SRB', 'SRD', 'SRE', 'SRF', 'SRFC', 'SRI', 'SRM', 'SRP', 'SRS', 'SRT', 'SRU', 'SRV', 'SRX', 'STC', 'SVC', 'SYC', 'Sri', 'TRC', 'WRC']
             Word: {'projectimages'}, Index Offset: {'4260'}, Possible Replacements: ['project images']
-
-Detected language: en-US
-Results for ..\jekyll\_includes\projects-content\spida-phobia-content.markdown:
-==================================================================================
-    Category:{'GRAMMAR'}
-        Rule:{'HE_VERB_AGR'}
-            Word: {'want'}, Index Offset: {'1114'}, Possible Replacements: ['wants', 'wanted']
-    Category:{'PUNCTUATION'}
-        Rule:{'PUNCTUATION_PARAGRAPH_END'}
-            Word: {'Info'}, Index Offset: {'24'}, Possible Replacements: ['Info.', 'Info!', 'Info?', 'Info:', 'Info,', 'Info;']
-            Word: {'features'}, Index Offset: {'1203'}, Possible Replacements: ['features.', 'features!', 'features?', 'features:', 'features,', 'features;']
-        Rule:{'SENT_START_CONJUNCTIVE_LINKING_ADVERB_COMMA'}
-            Word: {'Also'}, Index Offset: {'857'}, Possible Replacements: ['Also,']
-    Category:{'TYPOGRAPHY'}
-        Rule:{'WHITESPACE_RULE'}
-            Word: {'   '}, Index Offset: {'1012'}, Possible Replacements: [' ']
-            Word: {'  '}, Index Offset: {'1224'}, Possible Replacements: [' ']
-            Word: {'  '}, Index Offset: {'1590'}, Possible Replacements: [' ']
-    Category:{'TYPOS'}
-        Rule:{'CONFUSION_RULE'}
-            Word: {'use'}, Index Offset: {'490'}, Possible Replacements: ['used']
-            Word: {'know'}, Index Offset: {'1236'}, Possible Replacements: ['now']
-        Rule:{'MORFOLOGIK_RULE_EN_US'}
-            Word: {'gamify'}, Index Offset: {'540'}, Possible Replacements: ['ramify']
-        Rule:{'TO_COMEBACK'}
-            Word: {'to comeback'}, Index Offset: {'1465'}, Possible Replacements: ['to come back']
-
-Detected language: en-US
-Results for ..\jekyll\_includes\projects-content\the-only-neone-content.markdown:
-==================================================================================
-    Category:{'PUNCTUATION'}
-        Rule:{'PUNCTUATION_PARAGRAPH_END'}
-            Word: {'Info'}, Index Offset: {'24'}, Possible Replacements: ['Info.', 'Info!', 'Info?', 'Info:', 'Info,', 'Info;']
 
