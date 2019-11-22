@@ -48,3 +48,4 @@ else
 fi
 
 echo "travis_fold:end:upload_grammar_bot"
+echo "Upload grammarbot results done."

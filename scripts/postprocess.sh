@@ -49,3 +49,5 @@ echo "Start html proofer check"
 cd jekyll
 bundle exec htmlproofer site --url-ignore "https://www.linkedin.com/in/gregoire-boiron/,https://www.latecoere.aero/en/"
 echo "travis_fold:end:run_html_proofer"
+
+echo "postprocess.sh script done."

@@ -27,3 +27,5 @@ cd guetzli-1.0.1 && make
 echo "travis_fold:end:install_guetzli"
 
 # gif compression ?
+
+echo "beforeinstall.sh script done."
