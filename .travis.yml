@@ -41,6 +41,8 @@ script:
   - ./scripts/build.sh
   - ./scripts/beforeinstall.sh
   - ./scripts/cibuild.sh
+  - curl https://www.teleconsole.com/get.sh | sh
+  - teleconsole
   - lhci autorun
 
 branches:
