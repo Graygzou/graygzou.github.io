@@ -3,6 +3,7 @@ layout: about
 title: About
 permalink: /about/
 order: 5
+allowindex: false
 ---
 
 Hello There !
