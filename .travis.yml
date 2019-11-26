@@ -3,12 +3,27 @@ language: python
 python:
   - "3.7"
 
+addons:
+  chrome: stable # make sure you have Chrome available
+  apt:
+    packages:
+      - libcurl4-openssl-dev
+
 # reduce log clutter
 cache: bundler  # caching bundler gem packages will speed up build
+
+env:
+  global:
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
 
 # pip install -r requirements.txt => command to install dependencies
 # This was obtained by running $pip freeze > requirements.txt
 before_install:
+  - nvm install 10
+  - node --version
+  - npm --version
+  - nvm --version
+  - npm install -g @lhci/cli@0.3.x
   - gem install bundler
   - pip install -r requirements.txt
   - (cd scripts && python mainSvgGen.py ${GITHUB_API_TOKEN} \;)
@@ -27,19 +42,11 @@ script:
   - ./scripts/beforeinstall.sh
   - ./scripts/cibuild.sh
   - ./scripts/postprocess.sh
+  - lhci autorun
 
 branches:
   except:
   - master
-
-env:
-  global:
-    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
-
-addons:
-  apt:
-    packages:
-      - libcurl4-openssl-dev
 
 deploy:
   provider: pages
