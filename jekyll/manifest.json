@@ -13,7 +13,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "https://graygzou.github.io/",
+  "start_url": "https://graygzou.github.io",
   "background_color": "#ffffff",
   "display": "standalone",
   "scope": "/",
