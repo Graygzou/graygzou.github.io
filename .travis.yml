@@ -41,7 +41,6 @@ script:
   - ./scripts/build.sh
   - ./scripts/beforeinstall.sh
   - ./scripts/cibuild.sh
-  - ./scripts/postprocess.sh
   - lhci autorun
 
 branches:
