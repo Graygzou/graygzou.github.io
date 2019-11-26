@@ -1,0 +1,7 @@
+---
+---
+User-agent: *
+{% for node in site.pages %}{% if node.allowindex %}Allow: {{ node.url }}
+{% else %}Disallow: {{ node.url }}
+{% endif %}{% endfor %}
+Sitemap: {{ site.url }}/sitemap.xml
