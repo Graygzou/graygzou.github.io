@@ -10,7 +10,7 @@
       <ul class="social-media-list">
       {%- for social_media in site.social_tags -%}
           <li>
-            <a href="{{ social_media.path | escape }}">
+            <a href="{{ social_media.path | escape }}" aria-label="{{ social_media.name }}">
               <svg class="svg-icon">
                 <use xlink:href="{{ '/assets/icons/gamefolio-social-icons.svg#' | append: social_media.name | relative_url }}">
                 </use>
