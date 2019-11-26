@@ -1,0 +1,21 @@
+{
+  "short_name": "Grégoire Boiron",
+  "name": "Grégoire Boiron's Portfolio",
+  "icons": [
+    {
+      "src": "/assets/gregoire-boiron.jpg",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/assets/gregoire-boiron.jpg",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "https://graygzou.github.io/",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#3367D6"
+}
