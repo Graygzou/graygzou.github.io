@@ -3,6 +3,6 @@ ignore: true
 ---
 User-agent: *
 {% for node in site.pages %}{% unless node.ignore %}{% if node.allowindex %}Allow: {{ node.url }}
-{% else %}Disallow: {{ node.url }}
+{% elsif node.allowindex == false %}Disallow: {{ node.url }}
 {% endif %}{% endunless %}{% endfor %}
 Sitemap: {{ site.url }}/sitemap.xml
