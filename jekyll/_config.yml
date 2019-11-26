@@ -40,7 +40,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Grégoire Boiron's personal site.
   Host my portfolio, links to my projects and my own blog.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://graygzou.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 social_tags:
   - name: twitter
     path: https://twitter.com/GrayGzou

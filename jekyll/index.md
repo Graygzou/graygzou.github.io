@@ -5,6 +5,7 @@
 layout: home
 title: Home
 order: 1
+ignore: true
 ---
 
 # Welcome
