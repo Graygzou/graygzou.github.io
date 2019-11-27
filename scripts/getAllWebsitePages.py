@@ -16,13 +16,18 @@ def parse(isProduction, xmlPath):
     tree = ET.parse(xmlPath)
     root = tree.getroot()
     urls = "[" + '\n' + "        "
+    if not isProduction:
+        urls += "\"http://localhost:4000/"
+    else:
+        urls += "\"https://graygzou.github.io/"
+    urls += "404.html\"," + '\n' + INDENTATION
+
     for url in root.findall('{http://www.sitemaps.org/schemas/sitemap/0.9}url'):
         loc = url.find('{http://www.sitemaps.org/schemas/sitemap/0.9}loc').text
-
-        if not isProduction:
-            loc = "http://localhost:4000/" + loc
-
-        urls += "\"" + loc + "\", " + '\n' + INDENTATION
+        if ".pdf" not in loc:
+            #if not isProduction:
+            #    loc = "http://localhost:4000/" + loc
+            urls += "\"" + loc + "\", " + '\n' + INDENTATION
     urls = urls[:-3 - len(INDENTATION)] + "]" + '\n' + "    "
     return urls
 

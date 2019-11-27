@@ -41,7 +41,7 @@ script:
   - ./scripts/build.sh
   - ./scripts/beforeinstall.sh
   - ./scripts/cibuild.sh
-  - (cd scripts && python getAllWebsitePages.py 1 "../jekyll/site/sitemap.xml" \;)
+  - (cd scripts && python getAllWebsitePages.py 0 "../jekyll/site/sitemap.xml" \;)
   - lhci healthcheck --fatal --checks=githubToken
   - lhci autorun --config=./lighthouserc.json
   #- curl https://www.teleconsole.com/get.sh | sh
