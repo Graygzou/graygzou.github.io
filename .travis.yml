@@ -9,6 +9,10 @@ addons:
     packages:
       - libcurl4-openssl-dev
 
+branches:
+  except:
+    - master
+
 # reduce log clutter
 cache: bundler  # caching bundler gem packages will speed up build
 
@@ -41,16 +45,10 @@ script:
   - ./scripts/build.sh
   - ./scripts/beforeinstall.sh
   - ./scripts/cibuild.sh
-  - (cd scripts && python getAllWebsitePages.py 0 "../jekyll/site/sitemap.xml" \;)
-  - lhci healthcheck --fatal --checks=githubToken
-  - lhci autorun --config=./lighthouserc.json
-  #- curl https://www.teleconsole.com/get.sh | sh
-  #- teleconsole
 
-
-branches:
-  except:
-  - master
+after_failure:
+  - curl https://www.teleconsole.com/get.sh | sh
+  - teleconsole
 
 deploy:
   provider: pages
@@ -65,10 +63,8 @@ deploy:
   on:
     branch: develop
 
-
-# command to run tests
-#script:
-#  - py.test -v --color=yes --exitfirst --showlocals --durations=5
-#
-#after_success:
-#  - python websiteGen.py GITHUB_API_TOKEN
+# See travis job cycle: https://docs.travis-ci.com/user/job-lifecycle
+after_deploy:
+  - (cd scripts && python getAllWebsitePages.py 0 "../jekyll/site/sitemap.xml" \;)
+  - lhci healthcheck --fatal --checks=githubToken
+  - lhci autorun --config=./lighthouserc.json
