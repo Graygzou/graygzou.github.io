@@ -1,21 +1,21 @@
 {
   "short_name": "Grégoire Boiron's Portfolio",
-  "name": "Grégoire Boiron's Portfolio",
+  "name": "GB Portfolio",
   "icons": [
     {
-      "src": "/assets/gregoire-boiron.jpg",
+      "src": "/assets/fox-icon.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/assets/gregoire-boiron.jpg",
+      "src": "/assets/fox-icon.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
   "start_url": "/",
   "background_color": "#ffffff",
-  "display": "standalone",
+  "display": "fullscreen",
   "scope": "/",
   "theme_color": "#ff8c38"
 }
