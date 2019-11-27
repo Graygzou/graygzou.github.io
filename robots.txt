@@ -1,1 +1,5 @@
-Sitemap: /sitemap.xml
+User-agent: *
+Disallow: /about/
+Disallow: /resume/
+
+Sitemap: https://graygzou.github.io/sitemap.xml

@@ -1,0 +1,21 @@
+{
+  "short_name": "Grégoire Boiron's Portfolio",
+  "name": "Grégoire Boiron's Portfolio",
+  "icons": [
+    {
+      "src": "/assets/gregoire-boiron.jpg",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/assets/gregoire-boiron.jpg",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#ff8c38"
+}
