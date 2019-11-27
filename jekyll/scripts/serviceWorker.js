@@ -8,7 +8,9 @@ function showOfflineToast() {
 
 // (1)
 if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('/scripts/service-worker.js').then(function(reg) {
+    navigator.serviceWorker.register('/scripts/service-worker.js', { scope: "/" }).then(function(reg) {
+        // See https://w3c.github.io/ServiceWorker/#service-worker-script-response
+        console.log("The max allowed scope was overriden to '/'.");
         if (!reg.installing)
             return;
         console.log("[*] ServiceWorker is installing...");
