@@ -28,27 +28,19 @@ def parse(isProduction, xmlPath):
 
 
 def addUrls(urls):
-    #for line in open(LIGHTHOUSE_CONFIG_PATH, 'w'):
-    #    line = re.sub(r'url": *', '"url": ' + urls, line)
-
     # Read in the file
     with open(LIGHTHOUSE_CONFIG_PATH, 'r') as file :
         filedata = file.read()
 
     # Replace the target string
     print(filedata)
-    filedata = re.sub(r'(\"urls\": )[^\}]*', '\\1' + urls, filedata)
+    filedata = re.sub(r'(\"url\": )[^\}]*', '\\1' + urls, filedata)
     print(filedata)
     #filedata = filedata.replace('"url": ', '"url": ' + urls)
 
     # Write the file out again
     with open(LIGHTHOUSE_CONFIG_PATH, 'w') as file:
         file.write(filedata)
-
-    # = open(pathReadFile,'r')
-    #for line in originalContent:
-    #    # Remove header comment
-    #   line = re.sub(r'<!---*.*-*-->', '', line)
 
 # ----------------------------------------------------------------------------------
 #                                main
