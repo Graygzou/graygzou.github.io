@@ -1,10 +1,10 @@
 ---
 layout: null
 ---
-const staticCacheName = "graygzou-portfolio";
+const staticCacheName = "gregoire-boiron-portfolio";
 
 const filesToCache = [
-    "/",
+    '/',
     {% for page in site.html_pages %}'{{ page.url }}',
     {% endfor %}
     {% for post in site.posts %}'{{ post.url }}'{% unless forloop.last %},
@@ -40,7 +40,7 @@ self.addEventListener("activate", function(e){
         caches.keys().then(function(cacheNames){
             return Promise.all(
                 cacheNames.filter(function(cacheName){
-                    return cacheName.startsWith("graygzou-portfolio") && cacheName != staticCacheName;
+                    return cacheName.startsWith("gregoire-boiron-portfolio") && cacheName != staticCacheName;
                 }).map(function(cacheName){
                     return caches.delete(cacheName);
                 })
