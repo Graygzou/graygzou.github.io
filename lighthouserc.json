@@ -2,8 +2,8 @@
   "ci": {
     "collect": {
       "numberOfRuns": 3,
-      "staticDistDir": "./jekyll/site/",
-      "start-server-command=": "JEKYLL_ENV=production bundle exec jekyll build --destination site ",
+      "staticDistDir": "./jekyll/_site/",
+      "start-server-command=": "bundle exec jekyll serve",
       "url": [
         "http://localhost:4000/blog/jekyll/update/2019/07/28/getting-start-with-jekyll.html",
         "http://localhost:4000/blog/c++/2019/09/28/tips-and-tricks-ccp.html", 
