@@ -264,6 +264,10 @@
 .post-link {
   display: block;
   @include relative-font-size(1.5);
+
+  .emoji {
+    vertical-align: inherit;
+  }
 }
 
 .cv-home {
@@ -283,6 +287,12 @@
  */
 .post-header {
   margin-bottom: $spacing-unit;
+
+  .emoji {
+    vertical-align: bottom;
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .post-title {
@@ -553,7 +563,7 @@ object {
   min-width: 250px; /* Set a default minimum width */
   margin-left: -125px; /* Divide value of min-width by 2 */
   background-color: #333; /* Black background color */
-  color: #fff; /* White text color */
+  color: #fff; /* White text colo.post-link r */
   text-align: center; /* Centered text */
   border-radius: 2px; /* Rounded borders */
   padding: 16px; /* Padding */
