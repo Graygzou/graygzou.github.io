@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ff8c38"/><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>What I’ve learned during Advent Of Code 2019 :christmas_tree: | Grégoire Boiron</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="What I’ve learned during Advent Of Code 2019 :christmas_tree:" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Like last year, I’ve decided to participate to the Advent Of Code 2019. And (like last year..), I also decided to tackle this event with a crazy challenge : Use Unreal Engine 4." />
+<meta property="og:description" content="Like last year, I’ve decided to participate to the Advent Of Code 2019. And (like last year..), I also decided to tackle this event with a crazy challenge : Use Unreal Engine 4." />
+<link rel="canonical" href="https://graygzou.github.io/blog/challenges/2019/12/31/what-i-ve-learned-during-advent-of-code-2019.html" />
+<meta property="og:url" content="https://graygzou.github.io/blog/challenges/2019/12/31/what-i-ve-learned-during-advent-of-code-2019.html" />
+<meta property="og:site_name" content="Grégoire Boiron" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-12-31T12:00:00+00:00" />
+<script type="application/ld+json">
+{"description":"Like last year, I’ve decided to participate to the Advent Of Code 2019. And (like last year..), I also decided to tackle this event with a crazy challenge : Use Unreal Engine 4.","@type":"BlogPosting","headline":"What I’ve learned during Advent Of Code 2019 :christmas_tree:","dateModified":"2019-12-31T12:00:00+00:00","datePublished":"2019-12-31T12:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://graygzou.github.io/blog/challenges/2019/12/31/what-i-ve-learned-during-advent-of-code-2019.html"},"url":"https://graygzou.github.io/blog/challenges/2019/12/31/what-i-ve-learned-during-advent-of-code-2019.html","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css">
+  <link rel="manifest" href="/manifest.json">
+  <!-- Should be an 180x180 icon. -->
+  <!-- See https://stackoverflow.com/questions/5110776/apple-touch-icon-for-websites -->
+  <link rel="apple-touch-icon" href="/assets/fox-icon.png"><link type="application/atom+xml" rel="alternate" href="https://graygzou.github.io/feed.xml" title="Grégoire Boiron" /><script>
+//if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-148345166-1', 'auto');
+  ga('send', 'pageview');
+//}
+</script>
+  
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper">
+<div class="profil-header">
+      <a class="site-title" rel="author" href="/">Grégoire Boiron</a>
+
+      <p class="profil-description">Programmer Generalist at iLLOGIKA</p>
+      <ul class="social-media-list">
+<li>
+            <a href="https://twitter.com/GrayGzou" aria-label="twitter">
+              <svg class="svg-icon">
+                <use xlink:href="/assets/icons/gamefolio-social-icons.svg#twitter">
+                </use>
+              </svg>
+            </a>
+          </li>
+<li>
+            <a href="https://github.com/Graygzou" aria-label="github">
+              <svg class="svg-icon">
+                <use xlink:href="/assets/icons/gamefolio-social-icons.svg#github">
+                </use>
+              </svg>
+            </a>
+          </li>
+<li>
+            <a href="https://www.linkedin.com/in/gregoire-boiron/" aria-label="linkedin">
+              <svg class="svg-icon">
+                <use xlink:href="/assets/icons/gamefolio-social-icons.svg#linkedin">
+                </use>
+              </svg>
+            </a>
+          </li>
+<li>
+            <a href="https://gamejolt.com/@GrayGzou" aria-label="gamejolt">
+              <svg class="svg-icon">
+                <use xlink:href="/assets/icons/gamefolio-social-icons.svg#gamejolt">
+                </use>
+              </svg>
+            </a>
+          </li>
+<li>
+            <a href="https://graygzou.itch.io/" aria-label="itch-dot-io">
+              <svg class="svg-icon">
+                <use xlink:href="/assets/icons/gamefolio-social-icons.svg#itch-dot-io">
+                </use>
+              </svg>
+            </a>
+          </li>
+</ul>
+    </div>
+<nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+<a class="page-link" href="/">Home</a><a class="page-link" href="/projects/">Projects</a><a class="page-link" href="/resume/">Resume</a><a class="page-link" href="/blog/">Blog</a><a class="page-link" href="/about/">About</a>
+</div>
+      </nav>
+</div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">What I've learned during Advent Of Code 2019 <img class="emoji" title=":christmas_tree:" alt=":christmas_tree:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f384.png" height="20" width="20">
+</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-12-31T12:00:00+00:00" itemprop="datePublished">Dec 31, 2019
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Like last year, I’ve decided to participate to the Advent Of Code 2019. 
+And (like last year..), I also decided to tackle this event with a crazy challenge : Use Unreal Engine 4.</p>
+
+<p>Feel free to check all my solutions for each year in my <a href="https://github.com/Graygzou/advent-of-code-2019">Github Repository</a>.</p>
+
+<h3 id="why-unreal-4-">Why Unreal 4 ?</h3>
+<p>As a game programmer, you have to know how game engine works. 
+Of course you don’t have to know several one. 
+As long as you know one of them you should be fine.</p>
+
+<p>I personally find interesting to compare them to know what they do best one compare to the other.
+It’s also a good skill to have (knowing a few game engine). 
+Since Unreal is used by some game development studios, it’s always good to add that kind of knowledge in my backpack.</p>
+
+<p>Plus, I bought a couple of courses on that subject a while ago. 
+So it was a good opportunity to make a good use of them. <img class="emoji" title=":wink:" alt=":wink:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f609.png" height="20" width="20"></p>
+
+<h3 id="summary-of-what-ive-learned">Summary of what I’ve learned</h3>
+<ol>
+  <li>
+    <p><strong>Unreal does not deal with <code class="highlighter-rouge">.txt</code> by default</strong> <br>
+You have to convert it first into a know format like a <code class="highlighter-rouge">.csv</code>. 
+Then you will have to import it as <code class="highlighter-rouge">.csv</code> with a custom structure or not 
+(depends if the csv is a made for a build-in feature of unreal)
+If you do not follow those steps, Unreal will not display text file in the editor.</p>
+  </li>
+  <li>
+    <p><strong>Code in Visual and launching Unreal to debug</strong> 
+I lost a lot of times doing the opposite. All due to crashed. 
+I guess if you’re the guy that never encountered crashed when coding in C++, then this tips is useless for you.
+So when I wrote my solutions in plain C++, I only had Visual Studio opened, and then launched the debugger to test it in unreal.</p>
+  </li>
+  <li>
+    <p><strong>Read the documentation</strong> <br>
+Sounds a bit cheesy but in this case it helps. 
+I mean, when you use any third party software, you need to know how to use it right !
+It’s the same for Unity, Cry-Engine, JMonkey, etc. Or any framework, libraries you want to use.</p>
+  </li>
+  <li>
+    <p><strong>Standard Library Class</strong> <br>
+This is the C++ class I’ve used the most when solving AoC puzzles. 
+I find it useful because those correspond to standard C++ file without specific behavior.
+I did not dig enough to be familiar with other C++ classes to make good use of them. 
+To make a good usage of that class I had to make them all static and <code class="highlighter-rouge">BlueprintCallable</code> (see next section).</p>
+  </li>
+  <li>
+    <p><strong>Actor Class</strong>
+In a couple of cases, the Standard Library Class was not enough. 
+Because the previous class type can’t be use to spawn object, I had to use the <code class="highlighter-rouge">Actor Class</code> instead. and visualize the result but those were one-off case.</p>
+  </li>
+  <li>
+    <p><strong>UFUNCTION, UPROPERTY</strong> <br>
+Of course, by using Unreal, I made a little use of some keywords. 
+<code class="highlighter-rouge">UNFONCTION</code> is one of them. This keyword is placed on top of C++ functions. 
+It allows to specify special behavior for the described function. 
+For example, adding <code class="highlighter-rouge">BlueprintCallable</code> would make the function available in blueprint.
+Same goes with <code class="highlighter-rouge">UPROPERTY</code> but for properties.</p>
+  </li>
+</ol>
+
+<h3 id="favorite-puzzles">Favorite puzzles</h3>
+<p>From all the puzzles I did in the 24 days, I really liked days 2, 6, 10. 
+I found them interesting to solve. 
+The problem was well explained, the examples were nicely presented and the background story attractive.
+I also like them cause I ended-up with clever solutions for most of them. 
+Two examples could be :</p>
+<ul>
+  <li>Day 2 part 2: I only the good old pencil/paper method to solve it with maths.</li>
+  <li>Day 10 part 1: the use of a simple dot product to solve the puzzle quickly.</li>
+</ul>
+
+<h3 id="conclusion">Conclusion</h3>
+<p>Even if I did not finish all the puzzles in the require time, I had a fun doing it.
+Compare to last year, I did not tackle with the same spirit and the mind set which might explains a bit my slow progress.</p>
+
+<p>I will try to complete all of them in my spare time when I want to challenge myself !
+See you next edition !</p>
+
+<h4 id="links">Links</h4>
+<p>As always, you can find more on those links if you’re interested.</p>
+<ul>
+  <li><a href="https://github.com/Graygzou/advent-of-code-2019">My Github Repository</a></li>
+  <li><a href="https://adventofcode.com/2019/">Advent Of Code official website</a></li>
+  <li><a href="https://docs.unrealengine.com/en-US/API">Unreal official documentation</a></li>
+  <li><a href="https://www.unrealengine.com/en-US/blog">Unreal official blog</a></li>
+</ul>
+
+  </div>
+<a class="u-url" href="/blog/challenges/2019/12/31/what-i-ve-learned-during-advent-of-code-2019.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <div class="wrapper">
+    <h2 class="footer-heading">Grégoire Boiron</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Grégoire Boiron</li>
+<li><a class="u-email" href="mailto:gregoire.boiron@gmail.com">gregoire.boiron@gmail.com</a></li>
+</ul>
+      </div>
+      <div class="footer-col footer-col-2">
+<ul class="social-media-list">
+<!-- Personal social medias --><!-- Test icons -->
+</ul>
+</div>
+      <div class="footer-col footer-col-3">
+        <p>Grégoire Boiron's personal site. Host my portfolio, links to my projects and my own blog.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="/scripts/service-worker-helper.js"></script>
+
+    <div class="offline-ready">Site is Ready for Offline Use</div>
+
+  </body>
+
+</html>

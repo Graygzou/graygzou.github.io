@@ -9,7 +9,8 @@ const filesToCache = [
     '/projects/',
     '/resume/',
     
-    '/blog/challenges/2019/10/10/advent-of-code-2018.html',
+    '/blog/challenges/2019/12/31/what-i-ve-learned-during-advent-of-code-2019.html',
+    '/blog/challenges/2019/10/10/summary-of-my-first-participation-of-advent-of-code-2018.html',
     '/blog/c++/2019/09/28/tips-and-tricks-ccp.html',
     '/blog/jekyll/update/2019/07/28/getting-start-with-jekyll.html'
 ];

@@ -1,4 +1,89 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://graygzou.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://graygzou.github.io/" rel="alternate" type="text/html" /><updated>2019-12-06T02:02:29+00:00</updated><id>https://graygzou.github.io/feed.xml</id><title type="html">Grégoire Boiron</title><subtitle>Grégoire Boiron's personal site. Host my portfolio, links to my projects and my own blog.</subtitle><entry><title type="html">Advent Of Code 2018</title><link href="https://graygzou.github.io/blog/challenges/2019/10/10/advent-of-code-2018.html" rel="alternate" type="text/html" title="Advent Of Code 2018" /><published>2019-10-10T00:00:00+00:00</published><updated>2019-10-10T00:00:00+00:00</updated><id>https://graygzou.github.io/blog/challenges/2019/10/10/advent-of-code-2018</id><content type="html" xml:base="https://graygzou.github.io/blog/challenges/2019/10/10/advent-of-code-2018.html">&lt;p&gt;Little blog post (almost a year after my participation..) about my first participation to this event.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://graygzou.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://graygzou.github.io/" rel="alternate" type="text/html" /><updated>2020-01-02T17:06:39+00:00</updated><id>https://graygzou.github.io/feed.xml</id><title type="html">Grégoire Boiron</title><subtitle>Grégoire Boiron's personal site. Host my portfolio, links to my projects and my own blog.</subtitle><entry><title type="html">What I’ve learned during Advent Of Code 2019 :christmas_tree:</title><link href="https://graygzou.github.io/blog/challenges/2019/12/31/what-i-ve-learned-during-advent-of-code-2019.html" rel="alternate" type="text/html" title="What I've learned during Advent Of Code 2019 :christmas_tree:" /><published>2019-12-31T12:00:00+00:00</published><updated>2019-12-31T12:00:00+00:00</updated><id>https://graygzou.github.io/blog/challenges/2019/12/31/what-i-ve-learned-during-advent-of-code-2019</id><content type="html" xml:base="https://graygzou.github.io/blog/challenges/2019/12/31/what-i-ve-learned-during-advent-of-code-2019.html">&lt;p&gt;Like last year, I’ve decided to participate to the Advent Of Code 2019. 
+And (like last year..), I also decided to tackle this event with a crazy challenge : Use Unreal Engine 4.&lt;/p&gt;
+
+&lt;p&gt;Feel free to check all my solutions for each year in my &lt;a href=&quot;https://github.com/Graygzou/advent-of-code-2019&quot;&gt;Github Repository&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-unreal-4-&quot;&gt;Why Unreal 4 ?&lt;/h3&gt;
+&lt;p&gt;As a game programmer, you have to know how game engine works. 
+Of course you don’t have to know several one. 
+As long as you know one of them you should be fine.&lt;/p&gt;
+
+&lt;p&gt;I personally find interesting to compare them to know what they do best one compare to the other.
+It’s also a good skill to have (knowing a few game engine). 
+Since Unreal is used by some game development studios, it’s always good to add that kind of knowledge in my backpack.&lt;/p&gt;
+
+&lt;p&gt;Plus, I bought a couple of courses on that subject a while ago. 
+So it was a good opportunity to make a good use of them. :wink:&lt;/p&gt;
+
+&lt;h3 id=&quot;summary-of-what-ive-learned&quot;&gt;Summary of what I’ve learned&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Unreal does not deal with &lt;code class=&quot;highlighter-rouge&quot;&gt;.txt&lt;/code&gt; by default&lt;/strong&gt; &lt;br /&gt;
+You have to convert it first into a know format like a &lt;code class=&quot;highlighter-rouge&quot;&gt;.csv&lt;/code&gt;. 
+Then you will have to import it as &lt;code class=&quot;highlighter-rouge&quot;&gt;.csv&lt;/code&gt; with a custom structure or not 
+(depends if the csv is a made for a build-in feature of unreal)
+If you do not follow those steps, Unreal will not display text file in the editor.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Code in Visual and launching Unreal to debug&lt;/strong&gt; 
+I lost a lot of times doing the opposite. All due to crashed. 
+I guess if you’re the guy that never encountered crashed when coding in C++, then this tips is useless for you.
+So when I wrote my solutions in plain C++, I only had Visual Studio opened, and then launched the debugger to test it in unreal.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Read the documentation&lt;/strong&gt; &lt;br /&gt;
+Sounds a bit cheesy but in this case it helps. 
+I mean, when you use any third party software, you need to know how to use it right !
+It’s the same for Unity, Cry-Engine, JMonkey, etc. Or any framework, libraries you want to use.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Standard Library Class&lt;/strong&gt; &lt;br /&gt;
+This is the C++ class I’ve used the most when solving AoC puzzles. 
+I find it useful because those correspond to standard C++ file without specific behavior.
+I did not dig enough to be familiar with other C++ classes to make good use of them. 
+To make a good usage of that class I had to make them all static and &lt;code class=&quot;highlighter-rouge&quot;&gt;BlueprintCallable&lt;/code&gt; (see next section).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Actor Class&lt;/strong&gt;
+In a couple of cases, the Standard Library Class was not enough. 
+Because the previous class type can’t be use to spawn object, I had to use the &lt;code class=&quot;highlighter-rouge&quot;&gt;Actor Class&lt;/code&gt; instead. and visualize the result but those were one-off case.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;UFUNCTION, UPROPERTY&lt;/strong&gt; &lt;br /&gt;
+Of course, by using Unreal, I made a little use of some keywords. 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;UNFONCTION&lt;/code&gt; is one of them. This keyword is placed on top of C++ functions. 
+It allows to specify special behavior for the described function. 
+For example, adding &lt;code class=&quot;highlighter-rouge&quot;&gt;BlueprintCallable&lt;/code&gt; would make the function available in blueprint.
+Same goes with &lt;code class=&quot;highlighter-rouge&quot;&gt;UPROPERTY&lt;/code&gt; but for properties.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;favorite-puzzles&quot;&gt;Favorite puzzles&lt;/h3&gt;
+&lt;p&gt;From all the puzzles I did in the 24 days, I really liked days 2, 6, 10. 
+I found them interesting to solve. 
+The problem was well explained, the examples were nicely presented and the background story attractive.
+I also like them cause I ended-up with clever solutions for most of them. 
+Two examples could be :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Day 2 part 2: I only the good old pencil/paper method to solve it with maths.&lt;/li&gt;
+  &lt;li&gt;Day 10 part 1: the use of a simple dot product to solve the puzzle quickly.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;Even if I did not finish all the puzzles in the require time, I had a fun doing it.
+Compare to last year, I did not tackle with the same spirit and the mind set which might explains a bit my slow progress.&lt;/p&gt;
+
+&lt;p&gt;I will try to complete all of them in my spare time when I want to challenge myself !
+See you next edition !&lt;/p&gt;
+
+&lt;h4 id=&quot;links&quot;&gt;Links&lt;/h4&gt;
+&lt;p&gt;As always, you can find more on those links if you’re interested.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Graygzou/advent-of-code-2019&quot;&gt;My Github Repository&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://adventofcode.com/2019/&quot;&gt;Advent Of Code official website&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.unrealengine.com/en-US/API&quot;&gt;Unreal official documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.unrealengine.com/en-US/blog&quot;&gt;Unreal official blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Like last year, I’ve decided to participate to the Advent Of Code 2019. And (like last year..), I also decided to tackle this event with a crazy challenge : Use Unreal Engine 4.</summary></entry><entry><title type="html">Summary of my first participation of Advent Of Code</title><link href="https://graygzou.github.io/blog/challenges/2019/10/10/summary-of-my-first-participation-of-advent-of-code-2018.html" rel="alternate" type="text/html" title="Summary of my first participation of Advent Of Code" /><published>2019-10-10T00:00:00+00:00</published><updated>2019-10-10T00:00:00+00:00</updated><id>https://graygzou.github.io/blog/challenges/2019/10/10/summary-of-my-first-participation-of-advent-of-code-2018</id><content type="html" xml:base="https://graygzou.github.io/blog/challenges/2019/10/10/summary-of-my-first-participation-of-advent-of-code-2018.html">&lt;p&gt;Little blog post (almost a year after my participation..) about my first participation to this event.&lt;/p&gt;
 
 &lt;h2 id=&quot;backstory&quot;&gt;Backstory&lt;/h2&gt;
 &lt;p&gt;A collegue told me about this event and the blast he had when doing it with others co-workers.
@@ -7,12 +92,14 @@ Just by hearing the evelator pitch I was sold right away. (challenges, puzzles, 
 &lt;p&gt;I was crazy enought to decided to do it in Lua. 
 Compare to all my co-workers (4 of them) that choose C# or C++ which were the main languages we work most of the time.&lt;/p&gt;
 
-&lt;p&gt;Feel free to check all my solutions for each year in my &lt;a href=&quot;https://github.com/Graygzou/advent-of-code&quot;&gt;Github Repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Feel free to check all my solutions for each year in my [Github Repository].&lt;/p&gt;
 
 &lt;h4 id=&quot;why-lua-&quot;&gt;Why Lua ?&lt;/h4&gt;
 &lt;p&gt;You might ask yourself why so much pain ?&lt;br /&gt;
-Well, I wanted learn something new. I wasn’t going to compete with speed but more like “beautiful solutions”.
-I’ve already seen a bit of lua in a previous project (Raven) but I did not have the chance to really play with it. 
+Well, the answer is simple: I wanted learn something new. 
+The point of my participation was not to solve fast puzzles but more like finding “beautiful algorithms” to solve them.&lt;/p&gt;
+
+&lt;p&gt;I’ve already seen a bit of lua in a previous project (Raven) but I did not have the chance to really play with it. 
 So I decided it was a good time to do so !&lt;/p&gt;
 
 &lt;p&gt;I also heard some companies were using lua as a scripting language for their game / engine. 
@@ -23,7 +110,8 @@ Sp I guess, It’s always good to have more than one string to your bow.&lt;/p&g
 In fact, sometimes puzzles were easy to solve with a bit of abtraction. 
 And, it’s not something really straight forward in lua.&lt;/p&gt;
 
-&lt;p&gt;2) I’d something did “reinvent the wheel”. Like sorting an array with a bubble sort. 
+&lt;p&gt;2) I’ve sometimes “re-invented the wheel”. 
+Like coding sorting an array with a bubble sort which is a basic compute science exercise and is part of most array/vector libraries (contains at least a &lt;code class=&quot;highlighter-rouge&quot;&gt;sort()&lt;/code&gt; method). 
 Or even apply a function to all element of an array. Those things require extra work compare to a language that already offers helpers functions to do it.&lt;/p&gt;
 
 &lt;h3 id=&quot;overcome-lua-weaknesses&quot;&gt;Overcome Lua weaknesses&lt;/h3&gt;
@@ -59,7 +147,12 @@ Also, some could contains patterns that could possibly avoid having to refactor 
 &lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
 &lt;p&gt;I find myself not finished the AoC 2018. 
 Even if I see it as a bit of a failure, I’ve learned a lot and challenge myself once again.
-I keep some good memories from this experience and will do the next edition for sure.&lt;/p&gt;</content><author><name></name></author><summary type="html">Little blog post (almost a year after my participation..) about my first participation to this event.</summary></entry><entry><title type="html">Tips and Tricks C++</title><link href="https://graygzou.github.io/blog/c++/2019/09/28/tips-and-tricks-ccp.html" rel="alternate" type="text/html" title="Tips and Tricks C++" /><published>2019-09-28T20:15:00+00:00</published><updated>2019-09-28T20:15:00+00:00</updated><id>https://graygzou.github.io/blog/c++/2019/09/28/tips-and-tricks-ccp</id><content type="html" xml:base="https://graygzou.github.io/blog/c++/2019/09/28/tips-and-tricks-ccp.html">&lt;h2 id=&quot;static--keyword&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;static&lt;/code&gt;  keyword&lt;/h2&gt;
+I keep some good memories from this experience and will do the next edition for sure.&lt;/p&gt;
+
+&lt;h4 id=&quot;links&quot;&gt;Links&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/Graygzou/advent-of-code-2018&quot;&gt;Github Repository&lt;/a&gt;
+&lt;a href=&quot;https://adventofcode.com/2018/&quot;&gt;advent of code&lt;/a&gt;
+&lt;a href=&quot;https://www.lua.org/pil/contents.html&quot;&gt;lua documentation&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Little blog post (almost a year after my participation..) about my first participation to this event.</summary></entry><entry><title type="html">Tips and Tricks C++</title><link href="https://graygzou.github.io/blog/c++/2019/09/28/tips-and-tricks-ccp.html" rel="alternate" type="text/html" title="Tips and Tricks C++" /><published>2019-09-28T20:15:00+00:00</published><updated>2019-09-28T20:15:00+00:00</updated><id>https://graygzou.github.io/blog/c++/2019/09/28/tips-and-tricks-ccp</id><content type="html" xml:base="https://graygzou.github.io/blog/c++/2019/09/28/tips-and-tricks-ccp.html">&lt;h2 id=&quot;static--keyword&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;static&lt;/code&gt;  keyword&lt;/h2&gt;
 &lt;p&gt;Values are stored at class level and not at instance level.
 You have to initialize static variable outside the class in order to reserve the memory.&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class C {
