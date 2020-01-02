@@ -34,7 +34,7 @@ before_install:
   - (cd scripts && python githubProjectGen.py ${GITHUB_API_TOKEN} \;)
 
 install:
-  - (cd jekyll && gem update bundler)
+  - (cd jekyll && gem update bundler || gem update --system)
   - (cd jekyll && bundle check || bundle install)
 
 before_script:
