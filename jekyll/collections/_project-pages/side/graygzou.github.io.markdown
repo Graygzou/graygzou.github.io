@@ -1,28 +1,31 @@
 ---
 layout: project-page
 title: graygzou.github.io
-description:  Github portfolio made from scratch.
+description:  Personal portfolio made with jekyll with my own theme.
 stargazers-count: 0
-forks-count: 0
-updated-at: 2019-11-03 21:36:25
-last-update-days: 0
+forks-count: 1
+updated-at: 2019-12-06 02:02:51
+last-update-days: 25
 tags: ['portfolio', 'html-css', 'javascript', 'python', 'code-generation', 'github-api']
 languages: 
   - name: HTML
-    percentage: 45.0
+    percentage: 35.7
     color: "#e34c26"
-  - name: CSS
-    percentage: 22.9
-    color: "#563d7c"
   - name: Python
-    percentage: 22.2
+    percentage: 28.9
     color: "#3572A5"
+  - name: CSS
+    percentage: 19.9
+    color: "#563d7c"
   - name: Ruby
-    percentage: 8.9
+    percentage: 7.7
     color: "#701516"
   - name: Shell
-    percentage: 1.1
+    percentage: 5.4
     color: "#89e051"
+  - name: JavaScript
+    percentage: 2.5
+    color: "#f1e05a"
 
 category: 'side'
 pitch: "Wonderful website I made using jekyll and liquid to build what I want. Using Github API also."
@@ -43,7 +46,8 @@ additional-sections:
            "Use GitHub API to synchronize projects data directly from GitHub.",
            "Build an automatization flow to run all kind of stuffs before deploying it to GitHub."]
   - name: constraints
-    list: ["Don't own a server yet so no back-end can be used."]
+    list: ["Using GitHub page to host it so no back-end can be used.",
+           "Don't own an address so have to use the standard GitHub one."]
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

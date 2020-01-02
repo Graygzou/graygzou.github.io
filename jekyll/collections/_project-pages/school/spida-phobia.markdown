@@ -5,7 +5,7 @@ description: Virtual Reality simulation that helps people suffering from arachno
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-23 01:53:04
-last-update-days: 103
+last-update-days: 161
 tags: ['virtual-reality', 'aracnophobia', 'unreal-engine-4', 'simulation']
 languages: 
   - name: C++
