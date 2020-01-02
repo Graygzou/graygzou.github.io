@@ -1,0 +1,84 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- @author: Grégoire Boiron <gregoire.boiron@gmail.com> -->
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="296.000000pt" height="296.000000pt" viewBox="4 136 300.000000 300.000000"
+ preserveAspectRatio="xMidYMid meet">
+
+    <!-- Top -->
+    <line x1="149.5" y1="18" x2="149.5" y2="65" style="stroke:rgb(250,188,8);stroke-width:5" />
+
+    <line x1="112" y1="77" x2="130" y2="120" style="stroke:rgb(253,253,102);stroke-width:5" />
+    <line x1="149.5" y1="77" x2="149.5" y2="124" style="stroke:rgb(253,253,102);stroke-width:5" />
+    <line x1="188" y1="77" x2="170" y2="120" style="stroke:rgb(253,253,102);stroke-width:5" />
+
+    <!-- Ornament line -->
+    <!--<line x1="83" y1="155" x2="103" y2="155" style="stroke:rgb(253,253,102);stroke-width:5" />
+    <line x1="112" y1="155" x2="132" y2="155" style="stroke:rgb(253,253,102);stroke-width:5" />-->
+    <!-- Star -->
+    <polyline points="150,175 150,166 150,176 159,172 150,176 141,172 150,176 144,184, 150,176, 156,184"
+              style="fill:none;stroke:black;stroke-width:8" />
+    <polyline points="150,175 150,166 150,176 159,172 150,176 141,172 150,176 144,184, 150,176, 156,184"
+              style="fill:none;stroke:yellow;stroke-width:5" />
+    <!--<line x1="168" y1="155" x2="188" y2="155" style="stroke:rgb(253,253,102);stroke-width:5" />
+    <line x1="196" y1="155" x2="216" y2="155" style="stroke:rgb(253,253,102);stroke-width:5" />-->
+
+    <!-- First line -->
+    <line x1="130" y1="218.5" x2="112" y2="205" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <line x1="130" y1="217" x2="112" y2="229" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <circle cx="151" cy="219" r="10" stroke="orange" stroke-width="5" fill="none"/>
+    <line x1="170" y1="218.5" x2="188" y2="206" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <line x1="170" y1="217" x2="188" y2="229" style="stroke:rgb(4,117,9);stroke-width:5" />
+
+    <!-- Second line -->
+    <line x1="100" y1="278.5" x2="82" y2="265" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <line x1="100" y1="277" x2="82" y2="290" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <line x1="130" y1="278.5" x2="112" y2="265" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <line x1="130" y1="277" x2="112" y2="290" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <ellipse cx="151" cy="278" rx="11" ry="15"
+             style="stroke:rgb(2,90,224);stroke-width:5;fill:none" />
+    <line x1="170" y1="278.5" x2="188" y2="265" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <line x1="170" y1="277" x2="188" y2="290" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <line x1="200" y1="278.5" x2="218" y2="265" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <line x1="200" y1="277" x2="218" y2="290" style="stroke:rgb(4,117,9);stroke-width:5" />
+
+    <!-- Third line -->
+    <line x1="75" y1="337.5" x2="58" y2="324" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <line x1="75" y1="336" x2="58" y2="349" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <circle cx="94" cy="337" r="10" stroke="orange" stroke-width="5" fill="none" />
+    <line x1="112" y1="337.5" x2="130" y2="324" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <line x1="112" y1="336" x2="130" y2="349" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <line x1="141" y1="337.5" x2="160" y2="324" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <line x1="141" y1="336" x2="160" y2="349" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <line x1="170" y1="337.5" x2="188" y2="324" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <line x1="170" y1="336" x2="188" y2="349" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <ellipse cx="210" cy="337" rx="11" ry="15"
+             style="stroke:rgb(2,90,224);stroke-width:5;fill:none" />
+    <line x1="230" y1="337.5" x2="248" y2="324" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <line x1="230" y1="336" x2="248" y2="349" style="stroke:rgb(4,117,9);stroke-width:5" />
+
+    <!-- Forth line -->
+    <line x1="45" y1="392.5" x2="27" y2="379" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <line x1="45" y1="391" x2="27" y2="404" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <!-- @ -->
+    <path d="M 73 405 v -10 -5 c 0 0 0 -20 -16 -7 M 71 382 c -20 -16 -29 43 0 30 M 73 392 c -18 -1 -13 21 0 7"
+          stroke-width="5" fill="none" stroke="rgb(209,3,7)" />
+    <line x1="100" y1="392.5" x2="82" y2="379" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <line x1="100" y1="391" x2="82" y2="404" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <line x1="130" y1="392.5" x2="112" y2="379" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <line x1="130" y1="391" x2="112" y2="404" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <line x1="160" y1="392.5" x2="141" y2="379" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <line x1="160" y1="391" x2="141" y2="404" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <!-- Star -->
+    <polyline points="180,393 180,382 180,393 170,389 180,393 190,389 180,393 173,401, 180,393, 187,401"
+              style="fill:none;stroke:black;stroke-width:8" />
+    <polyline points="180,393 180,382 180,393 170,389 180,393 190,389 180,393 173,401, 180,393, 187,401"
+              style="fill:none;stroke:yellow;stroke-width:5" />
+    <line x1="200" y1="392.5" x2="218" y2="379" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <line x1="200" y1="391" x2="218" y2="404" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <line x1="230" y1="392.5" x2="248" y2="379" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <line x1="230" y1="391" x2="248" y2="404" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <line x1="260" y1="392.5" x2="278" y2="379" style="stroke:rgb(4,117,9);stroke-width:5" />
+    <line x1="260" y1="391" x2="278" y2="404" style="stroke:rgb(4,117,9);stroke-width:5" />
+</svg>
