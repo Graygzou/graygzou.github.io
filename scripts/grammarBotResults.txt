@@ -141,29 +141,6 @@ Results for ../jekyll/_includes/projects-content/brain-control-content.markdown:
             Word: {'wallavoidance'}, Index Offset: {'793'}, Possible Replacements: ['wall avoidance']
 
 Detected language: en-US
-Results for ../jekyll/_includes/projects-content/advent-of-code-content.markdown:
-==================================================================================
-    Category:{'GRAMMAR'}
-        Rule:{'CD_NN'}
-            Word: {'Simulator'}, Index Offset: {'1382'}, Possible Replacements: ['Simulators']
-    Category:{'PUNCTUATION'}
-        Rule:{'PUNCTUATION_PARAGRAPH_END'}
-            Word: {'Board'}, Index Offset: {'66'}, Possible Replacements: ['Board.', 'Board!', 'Board?', 'Board:', 'Board,', 'Board;']
-            Word: {'article'}, Index Offset: {'346'}, Possible Replacements: ['article.', 'article!', 'article?', 'article:', 'article,', 'article;']
-    Category:{'TYPOGRAPHY'}
-        Rule:{'WHITESPACE_RULE'}
-            Word: {'  '}, Index Offset: {'461'}, Possible Replacements: [' ']
-            Word: {'   '}, Index Offset: {'583'}, Possible Replacements: [' ']
-            Word: {'  '}, Index Offset: {'1515'}, Possible Replacements: [' ']
-    Category:{'TYPOS'}
-        Rule:{'MORFOLOGIK_RULE_EN_US'}
-            Word: {'Chronal'}, Index Offset: {'723'}, Possible Replacements: ['Coronal']
-            Word: {'Chronal'}, Index Offset: {'873'}, Possible Replacements: ['Coronal']
-            Word: {'Chronal'}, Index Offset: {'1001'}, Possible Replacements: ['Coronal']
-            Word: {'Chronal'}, Index Offset: {'1138'}, Possible Replacements: ['Coronal']
-            Word: {'Chronal'}, Index Offset: {'1278'}, Possible Replacements: ['Coronal']
-
-Detected language: en-US
 Results for ../jekyll/_includes/projects-content/battle-simulator-content.markdown:
 ==================================================================================
     Category:{'PUNCTUATION'}
@@ -209,6 +186,29 @@ Results for ../jekyll/_includes/projects-content/graygzou.github.io-content.mark
             Word: {'jekyll'}, Index Offset: {'1557'}, Possible Replacements: ['Jekyll']
             Word: {'htmlproofer'}, Index Offset: {'1611'}, Possible Replacements: []
             Word: {'endup'}, Index Offset: {'2411'}, Possible Replacements: ['endue', 'end up']
+
+Detected language: en-US
+Results for ../jekyll/_includes/projects-content/advent-of-code-2018-content.markdown:
+==================================================================================
+    Category:{'GRAMMAR'}
+        Rule:{'CD_NN'}
+            Word: {'Simulator'}, Index Offset: {'1382'}, Possible Replacements: ['Simulators']
+    Category:{'PUNCTUATION'}
+        Rule:{'PUNCTUATION_PARAGRAPH_END'}
+            Word: {'Board'}, Index Offset: {'66'}, Possible Replacements: ['Board.', 'Board!', 'Board?', 'Board:', 'Board,', 'Board;']
+            Word: {'article'}, Index Offset: {'346'}, Possible Replacements: ['article.', 'article!', 'article?', 'article:', 'article,', 'article;']
+    Category:{'TYPOGRAPHY'}
+        Rule:{'WHITESPACE_RULE'}
+            Word: {'  '}, Index Offset: {'461'}, Possible Replacements: [' ']
+            Word: {'   '}, Index Offset: {'583'}, Possible Replacements: [' ']
+            Word: {'  '}, Index Offset: {'1515'}, Possible Replacements: [' ']
+    Category:{'TYPOS'}
+        Rule:{'MORFOLOGIK_RULE_EN_US'}
+            Word: {'Chronal'}, Index Offset: {'723'}, Possible Replacements: ['Coronal']
+            Word: {'Chronal'}, Index Offset: {'873'}, Possible Replacements: ['Coronal']
+            Word: {'Chronal'}, Index Offset: {'1001'}, Possible Replacements: ['Coronal']
+            Word: {'Chronal'}, Index Offset: {'1138'}, Possible Replacements: ['Coronal']
+            Word: {'Chronal'}, Index Offset: {'1278'}, Possible Replacements: ['Coronal']
 
 Detected language: en-US
 Results for ../jekyll/_includes/projects-content/native-ruins-content.markdown:
