@@ -1,0 +1,13 @@
+ <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+      width="353.000000pt"
+      height="353.000000pt"
+      viewBox="20 18 363.000000 363.000000"
+      preserveAspectRatio="xMidYMid meet">
+<metadata>
+Created by Grégoire Boiron 2019
+</metadata>
+     <polygon points="166,55 152,137 103,137 103,174 217,174 223,137 192,137 204,55" style="fill:rgb(66,134,245);stroke:rgb(66,134,245);stroke-width:1" />
+     <polygon points="146,174 138,226 89,226 89,261 132,261 119,343 158,343 185,174" style="fill:rgb(52,168,83);stroke:rgb(52,168,83);stroke-width:1" />
+      <polygon points="236,55 209,224 249,224 257,173 309,173 309,137 263,137 276,55" style="fill:rgb(234,66,53);stroke:rgb(234,66,53);stroke-width:1" />
+      <polygon points="177,224 171,261 203,261 191,343 229,343 242,261 293,261 293,224" style="fill:rgb(250,188,5);stroke:rgb(250,188,5);stroke-width:1" />
+</svg>
