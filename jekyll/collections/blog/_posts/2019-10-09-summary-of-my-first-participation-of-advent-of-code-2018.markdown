@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Advent Of Code 2018"
+title:  "Summary of my first participation of Advent Of Code"
 date:   2019-10-09 20:00:00 -0400
 categories: challenges
 ---
@@ -19,7 +19,9 @@ Feel free to check all my solutions for each year in my [Github Repository].
 
 #### Why Lua ?
 You might ask yourself why so much pain ?  
-Well, I wanted learn something new. I wasn't going to compete with speed but more like "beautiful solutions".
+Well, the answer is simple: I wanted learn something new. 
+The point of my participation was not to solve fast puzzles but more like finding "beautiful algorithms" to solve them.
+
 I've already seen a bit of lua in a previous project (Raven) but I did not have the chance to really play with it. 
 So I decided it was a good time to do so !
 
@@ -31,7 +33,8 @@ Sp I guess, It's always good to have more than one string to your bow.
 In fact, sometimes puzzles were easy to solve with a bit of abtraction. 
 And, it's not something really straight forward in lua.
 
-2) I'd something did "reinvent the wheel". Like sorting an array with a bubble sort. 
+2) I've sometimes "re-invented the wheel". 
+Like coding sorting an array with a bubble sort which is a basic compute science exercise and is part of most array/vector libraries (contains at least a `sort()` method). 
 Or even apply a function to all element of an array. Those things require extra work compare to a language that already offers helpers functions to do it.
 
 ### Overcome Lua weaknesses
@@ -62,6 +65,7 @@ I find myself not finished the AoC 2018.
 Even if I see it as a bit of a failure, I've learned a lot and challenge myself once again.
 I keep some good memories from this experience and will do the next edition for sure.
 
-[Github Repository]: https://github.com/Graygzou/advent-of-code
-[advent of code]:  https://adventofcode.com/2018/
-[lua documentation]: https://www.lua.org/pil/contents.html
+#### Links
+[Github Repository](https://github.com/Graygzou/advent-of-code-2018)
+[advent of code](https://adventofcode.com/2018/)
+[lua documentation](https://www.lua.org/pil/contents.html)

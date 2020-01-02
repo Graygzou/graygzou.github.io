@@ -11,7 +11,7 @@ team-size:
 main-roles: [Programmer]
 project_links:
   - name: github
-    url: https://github.com/Graygzou/advent-of-code
+    url: https://github.com/Graygzou/advent-of-code-2018
 additional-sections:
   - name: goals
     list: ["Challenge myself.",

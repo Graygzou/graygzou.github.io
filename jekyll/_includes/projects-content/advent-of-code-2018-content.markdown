@@ -17,7 +17,7 @@ To be continued.
 <a name="2018"></a> 2018 Edition
 ---------------------------------
 ### Blog post
-I wrote a small article about my experience. You can find it here: [blog article]({% post_url /blog/2019-10-09-advent-of-code-2018 %})
+I wrote a small article about my experience. You can find it here: [blog article]({% post_url /blog/2019-10-09-summary-of-my-first-participation-of-advent-of-code-2018 %})
 
 ### Personal progression
 Since it was my first year doing this challenge, I did not try to rush my solutions.   
