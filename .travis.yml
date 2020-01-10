@@ -2,6 +2,8 @@ dist: xenial   # required for Python >= 3.7
 language: python
 python:
   - "3.7"
+node_js:
+  - "12" # we stick with a previous version to make lighthouse cli works.
 
 addons:
   chrome: stable # make sure you have Chrome available
