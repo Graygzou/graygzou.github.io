@@ -16,11 +16,7 @@ def parse(isProduction, xmlPath):
     tree = ET.parse(xmlPath)
     root = tree.getroot()
     urls = "[" + '\n' + "        "
-    if not isProduction:
-        urls += "\"http://localhost:4000/"
-    else:
-        urls += "\"https://graygzou.github.io/"
-    urls += "404.html\"," + '\n' + INDENTATION
+    urls += "\"http://localhost:4000/404.html\"," + '\n' + INDENTATION
 
     for url in root.findall('{http://www.sitemaps.org/schemas/sitemap/0.9}url'):
         loc = url.find('{http://www.sitemaps.org/schemas/sitemap/0.9}loc').text
@@ -54,6 +50,8 @@ def addUrls(urls):
 # ----------------------------------------------------------------------------------
 def main(isProduction, xmlPath):
     print("Gather all the website urls...")
+    print(isProduction)
+    print(xmlPath)
 
     # Step 1
     urls = parse(isProduction, xmlPath)
