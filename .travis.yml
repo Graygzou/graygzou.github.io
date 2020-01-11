@@ -67,6 +67,6 @@ deploy:
 
 # See travis job cycle: https://docs.travis-ci.com/user/job-lifecycle
 after_deploy:
-  - (cd scripts && python getAllWebsitePages.py 0 "../jekyll/site/sitemap.xml" \;)
+  - (cd scripts && python getAllWebsitePages.py 0 "../jekyll/_site/sitemap.xml" \;)
   - lhci healthcheck --fatal --checks=githubToken
   - lhci autorun --config=./lighthouserc.json
