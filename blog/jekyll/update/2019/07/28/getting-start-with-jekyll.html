@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ff8c38"/><!-- Begin Jekyll SEO tag v2.5.0 -->
+  <meta name="theme-color" content="#ff8c38"/><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Getting start with Jekyll | Grégoire Boiron</title>
 <meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="Getting start with Jekyll" />
@@ -16,25 +16,13 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-07-28T00:26:29+00:00" />
 <script type="application/ld+json">
-{"description":"This is a draft post for now. Don’t mind about what is here.","@type":"BlogPosting","headline":"Getting start with Jekyll","dateModified":"2019-07-28T00:26:29+00:00","datePublished":"2019-07-28T00:26:29+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://graygzou.github.io/blog/jekyll/update/2019/07/28/getting-start-with-jekyll.html"},"url":"https://graygzou.github.io/blog/jekyll/update/2019/07/28/getting-start-with-jekyll.html","@context":"http://schema.org"}</script>
+{"description":"This is a draft post for now. Don’t mind about what is here.","mainEntityOfPage":{"@type":"WebPage","@id":"https://graygzou.github.io/blog/jekyll/update/2019/07/28/getting-start-with-jekyll.html"},"@type":"BlogPosting","url":"https://graygzou.github.io/blog/jekyll/update/2019/07/28/getting-start-with-jekyll.html","headline":"Getting start with Jekyll","dateModified":"2019-07-28T00:26:29+00:00","datePublished":"2019-07-28T00:26:29+00:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css">
   <link rel="manifest" href="/manifest.json">
   <!-- Should be an 180x180 icon. -->
   <!-- See https://stackoverflow.com/questions/5110776/apple-touch-icon-for-websites -->
-  <link rel="apple-touch-icon" href="/assets/ghost-cat-180.png"><link type="application/atom+xml" rel="alternate" href="https://graygzou.github.io/feed.xml" title="Grégoire Boiron" /><script>
-//if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-148345166-1', 'auto');
-  ga('send', 'pageview');
-//}
-</script>
-  
-</head>
+  <link rel="apple-touch-icon" href="/assets/ghost-cat-180.png"><link type="application/atom+xml" rel="alternate" href="https://graygzou.github.io/feed.xml" title="Grégoire Boiron" /></head>
 <body><header class="site-header">
 
   <div class="wrapper">
@@ -118,22 +106,22 @@
 <p>Ref: https://jekyllrb.com/tutorials/using-jekyll-with-bundler/</p>
 
 <p>What you need to do :</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bundle install --path vendor/bundle
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bundle install --path vendor/bundle
 </code></pre></div></div>
 
 <p>if already installed run</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bundle update
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bundle update
 or
 $ bundle add jekyll
 </code></pre></div></div>
 
 <p>then run</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bundle exec jekyll new --force --skip-bundle .
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bundle exec jekyll new --force --skip-bundle .
 $ bundle install
 </code></pre></div></div>
 
 <p>Finally run
-<code class="highlighter-rouge">$ bundle exec jekyll serve</code></p>
+<code class="language-plaintext highlighter-rouge">$ bundle exec jekyll serve</code></p>
 
 <p>%%%%%%%%
 Ref: https://jekyllrb.com/docs/themes/#overriding-theme-defaults</p>
@@ -141,9 +129,9 @@ Ref: https://jekyllrb.com/docs/themes/#overriding-theme-defaults</p>
 <p>Create own theme (overriding existing one)</p>
 
 <p>First find the one you already using. To do that simply run</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle show &lt;theme name&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle show &lt;theme name&gt;
 </code></pre></div></div>
-<p>like <code class="highlighter-rouge">bundle show minima</code> which is jekyll default theme.</p>
+<p>like <code class="language-plaintext highlighter-rouge">bundle show minima</code> which is jekyll default theme.</p>
 
 <p>Give you all the file you need to override to create your theme.</p>
 

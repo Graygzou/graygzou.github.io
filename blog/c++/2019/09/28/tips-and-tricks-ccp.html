@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ff8c38"/><!-- Begin Jekyll SEO tag v2.5.0 -->
+  <meta name="theme-color" content="#ff8c38"/><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Tips and Tricks C++ | Grégoire Boiron</title>
 <meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="Tips and Tricks C++" />
@@ -16,25 +16,13 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-09-28T20:15:00+00:00" />
 <script type="application/ld+json">
-{"description":"static keyword Values are stored at class level and not at instance level. You have to initialize static variable outside the class in order to reserve the memory. ``` class C { static int i; static int j; }","@type":"BlogPosting","headline":"Tips and Tricks C++","dateModified":"2019-09-28T20:15:00+00:00","datePublished":"2019-09-28T20:15:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://graygzou.github.io/blog/c++/2019/09/28/tips-and-tricks-ccp.html"},"url":"https://graygzou.github.io/blog/c++/2019/09/28/tips-and-tricks-ccp.html","@context":"http://schema.org"}</script>
+{"description":"static keyword Values are stored at class level and not at instance level. You have to initialize static variable outside the class in order to reserve the memory. ``` class C { static int i; static int j; }","mainEntityOfPage":{"@type":"WebPage","@id":"https://graygzou.github.io/blog/c++/2019/09/28/tips-and-tricks-ccp.html"},"@type":"BlogPosting","url":"https://graygzou.github.io/blog/c++/2019/09/28/tips-and-tricks-ccp.html","headline":"Tips and Tricks C++","dateModified":"2019-09-28T20:15:00+00:00","datePublished":"2019-09-28T20:15:00+00:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css">
   <link rel="manifest" href="/manifest.json">
   <!-- Should be an 180x180 icon. -->
   <!-- See https://stackoverflow.com/questions/5110776/apple-touch-icon-for-websites -->
-  <link rel="apple-touch-icon" href="/assets/ghost-cat-180.png"><link type="application/atom+xml" rel="alternate" href="https://graygzou.github.io/feed.xml" title="Grégoire Boiron" /><script>
-//if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-148345166-1', 'auto');
-  ga('send', 'pageview');
-//}
-</script>
-  
-</head>
+  <link rel="apple-touch-icon" href="/assets/ghost-cat-180.png"><link type="application/atom+xml" rel="alternate" href="https://graygzou.github.io/feed.xml" title="Grégoire Boiron" /></head>
 <body><header class="site-header">
 
   <div class="wrapper">
@@ -114,10 +102,10 @@
 
   <div class="post-content e-content" itemprop="articleBody">
     <h2 id="static--keyword">
-<code class="highlighter-rouge">static</code>  keyword</h2>
+<code class="language-plaintext highlighter-rouge">static</code>  keyword</h2>
 <p>Values are stored at class level and not at instance level.
 You have to initialize static variable outside the class in order to reserve the memory.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class C {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class C {
     static int i;
     static int j;
 }
@@ -127,9 +115,9 @@ You have to initialize static variable outside the class in order to reserve the
 int C::i = 1;
 int C::j;
 </code></pre></div></div>
-<p>Note: If you declare a global <code class="highlighter-rouge">i</code> after static variables init, you can acceess it with <code class="highlighter-rouge">::i</code>.
+<p>Note: If you declare a global <code class="language-plaintext highlighter-rouge">i</code> after static variables init, you can acceess it with <code class="language-plaintext highlighter-rouge">::i</code>.
 Example:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int i = 20
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int i = 20
 int C::i = 10;
 int C::j = 5;
 
@@ -140,25 +128,25 @@ int p = C::j + i;   // p = 15
 <p>/!\ Static method can only use static declarations.</p>
 
 <h2 id="const-keyword">
-<code class="highlighter-rouge">const</code> keyword</h2>
+<code class="language-plaintext highlighter-rouge">const</code> keyword</h2>
 <p>Cannot be modified : attempt to do so directly is a compile-time error.
 Modifing it indirectly (modifying const obj through ref or pointer to non const-type) results in undefined behavior.</p>
 
-<p>A const need to be defined when declared aka <code class="highlighter-rouge">const int x = 5; // without = 5 this will not compile</code></p>
+<p>A const need to be defined when declared aka <code class="language-plaintext highlighter-rouge">const int x = 5; // without = 5 this will not compile</code></p>
 
 <h2 id="volatile-keyword">
-<code class="highlighter-rouge">volatile</code> keyword</h2>
+<code class="language-plaintext highlighter-rouge">volatile</code> keyword</h2>
 <p>Volatile is a hint to the implementation to avoid aggressive optimization involving the object because the value of the object might be changed by means undetectable by an implementation.</p>
 
 <h2 id="mutable-keyword">
-<code class="highlighter-rouge">mutable</code> keyword</h2>
+<code class="language-plaintext highlighter-rouge">mutable</code> keyword</h2>
 <p>Permits modification of the class member declared mutable even if the containing
 object is declared const.</p>
 
 <h2 id="inline-keyword">
-<code class="highlighter-rouge">inline</code> keyword</h2>
+<code class="language-plaintext highlighter-rouge">inline</code> keyword</h2>
 <p>All functions declared <strong>inside</strong> the class/struct/union definition (.h) is an inline function like so :</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class A
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class A
 {
 public:
     inline int test() // redundant use of inline
@@ -171,7 +159,7 @@ public:
 </code></pre></div></div>
 <p>Inline functions declaration can also be declared inside the .h but <strong>outside</strong> the class definition.
 But you need to also declare the signature of this function inside the class definition. An example of this:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class A
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class A
 {
 public:
     int test(); // declare the function
@@ -182,7 +170,7 @@ inline int A::test() // use inline prefix
 }
 </code></pre></div></div>
 
-<h2 id="define"><code class="highlighter-rouge">#define</code></h2>
+<h2 id="define"><code class="language-plaintext highlighter-rouge">#define</code></h2>
 
 <h2 id="arguments">arguments</h2>
 
@@ -191,9 +179,9 @@ inline int A::test() // use inline prefix
 <h2 id="class">class</h2>
 <p>You can create instances of a classe either</p>
 <ul>
-  <li>statically (Use class name as a type) <code class="highlighter-rouge">MyClass myClass;</code>
+  <li>statically (Use class name as a type) <code class="language-plaintext highlighter-rouge">MyClass myClass;</code>
 </li>
-  <li>dynamically (Use operator new followed by the class name and optionally arguments between parentheses) <code class="highlighter-rouge">MyClass myClass = new MyClass(arg1, arg2);</code>
+  <li>dynamically (Use operator new followed by the class name and optionally arguments between parentheses) <code class="language-plaintext highlighter-rouge">MyClass myClass = new MyClass(arg1, arg2);</code>
 </li>
 </ul>
 
@@ -226,12 +214,12 @@ Contains: variables not list above. Enumerations. Names of classes, members func
 </ul>
 
 <h2 id="external">external</h2>
-<p>Basically, <code class="highlighter-rouge">extern</code> is a keyword in C++ language that tells to the compiler that definition of a particular variable is exists elsewhere.
-The counter part of <code class="highlighter-rouge">extern</code> is <code class="highlighter-rouge">static</code> which tells the variables is only visible to that file/class (depending on where it is declared).</p>
+<p>Basically, <code class="language-plaintext highlighter-rouge">extern</code> is a keyword in C++ language that tells to the compiler that definition of a particular variable is exists elsewhere.
+The counter part of <code class="language-plaintext highlighter-rouge">extern</code> is <code class="language-plaintext highlighter-rouge">static</code> which tells the variables is only visible to that file/class (depending on where it is declared).</p>
 
 <h2 id="void">void</h2>
 <p>pointers to void and functions returning type void (procedures in other languages) are permitted. Like so</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void* ptr;          // void pointer
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void* ptr;          // void pointer
 ptr = fct;          // Store a void function in this pointer
 ((void(*)())ptr)(); // Call the function pointed
 
@@ -240,7 +228,7 @@ void fct () {
 }
 </code></pre></div></div>
 <p>This can be used to mask the original pointer value :</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> int n = 1;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> int n = 1;
  int* p1 = &amp;n;
  void* pv = p1;
  int* p2 = static_cast&lt;int*&gt;(pv);
@@ -248,8 +236,8 @@ void fct () {
 </code></pre></div></div>
 
 <h1 id="tips">Tips</h1>
-<p><code class="highlighter-rouge">string* a, b;</code> : only <code class="highlighter-rouge">a</code> is a string pointer. <code class="highlighter-rouge">b</code> is only a string.
-<code class="highlighter-rouge">string* a, *b;</code> : both <code class="highlighter-rouge">a</code> and <code class="highlighter-rouge">b</code> are string pointers.</p>
+<p><code class="language-plaintext highlighter-rouge">string* a, b;</code> : only <code class="language-plaintext highlighter-rouge">a</code> is a string pointer. <code class="language-plaintext highlighter-rouge">b</code> is only a string.
+<code class="language-plaintext highlighter-rouge">string* a, *b;</code> : both <code class="language-plaintext highlighter-rouge">a</code> and <code class="language-plaintext highlighter-rouge">b</code> are string pointers.</p>
 
 
   </div>

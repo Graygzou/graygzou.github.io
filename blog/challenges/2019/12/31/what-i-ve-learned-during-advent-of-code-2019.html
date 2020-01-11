@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ff8c38"/><!-- Begin Jekyll SEO tag v2.5.0 -->
+  <meta name="theme-color" content="#ff8c38"/><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>What I’ve learned during Advent Of Code 2019 :christmas_tree: | Grégoire Boiron</title>
 <meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="What I’ve learned during Advent Of Code 2019 :christmas_tree:" />
@@ -16,25 +16,13 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-12-31T12:00:00+00:00" />
 <script type="application/ld+json">
-{"description":"Like last year, I’ve decided to participate to the Advent Of Code 2019. And (like last year..), I also decided to tackle this event with a crazy challenge : Use Unreal Engine 4.","@type":"BlogPosting","headline":"What I’ve learned during Advent Of Code 2019 :christmas_tree:","dateModified":"2019-12-31T12:00:00+00:00","datePublished":"2019-12-31T12:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://graygzou.github.io/blog/challenges/2019/12/31/what-i-ve-learned-during-advent-of-code-2019.html"},"url":"https://graygzou.github.io/blog/challenges/2019/12/31/what-i-ve-learned-during-advent-of-code-2019.html","@context":"http://schema.org"}</script>
+{"description":"Like last year, I’ve decided to participate to the Advent Of Code 2019. And (like last year..), I also decided to tackle this event with a crazy challenge : Use Unreal Engine 4.","mainEntityOfPage":{"@type":"WebPage","@id":"https://graygzou.github.io/blog/challenges/2019/12/31/what-i-ve-learned-during-advent-of-code-2019.html"},"@type":"BlogPosting","url":"https://graygzou.github.io/blog/challenges/2019/12/31/what-i-ve-learned-during-advent-of-code-2019.html","headline":"What I’ve learned during Advent Of Code 2019 :christmas_tree:","dateModified":"2019-12-31T12:00:00+00:00","datePublished":"2019-12-31T12:00:00+00:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css">
   <link rel="manifest" href="/manifest.json">
   <!-- Should be an 180x180 icon. -->
   <!-- See https://stackoverflow.com/questions/5110776/apple-touch-icon-for-websites -->
-  <link rel="apple-touch-icon" href="/assets/ghost-cat-180.png"><link type="application/atom+xml" rel="alternate" href="https://graygzou.github.io/feed.xml" title="Grégoire Boiron" /><script>
-//if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-148345166-1', 'auto');
-  ga('send', 'pageview');
-//}
-</script>
-  
-</head>
+  <link rel="apple-touch-icon" href="/assets/ghost-cat-180.png"><link type="application/atom+xml" rel="alternate" href="https://graygzou.github.io/feed.xml" title="Grégoire Boiron" /></head>
 <body><header class="site-header">
 
   <div class="wrapper">
@@ -134,9 +122,9 @@ So it was a good opportunity to make a good use of them. <img class="emoji" titl
 <h3 id="summary-of-what-ive-learned">Summary of what I’ve learned</h3>
 <ol>
   <li>
-    <p><strong>Unreal does not deal with <code class="highlighter-rouge">.txt</code> by default</strong> <br>
-You have to convert it first into a know format like a <code class="highlighter-rouge">.csv</code>. 
-Then you will have to import it as <code class="highlighter-rouge">.csv</code> with a custom structure or not 
+    <p><strong>Unreal does not deal with <code class="language-plaintext highlighter-rouge">.txt</code> by default</strong> <br>
+You have to convert it first into a know format like a <code class="language-plaintext highlighter-rouge">.csv</code>. 
+Then you will have to import it as <code class="language-plaintext highlighter-rouge">.csv</code> with a custom structure or not 
 (depends if the csv is a made for a build-in feature of unreal)
 If you do not follow those steps, Unreal will not display text file in the editor.</p>
   </li>
@@ -157,20 +145,20 @@ It’s the same for Unity, Cry-Engine, JMonkey, etc. Or any framework, libraries
 This is the C++ class I’ve used the most when solving AoC puzzles. 
 I find it useful because those correspond to standard C++ file without specific behavior.
 I did not dig enough to be familiar with other C++ classes to make good use of them. 
-To make a good usage of that class I had to make them all static and <code class="highlighter-rouge">BlueprintCallable</code> (see next section).</p>
+To make a good usage of that class I had to make them all static and <code class="language-plaintext highlighter-rouge">BlueprintCallable</code> (see next section).</p>
   </li>
   <li>
     <p><strong>Actor Class</strong>
 In a couple of cases, the Standard Library Class was not enough. 
-Because the previous class type can’t be use to spawn object, I had to use the <code class="highlighter-rouge">Actor Class</code> instead. and visualize the result but those were one-off case.</p>
+Because the previous class type can’t be use to spawn object, I had to use the <code class="language-plaintext highlighter-rouge">Actor Class</code> instead. and visualize the result but those were one-off case.</p>
   </li>
   <li>
     <p><strong>UFUNCTION, UPROPERTY</strong> <br>
 Of course, by using Unreal, I made a little use of some keywords. 
-<code class="highlighter-rouge">UNFONCTION</code> is one of them. This keyword is placed on top of C++ functions. 
+<code class="language-plaintext highlighter-rouge">UNFONCTION</code> is one of them. This keyword is placed on top of C++ functions. 
 It allows to specify special behavior for the described function. 
-For example, adding <code class="highlighter-rouge">BlueprintCallable</code> would make the function available in blueprint.
-Same goes with <code class="highlighter-rouge">UPROPERTY</code> but for properties.</p>
+For example, adding <code class="language-plaintext highlighter-rouge">BlueprintCallable</code> would make the function available in blueprint.
+Same goes with <code class="language-plaintext highlighter-rouge">UPROPERTY</code> but for properties.</p>
   </li>
 </ol>
 

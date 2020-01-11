@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://graygzou.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://graygzou.github.io/" rel="alternate" type="text/html" /><updated>2020-01-10T21:50:13+00:00</updated><id>https://graygzou.github.io/feed.xml</id><title type="html">Grégoire Boiron</title><subtitle>Grégoire Boiron's personal site. Host my portfolio, links to my projects and my own blog.</subtitle><entry><title type="html">What I’ve learned during Advent Of Code 2019 :christmas_tree:</title><link href="https://graygzou.github.io/blog/challenges/2019/12/31/what-i-ve-learned-during-advent-of-code-2019.html" rel="alternate" type="text/html" title="What I've learned during Advent Of Code 2019 :christmas_tree:" /><published>2019-12-31T12:00:00+00:00</published><updated>2019-12-31T12:00:00+00:00</updated><id>https://graygzou.github.io/blog/challenges/2019/12/31/what-i-ve-learned-during-advent-of-code-2019</id><content type="html" xml:base="https://graygzou.github.io/blog/challenges/2019/12/31/what-i-ve-learned-during-advent-of-code-2019.html">&lt;p&gt;Like last year, I’ve decided to participate to the Advent Of Code 2019. 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://graygzou.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://graygzou.github.io/" rel="alternate" type="text/html" /><updated>2020-01-11T18:04:25+00:00</updated><id>https://graygzou.github.io/feed.xml</id><title type="html">Grégoire Boiron</title><subtitle>Grégoire Boiron's personal site. Host my portfolio, links to my projects and my own blog.</subtitle><entry><title type="html">What I’ve learned during Advent Of Code 2019 :christmas_tree:</title><link href="https://graygzou.github.io/blog/challenges/2019/12/31/what-i-ve-learned-during-advent-of-code-2019.html" rel="alternate" type="text/html" title="What I've learned during Advent Of Code 2019 :christmas_tree:" /><published>2019-12-31T12:00:00+00:00</published><updated>2019-12-31T12:00:00+00:00</updated><id>https://graygzou.github.io/blog/challenges/2019/12/31/what-i-ve-learned-during-advent-of-code-2019</id><content type="html" xml:base="https://graygzou.github.io/blog/challenges/2019/12/31/what-i-ve-learned-during-advent-of-code-2019.html">&lt;p&gt;Like last year, I’ve decided to participate to the Advent Of Code 2019. 
 And (like last year..), I also decided to tackle this event with a crazy challenge : Use Unreal Engine 4.&lt;/p&gt;
 
 &lt;p&gt;Feel free to check all my solutions for each year in my &lt;a href=&quot;https://github.com/Graygzou/advent-of-code-2019&quot;&gt;Github Repository&lt;/a&gt;.&lt;/p&gt;
@@ -18,9 +18,9 @@ So it was a good opportunity to make a good use of them. :wink:&lt;/p&gt;
 &lt;h3 id=&quot;summary-of-what-ive-learned&quot;&gt;Summary of what I’ve learned&lt;/h3&gt;
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Unreal does not deal with &lt;code class=&quot;highlighter-rouge&quot;&gt;.txt&lt;/code&gt; by default&lt;/strong&gt; &lt;br /&gt;
-You have to convert it first into a know format like a &lt;code class=&quot;highlighter-rouge&quot;&gt;.csv&lt;/code&gt;. 
-Then you will have to import it as &lt;code class=&quot;highlighter-rouge&quot;&gt;.csv&lt;/code&gt; with a custom structure or not 
+    &lt;p&gt;&lt;strong&gt;Unreal does not deal with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.txt&lt;/code&gt; by default&lt;/strong&gt; &lt;br /&gt;
+You have to convert it first into a know format like a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.csv&lt;/code&gt;. 
+Then you will have to import it as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.csv&lt;/code&gt; with a custom structure or not 
 (depends if the csv is a made for a build-in feature of unreal)
 If you do not follow those steps, Unreal will not display text file in the editor.&lt;/p&gt;
   &lt;/li&gt;
@@ -41,20 +41,20 @@ It’s the same for Unity, Cry-Engine, JMonkey, etc. Or any framework, libraries
 This is the C++ class I’ve used the most when solving AoC puzzles. 
 I find it useful because those correspond to standard C++ file without specific behavior.
 I did not dig enough to be familiar with other C++ classes to make good use of them. 
-To make a good usage of that class I had to make them all static and &lt;code class=&quot;highlighter-rouge&quot;&gt;BlueprintCallable&lt;/code&gt; (see next section).&lt;/p&gt;
+To make a good usage of that class I had to make them all static and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BlueprintCallable&lt;/code&gt; (see next section).&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;strong&gt;Actor Class&lt;/strong&gt;
 In a couple of cases, the Standard Library Class was not enough. 
-Because the previous class type can’t be use to spawn object, I had to use the &lt;code class=&quot;highlighter-rouge&quot;&gt;Actor Class&lt;/code&gt; instead. and visualize the result but those were one-off case.&lt;/p&gt;
+Because the previous class type can’t be use to spawn object, I had to use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Actor Class&lt;/code&gt; instead. and visualize the result but those were one-off case.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;strong&gt;UFUNCTION, UPROPERTY&lt;/strong&gt; &lt;br /&gt;
 Of course, by using Unreal, I made a little use of some keywords. 
-&lt;code class=&quot;highlighter-rouge&quot;&gt;UNFONCTION&lt;/code&gt; is one of them. This keyword is placed on top of C++ functions. 
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UNFONCTION&lt;/code&gt; is one of them. This keyword is placed on top of C++ functions. 
 It allows to specify special behavior for the described function. 
-For example, adding &lt;code class=&quot;highlighter-rouge&quot;&gt;BlueprintCallable&lt;/code&gt; would make the function available in blueprint.
-Same goes with &lt;code class=&quot;highlighter-rouge&quot;&gt;UPROPERTY&lt;/code&gt; but for properties.&lt;/p&gt;
+For example, adding &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BlueprintCallable&lt;/code&gt; would make the function available in blueprint.
+Same goes with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UPROPERTY&lt;/code&gt; but for properties.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
@@ -111,7 +111,7 @@ In fact, sometimes puzzles were easy to solve with a bit of abtraction.
 And, it’s not something really straight forward in lua.&lt;/p&gt;
 
 &lt;p&gt;2) I’ve sometimes “re-invented the wheel”. 
-Like coding sorting an array with a bubble sort which is a basic compute science exercise and is part of most array/vector libraries (contains at least a &lt;code class=&quot;highlighter-rouge&quot;&gt;sort()&lt;/code&gt; method). 
+Like coding sorting an array with a bubble sort which is a basic compute science exercise and is part of most array/vector libraries (contains at least a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sort()&lt;/code&gt; method). 
 Or even apply a function to all element of an array. Those things require extra work compare to a language that already offers helpers functions to do it.&lt;/p&gt;
 
 &lt;h3 id=&quot;overcome-lua-weaknesses&quot;&gt;Overcome Lua weaknesses&lt;/h3&gt;
@@ -129,8 +129,8 @@ I’m a person that love comments. I find myself writing some in order to organi
 But in that case, it helps me even more with all the boiler plate code I needed to write.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Don’t hesitate to create a &lt;code class=&quot;highlighter-rouge&quot;&gt;Utils&lt;/code&gt; functions: &lt;br /&gt;
-I found myself writing some generic functions into &lt;code class=&quot;highlighter-rouge&quot;&gt;Utils&lt;/code&gt; file because it was useful in more than one challenge.
+    &lt;p&gt;Don’t hesitate to create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Utils&lt;/code&gt; functions: &lt;br /&gt;
+I found myself writing some generic functions into &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Utils&lt;/code&gt; file because it was useful in more than one challenge.
 I would not spent minutes / hours have to rewrite and test it again.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
@@ -152,10 +152,10 @@ I keep some good memories from this experience and will do the next edition for 
 &lt;h4 id=&quot;links&quot;&gt;Links&lt;/h4&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/Graygzou/advent-of-code-2018&quot;&gt;Github Repository&lt;/a&gt;
 &lt;a href=&quot;https://adventofcode.com/2018/&quot;&gt;advent of code&lt;/a&gt;
-&lt;a href=&quot;https://www.lua.org/pil/contents.html&quot;&gt;lua documentation&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Little blog post (almost a year after my participation..) about my first participation to this event.</summary></entry><entry><title type="html">Tips and Tricks C++</title><link href="https://graygzou.github.io/blog/c++/2019/09/28/tips-and-tricks-ccp.html" rel="alternate" type="text/html" title="Tips and Tricks C++" /><published>2019-09-28T20:15:00+00:00</published><updated>2019-09-28T20:15:00+00:00</updated><id>https://graygzou.github.io/blog/c++/2019/09/28/tips-and-tricks-ccp</id><content type="html" xml:base="https://graygzou.github.io/blog/c++/2019/09/28/tips-and-tricks-ccp.html">&lt;h2 id=&quot;static--keyword&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;static&lt;/code&gt;  keyword&lt;/h2&gt;
+&lt;a href=&quot;https://www.lua.org/pil/contents.html&quot;&gt;lua documentation&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Little blog post (almost a year after my participation..) about my first participation to this event.</summary></entry><entry><title type="html">Tips and Tricks C++</title><link href="https://graygzou.github.io/blog/c++/2019/09/28/tips-and-tricks-ccp.html" rel="alternate" type="text/html" title="Tips and Tricks C++" /><published>2019-09-28T20:15:00+00:00</published><updated>2019-09-28T20:15:00+00:00</updated><id>https://graygzou.github.io/blog/c++/2019/09/28/tips-and-tricks-ccp</id><content type="html" xml:base="https://graygzou.github.io/blog/c++/2019/09/28/tips-and-tricks-ccp.html">&lt;h2 id=&quot;static--keyword&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;static&lt;/code&gt;  keyword&lt;/h2&gt;
 &lt;p&gt;Values are stored at class level and not at instance level.
 You have to initialize static variable outside the class in order to reserve the memory.&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class C {
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class C {
     static int i;
     static int j;
 }
@@ -165,9 +165,9 @@ You have to initialize static variable outside the class in order to reserve the
 int C::i = 1;
 int C::j;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Note: If you declare a global &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt; after static variables init, you can acceess it with &lt;code class=&quot;highlighter-rouge&quot;&gt;::i&lt;/code&gt;.
+&lt;p&gt;Note: If you declare a global &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i&lt;/code&gt; after static variables init, you can acceess it with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;::i&lt;/code&gt;.
 Example:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int i = 20
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int i = 20
 int C::i = 10;
 int C::j = 5;
 
@@ -177,22 +177,22 @@ int p = C::j + i;   // p = 15
 
 &lt;p&gt;/!\ Static method can only use static declarations.&lt;/p&gt;
 
-&lt;h2 id=&quot;const-keyword&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;const&lt;/code&gt; keyword&lt;/h2&gt;
+&lt;h2 id=&quot;const-keyword&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;const&lt;/code&gt; keyword&lt;/h2&gt;
 &lt;p&gt;Cannot be modified : attempt to do so directly is a compile-time error.
 Modifing it indirectly (modifying const obj through ref or pointer to non const-type) results in undefined behavior.&lt;/p&gt;
 
-&lt;p&gt;A const need to be defined when declared aka &lt;code class=&quot;highlighter-rouge&quot;&gt;const int x = 5; // without = 5 this will not compile&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;A const need to be defined when declared aka &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;const int x = 5; // without = 5 this will not compile&lt;/code&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;volatile-keyword&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;volatile&lt;/code&gt; keyword&lt;/h2&gt;
+&lt;h2 id=&quot;volatile-keyword&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;volatile&lt;/code&gt; keyword&lt;/h2&gt;
 &lt;p&gt;Volatile is a hint to the implementation to avoid aggressive optimization involving the object because the value of the object might be changed by means undetectable by an implementation.&lt;/p&gt;
 
-&lt;h2 id=&quot;mutable-keyword&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;mutable&lt;/code&gt; keyword&lt;/h2&gt;
+&lt;h2 id=&quot;mutable-keyword&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mutable&lt;/code&gt; keyword&lt;/h2&gt;
 &lt;p&gt;Permits modification of the class member declared mutable even if the containing
 object is declared const.&lt;/p&gt;
 
-&lt;h2 id=&quot;inline-keyword&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;inline&lt;/code&gt; keyword&lt;/h2&gt;
+&lt;h2 id=&quot;inline-keyword&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;inline&lt;/code&gt; keyword&lt;/h2&gt;
 &lt;p&gt;All functions declared &lt;strong&gt;inside&lt;/strong&gt; the class/struct/union definition (.h) is an inline function like so :&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class A
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class A
 {
 public:
     inline int test() // redundant use of inline
@@ -205,7 +205,7 @@ public:
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Inline functions declaration can also be declared inside the .h but &lt;strong&gt;outside&lt;/strong&gt; the class definition.
 But you need to also declare the signature of this function inside the class definition. An example of this:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class A
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class A
 {
 public:
     int test(); // declare the function
@@ -216,7 +216,7 @@ inline int A::test() // use inline prefix
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;define&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;#define&lt;/code&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;define&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#define&lt;/code&gt;&lt;/h2&gt;
 
 &lt;h2 id=&quot;arguments&quot;&gt;arguments&lt;/h2&gt;
 
@@ -225,8 +225,8 @@ inline int A::test() // use inline prefix
 &lt;h2 id=&quot;class&quot;&gt;class&lt;/h2&gt;
 &lt;p&gt;You can create instances of a classe either&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;statically (Use class name as a type) &lt;code class=&quot;highlighter-rouge&quot;&gt;MyClass myClass;&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;dynamically (Use operator new followed by the class name and optionally arguments between parentheses) &lt;code class=&quot;highlighter-rouge&quot;&gt;MyClass myClass = new MyClass(arg1, arg2);&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;statically (Use class name as a type) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MyClass myClass;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;dynamically (Use operator new followed by the class name and optionally arguments between parentheses) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MyClass myClass = new MyClass(arg1, arg2);&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;storage-class-specifiers&quot;&gt;Storage class specifiers&lt;/h2&gt;
@@ -258,12 +258,12 @@ Contains: variables not list above. Enumerations. Names of classes, members func
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;external&quot;&gt;external&lt;/h2&gt;
-&lt;p&gt;Basically, &lt;code class=&quot;highlighter-rouge&quot;&gt;extern&lt;/code&gt; is a keyword in C++ language that tells to the compiler that definition of a particular variable is exists elsewhere.
-The counter part of &lt;code class=&quot;highlighter-rouge&quot;&gt;extern&lt;/code&gt; is &lt;code class=&quot;highlighter-rouge&quot;&gt;static&lt;/code&gt; which tells the variables is only visible to that file/class (depending on where it is declared).&lt;/p&gt;
+&lt;p&gt;Basically, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;extern&lt;/code&gt; is a keyword in C++ language that tells to the compiler that definition of a particular variable is exists elsewhere.
+The counter part of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;extern&lt;/code&gt; is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;static&lt;/code&gt; which tells the variables is only visible to that file/class (depending on where it is declared).&lt;/p&gt;
 
 &lt;h2 id=&quot;void&quot;&gt;void&lt;/h2&gt;
 &lt;p&gt;pointers to void and functions returning type void (procedures in other languages) are permitted. Like so&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;void* ptr;          // void pointer
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;void* ptr;          // void pointer
 ptr = fct;          // Store a void function in this pointer
 ((void(*)())ptr)(); // Call the function pointed
 
@@ -272,7 +272,7 @@ void fct () {
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;This can be used to mask the original pointer value :&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; int n = 1;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; int n = 1;
  int* p1 = &amp;amp;n;
  void* pv = p1;
  int* p2 = static_cast&amp;lt;int*&amp;gt;(pv);
@@ -280,28 +280,28 @@ void fct () {
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h1 id=&quot;tips&quot;&gt;Tips&lt;/h1&gt;
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;string* a, b;&lt;/code&gt; : only &lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt; is a string pointer. &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt; is only a string.
-&lt;code class=&quot;highlighter-rouge&quot;&gt;string* a, *b;&lt;/code&gt; : both &lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt; are string pointers.&lt;/p&gt;</content><author><name></name></author><summary type="html">static keyword Values are stored at class level and not at instance level. You have to initialize static variable outside the class in order to reserve the memory. ``` class C { static int i; static int j; }</summary></entry><entry><title type="html">Getting start with Jekyll</title><link href="https://graygzou.github.io/blog/jekyll/update/2019/07/28/getting-start-with-jekyll.html" rel="alternate" type="text/html" title="Getting start with Jekyll" /><published>2019-07-28T00:26:29+00:00</published><updated>2019-07-28T00:26:29+00:00</updated><id>https://graygzou.github.io/blog/jekyll/update/2019/07/28/getting-start-with-jekyll</id><content type="html" xml:base="https://graygzou.github.io/blog/jekyll/update/2019/07/28/getting-start-with-jekyll.html">&lt;p&gt;This is a draft post for now. Don’t mind about what is here.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;string* a, b;&lt;/code&gt; : only &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt; is a string pointer. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;b&lt;/code&gt; is only a string.
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;string* a, *b;&lt;/code&gt; : both &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;b&lt;/code&gt; are string pointers.&lt;/p&gt;</content><author><name></name></author><summary type="html">static keyword Values are stored at class level and not at instance level. You have to initialize static variable outside the class in order to reserve the memory. ``` class C { static int i; static int j; }</summary></entry><entry><title type="html">Getting start with Jekyll</title><link href="https://graygzou.github.io/blog/jekyll/update/2019/07/28/getting-start-with-jekyll.html" rel="alternate" type="text/html" title="Getting start with Jekyll" /><published>2019-07-28T00:26:29+00:00</published><updated>2019-07-28T00:26:29+00:00</updated><id>https://graygzou.github.io/blog/jekyll/update/2019/07/28/getting-start-with-jekyll</id><content type="html" xml:base="https://graygzou.github.io/blog/jekyll/update/2019/07/28/getting-start-with-jekyll.html">&lt;p&gt;This is a draft post for now. Don’t mind about what is here.&lt;/p&gt;
 
 &lt;p&gt;Ref: https://jekyllrb.com/tutorials/using-jekyll-with-bundler/&lt;/p&gt;
 
 &lt;p&gt;What you need to do :&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle install --path vendor/bundle
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle install --path vendor/bundle
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;if already installed run&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle update
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle update
 or
 $ bundle add jekyll
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;then run&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle exec jekyll new --force --skip-bundle .
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle exec jekyll new --force --skip-bundle .
 $ bundle install
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Finally run
-&lt;code class=&quot;highlighter-rouge&quot;&gt;$ bundle exec jekyll serve&lt;/code&gt;&lt;/p&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ bundle exec jekyll serve&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;%%%%%%%%
 Ref: https://jekyllrb.com/docs/themes/#overriding-theme-defaults&lt;/p&gt;
@@ -309,9 +309,9 @@ Ref: https://jekyllrb.com/docs/themes/#overriding-theme-defaults&lt;/p&gt;
 &lt;p&gt;Create own theme (overriding existing one)&lt;/p&gt;
 
 &lt;p&gt;First find the one you already using. To do that simply run&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle show &amp;lt;theme name&amp;gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle show &amp;lt;theme name&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;like &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle show minima&lt;/code&gt; which is jekyll default theme.&lt;/p&gt;
+&lt;p&gt;like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle show minima&lt;/code&gt; which is jekyll default theme.&lt;/p&gt;
 
 &lt;p&gt;Give you all the file you need to override to create your theme.&lt;/p&gt;
 
