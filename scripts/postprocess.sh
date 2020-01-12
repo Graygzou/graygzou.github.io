@@ -1,15 +1,13 @@
 #!/bin/bash
+
 #############################################################################
 # Grégoire Boiron <gregoire.boiron@gmail.com>
 # Copyright (c) 2018-2019 Grégoire Boiron  All Rights Reserved.
 #############################################################################
 
-# Enable error reporting to the console.
-#set -e
-
-# ========================================
+#========================================
 # PNG COMPRESSION WITH PNGQUANT
-# ========================================
+#========================================
 echo "travis_fold:start:run_pngquant"
 echo "Run pngquant command"
 # This will create duplicate of images with -fs8 at the end of the file
@@ -29,9 +27,9 @@ find jekyll/site/assets/project-images/ -name "*.png" -exec rename "s/-fs8//g" {
 #teleconsole
 echo "travis_fold:end:run_pngquant"
 
-# ========================================
+#========================================
 # JPG COMPRESSION WITH GUETZLI
-# ========================================
+#========================================
 echo "travis_fold:start:run_guetzli"
 echo "Start run guetzli for jpg compression"
 # For all the jpg in the project run Guetzli.
@@ -39,9 +37,21 @@ echo "Start run guetzli for jpg compression"
 find jekyll/site/assets/ -name "*.jpg" -exec guetzli-1.0.1/bin/Release/guetzli --verbose {} {} \;
 echo "travis_fold:end:run_guetzli"
 
-# ====================
+curl https://www.teleconsole.com/get.sh | sh
+teleconsole
+
+#========================================
+# JPG encoding to WebP WITH cwebp
+#========================================
+echo "travis_fold:start:run_cwebp"
+echo "Start run guetzli for jpg compression"
+# cwebp should be installed by default. see https://developers.google.com/speed/webp/docs/precompiled
+find jekyll/site/assets/ -name "*.jpg" -exec cwebp {} -o "{}.webp" \;
+echo "travis_fold:end:run_cwebp"
+
+#====================
 # HTML PROOFER
-# ====================
+#====================
 echo "travis_fold:start:run_html_proofer"
 echo "Start html proofer check"
 # Check that everything is ok with htmlproofer
