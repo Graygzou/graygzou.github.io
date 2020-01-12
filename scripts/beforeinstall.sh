@@ -30,6 +30,14 @@ cd guetzli-1.0.1 && make
 echo "travis_fold:end:install_guetzli"
 
 #----------------------------------------------------------
+# Webp encoding : webp
+#----------------------------------------------------------
+echo "travis_fold:start:install_webp"
+echo "install webp for webp encoding"
+sudo apt-get install webp
+echo "travis_fold:end:install_webp"
+
+#----------------------------------------------------------
 # GIF compression
 #----------------------------------------------------------
 # TODO
