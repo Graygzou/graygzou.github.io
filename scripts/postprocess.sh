@@ -37,19 +37,14 @@ echo "Start run guetzli for jpg compression"
 find jekyll/site/assets/ -name "*.jpg" -exec guetzli-1.0.1/bin/Release/guetzli --verbose {} {} \;
 echo "travis_fold:end:run_guetzli"
 
-curl https://www.teleconsole.com/get.sh | sh
-teleconsole
-
 #========================================
 # JPG encoding to WebP WITH cwebp
 #========================================
 echo "travis_fold:start:run_cwebp"
 echo "Start run guetzli for jpg compression"
-# cwebp should be installed by default. see https://developers.google.com/speed/webp/docs/precompiled
-find jekyll/site/assets/ -name "*.jpg" -exec cwebp {} -o sh -c "rename 's/.jpg/.webp/g' {} " \;
-
-find jekyll/site/assets/ -name "*.jpg" -exec $(echo {}; rename "s/.jpg/.webp/g" {} | xargs -n 1 $(cwebp $1 -o $2)) \;
-NAMES=$(find jekyll/site/assets/ -name "*.jpg" -exec basename {} .jpg \;); find jekyll/site/assets/ -name "*.jpg" -exec cwebp {} -o "$1.webp" \;)
+# Use cwebp to encode all asset images. see https://developers.google.com/speed/webp/docs/precompiled
+find jekyll/site/assets/ \( -name "*.jpg" -o -name "*.png" \) -exec cwebp {} -o {}.webp \;
+find jekyll/site/assets/ -name "*.webp" -exec rename "s/\.png|\.jpg//g" {} \;
 echo "travis_fold:end:run_cwebp"
 
 #====================
