@@ -6,22 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="5b6d0991-ca97-49ed-8583-7856f3d6434a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/_includes/project-thumbnail.html" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/project-thumbnail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jekyll/_includes/projects-content/graygzou.github.io-content.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/projects-content/graygzou.github.io-content.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_sass/gamefolio/_layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_sass/gamefolio/_layout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/assets/images/challenges/hashcode.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/blog.md" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/blog.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_additional-infos/challenges/google-hashcode.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_additional-infos/challenges/google-hashcode.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/school/battle-simulator.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/school/battle-simulator.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/school/lode-runner.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/school/lode-runner.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/school/metenorage.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/school/metenorage.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/school/native-ruins.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/school/native-ruins.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/school/raven.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/school/raven.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/school/spida-phobia.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/school/spida-phobia.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/side/brain-control.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/side/brain-control.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/side/dyga-engine.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/side/dyga-engine.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/side/gmtk-2019-statistics.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/side/gmtk-2019-statistics.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_project-pages/side/graygzou.github.io.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_project-pages/side/graygzou.github.io.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/about.md" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/about.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/assets/project-images/the-only-neone/the-only-neone-banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jekyll/assets/project-images/unleashed/unleashed.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lighthouserc.json" beforeDir="false" afterPath="$PROJECT_DIR$/lighthouserc.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,11 +26,16 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jekyll/collections/_additional-infos/challenges/advent-of-code.markdown">
+        <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/unleashed/unleashed.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jekyll/index.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="221">
-                <caret line="13" selection-start-line="13" selection-end-line="13" />
+              <first_editor relative-caret-position="238">
+                <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
               </first_editor>
               <second_editor />
             </state>
@@ -47,40 +43,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jekyll/assets/images/challenges/N2i.svg">
-          <provider selected="true" editor-type-id="images" />
+        <entry file="file://$PROJECT_DIR$/jekyll/_layouts/about.html">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/jekyll/assets/images/challenges/hashcode.svg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jekyll/manifest.json">
+        <entry file="file://$PROJECT_DIR$/jekyll/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+            <state relative-caret-position="141">
+              <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jekyll/assets/images/challenges/aoc.svg">
-          <provider selected="true" editor-type-id="images" />
+        <entry file="file://$PROJECT_DIR$/jekyll/_layouts/blog.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-160" />
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jekyll/assets/images/challenges/ubisoft.svg">
-          <provider selected="true" editor-type-id="images" />
+        <entry file="file://$PROJECT_DIR$/jekyll/_layouts/home.html">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jekyll/collections/_additional-infos/challenges/google-hashcode.markdown">
+        <entry file="file://$PROJECT_DIR$/jekyll/about.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="34">
-                <caret line="2" column="44" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
+              <first_editor relative-caret-position="136">
+                <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
               </first_editor>
               <second_editor />
             </state>
@@ -88,35 +81,43 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jekyll/collections/_additional-infos/challenges/nuit-info.markdown">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/jekyll/_layouts/projects.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="25" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jekyll/collections/_additional-infos/challenges/ubisoft-gamelab.markdown">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/jekyll/_includes/project-thumbnail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jekyll/_includes/images-handler.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>img</find>
-      <find>build</find>
-      <find>header class=&quot;site-header&quot; role=</find>
-      <find>banner</find>
-      <find>&lt;data class=&quot;u-url&quot; href=&quot;/&quot;&gt;</find>
-      <find>PROJECT_PAGES_FOLDER_REL_PATH</find>
       <find>BASIC_REL_PATH2</find>
       <find>PROJECT_TXT_CONTENT_FOLDER</find>
       <find>(c)</find>
@@ -141,6 +142,12 @@
       <find>post-link</find>
       <find>autho</find>
       <find>stroke-width:3</find>
+      <find>bundle</find>
+      <find>noko</find>
+      <find>ligh</find>
+      <find>ci</find>
+      <find>post</find>
+      <find>name</find>
     </findStrings>
     <replaceStrings>
       <replace>stroke-width:5</replace>
@@ -155,21 +162,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/scripts/getAllWebsitePagesTest.py" />
-        <option value="$PROJECT_DIR$/jekyll/assets/images/experiences/afs.svg" />
-        <option value="$PROJECT_DIR$/jekyll/_includes/header.html" />
-        <option value="$PROJECT_DIR$/jekyll/_sass/gamefolio.scss" />
-        <option value="$PROJECT_DIR$/jekyll/_site/sitemap.xml" />
-        <option value="$PROJECT_DIR$/jekyll/collections/_project-pages/school/battle-simulator.markdown" />
-        <option value="$PROJECT_DIR$/jekyll/projects.md" />
-        <option value="$PROJECT_DIR$/jekyll/index.md" />
-        <option value="$PROJECT_DIR$/jekyll/sitemap.xml" />
         <option value="$PROJECT_DIR$/jekyll/_layouts/blog.html" />
-        <option value="$PROJECT_DIR$/jekyll/about.md" />
         <option value="$PROJECT_DIR$/jekyll/_layouts/resume.html" />
         <option value="$PROJECT_DIR$/jekyll/_layouts/about.html" />
         <option value="$PROJECT_DIR$/jekyll/robots.txt" />
-        <option value="$PROJECT_DIR$/jekyll/_config.yml" />
         <option value="$PROJECT_DIR$/jekyll/_sass/gamefolio/_base.scss" />
         <option value="$PROJECT_DIR$/jekyll/service_worker.md" />
         <option value="$PROJECT_DIR$/jekyll/_site/service-worker.js" />
@@ -181,9 +177,7 @@
         <option value="$PROJECT_DIR$/lighthouserc.json" />
         <option value="$PROJECT_DIR$/jekyll/_site/scripts/service-worker.js" />
         <option value="$PROJECT_DIR$/scripts/getAllWebsitePages.py" />
-        <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/jekyll/scripts/service-worker.js" />
-        <option value="$PROJECT_DIR$/jekyll/_includes/head.html" />
         <option value="$PROJECT_DIR$/jekyll/_site/manifest.json" />
         <option value="$PROJECT_DIR$/jekyll/scripts/serviceWorker.js" />
         <option value="$PROJECT_DIR$/jekyll/scripts/sw.js" />
@@ -200,25 +194,40 @@
         <option value="$PROJECT_DIR$/jekyll/_includes/projects-content/advent-of-code-2018-content.markdown" />
         <option value="$PROJECT_DIR$/jekyll/_includes/projects-front-matter/advent-of-code-2018-fm.yml" />
         <option value="$PROJECT_DIR$/jekyll/_sass/gamefolio/_layout.scss" />
-        <option value="$PROJECT_DIR$/jekyll/collections/_additional-infos/challenges/advent-of-code.markdown" />
         <option value="$PROJECT_DIR$/jekyll/manifest.json" />
         <option value="$PROJECT_DIR$/jekyll/assets/images/challenges/aoc.svg" />
         <option value="$PROJECT_DIR$/jekyll/assets/images/challenges/generated.svg" />
         <option value="$PROJECT_DIR$/jekyll/collections/_additional-infos/challenges/google-hashcode.markdown" />
         <option value="$PROJECT_DIR$/jekyll/assets/images/challenges/hashcode.svg" />
+        <option value="$PROJECT_DIR$/jekyll/Gemfile.lock" />
+        <option value="$PROJECT_DIR$/jekyll/collections/_additional-infos/challenges/advent-of-code.markdown" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/head.html" />
+        <option value="$PROJECT_DIR$/jekyll/Gemfile" />
+        <option value="$PROJECT_DIR$/scripts/build.sh" />
+        <option value="$PROJECT_DIR$/scripts/cibuild.sh" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/scripts/beforeinstall.sh" />
+        <option value="$PROJECT_DIR$/scripts/postprocess.sh" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/images-handler.html" />
+        <option value="$PROJECT_DIR$/jekyll/_includes/project-thumbnail.html" />
+        <option value="$PROJECT_DIR$/jekyll/about.md" />
+        <option value="$PROJECT_DIR$/jekyll/index.md" />
+        <option value="$PROJECT_DIR$/jekyll/_config.yml" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="590" />
-    <option name="width" value="1338" />
-    <option name="height" value="1088" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="70" />
+    <option name="y" value="-10" />
+    <option name="width" value="1340" />
+    <option name="height" value="1090" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -236,52 +245,40 @@
               <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="jekyll" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="_includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="jekyll" type="462c0819:PsiDirectoryNode" />
+              <item name="_layouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="jekyll" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="jekyll" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="challenges" type="462c0819:PsiDirectoryNode" />
+              <item name="project-images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="jekyll" type="462c0819:PsiDirectoryNode" />
-              <item name="collections" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="jekyll" type="462c0819:PsiDirectoryNode" />
-              <item name="collections" type="462c0819:PsiDirectoryNode" />
-              <item name="_additional-infos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Graygzou.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Graygzou.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="jekyll" type="462c0819:PsiDirectoryNode" />
-              <item name="collections" type="462c0819:PsiDirectoryNode" />
-              <item name="_additional-infos" type="462c0819:PsiDirectoryNode" />
-              <item name="challenges" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -295,19 +292,19 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Git\WebProjects\Graygzou.github.io\jekyll" />
-      <recent name="D:\Git\WebProjects\Graygzou.github.io\jekyll\scripts" />
-      <recent name="D:\Git\WebProjects\Graygzou.github.io\jekyll\assets\images\educations" />
-      <recent name="D:\Git\WebProjects\Graygzou.github.io\jekyll\collections\_additional-infos\challenges" />
-      <recent name="D:\Git\WebProjects\Graygzou.github.io\jekyll\collections\_additional-infos\educations" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Git\WebProjects\Graygzou.github.io\jekyll\collections\_additional-infos\challenges" />
       <recent name="D:\Git\WebProjects\Graygzou.github.io" />
       <recent name="D:\Git\WebProjects\Graygzou.github.io\scripts" />
       <recent name="D:\Git\WebProjects\Graygzou.github.io\jekyll\_includes" />
       <recent name="D:\Git\WebProjects\Graygzou.github.io\jekyll\collections\_additional-infos\experiences" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Git\WebProjects\Graygzou.github.io\jekyll" />
+      <recent name="D:\Git\WebProjects\Graygzou.github.io\jekyll\scripts" />
+      <recent name="D:\Git\WebProjects\Graygzou.github.io\jekyll\assets\images\educations" />
+      <recent name="D:\Git\WebProjects\Graygzou.github.io\jekyll\collections\_additional-infos\challenges" />
+      <recent name="D:\Git\WebProjects\Graygzou.github.io\jekyll\collections\_additional-infos\educations" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -400,18 +397,33 @@
       <workItem from="1574512910880" duration="1232000" />
       <workItem from="1574774613822" duration="45591000" />
       <workItem from="1577743948908" duration="22731000" />
-      <workItem from="1577914526093" duration="17890000" />
+      <workItem from="1577914526093" duration="21619000" />
+      <workItem from="1578133284732" duration="1606000" />
+      <workItem from="1578518597127" duration="1843000" />
+      <workItem from="1578691025260" duration="1721000" />
+      <workItem from="1578753998934" duration="5634000" />
+      <workItem from="1578822867022" duration="8955000" />
+      <workItem from="1578944872710" duration="1491000" />
+      <workItem from="1579025177341" duration="4835000" />
     </task>
+    <task id="LOCAL-00001" summary="+ Hard-code the node version (down grade it) in order to try to fix lighthouse error">
+      <created>1578692655916</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1578692655916</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="482495000" />
+    <option name="totallyTimeSpent" value="512309000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="472" y="0" width="1070" height="870" extended-state="0" />
+    <frame x="56" y="-7" width="1487" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21683168" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23125438" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -419,14 +431,14 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.29132792" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.29132792" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" visible="true" weight="0.32171583" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.20375335" />
@@ -446,6 +458,10 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="+ Hard-code the node version (down grade it) in order to try to fix lighthouse error" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ Hard-code the node version (down grade it) in order to try to fix lighthouse error" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -463,190 +479,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jekyll/_layouts/page.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_layouts/home.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_layouts/default.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/sw.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="28" column="41" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/beforeinstall.sh">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/postprocess.sh">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/cibuild.sh">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/build.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/getAllWebsitePagesTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/getAllWebsitePages.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="41" column="56" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="56" />
-          <folding>
-            <element signature="e#291#358#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/githubProjectGen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/grammarContentCheckTest.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/grammarContentCheck.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3253" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/resume.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="85">
-            <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/projects.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="68">
-            <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/about.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="68">
-            <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/blog.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="136">
-            <caret line="8" selection-start-line="8" selection-end-line="8" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/Gemfile">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/Gemfile.lock">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="119">
-            <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/scripts/service-worker-helper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_sass/gamefolio/_syntax-highlighting.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_sass/gamefolio.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/collections/blog/_posts/2019-07-27-getting-start-with-jekyll.markdown">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/collections/blog/_posts/2019-09-28-tips-and-tricks-ccp.markdown">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_sass/gamefolio/_base.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_sass/gamefolio/_project-page.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_includes/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" selection-start-line="12" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/collections/blog/_posts/2019-10-09-summary-of-my-first-participation-of-advent-of-code-2018.markdown">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1173">
-            <caret line="69" column="46" selection-start-line="69" selection-start-column="46" selection-end-line="69" selection-end-column="46" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_site/project-pages/side/advent-of-code.html" />
-    <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-front-matter/advent-of-code-2018-fm.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content/advent-of-code-2018-content.markdown">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -657,13 +489,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="687">
-          <caret line="63" column="19" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jekyll/_includes/projects-content-sanitized/advent-of-code-content-txt.markdown">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -671,13 +496,6 @@
             <caret line="8" selection-start-line="8" selection-end-line="8" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
         </state>
       </provider>
     </entry>
@@ -723,42 +541,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/images/challenges/hashcode.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/collections/_additional-infos/challenges/advent-of-code.markdown">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="221">
-            <caret line="13" selection-start-line="13" selection-end-line="13" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/images/challenges/hashcode.jpg" />
     <entry file="file://$PROJECT_DIR$/jekyll/assets/images/challenges/N2i.svg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/manifest.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jekyll/assets/images/challenges/ubisoft.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/images/challenges/aoc(1).png">
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/images/challenges/aoc(1).png" />
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/images/challenges/hashcode.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/collections/_additional-infos/challenges/ubisoft-gamelab.markdown">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/jekyll/.bundle/config">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/jekyll/assets/images/challenges/aoc.svg">
       <provider selected="true" editor-type-id="images" />
@@ -773,8 +568,214 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/images/challenges/hashcode.svg">
+    <entry file="file://$PROJECT_DIR$/jekyll/collections/_additional-infos/challenges/advent-of-code.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="221">
+            <caret line="13" selection-start-line="13" selection-end-line="13" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_layouts/default.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/head.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="64" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/collections/_additional-infos/challenges/ubisoft-gamelab.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/mainSvgGen.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/grammarBotResults.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_site/site/robots.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_site/robots.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_site/sitemap.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="28" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/getAllWebsitePagesTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lighthouserc.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/beforeinstall.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="6" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/cibuild.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="77" selection-start-line="5" selection-start-column="77" selection-end-line="5" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/site/robots.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/Gemfile.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4420">
+          <caret line="260" column="9" selection-start-line="260" selection-start-column="9" selection-end-line="260" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/build.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="77" selection-start-line="5" selection-start-column="77" selection-end-line="5" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/postprocess.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/the-only-neone/the-only-neone-banner.jpg">
       <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/the-only-neone/the-only-neone-banner.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/unleashed/unleashed.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/project-images/unleashed/unleashed.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_layouts/about.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_layouts/blog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-160" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_layouts/projects.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/images-handler.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_layouts/home.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/about.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="136">
+            <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_includes/project-thumbnail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="238">
+            <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

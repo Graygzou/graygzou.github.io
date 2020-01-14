@@ -58,3 +58,8 @@ In fact, finding the right place to insert the front matter was quite harder and
 
 This might not seems the more optimize method but it's the easier and shortest for sure.
 Plus, I don't have any constraint on deployment since it's just a personal website. :grin:
+
+#### Links
+Made sure everything was as good as possible. I used third party links like:</p>
+* [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgraygzou.github.io) to check html standards.
+* [google developers](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fgraygzou.github.io) service to check overall speed of pages.

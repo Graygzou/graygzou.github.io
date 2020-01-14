@@ -1,9 +1,11 @@
 <!--
  * /!\ The variable project need to be assign in order to use this sections
  -->
-{% capture image_path %}/assets/project-images/{{ project.title }}/{{ project.title }}-thumbnail.png{% endcapture %}
+{% capture image_path %}/assets/project-images/{{ project.title }}/{{ project.title }}-thumbnail{% endcapture %}
+{% capture image_alt %}{{ project.title }}-thumbnail{% endcapture %}
 <div class="test-li">
-  <img src="{{ image_path }}" alt="{{ project.title }}-thumbnail"/>
+  <!--<img src="{{ image_path }}" alt="{{ project.title }}-thumbnail"/>-->
+  {% include images-handler.html format='png' alt=image_alt filename=image_path %}
   <div>
     <h3 class="project-heading">
       <a class="post-link" href="{{ project.url | relative_url }}">
