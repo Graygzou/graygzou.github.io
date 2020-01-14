@@ -171,6 +171,7 @@ Results for ../jekyll/_includes/projects-content/graygzou.github.io-content.mark
         Rule:{'CONFUSION_RULE'}
             Word: {'use'}, Index Offset: {'137'}, Possible Replacements: ['used']
             Word: {'is'}, Index Offset: {'2443'}, Possible Replacements: ['his']
+            Word: {'Made'}, Index Offset: {'2850'}, Possible Replacements: ['Make']
         Rule:{'MORFOLOGIK_RULE_EN_US'}
             Word: {'jekyllthemes'}, Index Offset: {'239'}, Possible Replacements: []
             Word: {'jekyll'}, Index Offset: {'476'}, Possible Replacements: ['Jekyll']
@@ -186,6 +187,7 @@ Results for ../jekyll/_includes/projects-content/graygzou.github.io-content.mark
             Word: {'jekyll'}, Index Offset: {'1557'}, Possible Replacements: ['Jekyll']
             Word: {'htmlproofer'}, Index Offset: {'1611'}, Possible Replacements: []
             Word: {'endup'}, Index Offset: {'2411'}, Possible Replacements: ['endue', 'end up']
+            Word: {'html'}, Index Offset: {'2946'}, Possible Replacements: ['HTML', 'ht ml', 'HTL', 'XHTML']
 
 Detected language: en-US
 Results for ../jekyll/_includes/projects-content/advent-of-code-2018-content.markdown:
