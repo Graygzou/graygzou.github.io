@@ -11,6 +11,7 @@ addons:
     packages:
       - libcurl4-openssl-dev
 
+# blocklist
 branches:
   except:
     - master
@@ -29,7 +30,6 @@ before_install:
   - node --version
   - npm --version
   - nvm --version
-  - npm install -g @lhci/cli@0.3.x
   - gem install bundler
   - pip install -r requirements.txt
   - (cd scripts && python mainSvgGen.py ${GITHUB_API_TOKEN} \;)
@@ -42,32 +42,53 @@ install:
 before_script:
   - chmod +x scripts/*.sh
 
-script:
-  - (cd scripts && python grammarContentCheck.py ${GRAMMAR_BOT_TOKEN} \;)
-  - ./scripts/build.sh
-  - ./scripts/beforeinstall.sh
-  - ./scripts/cibuild.sh
-  - ./scripts/postprocess.sh
+jobs:
+  include:
+    # Stage 1 ==============================
+    - stage: "Integration"
+      name: "pngquant: PNG Compression"
+      script: ./scripts/html-proofer.sh
+    - name: "guetzli: JPG Compression"
+      script: ./scripts/lighthouse-ci.sh
+    - name: "webp images creation"
+      script: ./scripts/webp.sh
+    # Stage 2 ==============================
+    - stage: "Build"
+      name: "jekyll production build"
+      script: ./scripts/build.sh
+    # Stage 3 ==============================
+    - stage: "Validation"
+      # html-proofer
+      name: "html-proofer"
+      script: ./scripts/html-proofer.sh
+      # Lighthouse-CI
+    - name: "Lighthouse CI"
+      node_js: "12" # we stick with a previous version to make lighthouse cli works.
+      addons:
+        chrome: stable # make sure you have Chrome available
+      script: ./scripts/lighthouse-ci.sh
+      # grammar-bot
+    - name: "Grammar Bot"
+      script: ./scripts/grammar-bot .sh'  
+    # Stage 4 ==============================
+    - stage: deploy
+      name: "Deploy to GithubPage"
+      script: echo "Deploying to GitHub Pages ..."
+      if: branch = release
+      provider: pages
+        verbose: true
+        local_dir: ./jekyll/site
+        skip_cleanup: true
+        github_token: ${GITHUB_DEPLOY_TOKEN}  # Set in the settings page of your repository, as a secure variable
+        keep_history: true
+        target_branch: master
+        email: ${GITHUB_BOT_MAIL}
+        name: ${GITHUB_BOT_NAME}
+        on:
+          branch: release
 
 after_failure:
   - curl https://www.teleconsole.com/get.sh | sh
   - teleconsole
 
-deploy:
-  provider: pages
-  verbose: true
-  local_dir: ./jekyll/site
-  skip_cleanup: true
-  github_token: ${GITHUB_DEPLOY_TOKEN}  # Set in the settings page of your repository, as a secure variable
-  keep_history: true
-  target_branch: master
-  email: ${GITHUB_BOT_MAIL}
-  name: ${GITHUB_BOT_NAME}
-  on:
-    branch: develop
-
 # See travis job cycle: https://docs.travis-ci.com/user/job-lifecycle
-after_deploy:
-  - (cd scripts && python getAllWebsitePages.py 0 "../jekyll/_site/sitemap.xml" \;)
-  - lhci healthcheck --fatal --checks=githubToken
-  - lhci autorun --config=./lighthouserc.json

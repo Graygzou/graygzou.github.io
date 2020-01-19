@@ -3,11 +3,17 @@
 #############################################################################
 # Grégoire Boiron <gregoire.boiron@gmail.com>
 # Copyright (c) 2018-2019 Grégoire Boiron  All Rights Reserved.
+#
+# Script that run pngquant.
 #############################################################################
 
-#========================================
-# PNG COMPRESSION WITH PNGQUANT
-#========================================
+# Install the package
+echo "travis_fold:start:install_pngquant"
+echo "install pngquant for png compression"
+sudo apt-get install pngquant
+echo "travis_fold:end:install_pngquant"
+
+# Run the package
 echo "travis_fold:start:run_pngquant"
 echo "Run pngquant command"
 # This will create duplicate of images with -fs8 at the end of the file
@@ -27,26 +33,6 @@ find jekyll/site/assets/project-images/ -name "*.png" -exec rename "s/-fs8//g" {
 #teleconsole
 echo "travis_fold:end:run_pngquant"
 
-#========================================
-# JPG COMPRESSION WITH GUETZLI
-#========================================
-echo "travis_fold:start:run_guetzli"
-echo "Start run guetzli for jpg compression"
-# For all the jpg in the project run Guetzli.
-# See https://github.com/google/guetzli for more info
-find jekyll/site/assets/ -name "*.jpg" -exec guetzli-1.0.1/bin/Release/guetzli --verbose {} {} \;
-echo "travis_fold:end:run_guetzli"
-
-#========================================
-# JPG encoding to WebP WITH cwebp
-#========================================
-echo "travis_fold:start:run_cwebp"
-echo "Start run guetzli for jpg compression"
-# Use cwebp to encode all asset images. see https://developers.google.com/speed/webp/docs/precompiled
-find jekyll/site/assets/ \( -name "*.jpg" -o -name "*.png" \) -exec cwebp {} -o {}.webp \;
-find jekyll/site/assets/ -name "*.webp" -exec rename "s/\.png|\.jpg//g" {} \;
-echo "travis_fold:end:run_cwebp"
-
 #====================
 # HTML PROOFER
 #====================
@@ -58,4 +44,4 @@ cd jekyll
 bundle exec htmlproofer site --url-ignore "https://www.linkedin.com/in/gregoire-boiron/,https://www.latecoere.aero/en/"
 echo "travis_fold:end:run_html_proofer"
 
-echo "postprocess.sh script done."
+echo "pngquant-compression.sh script done."
