@@ -47,9 +47,9 @@ jobs:
     # Stage 1 ==============================
     - stage: "Integration"
       name: "pngquant: PNG Compression"
-      script: ./scripts/html-proofer.sh
+      script: ./scripts/pngquant-compression.sh
     - name: "guetzli: JPG Compression"
-      script: ./scripts/lighthouse-ci.sh
+      script: ./scripts/guetzli-compression.sh
     - name: "webp images creation"
       script: ./scripts/webp.sh
     # Stage 2 ==============================
@@ -69,7 +69,7 @@ jobs:
       script: ./scripts/lighthouse-ci.sh
       # grammar-bot
     - name: "Grammar Bot"
-      script: ./scripts/grammar-bot .sh'  
+      script: ./scripts/grammar-bot.sh
     # Stage 4 ==============================
     - stage: deploy
       name: "Deploy to GithubPage"
