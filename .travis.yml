@@ -76,16 +76,15 @@ jobs:
       script: echo "Deploying to GitHub Pages ..."
       if: branch = release
       provider: pages
-        verbose: true
-        local_dir: ./jekyll/site
-        skip_cleanup: true
-        github_token: ${GITHUB_DEPLOY_TOKEN}  # Set in the settings page of your repository, as a secure variable
-        keep_history: true
-        target_branch: master
-        email: ${GITHUB_BOT_MAIL}
-        name: ${GITHUB_BOT_NAME}
-        on:
-          branch: release
+      verbose: true
+      local_dir: ./jekyll/site
+      skip_cleanup: true
+      github_token: ${GITHUB_DEPLOY_TOKEN}  # Set in the settings page of your repository, as a secure variable
+      keep_history: true
+      target_branch: master
+      committer_from_gh: ${BOT_DEPLOY_TOKEN}
+      on:
+        branch: release
 
 after_failure:
   - curl https://www.teleconsole.com/get.sh | sh
