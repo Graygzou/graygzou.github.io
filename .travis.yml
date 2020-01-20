@@ -32,8 +32,6 @@ before_install:
   - nvm --version
   - gem install bundler
   - pip install -r requirements.txt
-  - (cd scripts && python mainSvgGen.py ${GITHUB_API_TOKEN} \;)
-  - (cd scripts && python githubProjectGen.py ${GITHUB_API_TOKEN} \;)
 
 install:
   - (cd jekyll && gem update bundler)
@@ -52,6 +50,12 @@ jobs:
       script: ./scripts/guetzli-compression.sh
     - name: "webp images creation"
       script: ./scripts/webp.sh
+    - name: "markdown creation"
+      script: python ./scripts/githubProjectGen.py ${GITHUB_API_TOKEN}
+    - name: "svg creation"
+      script: python ./scripts/mainSvgGen.py ${GITHUB_API_TOKEN}
+    - name: "test git"
+      script: git log --name-only -n 1 HEAD~1..HEAD
     # Stage 2 ==============================
     - stage: "Build"
       name: "jekyll production build"
