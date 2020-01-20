@@ -9,7 +9,7 @@
 import os
 from xml.dom import minidom
 
-DIRECTORY_PATH = "../jekyll/assets/icons/"
+DIRECTORY_PATH = "./jekyll/assets/icons/"
 FILE_PREFIX = "gamefolio-"
 FILE_POSTFIX = "-icons.svg"
 
