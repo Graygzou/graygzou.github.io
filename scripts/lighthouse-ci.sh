@@ -7,6 +7,10 @@
 # Lighthouse-ci
 #############################################################################
 
+# The -e flag causes the script to exit as soon as one command returns a non-zero exit code
+# The -v flag makes the shell print all lines in the script before executing them, which helps identify which steps failed.
+set -ev
+
 # Download the package
 echo "travis_fold:start:install_lighthouse_ci"
 echo "install lighthouse-ci"
