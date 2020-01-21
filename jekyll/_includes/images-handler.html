@@ -5,6 +5,6 @@
     <img src="{{ include.filename }}.png" alt="">
     {%- else if include.format == "jpg" -%}
     <source type="image/jpeg" srcset="{{ include.filename }}.jpg" alt="{{ include.alt }}">
-    <img src="{{ include.filename }}.jpg" alt="">
+    <img src="{{ include.filename }}.jpg" alt="{{ include.alt }}">
     {%- endif -%}
 </picture>

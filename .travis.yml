@@ -40,10 +40,26 @@ install:
 before_script:
   - chmod +x scripts/*.sh
 
+stages:
+  - name: generation
+    if: branch = develop
+    #
+  - name: build
+    if: branch = develop OR branch = release
+    #
+  - name: integration
+    if: branch = release
+    #
+  - name: validation
+    if: branch = release
+    #
+  - name: deploy
+    if: branch = release
+
 jobs:
   include:
     # Stage 1 ==============================
-    - stage: "Generation"
+    - stage: generation
       name: "webp images creation"
       script: ./scripts/webp.sh
     - name: "markdown creation"
@@ -53,21 +69,17 @@ jobs:
     - name: "test git"
       script: git log --name-only -n 1 HEAD~1..HEAD
     # Stage 2 ==============================
-    - stage: "Build"
+    - stage: build
       name: "jekyll production build"
       script: ./scripts/build.sh
-      
     # Stage 3 ==============================
-    - stage: "Integration"
+    - stage: integration
       name: "pngquant: PNG Compression"
       script: ./scripts/pngquant-compression.sh
     - name: "guetzli: JPG Compression"
       script: ./scripts/guetzli-compression.sh
     # Stage 4 ==============================
-    - stage: "Validation"
-      # html-proofer
-      name: "html-proofer"
-      script: ./scripts/html-proofer.sh
+    - stage: validation
       # Lighthouse-CI
     - name: "Lighthouse CI"
       node_js: "12" # we stick with a previous version to make lighthouse cli works.
@@ -81,7 +93,6 @@ jobs:
     - stage: deploy
       name: "Deploy to GithubPage"
       script: echo "Deploying to GitHub Pages ..."
-      if: branch = release
       provider: pages
       verbose: true
       local_dir: ./jekyll/site
@@ -92,6 +103,8 @@ jobs:
       committer_from_gh: ${BOT_DEPLOY_TOKEN}
       on:
         branch: release
+    allow_failures:
+      - if: branch = develop
 
 after_failure:
   - curl https://www.teleconsole.com/get.sh | sh
