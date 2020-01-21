@@ -2,7 +2,7 @@
     <source type="image/webp" srcset="{{ include.filename }}.webp" alt="{{ include.alt }}">
     {%- if include.format == "png" -%}
     <source type="image/png" srcset="{{ include.filename }}.png" alt="{{ include.alt }}">
-    <img src="{{ include.filename }}.png" alt="">
+    <img src="{{ include.filename }}.png" alt="{{ include.alt }}">
     {%- else if include.format == "jpg" -%}
     <source type="image/jpeg" srcset="{{ include.filename }}.jpg" alt="{{ include.alt }}">
     <img src="{{ include.filename }}.jpg" alt="{{ include.alt }}">
