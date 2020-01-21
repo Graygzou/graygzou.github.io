@@ -1,113 +1,113 @@
-dist: xenial   # required for Python >= 3.7
-language: python
-python:
-  - "3.7"
-node_js:
-  - "12" # we stick with a previous version to make lighthouse cli works.
+  dist: xenial   # required for Python >= 3.7
+  language: python
+  python:
+    - "3.7"
+  node_js:
+    - "12" # we stick with a previous version to make lighthouse cli works.
 
-addons:
-  chrome: stable # make sure you have Chrome available
-  apt:
-    packages:
-      - libcurl4-openssl-dev
+  addons:
+    chrome: stable # make sure you have Chrome available
+    apt:
+      packages:
+        - libcurl4-openssl-dev
 
-# blocklist
-branches:
-  except:
-    - master
+  # blocklist
+  branches:
+    except:
+      - master
 
-# reduce log clutter
-cache: bundler  # caching bundler gem packages will speed up build
+  # reduce log clutter
+  cache: bundler  # caching bundler gem packages will speed up build
 
-env:
-  global:
-    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+  env:
+    global:
+      - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
 
-# pip install -r requirements.txt => command to install dependencies
-# This was obtained by running $pip freeze > requirements.txt
-before_install:
-  - nvm install 12
-  - node --version
-  - npm --version
-  - nvm --version
-  - gem install bundler
-  - pip install -r requirements.txt
+  # pip install -r requirements.txt => command to install dependencies
+  # This was obtained by running $pip freeze > requirements.txt
+  before_install:
+    - nvm install 12
+    - node --version
+    - npm --version
+    - nvm --version
+    - gem install bundler
+    - pip install -r requirements.txt
 
-install:
-  - (cd jekyll && gem update bundler)
-  - (cd jekyll && bundle check || bundle install)
+  install:
+    - (cd jekyll && gem update bundler)
+    - (cd jekyll && bundle check || bundle install)
 
-before_script:
-  - chmod +x scripts/*.sh
+  before_script:
+    - chmod +x scripts/*.sh
 
-stages:
-  - name: generation
-    if: branch = develop
-    #
-  - name: build
-    if: branch = develop OR branch = release
-    #
-  - name: integration
-    if: branch = release
-    #
-  - name: validation
-    if: branch = release
-    #
-  - name: deploy
-    if: branch = release
+  stages:
+    - name: generation
+      if: branch = develop
+    - name: build
+      if: branch = develop OR branch = release
+    - name: integration
+      if: branch = release
+    - name: validation
+      if: branch = release
+    - name: deploy
+      if: branch = release
 
-jobs:
-  include:
-    # Stage 1 ==============================
-    - stage: generation
-      name: "webp images creation"
-      script: ./scripts/webp.sh
-    - name: "markdown creation"
-      script: python ./scripts/githubProjectGen.py ${GITHUB_API_TOKEN}
-    - name: "svg creation"
-      script: ./scripts/group-svg.sh '.svg'
-    - name: "test git"
-      script: git log --name-only -n 1 HEAD~1..HEAD
-    # Stage 2 ==============================
-    - stage: build
-      name: "jekyll production build"
-      script: ./scripts/build.sh
-    # Stage 3 ==============================
-    - stage: integration
-      name: "pngquant: PNG Compression"
-      script: ./scripts/pngquant-compression.sh
-    - name: "guetzli: JPG Compression"
-      script: ./scripts/guetzli-compression.sh
-    # Stage 4 ==============================
-    - stage: validation
-      # Lighthouse-CI
-    - name: "Lighthouse CI"
-      node_js: "12" # we stick with a previous version to make lighthouse cli works.
-      addons:
-        chrome: stable # make sure you have Chrome available
-      script: ./scripts/lighthouse-ci.sh
-      # grammar-bot
-    - name: "Grammar Bot"
-      script: ./scripts/grammar-bot.sh
-    # Stage 5 ==============================
-    - stage: deploy
-      name: "Deploy to GithubPage"
-      script: echo "Deploying to GitHub Pages ..."
-      provider: pages
-      verbose: true
-      local_dir: ./jekyll/site
-      skip_cleanup: true
-      github_token: ${GITHUB_DEPLOY_TOKEN}  # Set in the settings page of your repository, as a secure variable
-      keep_history: true
-      target_branch: master
-      committer_from_gh: ${BOT_DEPLOY_TOKEN}
-      on:
-        branch: release
+  matrix:
     allow_failures:
       - if: branch = develop
 
-after_failure:
-  - curl https://www.teleconsole.com/get.sh | sh
-  - teleconsole
+  jobs:
+    include:
+      - stage: "Generation"
+        name: "webp images creation"
+        script: ./scripts/webp.sh
+      - name: "markdown creation"
+        script: python ./scripts/githubProjectGen.py ${GITHUB_API_TOKEN}
+      - name: "svg creation"
+        script: ./scripts/group-svg.sh '.svg'
+      - name: "test git"
+        script: git log --name-only -n 1 HEAD~1..HEAD
+      # Stage 2 ==============================
+      - stage: build
+        name: "jekyll production build"
+        script: ./scripts/build.sh
+      # Stage 3 ==============================
+      - stage: integration
+        name: "pngquant: PNG Compression"
+        script: ./scripts/pngquant-compression.sh
+      - name: "guetzli: JPG Compression"
+        script: ./scripts/guetzli-compression.sh
+      # Stage 4 ==============================
+      - stage: validation
+        # Lighthouse-CI
+      - name: "Lighthouse CI"
+        node_js: "12" # we stick with a previous version to make lighthouse cli works.
+        addons:
+          chrome: stable # make sure you have Chrome available
+        script: ./scripts/lighthouse-ci.sh
+        # grammar-bot
+      - name: "Grammar Bot"
+        script: ./scripts/grammar-bot.sh
+      - stage: deploy
+        name: "Deploy"
+        script: echo "TODO ..."
 
-# See travis job cycle: https://docs.travis-ci.com/user/job-lifecycle
+  # Stage 5 ==============================
+  deploy:
+    provider: pages
+    verbose: true
+    local_dir: ./jekyll/site
+    skip_cleanup: true
+    github_token: ${GITHUB_DEPLOY_TOKEN}  # Set in the settings page of your repository, as a secure variable
+    keep_history: true
+    target_branch: master
+    email: ${GITHUB_BOT_MAIL}
+    name: ${GITHUB_BOT_NAME}
+    on:
+      branch: release
+
+  after_failure:
+    - curl https://www.teleconsole.com/get.sh | sh
+    - teleconsole
+
+  # See travis job cycle: https://docs.travis-ci.com/user/job-lifecycle
