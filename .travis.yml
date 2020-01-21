@@ -43,12 +43,8 @@ before_script:
 jobs:
   include:
     # Stage 1 ==============================
-    - stage: "Integration"
-      name: "pngquant: PNG Compression"
-      script: ./scripts/pngquant-compression.sh
-    - name: "guetzli: JPG Compression"
-      script: ./scripts/guetzli-compression.sh
-    - name: "webp images creation"
+    - stage: "Generation"
+      name: "webp images creation"
       script: ./scripts/webp.sh
     - name: "markdown creation"
       script: python ./scripts/githubProjectGen.py ${GITHUB_API_TOKEN}
@@ -61,6 +57,12 @@ jobs:
       name: "jekyll production build"
       script: ./scripts/build.sh
     # Stage 3 ==============================
+    - stage: "Integration"
+      name: "pngquant: PNG Compression"
+      script: ./scripts/pngquant-compression.sh
+    - name: "guetzli: JPG Compression"
+      script: ./scripts/guetzli-compression.sh
+    # Stage 4 ==============================
     - stage: "Validation"
       # html-proofer
       name: "html-proofer"
@@ -74,7 +76,7 @@ jobs:
       # grammar-bot
     - name: "Grammar Bot"
       script: ./scripts/grammar-bot.sh
-    # Stage 4 ==============================
+    # Stage 5 ==============================
     - stage: deploy
       name: "Deploy to GithubPage"
       script: echo "Deploying to GitHub Pages ..."
