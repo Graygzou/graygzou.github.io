@@ -21,19 +21,8 @@ echo "travis_fold:end:install_webp"
 echo "travis_fold:start:run_cwebp"
 echo "Start run guetzli for jpg compression"
 # Use cwebp to encode all asset images. see https://developers.google.com/speed/webp/docs/precompiled
-find jekyll/site/assets/ \( -name "*.jpg" -o -name "*.png" \) -exec cwebp {} -o {}.webp \;
-find jekyll/site/assets/ -name "*.webp" -exec rename "s/\.png|\.jpg//g" {} \;
+find jekyll/assets/ \( -name "*.jpg" -o -name "*.png" \) -exec cwebp {} -o {}.webp \;
+find jekyll/assets/ -name "*.webp" -exec rename "s/\.png|\.jpg//g" {} \;
 echo "travis_fold:end:run_cwebp"
-
-#====================
-# HTML PROOFER
-#====================
-echo "travis_fold:start:run_html_proofer"
-echo "Start html proofer check"
-# Check that everything is ok with htmlproofer
-# Must first enter jekyll folder to access the Gemfile.
-cd jekyll
-bundle exec htmlproofer site --url-ignore "https://www.linkedin.com/in/gregoire-boiron/,https://www.latecoere.aero/en/"
-echo "travis_fold:end:run_html_proofer"
 
 echo "webp-conversion.sh script done."
