@@ -56,6 +56,9 @@ jobs:
     - stage: "Build"
       name: "jekyll production build"
       script: ./scripts/build.sh
+    
+jobs:
+  include:
     # Stage 3 ==============================
     - stage: "Integration"
       name: "pngquant: PNG Compression"
