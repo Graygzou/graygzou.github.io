@@ -65,8 +65,6 @@
         script: python ./scripts/githubProjectGen.py ${GITHUB_API_TOKEN}
       - name: "svg creation"
         script: ./scripts/group-svg.sh '.svg'
-      - name: "test git"
-        script: git log --name-only -n 1 HEAD~1..HEAD
       # Stage 2 ==============================
       - stage: build
         name: "jekyll production build"
