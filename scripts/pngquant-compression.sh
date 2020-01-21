@@ -21,31 +21,20 @@ echo "travis_fold:end:install_pngquant"
 echo "travis_fold:start:run_pngquant"
 echo "Run pngquant command"
 # This will create duplicate of images with -fs8 at the end of the file
-find jekyll/site/assets/project-images/ -name "*.png" -exec pngquant --force {} \;
+find ./jekyll/site/assets/project-images/ -name "*.png" -exec pngquant --force {} \;
 
 # Remove the previous image not optimized
 echo "Remove the previous image not optimized"
-find jekyll/site/assets/project-images/ -name "*.png" -not -name "*fs8.png" -exec rm {} \;
+find ./jekyll/site/assets/project-images/ -name "*.png" -not -name "*fs8.png" -exec rm {} \;
 
 # Rename the file generate to match previous version
 echo "Rename compressed images to match declarations"
-find jekyll/site/assets/project-images/ -name "*.png" -exec rename "s/-fs8//g" {} \;
+find ./jekyll/site/assets/project-images/ -name "*.png" -exec rename "s/-fs8//g" {} \;
 
 # If debug is needed, uncomment this line.
 # It will allow to connect remotly to the travis TRAVIS_BUILD_NUMBER
 #curl https://www.teleconsole.com/get.sh | sh
 #teleconsole
 echo "travis_fold:end:run_pngquant"
-
-#====================
-# HTML PROOFER
-#====================
-echo "travis_fold:start:run_html_proofer"
-echo "Start html proofer check"
-# Check that everything is ok with htmlproofer
-# Must first enter jekyll folder to access the Gemfile.
-cd jekyll
-bundle exec htmlproofer site --url-ignore "https://www.linkedin.com/in/gregoire-boiron/,https://www.latecoere.aero/en/"
-echo "travis_fold:end:run_html_proofer"
 
 echo "pngquant-compression.sh script done."
