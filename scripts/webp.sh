@@ -14,7 +14,7 @@ pngResult=$( ./scripts/file-changed-in-last-commit.sh "*.png" )
 echo "$jpgResult"
 echo "$pngResult"
 
-if [ "$jpgResult" -ne 0 OR "$pngResult" -ne 0 ]; then
+if [[ "$jpgResult" -ne 0 ]] || [[ "$pngResult" -ne 0 ]] ; then
   # Download the package
   echo "travis_fold:start:install_webp"
   echo "install webp for webp encoding"
@@ -23,11 +23,17 @@ if [ "$jpgResult" -ne 0 OR "$pngResult" -ne 0 ]; then
 
   # Encode images using cwebp
   echo "travis_fold:start:run_cwebp"
-  echo "Start run guetzli for jpg compression"
+  echo "Start running cwebp for webp image creation"
   # Use cwebp to encode all asset images. see https://developers.google.com/speed/webp/docs/precompiled
   find jekyll/assets/ \( -name "*.jpg" -o -name "*.png" \) -exec cwebp {} -o {}.webp \;
   find jekyll/assets/ -name "*.webp" -exec rename "s/\.png|\.jpg//g" {} \;
   echo "travis_fold:end:run_cwebp"
+  
+  # Upload back to github the artifacts created
+  echo "travis_fold:start:push_webp"
+  echo "push new webp images to the branch"
+  ./scripts/uploadNewFile.sh "*.webp"
+  echo "travis_fold:end:push_webp"
 else
   echo "⏭️ No jpg or png in the last commit. Job skipped."
 fi
