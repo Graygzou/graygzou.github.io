@@ -39,6 +39,7 @@
 
   before_script:
     - chmod +x scripts/*.sh
+    - git log --name-only -n 1 HEAD~1..HEAD --pretty=format:%b > last-commit.txt
 
   stages:
     - name: generation
