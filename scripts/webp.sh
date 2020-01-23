@@ -14,7 +14,7 @@ pngResult=$( ./scripts/file-changed-in-last-commit.sh "*.png" )
 echo "$jpgResult"
 echo "$pngResult"
 
-if [ "$jpgResult" != 0 OR "$pngResult" != 0 ]; then
+if [ "$jpgResult" -ne 0 OR "$pngResult" -ne 0 ]; then
   # Download the package
   echo "travis_fold:start:install_webp"
   echo "install webp for webp encoding"
@@ -29,6 +29,6 @@ if [ "$jpgResult" != 0 OR "$pngResult" != 0 ]; then
   find jekyll/assets/ -name "*.webp" -exec rename "s/\.png|\.jpg//g" {} \;
   echo "travis_fold:end:run_cwebp"
 else
-  echo "No jpg or png in the last commit. Job skipped."
+  echo "⏭️ No jpg or png in the last commit. Job skipped."
 fi
-echo "webp-conversion.sh script done."
+echo "✅ webp-conversion.sh script done."
