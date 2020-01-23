@@ -7,34 +7,39 @@
 # Script that run pngquant.
 #############################################################################
 
-# The -e flag causes the script to exit as soon as one command returns a non-zero exit code
-# The -v flag makes the shell print all lines in the script before executing them, which helps identify which steps failed.
-set -ev
+# Try to find if any file matching the provided extension
+pngResult=$( ./scripts/file-changed-in-last-commit.sh "*.png" )
 
-# Install the package
-echo "travis_fold:start:install_pngquant"
-echo "install pngquant for png compression"
-sudo apt-get install pngquant
-echo "travis_fold:end:install_pngquant"
+echo "$pngResult"
 
-# Run the package
-echo "travis_fold:start:run_pngquant"
-echo "Run pngquant command"
-# This will create duplicate of images with -fs8 at the end of the file
-find ./jekyll/site/assets/project-images/ -name "*.png" -exec pngquant --force {} \;
+if [[ "$pngResult" -ne 0 ]] ; then
+    # Install the package
+    echo "travis_fold:start:install_pngquant"
+    echo "install pngquant for png compression"
+    sudo apt-get install pngquant
+    echo "travis_fold:end:install_pngquant"
 
-# Remove the previous image not optimized
-echo "Remove the previous image not optimized"
-find ./jekyll/site/assets/project-images/ -name "*.png" -not -name "*fs8.png" -exec rm {} \;
+    # Run the package
+    echo "travis_fold:start:run_pngquant"
+    echo "Run pngquant command"
+    # This will create duplicate of images with -fs8 at the end of the file
+    find ./jekyll/site/assets/project-images/ -name "*.png" -exec pngquant --force {} \;
 
-# Rename the file generate to match previous version
-echo "Rename compressed images to match declarations"
-find ./jekyll/site/assets/project-images/ -name "*.png" -exec rename "s/-fs8//g" {} \;
+    # Remove the previous image not optimized
+    echo "Remove the previous image not optimized"
+    find ./jekyll/site/assets/project-images/ -name "*.png" -not -name "*fs8.png" -exec rm {} \;
 
-# If debug is needed, uncomment this line.
-# It will allow to connect remotly to the travis TRAVIS_BUILD_NUMBER
-#curl https://www.teleconsole.com/get.sh | sh
-#teleconsole
-echo "travis_fold:end:run_pngquant"
+    # Rename the file generate to match previous version
+    echo "Rename compressed images to match declarations"
+    find ./jekyll/site/assets/project-images/ -name "*.png" -exec rename "s/-fs8//g" {} \;
+    echo "travis_fold:end:run_pngquant"
 
-echo "pngquant-compression.sh script done."
+    # Upload artifacts to the repo
+    echo "travis_fold:start:push_results"
+    echo "push compressed png images to the branch"
+    ./scripts/upload-new-file.sh "*.png"
+    echo "travis_fold:end:push_results"
+else
+  echo "⏭️ No png in the last commit. Job skipped."
+fi
+echo "✅ pngquant-compression.sh script done."

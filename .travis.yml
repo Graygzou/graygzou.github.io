@@ -65,7 +65,7 @@
       - name: "markdown creation"
         script: python ./scripts/githubProjectGen.py ${GITHUB_API_TOKEN}
       - name: "svg creation"
-        script: ./scripts/group-svg.sh '.svg'
+        script: ./scripts/group-svg.sh
       # Stage 2 ==============================
       - stage: build
         name: "jekyll production build"
