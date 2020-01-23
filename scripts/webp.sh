@@ -7,22 +7,28 @@
 # Run webp conversion on all images.
 #############################################################################
 
-# The -e flag causes the script to exit as soon as one command returns a non-zero exit code
-# The -v flag makes the shell print all lines in the script before executing them, which helps identify which steps failed.
-set -ev
+# Try to find if any file matching the provided extension
+jpgResult=$( ./scripts/file-changed-in-last-commit.sh "*.jpg" )
+pngResult=$( ./scripts/file-changed-in-last-commit.sh "*.png" )
 
-# Download the package
-echo "travis_fold:start:install_webp"
-echo "install webp for webp encoding"
-sudo apt-get install webp
-echo "travis_fold:end:install_webp"
+echo "$jpgResult"
+echo "$pngResult"
 
-# Encode images using cwebp
-echo "travis_fold:start:run_cwebp"
-echo "Start run guetzli for jpg compression"
-# Use cwebp to encode all asset images. see https://developers.google.com/speed/webp/docs/precompiled
-find jekyll/assets/ \( -name "*.jpg" -o -name "*.png" \) -exec cwebp {} -o {}.webp \;
-find jekyll/assets/ -name "*.webp" -exec rename "s/\.png|\.jpg//g" {} \;
-echo "travis_fold:end:run_cwebp"
+if [ "$jpgResult" != 0 OR "$pngResult" != 0 ]; then
+  # Download the package
+  echo "travis_fold:start:install_webp"
+  echo "install webp for webp encoding"
+  sudo apt-get install webp
+  echo "travis_fold:end:install_webp"
 
+  # Encode images using cwebp
+  echo "travis_fold:start:run_cwebp"
+  echo "Start run guetzli for jpg compression"
+  # Use cwebp to encode all asset images. see https://developers.google.com/speed/webp/docs/precompiled
+  find jekyll/assets/ \( -name "*.jpg" -o -name "*.png" \) -exec cwebp {} -o {}.webp \;
+  find jekyll/assets/ -name "*.webp" -exec rename "s/\.png|\.jpg//g" {} \;
+  echo "travis_fold:end:run_cwebp"
+else
+  echo "No jpg or png in the last commit. Job skipped."
+fi
 echo "webp-conversion.sh script done."
