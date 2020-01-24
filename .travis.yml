@@ -24,11 +24,7 @@
   # pip install -r requirements.txt => command to install dependencies
   # This was obtained by running $pip freeze > requirements.txt
   before_install:
-    - node --version
-    - npm --version
-    - nvm --version
     - gem install bundler
-    - pip install -r requirements.txt
 
   install:
     - (cd jekyll && gem update bundler)
@@ -62,7 +58,7 @@
       - name: "markdown creation"
         language: python
         python: 3.7
-        script: python ./scripts/githubProjectGen.py ${GITHUB_API_TOKEN}
+        script: ./scripts/generate-markdown.sh ${GITHUB_API_TOKEN}
       - name: "svg creation"
         language: python
         python: 3.7

@@ -15,6 +15,7 @@ echo "$result"
 if [ "$result" = 0 ]; then
     echo "⏭️ No svg in the last commit. Job skipped."
 else
+    pip install -r requirements.txt
     python ./scripts/mainSvgGen.py
 fi
 
