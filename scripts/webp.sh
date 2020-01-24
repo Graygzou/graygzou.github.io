@@ -8,8 +8,8 @@
 #############################################################################
 
 # Try to find if any file matching the provided extension
-jpgResult=$( ./scripts/file-changed-in-last-commit.sh "*.jpg" )
-pngResult=$( ./scripts/file-changed-in-last-commit.sh "*.png" )
+jpgResult=$( ./scripts/file-changed-in-last-commit.sh "*\.jpg$" )
+pngResult=$( ./scripts/file-changed-in-last-commit.sh "*\.png$" )
 
 echo "$jpgResult"
 echo "$pngResult"
