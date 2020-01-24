@@ -8,7 +8,7 @@
 #############################################################################
 
 # Try to find if any file matching the provided extension
-result=$( ./scripts/file-changed-in-last-commit.sh ".svg" )
+result=$( ./scripts/file-changed-in-last-commit.sh "*\.svg$" )
 
 echo "$result"
 
