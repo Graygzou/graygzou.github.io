@@ -7,9 +7,7 @@
 # Grammar-bot
 #############################################################################
 
-# The -e flag causes the script to exit as soon as one command returns a non-zero exit code
-# The -v flag makes the shell print all lines in the script before executing them, which helps identify which steps failed.
-set -ev
+pip install -r requirements.txt
 
 # Run python script
 (cd scripts && python grammarContentCheck.py ${GRAMMAR_BOT_TOKEN} \;)

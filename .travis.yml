@@ -5,6 +5,7 @@
   sudo: false # route your build to the container-based infrastructure for a faster build
 
   addons:
+    chrome: stable # make sure you have Chrome available
     apt:
       packages:
         - libcurl4-openssl-dev
@@ -52,6 +53,7 @@
 
   jobs:
     include:
+      # Stage 1 ==============================
       - stage: "Generation"
         name: "webp images creation"
         script: ./scripts/webp.sh
@@ -75,15 +77,13 @@
         script: ./scripts/guetzli-compression.sh
       # Stage 4 ==============================
       - stage: validation
-        # Lighthouse-CI
       - name: "Lighthouse CI"
-        node_js: "12" # we stick with a previous version to make lighthouse cli works.
-        addons:
-          chrome: stable # make sure you have Chrome available
+        language: node_js
+        node_js: 12 # we stick with a previous version to make lighthouse cli works.
         script: ./scripts/lighthouse-ci.sh
-        # grammar-bot
       - name: "Grammar Bot"
         script: ./scripts/grammar-bot.sh
+      # Stage 5 ==============================
       - stage: deploy
         name: "Deploy"
         script: echo "TODO ..."
