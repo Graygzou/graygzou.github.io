@@ -45,7 +45,7 @@
     - name: validation
       if: branch = release
     - name: deploy
-      if: branch = release
+      if: branch = release AND TRAVIS_PULL_REQUEST = false
 
   matrix:
     allow_failures:
@@ -86,7 +86,7 @@
       # Stage 5 ==============================
       - stage: deploy
         name: "Deploy"
-        script: echo "TODO ..."
+        script: ./scripts/deploy.sh
 
   # Stage 5 ==============================
   deploy:
