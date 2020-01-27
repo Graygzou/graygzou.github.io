@@ -77,7 +77,7 @@
         script: ./scripts/guetzli-compression.sh
       # Stage 4 ==============================
       - stage: validation
-      - name: "Lighthouse CI"
+        name: "Lighthouse CI"
         language: node_js
         node_js: 12 # we stick with a previous version to make lighthouse cli works.
         script: ./scripts/lighthouse-ci.sh
