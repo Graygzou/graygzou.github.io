@@ -10,7 +10,7 @@
 pip install -r requirements.txt
 
 # Run python script
-(cd scripts && python grammarContentCheck.py ${GRAMMAR_BOT_TOKEN} \;)
+(cd scripts/validation && python grammarContentCheck.py ${GRAMMAR_BOT_TOKEN} \;)
 
 # Checkout `master` and remove everything.
 # This works because the API key can replace your password.

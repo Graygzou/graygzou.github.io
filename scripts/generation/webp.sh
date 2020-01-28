@@ -32,7 +32,7 @@ if [[ "$jpgResult" -ne 0 ]] || [[ "$pngResult" -ne 0 ]] ; then
   # Upload back to github the artifacts created
   echo "travis_fold:start:push_webp"
   echo "push new webp images to the branch"
-  ./scripts/upload-new-file.sh "*.webp"
+  ./scripts/helpers/upload-new-file.sh "*.webp"
   echo "travis_fold:end:push_webp"
 else
   echo "⏭️ No jpg or png in the last commit. Job skipped."

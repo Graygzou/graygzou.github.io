@@ -23,7 +23,7 @@ echo "travis_fold:end:run_local_build"
 # Create the config for lighthouse-ci
 echo "travis_fold:start:init_lighthouse_config"
 echo "create lighthouse-ci config"
-( cd scripts && python getAllWebsitePages.py 0 "../jekyll/_site/sitemap.xml" \;)
+( cd scripts/validation && python getAllWebsitePages.py 0 "../jekyll/_site/sitemap.xml" \;)
 echo "travis_fold:end:init_lighthouse_config"
 
 # Make sure the config is safe

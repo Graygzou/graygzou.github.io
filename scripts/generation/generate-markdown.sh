@@ -8,6 +8,6 @@
 #############################################################################
 
 pip install -r requirements.txt
-python ./scripts/githubProjectGen.py $1
+python ./scripts/generation/githubProjectGen.py $1
 
 echo "✅ generate-markdown.sh script done."

@@ -6,7 +6,7 @@
 #############################################################################
 
 # Try to find if any file matching the provided extension
-jpgResult=$( ./scripts/file-changed-in-last-commit.sh "*.jpg" )
+jpgResult=$( ./scripts/helpers/file-changed-in-last-commit.sh "*.jpg" )
 
 echo "$jpgResult"
 
@@ -31,7 +31,7 @@ if [[ "$jpgResult" -ne 0 ]] ; then
     # Upload artifacts to the repo
     echo "travis_fold:start:push_results"
     echo "push compressed jpg images to the branch"
-    ./scripts/upload-new-file.sh "*.jpg"
+    ./scripts/helpers/upload-new-file.sh "*.jpg"
     echo "travis_fold:end:push_results"
 else
     echo "⏭️ No jpg in the last commit. Job skipped."

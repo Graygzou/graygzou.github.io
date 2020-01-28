@@ -23,7 +23,7 @@ echo "jekyll build done."
 # Upload back to github the artifacts created
 echo "travis_fold:start:push_webp"
 echo "push new webp images to the branch"
-./scripts/upload-new-file.sh "site/*" "release"
+./scripts/helpers/upload-new-file.sh "site/*" "release"
 echo "travis_fold:end:push_webp"
 
 echo "✅ deploy.sh script done."

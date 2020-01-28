@@ -8,7 +8,7 @@
 #############################################################################
 
 # Try to find if any file matching the provided extension
-pngResult=$( ./scripts/file-changed-in-last-commit.sh "*.png" )
+pngResult=$( ./scripts/helpers/file-changed-in-last-commit.sh "*.png" )
 
 echo "$pngResult"
 
@@ -37,7 +37,7 @@ if [[ "$pngResult" -ne 0 ]] ; then
     # Upload artifacts to the repo
     echo "travis_fold:start:push_results"
     echo "push compressed png images to the branch"
-    ./scripts/upload-new-file.sh "*.png"
+    ./scripts/helpers/upload-new-file.sh "*.png"
     echo "travis_fold:end:push_results"
 else
   echo "⏭️ No png in the last commit. Job skipped."

@@ -60,33 +60,33 @@
       - name: "markdown creation"
         language: python
         python: 3.7
-        script: ./scripts/generate-markdown.sh ${GITHUB_API_TOKEN}
+        script: ./scripts/generation/generate-markdown.sh ${GITHUB_API_TOKEN}
       - name: "svg creation"
         language: python
         python: 3.7
-        script: ./scripts/group-svg.sh
+        script: ./scripts/generation/group-svg.sh
       # Stage 2 ==============================
       - stage: build
         name: "jekyll production build"
-        script: ./scripts/build.sh
+        script: ./scripts/build/build.sh
       # Stage 3 ==============================
       - stage: integration
         name: "pngquant: PNG Compression"
-        script: ./scripts/pngquant-compression.sh
+        script: ./scripts/integration/pngquant-compression.sh
       - name: "guetzli: JPG Compression"
-        script: ./scripts/guetzli-compression.sh
+        script: ./scripts/integration/guetzli-compression.sh
       # Stage 4 ==============================
       - stage: validation
         name: "Lighthouse CI"
         language: node_js
         node_js: 12 # we stick with a previous version to make lighthouse cli works.
-        script: ./scripts/lighthouse-ci.sh
+        script: ./scripts/validation/lighthouse-ci.sh
       - name: "Grammar Bot"
-        script: ./scripts/grammar-bot.sh
+        script: ./scripts/validation/grammar-bot.sh
       # Stage 5 ==============================
       - stage: deploy
         name: "Deploy"
-        script: ./scripts/deploy.sh
+        script: ./scripts/deploy/deploy.sh
 
   # Stage 5 ==============================
   deploy:
