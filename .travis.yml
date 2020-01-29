@@ -56,7 +56,7 @@
       # Stage 1 ==============================
       - stage: "Generation"
         name: "webp images creation"
-        script: ./scripts/webp.sh
+        script: ./scripts/generation/webp.sh
       - name: "markdown creation"
         language: python
         python: 3.7
