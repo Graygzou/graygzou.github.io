@@ -1,5 +1,5 @@
 <picture>
-    <source type="image/webp" srcset="{{ include.filename }}.webp" alt="{{ include.alt }}">
+    <source type="image/webp" srcset="{{ include.webp }}.webp" alt="{{ include.alt }}">
     {%- if include.format == "png" -%}
     <source type="image/png" srcset="{{ include.filename }}.png" alt="{{ include.alt }}">
     <img src="{{ include.filename }}.png" alt="{{ include.alt }}">
