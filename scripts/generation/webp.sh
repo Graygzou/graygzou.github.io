@@ -26,7 +26,9 @@ if [[ "$jpgResult" -ne 0 ]] || [[ "$pngResult" -ne 0 ]] ; then
   echo "Start running cwebp for webp image creation"
   # Use cwebp to encode all asset images. see https://developers.google.com/speed/webp/docs/precompiled
   find jekyll/assets/ \( -name "*.jpg" -o -name "*.png" \) -exec cwebp {} -o {}.webp \;
-  find jekyll/assets/ -name "*.webp" -exec rename "s/\.png|\.jpg//g" {} \;
+  mkdir webp
+  find jekyll/assets/ \( -name "*.webp" \) -exec mv {} ./webp/ \;
+  find jekyll/assets/webp/ -name "*.webp" -exec rename "s/\.png|\.jpg//g" {} \; -exec rm {} \;
   echo "travis_fold:end:run_cwebp"
   
   # Upload back to github the artifacts created
