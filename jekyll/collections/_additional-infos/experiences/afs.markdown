@@ -2,7 +2,7 @@
 title: AFS
 full-name: American Field Service
 localisation: Wisconsin, USA
-logo: /assets/images/experiences/afs.svg
+logo: afs.svg
 sub-title: Foreign Exchange Student
 start-dates: [2011]
 end-date: 2012
@@ -13,5 +13,5 @@ category: 'experiences'
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>
-Copyright (c) 2018 Gregoire Boiron  All Rights Reserved.
+Copyright (c) 2018-2020 Gregoire Boiron  All Rights Reserved.
 --->

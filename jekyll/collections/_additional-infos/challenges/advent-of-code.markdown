@@ -1,6 +1,6 @@
 ---
 title: Advent Of Code
-logo: /assets/images/challenges/aoc.svg
+logo: aoc.svg
 sub-title: Participated in the 2018 and 2019 editions.
 start-dates: [2018, 2019]
 localisation: At Home

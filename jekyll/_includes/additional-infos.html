@@ -10,7 +10,11 @@
       {%- for info in sorted_infos -%}
         <!--{{ info.start-dates[0] }}-->
         <li class="home-li">
-          <img src="{{ info.logo }}" alt="{{ info.title }}-thumbnail"/>
+          {% capture image_path %}/assets/images/{{ info.category }}/{{ info.logo }}{% endcapture %}
+          {% capture image_path_webp %}/assets/webp/{{ info.logo | replace: ".jpg", ".webp" | replace: ".png", ".webp" }}{% endcapture %}
+          {% capture image_alt %}{{ info.title }}{% endcapture %}
+          <!--<img src="{{ info.logo }}" alt="{{ info.title }}-thumbnail"/>-->
+          {% include images-handler.html filename=image_path webp=image_path_webp alt=image_alt %}
           <div>
             <h3 class="project-heading post-link">{{ info.title | escape }}</h3>
             <ul>

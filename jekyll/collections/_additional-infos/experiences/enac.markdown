@@ -2,7 +2,7 @@
 title: ENAC
 full-name: French Civil Aviation University
 localisation: Toulouse, France
-logo: /assets/images/experiences/enac.svg
+logo: enac.svg
 sub-title: Computer Science Intern
 start-dates: [2015]
 end-date: 2015
@@ -13,5 +13,5 @@ category: 'experiences'
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>
-Copyright (c) 2018 Gregoire Boiron  All Rights Reserved.
+Copyright (c) 2018-2020 Gregoire Boiron  All Rights Reserved.
 --->

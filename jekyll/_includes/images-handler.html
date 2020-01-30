@@ -1,10 +1,14 @@
 <picture>
-    <source type="image/webp" srcset="{{ include.webp }}.webp" alt="{{ include.alt }}">
-    {%- if include.format == "png" -%}
-    <source type="image/png" srcset="{{ include.filename }}.png" alt="{{ include.alt }}">
+    {%- if include.filename contains ".svg" -%}
+    <img src="{{ include.filename }}" alt="{{ include.alt }}">
+    {%- else -%}
+    <source type="image/webp" srcset="{{ include.webp }}" alt="{{ include.alt }}">
+    {%- if include.filename contains ".png" -%}
+    <source type="image/png" srcset="{{ include.filename }}" alt="{{ include.alt }}">
     <img src="{{ include.filename }}.png" alt="{{ include.alt }}">
-    {%- else if include.format == "jpg" -%}
-    <source type="image/jpeg" srcset="{{ include.filename }}.jpg" alt="{{ include.alt }}">
+    {%- else if include.filename contains ".jpg" -%}
+    <source type="image/jpeg" srcset="{{ include.filename }}" alt="{{ include.alt }}">
     <img src="{{ include.filename }}.jpg" alt="{{ include.alt }}">
+    {%- endif -%}
     {%- endif -%}
 </picture>
