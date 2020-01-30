@@ -9,7 +9,7 @@ import os                           # for IO files
 import re                           # Regular expression
 import xml.etree.ElementTree as ET
 
-LIGHTHOUSE_CONFIG_PATH = "../lighthouserc.json"
+LIGHTHOUSE_CONFIG_PATH = "lighthouserc.json"
 INDENTATION = "        "
 
 def parse(isProduction, xmlPath):
