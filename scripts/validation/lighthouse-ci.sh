@@ -40,7 +40,7 @@ echo "travis_fold:end:start_lighthouse"
 
 # Kill the background process of the deployment
 echo "travis_fold:start:kill_local_build"
-echo "start lighthouse-ci"
+echo "kill the local running jekyll instance"
 pkill -f jekyll
 echo "travis_fold:end:kill_local_build"
 
