@@ -456,7 +456,7 @@
   /*border-radius: 8px;*/
 
   //background-color: rgb(105, 120, 3);
-  border: 2px solid rgb(1, 41, 53);
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.7);
 }
 
 .repositoryFooter {
@@ -508,7 +508,7 @@
   bottom: 0;
   right: 0;
   left: 0;
-  background: #e5e5e5;
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.7);
   text-align: center;
   float: right;
   border-radius: 4px;
