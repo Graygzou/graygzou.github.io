@@ -5,34 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b6d0991-ca97-49ed-8583-7856f3d6434a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/jekyll/assets/icons/regular/burger.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/additional-infos.html" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/additional-infos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_includes/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_includes/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jekyll/_sass/gamefolio.scss" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_sass/gamefolio.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_sass/gamefolio/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_sass/gamefolio/_base.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_sass/gamefolio/_layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_sass/gamefolio/_layout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/_sass/gamefolio/_project-page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/_sass/gamefolio/_project-page.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jekyll/assets/icons/gamefolio-regular-icons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/assets/icons/gamefolio-regular-icons.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/assets/images/experiences/afs.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_additional-infos/challenges/advent-of-code.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_additional-infos/challenges/advent-of-code.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_additional-infos/challenges/google-hashcode.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_additional-infos/challenges/google-hashcode.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_additional-infos/challenges/nuit-info.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_additional-infos/challenges/nuit-info.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_additional-infos/challenges/ubisoft-gamelab.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_additional-infos/challenges/ubisoft-gamelab.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_additional-infos/educations/DUT.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_additional-infos/educations/DUT.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_additional-infos/educations/enseeiht.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_additional-infos/educations/enseeiht.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_additional-infos/educations/juda.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_additional-infos/educations/juda.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_additional-infos/educations/uqac.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_additional-infos/educations/uqac.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_additional-infos/experiences/afs.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_additional-infos/experiences/enac.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_additional-infos/experiences/enac.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_additional-infos/experiences/illogika.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_additional-infos/experiences/illogika.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_additional-infos/experiences/irit.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_additional-infos/experiences/irit.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/collections/_additional-infos/experiences/latecoere.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/collections/_additional-infos/experiences/latecoere.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/generation/group-svg.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/generation/group-svg.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/generation/webp.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/generation/webp.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/helpers/file-changed-in-last-commit.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/helpers/file-changed-in-last-commit.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,13 +28,8 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jekyll/assets/icons/regular/code-fork.svg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/jekyll/assets/icons/regular/burger.svg">
+        <entry file="file://$PROJECT_DIR$/jekyll/assets/icons/regular/code-fork.svg">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
@@ -400,7 +369,7 @@
       <workItem from="1579446347747" duration="3805000" />
       <workItem from="1579550629093" duration="6924000" />
       <workItem from="1579630691512" duration="6532000" />
-      <workItem from="1580664380947" duration="1393000" />
+      <workItem from="1580664380947" duration="2027000" />
     </task>
     <task id="LOCAL-00001" summary="+ Hard-code the node version (down grade it) in order to try to fix lighthouse error">
       <created>1578692655916</created>
@@ -413,7 +382,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="543428000" />
+    <option name="totallyTimeSpent" value="544062000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="-7" width="1487" height="878" extended-state="6" />
@@ -707,9 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jekyll/assets/icons/regular/code-fork.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/jekyll/assets/icons/regular/calendar.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -727,6 +693,9 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/jekyll/assets/icons/regular/burger.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jekyll/assets/icons/regular/code-fork.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
