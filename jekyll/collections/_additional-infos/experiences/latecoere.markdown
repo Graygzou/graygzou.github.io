@@ -10,6 +10,7 @@ link: https://www.latecoere.aero/en/
 description: Prove Of Concept (POC) of a better visualization of PLM (Product Lifecycle Management) using graphs.
 keywords: 
 category: 'experiences'
+display: true
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

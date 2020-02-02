@@ -6,6 +6,7 @@ start-dates: [2018]
 localisation: UQAC, Chicoutimi, CA
 link: https://montreal.ubisoft.com/en/our-engagements/education/university/game-lab-competition/
 category: 'challenges'
+display: true
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

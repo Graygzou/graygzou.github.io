@@ -9,6 +9,7 @@ end-date: 2019
 link: https://www.illogika.com
 description: Work on all size video game projects like Cuphead for example. Currently working on an unannounced title.
 category: 'experiences'
+display: true
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

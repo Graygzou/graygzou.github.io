@@ -9,7 +9,8 @@ end-date: 2012
 link: https://afs.org/
 description: Spent a year in an American high school and with a host family. I learned a new culture, some important life skills and independence.
 keywords:
-category: 'experiences'
+category: 'educations'
+display: true
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

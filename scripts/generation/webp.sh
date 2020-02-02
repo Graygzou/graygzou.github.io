@@ -8,13 +8,13 @@
 #############################################################################
 
 # Try to find if any file matching the provided extension
-jpgResult=$( ./scripts/file-changed-in-last-commit.sh "*\.jpg$" )
-pngResult=$( ./scripts/file-changed-in-last-commit.sh "*\.png$" )
+jpgResult=$( ./scripts/helpers/file-changed-in-last-commit.sh "*\.jpg$" )
+pngResult=$( ./scripts/helpers/file-changed-in-last-commit.sh "*\.png$" )
 
 echo "$jpgResult"
 echo "$pngResult"
 
-if [[ "$jpgResult" -ne 0 ]] || [[ "$pngResult" -ne 0 ]] ; then
+if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   # Download the package
   echo "travis_fold:start:install_webp"
   echo "install webp for webp encoding"

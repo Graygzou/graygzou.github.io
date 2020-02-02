@@ -9,6 +9,7 @@ full-name: Juda School District
 localisation: Juda, WI, USA
 link: http://www.judaschool.com/
 category: 'educations'
+display: false
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

@@ -11,7 +11,7 @@
 grep=$(egrep "$1" last-commit.txt)
 
 if [ -n "$grep" ]; then
-    echo 1
-else
     echo 0
+else
+    echo 1
 fi

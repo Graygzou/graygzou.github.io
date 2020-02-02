@@ -6,6 +6,7 @@ start-dates: [2018, 2019]
 localisation: At Home
 link: https://adventofcode.com/
 category: 'challenges'
+display: true
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

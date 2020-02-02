@@ -10,6 +10,7 @@ link: http://www.enac.fr
 description: Integration of a new optical physics code in ATOLL (Advanced Trainer on LocaLizer), a software simulating the landing of aircraft by instrument.
 keywords:
 category: 'experiences'
+display: true
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

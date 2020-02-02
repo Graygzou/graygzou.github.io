@@ -9,6 +9,7 @@ full-name: École nationale supérieure d'électrotechnique, d'électronique, d'
 localisation: ENSEEIHT, Toulouse, FR
 link: http://www.enseeiht.fr
 category: 'educations'
+display: true
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

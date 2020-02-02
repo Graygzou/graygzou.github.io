@@ -9,6 +9,7 @@ end-date: 2017
 link: https://www.irit.fr
 description: Prove Of Concept (POC) using Copernicus satellite images, for the purpose of studying agricultural soils.
 category: 'experiences'
+display: true
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>

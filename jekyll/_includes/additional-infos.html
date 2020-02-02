@@ -5,7 +5,7 @@
   <h2 class="page-heading">{{ info_group.name | capitalize }}</h2>
   <div>
     <ul class="post-list">
-      {% assign sorted_infos = info_group.items | sort:"start-dates", "first" | reverse %}
+      {% assign sorted_infos = info_group.items | sort:"start-dates", "first" | reverse | where:"display", "true" %}
 
       {%- for info in sorted_infos -%}
         <!--{{ info.start-dates[0] }}-->
@@ -21,60 +21,43 @@
               <li class="post-meta">
                 <div>
                   <span class="role">{{ info.sub-title }}</span>
-                  <br>
+                  {%- if info.description -%}
                   <span>{{ info.description }}</span>
+                  {%- endif -%}
                 </div>
               </li>
 
-              <li class="post-meta">
-                <table>
-                  <tr>
-                    <!--
-                    <td>
-                      <svg class="svg-icon">
-                        <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#building">
-                        </use>
-                      </svg>
-                      {{ experience.full-name }}
-                    </td>
-                    -->
-                    <td>
-                      <svg class="svg-icon">
-                        <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#map-marker">
-                        </use>
-                      </svg>
-                      {{ info.localisation }}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <svg class="svg-icon">
-                        <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#calendar">
-                        </use>
-                      </svg>
-                      {{ info.start-dates | join: ', ' }}
-                      {%- if info.end-date -%}
-                        -{{ info.end-date }}
+              <li class="post-meta extra-info">
+                <ul>
+                  <li>
+                    <svg class="svg-icon">
+                      <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#map-marker"></use>
+                    </svg>
+                    {{ info.localisation }}
+                  </li>
+                  <li>
+                    <svg class="svg-icon">
+                      <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#calendar"/>
+                    </svg>
+                    {{ info.start-dates | join: ', ' }}
+                    {%- if info.end-date -%}
+                      -{{ info.end-date }}
+                    {%- endif -%}
+                  </li>
+                  <li>
+                    <svg class="svg-icon">
+                      <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#link"/>
+                    </svg>
+                    <a href="{{ info.link }}">
+                      {% assign link_name = info.link | remove_first:'https://' | remove_first:'http://' %}
+                      {%- if link_name.size < 25 -%}
+                        {{ link_name }}
+                      {%- else -%}
+                        {{ info.title | escape }}
                       {%- endif -%}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <svg class="svg-icon">
-                        <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#link">
-                        </use>
-                      </svg>
-                      <a href="{{ info.link }}">
-                        {% assign link_name = info.link | remove_first:'https://' | remove_first:'http://' %}
-                        {%- if link_name.size < 25 -%}
-                          {{ link_name }}
-                        {%- else -%}
-                          {{ info.title | escape }}
-                        {%- endif -%}
-                      </a>
-                    </td>
-                  </tr>
-                </table>
+                    </a>
+                  </li>
+                </ul>
               </li>
             </ul>
             {%- if site.show_excerpts -%}

@@ -8,15 +8,15 @@
 #############################################################################
 
 # Try to find if any file matching the provided extension
-result=$( ./scripts/file-changed-in-last-commit.sh "*\.svg$" )
+result=$( ./scripts/helpers/file-changed-in-last-commit.sh "*\.svg$" )
 
 echo "$result"
 
 if [ "$result" = 0 ]; then
-    echo "⏭️ No svg in the last commit. Job skipped."
-else
     pip install -r requirements.txt
     python ./scripts/generation/mainSvgGen.py
+else
+    echo "⏭️ No svg in the last commit. Job skipped."
 fi
 
 echo "✅ group-svg.sh script done."

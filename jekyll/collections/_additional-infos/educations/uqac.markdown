@@ -9,6 +9,7 @@ full-name: Université du Québec à Chicoutimi
 localisation: UQAC, Quebec CA
 link: https://www.uqac.ca
 category: 'educations'
+display: true
 ---
 <!---
 Gregoire Boiron <gregoire.boiron@gmail.com>
