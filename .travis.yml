@@ -57,6 +57,8 @@
       - stage: "Generation"
         name: "webp images creation"
         script: ./scripts/generation/webp.sh
+      - name: "ImageMagick Resizing"
+        script: ./scripts/generation/resize-img.sh
       - name: "markdown creation"
         language: python
         python: 3.7
