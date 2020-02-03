@@ -32,7 +32,8 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   # Run ImageMagick algorithm
   echo "travis_fold:start:imageMagick"
   echo "Start running imageMagick"
-  find jekyll/assets/ \( -name "*.jpg" -o -name "*.png" \) -exec magick convert {} -resize 300x300 300-{} \;
+  find jekyll/assets/ \( -name "*.jpg" \) -exec magick convert {} -resize 300x300 "${{}%.*}-300.jpg" \;
+  find jekyll/assets/ \( -name "*.png" \) -exec magick convert {} -resize 300x300 "${{}%.*}-300.png" \;
   echo "travis_fold:end:imageMagick"
   
   # Upload back to github the artifacts created
