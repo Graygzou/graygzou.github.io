@@ -26,6 +26,7 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   sudo make install
   sudo ldconfig /usr/local/lib
   identify -version
+  cd ..
   echo "travis_fold:end:install_magick"
 
   # Run ImageMagick algorithm
