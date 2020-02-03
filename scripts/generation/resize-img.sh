@@ -16,10 +16,17 @@ echo "$pngResult"
 
 if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   # Download the package
-  #echo "travis_fold:start:install_webp"
-  #echo "install webp for webp encoding"
-  #sudo apt-get install webp
-  #echo "travis_fold:end:install_webp"
+  echo "travis_fold:start:install_magick"
+  echo "install image magick for image resizing"
+  wget https://www.imagemagick.org/download/ImageMagick.tar.gz
+  tar xf ImageMagick.tar.gz
+  cd ImageMagick-7*
+  ./configure
+  make
+  sudo make install
+  sudo ldconfig /usr/local/lib
+  identify -version
+  echo "travis_fold:end:install_magick"
 
   # Run ImageMagick algorithm
   echo "travis_fold:start:imageMagick"
