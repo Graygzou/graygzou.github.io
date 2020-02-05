@@ -34,8 +34,8 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   echo "travis_fold:end:install_magick"
 
   # Debug
-  curl https://www.teleconsole.com/get.sh | sh
-  teleconsole
+  #curl https://www.teleconsole.com/get.sh | sh
+  #teleconsole
 
   # Run ImageMagick algorithm
   echo "travis_fold:start:imageMagick"
