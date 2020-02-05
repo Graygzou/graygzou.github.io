@@ -7,6 +7,9 @@
 # Check if a file extension has been modify in the latest commit
 #############################################################################
 
+# Debug
+cat last-commit.txt
+
 # Try to find if any file matching the provided extension
 grep=$(egrep "$1" last-commit.txt)
 
