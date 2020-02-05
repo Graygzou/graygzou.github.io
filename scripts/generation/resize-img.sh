@@ -14,6 +14,10 @@ pngResult=$( ./scripts/helpers/file-changed-in-last-commit.sh "*\.png$" )
 echo "$jpgResult"
 echo "$pngResult"
 
+# For debug purpose
+jpgResult=0
+pngResult=0
+
 if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   # Download the package
   echo "travis_fold:start:install_magick"
