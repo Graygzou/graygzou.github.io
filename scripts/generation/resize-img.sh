@@ -40,12 +40,13 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   # Run ImageMagick algorithm
   echo "travis_fold:start:imageMagick"
   echo "Start running imageMagick"
+  
   # Use mogrify to deal with mutliple images at the same time.
   # /!\ Warning ! mogrify replace the file when applying operations. that's why the command make backups.
   mogrify -set filename:name %f -write '%[filename:name]_orig.jpg' \
               -resize x300  -write '%[filename:name]_300.jpg' \
               -resize x200  -write '%[filename:name]_200.jpg' \
-              -resize x100  [^_]*.jpg
+              -resize x100  '^[^_]*.jpg'
   # Should rename the last image with the correct name
   find jekyll/assets/ \( -name "*.jpg" and not "\_*\.jpg" \) -exec magick convert {} -resize 300x300 "${{}%.*}-300.jpg" \;
   # TODO do the same with 
