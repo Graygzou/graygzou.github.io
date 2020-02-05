@@ -8,7 +8,7 @@
 #############################################################################
 
 # Debug
-cat last-commit.txt
+#cat last-commit.txt
 
 # Try to find if any file matching the provided extension
 grep=$(egrep "$1" last-commit.txt)
