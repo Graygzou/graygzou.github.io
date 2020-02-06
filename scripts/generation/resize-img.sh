@@ -50,7 +50,7 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
     mogrify -set filename:name %f -write '%[filename:name]_orig.jpg' \
                 -resize x300  -write '%[filename:name]_300.jpg' \
                 -resize x200  -write '%[filename:name]_200.jpg' \
-                -resize x100  jekyll/assets/*.jpg
+                -resize x100  *.jpg
     cd
   done
   # Rename all the last image with the correct name (in order to be coherent with the rest)
