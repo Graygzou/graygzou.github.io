@@ -43,6 +43,7 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   
   find jekyll/assets/ -name "*\[[0-9]+x[0-9]+\].jpg" -exec bash -c 'convert {} -resize $(echo {} | egrep -o "[[:digit]]+x[[:digit:]]+" | head -n1) {}' \;
 
+  git status
   # Iterate on all the folder in jekyll/assets
   #list=$(find jekyll/assets/ -type d)
   #for directory in $list; do

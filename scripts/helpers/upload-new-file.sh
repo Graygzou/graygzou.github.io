@@ -7,10 +7,10 @@
 # Upload new file to github if necessary
 #############################################################################
 
-echo "$?"
+echo "$#"
 
 # Parameters check
-if [ "$?" -eq 0 ]; then
+if [ "$#" -eq 0 ]; then
   echo "you need to provide a pattern to find files to log for."
   exit
 fi
