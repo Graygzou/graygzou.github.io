@@ -7,8 +7,6 @@
 # Run ImageMagick algorithm to create different versions of all images
 #############################################################################
 
-set -ev
-
 # Try to find if any file matching the provided extension
 jpgResult=$( ./scripts/helpers/file-changed-in-last-commit.sh "*\.jpg$" )
 pngResult=$( ./scripts/helpers/file-changed-in-last-commit.sh "*\.png$" )
@@ -66,7 +64,7 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   # Upload back to github the artifacts created
   echo "travis_fold:start:push_resize"
   echo "push new resized images to the branch"
-  ./scripts/helpers/upload-new-file.sh "^300-*"
+  ./scripts/helpers/upload-new-file.sh "*.jpg"
   echo "travis_fold:end:push_resize"
 else
   echo "⏭️ No jpg or png in the last commit. Job skipped."
