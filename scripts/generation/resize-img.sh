@@ -19,8 +19,8 @@ jpgResult=0
 pngResult=0
 
 # Debug
-curl https://www.teleconsole.com/get.sh | sh
-teleconsole
+#curl https://www.teleconsole.com/get.sh | sh
+#teleconsole
 
 if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   # Download the package
@@ -37,8 +37,6 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   cd ..
   echo "travis_fold:end:install_magick"
 
-  
-
   # Run ImageMagick algorithm
   echo "travis_fold:start:imageMagick"
   echo "Start running imageMagick"
@@ -49,9 +47,10 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
               -resize x300  -write '%[filename:name]_300.jpg' \
               -resize x200  -write '%[filename:name]_200.jpg' \
               -resize x100  *.jpg
-  # Should rename the last image with the correct name
-  find jekyll/assets/ \( -name "*.jpg" and not "\_*\.jpg" \) -exec magick convert {} -resize 300x300 "${{}%.*}-300.jpg" \;
-  # TODO do the same with 
+  # Rename all the last image with the correct name (in order to be coherent with the rest)
+  find jekyll/assets/ \( -not -name "*_*.jpg" \) -and -name "*.jpg" -exec bash -c 'mv {} .$(echo {} | cut -f 2 -d ".")_100.jpg' \;
+  # Rename all the original image with the correct name
+  find jekyll/assets/ -name "*_orig.jpg" -exec bash -c 'mv {} $(echo {} | cut -f 1 -d "_").jpg' \;
   echo "travis_fold:end:imageMagick"
   
   # Upload back to github the artifacts created
