@@ -36,42 +36,10 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   # Run ImageMagick algorithm
   echo "travis_fold:start:imageMagick"
   echo "Start running imageMagick"
-  
-  # Debug
-  curl https://www.teleconsole.com/get.sh | sh
-  teleconsole
-  
-  # Debug only
-  find jekyll/assets/ -regex ".*/*\[[0-9]+x[0-9]+\]\.jpg" -exec echo {} \;
-  find jekyll/assets/ -regex ".*/*\[[0-9]+×[0-9]+\]\.jpg" -exec echo {} \;
-  #x
-  # End debug
-  
-  # Preprocess: replace all x by the multiplication symbol × 
-  # See https://stackoverflow.com/questions/26800248/invalid-argument-for-option-resize-in-shell-script
-  #find jekyll/assets/ -regex ".*/*\[[0-9]+x[0-9]+\]\.jpg" -exec bash -c 'mv {} $(echo {} | sed -E "s/([[:digit:]])x([[:digit:]])/\1×\2/g")' \; 
   git status
-  
   # Apply the command
-  find jekyll/assets/ -regex ".*/*\[[0-9]+x[0-9]+\]\.jpg" -exec bash -c 'convert {} -resize $(echo {} | egrep -o "[[:digit:]]+x[[:digit:]]+" | head -n1) {}' \;
-
+  find jekyll/assets/ -regex ".*/*\[[0-9]+x[0-9]+\]\.jpg" -exec bash -c 'convert {} -resize $(echo {} | tr -cd "0-9x") {}' \;
   git status
-  # Iterate on all the folder in jekyll/assets
-  #list=$(find jekyll/assets/ -type d)
-  #for directory in $list; do
-  #  cd $directory
-    # Use mogrify to deal with mutliple images at the same time.
-    # /!\ Warning ! mogrify replace the file when applying operations. that's why the command make backups.
-  #  mogrify -set filename:name %f -write '%[filename:name]_orig.jpg' \
-  #              -resize x300  -write '%[filename:name]_300.jpg' \
-  #              -resize x200  -write '%[filename:name]_200.jpg' \
-  #              -resize x100  *.jpg
-  #  cd
-  #done
-  # Rename all the last image with the correct name (in order to be coherent with the rest)
-  #find jekyll/assets/ \( -not -name "*_*.jpg" \) -and -name "*.jpg" -exec bash -c 'mv {} .$(echo {} | cut -f 2 -d ".")_100.jpg' \;
-  # Rename all the original image with the correct name
-  #find jekyll/assets/ -name "*_orig.jpg" -exec bash -c 'mv {} $(echo {} | cut -f 1 -d "_").jpg' \;
   echo "travis_fold:end:imageMagick"
   
   # Upload back to github the artifacts created
