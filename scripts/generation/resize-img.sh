@@ -19,8 +19,8 @@ jpgResult=0
 pngResult=0
 
 # Debug
-#curl https://www.teleconsole.com/get.sh | sh
-#teleconsole
+curl https://www.teleconsole.com/get.sh | sh
+teleconsole
 
 if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   # Download the package
