@@ -18,10 +18,6 @@ echo "$pngResult"
 jpgResult=0
 pngResult=0
 
-# Debug
-curl https://www.teleconsole.com/get.sh | sh
-teleconsole
-
 if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   # Download the package
   echo "travis_fold:start:install_magick"
@@ -40,6 +36,10 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   # Run ImageMagick algorithm
   echo "travis_fold:start:imageMagick"
   echo "Start running imageMagick"
+  
+  # Debug
+  curl https://www.teleconsole.com/get.sh | sh
+  teleconsole
   
   find jekyll/assets/ -name "*\[[0-9]+x[0-9]+\].jpg" -exec bash -c 'convert {} -resize $(echo {} | egrep -o "[[:digit]]+x[[:digit:]]+" | head -n1) {}' \;
 
