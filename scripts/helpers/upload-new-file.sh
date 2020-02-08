@@ -21,7 +21,7 @@ pattern=$1
 # change branch if necessary
 echo "travis_fold:start:checkout_branch"
 echo "Change branch if necessary"
-if [ "$?" -gt 1 ]; then 
+if [ "$#" -gt 1 ]; then 
   git checkout $2
 fi
 echo "travis_fold:end:checkout_branch"
