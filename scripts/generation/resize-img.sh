@@ -18,6 +18,8 @@ echo "$pngResult"
 jpgResult=0
 pngResult=0
 
+# echo "jekyll/assets/images/lilo[200x200].jpg" | tr -cd '0-9x'
+
 # Debug
 #curl https://www.teleconsole.com/get.sh | sh
 #teleconsole
@@ -40,8 +42,8 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   # Run ImageMagick algorithm
   echo "travis_fold:start:imageMagick"
   echo "Start running imageMagick"
-  
-  find jekyll/assets/ -name "*\[[0-9]+x[0-9]+\].jpg" -exec bash -c 'convert {} -resize $(echo {} | egrep -o "[[:digit]]+x[[:digit:]]+" | head -n1) {}' \;
+
+  find jekyll/assets/ -regex ".*/*\[[0-9]+x[0-9]+\]\.jpg" -exec bash -c 'convert {} -resize $(echo {} | tr -cd "0-9x") {}' \;
 
   git status
   # Iterate on all the folder in jekyll/assets
