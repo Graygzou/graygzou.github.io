@@ -39,8 +39,8 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   cd ..
   echo "travis_fold:end:install_magick"
 
-  ./scripts/generation/image-magick.sh ".jpg"
-  ./scripts/generation/image-magick.sh ".png"
+  ./scripts/generation/image-magick.sh "jpg"
+  ./scripts/generation/image-magick.sh "png"
 else
   echo "⏭️ No jpg or png in the last commit. Job skipped."
 fi
