@@ -39,21 +39,8 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   cd ..
   echo "travis_fold:end:install_magick"
 
-  # Run ImageMagick algorithm
-  echo "travis_fold:start:imageMagick"
-  echo "Start running imageMagick"
-
-  git status
-  # Apply the command
-  find jekyll/assets/ -regex ".*/*\[[0-9]+x[0-9]+\]\.jpg" -exec bash -c 'convert {} -resize $(echo {} | tr -cd "0-9x") {}' \;
-  git status
-  echo "travis_fold:end:imageMagick"
-  
-  # Upload back to github the artifacts created
-  echo "travis_fold:start:push_resize"
-  echo "push new resized images to the branch"
-  ./scripts/helpers/upload-new-file.sh "*.jpg"
-  echo "travis_fold:end:push_resize"
+  ./scripts/generation/image-magick.sh ".jpg"
+  ./scripts/generation/image-magick.sh ".png"
 else
   echo "⏭️ No jpg or png in the last commit. Job skipped."
 fi
