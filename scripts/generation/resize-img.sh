@@ -47,8 +47,17 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
 
   chmod +x scripts/*/*.sh
 
-  ./scripts/generation/image-magick.sh "jpg"
-  ./scripts/generation/image-magick.sh "png"
+  extension1="jpg"
+  extension2="png"
+
+  ./scripts/generation/image-magick.sh $extension1
+  ./scripts/generation/image-magick.sh $extension2
+
+  # Upload back to github the artifacts created
+  echo "travis_fold:start:push_resize"
+  echo "push new resized images to the branch"
+  ./scripts/helpers/upload-new-file.sh "jekyll/assets/*\[*x*\]\.[$extension1$]*[$extension2$]*]"
+  echo "travis_fold:end:push_resize"
 else
   echo "⏭️ No jpg or png in the last commit. Job skipped."
 fi

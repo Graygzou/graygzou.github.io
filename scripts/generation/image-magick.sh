@@ -28,8 +28,3 @@ git status
 find jekyll/assets/ -regex ".*/*\[[0-9]+x[0-9]+\]\.$extension" -exec identify {} \;
 echo "travis_fold:end:imageMagick"
 
-# Upload back to github the artifacts created
-echo "travis_fold:start:push_resize"
-echo "push new resized images to the branch"
-./scripts/helpers/upload-new-file.sh "jekyll/assets/*\[*x*\]\.$extension"
-echo "travis_fold:end:push_resize"
