@@ -39,6 +39,12 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   cd ..
   echo "travis_fold:end:install_magick"
 
+  echo "travis_fold:start:clone_project"
+  echo "Clone project"
+  git clone https://${GITHUB_BOT_NAME}:${BOT_DEPLOY_TOKEN}@github.com/Graygzou/graygzou.github.io.git ../graygzou.github.io.develop
+  cd ../graygzou.github.io.develop
+  echo "travis_fold:end:clone_project"
+
   ./scripts/generation/image-magick.sh "jpg"
   ./scripts/generation/image-magick.sh "png"
 else
