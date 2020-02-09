@@ -3,12 +3,12 @@
   "name": "GB Portfolio",
   "icons": [
     {
-      "src": "/assets/ghost-cat-192.png",
+      "src": "/assets/ghost-cat%5B192x192%5D.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/assets/ghost-cat-512.png",
+      "src": "/assets/ghost-cat%5B512x512%5D.png",
       "type": "image/png",
       "sizes": "512x512"
     }
