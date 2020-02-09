@@ -4,6 +4,7 @@ title: Resume
 permalink: /resume/
 order: 3
 allowindex: false
+sitemap: false
 ---
 
 You can also reach me throught social networks !

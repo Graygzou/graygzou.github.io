@@ -4,6 +4,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ff8c38"/>
   {%- seo -%}
+  {% if page.allowindex == false %}
+    <meta name="robots" content="noindex nofollow">
+  {% endif %}
   <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
   <link rel="manifest" href="{{ '/manifest.json' | relative_url }}">
   <!-- Should be an 180x180 icon. -->

@@ -4,6 +4,7 @@ title: About
 permalink: /about/
 order: 5
 allowindex: false
+sitemap: false
 ---
 
 Hello There !
