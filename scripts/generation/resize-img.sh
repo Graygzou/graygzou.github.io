@@ -45,6 +45,8 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   cd ../graygzou.github.io.develop
   echo "travis_fold:end:clone_project"
 
+  chmod +x scripts/*/*.sh
+
   ./scripts/generation/image-magick.sh "jpg"
   ./scripts/generation/image-magick.sh "png"
 else
