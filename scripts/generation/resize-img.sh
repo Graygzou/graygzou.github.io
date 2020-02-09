@@ -56,7 +56,7 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   # Upload back to github the artifacts created
   echo "travis_fold:start:push_resize"
   echo "push new resized images to the branch"
-  ./scripts/helpers/upload-new-file.sh "jekyll/assets/*\[*x*\]\.[$extension1$]*[$extension2$]*]"
+  ./scripts/helpers/upload-new-file.sh "jekyll/assets/*\[*x*\]\.[$extension1$]*[$extension2$]*"
   echo "travis_fold:end:push_resize"
 else
   echo "⏭️ No jpg or png in the last commit. Job skipped."
