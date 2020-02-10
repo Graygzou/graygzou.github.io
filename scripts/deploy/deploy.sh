@@ -7,7 +7,10 @@
 # deploy
 #############################################################################
 
-cd jekyll
+# Run python script to remove untracked page from the sitemap 
+# (only add a variable in front matters)
+pip install -r requirements.txt
+(cd scripts/deploy && python hide-untracked-pages-sitemap.py \;)
 
 #---------------------------------------------------------------
 # The build that will be deploy to github-page
@@ -16,7 +19,7 @@ cd jekyll
 #---------------------------------------------------------------
 echo "travis_fold:start:jekyll_production_build"
 echo "build jekyll site with the production variable"
-bundle exec jekyll build JEKYLL_ENV=production --destination site
+(cd jekyll && bundle exec jekyll build JEKYLL_ENV=production --destination site)
 echo "travis_fold:end:jekyll_production_build"
 echo "jekyll build done."
 
