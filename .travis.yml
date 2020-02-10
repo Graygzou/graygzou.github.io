@@ -85,7 +85,7 @@
         script: ./scripts/validation/lighthouse-ci.sh
       - name: "Grammar Bot"
         script: ./scripts/validation/grammar-bot.sh
-      # Stage 5 ==============================
+      # Stage 5 ============================== # TODO add sitemaps: false in this jobs
       - stage: deploy
         name: "Deploy"
         script: ./scripts/deploy/deploy.sh
