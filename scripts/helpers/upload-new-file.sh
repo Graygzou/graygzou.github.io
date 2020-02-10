@@ -42,6 +42,7 @@ echo "travis_fold:end:config_user"
 echo "travis_fold:start:upload_to_github"
 echo "Upload files to the ${TRAVIS_BRANCH} branch"
 git add $pattern
+git status
 NB_FILE_CHANGED="$(git status --porcelain | grep ^[AM] | wc -l)"
 
 if [ "${NB_FILE_CHANGED}" -gt 0 ]; then 
