@@ -36,7 +36,7 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   find jekyll/assets/ \( -name "*.jpg" -o -name "*.png" \) -exec cwebp {} -o {}.webp \;
   mkdir jekyll/assets/webp
   find jekyll/assets/ \( -name "*.webp" \) -exec mv {} ./jekyll/assets/webp/ \;
-  find jekyll/assets/webp/ -name "*.webp" -exec rename "s/\.png|\.jpg//g" {} \; -exec rm {} \;
+  find jekyll/assets/webp/ -name "*.webp" -exec rename "s/\.png|\.jpg//g" {} \;
   echo "travis_fold:end:run_cwebp"
   
   # Upload back to github the artifacts created

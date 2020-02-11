@@ -9,7 +9,11 @@ allowindex: false
 Hello There !
 ==================
 
-![This is me !]({{site.url}}/assets/images/gregoire-boiron[300x300].jpg){: .about-img }
+{% capture image_path %}/assets/project-images/gregoire-boiron[300x300].jpg{% endcapture %}
+{% capture image_path_webp %}/assets/webp/gregoire-boiron[300x300].webp{% endcapture %}
+{% capture image_alt %}gregoire-boiron-thumbnail{% endcapture %}
+<!--![This is me !]({{site.url}}/assets/images/gregoire-boiron[300x300].jpg){: .about-img }-->
+{% include images-handler.html alt=image_alt filename=image_path webp=image_path_webp %}
 
 I'm Grégoire Boiron, Software Engineer since 2019. After trying many disciplines thanks to internships, I found myself landing in the video game industry.
 And I'm still in it so far !
