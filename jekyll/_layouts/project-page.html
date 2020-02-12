@@ -75,7 +75,7 @@ layout: default
         <ul class="social-media-links">
           {%- for link in page.project_links -%}
           <li>
-            <a href="{{ link.url | escape }}">
+            <a href="{{ link.url | escape }}" aria-label="{{ link.name }}">
               <svg class="svg-icon">
                 <use xlink:href="{{ '/assets/icons/gamefolio-social-icons.svg#' | append: link.name | relative_url }}">
                 </use>
