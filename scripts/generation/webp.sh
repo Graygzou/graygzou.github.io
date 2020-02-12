@@ -29,14 +29,25 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
 
   chmod +x scripts/*/*.sh
 
+  # Remove the old directory and create a new one if necessary
+  echo "travis_fold:start:create_webp_folder"
+  echo "Remove all webp folder"
+  if [[ -f "jekyll/assets/webp" ]]; then
+    # Remove the old directory to create a new one
+    rm -vrf jekyll/assets/webp
+    rmdir jekyll/assets/webp
+  fi
+  mkdir jekyll/assets/webp
+  echo "travis_fold:end:create_webp_folder"
+
   # Encode images using cwebp
   echo "travis_fold:start:run_cwebp"
   echo "Start running cwebp for webp image creation"
   # Use cwebp to encode all asset images. see https://developers.google.com/speed/webp/docs/precompiled
   find jekyll/assets/ \( -name "*.jpg" -o -name "*.png" \) -exec cwebp {} -o {}.webp \;
-  mkdir jekyll/assets/webp
   find jekyll/assets/ \( -name "*.webp" \) -exec mv {} ./jekyll/assets/webp/ \;
   find jekyll/assets/webp/ -name "*.webp" -exec rename "s/\.png|\.jpg//g" {} \;
+  find jekyll/assets/webp/ \( -name "*.png.webp" -o -name "*.jpg.webp" \) -exec rm {} \;
   echo "travis_fold:end:run_cwebp"
   
   # Upload back to github the artifacts created
