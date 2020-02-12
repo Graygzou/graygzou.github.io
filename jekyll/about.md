@@ -28,11 +28,21 @@ I spent a lot of my spare time trying and learning stuff I find interesting (and
 When I'm not doing that I exercise and don't miss an occasion to practice any kind of sports alone or with friends.
 I also spent some time playing video games and petting my 4 years old black cat Lilo :
 
-![My beautiful cat Lilo]({{site.url}}/assets/images/lilo-blue[300x300].jpg){: .about-img }
-![My beautiful cat Lilo]({{site.url}}/assets/images/lilo[300x300].jpg){: .about-img }
-![My beautiful cat Lilo]({{site.url}}/assets/images/lilo-red[300x300].jpg){: .about-img }
-
-
+{% capture image_path %}/assets/project-images/lilo-blue[300x300].jpg{% endcapture %}
+{% capture image_path_webp %}/assets/webp/lilo-blue[300x300].webp{% endcapture %}
+{% capture image_alt %}lilo-blue{% endcapture %}
+{% include images-handler.html alt=image_alt filename=image_path webp=image_path_webp %}
+<!-- ![My beautiful cat Lilo]({{site.url}}/assets/images/lilo-blue[300x300].jpg){: .about-img } -->
+{% capture image_path %}/assets/project-images/lilo[300x300].jpg{% endcapture %}
+{% capture image_path_webp %}/assets/webp/lilo[300x300].webp{% endcapture %}
+{% capture image_alt %}lilo{% endcapture %}
+{% include images-handler.html alt=image_alt filename=image_path webp=image_path_webp %}
+<!-- ![My beautiful cat Lilo]({{site.url}}/assets/images/lilo[300x300].jpg){: .about-img } -->
+{% capture image_path %}/assets/project-images/lilo-red[300x300].jpg{% endcapture %}
+{% capture image_path_webp %}/assets/webp/lilo-red[300x300].webp{% endcapture %}
+{% capture image_alt %}lilo-red{% endcapture %}
+{% include images-handler.html alt=image_alt filename=image_path webp=image_path_webp %}
+<!-- ![My beautiful cat Lilo]({{site.url}}/assets/images/lilo-red[300x300].jpg){: .about-img } -->
 
 
 Side Note
