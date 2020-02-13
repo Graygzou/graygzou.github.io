@@ -8,7 +8,7 @@
                 {% capture filename %}{{ image.path | replace: "[", "%5B" | replace: "]", "%5D" }}{% endcapture %}
                 {% capture webp %}/assets/webp/{{ image.basename | replace: "[", "%5B" | replace: "]", "%5D" }}{% endcapture %}
                 <!-- End Pre process -->
-                <source type="image/webp" srcset="{{ webp }}" alt="{{ image.basename }}">
+                <source type="image/webp" srcset="{{ webp }}.webp" alt="{{ image.basename }}">
                 {%- if filename contains ".png" -%}
                 <source type="image/png" srcset="{{ filename }}" alt="{{ image.basename }}">
                 {%- else if filename contains ".jpg" -%}
