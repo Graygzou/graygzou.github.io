@@ -41,7 +41,9 @@ echo "travis_fold:end:config_user"
 # Check to avoid extra commit if not necessary 
 echo "travis_fold:start:upload_to_github"
 echo "Upload files to the ${TRAVIS_BRANCH} branch"
-git add $pattern
+# Use grep instead of basic add !
+git log --name-only -n 1 HEAD~1..HEAD --pretty=format:%b | grep $pattern
+git add 
 git status
 NB_FILE_CHANGED="$(git status --porcelain | grep ^[AM] | wc -l)"
 
