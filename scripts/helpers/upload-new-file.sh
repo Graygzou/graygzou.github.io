@@ -36,19 +36,19 @@ git config user.name ${GITHUB_BOT_NAME}
 echo "travis_fold:end:config_user"
 
 # Loop over all patterns to add provided in arguments
-for pattern in "$@"
-do
-  # Check to avoid extra commit if not necessary 
-  echo "travis_fold:start:upload_to_github"
-  echo "Upload files to the ${TRAVIS_BRANCH} branch"
-
+str=$1
+IFS=' '
+read -ra ADDR <<< "$str"
+for pattern in "${ADDR[@]}"; do
   # Use grep instead of basic add !
   git add $(git log --name-only -n 1 HEAD~1..HEAD --pretty=format:%b | grep $pattern)
 done
 git status
 
+# Check to avoid extra commit if not necessary 
+echo "travis_fold:start:upload_to_github"
+echo "Upload files to the ${TRAVIS_BRANCH} branch"
 NB_FILE_CHANGED="$(git status --porcelain | grep ^[AM] | wc -l)"
-
 if [ "${NB_FILE_CHANGED}" -gt 0 ]; then 
     git commit -m "[skip travis][ignore] Upload files generate by the job #$TRAVIS_JOB_NUMBER $TRAVIS_JOB_NAME : $TRAVIS_JOB_WEB_URL"
     git push origin HEAD:$branch
