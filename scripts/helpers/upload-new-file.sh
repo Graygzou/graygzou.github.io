@@ -15,10 +15,7 @@ if [ "$#" -eq 0 ]; then
   exit
 fi
 
-# Retrieve the pattern provided by the user
-pattern=$1
 branch='develop'
-
 # change branch if necessary
 echo "travis_fold:start:checkout_branch"
 echo "Change branch if necessary"
@@ -38,18 +35,22 @@ git config user.email ${GITHUB_BOT_MAIL}
 git config user.name ${GITHUB_BOT_NAME}
 echo "travis_fold:end:config_user"
 
-# Check to avoid extra commit if not necessary 
-echo "travis_fold:start:upload_to_github"
-echo "Upload files to the ${TRAVIS_BRANCH} branch"
+# Loop over all patterns to add provided in arguments
+for pattern in "$@"
+do
+  # Check to avoid extra commit if not necessary 
+  echo "travis_fold:start:upload_to_github"
+  echo "Upload files to the ${TRAVIS_BRANCH} branch"
+
+  # Use grep instead of basic add !
+  git add $(git log --name-only -n 1 HEAD~1..HEAD --pretty=format:%b | grep $pattern)
+done
+git status
 
 # Debug
 curl https://www.teleconsole.com/get.sh | sh
 teleconsole
 
-# Use grep instead of basic add !
-git log --name-only -n 1 HEAD~1..HEAD --pretty=format:%b | grep $pattern
-git add 
-git status
 NB_FILE_CHANGED="$(git status --porcelain | grep ^[AM] | wc -l)"
 
 if [ "${NB_FILE_CHANGED}" -gt 0 ]; then 
