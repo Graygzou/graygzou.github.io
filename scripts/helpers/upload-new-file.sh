@@ -47,10 +47,6 @@ do
 done
 git status
 
-# Debug
-curl https://www.teleconsole.com/get.sh | sh
-teleconsole
-
 NB_FILE_CHANGED="$(git status --porcelain | grep ^[AM] | wc -l)"
 
 if [ "${NB_FILE_CHANGED}" -gt 0 ]; then 
