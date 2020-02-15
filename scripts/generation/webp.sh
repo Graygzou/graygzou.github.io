@@ -14,6 +14,8 @@ pngResult=$( ./scripts/helpers/file-changed-in-last-commit.sh "*\.png$" )
 echo "$jpgResult"
 echo "$pngResult"
 
+jpgResult=0
+
 if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   # Download the package
   echo "travis_fold:start:install_webp"
@@ -32,7 +34,7 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   # Remove the old directory and create a new one if necessary
   echo "travis_fold:start:create_webp_folder"
   echo "Remove all webp folder"
-  if [[ -f "jekyll/assets/webp" ]]; then
+  if [[ -d "jekyll/assets/webp" ]]; then
     # Remove the old directory to create a new one
     rm -vrf jekyll/assets/webp
     rmdir jekyll/assets/webp
@@ -53,7 +55,7 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   # Upload back to github the artifacts created
   echo "travis_fold:start:push_webp"
   echo "push new webp images to the branch"
-  ./scripts/helpers/upload-new-file.sh "*.webp"
+  ./scripts/helpers/upload-new-files.sh "*.webp"
   echo "travis_fold:end:push_webp"
 else
   echo "⏭️ No jpg or png in the last commit. Job skipped."
