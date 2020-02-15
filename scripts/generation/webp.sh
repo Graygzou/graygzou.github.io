@@ -48,6 +48,10 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   find jekyll/assets/ \( -name "*.jpg" -o -name "*.png" \) -exec cwebp {} -o {}.webp \;
   echo "travis_fold:end:run_cwebp"
 
+  # Debug
+  curl https://www.teleconsole.com/get.sh | sh
+  teleconsole
+
   # Move images and format them
   echo "travis_fold:start:rename_webp_images"
   echo "Renamed new images and move them in a separated folder"
