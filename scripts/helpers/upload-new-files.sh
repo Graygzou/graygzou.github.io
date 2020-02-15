@@ -32,7 +32,7 @@ echo "travis_fold:end:checkout_branch"
 
 # Upload to github if necessary
 echo "travis_fold:start:config_user"
-echo "Change branch if necessary"
+echo "Config github bot user"
 git config user.email ${GITHUB_BOT_MAIL}
 git config user.name ${GITHUB_BOT_NAME}
 echo "travis_fold:end:config_user"
