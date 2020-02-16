@@ -46,7 +46,8 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   echo "Start running cwebp for webp image creation"
   # Use cwebp to encode all asset images except for the folder ./originals. 
   # see https://developers.google.com/speed/webp/docs/precompiled
-  find jekyll/assets/ -type d -path ./originals -prune -o -name "*.jpg" -o -name "*.png" -print -exec cwebp {} -o {}.webp \;
+  find jekyll/assets/ -type d -path jekyll/assets/originals -prune -o -regex '.*\.\(jpg\|png\)' -print -exec cwebp {} -o {}.webp \;
+  
   echo "travis_fold:end:run_cwebp"
 
   # Move images and format them
@@ -54,7 +55,7 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   echo "Renamed new images and move them in a separated folder"
   find jekyll/assets/ -name "*.webp" -exec mv {} jekyll/assets/webp/ \;
   cd jekyll/assets/webp/ && rename -v 's/.png.webp|.jpg.webp/.webp/gi' *.webp \;
-  find . \( -name "*.png.webp" -o -name "*.jpg.webp" \) -exec rm -v {} \;
+  find . -regex '.*\.\(png\.webp\|jpg\.webp\)' -exec rm -v {} \;
   echo "travis_fold:end:rename_webp_images"
   
   # Debug
