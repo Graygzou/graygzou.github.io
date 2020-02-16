@@ -54,7 +54,7 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   echo "Renamed new images and move them in a separated folder"
   find jekyll/assets/ -name "*.webp" -exec mv {} jekyll/assets/webp/ \;
   cd jekyll/assets/webp/ && rename -v 's/.png.webp|.jpg.webp/.webp/gi' *.webp \;
-  find jekyll/assets/webp/ \( -name "*.png.webp" -o -name "*.jpg.webp" \) -exec rm -v {} \;
+  find . \( -name "*.png.webp" -o -name "*.jpg.webp" \) -exec rm -v {} \;
   echo "travis_fold:end:rename_webp_images"
   
   # Debug
