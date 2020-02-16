@@ -44,22 +44,23 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   # Encode images using cwebp
   echo "travis_fold:start:run_cwebp"
   echo "Start running cwebp for webp image creation"
-  # Use cwebp to encode all asset images. see https://developers.google.com/speed/webp/docs/precompiled
-  find jekyll/assets/ \( -name "*.jpg" -o -name "*.png" \) -exec cwebp {} -o {}.webp \;
+  # Use cwebp to encode all asset images except for the folder ./originals. 
+  # see https://developers.google.com/speed/webp/docs/precompiled
+  find jekyll/assets/ -type -d -path ./originals -prune -o -name "*.jpg" -o -name "*.png" -print -exec cwebp {} -o {}.webp \;
   echo "travis_fold:end:run_cwebp"
-
-  # Debug
-  curl https://www.teleconsole.com/get.sh | sh
-  teleconsole
 
   # Move images and format them
   echo "travis_fold:start:rename_webp_images"
   echo "Renamed new images and move them in a separated folder"
-  find jekyll/assets/ \( -name "*.webp" \) -exec mv {} jekyll/assets/webp/ \;
-  find jekyll/assets/webp/ -name "*.webp" -exec rename "s/\.png|\.jpg//g" {} \;
-  find jekyll/assets/webp/ \( -name "*.png.webp" -o -name "*.jpg.webp" \) -exec rm {} \;
+  find jekyll/assets/ -name "*.webp" -exec mv {} jekyll/assets/webp/ \;
+  \( cd jekyll/assets/webp/ && rename -v 's/.png.webp|.jpg.webp/.webp/gi' *.webp \; \)
+  find jekyll/assets/webp/ \( -name "*.png.webp" -o -name "*.jpg.webp" \) -exec rm -v {} \;
   echo "travis_fold:end:rename_webp_images"
   
+  # Debug
+  curl https://www.teleconsole.com/get.sh | sh
+  teleconsole
+
   # Upload back to github the artifacts created
   echo "travis_fold:start:push_webp"
   echo "push new webp images to the branch"
