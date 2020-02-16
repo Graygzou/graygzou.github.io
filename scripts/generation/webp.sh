@@ -56,6 +56,7 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   find jekyll/assets/ -name "*.webp" -exec mv {} jekyll/assets/webp/ \;
   cd jekyll/assets/webp/ && rename -v 's/.png.webp|.jpg.webp/.webp/gi' *.webp \;
   find . -regex '.*\.\(png\.webp\|jpg\.webp\)' -exec rm -v {} \;
+  cd ../../..
   echo "travis_fold:end:rename_webp_images"
   
   # Debug
