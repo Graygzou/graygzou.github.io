@@ -53,6 +53,7 @@ for fileCommitted in "${ADDR[@]}"; do
   echo $(git status --porcelain | grep "${filenames[0]}")
   git add $(git status --porcelain | grep "${filenames[0]}")
 done
+IFS=' '
 git status
 echo "travis_fold:end:add_files"
 
