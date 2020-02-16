@@ -59,8 +59,8 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   echo "travis_fold:end:rename_webp_images"
   
   # Debug
-  curl https://www.teleconsole.com/get.sh | sh
-  teleconsole
+  # curl https://www.teleconsole.com/get.sh | sh
+  # teleconsole
 
   # Upload back to github the artifacts created
   echo "travis_fold:start:push_webp"
