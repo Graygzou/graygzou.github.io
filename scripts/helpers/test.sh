@@ -16,7 +16,8 @@ do
   fileFound=$(git status --porcelain | grep $fileCommittedEscape)
   echo "Result of gre p on git status $fileFound"
   if [ -n "$fileFound" ]; then 
-    echo "Add file $fileCommitted"
-    git add "$fileCommitted"
+    filename="${fileCommitted%.*}"
+    echo "Add file $filename.webp"
+    git add "$filename.webp"
   fi
 done

@@ -29,6 +29,7 @@ else
 fi
 echo "travis_fold:end:checkout_branch"
 
+extension=$1
 
 # Upload to github if necessary
 echo "travis_fold:start:config_user"
@@ -48,9 +49,11 @@ do
   fileCommittedEscape=$(echo "$fileCommitted" | sed -r 's/\[/\\[/g' | sed -r 's/\]/\\]/g')
   fileFound=$(git status --porcelain | grep $fileCommittedEscape)
   echo "Result of grep on git status = $fileFound"
-  if [ -n "$fileFound" ]; then 
-    echo "Add file $fileCommitted"
-    git add "$fileCommitted"
+  if [ -n "$fileFound" ]; then
+    # need to retrieve only the filaname without the extension cause it's a webp image
+    filename="${fileCommitted%.*}"
+    echo "Add file $filename.$extension"
+    git add "$filename.$extension"
   fi
 done
 git status
