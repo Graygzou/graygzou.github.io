@@ -41,17 +41,19 @@ echo "travis_fold:end:config_user"
 echo "travis_fold:start:add_files"
 echo "Add new files based on the previous commit"
 gitLog=$(git log --name-only -n 1 42b47af89 --pretty=format:%b)
-echo $gitLog
+echo "recap of the last commit = $gitLog"
 for fileCommitted in $(echo $gitLog | tr -d "\n")
 do
+  echo "file committed in the previous $fileCommitted"
   fileCommittedEscape=$(echo "$fileCommitted" | sed -r 's/\[/\\[/g' | sed -r 's/\]/\\]/g')
   fileFound=$(git status --porcelain | grep $fileCommittedEscape)
-  echo "Result of gre p on git status $fileFound"
+  echo "Result of grep on git status = $fileFound"
   if [ -n "$fileFound" ]; then 
     echo "Add file $fileCommitted"
     git add "$fileCommitted"
   fi
 done
+git status
 echo "travis_fold:end:add_files"
 
 # Check to avoid extra commit if not necessary 
