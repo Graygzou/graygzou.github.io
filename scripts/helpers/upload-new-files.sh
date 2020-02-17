@@ -41,7 +41,7 @@ echo "travis_fold:end:config_user"
 # Loop over all files changed during the last commit to add them if needed
 echo "travis_fold:start:add_files"
 echo "Add new files based on the previous commit"
-gitLog=$(git log --name-only -n 1 42b47af89 --pretty=format:%b)
+gitLog=$(git log --name-only -n 1 HEAD~1..HEAD --pretty=format:%b)
 echo "recap of the last commit = $gitLog"
 for fileCommitted in $(echo $gitLog | tr -d "\n")
 do
