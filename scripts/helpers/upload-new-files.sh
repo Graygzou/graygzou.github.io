@@ -37,14 +37,14 @@ git config user.email ${GITHUB_BOT_MAIL}
 git config user.name ${GITHUB_BOT_NAME}
 echo "travis_fold:end:config_user"
 
-
 # Loop over all files changed during the last commit to add them if needed
 echo "travis_fold:start:add_files"
 echo "Add new files based on the previous commit"
-str=$(git log --name-only -n 1 HEAD~1..HEAD --pretty=format:%b%n)
+str=$(git log --name-only -n 1 HEAD~1..HEAD --pretty=format:%b%n) + '\n'
 echo $str
 IFS='\n'
 read -ra ADDR <<< "$str"
+IFS=' '
 for fileCommitted in "${ADDR[@]}"; do
   # Split it to only have the filename (remove the extension)
   IFS='.'
@@ -54,10 +54,8 @@ for fileCommitted in "${ADDR[@]}"; do
   echo $(git status --porcelain | grep "${filenames[0]}")
   git add $(git status --porcelain | grep "${filenames[0]}")
 done
-IFS=' '
 git status
 echo "travis_fold:end:add_files"
-
 
 # Check to avoid extra commit if not necessary 
 echo "travis_fold:start:upload_to_github"
