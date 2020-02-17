@@ -40,21 +40,18 @@ echo "travis_fold:end:config_user"
 # Loop over all files changed during the last commit to add them if needed
 echo "travis_fold:start:add_files"
 echo "Add new files based on the previous commit"
-str=$(git log --name-only -n 1 HEAD~1..HEAD --pretty=format:%b%n) + '\n'
-echo $str
-IFS='\n'
-read -ra ADDR <<< "$str"
-IFS=' '
-for fileCommitted in "${ADDR[@]}"; do
-  # Split it to only have the filename (remove the extension)
-  IFS='.'
-  read -ra filenames <<< "$fileCommitted"
-  echo "${filenames[0]}"
-  echo "${filenames[1]}"
-  echo $(git status --porcelain | grep "${filenames[0]}")
-  git add $(git status --porcelain | grep "${filenames[0]}")
+gitLog=$(git log --name-only -n 1 42b47af89 --pretty=format:%b)
+echo $gitLog
+for fileCommitted in $(echo $gitLog | tr -d "\n")
+do
+  fileCommittedEscape=$(echo "$fileCommitted" | sed -r 's/\[/\\[/g' | sed -r 's/\]/\\]/g')
+  fileFound=$(git status --porcelain | grep $fileCommittedEscape)
+  echo "Result of gre p on git status $fileFound"
+  if [ -n "$fileFound" ]; then 
+    echo "Add file $fileCommitted"
+    git add "$fileCommitted"
+  fi
 done
-git status
 echo "travis_fold:end:add_files"
 
 # Check to avoid extra commit if not necessary 
