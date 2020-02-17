@@ -41,7 +41,7 @@ echo "travis_fold:end:config_user"
 # Loop over all files changed during the last commit to add them if needed
 echo "travis_fold:start:add_files"
 echo "Add new files based on the previous commit"
-str=$(git log --name-only -n 1 HEAD~1..HEAD --pretty=format:%b)
+str=$(git log --name-only -n 1 HEAD~1..HEAD --pretty=format:%b%n)
 echo $str
 IFS='\n'
 read -ra ADDR <<< "$str"
