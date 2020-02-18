@@ -51,7 +51,7 @@ do
   echo "Result of grep on git status = $fileFound"
   if [ -n "$fileFound" ]; then
     # need to retrieve only the filaname without the extension cause it's a webp image
-    filename=$(basename -- "$fullfile")
+    filename=$(basename -- "$fileCommitted")
     filename="${filename%.*}"
     echo "Add file $filename.$extension"
     git add "$filename.$extension"
