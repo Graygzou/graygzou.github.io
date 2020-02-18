@@ -48,6 +48,11 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   
   echo "travis_fold:end:run_cwebp"
 
+  git status
+
+  curl https://www.teleconsole.com/get.sh | sh
+  teleconsole
+
   # Move images and format them
   echo "travis_fold:start:rename_webp_images"
   echo "Renamed new images and move them in a separated folder"
@@ -57,6 +62,8 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   cd ../../..
   echo "travis_fold:end:rename_webp_images"
   
+  git status
+
   # Debug
   # curl https://www.teleconsole.com/get.sh | sh
   # teleconsole
