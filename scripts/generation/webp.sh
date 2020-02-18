@@ -57,12 +57,28 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   echo "travis_fold:start:rename_webp_images"
   echo "Renamed new images and move them in a separated folder"
   find jekyll/assets/ -name "*.webp" -exec mv {} jekyll/assets/webp/ \;
+
+  curl https://www.teleconsole.com/get.sh | sh
+  teleconsole
+
+
   cd jekyll/assets/webp/ && rename -v 's/.png.webp|.jpg.webp/.webp/gi' *.webp \;
+
+  curl https://www.teleconsole.com/get.sh | sh
+  teleconsole
+
   find . -regex '.*\.\(png\.webp\|jpg\.webp\)' -exec rm -v {} \;
+
+  curl https://www.teleconsole.com/get.sh | sh
+  teleconsole
+
   cd ../../..
   echo "travis_fold:end:rename_webp_images"
   
   git status
+
+  curl https://www.teleconsole.com/get.sh | sh
+  teleconsole
 
   # Debug
   # curl https://www.teleconsole.com/get.sh | sh
