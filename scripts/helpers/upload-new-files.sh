@@ -42,18 +42,19 @@ echo "travis_fold:end:config_user"
 echo "travis_fold:start:add_files"
 echo "Add new files based on the previous commit"
 gitLog=$(git log --name-only -n 1 HEAD~1..HEAD --pretty=format:%b)
-echo "recap of the last commit = $gitLog"
+echo "[DEBUG] recap of the last commit = $gitLog"
 for fileCommitted in $(echo $gitLog | tr -d "\n")
 do
-  echo "file committed in the previous $fileCommitted"
+  echo "[DEBUG] file committed in the previous $fileCommitted"
   filenameCommitted=$(basename -- "$fileCommitted")
   filenameCommittedEscape=$(echo "$filenameCommitted" | sed -r 's/\[/\\[/g' | sed -r 's/\]/\\]/g')
+  echo "[DEBUG] file to found in git status --porcelain = $filenameCommittedEscape"
   fileFound=$(git status --porcelain | grep $filenameCommittedEscape)
-  echo "Result of grep on git status = $fileFound"
+  echo "[DEBUG] Result of grep on git status = $fileFound"
   if [ -n "$fileFound" ]; then
     # need to retrieve only the filaname without the extension cause it's a webp image
     filename="${filenameCommitted%.*}"
-    echo "Add file $filename.$extension"
+    echo "[DEBUG] Add file $filename.$extension"
     git add "$filename.$extension"
   fi
 done
