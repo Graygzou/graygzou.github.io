@@ -55,7 +55,7 @@ do
   if [ -n "$fileFound" ]; then
     # need to retrieve only the filaname without the extension cause it's a webp image
     echo "[DEBUG] Add file $filenameCommitted.$extension"
-    git add "$filenameCommitted.$extension"
+    git add "*$filenameCommitted.$extension"
   fi
 done
 git status
