@@ -46,16 +46,16 @@ echo "[DEBUG] recap of the last commit = $gitLog"
 for fileCommitted in $(echo $gitLog | tr -d "\n")
 do
   echo "[DEBUG] file committed in the previous $fileCommitted"
-  filenameCommitted=$(basename -- "$fileCommitted")
+  filenameExtCommitted=$(basename -- "$fileCommitted")
+  filenameCommitted="${filenameExtCommitted%.*}"
   filenameCommittedEscape=$(echo "$filenameCommitted" | sed -r 's/\[/\\[/g' | sed -r 's/\]/\\]/g')
   echo "[DEBUG] file to found in git status --porcelain = $filenameCommittedEscape"
   fileFound=$(git status --porcelain | grep $filenameCommittedEscape)
   echo "[DEBUG] Result of grep on git status = $fileFound"
   if [ -n "$fileFound" ]; then
     # need to retrieve only the filaname without the extension cause it's a webp image
-    filename="${filenameCommitted%.*}"
-    echo "[DEBUG] Add file $filename.$extension"
-    git add "$filename.$extension"
+    echo "[DEBUG] Add file $filenameCommitted.$extension"
+    git add "$filenameCommitted.$extension"
   fi
 done
 git status
