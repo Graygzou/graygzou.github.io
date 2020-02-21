@@ -7,11 +7,16 @@
     <img src="{{ filename }}" alt="{{ include.alt }}">
     {%- else -%}
     <source type="image/webp" srcset="{{ webp }}" alt="{{ include.alt }}">
+    {%- if include.res -%}
+    {% assign sizes = include.res | split: "/" %}
+    {%- endif -%}
+    <!-- Use this instead https://web.dev/codelab-specifying-multiple-slot-widths/ -->
     {%- if include.filename contains ".png" -%}
     <source type="image/png" srcset="{{ filename }}" alt="{{ include.alt }}">
+    <img class="{%- if include.css -%}{{ include.css }}{%- endif -%}" src="{{ filename }}" srcset="{% for size in sizes %}{{ filename | remove: '.png' }}-{{ size }}.png {{ size }}, {% endfor %}" alt="{{ include.alt }}">
     {%- else if include.filename contains ".jpg" -%}
     <source type="image/jpeg" srcset="{{ filename }}" alt="{{ include.alt }}">
+    <img class="{%- if include.css -%}{{ include.css }}{%- endif -%}" src="{{ filename }}" srcset="{% for size in sizes %}{{ filename | remove: '.jpg' }}-{{ size }}.jpg {{ size }}, {% endfor %}" alt="{{ include.alt }}">
     {%- endif -%}
-    <img src="{{ filename }}" alt="{{ include.alt }}">
     {%- endif -%}
 </picture>
