@@ -33,8 +33,8 @@ do
   echo "[DEBUG] Result of grep on git status = $fileFound"
   if [ -n "$fileFound" ]; then
     # need to retrieve only the filename without the extension cause it's a webp image
-    echo "[DEBUG] Add file $filenameCommitted.$extension"
-    git add "*$filenameCommitted.$extension"
+    echo "[DEBUG] Add file $filenameCommittedEscape.$extension"
+    git add "*$filenameCommittedEscape.$extension"
   fi
 done
 git status
