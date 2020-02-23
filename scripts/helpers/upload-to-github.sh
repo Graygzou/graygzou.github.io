@@ -57,7 +57,7 @@ echo "travis_fold:end:git_add_script"
 # Check to avoid extra commit if not necessary 
 echo "travis_fold:start:upload_to_github"
 echo "Upload files to the ${TRAVIS_BRANCH} branch"
-NB_FILE_CHANGED="$(git status --porcelain | grep ^[AM] | wc -l)"
+NB_FILE_CHANGED="$(git status --porcelain | grep ^[AMRD] | wc -l)"
 if [ "${NB_FILE_CHANGED}" -gt 0 ]; then 
     git commit -m "[skip travis][ignore] Upload files generate by the job #$TRAVIS_JOB_NUMBER $TRAVIS_JOB_NAME : $TRAVIS_JOB_WEB_URL"
     git push origin HEAD:$branch
