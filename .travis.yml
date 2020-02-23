@@ -54,10 +54,8 @@
   jobs:
     include:
       # Stage 1 ==============================
-      - stage: "Generation"
-        name: "webp images creation"
-        script: ./scripts/generation/webp.sh
-      - name: "ImageMagick Resizing"
+      - stage: "Generation step 1"
+        name: "ImageMagick Resizing"
         script: ./scripts/generation/resize-img.sh
       - name: "markdown creation"
         language: python
@@ -68,16 +66,20 @@
         python: 3.7
         script: ./scripts/generation/group-svg.sh
       # Stage 2 ==============================
+      - stage: "Generation step 2"
+        name: "webp images creation"
+        script: ./scripts/generation/webp.sh
+      # Stage 3 ==============================
       - stage: build
         name: "jekyll production build"
         script: ./scripts/build/build.sh
-      # Stage 3 ==============================
+      # Stage 4 ==============================
       - stage: integration
         name: "pngquant: PNG Compression"
         script: ./scripts/integration/pngquant-compression.sh
       - name: "guetzli: JPG Compression"
         script: ./scripts/integration/guetzli-compression.sh
-      # Stage 4 ==============================
+      # Stage 5 ==============================
       - stage: validation
         name: "Lighthouse CI"
         language: node_js
@@ -85,7 +87,7 @@
         script: ./scripts/validation/lighthouse-ci.sh
       - name: "Grammar Bot"
         script: ./scripts/validation/grammar-bot.sh
-      # Stage 5 ============================== # TODO add sitemaps: false in this jobs
+      # Stage 6 ============================== # TODO add sitemaps: false in this jobs
       - stage: deploy
         name: "Deploy"
         script: ./scripts/deploy/deploy.sh
