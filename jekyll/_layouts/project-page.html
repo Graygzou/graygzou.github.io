@@ -9,8 +9,8 @@ layout: default
       {% capture image_path %}/assets/project-images/{{ page.title }}/{{ page.title }}-banner.png{% endcapture %}
       {% capture image_path_webp %}/assets/webp/{{ page.title }}-banner.webp{% endcapture %}
       {% capture image_alt %}{{ page.title }}-banner{% endcapture %}
-      {% capture resolutions %}450w/930w{% endcapture %}
-      {% capture size_text %}(max-width: 480px) 450px, (max-width: 1000px) 100vw, 930px{% endcapture %}
+      {% capture resolutions %}356w/930w{% endcapture %}
+      {% capture size_text %}(max-width: 400px) 356px, (max-width: 1000px) 100vw, 930px{% endcapture %}
       {% include images-handler.html alt=image_alt filename=image_path webp=image_path_webp res=resolutions sizes=size_text css="thumbnail-img" %}
     </div>
     <p class="project-description">{{ page.description }}</p>
