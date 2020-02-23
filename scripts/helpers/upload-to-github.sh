@@ -15,7 +15,7 @@
 echo "$#"
 
 # Parameters check
-if [ "$#" -lt 2 ]; then
+if [ "$#" -lt 1 ]; then
   echo "you need to provide a pattern to find files to log for."
   exit
 fi
