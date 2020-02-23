@@ -7,7 +7,7 @@
 # Upload new file to github if necessary
 #############################################################################
 
-extension=""
+extension="*"
 # Parameters check
 if [ "$#" -gt 0 ]; then
   extension=$1
