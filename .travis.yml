@@ -36,7 +36,9 @@
     - git log --name-only -n 1 HEAD~1..HEAD --pretty=format:%b > last-commit.txt
 
   stages:
-    - name: generation
+    - name: generationv1
+      if: branch = develop
+    - name: generationv2
       if: branch = develop
     - name: build
       if: branch = develop OR branch = release
@@ -54,7 +56,7 @@
   jobs:
     include:
       # Stage 1 ==============================
-      - stage: "Generation step 1"
+      - stage: generationv1
         name: "ImageMagick Resizing"
         script: ./scripts/generation/resize-img.sh
       - name: "markdown creation"
@@ -66,7 +68,7 @@
         python: 3.7
         script: ./scripts/generation/group-svg.sh
       # Stage 2 ==============================
-      - stage: "Generation step 2"
+      - stage: generationv2
         name: "webp images creation"
         script: ./scripts/generation/webp.sh
       # Stage 3 ==============================
