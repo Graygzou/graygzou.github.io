@@ -9,10 +9,10 @@ layout: default
       {% capture image_path %}/assets/project-images/{{ page.title }}/{{ page.title }}-banner.png{% endcapture %}
       {% capture image_path_webp %}/assets/webp/{{ page.title }}-banner.webp{% endcapture %}
       {% capture image_alt %}{{ page.title }}-banner{% endcapture %}
-      {% capture resolutions %}1x/2x/3x{% endcapture %}
+      {% capture resolutions %}730w/950w{% endcapture %}
+      {% capture size_text %}(max-width: 480px) 730px, (max-width: 1000px) 100vw, 950px{% endcapture %}
       <!--<img class="thumbnail-img" src="{{ image_path }}" alt="{{ page.title }}-banner"/>-->
-
-      {% include images-handler.html alt=image_alt filename=image_path webp=image_path_webp res=resolutions css="thumbnail-img" %}
+      {% include images-handler.html alt=image_alt filename=image_path webp=image_path_webp res=resolutions sizes=size_text css="thumbnail-img" %}
     </div>
     <p class="project-description">{{ page.description }}</p>
     <p class="post-meta">
