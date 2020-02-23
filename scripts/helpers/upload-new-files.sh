@@ -7,15 +7,11 @@
 # Upload new file to github if necessary
 #############################################################################
 
-echo "$#"
-
+extension=""
 # Parameters check
-if [ "$#" -eq 0 ]; then
-  echo "you need to provide a pattern to find files to log for."
-  exit
+if [ "$#" -gt 0 ]; then
+  extension=$1
 fi
-
-extension=$1
 
 # Loop over all files changed during the last commit to add them if needed
 echo "travis_fold:start:add_files"
