@@ -4,8 +4,32 @@
 # Grégoire Boiron <gregoire.boiron@gmail.com>
 # Copyright (c) 2018-2020 Grégoire Boiron  All Rights Reserved.
 #
-# Run ImageMagick algorithm to create different versions of all images
+# Run ImageMagick algorithms to create different versions of all images
 #############################################################################
+
+# See http://www.imagemagick.org/Usage/resize/#resize for more info
+resize() {
+  file=$1
+  extension=$2
+  echo $file
+  echo $extension
+  identify "$file.$extension"
+  # Apply the command
+  convert "$file.$extension" -resize $(echo $file | tr -cd "0-9x") "$file-resized.$extension"
+  identify "$file.$extension"
+}
+
+# See http://www.imagemagick.org/Usage/crop/#crop_gravity for more info
+crop_center() {
+  file=$1
+  extension=$2
+  echo $file
+  echo $extension
+  identify "$file.$extension"
+  # Apply the command
+  convert "$file.$extension": -gravity Center -crop $(echo $file | tr -cd "0-9x")+0+0 "$file-cropped.$extension"
+  identify "$file.$extension"
+}
 
 # Parameters check
 echo "$#"
@@ -14,17 +38,38 @@ if [ "$#" -eq 0 ]; then
   exit
 fi
 
-# Run ImageMagick algorithm
-echo "travis_fold:start:imageMagick"
-echo "Start running imageMagick"
 extension=$1
-# Test 1
-git status
-find jekyll/assets/ -regex ".*/*\[[0-9]+x[0-9]+\]\.$extension" -exec identify {} \;
-# Apply the command
-find jekyll/assets/ -regex ".*/*\[[0-9]+x[0-9]+\]\.$extension" -exec bash -c 'convert {} -resize $(echo {} | tr -cd "0-9x") {}' \;
-# Test 2
-git status
-find jekyll/assets/ -regex ".*/*\[[0-9]+x[0-9]+\]\.$extension" -exec identify {} \;
-echo "travis_fold:end:imageMagick"
+resizing_pattern=".*/*\[r[0-9]+x[0-9]+\].*\.$extension"
+crop_pattern=".*/*\[c[0-9]+x[0-9]+\].*\.$extension"
 
+# Debug
+git status
+echo $extension
+
+asset_path=jekyll/assets/*
+for file in $asset_path
+do
+  echo "Processing $file file..."
+  filename=$(basename -- "$file")
+  extension2="${filename##*.}"
+  
+  # Debug
+  echo "$filename"
+  echo "$extension2"
+  
+  if [[ "$file" == resizing_pattern ]]; then
+    echo "travis_fold:start:imageMagickResize"
+    echo "Resize the file found"
+    resize "$file" "$extension2"
+    echo "travis_fold:end:imageMagickResize"
+  fi
+  if [[ "$file" == crop_pattern ]]; then
+    echo "travis_fold:start:imageMagickCrop"
+    echo "Crop the file found"
+    crop_center "$file" "$extension2"
+    echo "travis_fold:end:imageMagickCrop"
+  fi
+done
+
+# Debug
+git status
