@@ -46,7 +46,7 @@ crop_pattern=".*/*\[c[0-9]+x[0-9]+\].*\.$extension"
 git status
 echo $extension
 
-asset_path=jekyll/assets/*
+asset_path=$(find jekyll/assets/ -regex ".*/*\[(r|c)[0-9]+x[0-9]+\]+\.$extension");
 for file in $asset_path
 do
   echo "Processing $file file..."
