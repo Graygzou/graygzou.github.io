@@ -39,8 +39,8 @@ if [ "$#" -eq 0 ]; then
 fi
 
 extension=$1
-resizing_pattern=".*/*\[r[0-9]+x[0-9]+\].*\.$extension"
-crop_pattern=".*/*\[c[0-9]+x[0-9]+\].*\.$extension"
+resizing_pattern=".*/*\[r[0-9]+x[0-9]+\]\.$extension"
+crop_pattern=".*/*\[c[0-9]+x[0-9]+\]\.$extension"
 
 # Debug
 git status
