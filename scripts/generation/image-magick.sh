@@ -51,6 +51,7 @@ for file in $asset_path
 do
   echo "Processing $file file..."
   filename=$(basename -- "$file")
+  filename="${filename%.*}"
   
   # Debug
   echo "$filename"
