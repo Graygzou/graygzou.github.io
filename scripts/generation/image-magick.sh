@@ -8,7 +8,7 @@
 #############################################################################
 
 # See http://www.imagemagick.org/Usage/resize/#resize for more info
-resize() {
+resize () {
   file=$1
   extension=$2
   echo $file
@@ -20,7 +20,7 @@ resize() {
 }
 
 # See http://www.imagemagick.org/Usage/crop/#crop_gravity for more info
-crop_center() {
+crop_center () {
   file=$1
   extension=$2
   echo $file
