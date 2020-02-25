@@ -39,8 +39,8 @@ if [ "$#" -eq 0 ]; then
 fi
 
 extension=$1
-resizing_pattern=".*/*\[r[0-9]+x[0-9]+\]\.$extension"
-crop_pattern=".*/*\[c[0-9]+x[0-9]+\]\.$extension"
+resizing_pattern=".*\[r[0-9]+x[0-9]+\].*"
+crop_pattern=".*\[c[0-9]+x[0-9]+\].*"
 
 # Debug
 git status
@@ -57,13 +57,13 @@ do
   echo "$filename"
   echo "$extension2"
   
-  if [[ "$file" == resizing_pattern ]]; then
+  if [[ "$file" =~ $resizing_pattern ]]; then
     echo "travis_fold:start:imageMagickResize"
     echo "Resize the file found"
     resize "$file" "$extension2"
     echo "travis_fold:end:imageMagickResize"
   fi
-  if [[ "$file" == crop_pattern ]]; then
+  if [[ "$file" =~ $crop_pattern ]]; then
     echo "travis_fold:start:imageMagickCrop"
     echo "Crop the file found"
     crop_center "$file" "$extension2"
