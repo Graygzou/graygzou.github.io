@@ -27,7 +27,7 @@ crop_center () {
   echo $extension
   identify "$file.$extension"
   # Apply the command
-  convert "$file.$extension": -gravity Center -crop $(echo $file | tr -cd "0-9x")+0+0 "$file-cropped.$extension"
+  convert "$file.$extension" -gravity Center -crop $(echo $file | tr -cd "0-9x")+0+0 "$file-cropped.$extension"
   identify "$file.$extension"
 }
 
