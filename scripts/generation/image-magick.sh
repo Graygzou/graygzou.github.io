@@ -51,22 +51,20 @@ for file in $asset_path
 do
   echo "Processing $file file..."
   filename=$(basename -- "$file")
-  extension2="${filename##*.}"
   
   # Debug
   echo "$filename"
-  echo "$extension2"
   
   if [[ "$file" =~ $resizing_pattern ]]; then
     echo "travis_fold:start:imageMagickResize"
     echo "Resize the file found"
-    resize "$file" "$extension2"
+    resize "$filename" "$extension"
     echo "travis_fold:end:imageMagickResize"
   fi
   if [[ "$file" =~ $crop_pattern ]]; then
     echo "travis_fold:start:imageMagickCrop"
     echo "Crop the file found"
-    crop_center "$file" "$extension2"
+    crop_center "$filename" "$extension"
     echo "travis_fold:end:imageMagickCrop"
   fi
 done
