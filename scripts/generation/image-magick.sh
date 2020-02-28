@@ -61,6 +61,9 @@ do
     echo "travis_fold:start:imageMagickResize"
     echo "Resize the file found"
     resize "$filename" "$extension"
+    # Change the filename to use to resize filename for the crop part if needed
+    filename="$filename-resized.$extension"
+    echo "$filename"
     echo "travis_fold:end:imageMagickResize"
   fi
   if [[ "$file" =~ $crop_pattern ]]; then
