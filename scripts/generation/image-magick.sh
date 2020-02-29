@@ -62,7 +62,7 @@ do
     echo "Resize the file found"
     resize "$filename" "$extension"
     # Change the filename to use to resize filename for the crop part if needed
-    filename="$filename-resized.$extension"
+    filename="$filename-resized"
     echo "$filename"
     echo "travis_fold:end:imageMagickResize"
   fi
