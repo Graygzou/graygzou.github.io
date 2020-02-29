@@ -15,7 +15,7 @@ resize () {
   echo $extension
   identify "$file.$extension"
   # Apply the command
-  convert "$file.$extension" -resize $(echo $file | tr -cd "0-9x") "$file-resized.$extension"
+  convert "$file.$extension" -resize $(echo $file | sed -e "s/.*r\([0-9]*x[0-9]*\).*/\1/") "$file-resized.$extension"
   identify "$file-resized.$extension"
   identify "$file.$extension"
 }
@@ -28,7 +28,7 @@ crop_center () {
   echo $extension
   identify "$file.$extension"
   # Apply the command
-  convert "$file.$extension" -gravity Center -crop $(echo $file | tr -cd "0-9x")+0+0 "$file-cropped.$extension"
+  convert "$file.$extension" -gravity Center -crop $(echo $file | sed -e "s/.*c\([0-9]*x[0-9]*\).*/\1/")+0+0 "$file-cropped.$extension"
   identify "$file-cropped.$extension"
   identify "$file.$extension"
 }
