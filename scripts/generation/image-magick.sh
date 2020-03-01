@@ -14,9 +14,8 @@ resize () {
   echo $file
   echo $extension
   identify "$file.$extension"
-  # Apply the command
-  convert "$file.$extension" -resize $(echo $file | sed -e "s/.*r\([0-9]*x[0-9]*\).*/\1/") "$file-resized.$extension"
-  identify "$file-resized.$extension"
+  # Apply the command to override the image
+  convert "$file.$extension" -resize $(echo $file | sed -e "s/.*r\([0-9]*x[0-9]*\).*/\1/") "$file.$extension"
   identify "$file.$extension"
 }
 
@@ -27,9 +26,8 @@ crop_center () {
   echo $file
   echo $extension
   identify "$file.$extension"
-  # Apply the command
-  convert "$file.$extension" -gravity Center -crop $(echo $file | sed -e "s/.*c\([0-9]*x[0-9]*\).*/\1/")+0+0 "$file-cropped.$extension"
-  identify "$file-cropped.$extension"
+  # Apply the command to override the image once again
+  convert "$file.$extension" -gravity Center -crop $(echo $file | sed -e "s/.*c\([0-9]*x[0-9]*\).*/\1/")+0+0 "$file.$extension"
   identify "$file.$extension"
 }
 
@@ -62,7 +60,7 @@ do
     echo "Resize the file found"
     resize "$filename" "$extension"
     # Change the filename to use to resize filename for the crop part if needed
-    filename="$filename-resized"
+    #filename="$filename"
     echo "$filename"
     echo "travis_fold:end:imageMagickResize"
   fi
