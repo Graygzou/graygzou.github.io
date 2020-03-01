@@ -411,13 +411,19 @@ pre {
 }
   
 .project-title {
-	@include relative-font-size(2.625);
+	@include relative-font-size(2.650);
+
+	@include media-query($on-palm) {
+		@include relative-font-size(2);
+		white-space: normal;
+	}
+
 	// letter-spacing: -1px;
 	line-height: 1;
 	color: #ffffff;
-	background-color: rgba($color: #464646, $alpha: 0.9);
-	padding: 10px;
-	border: 1px solid rgba($color: #464646, $alpha: 0.9);
+	text-shadow: 4px 2px #030303;
+	background-color: rgb(85, 85, 85);
+	padding: 5px;
 	// text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000; 
 	white-space: nowrap;
 	margin: 0;
