@@ -2,7 +2,7 @@
     {% assign image_files = site.static_files | where: "carousel", true %}
     {%- for image in image_files -%}
         {% assign project_name = image.path | replace: '/assets/project-images/', '' | split: '/' %}
-        {%- if project_name[0] == page.title -%}
+        {%- if project_name[0] == page.title and project_name[2] contains "200x200" -%}
             <picture>
                 <!-- Begin Pre process -->
                 {% capture filename %}{{ image.path | replace: "[", "%5B" | replace: "]", "%5D" }}{% endcapture %}
@@ -14,7 +14,9 @@
                 {%- else if filename contains ".jpg" -%}
                 <source type="image/jpeg" srcset="{{ filename }}" alt="{{ image.basename }}">
                 {%- endif -%}
-                <img onclick="zoom(this)" class="carousel-img" src="{{ filename }}" alt="{{ image.basename }}" href="{{ image.path }}" />
+                {% assign zoom_image = filename | replace: '200x200', '958x539' %}
+                {% assign alt_zoom_image = image.basename | remove: '[r200x200]' %}
+                <img onclick="zoom(this)" class="carousel-img" src="{{ zoom_image }}" alt="{{ alt_zoom_image }}" href="{{ image.path }}" />
             </picture>
         {%- endif -%}
     {%- endfor -%}
