@@ -9,6 +9,12 @@
   {% endif %}
   <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
   <link rel="manifest" href="{{ '/manifest.json' | relative_url }}">
+  <!-- Defer the loading of the font fo roboto font (for youtube embedded right now) to avoid having "flash of unstyled content" problem. -->
+  <!-- See https://stackoverflow.com/questions/12316501/including-google-web-fonts-link-or-import/12380004#12380004 -->
+  {% if page.youtube-link %}
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  {% endif %}
   <!-- Should be an 180x180 icon. -->
   <!-- See https://stackoverflow.com/questions/5110776/apple-touch-icon-for-websites -->
   <link rel="apple-touch-icon" href="/assets/ghost-cat%5B180x180%5D.png">
