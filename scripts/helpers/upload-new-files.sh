@@ -16,8 +16,8 @@ fi
 # Loop over all files changed during the last commit to add them if needed
 echo "travis_fold:start:add_files"
 echo "Add new files based on the previous commit"
-gitLog=$(git log --name-only -n 1 HEAD~1..HEAD --pretty=format:%b)
-echo "[DEBUG] recap of the last commit = $gitLog"
+gitLog=$(git log --name-only -n 1 ${TRAVIS_COMMIT} --pretty=format:%b)
+echo "[DEBUG] recap of the job's commit = $gitLog"
 for fileCommitted in $(echo $gitLog | tr -d "\n")
 do
   echo "[DEBUG] file committed in the previous $fileCommitted"
