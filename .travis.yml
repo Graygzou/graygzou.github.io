@@ -34,7 +34,7 @@
   before_script:
     - chmod +x scripts/*/*.sh
     - if [ "${TRAVIS_PULL_REQUEST}" == "false" ]; then
-        git log --name-only -n 1 "${TRAVIS_COMMIT}" --pretty=format:%b > last-commit.txt
+        git log --name-only -n 1 "${TRAVIS_COMMIT}" --pretty=format:%b > last-commit.txt;
       fi
 
   stages:
