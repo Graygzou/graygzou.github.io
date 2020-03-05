@@ -33,8 +33,8 @@
 
   before_script:
     - chmod +x scripts/*/*.sh
-    - if [ $TRAVIS_PULL_REQUEST == "false" ]; then
-        git log --name-only -n 1 ${TRAVIS_COMMIT} --pretty=format:%b > last-commit.txt
+    - if [ "${TRAVIS_PULL_REQUEST}" == "false" ]; then
+        git log --name-only -n 1 "${TRAVIS_COMMIT}" --pretty=format:%b > last-commit.txt
       fi
 
   stages:
@@ -49,7 +49,7 @@
     - name: validation
       if: branch = release
     - name: deploy
-      if: branch = release AND $TRAVIS_PULL_REQUEST == false
+      if: branch = release AND "$TRAVIS_PULL_REQUEST" == "false"
 
   matrix:
     allow_failures:
