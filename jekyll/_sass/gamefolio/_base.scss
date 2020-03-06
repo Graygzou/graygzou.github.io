@@ -176,6 +176,9 @@ table {
   }
   th, td {
     padding: ($spacing-unit / 3) ($spacing-unit / 2);
+    @include media-query($on-palm) {
+      padding: 0;
+    }
   }
   th {
     background-color: lighten($grey-color-light, 3%);
