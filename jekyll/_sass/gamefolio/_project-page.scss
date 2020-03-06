@@ -72,6 +72,9 @@
 	li {
 		display: inline-block;
 	}
+	li + li {
+		padding-left: 8px;
+	}
 }
 
 /* main article */
