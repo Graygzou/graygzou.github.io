@@ -284,7 +284,13 @@
   word-break: break-word;
   a {
     display: inline-block;
-    min-width: 60%;
+    //min-width: 60%;
+  }
+  div {
+    display: inline-block;
+  }
+  svg {
+    padding-right: 0;
   }
 }
 
