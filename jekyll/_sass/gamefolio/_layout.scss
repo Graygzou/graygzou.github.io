@@ -179,10 +179,10 @@
   }
 }
 
-@include media-query($on-small-screen) {
-  .project-list {
-    margin-left: 0;
-    list-style: none;
+.project-list {
+  margin-left: 0;
+  list-style: none;
+  @include media-query($on-small-screen) {
     text-align: center;
 
     .project-li {
@@ -212,15 +212,6 @@
 }
 
 .post-list {
-  margin-left: 0;
-  list-style: none;
-
-  > li {
-    margin-bottom: $spacing-unit;
-  }
-}
-
-.project-list {
   margin-left: 0;
   list-style: none;
 
