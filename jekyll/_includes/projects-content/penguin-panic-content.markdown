@@ -26,9 +26,9 @@ It could create the height map that would correspond on the position of each ver
 At mid-project we realize that a technique called that use `Fast Fourier Transform` could generate an ocean.
 But we thought this technique alone will not be enough to deal with waves and water interactions.
 
-We found a paper about `IWave algorithm` and dig more into it. Paper can be found [here](http://jerrytessendorf.blogspot.com/2011/10/interactive-water-surfaces-jerry.html).
+We found a paper about `IWave algorithm` and dig more into it. This paper called [Interactive water surface](http://jerrytessendorf.blogspot.com/2011/10/interactive-water-surfaces-jerry.html) is available on Jerry Tessendorf's website at the previous link.
 We also study a physic based buoyancy to match the water perfectly. 
-Our sources comes from Gamasutra and can be found [here](https://www.gamasutra.com/view/news/237528/Water_interaction_model_for_boats_in_video_games.php).
+Our sources comes from [this Gamasutra article](https://www.gamasutra.com/view/news/237528/Water_interaction_model_for_boats_in_video_games.php) written by Jacques Kerner.
 
 
 Even if we put a lot of works into it, we did not managed to have something efficient and .

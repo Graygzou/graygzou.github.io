@@ -12,7 +12,7 @@ team-size:
   - role: Programmers
     amount: 4
 main-roles: [Engine Programmer, Game Programmeur]
-youtube-link: https://www.youtube.com/embed/ORAGPZGMJg4
+youtube-link: ORAGPZGMJg4
 project_links:
   - name: github
     url: https://github.com/Graygzou/metenorage

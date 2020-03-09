@@ -10,3 +10,4 @@ jekyll/vendor/
 
 # Ignore test python script
 *test.py
+*test.sh

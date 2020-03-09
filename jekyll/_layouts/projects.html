@@ -25,22 +25,22 @@ layout: default
 
         {% assign new_section = forloop.index | minus:1 | modulo:2 %}
         {%- if new_section == 0 -%}
-            {%- if current_color == '#e8e8e880' -%}
-                {% assign current_color = '#ffffff' %}
-                <div style="background-color: {{ current_color }} ;">
-            {%- else -%}
-                {% assign current_color = '#e8e8e880' %}
-                <div class="project-line" style="background-color: {{ current_color }} ;">
-            {%- endif -%}
+        {%- if current_color == '#e8e8e880' -%}
+        {% assign current_color = '#ffffff' %}
+        <li style="background-color: {{ current_color }} ;">
+        {%- else -%}
+        {% assign current_color = '#e8e8e880' %}
+        <li class="project-line" style="background-color: {{ current_color }} ;">
         {%- endif -%}
-            <li class="project-li">
+        {%- endif -%}
+            <div class="project-li">
                 {% include project-thumbnail.html %}
-            </li>
+            </div>
         {%- if new_section == 1 -%}
-        </div>
+        </li>
         {%- endif -%}
         {%- endfor -%}
-    </div>
-    {% endfor %}
+    </ul>
+    {%- endfor -%}
     {%- endif -%}
 </div>

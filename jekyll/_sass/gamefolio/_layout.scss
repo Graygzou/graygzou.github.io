@@ -179,10 +179,10 @@
   }
 }
 
-@include media-query($on-small-screen) {
-  .project-list {
-    margin-left: 0;
-    list-style: none;
+.project-list {
+  margin-left: 0;
+  list-style: none;
+  @include media-query($on-small-screen) {
     text-align: center;
 
     .project-li {
@@ -199,7 +199,7 @@
  * Page content
  */
 .page-content {
-  padding: $spacing-unit 0;
+  padding: ($spacing-unit / 2) 0;
   flex: 1;
 
   h2 {
@@ -211,24 +211,7 @@
   @include relative-font-size(2);
 }
 
-.bloc-aside {
-  float: right;
-}
-
-.post-list-heading {
-  @include relative-font-size(1.75);
-}
-
 .post-list {
-  margin-left: 0;
-  list-style: none;
-
-  > li {
-    margin-bottom: $spacing-unit;
-  }
-}
-
-.project-list {
   margin-left: 0;
   list-style: none;
 
@@ -239,7 +222,7 @@
 
 .post-meta {
   font-size: $small-font-size;
-  color: $grey-color;
+  color: $grey-color-dark;
 
   table {
     width: auto;
@@ -257,17 +240,13 @@
     padding-bottom: 5px;
     .role {
       font-weight: bold;
+      display: block;
     }
   }
 }
 
-.post-link {
-  display: block;
-  @include relative-font-size(1.5);
-
-  .emoji {
-    vertical-align: inherit;
-  }
+.extra-info {
+  overflow: auto;
 }
 
 .cv-home {
@@ -280,117 +259,6 @@
   section {
     margin-bottom: 10px;
   }
-}
-
-/**
- * Posts
- */
-.post-header {
-  margin-bottom: $spacing-unit;
-
-  .emoji {
-    vertical-align: bottom;
-    width: 40px;
-    height: 40px;
-  }
-}
-
-.post-title {
-  @include relative-font-size(2.625);
-  letter-spacing: -1px;
-  line-height: 1;
-
-  @include media-query($on-laptop) {
-    @include relative-font-size(2.25);
-  }
-}
-
-.post-content {
-  margin-bottom: $spacing-unit;
-
-  h2 {
-    @include relative-font-size(2);
-
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.75);
-    }
-  }
-
-  h3 {
-    @include relative-font-size(1.625);
-
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.375);
-    }
-  }
-
-  h4 {
-    @include relative-font-size(1.25);
-
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.125);
-    }
-  }
-}
-
-/**
- * Posts Projects
- */
-
-.project-thumbnail {
-  position: relative;
-}
-
-.project-title {
-  @include relative-font-size(4.625);
-  letter-spacing: -1px;
-  line-height: 1;
-  color: #000000;
-  background-color: rgba(255, 255, 255, 0.6);
-  padding: 15px;
-  border: 3px solid black;
-  text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;
-
-  @include media-query($on-laptop) {
-    @include relative-font-size(4.25);
-  }
-
-  @include media-query($on-small-screen + 100) {
-    @include relative-font-size(2.25);
-  }
-
-  white-space: nowrap;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.project-description {
-  @include relative-font-size(1.225);
-  letter-spacing: -1px;
-  line-height: 1;
-
-  @include media-query($on-laptop) {
-    @include relative-font-size(1);
-  }
-
-  font-style: italic;
-  margin-top: 10px;
-}
-
-.thumbnail-img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border: 5px solid black;
-  text-align: center;
-}
-
-.project-line{
-
 }
 
 .project-li {
@@ -409,22 +277,6 @@
     min-height: 140px;
     margin-right: 1%;
   }
-  .project-container {
-    height: 100%;
-    padding-top: 1%;  /* Should be remove... */
-    vertical-align: middle;
-    display: block;
-  }
-  .project-content {
-    min-height: 140px;
-  }
-  .project-language{
-    float: right;
-  }
-
-  &:last-child {
-    /*border-bottom: 1px solid black;*/
-  }
 }
 
 .project-heading {
@@ -432,7 +284,13 @@
   word-break: break-word;
   a {
     display: inline-block;
-    min-width: 60%;
+    //min-width: 60%;
+  }
+  div {
+    display: inline-block;
+  }
+  svg {
+    padding-right: 0;
   }
 }
 
@@ -456,7 +314,7 @@
   /*border-radius: 8px;*/
 
   //background-color: rgb(105, 120, 3);
-  border: 2px solid rgb(1, 41, 53);
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.7);
 }
 
 .repositoryFooter {
@@ -478,24 +336,6 @@
   padding-bottom: 4px;
 }
 
-
-/**
- * About
- */
-.about-content {
-  text-align: center;
-  figure {
-    text-align: center;
-    margin-left: 30%;
-    margin-right: 30%;
-  }
-}
-
-.about-img {
-  text-align: center;
-  width: 30%;
-}
-
 /**
  * Home page
  */
@@ -508,7 +348,7 @@
   bottom: 0;
   right: 0;
   left: 0;
-  background: #e8e8e8;
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.7);
   text-align: center;
   float: right;
   border-radius: 4px;
@@ -516,13 +356,7 @@
   cursor: pointer;
 }
 
-.resume-link {
-  background: #e8e8e8;
-  border-radius: 4px;
-  padding: 8px;
-  cursor: pointer;
-  margin-bottom: 10px;
-}
+
 
 .home-li {
   margin-bottom: 0 !important;

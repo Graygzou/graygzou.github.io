@@ -105,7 +105,9 @@ Those will be later add, thanks to spirit totems.
 	    <li>Press E to obtain the bear totem.</li>
     </ol>
   </div>
-  <img src="/assets/project-images/native-ruins/enigme1noted.png" alt="puzzle 1">
+  {% capture image_path %}/assets/project-images/native-ruins/enigme1noted.png{% endcapture %}
+  {% capture image_path_webp %}/assets/webp/enigme1noted.webp{% endcapture %}
+  {% include images-handler.html alt="puzzle 1" filename=image_path webp=image_path_webp %}
 </div>
 
 The second puzzle requires all the spirit totems : 
@@ -113,7 +115,9 @@ the bear totem and the wolf totem.
 That's why, it's the last puzzle in the game.
 
 <div class="puzzle">
-  <img src="/assets/project-images/native-ruins/enigme4noted.png" alt="puzzle 4">
+  {% capture image_path %}/assets/project-images/native-ruins/enigme4noted.png{% endcapture %}
+  {% capture image_path_webp %}/assets/webp/enigme4noted.webp{% endcapture %}
+  {% include images-handler.html alt="puzzle 4" filename=image_path webp=image_path_webp %}
   <div>
     <h4>Native Ruins</h4>
     <span class="puzzle-subtitles">Enigme 4 - Second jumping puzzle</span>
@@ -162,7 +166,9 @@ This helps keep the puzzles order we decided.
 	    <li>Once the gate's open, Press E near the sail to pick it up.</li>
     </ol>
   </div>
-  <img src="/assets/project-images/native-ruins/enigme2noted.png" alt="puzzle 2">
+  {% capture image_path %}/assets/project-images/native-ruins/enigme2noted.png{% endcapture %}
+  {% capture image_path_webp %}/assets/webp/enigme2noted.webp{% endcapture %}
+  {% include images-handler.html alt="puzzle 2" filename=image_path webp=image_path_webp %}
 </div>
 
 #### Action puzzle
@@ -170,7 +176,9 @@ Finally, we created an action puzzle where the player has to destroy rocks with 
 This puzzle is simple but it's the player's job to find out by himself the correct way.
 
 <div class="puzzle">
-  <img src="/assets/project-images/native-ruins/enigme3noted.png" alt="puzzle 3">
+  {% capture image_path %}/assets/project-images/native-ruins/enigme3noted.png{% endcapture %}
+  {% capture image_path_webp %}/assets/webp/enigme3noted.webp{% endcapture %}
+  {% include images-handler.html alt="puzzle 3" filename=image_path webp=image_path_webp %}
   <div>
     <h4>Native Ruins</h4>
     <span class="puzzle-subtitles">Enigme 3 - </span>

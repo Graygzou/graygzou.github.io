@@ -14,7 +14,7 @@ team-size:
   - role: Programmers
     amount: 4
 main-roles: [AI Programmer, Animator, Game Programmeur]
-youtube-link: https://www.youtube.com/embed/2tzLruIYMcg
+youtube-link: 2tzLruIYMcg
 project_links:
   - name: github
     url: https://github.com/Graygzou/native-ruins

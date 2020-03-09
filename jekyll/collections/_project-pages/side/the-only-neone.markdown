@@ -42,7 +42,7 @@ team-size:
   - role: Game-Designer
     amount: 1
 main-roles: [3Cs Programmer, Gameplay Programmer, Level Designer]
-youtube-link: https://www.youtube.com/embed/-BDVJ9IO2uk
+youtube-link: -BDVJ9IO2uk
 project_links:
   - name: itch-io
     url: https://dzamani.itch.io/the-only-neone

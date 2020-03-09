@@ -27,7 +27,7 @@ Plus me and my friends were more fighting for concise solutions than submission 
 
 #### <a name="2018-board"></a> Summary Board:
 
-| Days  |      Names      |  Stars |  Completions* |
+| Days  |      Names (links)      |  Stars |  Completions* |
 |------:|:-------------|:------:|------:|
 |   1   | [Chronal Calibration](https://adventofcode.com/2018/day/1) | :star: :star: | 64717 |
 |   2   | [Inventory Management System](https://adventofcode.com/2018/day/2) | :star: :star: | 51497 |

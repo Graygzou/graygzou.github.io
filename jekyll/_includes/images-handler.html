@@ -1,10 +1,35 @@
 <picture>
-    <source type="image/webp" srcset="{{ include.filename }}.webp" alt="{{ include.alt }}">
-    {%- if include.format == "png" -%}
-    <source type="image/png" srcset="{{ include.filename }}.png" alt="{{ include.alt }}">
-    <img src="{{ include.filename }}.png" alt="">
-    {%- else if include.format == "jpg" -%}
-    <source type="image/jpeg" srcset="{{ include.filename }}.jpg" alt="{{ include.alt }}">
-    <img src="{{ include.filename }}.jpg" alt="">
+    <!-- Begin Pre process -->
+    {% capture filename %}{{ include.filename | replace: "[", "%5B" | replace: "]", "%5D" }}{% endcapture %}
+    {% capture webp %}{{ include.webp | replace: "[", "%5B" | replace: "]", "%5D" }}{% endcapture %}
+    <!-- End Pre process -->
+    {%- if include.filename contains ".svg" -%}
+    <img src="{{ filename }}" alt="{{ include.alt }}">
+    {%- else -%}
+        {%- if include.res -%}
+            {% assign slots = include.res | split: "/" %}
+        {%- endif -%}
+        {% capture webpWithoutExt %}{{ webp | remove: '.webp' }}{% endcapture %}
+        {%- if include.res -%}
+    <source type="image/webp" srcset="{% for slot in slots %}{{ webpWithoutExt }}-{{ slot }}.webp {{ slot }}, {% endfor %}" sizes="{{ include.sizes }}" alt="{{ include.alt }}">
+        {%- else -%}
+    <source type="image/webp" srcset="{{ webp }}" alt="{{ include.alt }}">
+        {%- endif -%}
+        <!-- Use this instead https://web.dev/codelab-specifying-multiple-slot-widths/ -->
+        {%- if include.filename contains ".png" -%}
+            {% capture extension %}png{% endcapture %}
+            {% capture filenameWithoutExt %}{{ filename | remove: '.png' }}{% endcapture %}
+    <source type="image/png" srcset="{{ filename }}" alt="{{ include.alt }}">
+        {%- else if include.filename contains ".jpg" -%}
+            {% capture extension %}jpg{% endcapture %}
+            {% capture filenameWithoutExt %}{{ filename | remove: '.jpg' }}{% endcapture %}
+    <source type="image/jpeg" srcset="{{ filename }}" alt="{{ include.alt }}">
+        {%- endif -%}
+        {%- if include.res -%}
+    <img class="{%- if include.css -%}{{ include.css }}{%- endif -%}" src="{{ filename }}" srcset="{% for slot in slots %}{{ filenameWithoutExt }}-{{ slot }}.{{ extension }} {{ slot }}, {% endfor %}" sizes="{{ include.sizes }}" alt="{{ include.alt }}">
+        {%- else -%}
+    <img class="{%- if include.css -%}{{ include.css }}{%- endif -%}" src="{{ filename }}" alt="{{ include.alt }}">
+        {%- endif -%}
+    <!---->
     {%- endif -%}
 </picture>

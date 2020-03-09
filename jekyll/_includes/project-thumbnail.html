@@ -1,16 +1,28 @@
 <!--
  * /!\ The variable project need to be assign in order to use this sections
  -->
-{% capture image_path %}/assets/project-images/{{ project.title }}/{{ project.title }}-thumbnail{% endcapture %}
+{% capture image_path %}/assets/project-images/{{ project.title }}/{{ project.title }}-thumbnail.png{% endcapture %}
+{% capture image_path_webp %}/assets/webp/{{ project.title }}-thumbnail.webp{% endcapture %}
 {% capture image_alt %}{{ project.title }}-thumbnail{% endcapture %}
 <div class="test-li">
   <!--<img src="{{ image_path }}" alt="{{ project.title }}-thumbnail"/>-->
-  {% include images-handler.html format='png' alt=image_alt filename=image_path %}
+  {% include images-handler.html alt=image_alt filename=image_path webp=image_path_webp %}
   <div>
     <h3 class="project-heading">
       <a class="post-link" href="{{ project.url | relative_url }}">
         {{ project.title | replace: '-', ' ' | capitalize | escape }}
       </a>
+      <!-- Indicate what the main language used in this project  -->
+      {%- if project.languages -%}
+      {% assign main_language = project.languages | first %}
+      <div>
+        <svg class="svg-icon svg-project" style="fill: {{ main_language.color }};">
+          <use xlink:href="{{ '/assets/icons/gamefolio-regular-icons.svg#circle' }}">
+          </use>
+        </svg>
+        <span>{{ main_language.name }}</span>
+      </div>
+      {%- endif -%}
     </h3>
     <span class="post-meta">{{ project.description }}</span>
     <div class="tagsgame">
@@ -19,47 +31,4 @@
       {%- endfor -%}
     </div>
   </div>
-</div>
-<div class="repositoryFooter">
-  <!-- Indicate what the main language used in this project  -->
-  {%- if project.languages -%}
-  {% assign main_language = project.languages | first %}
-  <div>
-    <svg class="svg-icon svg-project" style="fill: {{ main_language.color }};">
-      <use xlink:href="{{ '/assets/icons/gamefolio-regular-icons.svg#circle' }}">
-      </use>
-    </svg>
-    <span>{{ main_language.name }}</span>
-  </div>
-  {%- endif -%}
-  <!-- Indicate how many starts this repository received -->
-  {%- if project.stargazers-count -%}
-  <div>
-    <svg class="svg-icon svg-project" style="fill: black;">
-      <use xlink:href="{{ '/assets/icons/gamefolio-regular-icons.svg#star' }}">
-      </use>
-    </svg>
-    <span>{{ project.stargazers-count }}</span>
-  </div>
-  {%- endif -%}
-  <!-- Indicate the number of fork on this repository -->
-  {%- if project.forks-count -%}
-  <div>
-    <svg class="svg-icon svg-project" style="fill: black;">
-      <use xlink:href="{{ '/assets/icons/gamefolio-regular-icons.svg#code-fork' }}">
-      </use>
-    </svg>
-    <span>{{ project.forks-count }}</span>
-  </div>
-  {%- endif -%}
-  <!-- Indicate how many days past since any update on that repository -->
-  {%- if project.last-update-days -%}
-  <div>
-    <svg class="svg-icon svg-project" style="fill: black;">
-      <use xlink:href="{{ '/assets/icons/gamefolio-regular-icons.svg#history' }}">
-      </use>
-    </svg>
-    <span>{{ project.last-update-days }} days ago</span>
-  </div>
-  {%- endif -%}
 </div>

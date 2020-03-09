@@ -30,7 +30,9 @@ In this application Mat Buckland decided to add a "brain" to each bots in the ga
 This brain used goal-driven behavior to tell the bot what he should do right now based on game entries.
 
 #### Goal decomposition
-<img class="class-diagram" src="/assets/project-images/raven/goals-composite.png" alt="goals-composite">
+{% capture image_path %}/assets/project-images/raven/goals-composite.png{% endcapture %}
+{% capture image_path_webp %}/assets/webp/goals-composite.webp{% endcapture %}
+{% include images-handler.html alt="goals-composite" filename=image_path webp=image_path_webp %}
 
 This process works just like the human brain : if you want to achieve something, you will decomposed this goal into many sub-goals easier to solve than the first one. 
 And if it's not enough yet, keep doing this until sub-goals granularity are simple enough to be code by a function or a line of code. 
@@ -78,8 +80,12 @@ To make sure the net was trained, we made tests with other data than our trainin
 We've find out that our learning process were doing good and we finally tested it in-game.
 
 <div class="bloc-images">
-    <img src="/assets/project-images/raven/network.png" alt="network">
-    <img src="/assets/project-images/raven/results.png" alt="results">
+    {% capture image_path %}/assets/project-images/raven/network.png{% endcapture %}
+    {% capture image_path_webp %}/assets/webp/network.webp{% endcapture %}
+    {% include images-handler.html alt="network" filename=image_path webp=image_path_webp %}
+    {% capture image_path %}/assets/project-images/raven/results.png{% endcapture %}
+    {% capture image_path_webp %}/assets/webp/results.webp{% endcapture %}
+    {% include images-handler.html alt="results" filename=image_path webp=image_path_webp %}
 </div>
 
 The final results were correct since the learning bot shoot at the other bots. 
