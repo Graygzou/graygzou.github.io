@@ -51,10 +51,6 @@
     - name: deploy
       if: branch = release AND "$TRAVIS_PULL_REQUEST" == "false"
 
-  matrix:
-    allow_failures:
-      - if: branch = develop
-
   jobs:
     include:
       # Stage 1 ==============================
@@ -97,6 +93,8 @@
         env:
           - DEPLOY=true
         script: ./scripts/deploy/deploy.sh
+    allow_failures:
+      - if: branch = develop
 
   # Stage 5 ==============================
   deploy:
