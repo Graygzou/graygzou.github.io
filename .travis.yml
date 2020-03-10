@@ -49,7 +49,7 @@
     - name: validation
       if: branch = release
     - name: deploy
-      if: branch = release AND "$TRAVIS_PULL_REQUEST" == "false"
+      if: branch = release AND "$TRAVIS_PULL_REQUEST" = "false"
 
   jobs:
     include:
