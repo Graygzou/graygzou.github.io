@@ -12,7 +12,9 @@
 
   # blocklist
   branches:
-    except:
+    only:
+      - develop
+      - release
       - master
 
   # reduce log clutter
@@ -38,6 +40,10 @@
       fi
 
   stages:
+    - name: branching
+      if: branch = develop
+    - name: merge
+      if: branch = develop
     - name: generationv1
       if: branch = develop
     - name: generationv2
@@ -54,7 +60,11 @@
 
   jobs:
     include:
-      # Stage 1 ==============================
+      # Stage 0: Create branch to push changes on it ===
+      - stage: branching
+        name: "Create travis-build-${TRAVIS_BUILD_NUMBER} branch"
+        script: ./script/branching.sh
+      # Stage 1 ========================================
       - stage: generationv1
         name: "ImageMagick Resizing"
         script: ./scripts/generation/resize-img.sh
@@ -94,6 +104,10 @@
         env:
           - DEPLOY=true
         script: ./scripts/deploy/deploy.sh
+      # Stage merge: merge branch for this build by squashing all commits into one for the branch
+      - stage: merge
+        name: "Merge travis-build-${TRAVIS_BUILD_NUMBER} branch into ${TRAVIS_BRANCH}"
+        script: ./script/merge.sh
     allow_failures:
       - if: branch = develop
 
