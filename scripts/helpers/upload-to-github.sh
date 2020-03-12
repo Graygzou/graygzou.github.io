@@ -23,17 +23,11 @@ fi
 type=$1
 pattern=$2
 
-branch='develop'
-# change branch if necessary
-echo "travis_fold:start:checkout_branch"
-echo "Change branch if necessary"
-if [ "$#" -gt 2 ]; then 
-  echo "Change branch from $branch to $2"
-  branch=$3
-  git checkout $branch
-else
-  echo "Stay on branch $branch"
-fi
+branch=travis-build-${TRAVIS_BUILD_NUMBER}
+echo "travis_fold:start:checkout_build_branch"
+echo "Change branch to the build one in order to not pollute the others"
+echo "Change branch from $branch to travis-build-${TRAVIS_BUILD_NUMBER}"
+git checkout $branch
 echo "travis_fold:end:checkout_branch"
 
 # upload to github if necessary
