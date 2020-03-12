@@ -46,14 +46,14 @@
       if: branch = develop
     - name: generationv2
       if: branch = develop
-    - name: build
-      if: branch = develop OR branch = release
     - name: integration
-      if: branch = release
-    - name: validation
       if: branch = release
     - name: merge
       if: branch = develop
+    - name: build
+      if: branch = develop OR branch = release
+    - name: validation
+      if: branch = release
     - name: deploy
       if: branch = release
       env: env('$TRAVIS_PULL_REQUEST')
