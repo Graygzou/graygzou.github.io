@@ -63,7 +63,7 @@
       # Stage 0: Create branch to push changes on it ===
       - stage: branching
         name: "Create travis-build branch"
-        script: ./script/helpers/branching.sh
+        script: ./scripts/helpers/branching.sh
       # Stage 1 ========================================
       - stage: generationv1
         name: "ImageMagick Resizing"
@@ -107,7 +107,7 @@
       # Stage merge: merge branch for this build by squashing all commits into one for the branch
       - stage: merge
         name: "Create merge commit for travis-build branch"
-        script: ./script/helpers/merging.sh
+        script: ./scripts/helpers/merging.sh
     allow_failures:
       - if: branch = develop
 
