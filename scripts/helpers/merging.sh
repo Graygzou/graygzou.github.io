@@ -11,7 +11,7 @@ buildbranch=travis-build-${TRAVIS_BUILD_NUMBER}
 
 # Check if we have create the dedicated branch first
 # See https://stackoverflow.com/questions/5167957/is-there-a-better-way-to-find-out-if-a-local-git-branch-exists
-exists=$(git show-ref refs/heads/$buildbranch)
+exists=$(git show-ref $buildbranch)
 echo $exists
 
 if [ -n "$exists" ]; then
