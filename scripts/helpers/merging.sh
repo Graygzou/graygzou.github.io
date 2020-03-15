@@ -29,17 +29,16 @@ if [ -n "$exists" ]; then
         git merge --squash $buildbranch
         git commit -m "+ add files from travid build #${TRAVIS_BUILD_NUMBER}"
         git push
-        echo "travis_fold:end:create_new_branch"
-
-        echo "travis_fold:start:delete_travis_branch"
-        echo "Delete dedicated branch because it will not be usefull anymore"
-        gir branch -d $buildbranch
-        echo "travis_fold:end:delete_travis_branch"
+        echo "travis_fold:end:merge_travis_branch"
     else
-        echo "⏭️ No commits made on the branch $buildbranch. Job skipped."
+        echo "⏭️ No commits made on the branch $buildbranch. Skipped branch squashing."
     fi
+
+    echo "travis_fold:start:delete_travis_branch"
+    echo "Delete dedicated branch because it will not be usefull anymore"
+    gir branch -d $buildbranch
+    echo "travis_fold:end:delete_travis_branch"
 else
     echo "⏭️ No dedicated branch created. Job skipped."
 fi
-
 echo "✅ merging.sh script done."

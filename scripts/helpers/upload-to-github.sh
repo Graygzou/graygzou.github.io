@@ -30,7 +30,6 @@ echo "Change branch from $branch to travis-build-${TRAVIS_BUILD_NUMBER}"
 git checkout $branch
 echo "travis_fold:end:checkout_branch"
 
-# upload to github if necessary
 echo "travis_fold:start:config_user"
 echo "Config github bot user"
 git config user.email ${GITHUB_BOT_MAIL}
