@@ -24,13 +24,13 @@ echo "Create new branch dedicated for the build ${TRAVIS_BUILD_NUMBER}"
 git branch travis-build-${TRAVIS_BUILD_NUMBER}
 echo "travis_fold:end:create_new_branch"
 
-echo "travis_fold:start:change_remote"
-echo "Change remote from https to ssh"
-git remote -v
-git remote remove origin
-git remote add origin git@github.com:user/repo.git
-git remote -v
-echo "travis_fold:end:change_remote"
+#echo "travis_fold:start:change_remote"
+#echo "Change remote from https to ssh"
+#git remote -v
+#git remote remove origin
+#git remote add origin git@github.com:user/repo.git
+#git remote -v
+#echo "travis_fold:end:change_remote"
 
 git status
 
