@@ -108,6 +108,8 @@
       - stage: merge
         name: "Create merge commit for travis-build branch"
         script: ./scripts/helpers/merging.sh
+        git:
+          depth: false
     allow_failures:
       - if: branch = develop
 
