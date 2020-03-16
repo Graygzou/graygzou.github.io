@@ -9,6 +9,10 @@
 
 buildbranch=travis-build-${TRAVIS_BUILD_NUMBER}
 
+# Run git fetch in order to have all the refs including the dedicated branch created by the branching job
+# See https://docs.travis-ci.com/user/customizing-the-build#git-clone-depth
+git fetch --unshallow
+
 # Check if we have create the dedicated branch first
 # See https://stackoverflow.com/questions/5167957/is-there-a-better-way-to-find-out-if-a-local-git-branch-exists
 echo "$buildbranch"
