@@ -44,7 +44,7 @@ if [ -n "$exists" ]; then
 
     echo "travis_fold:start:delete_travis_branch"
     echo "Delete dedicated branch because it will not be usefull anymore"
-    gir branch -d $buildbranch
+    git branch -d $buildbranch
     echo "travis_fold:end:delete_travis_branch"
 else
     echo "⏭️ No dedicated branch created. Job skipped."
