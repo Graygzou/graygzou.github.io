@@ -52,8 +52,4 @@ if [ -n "$exists" ]; then
 else
     echo "⏭️ No dedicated branch created. Job skipped."
 fi
-
-curl https://www.teleconsole.com/get.sh | sh
-teleconsole
-
 echo "✅ merging.sh script done."
