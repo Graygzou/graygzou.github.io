@@ -44,6 +44,9 @@ if [ -n "$exists" ]; then
 
     echo "travis_fold:start:delete_travis_branch"
     echo "Delete dedicated branch because it will not be usefull anymore"
+    # Leave the branch in case we're still on it
+    git checkout ${TRAVIS_BRANCH}
+    # Delete it
     git branch -d $buildbranch
     echo "travis_fold:end:delete_travis_branch"
 else
