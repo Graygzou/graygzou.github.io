@@ -22,8 +22,11 @@ echo "$exists"
 if [ -n "$exists" ]; then
     echo 'branch exists!'
     
+    # checkout the branch
+    git checkout $buildbranch
+
     # TODO: Check if the dedicated branch contains commits to be merged before doing a squash merge
-    findCommandGit=$(git log ${TRAVIS_BRANCH}..$buildbranch --oneline --format=format:"%H" | tail -1)
+    findCommandGit=$(git log ${TRAVIS_BRANCH}.. --oneline --format=format:"%H" | tail -1)
     echo $findCommandGit
     echo $($findCommandGit | head -c1 | wc -c)
 
