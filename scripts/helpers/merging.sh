@@ -9,9 +9,21 @@
 
 buildbranch=travis-build-${TRAVIS_BUILD_NUMBER}
 
+echo "travis_fold:start:config_user"
+echo "Config github bot user"
+git config user.email ${GITHUB_BOT_MAIL}
+git config user.name ${GITHUB_BOT_NAME}
+echo "travis_fold:end:config_user"
+
+echo "travis_fold:start:clone_project"
+echo "Clone project"
+git clone https://${GITHUB_BOT_NAME}:${BOT_DEPLOY_TOKEN}@github.com/Graygzou/graygzou.github.io.git ../graygzou.github.io.cloned
+cd ../graygzou.github.io.cloned
+echo "travis_fold:end:clone_project"
+
 # Run git fetch in order to have all the refs including the dedicated branch created by the branching job
 # See https://docs.travis-ci.com/user/customizing-the-build#git-clone-depth
-git fetch --unshallow
+# git fetch --unshallow
 
 # Check if we have create the dedicated branch first
 # See https://stackoverflow.com/questions/5167957/is-there-a-better-way-to-find-out-if-a-local-git-branch-exists
