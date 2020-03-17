@@ -47,7 +47,7 @@ if [ -n "$exists" ]; then
     # Leave the branch in case we're still on it
     git checkout ${TRAVIS_BRANCH}
     # Delete it
-    git branch -d $buildbranch
+    git push -d origin $buildbranch
     echo "travis_fold:end:delete_travis_branch"
 else
     echo "⏭️ No dedicated branch created. Job skipped."
