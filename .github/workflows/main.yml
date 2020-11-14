@@ -22,6 +22,22 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      # Cache dependencies: will attempt to restore a cache based on the key you provide.
+      # shorten build times and decrease load on servers.
+      # see https://github.com/actions/cache/blob/main/examples.md#ruby---bundler
+      - uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+
+      # Make sure path match the one declared in actions/cache
+      - name: Bundle install
+        run: |
+          bundle config path vendor/bundle
+          bundle install --jobs 4 --retry 3
+
       # Correspond to the before_install in travis-ci
       - name: Pre-processes
         run: gem install bundler
