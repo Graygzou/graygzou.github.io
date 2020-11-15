@@ -39,7 +39,9 @@ jobs:
     runs-on: ubuntu-16.04
     steps:
       - name: Move to right folder
-        run: cd jekyll
+        run: |
+          echo $GITHUB_WORKSPACE
+          cd $GITHUB_WORKSPACE/jekyll
 
       - name: Github Set up Ruby 2.6
         uses: actions/setup-ruby@v1
