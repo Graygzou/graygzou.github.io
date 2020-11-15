@@ -33,22 +33,19 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gems-
 
-  # =============================
-  install:
-    needs: setup
-    runs-on: ubuntu-16.04
-    steps:
-      - name: Move to right folder
-        run: |
-          echo $GITHUB_WORKSPACE
-          curl https://www.teleconsole.com/get.sh | sh
-          teleconsole
-
       - name: Github Set up Ruby 2.6
         uses: actions/setup-ruby@v1
         with:
           ruby-version: 2.6.x
 
+      - name: Install
+        uses: ./.github/actions/install
+
+  # =============================
+  install:
+    needs: setup
+    runs-on: ubuntu-16.04
+    steps:
       # Make sure path match the one declared in actions/cache
       - name: Bundle install
         run: |
