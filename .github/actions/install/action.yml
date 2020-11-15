@@ -1,7 +1,7 @@
 name: install
 author: Graygzou
 description: Proceed to the installation of ruby and bundler
-run:
+runs:
   using: "composite"
   steps: 
     - run: |
