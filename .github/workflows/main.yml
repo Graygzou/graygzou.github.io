@@ -50,7 +50,7 @@ jobs:
           bundle_path: vendor/bundle
 
       - name: Check files changed
-        runs: git log --name-only -n 1 ${{ github.sha }} --pretty=format:%b > last-commit.txt;
+        run: git log --name-only -n 1 ${{ github.sha }} --pretty=format:%b > last-commit.txt;
         if: ${{ github.event_name }} != "pull_request"
 
       - name: Upload file changed output
@@ -75,4 +75,4 @@ jobs:
           name: output-txt-file
 
       - name: ImageMagick Resizing
-        runs: .github/scripts/generation/resize-img.sh
+        run: .github/scripts/generation/resize-img.sh
