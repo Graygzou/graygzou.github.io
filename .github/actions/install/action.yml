@@ -1,10 +1,28 @@
 name: install
 author: Graygzou
 description: Proceed to the installation of ruby and bundler
+inputs:
+  bundle_path:
+    description: "Path that will help cache bundle dependencies"
+    required: true
+    default: 'vendor/bundle'
 runs:
   using: "composite"
-  steps: 
-    - run: |
+  steps:
+    - name: Install bundler
+      run: gem install bundler
+      shell: bash
+
+    - name: Setup bundler correctly
+      working-directory: ./jekyll
+      run: |
+        bundle update --bundler
+        bundle config path $INPUT_BUNDLE_PATH
+        bundle install --jobs 4 --retry 3
+      shell: bash
+
+    - name: Others
+      run: |
         echo $GITHUB_WORKSPACE
         cd $GITHUB_WORKSPACE
         ls -l -R

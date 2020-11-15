@@ -38,15 +38,8 @@ jobs:
         with:
           ruby-version: 2.6.x
 
-      - name: Install
-        uses: ./.github/actions/install
-
       # Make sure path match the one declared in actions/cache
-      - name: Bundle install
-        run: |
-          cd ./jekyll
-          bundle config path vendor/bundle
-          bundle install --jobs 4 --retry 3
-
-      - name: Pre-processes
-        run: gem install bundler
+      - name: Install Bundler
+        uses: ./.github/actions/install
+        with:
+          bundle_path: vendor/bundle
