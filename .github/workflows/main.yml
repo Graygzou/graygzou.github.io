@@ -44,6 +44,7 @@ jobs:
       # Make sure path match the one declared in actions/cache
       - name: Bundle install
         run: |
+          cd ./jekyll
           bundle config path vendor/bundle
           bundle install --jobs 4 --retry 3
 
