@@ -38,10 +38,10 @@ jobs:
     needs: setup
     runs-on: ubuntu-16.04
     steps:
-      - name: Github Set up Ruby 2.6.3
+      - name: Github Set up Ruby 2.6
         uses: actions/setup-ruby@v1
         with:
-          ruby-version: 2.6.3
+          ruby-version: 2.6.x
 
       # Make sure path match the one declared in actions/cache
       - name: Bundle install
