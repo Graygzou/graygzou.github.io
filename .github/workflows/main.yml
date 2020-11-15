@@ -41,11 +41,6 @@ jobs:
       - name: Install
         uses: ./.github/actions/install
 
-  # =============================
-  install:
-    needs: setup
-    runs-on: ubuntu-16.04
-    steps:
       # Make sure path match the one declared in actions/cache
       - name: Bundle install
         run: |
