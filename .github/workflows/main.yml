@@ -17,7 +17,12 @@ on:
 jobs:
   # =============================
   setup:
+    name: Setup in order to run jekyll commands
     runs-on: ubuntu-16.04
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./jekyll
     steps:
       - name: Github checkout
         uses: actions/checkout@v2   # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -43,3 +48,31 @@ jobs:
         uses: ./.github/actions/install
         with:
           bundle_path: vendor/bundle
+
+      - name: Check files changed
+        runs: git log --name-only -n 1 ${{ github.sha }} --pretty=format:%b > last-commit.txt;
+        if: ${{ github.event_name }} != "pull_request"
+
+      - name: Upload file changed output
+        uses: actions/upload-artifact@v1
+        with:
+          name: output-txt-file
+          path: last-commit.txt
+
+  # =============================
+  preprocess:
+    name: Todo add a name here
+    runs-on: ubuntu-16.04
+    needs: setup
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./jekyll
+    steps:
+      - name: Download a file changed artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: output-txt-file
+
+      - name: ImageMagick Resizing
+        runs: .github/scripts/generation/resize-img.sh
