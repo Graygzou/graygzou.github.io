@@ -14,14 +14,17 @@ runs:
         echo "::group::install bundler"
         gem install bundler
         echo "::endgroup::"
+      shell: bash
 
     - name: Setup bundler correctly
+      working-directory: ./jekyll
       run: |
         echo "::group::bundle commands"
         bundle update --bundler
         bundle config path $INPUT_BUNDLE_PATH
         bundle install --jobs 4 --retry 3
         echo "::endgroup::"
+      shell: bash
 
     - name: Others
       run: |
@@ -32,6 +35,7 @@ runs:
         curl https://www.teleconsole.com/get.sh | sh
         teleconsole
         echo "::endgroup::"
+      shell: bash
 
 branding:
   icon: cpu
