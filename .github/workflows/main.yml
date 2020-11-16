@@ -67,7 +67,6 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./jekyll
     steps:
       - name: Download a file changed artifact
         uses: actions/download-artifact@v2
