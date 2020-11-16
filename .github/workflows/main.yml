@@ -75,6 +75,7 @@ jobs:
 
       - name: ImageMagick Resizing
         run: |
-          cp last-commit.txt ~/ 
-          cd ~
+          cp last-commit.txt $GITHUB_WORKSPACE
+          cd $GITHUB_WORKSPACE
           ./.github/scripts/generation/resize-img.sh
+        shell: bash 
