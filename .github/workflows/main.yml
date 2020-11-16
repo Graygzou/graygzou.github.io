@@ -74,4 +74,6 @@ jobs:
           name: output-txt-file
 
       - name: ImageMagick Resizing
-        run: ./.github/scripts/generation/resize-img.sh
+        run: |
+          ls -l
+          ./.github/scripts/generation/resize-img.sh
