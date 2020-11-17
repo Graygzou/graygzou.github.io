@@ -68,15 +68,14 @@ jobs:
       run:
         shell: bash
     steps:
+      - name: Github checkout
+        uses: actions/checkout@v2
+
       - name: Download a file changed artifact
         uses: actions/download-artifact@v2
         with:
           name: output-txt-file
 
       - name: ImageMagick Resizing
-        run: |
-          cd HOME
-          ls -l
-          cat last-commit.txt
-          ./.github/scripts/generation/resize-img.sh
+        run: ./.github/scripts/generation/resize-img.sh
         shell: bash 
