@@ -1,5 +1,5 @@
 name: install
-author: Graygzou
+author: Grégoire Boiron (Graygzou)
 description: Proceed to the installation of ruby and bundler
 inputs:
   bundle_path:

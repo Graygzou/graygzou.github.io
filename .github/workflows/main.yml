@@ -81,3 +81,18 @@ jobs:
           chmod +x .github/scripts/generation/resize-img.sh
           ./.github/scripts/generation/resize-img.sh
         shell: bash
+
+  webpgen:
+    name: Webp images creation
+    runs-on: ubuntu-16.04
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Github checkout
+        uses: actions/checkout@v2
+
+      - name: Create Webp images
+        uses: ./.github/actions/webp
+        with:
+          contains_png: false
