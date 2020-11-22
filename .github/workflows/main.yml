@@ -92,6 +92,11 @@ jobs:
       - name: Github checkout
         uses: actions/checkout@v2
 
+      - name: Download a file changed artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: output-txt-file
+
       - name: Create Webp images
         uses: ./.github/actions/webp
         env:
