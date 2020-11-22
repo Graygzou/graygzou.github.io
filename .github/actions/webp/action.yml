@@ -11,17 +11,21 @@ runs:
   steps:
     - name: Setup bundler correctly
       run: |
-        if [[ ${{ contains_png == false }} ]]
-        echo "::group::bundle commands"
-        sudo apt-get install webp
-        echo "::endgroup::"
+        echo $INPUT_CONTAINS_PNG
+        if [[ $INPUT_CONTAINS_PNG == false ]]
+          echo "::group::bundle commands"
+          sudo apt-get install webp
+          echo "::endgroup::"
+        fi
       shell: bash
 
     - name: Install bundler
       run: |
-        if [[ ${{ contains_png }} ]] ; then
+        if [[ $INPUT_CONTAINS_PNG ]] ; then
           jpgResult=$( ./scripts/helpers/file-changed-in-last-commit.sh "*\.jpg$" )
           pngResult=$( ./scripts/helpers/file-changed-in-last-commit.sh "*\.png$" )
+          echo $jpgResult
+          echo $pngResult
         else
           echo "contains_png == false !" 
         fi
