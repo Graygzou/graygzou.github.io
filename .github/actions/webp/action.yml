@@ -2,11 +2,11 @@ name: Webp creation
 author: Grégoire Boiron (Graygzou)
 description: Duplicate and generate webp images from original ones
 inputs:
-  contains_jpg_or_png:
+  containsJpgOrPng:
     description: "true if the last commits contains png or jpg files. false otherwise."
     required: false
     default: true
-  target_folder:
+  targetFolder:
     description: "folder where the converted webp image will be saved."
     required: false
     default: "webp/"
@@ -24,7 +24,6 @@ runs:
           echo ".jpg or .png detected in last push. Start ▶️"
         fi
       shell: bash
-
 
     - name: Setup bundler correctly
       run: |
@@ -63,7 +62,7 @@ runs:
       run: | 
         echo "::group::rename_webp_images"
         echo "Renamed new images and move them in a separated folder"
-        find jekyll/assets/ -name "*.webp" -exec mv {} jekyll/assets/webp/ \;
+        find jekyll/assets/ -name "*.webp" -exec mv {} $INPUT_TARGET_FOLDER \;
         cd jekyll/assets/webp/
         rename -v 's/.png.webp|.jpg.webp/.webp/gi' *.webp \;
         find . -regex '.*\.\(png\.webp\|jpg\.webp\)' -exec rm -v {} \;
