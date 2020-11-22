@@ -94,5 +94,9 @@ jobs:
 
       - name: Create Webp images
         uses: ./.github/actions/webp
+        env:
+          CONTAINS_JPG: $( ./.github/scripts/helpers/file-changed-in-last-commit.sh "*\.jpg$" )
+          CONTAINS_PNG: $( ./.github/scripts/helpers/file-changed-in-last-commit.sh "*\.png$" )
         with:
-          contains_png: false
+          contains_jpg: $CONTAINS_JPG
+          contains_png: $CONTAINS_PNG

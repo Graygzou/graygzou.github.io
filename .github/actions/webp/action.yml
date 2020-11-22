@@ -3,7 +3,11 @@ author: Grégoire Boiron (Graygzou)
 description: Duplicate and generate webp images from original ones
 inputs:
   contains_png:
-    description: "if the last commits contains pngs"
+    description: "true if the last commits contains png files. false otherwise."
+    required: true
+    default: false
+  contains_jpg:
+    description: "true if the last commits contains jpg files. false otherwise."
     required: true
     default: false
 runs:
@@ -11,8 +15,9 @@ runs:
   steps:
     - name: Setup bundler correctly
       run: |
+        echo $INPUT_CONTAINS_JPG
         echo $INPUT_CONTAINS_PNG
-        if [[ $INPUT_CONTAINS_PNG == false ]] ; then
+        if [[ $INPUT_CONTAINS_PNG || $INPUT_CONTAINS_JPG ]] ; then
           echo "::group::bundle commands"
           sudo apt-get install webp
           echo "::endgroup::"
@@ -21,13 +26,11 @@ runs:
 
     - name: Install bundler
       run: |
-        if [[ $INPUT_CONTAINS_PNG ]] ; then
-          jpgResult=$( ./scripts/helpers/file-changed-in-last-commit.sh "*\.jpg$" )
-          pngResult=$( ./scripts/helpers/file-changed-in-last-commit.sh "*\.png$" )
+        if [[ $INPUT_CONTAINS_PNG || $INPUT_CONTAINS_JPG ]] ; then
           echo $jpgResult
           echo $pngResult
         else
-          echo "contains_png == false !" 
+          echo "No .jpg or .png pushed. Skip job ⏭️" 
         fi
       shell: bash
 
