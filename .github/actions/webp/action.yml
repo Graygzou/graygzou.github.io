@@ -12,7 +12,7 @@ runs:
     - name: Setup bundler correctly
       run: |
         echo $INPUT_CONTAINS_PNG
-        if [[ $INPUT_CONTAINS_PNG == false ]]
+        if [[ $INPUT_CONTAINS_PNG == false ]] ; then
           echo "::group::bundle commands"
           sudo apt-get install webp
           echo "::endgroup::"
