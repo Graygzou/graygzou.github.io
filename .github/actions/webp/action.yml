@@ -2,38 +2,75 @@ name: Webp creation
 author: Grégoire Boiron (Graygzou)
 description: Duplicate and generate webp images from original ones
 inputs:
-  contains_png:
-    description: "true if the last commits contains png files. false otherwise."
-    required: true
-    default: false
-  contains_jpg:
-    description: "true if the last commits contains jpg files. false otherwise."
-    required: true
-    default: false
+  contains_jpg_or_png:
+    description: "true if the last commits contains png or jpg files. false otherwise."
+    required: false
+    default: true
+  target_folder:
+    description: "folder where the converted webp image will be saved."
+    required: false
+    default: "webp/"
 runs:
   using: "composite"
   steps:
+    - name: Check pre-condition
+      run: |
+        echo $INPUT_CONTAINS_JPG_OR_PNG
+        echo $TARGET_FOLDER
+        if [[ $INPUT_CONTAINS_JPG_OR_PNG == false ]] ; then
+          echo "No .jpg or .png pushed. Skip job ⏸️"
+          exit 0
+        else
+          echo ".jpg or .png detected in last push. Start ▶️"
+        fi
+      shell: bash
+
+
     - name: Setup bundler correctly
       run: |
-        echo $INPUT_CONTAINS_JPG
-        echo $INPUT_CONTAINS_PNG
-        if [[ $INPUT_CONTAINS_PNG || $INPUT_CONTAINS_JPG ]] ; then
+        echo $INPUT_CONTAINS_JPG_OR_PNG
+        if [[ $INPUT_CONTAINS_JPG_OR_PNG ]] ; then
           echo "::group::bundle commands"
           sudo apt-get install webp
           echo "::endgroup::"
         fi
       shell: bash
 
-    - name: Install bundler
+    # Remove the old directory and create a new one if necessary
+    - name: Clean previous folder
       run: |
-        if [[ $INPUT_CONTAINS_PNG || $INPUT_CONTAINS_JPG ]] ; then
-          echo $jpgResult
-          echo $pngResult
-        else
-          echo "No .jpg or .png pushed. Skip job ⏭️" 
+        echo "::group::create webp folder"
+        echo "Remove all webp folder"
+        if [[ -d "jekyll/assets/webp" ]]; then
+          rm -vrf jekyll/assets/webp
         fi
+        mkdir jekyll/assets/webp
+        echo "::endgroup::"
+      shell: bash
+
+    # Use cwebp to encode all asset images except for the folder ./originals. 
+    # for more info on cwebp see https://developers.google.com/speed/webp/docs/precompiled
+    - name: 
+      run: |
+        echo "::group::run cwebp command"
+        echo "Start running cwebp for webp image creation"
+        find jekyll/assets/ -type d -path jekyll/assets/originals -prune -o -regex '.*\.\(jpg\|png\)' -print -exec cwebp {} -o {}.webp \;
+        echo "::endgroup::"
+      shell: bash
+
+    # Move images to another directory and re name it correctly.
+    - name:
+      run: | 
+        echo "::group::rename_webp_images"
+        echo "Renamed new images and move them in a separated folder"
+        find jekyll/assets/ -name "*.webp" -exec mv {} jekyll/assets/webp/ \;
+        cd jekyll/assets/webp/
+        rename -v 's/.png.webp|.jpg.webp/.webp/gi' *.webp \;
+        find . -regex '.*\.\(png\.webp\|jpg\.webp\)' -exec rm -v {} \;
+        cd ../../..
+        echo "::endgroup::"
       shell: bash
 
 branding:
-  icon: cpu
+  icon: edit
   color: orange

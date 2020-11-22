@@ -98,11 +98,17 @@ jobs:
         with:
           name: output-txt-file
 
+      - name: ImageMagick Resizing
+        run: |
+          test=$( ./.github/scripts/helpers/file-changed-in-last-commit.sh "*\.jpg$" )
+          echo $test
+        shell: bash
+
       - name: Create Webp images
         uses: ./.github/actions/webp
         env:
           CONTAINS_JPG: $( ./.github/scripts/helpers/file-changed-in-last-commit.sh "*\.jpg$" )
           CONTAINS_PNG: $( ./.github/scripts/helpers/file-changed-in-last-commit.sh "*\.png$" )
         with:
-          contains_jpg: $CONTAINS_JPG
-          contains_png: $CONTAINS_PNG
+          contains_jpg_or_png: $( "$CONTAINS_JPG" -ne 1 || "$CONTAINS_PNG" -ne 1)
+          target_folder: "jekyll/assets/webp/"
