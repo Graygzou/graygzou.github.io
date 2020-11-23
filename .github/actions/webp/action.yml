@@ -41,9 +41,9 @@ runs:
         echo "::group::create webp folder"
         echo "Remove all webp folder"
         if [[ -d "$INPUT_TARGET_FOLDER" ]]; then
-          rm -vrf $INPUT_TARGET_FOLDER
+          rm -vrf "$INPUT_TARGET_FOLDER"
         fi
-        mkdir $INPUT_TARGET_FOLDER
+        mkdir "$INPUT_TARGET_FOLDER"
         echo "::endgroup::"
       shell: bash
 
