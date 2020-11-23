@@ -62,8 +62,8 @@ runs:
       run: | 
         echo "::group::rename_webp_images"
         echo "Renamed new images and move them in a separated folder"
-        find jekyll/assets/ -name "*.webp" -exec mv {} $INPUT_TARGET_FOLDER \;
-        cd $INPUT_TARGET_FOLDER
+        find jekyll/assets/ -name "*.webp" -exec mv {} "$INPUT_TARGET_FOLDER/" \;
+        cd "$INPUT_TARGET_FOLDER/"
         rename -v 's/.png.webp|.jpg.webp/.webp/gi' *.webp \;
         find . -regex '.*\.\(png\.webp\|jpg\.webp\)' -exec rm -v {} \;
         cd ../../..

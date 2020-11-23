@@ -111,7 +111,7 @@ jobs:
         uses: ./.github/actions/webp
         with:
           containsJpgOrPng: $( $contain_jpg -ne 1 || $contain_png -ne 1 )
-          targetFolder: "jekyll/assets/webp/"
+          targetFolder: "jekyll/assets/webp"
 
       - name: Upload webp folders through artifacts
         uses: actions/upload-artifact@v1
