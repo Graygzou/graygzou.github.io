@@ -110,5 +110,5 @@ jobs:
       - name: Create Webp images
         uses: ./.github/actions/webp
         with:
-          contains_jpg_or_png: $( $contain_jpg -ne 1 || $contain_png -ne 1 )
-          target_folder: "jekyll/assets/webp/"
+          containsJpgOrPng: $( $contain_jpg -ne 1 || $contain_png -ne 1 )
+          targetFolder: "jekyll/assets/webp/"
