@@ -15,8 +15,8 @@ runs:
   steps:
     - name: Check pre-condition
       run: |
-        echo $INPUT_CONTAINSJPGORPNG
-        echo $INPUT_TARGETFOLDER
+        echo ${{ INPUT_CONTAINSJPGORPNG }}
+        echo ${{ INPUT_TARGETFOLDER }}
         if [[ $INPUT_CONTAINSJPGORPNG == false ]] ; then
           echo "No .jpg or .png pushed. Skip job ⏸️"
           exit 0
