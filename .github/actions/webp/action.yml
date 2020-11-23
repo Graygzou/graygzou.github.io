@@ -15,9 +15,9 @@ runs:
   steps:
     - name: Check pre-condition
       run: |
-        echo $INPUT_CONTAINS_JPG_OR_PNG
-        echo $TARGET_FOLDER
-        if [[ $INPUT_CONTAINS_JPG_OR_PNG == false ]] ; then
+        echo $INPUT_CONTAINSJPGORPNG
+        echo $INPUT_TARGETFOLDER
+        if [[ $INPUT_CONTAINSJPGORPNG == false ]] ; then
           echo "No .jpg or .png pushed. Skip job ⏸️"
           exit 0
         else
@@ -40,10 +40,10 @@ runs:
       run: |
         echo "::group::create webp folder"
         echo "Remove all webp folder"
-        if [[ -d "$INPUT_TARGET_FOLDER" ]]; then
-          rm -vrf "$INPUT_TARGET_FOLDER"
+        if [[ -d "$INPUT_TARGETFOLDER" ]]; then
+          rm -vrf "$INPUT_TARGETFOLDER"
         fi
-        mkdir "$INPUT_TARGET_FOLDER"
+        mkdir "$INPUT_TARGETFOLDER"
         echo "::endgroup::"
       shell: bash
 
@@ -62,8 +62,8 @@ runs:
       run: | 
         echo "::group::rename_webp_images"
         echo "Renamed new images and move them in a separated folder"
-        find jekyll/assets/ -name "*.webp" -exec mv {} "$INPUT_TARGET_FOLDER/" \;
-        cd "$INPUT_TARGET_FOLDER/"
+        find jekyll/assets/ -name "*.webp" -exec mv {} "$INPUT_TARGETFOLDER/" \;
+        cd "$INPUT_TARGETFOLDER/"
         rename -v 's/.png.webp|.jpg.webp/.webp/gi' *.webp \;
         find . -regex '.*\.\(png\.webp\|jpg\.webp\)' -exec rm -v {} \;
         cd ../../..
