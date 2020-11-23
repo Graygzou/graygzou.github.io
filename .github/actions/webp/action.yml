@@ -70,12 +70,6 @@ runs:
         echo "::endgroup::"
       shell: bash
 
-    - name: Upload webp folders through artifacts
-        uses: actions/upload-artifact@v1
-        with:
-          name: webp-images
-          path: $INPUT_TARGET_FOLDER
-
 branding:
   icon: edit
   color: orange
