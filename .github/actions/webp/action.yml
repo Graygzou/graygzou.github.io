@@ -40,10 +40,10 @@ runs:
       run: |
         echo "::group::create webp folder"
         echo "Remove all webp folder"
-        if [[ -d "jekyll/assets/webp" ]]; then
-          rm -vrf jekyll/assets/webp
+        if [[ -d "$INPUT_TARGET_FOLDER" ]]; then
+          rm -vrf $INPUT_TARGET_FOLDER
         fi
-        mkdir jekyll/assets/webp
+        mkdir $INPUT_TARGET_FOLDER
         echo "::endgroup::"
       shell: bash
 
@@ -63,12 +63,18 @@ runs:
         echo "::group::rename_webp_images"
         echo "Renamed new images and move them in a separated folder"
         find jekyll/assets/ -name "*.webp" -exec mv {} $INPUT_TARGET_FOLDER \;
-        cd jekyll/assets/webp/
+        cd $INPUT_TARGET_FOLDER
         rename -v 's/.png.webp|.jpg.webp/.webp/gi' *.webp \;
         find . -regex '.*\.\(png\.webp\|jpg\.webp\)' -exec rm -v {} \;
         cd ../../..
         echo "::endgroup::"
       shell: bash
+
+    - name: Upload webp folders through artifacts
+        uses: actions/upload-artifact@v1
+        with:
+          name: webp-images
+          path: $INPUT_TARGET_FOLDER
 
 branding:
   icon: edit
