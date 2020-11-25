@@ -27,7 +27,7 @@ runs:
 
     - name: Setup bundler correctly
       run: |
-        if [[ ${{ inputs.contains-jpg-or-png } ]] ; then
+        if [[ ${{ inputs.contains-jpg-or-png }} ]] ; then
           echo "::group::bundle commands"
           sudo apt-get install webp
           echo "::endgroup::"
