@@ -2,11 +2,11 @@ name: Webp creation
 author: Grégoire Boiron (Graygzou)
 description: Duplicate and generate webp images from original ones
 inputs:
-  containsJpgOrPng:
+  contains-jpg-or-png:
     description: "true if the last commits contains png or jpg files. false otherwise."
     required: false
     default: true
-  targetFolder:
+  target-folder:
     description: "folder where the converted webp image will be saved."
     required: false
     default: "webp/"
@@ -15,9 +15,9 @@ runs:
   steps:
     - name: Check pre-condition
       run: |
-        echo ${INPUT_CONTAINSJPGORPNG}
-        echo ${INPUT_TARGETFOLDER}
-        if [[ $INPUT_CONTAINSJPGORPNG == false ]] ; then
+        echo ${{ inputs.contains-jpg-or-png }}
+        echo ${{ inputs.target-folder }}
+        if [[ ${{ inputs.contains-jpg-or-png }} == false ]] ; then
           echo "No .jpg or .png pushed. Skip job ⏸️"
           exit 0
         else
@@ -27,8 +27,7 @@ runs:
 
     - name: Setup bundler correctly
       run: |
-        echo $INPUT_CONTAINS_JPG_OR_PNG
-        if [[ $INPUT_CONTAINS_JPG_OR_PNG ]] ; then
+        if [[ ${{ inputs.contains-jpg-or-png } ]] ; then
           echo "::group::bundle commands"
           sudo apt-get install webp
           echo "::endgroup::"
@@ -40,10 +39,10 @@ runs:
       run: |
         echo "::group::create webp folder"
         echo "Remove all webp folder"
-        if [[ -d "$INPUT_TARGETFOLDER" ]]; then
-          rm -vrf "$INPUT_TARGETFOLDER"
+        if [[ -d "${{ inputs.contains-jpg-or-png }}" ]]; then
+          rm -vrf "${{ inputs.contains-jpg-or-png }}"
         fi
-        mkdir "$INPUT_TARGETFOLDER"
+        mkdir "${{ inputs.contains-jpg-or-png }}"
         echo "::endgroup::"
       shell: bash
 
@@ -62,8 +61,8 @@ runs:
       run: | 
         echo "::group::rename_webp_images"
         echo "Renamed new images and move them in a separated folder"
-        find jekyll/assets/ -name "*.webp" -exec mv {} "$INPUT_TARGETFOLDER/" \;
-        cd "$INPUT_TARGETFOLDER/"
+        find jekyll/assets/ -name "*.webp" -exec mv {} "${{ inputs.contains-jpg-or-png }}/" \;
+        cd "${{ inputs.contains-jpg-or-png }}/"
         rename -v 's/.png.webp|.jpg.webp/.webp/gi' *.webp \;
         find . -regex '.*\.\(png\.webp\|jpg\.webp\)' -exec rm -v {} \;
         cd ../../..
