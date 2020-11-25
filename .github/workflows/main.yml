@@ -112,7 +112,7 @@ jobs:
       - name: Create Webp images
         uses: ./.github/actions/webp
         with:
-          contains-jpg-or-png: ${{ $contain_jpg -ne 1 || $contain_png -ne 1 }}
+          contains-jpg-or-png: "${{ $contain_jpg -ne 1 || $contain_png -ne 1 }}"
           target-folder: "jekyll/assets/webp"
 
       - name: Upload webp folders through artifacts
