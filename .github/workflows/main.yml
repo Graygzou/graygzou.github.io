@@ -86,6 +86,8 @@ jobs:
     name: Webp images creation
     runs-on: ubuntu-16.04
     needs: setup
+    env:
+      HAS_ASSETS_IN_COMMITS: false
     defaults:
       run:
         shell: bash
@@ -105,14 +107,17 @@ jobs:
           contain_png=$( ./.github/scripts/helpers/file-changed-in-last-commit.sh "*\.jpg$" )
           echo "Contains jpg = $contain_jpg"
           echo "Contains png = $contain_png"
-          echo "Test 1 = ${{ $contain_jpg || $contain_png }}"
-          echo "Test 2 = ${ $contain_jpg || $contain_png }"
+          echo "Test 1 = $HAS_ASSETS_IN_COMMITS"
+          if [ $contain_jpg != 1 ] || [ $contain_png != 1 ]; then
+            HAS_ASSETS_IN_COMMITS=true
+          fi
+          echo "Test 2 = $HAS_ASSETS_IN_COMMITS"
         shell: bash
 
       - name: Create Webp images
         uses: ./.github/actions/webp
         with:
-          contains-jpg-or-png: "${ $contain_jpg || $contain_png -ne 1 }"
+          contains-jpg-or-png: $HAS_ASSETS_IN_COMMITS
           target-folder: "jekyll/assets/webp"
 
       - name: Upload webp folders through artifacts
