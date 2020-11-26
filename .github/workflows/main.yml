@@ -114,8 +114,8 @@ jobs:
       - name: create-webp-images
         uses: ./.github/actions/webp
         with:
-          contains-jpg-or-png: $HAS_ASSETS_IN_COMMITS
           target-folder: "jekyll/assets/webp"
+        if: ${{ $HAS_ASSETS_IN_COMMITS }}
 
       - name: test
         run: echo "${{ steps.create-webp-images.outputs.webp-folder }}"

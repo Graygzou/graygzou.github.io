@@ -2,40 +2,23 @@ name: Webp creation
 author: Grégoire Boiron (Graygzou)
 description: Duplicate and generate webp images from original ones
 inputs:
-  contains-jpg-or-png:
-    description: "true if the last commits contains png or jpg files. false otherwise."
-    required: false
-    default: true
-  target-folder:
+  original-folder:
     description: "folder where the original images are located."
     required: false
-    default: "webp/"
+    default: "jekyll/assets/originals"
 outputs:
   webp-folder:
     description: "folder where the converted webp image will be saved."
     value: ${{ steps.rename-and-move-webp-images.outputs.result-folder }}
+    #default: "webp/"
 runs:
   using: "composite"
   steps:
-    - name: Check pre-condition
-      run: |
-        echo ${{ inputs.contains-jpg-or-png }}
-        echo ${{ inputs.target-folder }}
-        if [[ ${{ inputs.contains-jpg-or-png }} == false ]] ; then
-          echo "No .jpg or .png pushed. Skip job ⏸️"
-          exit 1
-        else
-          echo ".jpg or .png detected in last push. Start ▶️"
-        fi
-      shell: bash
-
     - name: Setup bundler correctly
       run: |
-        if [[ ${{ inputs.contains-jpg-or-png }} ]] ; then
-          echo "::group::bundle commands"
-          sudo apt-get install webp
-          echo "::endgroup::"
-        fi
+        echo "::group::bundle commands"
+        sudo apt-get install webp
+        echo "::endgroup::"
       shell: bash
 
     # Remove the old directory and create a new one if necessary
@@ -56,7 +39,7 @@ runs:
       run: |
         echo "::group::run cwebp command"
         echo "Start running cwebp for webp image creation"
-        find jekyll/assets/ -type d -path jekyll/assets/originals -prune -o -regex '.*\.\(jpg\|png\)' -print -exec cwebp {} -o {}.webp \;
+        find jekyll/assets/ -type d -path ${{ original-folder }} -prune -o -regex '.*\.\(jpg\|png\)' -print -exec cwebp {} -o {}.webp \;
         echo "::endgroup::"
       shell: bash
 
