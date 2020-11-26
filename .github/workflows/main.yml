@@ -100,28 +100,34 @@ jobs:
         with:
           name: output-txt-file
 
-      - name: ImageMagick Resizing
+      # Could be a dedicated action?
+      - name: Contains assets check
         run: |
           chmod +x .github/scripts/helpers/file-changed-in-last-commit.sh
           contain_jpg=$( ./.github/scripts/helpers/file-changed-in-last-commit.sh "*\.jpg$" )
           contain_png=$( ./.github/scripts/helpers/file-changed-in-last-commit.sh "*\.jpg$" )
-          echo "Contains jpg = $contain_jpg"
-          echo "Contains png = $contain_png"
-          echo "Test 1 = $HAS_ASSETS_IN_COMMITS"
-          if [ $contain_jpg != 1 ] || [ $contain_png != 1 ]; then
+          if [ $contain_jpg == 0 ] || [ $contain_png == 0 ]; then
             HAS_ASSETS_IN_COMMITS=true
           fi
-          echo "Test 2 = $HAS_ASSETS_IN_COMMITS"
         shell: bash
 
-      - name: Create Webp images
+      - name: create-webp-images
         uses: ./.github/actions/webp
         with:
           contains-jpg-or-png: $HAS_ASSETS_IN_COMMITS
           target-folder: "jekyll/assets/webp"
+
+      - name: test
+        run: echo "${{ steps.create-webp-images.outputs.webp-folder }}"
 
       - name: Upload webp folders through artifacts
         uses: actions/upload-artifact@v1
         with:
           name: webp-images
           path: jekyll/assets/webp/
+        if: ${{ steps.create-webp-images.outputs.webp-folder }}
+
+      # Should ALWAYS be the last step.
+      - name: teleconsole-launch
+        if: ${{ failure() }}
+        run: echo "Should launch teleconsole and wait for it to be over."

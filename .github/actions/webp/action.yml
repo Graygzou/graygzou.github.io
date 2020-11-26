@@ -7,9 +7,13 @@ inputs:
     required: false
     default: true
   target-folder:
-    description: "folder where the converted webp image will be saved."
+    description: "folder where the original images are located."
     required: false
     default: "webp/"
+outputs:
+  webp-folder:
+    description: "folder where the converted webp image will be saved."
+    value: ${{ steps.rename-and-move-webp-images.outputs.result-folder }}
 runs:
   using: "composite"
   steps:
@@ -56,8 +60,9 @@ runs:
         echo "::endgroup::"
       shell: bash
 
+    # TODO: Break those into two steps
     # Move images to another directory and re name it correctly.
-    - name:
+    - name: rename-and-move-webp-images
       run: | 
         echo "::group::rename_webp_images"
         echo "Renamed new images and move them in a separated folder"
@@ -66,6 +71,7 @@ runs:
         rename -v 's/.png.webp|.jpg.webp/.webp/gi' *.webp \;
         find . -regex '.*\.\(png\.webp\|jpg\.webp\)' -exec rm -v {} \;
         cd ../../..
+        echo "::set-output name=result-folder::$(echo ${{ inputs.contains-jpg-or-png }}/)"
         echo "::endgroup::"
       shell: bash
 

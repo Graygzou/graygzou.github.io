@@ -16,7 +16,7 @@ echo "$pngResult"
 
 if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   # Download the package
-  echo "travis_fold:start:install_magick"
+  echo "::group::install imagemagick"
   echo "install image magick for image resizing"
   wget https://www.imagemagick.org/download/ImageMagick.tar.gz
   tar xf ImageMagick.tar.gz
@@ -27,27 +27,15 @@ if [[ "$jpgResult" -ne 1 ]] || [[ "$pngResult" -ne 1 ]] ; then
   sudo ldconfig /usr/local/lib
   identify -version
   cd ..
-  echo "travis_fold:end:install_magick"
-
-  echo "travis_fold:start:clone_project"
-  echo "Clone project"
-  git clone https://${GITHUB_BOT_NAME}:${BOT_DEPLOY_TOKEN}@github.com/Graygzou/graygzou.github.io.git ../graygzou.github.io.develop
-  cd ../graygzou.github.io.develop
-  echo "travis_fold:end:clone_project"
+  echo "::endgroup::"
 
   chmod +x scripts/*/*.sh
 
-  extension1="jpg"
-  extension2="png"
+  echo "::group::run image magick script"
+  ./scripts/generation/image-magick.sh "jpg"
+  ./scripts/generation/image-magick.sh "png"
+  echo "::endgroup::"
 
-  ./scripts/generation/image-magick.sh $extension1
-  ./scripts/generation/image-magick.sh $extension2
-
-  # Upload back to github the artifacts created
-  echo "travis_fold:start:push_resize"
-  echo "push new resized images to the branch"
-  ./scripts/helpers/upload-to-github.sh 0 ".png"
-  echo "travis_fold:end:push_resize"
 else
   echo "⏭️ No jpg or png in the last commit. Job skipped."
 fi
