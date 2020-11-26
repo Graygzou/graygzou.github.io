@@ -23,7 +23,7 @@ runs:
         echo ${{ inputs.target-folder }}
         if [[ ${{ inputs.contains-jpg-or-png }} == false ]] ; then
           echo "No .jpg or .png pushed. Skip job ⏸️"
-          exit 0
+          exit 1
         else
           echo ".jpg or .png detected in last push. Start ▶️"
         fi
@@ -43,10 +43,10 @@ runs:
       run: |
         echo "::group::create webp folder"
         echo "Remove all webp folder"
-        if [[ -d "${{ inputs.contains-jpg-or-png }}" ]]; then
-          rm -vrf "${{ inputs.contains-jpg-or-png }}"
+        if [[ -d "${{ inputs.target-folder }}" ]]; then
+          rm -vrf "${{ inputs.target-folder }}"
         fi
-        mkdir "${{ inputs.contains-jpg-or-png }}"
+        mkdir "${{ inputs.target-folder }}"
         echo "::endgroup::"
       shell: bash
 
@@ -66,12 +66,12 @@ runs:
       run: | 
         echo "::group::rename_webp_images"
         echo "Renamed new images and move them in a separated folder"
-        find jekyll/assets/ -name "*.webp" -exec mv {} "${{ inputs.contains-jpg-or-png }}/" \;
-        cd "${{ inputs.contains-jpg-or-png }}/"
+        find jekyll/assets/ -name "*.webp" -exec mv {} "${{ inputs.target-folder }}/" \;
+        cd "${{ inputs.target-folder }}/"
         rename -v 's/.png.webp|.jpg.webp/.webp/gi' *.webp \;
         find . -regex '.*\.\(png\.webp\|jpg\.webp\)' -exec rm -v {} \;
         cd ../../..
-        echo "::set-output name=result-folder::$(echo ${{ inputs.contains-jpg-or-png }}/)"
+        echo "::set-output name=result-folder::$(echo ${{ inputs.target-folder }}/)"
         echo "::endgroup::"
       shell: bash
 
