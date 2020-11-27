@@ -1,0 +1,31 @@
+name: file-changed
+author: Grégoire Boiron (Graygzou)
+description: Find if any file in the last commit matching the provided extension.
+inputs:
+  file-extension:
+    description: "file extension to check against."
+    required: true
+    default: ".txt"
+outputs:
+  contains-file:
+    description: "true if the last commit contains some file with the extension, false otherwise."
+    value: ${{ steps.test-result.outputs.does-contains }}
+runs:
+  using: "composite"
+  steps:
+    - name: get-last-commit-info
+      run: git log --name-only -n 1 ${{ github.sha }} --pretty=format:%b > last-commit.txt;
+      shell: bash
+
+      # Try to find if any file matching the provided extension
+    - name: Grep extension on the last commit 
+      run: grep=$(egrep "$1" last-commit.txt)
+      shell: bash
+
+    - name: test-result
+      run: echo "::set-output name=does-contains::$(echo ${{ -n "$grep" }}/)"
+      shell: bash
+
+branding:
+  icon: cpu
+  color: green

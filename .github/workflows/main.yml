@@ -86,8 +86,6 @@ jobs:
     name: Webp images creation
     runs-on: ubuntu-16.04
     needs: setup
-    env:
-      HAS_ASSETS_IN_COMMITS: false
     defaults:
       run:
         shell: bash
@@ -100,22 +98,27 @@ jobs:
         with:
           name: output-txt-file
 
-      # Could be a dedicated action?
-      - name: Contains assets check
+      - name: check-contains-jpg-asset
+        uses: ./.github/actions/filechanged
+        with:
+          file-extension: "*\.jpg$"
+
+      - name: check-contains-png-asset
+        uses: ./.github/actions/filechanged
+        with:
+          file-extension: "*\.png$"
+
+      - name: debug
         run: |
-          chmod +x .github/scripts/helpers/file-changed-in-last-commit.sh
-          contain_jpg=$( ./.github/scripts/helpers/file-changed-in-last-commit.sh "*\.jpg$" )
-          contain_png=$( ./.github/scripts/helpers/file-changed-in-last-commit.sh "*\.jpg$" )
-          if [ $contain_jpg == 0 ] || [ $contain_png == 0 ]; then
-            HAS_ASSETS_IN_COMMITS=true
-          fi
+          echo ${{ steps.check-contains-jpg-asset.outputs.contains-file }}
+          echo ${{ steps.check-contains-png-asset.outputs.contains-file }}
         shell: bash
 
       - name: create-webp-images
         uses: ./.github/actions/webp
         with:
           target-folder: "jekyll/assets/webp"
-        if: ${{ env.HAS_ASSETS_IN_COMMITS }}
+        if: ${{ steps.check-contains-jpg-asset.outputs.contains-file || steps.check-contains-png-asset.outputs.contains-file }}
 
       - name: test
         run: echo "${{ steps.create-webp-images.outputs.webp-folder }}"
