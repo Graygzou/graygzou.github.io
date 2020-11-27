@@ -23,7 +23,7 @@ runs:
       shell: bash
 
     - name: test-result
-      run: echo "::set-output name=does-contains::$(echo ${{ -n "$grep" }}/)"
+      run: echo "::set-output name=does-contains::$(echo ${{ $grep }} /)"
       shell: bash
 
 branding:
