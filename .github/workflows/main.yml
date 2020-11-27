@@ -110,8 +110,8 @@ jobs:
 
       - name: debug
         run: |
-          echo ${{ steps.check-contains-jpg-asset.outputs.contains-file }}
-          echo ${{ steps.check-contains-png-asset.outputs.contains-file }}
+          echo "${{ steps.check-contains-jpg-asset.outputs.contains-file }}"
+          echo "${{ steps.check-contains-png-asset.outputs.contains-file }}"
         shell: bash
 
       - name: create-webp-images
