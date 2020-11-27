@@ -19,7 +19,11 @@ runs:
 
       # Try to find if any file matching the provided extension
     - name: Grep extension on the last commit 
-      run: grep=$(egrep "$1" last-commit.txt)
+      run: grep=$(egrep "${{ inputs.file-extension }}" last-commit.txt)
+      shell: bash
+
+    - name: get-last-commit-info
+      run: echo "$grep"
       shell: bash
 
     - name: test-result
