@@ -101,12 +101,12 @@ jobs:
       - name: check-contains-jpg-asset
         uses: ./.github/actions/filechanged
         with:
-          file-extension: "*\.jpg$"
+          file-extension: ${{ '*\.jpg$' }}
 
       - name: check-contains-png-asset
         uses: ./.github/actions/filechanged
         with:
-          file-extension: "*\.png$"
+          file-extension: ${{ '*\.png$' }}
 
       - name: debug
         run: |
