@@ -110,15 +110,15 @@ jobs:
 
       - name: debug
         run: |
-          echo "${{ steps.check-contains-jpg-asset.outputs.contains-file }}"
-          echo "${{ steps.check-contains-png-asset.outputs.contains-file }}"
+          echo "${{ steps.check-contains-jpg-asset.outputs.contains-file != '' }}"
+          echo "${{ steps.check-contains-png-asset.outputs.contains-file != '' }}"
         shell: bash
 
       - name: create-webp-images
         uses: ./.github/actions/webp
         with:
           target-folder: "jekyll/assets/webp"
-        if: ${{ steps.check-contains-jpg-asset.outputs.contains-file || steps.check-contains-png-asset.outputs.contains-file }}
+        if: ${{ steps.check-contains-jpg-asset.outputs.contains-file != '' || steps.check-contains-png-asset.outputs.contains-file != '' }}
 
       - name: test
         run: echo "${{ steps.create-webp-images.outputs.webp-folder }}"

@@ -27,7 +27,7 @@ runs:
       shell: bash
 
     - name: test-result
-      run: echo "::set-output name=does-contains::${{ '$grep' != '' }}"
+      run: echo "::set-output name=does-contains::${{ '$grep' }}"
       shell: bash
 
 branding:
