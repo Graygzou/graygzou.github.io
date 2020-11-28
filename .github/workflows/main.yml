@@ -93,11 +93,6 @@ jobs:
       - name: Github checkout
         uses: actions/checkout@v2
 
-      - name: Download a file changed artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: output-txt-file
-
       - name: check-contains-jpg-asset
         uses: ./.github/actions/filechanged
         with:
