@@ -71,16 +71,21 @@ jobs:
       - name: Github checkout
         uses: actions/checkout@v2
 
-      - name: Download a file changed artifact
-        uses: actions/download-artifact@v2
+      - name: check-contains-jpg-asset
+        uses: ./.github/actions/filechanged
         with:
-          name: output-txt-file
+          file-extension: ${{ '*\.jpg$' }}
 
-      - name: ImageMagick Resizing
-        run: |
-          chmod +x .github/scripts/generation/resize-img.sh
-          ./.github/scripts/generation/resize-img.sh
-        shell: bash
+      - name: check-contains-png-asset
+        uses: ./.github/actions/filechanged
+        with:
+          file-extension: ${{ '*\.png$' }}
+
+      - name: create-webp-images
+        uses: ./.github/actions/resizeimg
+        with:
+          original-folder: "jekyll/assets/"
+        if: ${{ steps.check-contains-jpg-asset.outputs.contains-file != '' || steps.check-contains-png-asset.outputs.contains-file != '' }}
 
   webpgen:
     name: Webp images creation

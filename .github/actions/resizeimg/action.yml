@@ -1,0 +1,50 @@
+name: file-changed
+author: Grégoire Boiron (Graygzou)
+description: Use image magick to resize images in a given folder.
+inputs:
+  original-folder:
+    description: "folder where the original images are located."
+    required: true
+    default: "jekyll/assets/"
+runs:
+  using: "composite"
+  steps:
+    # Download the package
+    - name: download-package
+      run: |
+        wget https://www.imagemagick.org/download/ImageMagick.tar.gz
+        tar xf ImageMagick.tar.gz
+      shell: bash
+
+    - name: install-package
+      run: |
+        echo "::group::install imagemagick"
+        cd ImageMagick-7*
+        ./configure
+        make
+        sudo make install
+        sudo ldconfig /usr/local/lib
+        cd ..
+        echo "::endgroup::"
+      shell: bash
+
+    - name: version
+      run: identify -version
+      shell: bash
+
+      # Try to find if any file matching the provided extension
+    - name: run-dedicated-script
+      run: chmod +x scripts/*/*.sh
+      shell: bash
+
+    - name: run-script-for-jpg
+      run: ./scripts/generation/image-magick.sh "jpg"
+      shell: bash
+
+    - name: run-script-for-jpg
+      run: ./scripts/generation/image-magick.sh "png"
+      shell: bash
+
+branding:
+  icon: cpu
+  color: green
