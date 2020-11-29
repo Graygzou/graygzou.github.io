@@ -149,6 +149,8 @@ jobs:
       - name: jekyll-production-build
         uses: ./.github/actions/jekyll-build
         with:
+          bundle-path: vendor/bundle
+          project-folder: ./jekyll
           environment: production
           destination: site
 
