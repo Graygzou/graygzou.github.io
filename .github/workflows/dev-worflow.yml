@@ -134,3 +134,27 @@ jobs:
       - name: teleconsole-launch
         if: ${{ failure() }}
         run: echo "Should launch teleconsole and wait for it to be over."
+
+  build:
+    name: Build
+    runs-on: ubuntu-16.04
+    needs: setup
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Github checkout
+        uses: actions/checkout@v2
+
+      - name: jekyll-production-build
+        uses: ./.github/actions/jekyll-build
+        with:
+          environment: production
+          destination: site
+
+      - name: html-proofer
+        uses: ./.github/actions/html-proofer
+        with:
+          bundle-path: vendor/bundle
+          folder: site
+          url-ignore: "https://www.linkedin.com/in/gregoire-boiron/,https://www.latecoere.aero/en/"

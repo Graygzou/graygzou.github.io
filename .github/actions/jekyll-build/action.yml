@@ -1,0 +1,30 @@
+name: jekyll-build
+author: Grégoire Boiron (Graygzou)
+description: Proceed to the installation of ruby and bundler
+inputs:
+  environment:
+    description: "Use a specific environment value in the build. Default is production."
+    required: false
+    default: 'production'
+  destination:
+    description: "The directory where Jekyll will write files."
+    required: false
+    default: './'
+  show-draft:
+    description: "Process and render draft posts."
+    required: false
+    default: 'false'
+  unpublished:
+    description: "Render posts that were marked as unpublished."
+    required: false
+    default: 'false'
+runs:
+  using: "composite"
+  steps:
+    - name: Install bundler
+      run: bundle exec jekyll build JEKYLL_ENV=${{ inputs.environment }} --destination ${{ inputs.destination }}
+      shell: bash
+
+branding:
+  icon: cpu
+  color: orange

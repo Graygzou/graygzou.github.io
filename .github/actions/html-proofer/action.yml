@@ -1,11 +1,19 @@
-name: install
+name: html-proofer
 author: Grégoire Boiron (Graygzou)
-description: Proceed to the installation of ruby and bundler
+description: 
 inputs:
-  bundle_path:
+  bundle-path:
     description: "Path that will help cache bundle dependencies"
     required: true
     default: 'vendor/bundle'
+  folder:
+    description: "The directory where Jekyll will write files."
+    required: false
+    default: './'
+  url-ignore:
+    description: "list of urls that needs to be ignore during the test."
+    required: false
+    default: ''
 runs:
   using: "composite"
   steps:
@@ -18,9 +26,13 @@ runs:
       run: |
         echo "::group::bundle commands"
         bundle update --bundler
-        bundle config path $INPUT_BUNDLE_PATH
+        bundle config path ${{ inputs.bundle-path }}
         bundle install --jobs 4 --retry 3
         echo "::endgroup::"
+      shell: bash
+
+    - name: Install bundler
+      run: bundle exec htmlproofer ${{ inputs.folder }} --url-ignore ${{ inputs.url-ignore }}
       shell: bash
 
 branding:
