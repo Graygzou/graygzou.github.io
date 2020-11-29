@@ -4,7 +4,7 @@
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 # Steps represent a sequence of tasks that will be executed as part of the job
 
-name: CI
+name: develop CI workflow
 
 # Specify the controls here
 on:
@@ -61,7 +61,7 @@ jobs:
 
   # =============================
   preprocess:
-    name: Todo add a name here
+    name: Resize images
     runs-on: ubuntu-16.04
     needs: setup
     defaults:

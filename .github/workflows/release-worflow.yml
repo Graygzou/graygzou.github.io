@@ -1,0 +1,97 @@
+name: Release standard CI workflow
+
+# Specify the controls here
+on:
+  push:
+    branches: [ release ]
+
+# Specify the workflow here
+jobs:
+  # =============================
+  setup:
+    name: Setup in order to run jekyll commands
+    runs-on: ubuntu-16.04
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./jekyll
+    steps:
+      - name: Github checkout
+        uses: actions/checkout@v2
+
+      - name: Github cache
+        uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**  /Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+
+      - name: Github Set up Ruby 2.6
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 2.6.x
+
+      - name: Install Bundler
+        uses: ./.github/actions/install
+        with:
+          bundle_path: vendor/bundle
+
+  # =============================
+  integration:
+    name: Compress images
+    runs-on: ubuntu-16.04
+    needs: setup
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Github checkout
+        uses: actions/checkout@v2
+
+      - name: pngquant-png-compression
+        run: ./scripts/integration/pngquant-compression.sh
+
+      - name: guetzli-jpg-compression
+        run: ./scripts/integration/guetzli-compression.sh
+
+  # =============================
+  build:
+    name: Build jekyll project
+    runs-on: ubuntu-16.04
+    needs: setup
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: jekyll-production-build
+        run: ./scripts/build/build.sh
+
+      # Should ALWAYS be the last step.
+      - name: teleconsole-launch
+        if: ${{ failure() }}
+        run: echo "Should launch teleconsole and wait for it to be over."
+
+  deploy:
+    name: Deploy to the github page (master) ✨
+    runs-on: ubuntu-16.04
+    needs: build
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: deploy 
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: master
+          FOLDER: ./jekyll/site
+          CLEAN: true
+
+
+
+
+      
