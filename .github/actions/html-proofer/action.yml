@@ -3,11 +3,15 @@ author: Grégoire Boiron (Graygzou)
 description: 
 inputs:
   bundle-path:
-    description: "Path that will help cache bundle dependencies"
+    description: "Path that will help cache bundle dependencies."
     required: true
     default: 'vendor/bundle'
-  folder:
-    description: "The directory where Jekyll will write files."
+  bundle-folder:
+    description: "Directory where to install bundler and run html-proofer"
+    required: true
+    default: './'
+  html-folder:
+    description: "Directory containing all the generated html files."
     required: false
     default: './'
   url-ignore:
@@ -22,7 +26,7 @@ runs:
       shell: bash
 
     - name: setup-bundler-correctly
-      working-directory: ./jekyll
+      working-directory: ${{ inputs.bundle-folder }}
       run: |
         echo "::group::bundle commands"
         bundle update --bundler
@@ -32,7 +36,8 @@ runs:
       shell: bash
 
     - name: execute-html-proofer
-      run: bundle exec htmlproofer ${{ inputs.folder }} --url-ignore ${{ inputs.url-ignore }}
+      working-directory: ${{ inputs.bundle-folder }}
+      run: bundle exec htmlproofer ${{ inputs.html-folder }} --url-ignore ${{ inputs.url-ignore }}
       shell: bash
 
 branding:
