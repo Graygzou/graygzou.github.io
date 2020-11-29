@@ -163,5 +163,5 @@ jobs:
         uses: ./.github/actions/html-proofer
         with:
           bundle-path: vendor/bundle
-          folder: site
+          folder: ./jekyll/site
           url-ignore: "https://www.linkedin.com/in/gregoire-boiron/,https://www.latecoere.aero/en/"

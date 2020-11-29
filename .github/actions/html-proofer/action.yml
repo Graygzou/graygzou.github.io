@@ -17,11 +17,11 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - name: Install bundler
+    - name: install-bundler
       run: gem install bundler
       shell: bash
 
-    - name: Setup bundler correctly
+    - name: setup-bundler-correctly
       working-directory: ./jekyll
       run: |
         echo "::group::bundle commands"
@@ -31,7 +31,7 @@ runs:
         echo "::endgroup::"
       shell: bash
 
-    - name: Install bundler
+    - name: execute-html-proofer
       run: bundle exec htmlproofer ${{ inputs.folder }} --url-ignore ${{ inputs.url-ignore }}
       shell: bash
 
