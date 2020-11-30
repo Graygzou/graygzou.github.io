@@ -10,7 +10,7 @@ inputs:
     description: "Directory where to install bundler and run html-proofer"
     required: true
     default: './'
-  html-folder:
+  html-relative-folder:
     description: "Directory containing all the generated html files."
     required: false
     default: './'
@@ -37,7 +37,7 @@ runs:
 
     - name: execute-html-proofer
       working-directory: ${{ inputs.bundle-folder }}
-      run: bundle exec htmlproofer ${{ inputs.html-folder }} --url-ignore ${{ inputs.url-ignore }}
+      run: bundle exec htmlproofer ${{ inputs.html-relative-folder }} --url-ignore ${{ inputs.url-ignore }}
       shell: bash
 
 branding:

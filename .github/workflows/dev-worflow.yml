@@ -164,5 +164,5 @@ jobs:
         with:
           bundle-path: vendor/bundle
           bundle-folder: ./jekyll
-          html-folder: ./jekyll/site
+          html-relative-folder: site
           url-ignore: "https://www.linkedin.com/in/gregoire-boiron/,https://www.latecoere.aero/en/"
