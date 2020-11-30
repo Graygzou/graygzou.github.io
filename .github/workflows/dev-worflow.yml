@@ -79,7 +79,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: generate-markdown
-        run: python ./.github/scripts/generation/githubProjectGen.py ${{ secrets.GITHUB_API_TOKEN }}
+        run: python ./.github/scripts/generation/githubProjectGen.py ${{ secrets.GENERATION_TOKEN }}
 
       - name: check-contains-svg-asset
         uses: ./.github/actions/filechanged
