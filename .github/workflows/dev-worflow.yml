@@ -60,6 +60,35 @@ jobs:
           path: last-commit.txt
 
   # =============================
+  page-generation:
+    name: Resize images
+    runs-on: ubuntu-16.04
+    needs: setup
+    steps:
+      - name: Github checkout
+        uses: actions/checkout@v2
+
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
+          architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
+
+      - name: install-dependencies
+        run: pip install -r requirements.txt
+
+      - name: generate-markdown
+        run: python ./.github/scripts/generation/githubProjectGen.py ${{ secrets.GITHUB_API_TOKEN }}
+
+      - name: check-contains-svg-asset
+        uses: ./.github/actions/filechanged
+        with:
+          file-extension: ${{ '*\.svg$' }}
+
+      - name: svg-creation
+        run: python ./.github/scripts/generation/mainSvgGen.py
+        if: ${{ steps.check-contains-svg-asset.outputs.contains-file != '' }}
+
+  # =============================
   preprocess:
     name: Resize images
     runs-on: ubuntu-16.04
@@ -87,6 +116,7 @@ jobs:
           original-folder: "jekyll/assets/"
         if: ${{ steps.check-contains-jpg-asset.outputs.contains-file != '' || steps.check-contains-png-asset.outputs.contains-file != '' }}
 
+  # =============================
   webpgen:
     name: Webp images creation
     runs-on: ubuntu-16.04
@@ -135,6 +165,7 @@ jobs:
         if: ${{ failure() }}
         run: echo "Should launch teleconsole and wait for it to be over."
 
+  # =============================
   build:
     name: Build
     runs-on: ubuntu-16.04
