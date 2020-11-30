@@ -19,7 +19,7 @@ languages:
 category: 'school'
 pitch: "_Penguin Panic_ is a 3D multiplayer exploration game. 
         It has been made for the Ubisoft Game Lab Competition 2018. 
-        A brief description of this event is available here: [Ubisoft Game Lab Competition](https://montreal.ubisoft.com/en/our-engagements/education/university/game-lab-competition).
+        A brief description of this event is available here: [Ubisoft Game Lab Competition](https://montreal.ubisoft.com/en/our-engagements/education/game-lab-competition/).
         <br/>
         **Won the Best Technical Challenge and Innovation Award.**   
         <br/>
