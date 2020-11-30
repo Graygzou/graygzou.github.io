@@ -157,7 +157,7 @@ jobs:
           bundle-path: vendor/bundle
           project-folder: ./jekyll
           environment: production
-          destination: ./jekyll/site
+          destination-relative-folder: site
 
       - name: html-proofer
         uses: ./.github/actions/html-proofer
