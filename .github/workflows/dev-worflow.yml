@@ -62,11 +62,7 @@ jobs:
   # =============================
   page-generation:
     name: markdown-generation
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-16.04]
-        python-version: [3.7, 3.8, pypy3]
+    runs-on: ubuntu-16.04
     needs: setup
     steps:
       - name: Github checkout
@@ -74,7 +70,7 @@ jobs:
 
       - uses: actions/setup-python@v2
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: 3.7
 
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
