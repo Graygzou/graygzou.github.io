@@ -83,6 +83,12 @@ jobs:
       - name: generate-markdown
         run: python ./.github/scripts/generation/githubProjectGen.py ${{ secrets.GENERATION_TOKEN }}
 
+      - name: Upload front matters generation through artifacts
+        uses: actions/upload-artifact@v1
+        with:
+          name: front-matter-gen
+          path: jekyll/_includes/projects-front-matter/
+
       - name: check-contains-svg-asset
         uses: ./.github/actions/filechanged
         with:
