@@ -81,13 +81,21 @@ jobs:
           pip install -r requirements.txt
 
       - name: generate-markdown
-        run: python ./.github/scripts/generation/githubProjectGen.py ${{ secrets.GENERATION_TOKEN }}
+        run: |
+          python ./.github/scripts/generation/githubProjectGen.py ${{ secrets.GENERATION_TOKEN }}
+          git status
 
       - name: Upload front matters generation through artifacts
         uses: actions/upload-artifact@v1
         with:
           name: front-matter-gen
           path: jekyll/_includes/projects-front-matter/
+
+      - name: Upload front matters generation through artifacts
+        uses: actions/upload-artifact@v1
+        with:
+          name: project-pages
+          path: jekyll/collections/_project-pages/
 
       - name: check-contains-svg-asset
         uses: ./.github/actions/filechanged
