@@ -96,7 +96,7 @@ jobs:
           name: project-pages
           path: jekyll/collections/_project-pages/
 
-      - name: Create pull request with generated content
+      #- name: Create pull request with generated content
         
 
       - name: check-contains-svg-asset
