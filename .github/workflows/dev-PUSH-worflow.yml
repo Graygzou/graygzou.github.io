@@ -10,8 +10,6 @@ name: develop CI workflow
 on:
   push:
     branches: [ develop ]
-  pull_request:
-    branches: [ develop ]
 
 # Specify the workflow here
 jobs:
@@ -96,6 +94,9 @@ jobs:
         with:
           name: project-pages
           path: jekyll/collections/_project-pages/
+
+      - name: Create pull request with generated content
+        
 
       - name: check-contains-svg-asset
         uses: ./.github/actions/filechanged

@@ -1,8 +1,7 @@
 name: Release standard CI workflow
 
-# Specify the controls here
 on:
-  push:
+  pull_request:
     branches: [ release ]
 
 # Specify the workflow here
