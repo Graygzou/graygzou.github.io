@@ -1,0 +1,21 @@
+name: Run when the website is being deployed to github page
+
+on:
+  deployment
+
+jobs:
+  test:
+    name: This is a test job
+    runs-on: ubuntu-16.04
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: this is a test step
+        run: |
+          echo ${{ GITHUB_REF }}
+          echo ${{ GITHUB_SHA }}
+
+      # Let's checkout release and create a tag so we can't checkout the source of the last deployed site easily
+
+      # also create a package from master source. We never know.

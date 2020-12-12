@@ -9,7 +9,8 @@ name: develop CI workflow
 # Specify the controls here
 on:
   push:
-    branches: [ develop ]
+    branches:
+      - develop
 
 # Specify the workflow here
 jobs:
