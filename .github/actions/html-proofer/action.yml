@@ -21,11 +21,6 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - name: Github Set up Ruby 2.6
-      uses: actions/setup-ruby@v1
-      with:
-        ruby-version: 2.6.x
-        
     - name: install-bundler
       run: gem install bundler
       shell: bash
