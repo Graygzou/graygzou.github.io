@@ -106,6 +106,6 @@ jobs:
         uses: ./.github/actions/html-proofer
         with:
           bundle-path: vendor/bundle
-          bundle-folder: ./build
-          html-relative-folder: '.'
+          bundle-folder: ./jekyll
+          html-relative-folder: ./build
           url-ignore: "https://www.linkedin.com/in/gregoire-boiron/,https://www.latecoere.aero/en/"
