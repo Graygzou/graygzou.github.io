@@ -36,6 +36,7 @@ runs:
       shell: bash
 
     - name: execute-html-proofer
+      working-directory: ${{ inputs.bundle-folder }}
       run: bundle exec htmlproofer --url-ignore ${{ inputs.url-ignore }} ${{ inputs.html-relative-folder }}
       shell: bash
 
