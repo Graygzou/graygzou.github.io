@@ -42,7 +42,9 @@ runs:
 
     - name: execute-html-proofer
       working-directory: ${{ inputs.bundle-folder }}
-      run: bundle exec htmlproofer --url-ignore ${{ inputs.url-ignore }} ${{ inputs.html-relative-folder }}
+      run: |
+        typhoeus='{ :headers => { "User-Agent" => "Mozilla/5.0 (compatible; My New User-Agent)" } }'
+        bundle exec htmlproofer --url-ignore ${{ inputs.url-ignore }} --typhoeus-config $typhoeus ${{ inputs.html-relative-folder }}
       shell: bash
 
 branding:
