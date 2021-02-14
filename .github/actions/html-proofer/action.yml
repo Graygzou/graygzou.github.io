@@ -21,6 +21,11 @@ inputs:
 runs:
   using: "composite"
   steps:
+    # required to avoid SSL errors
+    - name: install libcurl4-openssl
+      run: sudo apt-get install libcurl4-openssl-dev
+      shell: bash
+
     - name: install-bundler
       run: gem install bundler
       shell: bash

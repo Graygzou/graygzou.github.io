@@ -5,6 +5,9 @@ on:
     branches:
       - develop
 
+env:
+  NOKOGIRI_USE_SYSTEM_LIBRARIES: true
+
 jobs:
   setup:
     name: Setup in order to run jekyll commands
@@ -23,9 +26,11 @@ jobs:
       - name: Github cache
         uses: actions/cache@v2
         with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**  /Gemfile.lock') }}
-          restore-keys: |
+          path: |
+            vendor/bundle
+            ${{ env.GITHUB_REPOSITORY }}/tmp/.htmlproofer
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: | 
             ${{ runner.os }}-gems-
 
       - name: Github Set up Ruby 2.6
