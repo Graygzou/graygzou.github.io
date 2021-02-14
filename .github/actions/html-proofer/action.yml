@@ -43,9 +43,9 @@ runs:
     - name: execute-html-proofer
       working-directory: ${{ inputs.bundle-folder }}
       run: |
-        TYPHOEUS_CONFIG='{ "headers": { "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/81.0" } }'
-        echo ${{ fromJSON($TYPHOEUS_CONFIG) }}
-        bundle exec htmlproofer --url-ignore ${{ inputs.url-ignore }} --typhoeus-config ${{ fromJSON($TYPHOEUS_CONFIG) }} ${{ inputs.html-relative-folder }}
+        typhoeusconfig='{ "headers": { "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/81.0" } }'
+        echo ${{ fromJSON($typhoeusconfig) }}
+        bundle exec htmlproofer --url-ignore ${{ inputs.url-ignore }} --typhoeus-config ${{ fromJSON($typhoeusconfig) }} ${{ inputs.html-relative-folder }}
       shell: bash
 
 branding:
