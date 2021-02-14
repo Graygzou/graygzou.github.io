@@ -43,10 +43,10 @@ runs:
     - name: execute-html-proofer
       working-directory: ${{ inputs.bundle-folder }}
       run: |
-        typhoeusconfig="{ \"headers\": { \"User-Agent\": \"Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/81.0\" } }"
+        typhoeusconfig="{\"headers\":{\"User-Agent\":\"Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/81.0\"}}"
         echo $typhoeusconfig
-        echo ${{ fromJSON("{ \"headers\": { \"User-Agent\": \"Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/81.0\" } }") }}
-        test=${{ fromJSON("{ \"headers\": { \"User-Agent\": \"Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/81.0\" } }") }}
+        echo ${{ fromJSON("{\"headers\":{\"User-Agent\":\"Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/81.0\"}}") }}
+        test=${{ fromJSON("{\"headers\":{\"User-Agent\":\"Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/81.0\"}}") }}
         bundle exec htmlproofer --url-ignore ${{ inputs.url-ignore }} --typhoeus-config $test ${{ inputs.html-relative-folder }}
       shell: bash
 
