@@ -4,7 +4,7 @@ logo: ubisoft.svg
 sub-title: Won "Best technical challenge and innovation" award.
 start-dates: [2018]
 localisation: UQAC, Chicoutimi, CA
-link: https://montreal.ubisoft.com/en/our-engagements/education/university/game-lab-competition/
+link: https://montreal.ubisoft.com/en/our-engagements/education/game-lab-competition/
 category: 'challenges'
 display: true
 ---
