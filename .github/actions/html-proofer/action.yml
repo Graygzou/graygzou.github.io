@@ -44,7 +44,7 @@ runs:
       working-directory: ${{ inputs.bundle-folder }}
       run: |
         typhoeusconfig="{\"headers\":{\"User-Agent\":\"Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/81.0\"}}"
-        bundle exec htmlproofer --url-ignore ${{ inputs.url-ignore }} --typhoeus-config $typhoeusconfig ${{ inputs.html-relative-folder }}
+        bundle exec htmlproofer --url-ignore ${{ inputs.url-ignore }} --typhoeus-config "$typhoeusconfig" ${{ inputs.html-relative-folder }}
       shell: bash
 
 branding:
