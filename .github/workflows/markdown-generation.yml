@@ -55,9 +55,9 @@ jobs:
         run: |
           branch="github-build-$GITHUB_RUN_ID"
           git checkout -b $branch
-          git pull
 
       - name: Add changement to branch
+        if: ${{ success() }}
         run: |
           git add .
           git commit -m "[ignore] Upload files generate by the job #${{ env.GITHUB_RUN_ID }} ${{ env.GITHUB_ACTION }}"
