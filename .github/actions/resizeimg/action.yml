@@ -6,17 +6,20 @@ inputs:
     description: "folder where the original images are located."
     required: true
     default: "jekyll/assets/"
+  extension:
+    description: "extension of the images to convert"
+    required: true
+    default: "jpg"
 runs:
   using: "composite"
   steps:
-    # Download the package
-    - name: download-package
+    - name: Download package
       run: |
         wget https://www.imagemagick.org/download/ImageMagick.tar.gz
         tar xf ImageMagick.tar.gz
       shell: bash
 
-    - name: install-package
+    - name: Install packages
       run: |
         echo "::group::install imagemagick"
         cd ImageMagick-7*
@@ -28,21 +31,17 @@ runs:
         echo "::endgroup::"
       shell: bash
 
-    - name: version
+    - name: Version
       run: identify -version
       shell: bash
 
-      # Try to find if any file matching the provided extension
-    - name: run-dedicated-script
+    - name: Make script executables
       run: chmod +x scripts/*/*.sh
       shell: bash
 
-    - name: run-script-for-jpg
-      run: ./scripts/generation/image-magick.sh "jpg"
-      shell: bash
-
-    - name: run-script-for-png
-      run: ./scripts/generation/image-magick.sh "png"
+      # Try to find if any file matching the provided extension
+    - name: Run script
+      run: ./scripts/generation/image-magick.sh ${{ inputs.extension }}
       shell: bash
 
 branding:
