@@ -47,12 +47,12 @@ jobs:
 
       - name: Create GitHub PR
         run: |
-          branch="github-build-${{ env.GITHUB_RUN_ID }}"
+          branch="github-build-$GITHUB_RUN_ID"
           git checkout -b $branch
           git config user.email ${{ secrets.BOT_ACCOUNT_MAIL }}
           git config user.name ${{ secrets.BOT_ACCOUNT_NAME }}
           git add .
           git commit -m "[ignore] Upload files generate by the job #${{ env.GITHUB_RUN_ID }} ${{ env.GITHUB_ACTION }}"
           git push origin HEAD:$branch
-          git request-pull develop "${{ env.GITHUB_SERVER_URL }}/${{ env.GITHUB_REPOSITORY }}"
+          git request-pull develop "${{ GITHUB_SERVER_URL }}/${{ GITHUB_REPOSITORY }}"
 
