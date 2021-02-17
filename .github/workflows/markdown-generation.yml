@@ -55,5 +55,5 @@ jobs:
           git add .
           git commit -m "[ignore] Upload files generate by the job #${{ env.GITHUB_RUN_ID }} ${{ env.GITHUB_ACTION }}"
           git push origin HEAD:$branch
-          git request-pull develop "${{ GITHUB_SERVER_URL }}/${{ GITHUB_REPOSITORY }}"
+          git request-pull develop "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY"
 
