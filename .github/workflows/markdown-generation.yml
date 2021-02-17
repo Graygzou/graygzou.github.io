@@ -45,13 +45,20 @@ jobs:
 
       # TODO: We should create an artifact of the full project to delegate the rest to another job
 
-      - name: Create GitHub PR
+      - name: Config git
+        run: |
+          git config user.email ${{ secrets.BOT_ACCOUNT_MAIL }}
+          git config user.name ${{ secrets.BOT_ACCOUNT_NAME }}
+          git config pull.ff only
+
+      - name: Create branch
         run: |
           branch="github-build-$GITHUB_RUN_ID"
           git checkout -b $branch
-          git config user.email ${{ secrets.BOT_ACCOUNT_MAIL }}
-          git config user.name ${{ secrets.BOT_ACCOUNT_NAME }}
           git pull
+
+      - name: Add changement to branch
+        run: |
           git add .
           git commit -m "[ignore] Upload files generate by the job #${{ env.GITHUB_RUN_ID }} ${{ env.GITHUB_ACTION }}"
           git push origin HEAD:$branch
