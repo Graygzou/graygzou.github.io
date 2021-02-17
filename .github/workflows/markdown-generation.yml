@@ -48,7 +48,7 @@ jobs:
       - name: Create GitHub PR
         run: |
           branch="github-build-${{ env.GITHUB_RUN_ID }}"
-          git branch -b $branch
+          git checkout -b $branch
           git config user.email ${{ secrets.BOT_ACCOUNT_MAIL }}
           git config user.name ${{ secrets.BOT_ACCOUNT_NAME }}
           git add .
