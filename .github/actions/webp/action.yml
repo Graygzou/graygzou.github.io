@@ -13,7 +13,7 @@ inputs:
   extensions:
     description: "image extensions that will be converted into zebp"
     required: true
-    default: []
+    default: "[]"
 outputs:
   webp-folder:
     description: "folder where the converted webp image will be saved."
@@ -47,7 +47,7 @@ runs:
       run: |
         echo "::group::run cwebp command"
         echo "Start running cwebp for webp image creation"
-        find jekyll/assets/ -type d -path ${{ original-folder }} -prune -o -regex ".*\.\(${{ join(inputs.extensions, '\|') }}\)" -print -exec cwebp {} -o {}.webp \;
+        find jekyll/assets/ -type d -path ${{ inputs.original-folder }} -prune -o -regex ".*\.\(${{ join(inputs.extensions, '\|') }}\)" -print -exec cwebp {} -o {}.webp \;
         echo "::endgroup::"
       shell: bash
 
