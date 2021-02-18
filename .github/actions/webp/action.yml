@@ -4,8 +4,12 @@ description: Duplicate and generate webp images from original ones
 inputs:
   original-folder:
     description: "folder where the original images are located."
-    required: false
+    required: true
     default: "jekyll/assets/originals"
+  extensions:
+    description: "image extensions that will be converted into zebp"
+    required: true
+    default: []
 outputs:
   webp-folder:
     description: "folder where the converted webp image will be saved."
@@ -39,7 +43,7 @@ runs:
       run: |
         echo "::group::run cwebp command"
         echo "Start running cwebp for webp image creation"
-        find jekyll/assets/ -type d -path ${{ original-folder }} -prune -o -regex '.*\.\(jpg\|png\)' -print -exec cwebp {} -o {}.webp \;
+        find jekyll/assets/ -type d -path ${{ original-folder }} -prune -o -regex ".*\.\(${{ join(inputs.extensions, '\|') }}\)" -print -exec cwebp {} -o {}.webp \;
         echo "::endgroup::"
       shell: bash
 
