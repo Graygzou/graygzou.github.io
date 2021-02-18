@@ -10,10 +10,10 @@ inputs:
     description: "folder where the original images are located."
     required: true
     default: "jekyll/assets/originals"
-  extensions:
+  extensions-regex-escaped:
     description: "image extensions that will be converted into zebp"
     required: true
-    default: "[]"
+    default: ""
 outputs:
   webp-folder:
     description: "folder where the converted webp image will be saved."
@@ -48,7 +48,7 @@ runs:
       run: |
         echo "::group::run cwebp command"
         echo "Start running cwebp for webp image creation"
-        find jekyll/assets/ -type d -path ${{ inputs.original-folder }} -prune -o -regex ".*\.\(${{ join(inputs.extensions, '\|') }}\)" -print -exec cwebp {} -o {}.webp \;
+        find jekyll/assets/ -type d -path ${{ inputs.original-folder }} -prune -o -regex ".*\.\(${{ inputs.extensions-regex-escaped }}\)" -print -exec cwebp {} -o {}.webp \;
         echo "::endgroup::"
       shell: bash
 
@@ -61,8 +61,8 @@ runs:
         echo "Renamed new images and move them in a separated folder"
         find jekyll/assets/ -name "*.webp" -exec mv {} "${{ inputs.target-folder }}/" \;
         cd "${{ inputs.target-folder }}/"
-        rename -v "s/(${{ join(inputs.extensions, '|') }}).webp/.webp/gi" *.webp \;
-        find . -regex '.*\.\(${{ join(inputs.extensions, '\|') }}\.webp\)' -exec rm -v {} \;
+        rename -v "s/(${{ inputs.extensions-regex-escaped }}).webp/.webp/gi" *.webp \;
+        find . -regex '.*\.\(${{ inputs.extensions-regex-escaped }}\.webp\)' -exec rm -v {} \;
         cd ../../..
         echo "::set-output name=result-folder::$(echo ${{ inputs.target-folder }}/)"
         echo "::endgroup::"
