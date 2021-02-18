@@ -1,0 +1,36 @@
+name: Merge svg assets
+
+on:
+  push:
+    branches: [ release ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Github checkout
+        uses: actions/checkout@v2
+        
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+          
+      - name: install-dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Merge svg assets into a single file
+        id: svg-merging
+        run: |
+          python ./.github/scripts/generation/mainSvgGen.py
+          git status
+
+      - name: Upload webp folders through artifacts
+        uses: actions/upload-artifact@v1
+        with:
+          name: svg-merged
+          path: jekyll/assets/icons/
+        if: ${{ steps.svg-merging.outcome }} == "success"
