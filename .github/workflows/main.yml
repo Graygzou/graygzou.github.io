@@ -25,7 +25,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: webp-images
-          path: ${{ steps.create-webp-images.outputs.webp-folder
+          path: ${{ steps.create-webp-images.outputs.webp-folder }}
         if: ${{ steps.create-webp-images.outcome == "sucess" }}
         
       # Should ALWAYS be the last step.
