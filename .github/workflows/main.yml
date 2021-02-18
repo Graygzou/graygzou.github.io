@@ -26,7 +26,7 @@ jobs:
         with:
           name: webp-images
           path: ${{ steps.create-webp-images.outputs.webp-folder }}
-        if: ${{ steps.create-webp-images.outcome == "success" }}
+        if: ${{ steps.create-webp-images.outcome }} == "success"
         
       # Should ALWAYS be the last step.
       - name: Teleconsole launch
