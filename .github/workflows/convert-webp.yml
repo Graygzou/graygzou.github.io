@@ -19,7 +19,7 @@ jobs:
         with:
           target-folder: "jekyll/assets/webp"
           original-folder: "jekyll/assets/originals"
-          extensions-regex: "jpg\|png"
+          extensions-regex: "jpg|png"
           
       - name: Upload webp folders through artifacts
         uses: actions/upload-artifact@v1
