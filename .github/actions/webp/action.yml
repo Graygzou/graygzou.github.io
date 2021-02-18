@@ -2,6 +2,10 @@ name: Webp creation
 author: Grégoire Boiron (Graygzou)
 description: Duplicate and generate webp images from original ones
 inputs:
+  target-folder:
+    description: "folder where the webp images will be saved"
+    required: false
+    default: "webp/"
   original-folder:
     description: "folder where the original images are located."
     required: true
