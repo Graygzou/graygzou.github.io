@@ -26,6 +26,7 @@ runs:
       run: |
         echo "::group::bundle commands"
         sudo apt-get install webp
+        sudo apt-get install rename
         echo "::endgroup::"
       shell: bash
 
