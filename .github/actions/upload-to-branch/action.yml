@@ -10,7 +10,7 @@ inputs:
     description: "name of the user pushing to github"
     required: true
     default: ""
-  user-mail:
+  user-email:
     description: "email of the user pushing to github"
     required: true
     default: ""
@@ -19,7 +19,7 @@ runs:
   steps:
     - name: Config git
       run: |
-        git config user.email ${{ inputs.user-mail }}
+        git config user.email ${{ inputs.user-email }}
         git config user.name ${{ inputs.user-name }}
         git config pull.ff only
       shell: bash
