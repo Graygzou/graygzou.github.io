@@ -34,3 +34,10 @@ jobs:
           name: svg-merged
           path: jekyll/assets/icons/
         if: ${{ steps.svg-merging.outcome }} == "success"
+
+      - name: Upload to branch
+        uses: ./.github/actions/upload-to-branch
+        with:
+          target-branch: develop
+          user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
+          user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}

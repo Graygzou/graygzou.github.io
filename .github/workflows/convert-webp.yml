@@ -50,6 +50,14 @@ jobs:
         if: |
           ${{ steps.create-webp-jpg-images.outcome }} == "success" &&
           ${{ steps.create-webp-png-images.outcome }} == "success"
+
+
+      - name: Upload to branch
+        uses: ./.github/actions/upload-to-branch
+        with:
+          target-branch: develop
+          user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
+          user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}
         
       # Should ALWAYS be the last step.
       - name: Teleconsole launch
