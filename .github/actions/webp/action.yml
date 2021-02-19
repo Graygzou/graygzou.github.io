@@ -30,18 +30,6 @@ runs:
         echo "::endgroup::"
       shell: bash
 
-    # Remove the old directory and create a new one if necessary
-    - name: Clean previous folder
-      run: |
-        echo "::group::create webp folder"
-        echo "Remove all webp folder"
-        if [[ -d "${{ inputs.target-folder }}" ]]; then
-          rm -vrf "${{ inputs.target-folder }}"
-        fi
-        mkdir "${{ inputs.target-folder }}"
-        echo "::endgroup::"
-      shell: bash
-
     # Use cwebp to encode all asset images except for the folder ./originals. 
     # for more info on cwebp see https://developers.google.com/speed/webp/docs/precompiled
     - name: 
