@@ -13,13 +13,32 @@ jobs:
       - name: Github checkout
         uses: actions/checkout@v2
         
-      - name: Create webp images
-        id: create-webp-images
+      - name: Remove previous folder if necessary and create it
+        run: |
+          echo "::group::create webp folder"
+          echo "Remove all webp folder"
+          if [[ -d "jekyll/assets/webp" ]]; then
+            rm -vrf "jekyll/assets/webp"
+          fi
+          mkdir "jekyll/assets/webp"
+          echo "::endgroup::"
+        shell: bash
+        
+      - name: Create webp jpg images
+        id: create-webp-jpg-images
         uses: ./.github/actions/webp
         with:
           target-folder: "jekyll/assets/webp"
           original-folder: "jekyll/assets/originals"
-          extensions-regex: "jpg|png"
+          extensions-regex: "jpg"
+          
+      - name: Create webp png images
+        id: create-webp-png-images
+        uses: ./.github/actions/webp
+        with:
+          target-folder: "jekyll/assets/webp"
+          original-folder: "jekyll/assets/originals"
+          extensions-regex: "png"
           
       - name: Upload webp folders through artifacts
         uses: actions/upload-artifact@v1
