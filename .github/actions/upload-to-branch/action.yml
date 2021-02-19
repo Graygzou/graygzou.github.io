@@ -6,13 +6,21 @@ inputs:
     description: "The target branch to push to"
     required: false
     default: "develop"
+  user-name:
+    description: "name of the user pushing to github"
+    required: true
+    default: ""
+  user-mail:
+    description: "email of the user pushing to github"
+    required: true
+    default: ""
 runs:
   using: "composite"
   steps:
     - name: Config git
       run: |
-        git config user.email ${{ secrets.BOT_ACCOUNT_MAIL }}
-        git config user.name ${{ secrets.BOT_ACCOUNT_NAME }}
+        git config user.email ${{ inputs.user-mail }}
+        git config user.name ${{ inputs.user-name }}
         git config pull.ff only
       shell: bash
 
@@ -25,7 +33,6 @@ runs:
       shell: bash
 
     - name: Add changement to branch
-      if: ${{ success() }}
       run: |
         git add .
         git commit -m "[ignore] Upload files generate by the job #$GITHUB_RUN_ID $GITHUB_ACTION"

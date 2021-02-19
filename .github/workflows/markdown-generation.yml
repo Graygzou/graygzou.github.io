@@ -43,9 +43,11 @@ jobs:
           name: project-pages
           path: jekyll/collections/_project-pages/
 
-      - name: Resize png images
+      - name: Upload to branch
         uses: ./.github/actions/upload-to-branch
         with:
           target-branch: develop
+          user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
+          user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}
 
 
