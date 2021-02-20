@@ -1,0 +1,43 @@
+name: Compress images
+
+on:
+  push:
+  pull_request:
+    branches: [ release ]
+
+  workflow_dispatch:
+
+jobs:
+
+  compress:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Github checkout
+        uses: actions/checkout@v2
+
+      - name: pngquant-png-compression
+        run: ./scripts/integration/pngquant-compression.sh
+
+      - name: guetzli-jpg-compression
+        run: ./scripts/integration/guetzli-compression.sh
+
+      - name: Upload compressed image
+        uses: actions/upload-artifact@v1
+        with:
+          name: compressed-image
+          path: jekyll/site/assets/project-images/
+
+      - name: Test
+        run: |
+          echo github.ref
+          echo $GITHUB_REF
+
+      - name: Upload to branch
+        uses: ./.github/actions/upload-to-branch
+        with:
+          target-branch: github.ref
+          user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
+          user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}
