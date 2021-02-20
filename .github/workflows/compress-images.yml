@@ -6,7 +6,6 @@
 name: Compress images
 
 on:
-  push:
   pull_request:
     branches: [ release ]
 
