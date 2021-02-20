@@ -15,8 +15,10 @@ runs:
   steps:
     - name: Download package
       run: |
+        echo "::group::download imagemagick"
         wget https://www.imagemagick.org/download/ImageMagick.tar.gz
         tar xf ImageMagick.tar.gz
+        echo "::endgroup::"
       shell: bash
 
     - name: Install packages
@@ -41,7 +43,18 @@ runs:
 
       # Try to find if any file matching the provided extension
     - name: Run script
-      run: ./scripts/generation/image-magick.sh ${{ inputs.extension }}
+      run: |
+        echo "::group::use imagemagick"
+        ./scripts/generation/image-magick.sh ${{ inputs.extension }}
+        echo "::endgroup::"
+      shell: bash
+
+    - name: Remove package installed
+      run: |
+        echo "::group::remove imagemagick files"
+        rm -vrf ImageMagick-7*
+        rm -vrf ImageMagick.tar.gz
+        echo "::endgroup::"
       shell: bash
 
 branding:
