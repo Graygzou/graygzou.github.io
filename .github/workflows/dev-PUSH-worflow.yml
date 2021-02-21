@@ -209,6 +209,7 @@ jobs:
           echo "::endgroup::"
       
   grammar-bot:
+    if: false
     name: Run grammar bot
     runs-on: ubuntu-latest
     needs: build

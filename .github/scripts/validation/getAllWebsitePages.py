@@ -20,7 +20,7 @@ def parse(isProduction, xmlPath):
 
     for url in root.findall('{http://www.sitemaps.org/schemas/sitemap/0.9}url'):
         loc = url.find('{http://www.sitemaps.org/schemas/sitemap/0.9}loc').text
-        if ".pdf" not in loc:
+        if ".pdf" not in loc and "googlee773686fa91f6631" not in loc:
             #if not isProduction:
             #    loc = "http://localhost:4000/" + loc
             urls += "\"" + loc + "\", " + '\n' + INDENTATION
