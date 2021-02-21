@@ -130,6 +130,8 @@ jobs:
     defaults:
       run:
         shell: bash
+    env:
+      LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
     steps:
       - name: Github checkout
         uses: actions/checkout@v2
@@ -189,7 +191,7 @@ jobs:
       - name: Run health checks
         run: |
           echo "::group::healthcheck_lighthouse"
-          lhci healthcheck --fatal --checks=githubToken
+          lhci healthcheck --fatal --checks=${{ env.LHCI_GITHUB_APP_TOKEN }}
           echo "::endgroup::"
 
       # Run the tests
