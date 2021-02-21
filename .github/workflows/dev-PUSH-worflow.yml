@@ -140,6 +140,9 @@ jobs:
         with:
           node-version: '12'
 
+      - name: Make script executables
+        run: chmod +x scripts/*/*.sh
+
       - name: Run Lighthouse CI
         run: ./scripts/validation/lighthouse-ci.sh
 
@@ -203,6 +206,9 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
+      - name: Make script executables
+        run: chmod +x scripts/*/*.sh
 
       - name: Run grammar bot check
         run: |

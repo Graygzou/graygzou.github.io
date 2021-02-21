@@ -22,6 +22,9 @@ jobs:
       - name: Github checkout
         uses: actions/checkout@v2
 
+      - name: Make script executables
+        run: chmod +x scripts/*/*.sh
+
       - name: pngquant-png-compression
         run: ./scripts/integration/pngquant-compression.sh
 
