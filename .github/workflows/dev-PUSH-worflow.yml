@@ -151,6 +151,25 @@ jobs:
           echo "::group::install_lighthouse_ci"
           npm install -g @lhci/cli@0.3.x
           echo "::endgroup::"
+
+      - name: Github Set up Ruby 2.6
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 2.6.x
+
+      - name: Install bundler
+        run: gem install bundler
+        shell: bash
+
+      - name: Setup bundler correctly
+        working-directory: jekyll/
+        run: |
+          echo "::group::bundle commands"
+          bundle update --bundler
+          bundle config path vendor/bundle
+          bundle install --jobs 4 --retry 3
+          echo "::endgroup::"
+        shell: bash
           
       # Deploy the website locally so lighthouse can run tests on it
       # --detach option let us run commands after serving the site
@@ -161,10 +180,10 @@ jobs:
           echo "::endgroup::"
 
       # Create the config for lighthouse-ci
-      - name: Deploy website locally
+      - name: Create lighthouse config
         run: |
           echo "::group::init_lighthouse_config"
-          ( python scripts/validation/getAllWebsitePages.py 0 "jekyll/_site/sitemap.xml" \;)
+          ( python ./.github/scripts/validation/getAllWebsitePages.py 0 "jekyll/_site/sitemap.xml" \;)
           echo "::endgroup::"
 
       - name: Run health checks
