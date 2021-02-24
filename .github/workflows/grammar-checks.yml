@@ -16,7 +16,6 @@ jobs:
   jspell-checker:
     name: Run grammar bot
     runs-on: ubuntu-latest
-    needs: build
     defaults:
       run:
         shell: bash
