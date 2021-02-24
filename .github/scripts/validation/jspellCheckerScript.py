@@ -183,7 +183,7 @@ def main(jspellAPIKey):
 
     url = "https://jspell-checker.p.rapidapi.com/check"
 
-    payload = "{
+    payload = {
         \t\"language\": \"enUS\",
         \t\"fieldvalues\": \"thiss is intresting\",
         \t\"config\": {
@@ -195,7 +195,7 @@ def main(jspellAPIKey):
         \t\t\"ignoreDouble\": false,
         \t\t\"ignoreWordsWithNumbers\": true
         \t}
-        }"
+    }
     
     headers = {
         'content-type': "application/json",
