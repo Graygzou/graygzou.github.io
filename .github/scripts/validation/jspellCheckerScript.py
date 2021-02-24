@@ -183,19 +183,9 @@ def main(jspellAPIKey):
 
     url = "https://jspell-checker.p.rapidapi.com/check"
 
-    payload = {
-        \t\"language\": \"enUS\",
-        \t\"fieldvalues\": \"thiss is intresting\",
-        \t\"config\": {
-        \t\t\"forceUpperCase\": false,
-        \t\t\"ignoreIrregularCaps\": false,
-        \t\t\"ignoreFirstCaps\": true,
-        \t\t\"ignoreNumbers\": true,
-        \t\t\"ignoreUpper\": false,
-        \t\t\"ignoreDouble\": false,
-        \t\t\"ignoreWordsWithNumbers\": true
-        \t}
-    }
+    text = "thiss is intresting"
+
+    payload = "{\t\"language\": \"enUS\",\t\"fieldvalues\": \"" + text + "\",\t\"config\": {\t\t\"forceUpperCase\": false,\t\t\"ignoreIrregularCaps\": false,\t\t\"ignoreFirstCaps\": true,\t\t\"ignoreNumbers\": true,\t\t\"ignoreUpper\": false,\t\t\"ignoreDouble\": false,\t\t\"ignoreWordsWithNumbers\": true\t}}"
     
     headers = {
         'content-type': "application/json",

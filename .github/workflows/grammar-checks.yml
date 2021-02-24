@@ -36,16 +36,17 @@ jobs:
         run: chmod +x scripts/*/*.sh
         
       - name: Run jspell checker
-        run: python ./.github/scripts/validation/jspellCheckerScript.py ${{ secrets.JSPELL_TOKEN }}
+        run: python ./.github/scripts/validation/sanitizedText.py
 
       - name: Upload API results
         uses: actions/upload-artifact@v1
         with:
-          name: compressed-image
-          path: ./.github/scripts/SanitizedText/
+          name: sanitized-text
+          path: jekyll/_includes/projects-content-sanitized/
       
 
   jspell-checker:
+    if: false
     name: Run grammar bot
     runs-on: ubuntu-latest
     needs: sanitized-text
