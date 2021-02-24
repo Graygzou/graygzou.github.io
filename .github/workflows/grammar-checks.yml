@@ -36,7 +36,7 @@ jobs:
         run: chmod +x scripts/*/*.sh
         
       - name: Run jspell checker
-        run: python ./.github/scripts/validation/sanitizedText.py
+        run: python ./.github/scripts/validation/sanitizedText.py "jekyll/_includes/"
 
       - name: Upload API results
         uses: actions/upload-artifact@v1

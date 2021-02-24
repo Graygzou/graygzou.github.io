@@ -14,7 +14,6 @@ from pathlib import Path
 # Static const variables
 endOfFile = '\n'
 PROJECT_TXT_CONTENT_FOLDER = "projects-content-sanitized"
-RELATIVE_PATH = "../../jekyll/_includes/"
 
 # ----------------------------------------------------------------------------------
 #                    convertMdToPlainText
@@ -82,14 +81,14 @@ def convertMdToPlainText(pathReadFile, pathWriteFile, pathWriteFileMinify):
 # Main function
 # Arguments : (Github Token)
 # ----------------------------------------------------------------------------------
-def main():
+def main(pathToFolder):
 
     ## Create the folder "sanitized-txt" if it doesn't exist yet
-    if not os.path.exists(RELATIVE_PATH + PROJECT_TXT_CONTENT_FOLDER):
-        os.makedirs(RELATIVE_PATH + PROJECT_TXT_CONTENT_FOLDER)
+    if not os.path.exists(pathToFolder + PROJECT_TXT_CONTENT_FOLDER):
+        os.makedirs(pathToFolder + PROJECT_TXT_CONTENT_FOLDER)
 
     ## Iterates on all the project-pages
-    pathlist = Path(RELATIVE_PATH + "projects-content/").glob('**/*.markdown')
+    pathlist = Path(pathToFolder + "projects-content/").glob('**/*.markdown')
     print(str(pathlist))
 
     for path in pathlist:
@@ -97,8 +96,8 @@ def main():
         pathContent = str(path)
         print(">>> Start " + pathContent)
 
-        pathTxt = RELATIVE_PATH + PROJECT_TXT_CONTENT_FOLDER + '/' + str(path.stem) + "-txt" + str(path.suffix)
-        pathMinifyTxt = RELATIVE_PATH + PROJECT_TXT_CONTENT_FOLDER + '/' + str(path.stem) + "-txt-minify" + str(path.suffix)
+        pathTxt = pathToFolder + PROJECT_TXT_CONTENT_FOLDER + '/' + str(path.stem) + "-txt" + str(path.suffix)
+        pathMinifyTxt = pathToFolder + PROJECT_TXT_CONTENT_FOLDER + '/' + str(path.stem) + "-txt-minify" + str(path.suffix)
 
         # Post-process step to avoid having markdown flagged as errors during grammar checks
         content = convertMdToPlainText(pathContent, pathTxt, pathMinifyTxt)
@@ -107,5 +106,5 @@ def main():
 #enddef
 
 if __name__ == "__main__":
-    main()
+    main(sys.argv[1])
 #endif
