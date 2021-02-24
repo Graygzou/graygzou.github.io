@@ -21,8 +21,9 @@ RELATIVE_PATH = "../../jekyll/_includes/"
 # convertMdToPlainText function
 # Arguments :
 # ----------------------------------------------------------------------------------
-def convertMdToPlainText(pathReadFile, pathWriteFile):
-    file = open(pathWriteFile,'w')
+def convertMdToPlainText(pathReadFile, pathWriteFile, pathWriteFileMinify):
+    file = open(pathWriteFile, 'w')
+    fileMinify = open(pathWriteFileMinify, 'w')
 
     finalStr=""
 
@@ -70,6 +71,10 @@ def convertMdToPlainText(pathReadFile, pathWriteFile):
 
     file.close()
 
+    # Write the minify version
+    fileMinify.write(finalStr)
+    fileMinify.close()
+
     return finalStr
 
 # ----------------------------------------------------------------------------------
@@ -93,10 +98,10 @@ def main():
         print(">>> Start " + pathContent)
 
         pathTxt = RELATIVE_PATH + PROJECT_TXT_CONTENT_FOLDER + '/' + str(path.stem) + "-txt" + str(path.suffix)
+        pathMinifyTxt = RELATIVE_PATH + PROJECT_TXT_CONTENT_FOLDER + '/' + str(path.stem) + "-txt-minify" + str(path.suffix)
 
         # Post-process step to avoid having markdown flagged as errors during grammar checks
-        content = convertMdToPlainText(pathContent, pathTxt)
-
+        content = convertMdToPlainText(pathContent, pathTxt, pathMinifyTxt)
         print(content)
 
 #enddef

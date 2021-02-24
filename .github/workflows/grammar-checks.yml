@@ -42,7 +42,13 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: sanitized-text
-          path: jekyll/_includes/projects-content-sanitized/
+          path: '!jekyll/_includes/projects-content-sanitized/**-minify.markdown'
+      
+      - name: Upload API results
+        uses: actions/upload-artifact@v1
+        with:
+          name: sanitized-text
+          path: 'jekyll/_includes/projects-content-sanitized/**-minify.markdown'
       
 
   jspell-checker:
