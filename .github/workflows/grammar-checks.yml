@@ -41,13 +41,13 @@ jobs:
           git status
 
       - name: Upload API results
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
           name: sanitized-text
           path: jekyll/_includes/projects-content-sanitized/*txt.markdown
       
       - name: Upload API results
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
           name: sanitized-text
           path: jekyll/_includes/projects-content-sanitized/**-minify.markdown
