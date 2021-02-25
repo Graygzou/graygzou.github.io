@@ -45,8 +45,8 @@ jobs:
         with:
           name: sanitized-text
           path: |
-            jekyll/_includes/projects-content-sanitized/**.markdown
-            !jekyll/_includes/projects-content-sanitized/**-minify.markdown
+            jekyll/_includes/projects-content-sanitized/*.markdown
+            !jekyll/_includes/projects-content-sanitized/*-minify.markdown
       
       - name: Upload API results
         uses: actions/upload-artifact@v1
