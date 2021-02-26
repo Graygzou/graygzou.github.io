@@ -49,8 +49,11 @@ def convertMdToPlainText(pathReadFile, pathWriteFile, pathWriteFileMinify):
         # Remove front matters (for blog post later on)
         line = re.sub(r'-{3}(\n|.*:.*)*-{3}', '', line)
 
-        # Remove liquid tags
-        line = re.sub(r'\{\%.*\%\}', '', line)
+        # Remove escape character
+        line = re.sub(r'-{3}(\n|.*:.*)*-{3}', '', line)
+
+        # Remove special character (\, *)
+        line = re.sub(r'\\|\*', '', line)
 
         # Remove all \n for curl request
         mergedLine = re.sub(r'\n', ' ', line)
