@@ -60,6 +60,8 @@ jobs:
     defaults:
       run:
         shell: bash
+    env:
+      GRAMMAR-FOLDER_RESULT: '.'
     steps:
       - name: Github checkout
         uses: actions/checkout@v2
@@ -82,10 +84,10 @@ jobs:
         run: chmod +x scripts/*/*.sh
 
       - name: Run jspell checker
-        run: python ./.github/scripts/validation/jspellCheckerScript.py ${{ secrets.JSPELL_TOKEN }} content/
+        run: python ./.github/scripts/validation/jspellCheckerScript.py ${{ secrets.JSPELL_TOKEN }} content/ ${{ env.GRAMMAR-FOLDER_RESULT }}
 
       - name: Upload API results
         uses: actions/upload-artifact@v1
         with:
-          name: compressed-image
-          path: ./.github/scripts/APIResults.txt
+          name: grammar-check-results
+          path: ${{ env.GRAMMAR-FOLDER_RESULT }}/results.txt
