@@ -24,7 +24,7 @@ Each level belong to one of the world the player as to go through :
 * Several AI for enemies.
 
 ### Level editor
-Like the original game "Lode Runner - The Legend Returns" we decided to create a game editor. 
+Like the original game `Lode Runner - The Legend Returns` we decided to create a game editor. 
 We did not create a user interface for the editor so regular user will not be able to use it. 
 We made this tool for game designer to help them create levels. 
 They just have write down where blocs should be and to specify their kind.

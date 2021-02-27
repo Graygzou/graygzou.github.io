@@ -17,16 +17,16 @@ The final goal was to make bots behave like human as much as possible and create
 
 ### Added Features
 * A human player and custom controls (ZQSD movement with mouse scroll to switch weapons).
-* Introduce "fuzzy logic" to bots.
+* Introduce `fuzzy logic` to bots.
 * New weapon in the game : a grenade.
 * Introduce a learning bot (create neural network and train it with game data).
 * Two new modes : team death-match and Duel mode (1vs1).
-* Three Bot behaviors for duel mode ("Burnhead", "Coward" and "Weapon Collector").
+* Three Bot behaviors for duel mode (`Burnhead`, `Coward` and `Weapon Collector`).
 * Add a new map.
 
 ### IA techniques
 #### Goal-Driven Agent Behavior
-In this application Mat Buckland decided to add a "brain" to each bots in the game. 
+In this application Mat Buckland decided to add a brain to each bots in the game. 
 This brain used goal-driven behavior to tell the bot what he should do right now based on game entries.
 
 #### Goal decomposition
@@ -55,7 +55,7 @@ In addition, a memory has been add to be able to stop a current goal, make some 
 
 #### Fuzzy Logic
 Fuzzy logic were also introduced to make bots choose their weapons based on the game context. 
-Fuzzy logic is initially used to put values on vague linguistic terms like "small amount", "slightly", etc.
+Fuzzy logic is initially used to put values on vague linguistic terms like `small amount`, `slightly`, etc.
 
 Thanks to Bayesian statistics and probabilities, we can defined a fuzzy set that describe the desirability of a weapon based on a specific parameter. 
 By adding fuzzy rules to it, we will be able to compute the final value which will tell the bot, based on a final fuzzy set, which weapon is the best right now.
@@ -67,7 +67,7 @@ By adding fuzzy rules to it, we will be able to compute the final value which wi
 
 #### Neural Network
 Finally, we implemented a neural network in this application to let a bot learned how to shoot. 
-To do so, we used a multi-layer perceptron (MLP) and train it "to shoot or not" with specific inputs. 
+To do so, we used a multi-layer perceptron (MLP) and train it to shoot or not with specific inputs. 
 Those inputs were the following :
 * Is the enemy visible ? (0 or 1)
 * Does the enemy has maximum health ? (0 or 1)

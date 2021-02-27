@@ -7,7 +7,7 @@ Screenshots
 
 Detailed Info
 --------------------
-We build 4 different levels with progressive "difficulty" in order to help player get used to spiders:
+We built 4 different levels with progressive difficulty in order to help player get used to spiders. Levels are the following in increasing difficulty:
 * The museum
 * The playground
 * The house

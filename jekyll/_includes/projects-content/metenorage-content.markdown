@@ -26,7 +26,7 @@ We decided to use it and make it simple for the user.
 Source component can be attached to entities but each sources can only play one clip (OpenAL let source components managed many clips but we chose to restrict this).
 
 #### The Scripting System
-We chose to implements a scripting system to allow users to create their game logic without knowing the engine. In addition, we chose to hide the engine methods to "protect his integrity" of the engine. To call a specific method, the script will go throught his parent class that will add his request to a "Messaging queue". The engine checks this queue every update to process and empty it.
+We chose to implements a scripting system to allow users to create their game logic without knowing the engine. In addition, we chose to hide the engine methods to keep his integrity of the engine. To call a specific method, the script will go throught his parent class that will add his request to a messaging queue. The engine checks this queue every update to process and empty it.
 
 #### The Editor
 To create games easily, we implemented a game editor. 
