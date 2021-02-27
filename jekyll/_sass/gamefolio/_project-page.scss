@@ -176,6 +176,31 @@ iframe {
 }
 
 /* Native Ruins puzzles */
+.puzzle-img {
+	vertical-align: top;
+	float: right;
+	border-radius: 10px;
+}
+
+.puzzle-solutions {
+	display: block;
+}
+
+.puzzle-caption {
+	float: right;
+	max-width: $max-width-puzzle-caption;
+
+	table {
+		td {
+			border: none;
+			padding: 0px;
+		}
+		th {
+			padding: 0px;
+		}
+	}
+}
+
 .puzzle {
 	margin: 0 auto;
 	padding: 2%;

@@ -4,26 +4,14 @@
 Game Design Document
 --------------------
 For more details about the game and the core mechanics, take a look at the Game Design Document. Some details were modified due to deadlines. This document contains 8 sections which are the following :
-<table>
-  <tr>
-    <td>
-		<ul>
-            <li>Overview</li>
-            <li>Background and characters</li>
-            <li>Gameplay and mechanics</li>
-            <li>Levels</li>
-	    </ul>
-    </td>
-    <td>
-	    <ul>
-		    <li>User Interface (UI)</li>
-		    <li>Artificial Intelligence (AI)</li>
-		    <li>Technicals details</li>
-		    <li>User stories and planification</li>
-	    </ul>
-    </td>
-  </tr>
-</table>
+
+|Sections                                                          ||
+|-----------------------------|-------------------------------------|
+|1. Overview                  | 5. User Interface (UI)              |
+|2. Background and characters | 6. Artificial Intelligence (AI)     |
+|3. Gameplay and mechanics    | 7. Technicals details               |
+|4. Levels                    | 8. User stories and planification   |
+
 Click here to take a look at the GDD : [Game Design Document - Native Ruins](/assets/Game Design Document - Native Ruins.pdf).
 
 Screenshots
@@ -38,26 +26,13 @@ It takes around 30 minutes to finish the game if the player doesn't get too lost
 
 ### Scripting (C#)
 Here a list of main features we implements in this video game :
-<table>
-  <tr>
-    <td>
-	    <ul>
-            <li>Player movements (ZQSD movement in the camera's direction)</li>
-            <li>Third person Camera (independent from the player)</li>
-            <li>Animals artificial intelligence (movement and behavior)</li>
-            <li>Fighting system (losing health and apply damages)</li>
-	    </ul>
-    </td>
-    <td>
-	    <ul>
-		    <li>Bow mechanics (aim toward mouse cursor with body rotation)</li>
-		    <li>Player animations</li>
-		    <li>Mirror's reflection script (Second Enigme with laser)</li>
-		    <li>Physics system bag (dropping objects and interact with them)</li>
-	    </ul>
-    </td>
-  </tr>
-</table>
+
+| Features                                                         ||
+|-----------------------------|-------------------------------------|
+| Player movements (ZQSD movement in the camera's direction)    | Bow mechanics (aim toward mouse cursor with body rotation) |
+| Third person Camera (independent from the player)             | Player animations |
+|Animals artificial intelligence (movement and behavior)        | Mirror's reflection script (Second Enigme with laser) |
+| Fighting system (losing health and apply damages)             | Physics system bag (dropping objects and interact with them) |
 
 ### IA techniques
 #### Steering Behavior
@@ -85,39 +60,43 @@ Our game contains two jumping puzzles.
 The first one can be accomplished at the beginning of the game when the player hasn't got any additional abilities yet. 
 Those will be later add, thanks to spirit totems.
 
-<div class="puzzle">
-  <div>
-    <h4>Native Ruins</h4>
-    <span class="puzzle-subtitles">Enigme 1 - First jumping puzzle</span>
-    <table>
-	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/jump2.png" alt="jump icon"> Jumping actions</td> </tr>
-	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/run2.png" alt="run icon">Running actions</td> </tr>
-	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/totem.png" alt="totem icon">Bear Totem</td> </tr>
-    </table>
-    <span class="puzzle-subtitles">Puzzle solution :</span>
-    <ol>
-	    <li>Climb on the tree.</li>
-	    <li>Jump four times on the closer rock.</li>
-	    <li>Climb the second log of wood.</li>
-	    <li>Make two running jumps to continue.</li>
-	    <li>Fall on the inclined rocks and jump at the right moment to land on the rock.</li>
-	    <li>Jump on the next rock and finish by a running jump.</li>
-	    <li>Press E to obtain the bear totem.</li>
-    </ol>
-  </div>
-  {% capture image_path %}/assets/project-images/native-ruins/enigme1noted.png{% endcapture %}
-  {% capture image_path_webp %}/assets/webp/enigme1noted.webp{% endcapture %}
-  {% include images-handler.html alt="puzzle 1" filename=image_path webp=image_path_webp %}
-</div>
+Enigme 1 - First jumping puzzle
+{: .puzzle-subtitles}
+
+{% capture image_path %}/assets/project-images/native-ruins/enigme1noted.png{% endcapture %}
+{% capture image_path_webp %}/assets/webp/enigme1noted.webp{% endcapture %}
+{% include images-handler.html alt="puzzle 1" filename=image_path webp=image_path_webp %}
+{: .puzzle-img}
+
+|-------------------|------------------------------|--------------------------------|
+| ![](/assets/project-images/native-ruins/Puzzle-icons/jump2.png) Jumping actions | ![](/assets/project-images/native-ruins/Puzzle-icons/run2.png) Running actions  | ![](/assets/project-images/native-ruins/Puzzle-icons/totem.png) Bear Totem      |
+{: .puzzle-caption}
+
+| *Puzzle solution*                                                             |
+|-------------------------------------------------------------------------------|
+| 1. Climb on the tree.                                                            |
+| 2. Jump four times on the closer rock.                                           |
+| 3. Climb the second log of wood.                                                 |
+| 4. Make two running jumps to continue.                                           |
+| 5. Fall on the inclined rocks and jump at the right moment to land on the rock.  |
+| 6. Jump on the next rock and finish by a running jump.                           |
+| 7. Press E to obtain the bear totem.                                             |
+{: .puzzle-solutions}
+
+Enigme 4 - Second jumping puzzle
+{: .puzzle-subtitles}
+
+{% capture image_path %}/assets/project-images/native-ruins/enigme4noted.png{% endcapture %}
+{% capture image_path_webp %}/assets/webp/enigme4noted.webp{% endcapture %}
+{% include images-handler.html alt="puzzle 4" filename=image_path webp=image_path_webp %}
+{: .puzzle-img}
 
 The second puzzle requires all the spirit totems : 
 the bear totem and the wolf totem. 
 That's why, it's the last puzzle in the game.
 
 <div class="puzzle">
-  {% capture image_path %}/assets/project-images/native-ruins/enigme4noted.png{% endcapture %}
-  {% capture image_path_webp %}/assets/webp/enigme4noted.webp{% endcapture %}
-  {% include images-handler.html alt="puzzle 4" filename=image_path webp=image_path_webp %}
+  
   <div>
     <h4>Native Ruins</h4>
     <span class="puzzle-subtitles">Enigme 4 - Second jumping puzzle</span>
