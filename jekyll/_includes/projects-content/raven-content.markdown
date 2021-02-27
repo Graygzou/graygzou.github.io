@@ -60,10 +60,15 @@ Fuzzy logic is initially used to put values on vague linguistic terms like `smal
 Thanks to Bayesian statistics and probabilities, we can defined a fuzzy set that describe the desirability of a weapon based on a specific parameter. 
 By adding fuzzy rules to it, we will be able to compute the final value which will tell the bot, based on a final fuzzy set, which weapon is the best right now.
 
-<div class="bloc-images">
-    <img src="/assets/project-images/raven/ammo-fuzzy.png" alt="ammo-fuzzy">
-    <img src="/assets/project-images/raven/weapon-fuzzy.png" alt="weapon-fuzzy">
-</div>
+{% capture image_path %}/assets/project-images/raven/ammo-fuzzy.png{% endcapture %}
+{% capture image_path_webp %}/assets/project-images/raven/ammo-fuzzy.webp{% endcapture %}
+{% include images-handler.html alt="ammo-fuzzy" filename=image_path webp=image_path_webp %}
+{: .bloc-images}
+
+{% capture image_path %}/assets/project-images/raven/weapon-fuzzy.png{% endcapture %}
+{% capture image_path_webp %}/assets/project-images/raven/weapon-fuzzy.png{% endcapture %}
+{% include images-handler.html alt="weapon-fuzzy" filename=image_path webp=image_path_webp %}
+{: .bloc-images}
 
 #### Neural Network
 Finally, we implemented a neural network in this application to let a bot learned how to shoot. 
@@ -79,14 +84,15 @@ We used the back-propagation to trained the network, which is a traditional supe
 To make sure the net was trained, we made tests with other data than our training data and we analysed results. 
 We've find out that our learning process were doing good and we finally tested it in-game.
 
-<div class="bloc-images">
-    {% capture image_path %}/assets/project-images/raven/network.png{% endcapture %}
-    {% capture image_path_webp %}/assets/webp/network.webp{% endcapture %}
-    {% include images-handler.html alt="network" filename=image_path webp=image_path_webp %}
-    {% capture image_path %}/assets/project-images/raven/results.png{% endcapture %}
-    {% capture image_path_webp %}/assets/webp/results.webp{% endcapture %}
-    {% include images-handler.html alt="results" filename=image_path webp=image_path_webp %}
-</div>
+{% capture image_path %}/assets/project-images/raven/network.png{% endcapture %}
+{% capture image_path_webp %}/assets/webp/network.webp{% endcapture %}
+{% include images-handler.html alt="network" filename=image_path webp=image_path_webp %}
+{: .bloc-images}
+
+{% capture image_path %}/assets/project-images/raven/results.png{% endcapture %}
+{% capture image_path_webp %}/assets/webp/results.webp{% endcapture %}
+{% include images-handler.html alt="results" filename=image_path webp=image_path_webp %}
+{: .bloc-images}
 
 The final results were correct since the learning bot shoot at the other bots. 
 We even noticed that his score were slightly higher than the average.
