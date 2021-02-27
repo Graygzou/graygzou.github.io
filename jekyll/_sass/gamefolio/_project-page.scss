@@ -45,6 +45,15 @@
 
 	div {
 		margin-bottom: 10px;
+
+		ul {
+			margin-bottom: 0px;
+			list-style-type: circle;
+
+			li {
+				padding: 0px;
+			}
+		}
 	}
 }
 
@@ -96,12 +105,6 @@
 
 .ul_goal {
 	list-style-type: none;
-}
-
-.bloc-images {
-	img {
-		width: 49%;
-	}
 }
 
 iframe {
@@ -190,14 +193,15 @@ iframe {
 	float: right;
 	max-width: $max-width-puzzle-caption;
 
-	table {
-		td {
-			border: none;
-			padding: 0px;
-		}
-		th {
-			padding: 0px;
-		}
+	td {
+		border: none;
+		padding: 0px;
+	}
+	th {
+		padding: 0px;
+	}
+	img {
+		max-width: 40px;
 	}
 }
 
@@ -271,12 +275,12 @@ iframe {
 }
 
 .bloc-images {
-	display: block;
 	text-align: center;
 
 	img {
 		display: inline-block;
-		width: 40%;
+		width: 35%;
+		min-width: 200px;
 	}
 }
 
