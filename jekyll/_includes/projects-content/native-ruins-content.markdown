@@ -86,38 +86,31 @@ Enigme 1 - First jumping puzzle
 Enigme 4 - Second jumping puzzle
 {: .puzzle-subtitles}
 
+The second puzzle requires all the spirit totems : 
+the bear totem and the wolf totem. 
+That's why, it's the last puzzle in the game.
+
 {% capture image_path %}/assets/project-images/native-ruins/enigme4noted.png{% endcapture %}
 {% capture image_path_webp %}/assets/webp/enigme4noted.webp{% endcapture %}
 {% include images-handler.html alt="puzzle 4" filename=image_path webp=image_path_webp %}
 {: .puzzle-img}
 
-The second puzzle requires all the spirit totems : 
-the bear totem and the wolf totem. 
-That's why, it's the last puzzle in the game.
+|-------------------|------------------------------|-----------------|---------------|
+| ![](/assets/project-images/native-ruins/Puzzle-icons/jump2.png) Jumping actions | ![](/assets/project-images/native-ruins/Puzzle-icons/run2.png) Running actions  | ![](/assets/project-images/native-ruins/Puzzle-icons/TS.png) Transformation Switch | ![](/assets/project-images/native-ruins/Puzzle-icons/rope.png) Rope |
+{: .puzzle-caption}
 
-<div class="puzzle">
-  
-  <div>
-    <h4>Native Ruins</h4>
-    <span class="puzzle-subtitles">Enigme 4 - Second jumping puzzle</span>
-    <table>
-	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/jump2.png" alt="jump icon">Jumping actions</td> </tr>
-	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/run2.png" alt="run icon">Running actions</td> </tr>
-	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/TS.png" alt="transformation switch">Transformation Switch</td> </tr>
-	    <tr> <td class="bloc"> <img src="/assets/project-images/native-ruins/Puzzle-icons/rope.png" alt="rope icon"> Rope</td> </tr>
-    </table>
-    <span class="puzzle-subtitles">Puzzle solution :</span>
-    <ol>
-	    <li>Jump on the tree and go at the end.</li>
-	    <li>lift the tree by using the bear transformation.</li>
-	    <li>Use the Puma transformation to run and jump on the rock.</li>
-	    <li>Press E to obtain the rope.</li>
-    </ol>
-  </div>   
-</div>
+| *Puzzle solution*                                                             |
+|-------------------------------------------------------------------------------|
+| 1. Jump on the tree and go at the end.                                        |
+| 2. Lift the tree by using the bear transformation.                            |
+| 3. Use the Puma transformation to run and jump on the rock.                   |
+| 4. Quickly run since the tree will go back to his initial position            |
+| 5. When reaching the end of the tree jump to climb on the rock.               |
+| 6. Press E to obtain the rope.                                                |
+{: .puzzle-solutions}
 
 #### Mirror puzzle
-This puzzle is inspired from Prince Of Persia : 
+This puzzle is inspired from [Prince Of Persia](https://fr.wikipedia.org/wiki/Prince_of_Persia): 
 the player has project a laser coming from a point A to another point B to lift a fence. 
 He can move mirrors along the room to allow the laser beam in the right direction. 
 To not frustrated user with this puzzle, we decided to restrict to the maximum mirrors movements.
@@ -126,54 +119,46 @@ We also added the following constraint :
 mirrors can only be moved in bear form. 
 This helps keep the puzzles order we decided.
 
-<div class="puzzle">
-  <div>
-    <h4>Native Ruins</h4>
-    <span class="puzzle-subtitles">Enigme 2 - Mirror puzzle</span>
-    <table>
-	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/laser.png" alt="laser icon">Laser beam</td> </tr>
-	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/bear1.png" alt="initial bear pos icon">Moving bears initial positions</td> </tr>
-	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/bear2.png" alt="final bear pos icon">Right position</td> </tr>
-	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/sail.png" alt="sail icon">Sail</td> </tr>
-    </table>
-    <span class="puzzle-subtitles">Puzzle solution :</span>
-    <ol>
-	    <li>Transform in Bear form.</li>
-	    <li>Push the closest bear in front of the beam.</li>
-	    <li>Push the second bear to hit the further mirror on the other side of the room.</li>
-	    <li>Push the last moving bear on the right to meet the beam.</li>
-	    <li>Once the gate's open, Press E near the sail to pick it up.</li>
-    </ol>
-  </div>
-  {% capture image_path %}/assets/project-images/native-ruins/enigme2noted.png{% endcapture %}
-  {% capture image_path_webp %}/assets/webp/enigme2noted.webp{% endcapture %}
-  {% include images-handler.html alt="puzzle 2" filename=image_path webp=image_path_webp %}
-</div>
+{% capture image_path %}/assets/project-images/native-ruins/enigme2noted.png{% endcapture %}
+{% capture image_path_webp %}/assets/webp/enigme2noted.webp{% endcapture %}
+{% include images-handler.html alt="puzzle 2" filename=image_path webp=image_path_webp %}
+{: .puzzle-img}
+
+|-------------------|------------------------------|-----------------|---------------|
+| ![](/assets/project-images/native-ruins/Puzzle-icons/laser.png) Laser beam | ![](/assets/project-images/native-ruins/Puzzle-icons/bear1.png) Moving bears initial positions  | ![](/assets/project-images/native-ruins/Puzzle-icons/bear2.png) Right position | ![](/assets/project-images/native-ruins/Puzzle-icons/sail.png) Sail |
+{: .puzzle-caption}
+
+| *Puzzle solution*                                                                 |
+|-----------------------------------------------------------------------------------|
+| 1. Transform in Bear form.                                                        |
+| 2. Push the closest bear in front of the beam.                                    |
+| 3. Push the second bear to hit the further mirror on the other side of the room.  |
+| 4. Quickly run since the tree will go back to his initial position                |
+| 5. Push the last moving bear on the right to meet the beam.                       |
+| 6. Once the gate's open, Press E near the sail to pick it up.                     |
+{: .puzzle-solutions}
 
 #### Action puzzle
 Finally, we created an action puzzle where the player has to destroy rocks with his bear transformation. 
 This puzzle is simple but it's the player's job to find out by himself the correct way.
 
-<div class="puzzle">
-  {% capture image_path %}/assets/project-images/native-ruins/enigme3noted.png{% endcapture %}
-  {% capture image_path_webp %}/assets/webp/enigme3noted.webp{% endcapture %}
-  {% include images-handler.html alt="puzzle 3" filename=image_path webp=image_path_webp %}
-  <div>
-    <h4>Native Ruins</h4>
-    <span class="puzzle-subtitles">Enigme 3 - </span>
-    <table>
-	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/circle.png" alt="circle">imaged Breakable rocks</td> </tr>
-	    <tr> <td class="bloc"><img src="/assets/project-images/native-ruins/Puzzle-icons/totem.png" alt="totem icon">Wolf Totem</td> </tr>
-    </table>
-    <span class="puzzle-subtitles">Puzzle solution :</span>
-    <ol>
-	    <li>Transform in Bear form.</li>
-	    <li>Run into rocks to break them one after the other</li>
-	    <li>Once the front rocks are break, walk to the totem.</li>
-	    <li>Press E to pick up the wolf totem.</li>
-    </ol>
-  </div>   
-</div>
+{% capture image_path %}/assets/project-images/native-ruins/enigme3noted.png{% endcapture %}
+{% capture image_path_webp %}/assets/webp/enigme3noted.webp{% endcapture %}
+{% include images-handler.html alt="puzzle 3" filename=image_path webp=image_path_webp %}
+{: .puzzle-img}
+
+|-------------------|--------------------------------------------------------------|
+| ![](/assets/project-images/native-ruins/Puzzle-icons/circle.png) imaged Breakable rocks | ![](/assets/project-images/native-ruins/Puzzle-icons/totem.png) Wolf Totem  |
+{: .puzzle-caption}
+
+| *Puzzle solution*                                                                 |
+|-----------------------------------------------------------------------------------|
+| 1. Transform in Bear form.                                                        |
+| 2. Run into rocks in front of the gates to break                                  |
+| 3. Keep going until you have a path large enough to go through.                   |
+| 4. Once you clean up all the rocks in front of you, walk to the totem.            |
+| 5. Press E to pick up the wolf totem.                                             |
+{: .puzzle-solutions}
 
 ### Dialogues & Cut-scenes
 Finally, we decided to creates in-game cut-scenes to have a better user-experience. 
