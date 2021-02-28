@@ -3,10 +3,11 @@
 # Copyright (c) 2018-2021 Grégoire Boiron  All Rights Reserved.
 #############################################################################
 
-name: Basic CI on push
+name: Build and Tests
 
 on:
   push:
+  pull_request:
     branches:
       - develop
 
