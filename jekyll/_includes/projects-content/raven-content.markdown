@@ -61,12 +61,12 @@ Thanks to Bayesian statistics and probabilities, we can defined a fuzzy set that
 By adding fuzzy rules to it, we will be able to compute the final value which will tell the bot, based on a final fuzzy set, which weapon is the best right now.
 
 {% capture image_path %}/assets/project-images/raven/ammo-fuzzy.png{% endcapture %}
-{% capture image_path_webp %}/assets/project-images/raven/ammo-fuzzy.webp{% endcapture %}
+{% capture image_path_webp %}/assets/webp/ammo-fuzzy.webp{% endcapture %}
 {% include images-handler.html alt="ammo-fuzzy" filename=image_path webp=image_path_webp %}
 {: .bloc-images}
 
 {% capture image_path %}/assets/project-images/raven/weapon-fuzzy.png{% endcapture %}
-{% capture image_path_webp %}/assets/project-images/raven/weapon-fuzzy.png{% endcapture %}
+{% capture image_path_webp %}/assets/webp/weapon-fuzzy.webp{% endcapture %}
 {% include images-handler.html alt="weapon-fuzzy" filename=image_path webp=image_path_webp %}
 {: .bloc-images}
 

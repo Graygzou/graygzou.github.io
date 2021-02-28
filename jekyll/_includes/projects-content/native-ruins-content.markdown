@@ -69,7 +69,7 @@ Enigme 1 - First jumping puzzle
 {: .puzzle-img}
 
 |-------------------|------------------------------|--------------------------------|
-| ![](/assets/project-images/native-ruins/Puzzle-icons/jump2.png) Jumping actions | ![](/assets/project-images/native-ruins/Puzzle-icons/run2.png) Running actions  | ![](/assets/project-images/native-ruins/Puzzle-icons/totem.png) Bear Totem      |
+| ![Jumping action](/assets/project-images/native-ruins/Puzzle-icons/jump2.png) Jumping actions | ![Running action](/assets/project-images/native-ruins/Puzzle-icons/run2.png) Running actions  | ![Bear totem](/assets/project-images/native-ruins/Puzzle-icons/totem.png) Bear Totem      |
 {: .puzzle-caption}
 
 | *Puzzle solution*                                                             |
@@ -96,7 +96,7 @@ That's why, it's the last puzzle in the game.
 {: .puzzle-img}
 
 |-------------------|------------------------------|-----------------|---------------|
-| ![](/assets/project-images/native-ruins/Puzzle-icons/jump2.png) Jumping actions | ![](/assets/project-images/native-ruins/Puzzle-icons/run2.png) Running actions  | ![](/assets/project-images/native-ruins/Puzzle-icons/TS.png) Transformation Switch | ![](/assets/project-images/native-ruins/Puzzle-icons/rope.png) Rope |
+| ![Jumping action](/assets/project-images/native-ruins/Puzzle-icons/jump2.png) Jumping actions | ![Running action](/assets/project-images/native-ruins/Puzzle-icons/run2.png) Running actions  | ![Transformation switch](/assets/project-images/native-ruins/Puzzle-icons/TS.png) Transformation Switch | ![Rope](/assets/project-images/native-ruins/Puzzle-icons/rope.png) Rope |
 {: .puzzle-caption}
 
 | *Puzzle solution*                                                             |
@@ -125,7 +125,7 @@ This helps keep the puzzles order we decided.
 {: .puzzle-img}
 
 |-------------------|------------------------------|-----------------|---------------|
-| ![](/assets/project-images/native-ruins/Puzzle-icons/laser.png) Laser beam | ![](/assets/project-images/native-ruins/Puzzle-icons/bear1.png) Moving bears initial positions  | ![](/assets/project-images/native-ruins/Puzzle-icons/bear2.png) Right position | ![](/assets/project-images/native-ruins/Puzzle-icons/sail.png) Sail |
+| ![Laser beam](/assets/project-images/native-ruins/Puzzle-icons/laser.png) Laser beam | ![Bear statue initial position](/assets/project-images/native-ruins/Puzzle-icons/bear1.png) Moving bears initial positions  | ![Bear statue final position](/assets/project-images/native-ruins/Puzzle-icons/bear2.png) Right position | ![Sail](/assets/project-images/native-ruins/Puzzle-icons/sail.png) Sail |
 {: .puzzle-caption}
 
 | *Puzzle solution*                                                                 |
@@ -148,7 +148,7 @@ This puzzle is simple but it's the player's job to find out by himself the corre
 {: .puzzle-img}
 
 |-------------------|--------------------------------------------------------------|
-| ![](/assets/project-images/native-ruins/Puzzle-icons/circle.png) imaged Breakable rocks | ![](/assets/project-images/native-ruins/Puzzle-icons/totem.png) Wolf Totem  |
+| ![breakable rocks](/assets/project-images/native-ruins/Puzzle-icons/circle.png) imaged Breakable rocks | ![Wolf totem](/assets/project-images/native-ruins/Puzzle-icons/totem.png) Wolf Totem  |
 {: .puzzle-caption}
 
 | *Puzzle solution*                                                                 |
