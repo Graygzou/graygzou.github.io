@@ -5,7 +5,10 @@ description: UI polish and bugs fixes related to the localization of the game
 tags: []
 languages:
   - name: C#
-    percentage: 100.0
+    percentage: 90.0
+    color: "#178600"
+  - name: Others
+    percentage: 10.0
     color: "#178600"
 tags: ['unity3d', 'UI related to localization', 'UI integration', 'Bugs fixes', 'Tools']
 category: 'professional'
@@ -21,7 +24,7 @@ pitch: "_Cuphead_ is a 2D Run and gun game published by StudioMDHR in 2017.
 pinned: true
 platforms: Windows, Linux, Mac, Nintendo Switch
 engines: Unity3D
-tools: [Rewired, TextMeshPro Git, Steam Upload, JIRA, SDEV (Switch), Paint.net, Jenkins]
+tools: [Rewired, TextMeshPro, Git, Steam Upload, JIRA, SDEV (Switch), Paint.net, Jenkins]
 duration: "4 months"
 team-size:
   - role: Programmer
