@@ -35,11 +35,23 @@
 	display: block;
 }*/
 
+.social-media-links {
+	list-style: none;
+	margin: 0;
+	li {
+		display: inline-block;
+		padding: 2px 5px 2px 5px;
+	}
+	li + li {
+		padding-left: 8px;
+	}
+}
+
 .overview_table {
 	float: left;
 	/*display: inline-block;*/
 	/*min-width: 20%;*/
-  width: $content-aside;
+  	width: $content-aside;
 	vertical-align: top;
 	text-align: left;
 
@@ -51,7 +63,8 @@
 			list-style-type: circle;
 
 			li {
-				padding: 0px;
+				padding-top: 0px;
+				padding-bottom: 0px;
 			}
 		}
 	}
@@ -73,17 +86,6 @@
 .table_title {
 	font-size: 120%;
 	font-family: 'customfont';
-}
-
-.social-media-links {
-	list-style: none;
-	margin: 0;
-	li {
-		display: inline-block;
-	}
-	li + li {
-		padding-left: 8px;
-	}
 }
 
 /* main article */
