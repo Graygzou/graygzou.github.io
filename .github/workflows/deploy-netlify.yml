@@ -1,0 +1,53 @@
+name: Deploy to Netlify
+
+on:
+  workflow_run:
+    workflows: ["Run Tests"]
+    branches: [main]
+    types: 
+      - completed
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+
+      # Only build the project if it's workflow_dispatch that triggers it
+      - name: Github Set up Ruby 2.6
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 2.6.x
+        if: ${{ github.event_name == 'workflow_dispatch' }}
+
+      - name: jekyll-production-build
+        uses: ./.github/actions/jekyll-build
+        with:
+          bundle-path: vendor/bundle
+          project-folder: ./jekyll
+          environment: production
+          destination-relative-folder: site
+        if: ${{ github.event_name == 'workflow_dispatch' }}
+        
+      # TODO Get the build the site artifact in case it's follows a previous workflow
+      # See https://stackoverflow.com/questions/60355925/share-artifacts-between-workflows-github-actions
+        
+      # Deploy it to netlify
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1.1
+        with:
+          publish-dir: './site'
+          production-branch: master
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions"
+          enable-pull-request-comment: false
+          enable-commit-comment: false
+          overwrites-pull-request-comment: false
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 1
+        if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
