@@ -1,7 +1,7 @@
 ---
 layout: project-page
-title: F1 Mobile Racing
-description: A lot of stuff
+title: f1-mobile-racing
+description: Add feature, improvements and bug fixes on both client and server.
 tags: []
 languages:
   - name: C#
