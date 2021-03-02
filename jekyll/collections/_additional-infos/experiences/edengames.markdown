@@ -2,7 +2,7 @@
 title: Eden Games
 full-name: EDEN GAMES
 localisation: Lyon, France
-logo: edengames.png
+logo: edengames.svg
 sub-title: Full Stack Programmer
 start-dates: [2020]
 end-date: Present
