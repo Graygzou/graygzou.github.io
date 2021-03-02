@@ -1,6 +1,6 @@
 ---
 layout: project-page
-title: unleashed
+title: Unleashed
 description: UI creation and integration on a 3D post-apocalyptic monsters open world.
 tags: []
 languages:

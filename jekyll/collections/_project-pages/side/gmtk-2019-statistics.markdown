@@ -5,7 +5,7 @@ description: A bunch of statistics from the 2019 edition of the Game Maker ToolK
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-08-14 01:14:49
-last-update-days: 139
+last-update-days: 477
 tags: []
 languages: 
 

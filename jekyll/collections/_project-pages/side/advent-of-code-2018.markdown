@@ -1,11 +1,11 @@
 ---
 layout: project-page
-title: advent-of-code-2018
+title: Advent-Of-Code-2018
 description: My solutions for the Advent of Code (AoC) challenge, 2018 edition
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-23 02:08:56
-last-update-days: 161
+last-update-days: 499
 tags: ['lua', 'aoc', 'advent-of-code']
 languages: 
   - name: Lua

@@ -1,11 +1,11 @@
 ---
 layout: project-page
-title: brain-control
+title: Brain-control
 description: Top down 2D game, made with Unity engine for the WonderJam 2018.
-stargazers-count: 0
+stargazers-count: 1
 forks-count: 0
 updated-at: 2019-07-24 00:24:25
-last-update-days: 160
+last-update-days: 498
 tags: ['unity', '2d-game', 'survival-game', 'multiplayer-game', 'kill-zombies', 'steering-behaviors']
 languages: 
   - name: C#
@@ -30,7 +30,7 @@ languages:
 category: 'side'
 pitch: "Brain Control is a top down 2D game, similar to a Quake-style deathmatch.
         This application has been completed for a Game Jam called the WonderJAM organized by the Université du Québec &#224 Chicoutimi (UQAC).
-        The official website of this event is the following : WonderJAM Winter 2018.
+        The official website of this event is the following : [WonderJAM Winter 2018](http://jam.aemi.ca/).
         <br/>
         You play as survivors from a deadly virus which turn humans into zombies.
         Your objective is to be the last survival alive to be able to build an army of zombies.

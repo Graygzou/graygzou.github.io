@@ -1,11 +1,11 @@
 ---
 layout: project-page
-title: battle-simulator
+title: Battle-Simulator
 description: Battle simulator made with JMonkey, using a graph model as back-end
 stargazers-count: 2
 forks-count: 0
 updated-at: 2019-07-23 00:54:31
-last-update-days: 161
+last-update-days: 499
 tags: ['scala', 'jmonkeyengine3', 'battle-simulator', 'graphx', 'parallelization', 'graph', 'game']
 languages: 
   - name: Java
@@ -26,7 +26,7 @@ team-size:
   - role: Programmer
     amount: 3
 main-roles: [Back-end Programmer, Gameplay Programmer, Front-end Programmeur]
-video-link: https://www.youtube.com/embed/-BDVJ9IO2uk
+video-link: -BDVJ9IO2uk
 project_links:
   - name: github
     url: https://github.com/Graygzou/battle-simulator

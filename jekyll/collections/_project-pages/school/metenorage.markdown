@@ -1,11 +1,11 @@
 ---
 layout: project-page
-title: metenorage
+title: Metenorage
 description: A 3D voxel engine (ECS) based on LWJGL and JBullet.
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-22 23:24:54
-last-update-days: 161
+last-update-days: 499
 tags: ['game-engine', 'lwjgl', 'entity-component-system', 'opengl', 'openal', 'jbullet', 'glfw']
 languages: 
   - name: Java

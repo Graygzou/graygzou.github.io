@@ -1,11 +1,11 @@
 ---
 layout: project-page
-title: lode-runner
+title: Lode-Runner
 description: 2D platformer and puzzle game made with DygaEngine based on the original "Lode Runner"
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-22 23:27:41
-last-update-days: 161
+last-update-days: 499
 tags: ['video-game', '2d-platformer-game', 'puzzle-game', 'dygaengine']
 languages: 
   - name: Java

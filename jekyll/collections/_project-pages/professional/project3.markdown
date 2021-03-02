@@ -1,6 +1,6 @@
 ---
 layout: project-page
-title: unannonced-title
+title: Unannonced-title
 description: Tracking and bugs fixes on an unannonced title
 tags: []
 languages:

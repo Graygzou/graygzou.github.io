@@ -1,6 +1,6 @@
 ---
 layout: project-page
-title: cuphead
+title: Cuphead
 description: UI polish and bugs fixes related to the localization of the game
 tags: []
 languages:

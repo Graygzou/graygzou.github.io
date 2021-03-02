@@ -1,6 +1,6 @@
 ---
 layout: project-page
-title: f1-mobile-racing
+title: F1-Mobile-Racing
 description: Add feature, improvements and bug fixes on both client and server.
 tags: []
 languages:
