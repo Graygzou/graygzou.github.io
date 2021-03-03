@@ -78,6 +78,15 @@ jobs:
       - name: Github checkout
         uses: actions/checkout@v2
 
+      - name: jekyll-development-build
+        uses: ./.github/actions/jekyll-build
+        with:
+          bundle-path: vendor/bundle
+          project-folder: ./jekyll
+          environment: development
+          destination-relative-folder: site
+        if: ${{ github.event_name == 'push' }}
+
       - name: jekyll-production-build
         uses: ./.github/actions/jekyll-build
         with:
@@ -85,6 +94,7 @@ jobs:
           project-folder: ./jekyll
           environment: production
           destination-relative-folder: site
+        if: ${{ github.event_name == 'pull_request' }}
 
       - name: Upload build through artifacts
         uses: actions/upload-artifact@v1
