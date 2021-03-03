@@ -27,7 +27,7 @@ languages:
     percentage: 0.1
     color: "#EB8CEB"
 
-category: 'side'
+category: 'jam'
 pitch: "Brain Control is a top down 2D game, similar to a Quake-style deathmatch.
         This application has been completed for a Game Jam called the WonderJAM organized by the Université du Québec &#224 Chicoutimi (UQAC).
         The official website of this event is the following : [WonderJAM Winter 2018](http://jam.aemi.ca/).

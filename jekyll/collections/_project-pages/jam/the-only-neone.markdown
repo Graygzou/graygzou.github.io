@@ -15,7 +15,7 @@ languages:
       percentage: 7.5
       color: gray
 tags: ['unity3d', 'gamejam', 'gmtk2019', 'puzzle-game']
-category: 'side'
+category: 'jam'
 pitch: "_The only NeOne_ is a 3D Grid based Maze game. 
         This application has been completed for the GMTK GameJam 2019 organized by Mark Brown. 
         The official itch.io website of this event is the following: [GMTK GameJam 2019](https://itch.io/jam/gmtk-2019).
