@@ -8,7 +8,7 @@ updated-at: 2019-08-14 01:14:49
 last-update-days: 477
 tags: []
 languages: 
-
+published: false
 category: 'side'
 pitch: "Crawl the site : [GMTK-2019](https://itch.io/jam/gmtk-2019) to get some statistics about the event.
         Get the average score of the participants and some other data."
