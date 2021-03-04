@@ -9,11 +9,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - name: Check files changed
+      - name: Test 1
         run: git log --name-only -n 1 --pretty="format:" develop
       
       - name: Check files changed
         run: echo ${{ github.sha }}
       
-      - name: Check files changed
+      - name: Test 2
         run: git log --name-only -n 1 ${{ github.sha }} --pretty="format:" ${{ github.GITHUB_REF }}
+        
+      - name: Test 3
+        run: git diff --name-only HEAD HEAD~1
