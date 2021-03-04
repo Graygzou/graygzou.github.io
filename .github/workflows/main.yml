@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: Check files changed
-        run: git log --name-only -n 1 --pretty="format:" ${{ github.GITHUB_REF }}
+        run: git log --name-only -n 1 --pretty="format:" develop
       
       - name: Check files changed
         run: echo ${{ github.sha }}
