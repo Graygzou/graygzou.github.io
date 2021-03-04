@@ -9,7 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: develop
           fetch-depth: 2
       
       - name: Test 1
