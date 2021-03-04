@@ -27,6 +27,8 @@ jobs:
     steps:
       - name: Github checkout
         uses: actions/checkout@v2   # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+        with:
+          fetch-depth: 2
 
       # Cache dependencies: will attempt to restore a cache based on the key you provide.
       # shorten build times and decrease load on servers.
@@ -53,7 +55,7 @@ jobs:
           bundle_path: vendor/bundle
 
       - name: Check files changed
-        run: git log --name-only -n 1 ${{ github.sha }} --pretty=format:%b > last-commit.txt;
+        run: git log --name-only -n 1 ${{ github.sha }} --pretty="format:" ${{ github.GITHUB_REF }} > last-commit.txt;
         if: ${{ github.event_name }} != "pull_request"
 
       - name: Upload file changed output
