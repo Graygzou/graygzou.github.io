@@ -8,6 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: develop
+          fetch-depth: 2
       
       - name: Test 1
         run: git log --name-only -n 1 --pretty="format:" origin/develop
