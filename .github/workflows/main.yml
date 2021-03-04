@@ -1,0 +1,19 @@
+name: Test Get latest commit
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Check files changed
+        run: git log --name-only -n 1 --pretty=format:%b
+      
+      - name: Check files changed
+        run: echo ${{ github.sha }}
+      
+      - name: Check files changed
+        run: git log --name-only -n 1 ${{ github.sha }} --pretty=format:%b
