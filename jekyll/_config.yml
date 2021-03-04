@@ -45,6 +45,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Host my portfolio, links to my projects and my own blog.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://graygzou.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+use_seo: true
 social_tags:
   - name: twitter
     path: https://twitter.com/GrayGzou
@@ -78,6 +79,7 @@ plugins:
   - jekyll-paginate
 
 # Google Analytics
+use_analytics: true
 google_analytics: UA-148345166-1
 
 # Exclude from processing.
