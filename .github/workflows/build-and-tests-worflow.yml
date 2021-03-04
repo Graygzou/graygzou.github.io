@@ -153,12 +153,6 @@ jobs:
         with:
           node-version: '12'
 
-      - name: Make script executables
-        run: chmod +x scripts/*/*.sh
-
-      - name: Run Lighthouse CI
-        run: ./scripts/validation/lighthouse-ci.sh
-
       - name: Download lighthouse ci
         run: |
           echo "::group::install_lighthouse_ci"
