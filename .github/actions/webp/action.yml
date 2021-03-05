@@ -50,7 +50,7 @@ runs:
         find jekyll/assets/ -name "*.webp" -exec mv {} "${{ inputs.target-folder }}/" \;
         cd "${{ inputs.target-folder }}/"
         rename -v "s/(${{ inputs.extensions-regex }}).webp/.webp/gi" *.webp \;
-        find . -regex '.*\.\(${{ inputs.extensions-regex }}\.webp\)' -exec rm -v {} \;
+        find . -regex '.*\.\(${{ inputs.extensions-regex }}\webp\)' -exec rm -v {} \;
         cd ../../..
         echo "::set-output name=result-folder::$(echo ${{ inputs.target-folder }}/)"
         echo "::endgroup::"
