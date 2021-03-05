@@ -38,14 +38,14 @@ runs:
       shell: bash
 
     - name: Make script executables
-      run: chmod +x scripts/*/*.sh
+      run: chmod +x ./.github/scripts/*/*.sh
       shell: bash
 
       # Try to find if any file matching the provided extension
     - name: Run script
       run: |
         echo "::group::use imagemagick"
-        ./scripts/generation/image-magick.sh ${{ inputs.extension }}
+        ./.github/scripts/generation/image-magick.sh ${{ inputs.extension }}
         echo "::endgroup::"
       shell: bash
 
