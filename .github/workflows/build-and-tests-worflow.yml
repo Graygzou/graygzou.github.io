@@ -85,7 +85,7 @@ jobs:
         with:
           bundle-path: vendor/bundle
           project-folder: ./jekyll
-          environment: development
+          environment: _config.yml,_config_dev.yml
           destination-relative-folder: site
         if: ${{ github.event_name == 'push' }}
 
@@ -94,7 +94,7 @@ jobs:
         with:
           bundle-path: vendor/bundle
           project-folder: ./jekyll
-          environment: production
+          environment: _config.yml
           destination-relative-folder: site
         if: ${{ github.event_name == 'pull_request' }}
 

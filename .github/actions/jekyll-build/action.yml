@@ -10,10 +10,10 @@ inputs:
     description: "directory containing all the jekyll source files."
     required: true
     default: './'
-  environment:
-    description: "Use a specific environment value in the build. Default is production."
+  config-option:
+    description: "config settings tp be used for the build separated by commas. Settings in later files override settings in earlier files."
     required: false
-    default: 'production'
+    default: '_config.yml'
   destination-relative-folder:
     description: "The directory where Jekyll will write files."
     required: false
@@ -45,7 +45,7 @@ runs:
 
     - name: Install bundler
       working-directory: ${{ inputs.project-folder }}
-      run: bundle exec jekyll build JEKYLL_ENV=${{ inputs.environment }} --destination ${{ inputs.destination-relative-folder }}
+      run: bundle exec jekyll build --config ${{ inputs.config-option }} --destination ${{ inputs.destination-relative-folder }}
       shell: bash
 
 branding:
