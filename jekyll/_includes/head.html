@@ -15,7 +15,9 @@
   <!-- Should be an 180x180 icon. -->
   <!-- See https://stackoverflow.com/questions/5110776/apple-touch-icon-for-websites -->
   <link rel="apple-touch-icon" href="/assets/ghost-cat%5B180x180%5D.png">
-  {%- feed_meta -%}
+  {% if site.use_feed -%}
+    {% feed_meta -%}
+  {% endif %}
   {%- if site.use_analytics -%}
     {% include google-analytics.html %}
   {%- endif -%}

@@ -3,6 +3,7 @@
 
 url: "http://localhost:4000"
 use_seo: false
+use_feed: false
 use_analytics: false
 
 # Exclude from processing.
