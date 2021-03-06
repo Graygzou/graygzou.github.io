@@ -47,7 +47,7 @@ crop_pattern=".*\[c[0-9]+x[0-9]+\].*"
 # Debug
 echo $extension
 
-asset_path=$(find $root_folder -regex ".*/*\[[r|c][0-9]+x[0-9]+\]+\.$extension$");
+asset_path=$(find $root_folder -regex ".*\[[r|c][0-9]+x[0-9]+\]+\.$extension$");
 for file in $asset_path
 do
   echo "Processing $file file..."
