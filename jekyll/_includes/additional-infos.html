@@ -14,7 +14,9 @@
           {% capture image_path_webp %}/assets/webp/{{ info.logo | replace: ".jpg", ".webp" | replace: ".png", ".webp" }}{% endcapture %}
           {% capture image_alt %}{{ info.title }}{% endcapture %}
           <!--<img src="{{ info.logo }}" alt="{{ info.title }}-thumbnail"/>-->
-          {% include images-handler.html filename=image_path webp=image_path_webp alt=image_alt %}
+          <a href="{{ info.link }}" target="_blank" rel="noopener noreferrer">
+            {% include images-handler.html filename=image_path webp=image_path_webp alt=image_alt %}
+          </a>
           <div>
             <h3 class="project-heading post-link">{{ info.title | escape }}</h3>
             <ul>
@@ -43,19 +45,6 @@
                     {%- if info.end-date -%}
                       -{{ info.end-date }}
                     {%- endif -%}
-                  </li>
-                  <li>
-                    <svg class="svg-icon">
-                      <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#link"/>
-                    </svg>
-                    <a href="{{ info.link }}">
-                      {% assign link_name = info.link | remove_first:'https://' | remove_first:'http://' %}
-                      {%- if link_name.size < 25 -%}
-                        {{ link_name }}
-                      {%- else -%}
-                        {{ info.title | escape }}
-                      {%- endif -%}
-                    </a>
                   </li>
                 </ul>
               </li>

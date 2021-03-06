@@ -5,13 +5,12 @@
 {% capture image_path_webp %}/assets/webp/{{ project.title | downcase }}-thumbnail.webp{% endcapture %}
 {% capture image_alt %}{{ project.title | downcase }}-thumbnail{% endcapture %}
 <div class="test-li">
-  <!--<img src="{{ image_path }}" alt="{{ project.title }}-thumbnail"/>-->
-  {% include images-handler.html alt=image_alt filename=image_path webp=image_path_webp %}
+  <a href="{{ project.url | relative_url }}">
+    {% include images-handler.html alt=image_alt filename=image_path webp=image_path_webp %}
+  </a>
   <div>
     <h3 class="project-heading">
-      <a class="post-link" href="{{ project.url | relative_url }}">
-        {{ project.title | replace: '-', ' ' | escape }}
-      </a>
+      <span class="post-link">{{ project.title | replace: '-', ' ' | escape }}</a>
       <!-- Indicate what the main language used in this project  -->
       {%- if project.languages -%}
       {% assign main_language = project.languages | first %}
