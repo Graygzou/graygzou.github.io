@@ -54,7 +54,7 @@ do
   filename="${file%.*}"
   
   # Removing relative path to only have filename
-  filename=$(echo $filename | sed -E "s/[\.*\\/*]*(.*)/\1/")
+  filename=$(echo $filename | sed -E "s/[\.*\/*]*(.*)/\1/")
 
   # Debug
   echo "$filename"
