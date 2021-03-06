@@ -45,7 +45,7 @@ runs:
     - name: Run script
       run: |
         echo "::group::use imagemagick"
-        ./.github/scripts/generation/image-magick.sh ${{ inputs.extension }}
+        ./.github/scripts/generation/image-magick.sh ${{ inputs.original-folder }} ${{ inputs.extension }}
         echo "::endgroup::"
       shell: bash
 

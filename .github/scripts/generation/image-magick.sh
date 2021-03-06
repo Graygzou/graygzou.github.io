@@ -34,24 +34,28 @@ crop_center () {
 # Parameters check
 echo "$#"
 if [ "$#" -eq 0 ]; then
-  echo "you need to provide a file extension to run algorithm on it."
+  echo "you need to provide a root folder and a file extension to run algorithm on it."
   exit
 fi
 
-extension=$1
+# jekyll/assets/
+root_folder=$1
+extension=$2
 resizing_pattern=".*\[r[0-9]+x[0-9]+\].*"
 crop_pattern=".*\[c[0-9]+x[0-9]+\].*"
 
 # Debug
-git status
 echo $extension
 
-asset_path=$(find jekyll/assets/ -regex ".*/*\[[r|c][0-9]+x[0-9]+\]+\.$extension");
+asset_path=$(find $root_folder -regex ".*/*\[[r|c][0-9]+x[0-9]+\]+\.$extension$");
 for file in $asset_path
 do
   echo "Processing $file file..."
   filename="${file%.*}"
   
+  # Removing relative path to only have filename
+  filename=$(echo $filename | sed -E "s/[\.*\\/*]*(.*)/\1/")
+
   # Debug
   echo "$filename"
   
