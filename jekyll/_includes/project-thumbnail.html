@@ -1,27 +1,27 @@
 <!--
  * /!\ The variable project need to be assign in order to use this sections
  -->
-{% capture image_path %}/assets/project-images/{{ project.title | downcase }}/{{ project.title | downcase }}-thumbnail.png{% endcapture %}
-{% capture image_path_webp %}/assets/webp/{{ project.title | downcase }}-thumbnail.webp{% endcapture %}
-{% capture image_alt %}{{ project.title | downcase }}-thumbnail{% endcapture %}
+{%- capture image_path -%}/assets/project-images/{{ project.title | downcase }}/{{ project.title | downcase }}-thumbnail.png{%- endcapture -%}
+{%- capture image_path_webp -%}/assets/webp/{{ project.title | downcase }}-thumbnail.webp{%- endcapture -%}
+{%- capture image_alt -%}{{ project.title | downcase }}-thumbnail{%- endcapture -%}
 <div class="test-li">
+  <!-- Indicate what the main language used in this project  -->
+  {%- if project.languages -%}
+  {% assign main_language = project.languages | first %}
+  <div class="project-language">
+    <svg class="svg-icon svg-project" style="fill: {{ main_language.color }};">
+      <use xlink:href="{{ '/assets/icons/gamefolio-regular-icons.svg#circle' }}">
+      </use>
+    </svg>
+    <span>{{ main_language.name }}</span>
+  </div>
+  {%- endif -%}
   <a href="{{ project.url | relative_url }}">
-    {% include images-handler.html alt=image_alt filename=image_path webp=image_path_webp %}
+    {%- include images-handler.html alt=image_alt filename=image_path webp=image_path_webp -%}
   </a>
   <div>
     <h3 class="project-heading">
       <span class="post-link">{{ project.title | replace: '-', ' ' | escape }}</a>
-      <!-- Indicate what the main language used in this project  -->
-      {%- if project.languages -%}
-      {% assign main_language = project.languages | first %}
-      <div>
-        <svg class="svg-icon svg-project" style="fill: {{ main_language.color }};">
-          <use xlink:href="{{ '/assets/icons/gamefolio-regular-icons.svg#circle' }}">
-          </use>
-        </svg>
-        <span>{{ main_language.name }}</span>
-      </div>
-      {%- endif -%}
     </h3>
     <span class="post-meta">{{ project.description }}</span>
     <div class="tagsgame">

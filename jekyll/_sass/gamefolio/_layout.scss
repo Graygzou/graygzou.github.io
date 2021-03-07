@@ -181,6 +181,7 @@
 
 .project-list {
   margin-left: 0;
+  text-align: center;
   list-style: none;
   @include media-query($on-small-screen) {
     text-align: center;
@@ -217,6 +218,8 @@
 
   > li {
     margin-bottom: $spacing-unit;
+    text-align: center;
+    padding: 1%;
   }
 }
 
@@ -261,21 +264,26 @@
   }
 }
 
+.project-language {
+  float: right;
+
+  svg {
+    padding-right: 0px;
+  }
+}
+
 .project-li {
   padding: 1%;
   margin-bottom: 0 !important;
   vertical-align: top;
   display: inline-block;
-  width: 47%;
-  min-width: 150px;
+  width: 160px;
 
   img {
-    float: left;
     max-width: 140px;
     min-width: 140px;
     max-height: 140px;
     min-height: 140px;
-    margin-right: 5%;
     border-radius: 50%;
   }
 }
@@ -362,22 +370,18 @@
 .home-li {
   margin-bottom: 0 !important;
   min-height: 150px;
-  width: 47%;
+  width: 180px;
   display: inline-block;
   vertical-align: top;
 
   img {
-    float: left;
     width: 150px;
   }
 
-  div {
-    vertical-align: middle;
-
-    ul {
-      margin: 0 auto;
-      list-style: none;
-    }
+  div > ul {
+    text-align: left;
+    margin: 0 auto;
+    list-style: none;
   }
 }
 
