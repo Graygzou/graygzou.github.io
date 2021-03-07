@@ -7,7 +7,7 @@ sub-title: Full Stack Programmer
 start-dates: [2020]
 end-date: Present
 link: https://www.edengames.com/
-description: Work on the live mobile title [F1 Mobile Racing](https://www.edengames.com/games/f1-mobile/).
+description: Working on live mobile title F1 Mobile Racing as a gameplay programmer. Gradually becoming full stack (client & back-end).
 category: 'experiences'
 display: true
 ---

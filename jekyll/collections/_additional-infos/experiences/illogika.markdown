@@ -7,7 +7,7 @@ sub-title: Generalist Programmer
 start-dates: [2018]
 end-date: 2019
 link: https://www.illogika.com
-description: Work on all size video game projects like Cuphead for example. Currently working on an unannounced title.
+description: Work on all size video game projects like Cuphead. Also worked on the remake of Commander Keen for Android/iOS.
 category: 'experiences'
 display: true
 ---
