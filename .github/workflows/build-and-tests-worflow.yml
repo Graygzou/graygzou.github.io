@@ -11,6 +11,8 @@ on:
     branches:
       - develop
 
+  workflow_dispatch:
+
 #The environment is not setup correctly to use that.
 #Need to have gem install pkg-config -v "~> 1.1" to make it work.
 #env:
