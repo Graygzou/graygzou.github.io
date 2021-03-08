@@ -289,8 +289,10 @@
 }
 
 .project-heading {
+  position: relative;
   margin: 0;
   word-break: break-word;
+  min-height: 56px;
   a {
     display: inline-block;
     //min-width: 60%;
