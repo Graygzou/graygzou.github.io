@@ -18,8 +18,10 @@
             {% include images-handler.html filename=image_path webp=image_path_webp alt=image_alt %}
           </a>
           <div>
-            <h3 class="project-heading post-link">{{ info.title | escape }}</h3>
             <ul>
+              <li class="post-meta">
+                <h3>{{ info.title | escape }}</h3>
+              </li>
               <li class="post-meta">
                 <div>
                   <span class="role">{{ info.sub-title }}</span>
@@ -46,6 +48,14 @@
                       -{{ info.end-date }}
                     {%- endif -%}
                   </li>
+                  {%- for highlight in info.highlights -%}
+                  <li>
+                    <svg class="svg-icon">
+                      <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#star"/>
+                    </svg>
+                    {{- highlight -}}
+                  </li>
+                  {%- endfor -%}
                 </ul>
               </li>
             </ul>

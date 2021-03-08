@@ -2,7 +2,7 @@
 title: UQAC
 logo: uqac2.png
 sub-title: Dual degree (Master Degree), specialized in the video game development.
-additional-info: Participated to the Ubisoft Game Lab Competition / Participated to the Winter Game Jam.
+highlights: [Ubisoft Game Lab Competition participation, Winter Game Jam participation]
 start-dates: [2017]
 end-date: 2019
 full-name: Université du Québec à Chicoutimi

@@ -1,7 +1,8 @@
 ---
 title: Google HashCode
 logo: hashcode.svg
-sub-title: Participated twice. Finished 2706th on 2815 teams who submitted a solution.
+sub-title: Brainstorm and implement a complexe probleme (NP most of the time) submitted by Google in small team.
+highlights: [Two participations, Finished 2706th on 2815 teams who submitted a solution.]
 start-dates: [2015, 2016]
 localisation: UT3, Toulouse, FR
 link: https://codingcompetitions.withgoogle.com/hashcode

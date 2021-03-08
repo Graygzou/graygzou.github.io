@@ -217,6 +217,7 @@
   list-style: none;
 
   > li {
+    position: relative;
     margin-bottom: $spacing-unit;
     text-align: center;
     padding: 1%;
@@ -239,6 +240,10 @@
     }
   }
 
+  h3 {
+    margin: 0;
+  }
+
   div {
     padding-bottom: 5px;
     .role {
@@ -250,6 +255,12 @@
 
 .extra-info {
   overflow: auto;
+
+  ul {
+    text-align: left;
+    margin: 0 auto;
+    list-style: none;
+  }
 }
 
 .cv-home {
@@ -292,7 +303,7 @@
   position: relative;
   margin: 0;
   word-break: break-word;
-  min-height: 56px;
+  min-height: 72px;
   a {
     display: inline-block;
     //min-width: 60%;
