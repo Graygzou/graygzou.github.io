@@ -11,14 +11,16 @@
       {%- endif -%}
     {%- endfor -%}
     <!-- Add the "See More" tile next to the others -->
-    <li class="project-heading">
-      <div class="post-link">
-        See more
-        <svg class="svg-icon svg-project" style="fill: black;">
-          <use xlink:href="{{ '/assets/icons/gamefolio-regular-icons.svg#angle-double-right' }}">
-          </use>
-        </svg>
-      </div>
+    <li class="project-li see-more-button">
+      <a class="button-link" href="projects/">
+        <div class="post-link">
+          See more
+          <svg class="svg-icon svg-project" style="fill: black;">
+            <use xlink:href="{{ '/assets/icons/gamefolio-regular-icons.svg#angle-double-right' }}">
+            </use>
+          </svg>
+        </div>
+      </a>
     </li>
     </ul>
   </div>

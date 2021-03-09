@@ -290,6 +290,7 @@
   vertical-align: top;
   display: inline-block;
   width: 160px;
+  min-height: 400px;
 
   img {
     max-width: 140px;
@@ -298,6 +299,11 @@
     min-height: 140px;
     border-radius: 50%;
   }
+}
+
+.see-more-button {
+  position: relative;
+  padding: 0;
 }
 
 .project-heading {
@@ -367,19 +373,15 @@
 }
 
 .button-link {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.7);
-  text-align: center;
-  float: right;
-  border-radius: 4px;
-  padding: 5px;
+  display: block;
+  min-height: 420px;
   cursor: pointer;
 }
 
-
+.button-link:hover {
+  background-color: $grey-color-light;
+  text-decoration: underline;
+}
 
 .home-li {
   margin-bottom: 0 !important;
