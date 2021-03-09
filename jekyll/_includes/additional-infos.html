@@ -30,34 +30,29 @@
                   {%- endif -%}
                 </div>
               </li>
-
-              <li class="post-meta extra-info">
-                <ul>
-                  <li>
-                    <svg class="svg-icon">
-                      <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#map-marker"></use>
-                    </svg>
-                    {{ info.localisation }}
-                  </li>
-                  <li>
-                    <svg class="svg-icon">
-                      <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#calendar"/>
-                    </svg>
-                    {{ info.start-dates | join: ', ' }}
-                    {%- if info.end-date -%}
-                      -{{ info.end-date }}
-                    {%- endif -%}
-                  </li>
-                  {%- for highlight in info.highlights -%}
-                  <li>
-                    <svg class="svg-icon">
-                      <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#star"/>
-                    </svg>
-                    {{- highlight -}}
-                  </li>
-                  {%- endfor -%}
-                </ul>
+              <li class="post-meta">
+                <svg class="svg-icon">
+                  <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#map-marker"></use>
+                </svg>
+                {{ info.localisation }}
               </li>
+              <li class="post-meta">
+                <svg class="svg-icon">
+                  <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#calendar"/>
+                </svg>
+                {{ info.start-dates | join: ', ' }}
+                {%- if info.end-date -%}
+                  -{{ info.end-date }}
+                {%- endif -%}
+              </li>
+              {%- for highlight in info.highlights -%}
+              <li class="post-meta">
+                <svg class="svg-icon">
+                  <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#star"/>
+                </svg>
+                {{- highlight -}}
+              </li>
+              {%- endfor -%}
             </ul>
             {%- if site.show_excerpts -%}
             {{ info.excerpt }}
