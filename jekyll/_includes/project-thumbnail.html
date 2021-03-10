@@ -4,9 +4,9 @@
 {%- capture image_path -%}/assets/project-images/{{ project.title | downcase }}/{{ project.title | downcase }}-thumbnail.png{%- endcapture -%}
 {%- capture image_path_webp -%}/assets/webp/{{ project.title | downcase }}-thumbnail.webp{%- endcapture -%}
 {%- capture image_alt -%}{{ project.title | downcase }}-thumbnail{%- endcapture -%}
+<!-- Indicate what the main language used in this project  -->
+{%- if project.languages -%}
 <div class="test-li">
-  <!-- Indicate what the main language used in this project  -->
-  {%- if project.languages -%}
   {% assign main_language = project.languages | first %}
   <div class="project-language">
     <svg class="svg-icon svg-project" style="fill: {{ main_language.color }};">
@@ -15,7 +15,9 @@
     </svg>
     <span>{{ main_language.name }}</span>
   </div>
-  {%- endif -%}
+{%- else -%}
+<div class="test-li" style="padding-top: 25px;">
+{%- endif -%}
   <a href="{{ project.url | relative_url }}">
     {%- include images-handler.html alt=image_alt filename=image_path webp=image_path_webp -%}
   </a>

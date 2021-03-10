@@ -374,7 +374,8 @@
 
 .button-link {
   display: block;
-  min-height: 420px;
+  max-height: 420px;
+  height: 27vw;
   cursor: pointer;
 }
 

@@ -66,6 +66,8 @@ collections:
     #sort_by: last_update
   additional-infos:
     output: false
+  others:
+    output: false
 
 # Build settings
 markdown: kramdown
