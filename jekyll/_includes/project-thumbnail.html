@@ -6,7 +6,6 @@
 {%- capture image_alt -%}{{ project.title | downcase }}-thumbnail{%- endcapture -%}
 <!-- Indicate what the main language used in this project  -->
 {%- if project.languages -%}
-<div class="test-li">
   {% assign main_language = project.languages | first %}
   <div class="project-language">
     <svg class="svg-icon svg-project" style="fill: {{ main_language.color }};">
@@ -21,7 +20,7 @@
   <a href="{{ project.url | relative_url }}">
     {%- include images-handler.html alt=image_alt filename=image_path webp=image_path_webp -%}
   </a>
-  <div>
+  <div class="project-overview">
     <h3 class="project-heading">
       <span class="post-link">{{ project.title | replace: '-', ' ' | escape }}</a>
     </h3>
@@ -31,5 +30,7 @@
       <span class="tag">{{ tag }}</span>
       {%- endfor -%}
     </div>
+  {%- if project.languages == nil -%}
   </div>
+  {%- endif -%}
 </div>

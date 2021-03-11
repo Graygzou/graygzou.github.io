@@ -181,7 +181,6 @@
 
 .project-list {
   margin-left: 0;
-  text-align: center;
   list-style: none;
   @include media-query($on-small-screen) {
     text-align: center;
@@ -194,6 +193,10 @@
       }
     }
   }
+}
+
+.project-overview {
+  text-align: left;
 }
 
 /**

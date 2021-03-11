@@ -1,7 +1,6 @@
 <section class="home-section">
   <h2 class="page-heading">Projects Overview</h2>
-  <div>
-    <ul class="project-list">
+  <ul class="project-list text-align-center">
     {%- assign current_color = '#e8e8e880' -%}
     {%- assign sorted_pages = site.project-pages | where: "pinned", "true" -%}
     {%- for project in sorted_pages -%}
@@ -21,6 +20,5 @@
     <!-- Add the "See More" tile next to the others -->
     {%- assign project = site.others[0] -%}
     <li class="project-li" style="background-color: {{ current_color }} ;">{%- include project-thumbnail.html -%}</li>
-    </ul>
-  </div>
+  </ul>
 </section>
