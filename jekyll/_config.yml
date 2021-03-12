@@ -63,6 +63,14 @@ collections_dir: collections
 collections:
   project-pages:
     output: true
+    professional:
+      order: 1
+    jam:
+      order: 2
+    school:
+      order: 3
+    side:
+      order: 4
     #sort_by: last_update
   additional-infos:
     output: false
