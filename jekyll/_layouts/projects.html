@@ -11,7 +11,7 @@ layout: default
 
     <!-- Iterate on the project-page collection -->
     {%- if site.project-pages.size > 0 -%}
-    {% assign groups = site.project-pages | group_by_exp: "category", "item.order" %}
+    {% assign groups = site.project-pages | group_by: "category" %}
     {% for group in groups %}
     {% assign current_color = '#e8e8e880' %}
     {%- if forloop.index0 != 0 -%}
