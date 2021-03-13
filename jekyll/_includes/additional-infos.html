@@ -21,23 +21,20 @@
             <ul>
               <li class="post-meta">
                 <h3>{{ info.title | escape }}</h3>
+                <hr>
               </li>
+              <li class="post-meta role">{{ info.sub-title }}</li>
+              {%- if info.description -%}
+              <li class="post-meta">{{ info.description }}</li>
+              {%- endif -%}
               <li class="post-meta">
-                <div>
-                  <span class="role">{{ info.sub-title }}</span>
-                  {%- if info.description -%}
-                  <span>{{ info.description }}</span>
-                  {%- endif -%}
-                </div>
-              </li>
-              <li class="post-meta">
-                <svg class="svg-icon">
+                <svg class="svg-icon" width="16px" height="16px">
                   <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#map-marker"></use>
                 </svg>
                 {{ info.localisation }}
               </li>
               <li class="post-meta">
-                <svg class="svg-icon">
+                <svg class="svg-icon" width="16px" height="16px">
                   <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#calendar"/>
                 </svg>
                 {{ info.start-dates | join: ', ' }}
@@ -47,7 +44,7 @@
               </li>
               {%- for highlight in info.highlights -%}
               <li class="post-meta">
-                <svg class="svg-icon">
+                <svg class="svg-icon" width="16px" height="16px">
                   <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#star"/>
                 </svg>
                 {{- highlight -}}

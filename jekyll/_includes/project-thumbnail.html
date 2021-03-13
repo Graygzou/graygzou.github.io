@@ -8,7 +8,7 @@
 {%- if project.languages -%}
   {% assign main_language = project.languages | first %}
   <div class="project-language">
-    <svg class="svg-icon svg-project" style="fill: {{ main_language.color }};">
+    <svg class="svg-icon svg-project" width="16px" height="16px" fill="{{ main_language.color }}">
       <use xlink:href="{{ '/assets/icons/gamefolio-regular-icons.svg#circle' }}">
       </use>
     </svg>
@@ -24,12 +24,12 @@
     <h3 class="project-heading">
       <span class="post-link">{{ project.title | replace: '-', ' ' | escape }}</a>
     </h3>
-    <span class="post-meta">{{ project.description }}</span>
-    <div class="tagsgame">
+    <p class="post-meta">{{ project.description }}</p>
+    <ul class="tagsgame">
       {%- for tag in project.tags -%}
-      <span class="tag">{{ tag }}</span>
+      <li class="tag">{{ tag }}</li>
       {%- endfor -%}
-    </div>
+    </ul>
   {%- if project.languages == nil -%}
   </div>
   {%- endif -%}

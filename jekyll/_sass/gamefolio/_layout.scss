@@ -250,11 +250,11 @@
 
   div {
     padding-bottom: 5px;
-    .role {
-      font-weight: bold;
-      display: block;
-    }
   }
+}
+
+.role {
+  font-weight: bold;
 }
 
 .extra-info {
@@ -328,9 +328,7 @@
 }
 
 .tagsgame {
-  //float: right;
-  //margin-top: 5px;
-  //line-height: 1.5em;
+  margin: 0;
 }
 
 .tag
