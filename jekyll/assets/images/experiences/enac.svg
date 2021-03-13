@@ -8,8 +8,8 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="250"
-   height="250"
+   width="112.5pt"
+   height="112.5pt"
    id="svg2858"
    sodipodi:version="0.32"
    inkscape:version="0.46"
@@ -65,7 +65,7 @@
      inkscape:label="Calque 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-107.06706,-350.52805)">
+     transform="translate(-77,-225) scale(0.65)">
     <g
        transform="matrix(1.25,0,0,-1.25,-206.13132,715.8276)"
        id="g89"
