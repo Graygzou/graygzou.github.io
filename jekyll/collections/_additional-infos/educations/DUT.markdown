@@ -6,7 +6,7 @@ highlights: [Valedictorian, 2 participation to La Nuit de l'info]
 start-dates: [2013]
 end-date: 2015
 full-name: IUT 'A' Paul Sabatier
-localisation: UT3, Toulouse, FR
+localisation: Toulouse, FR
 link: http://iut.ups-tlse.fr
 category: 'educations'
 display: true
