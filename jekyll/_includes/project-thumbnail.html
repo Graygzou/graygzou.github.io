@@ -8,7 +8,7 @@
 {%- if project.languages -%}
   {% assign main_language = project.languages | first %}
   <div class="project-language">
-    <svg class="svg-icon svg-project" width="16px" height="16px" fill="{{ main_language.color }}">
+    <svg class="svg-icon svg-project" width="16px" height="16px" style="fill: {{ main_language.color }}">
       <use xlink:href="{{ '/assets/icons/gamefolio-regular-icons.svg#circle' }}">
       </use>
     </svg>

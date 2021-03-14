@@ -42,7 +42,7 @@ layout: default
       {%- for language in page.languages -%}
         {%- if forloop.index < 7 or language.percentage > 1.0 -%}
           <div>
-            <svg class="svg-icon svg-project" style="fill: {{ language.color }};">
+            <svg class="svg-icon svg-project" width="16px" height="16px" style="fill: {{ language.color }};">
               <use xlink:href="{{ '/assets/icons/gamefolio-regular-icons.svg#circle' }}">
               </use>
             </svg>
@@ -55,7 +55,7 @@ layout: default
       <!-- Combine all the languages together to avoid having too much stuff at the end -->
       {%- if percentage_covered < 100.0 -%}
         <div>
-          <svg class="svg-icon svg-project" style="fill: {{ language.color }};">
+          <svg class="svg-icon svg-project" width="16px" height="16px" style="fill: {{ language.color }};">
             <use xlink:href="{{ '/assets/icons/gamefolio-regular-icons.svg#circle' }}">
             </use>
           </svg>
@@ -77,8 +77,8 @@ layout: default
           {%- for link in page.project_links -%}
           <li>
             <a href="{{ link.url | escape }}" aria-label="{{ link.name }}">
-              <svg class="svg-icon">
-                <use xlink:href="{{ '/assets/icons/gamefolio-social-icons.svg#' | append: link.name | relative_url }}">
+              <svg class="svg-icon" width="16px" height="16px">
+                <use xlink:href="{{ '/assets/icons/gamefolio-platforms-icons.svg#' | append: link.name | relative_url }}">
                 </use>
               </svg>
             </a>

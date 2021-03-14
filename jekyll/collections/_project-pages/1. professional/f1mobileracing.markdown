@@ -52,7 +52,7 @@ main-roles: [Full Stack Programmer (Gameplay + Back-end + UI)]
 project_links:
   - name: android
     url: "https://play.google.com/store/apps/details?id=com.codemasters.F1Mobile&hl=fr&gl=US"
-  - name: iOS
+  - name: apple
     url: "https://apps.apple.com/fr/app/f1-mobile-racing/id1343820018"
 additional-sections:
   - name: tasks
