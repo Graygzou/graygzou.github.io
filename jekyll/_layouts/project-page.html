@@ -67,53 +67,77 @@ layout: default
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h2>Overview</h2>
+    <h2>Overview
+    <ul class="social-media-links project-headers-links">
+      {%- if page.project_links -%}{%- for link in page.project_links -%}
+      <li>
+        <a href="{{ link.url | escape }}" aria-label="{{ link.name }}">
+          <svg class="svg-icon" width="16px" height="16px">
+            <use xlink:href="{{ '/assets/icons/gamefolio-social-icons.svg#' | append: link.name | relative_url }}">
+            </use>
+          </svg>
+        </a>
+      </li>
+      {%- endfor -%}{%- endif -%}
+    </ul>
+    </h2>
 
-    <aside class="overview_table">
-      {%- if page.project_links -%}
-      <div>
-        <span class="table_title">Links:</span>
-        <ul class="social-media-links">
-          {%- for link in page.project_links -%}
-          <li>
-            <a href="{{ link.url | escape }}" aria-label="{{ link.name }}">
-              <svg class="svg-icon" width="16px" height="16px">
-                <use xlink:href="{{ '/assets/icons/gamefolio-platforms-icons.svg#' | append: link.name | relative_url }}">
-                </use>
-              </svg>
-            </a>
-          </li>
-          {%- endfor -%}
-        </ul>
-      </div>
-      {%- endif -%}
+    <aside class="overview_table">      
       <div>
         <span class="table_title">Platform:</span>
-        <ul>
-          {%- for platform in page.platforms -%}
-            <li itemprop="gamePlatform">{{ platform }}</li>
+          {% assign platforms = page.platforms | split: ", " %}
+          <p itemprop="gamePlatform">
+          {%- for platformName in platforms -%}
+            {% assign icon = site.icons_map | where: "name", platformName | first %}
+            {% if icon -%}
+            <svg class="svg-icon" width="16px" height="16px">
+              <use xlink:href="{{ '/assets/icons/gamefolio-platforms-icons.svg#' | append: icon.icon_name | relative_url }}">
+              </use>
+            </svg>
+            {% endif %}
+            {{ platformName }}
           {%- endfor -%}
-        </ul>
+          </p>
       </div>
+      <hr>
       {%- if page.engines -%}
         <div>
           <span class="table_title">Engine:</span>
-          <ul>
-            {%- for engine in page.engines -%}
-              <li itemscope itemtype="https://schema.org/Thing"><span itemprop="name">{{ engine }}</span></li>
-            {%- endfor -%}
-          </ul>
+          {% assign engines = page.engines | split: ", " %}
+          <p itemprop="gameEngines">
+          {%- for engineName in engines -%}
+            {% assign icon = site.icons_map | where: "name", engineName | first %}
+            {%- if icon -%}
+            <svg class="svg-icon" width="16px" height="16px">
+              <use xlink:href="{{ '/assets/icons/gamefolio-platforms-icons.svg#' | append: icon.icon_name | relative_url }}">
+              </use>
+            </svg>
+            {% endif %}
+            {{ engineName }}
+          {%- endfor -%}
+          </p>
         </div>
+      <hr>
       {%- endif -%}
       {%- if page.tools -%}
         <div>
           <span class="table_title">Tools Used:</span>
-          <ul>
+          <ul itemprop="projectTools">
             {%- for tool in page.tools -%}
-              <li itemscope itemtype="https://schema.org/Thing"><span itemprop="name">{{ tool }}</span></li>
+              {% assign icon = site.icons_map | where: "name", tool | first %}
+              <li>
+                {%- if icon -%}
+                <svg class="svg-icon" width="16px" height="16px">
+                  <use xlink:href="{{ '/assets/icons/gamefolio-tools-icons.svg#' | append: icon.icon_name | relative_url }}">
+                  </use>
+                </svg>
+                {% endif %}
+                {{ tool }}
+              </li>
             {%- endfor -%}
           </ul>
         </div>
+      <hr>
       {%- endif -%}
       <div>
         <span class="table_title">Duration:</span>
@@ -121,6 +145,7 @@ layout: default
           <li>{{ page.duration }}</li>
         </ul>
       </div>
+      <hr>
       <div>
         <span class="table_title">Team Size:</span>
         <ul>
@@ -129,6 +154,7 @@ layout: default
           {%- endfor -%}
         </ul>
       </div>
+      <hr>
       <div>
         <span class="table_title">Main Role:</span>
         <ul>

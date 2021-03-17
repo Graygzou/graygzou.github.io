@@ -30,7 +30,7 @@ pitch: "_F1® Mobile Racing_ est un jeu mobile officiel du championnat _FIA FORM
 pinned: true
 platforms: Android, iOS
 engines: Unity3D
-tools: [Git, Perforce, Gamesparks, UnityAds, TextMeshPro,  JIRA]
+tools: [Perforce, Swarm, Gamesparks, Git, UnityAds, Jira, Confluence]
 duration: "1 year"
 team-size:
   - role: Programmers
@@ -45,14 +45,14 @@ team-size:
     amount: 1 (on site)
   - role: QAs
     amount: 1 (on site) + 4 (abroad)
-  - role: Support
+  - role: Supports
     amount: 2 (on site)
 remote-team: yes
-main-roles: [Gameplay Programmer, Back-end Programmer, UI Programmer)]
+main-roles: [Gameplay Programmer, Back-end Programmer, UI Programmer]
 project_links:
-  - name: android
+  - name: googleplay
     url: "https://play.google.com/store/apps/details?id=com.codemasters.F1Mobile&hl=fr&gl=US"
-  - name: apple
+  - name: applestore
     url: "https://apps.apple.com/fr/app/f1-mobile-racing/id1343820018"
 additional-sections:
   - name: tasks

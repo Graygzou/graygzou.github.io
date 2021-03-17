@@ -59,6 +59,36 @@ social_tags:
   - name: itch-dot-io
     path: https://graygzou.itch.io/
 
+icons_map:
+  - name: Android
+    icon_name: android
+  - name: GooglePlay
+    icon_name: googleplay
+  - name: iOS
+    icon_name: apple
+  - name: Unity3D
+    icon_name: unity
+  - name: Unreal
+    icon_name: unrealengine
+  - name: Windows
+    icon_name: windows
+  - name: Git
+    icon_name: git
+  - name: Jekyll
+    icon_name: jekyll
+  - name: Jenkins
+    icon_name: jenkins
+  - name: Jira
+    icon_name: jira
+  - name: Trello
+    icon_name: trello
+  - name: Swarm
+    icon_name: swarm
+  - name: Jfrog Bintray
+    icon_name: jfrogbintray
+  - name: Confluence
+    icon_name: confluence
+
 collections_dir: collections
 collections:
   project-pages:
