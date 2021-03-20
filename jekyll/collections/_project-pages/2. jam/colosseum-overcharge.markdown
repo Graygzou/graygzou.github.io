@@ -17,7 +17,7 @@ pitch: "Colosseum Overcharge is a 2.5D multiplayers brawler. This game has been 
         As the game progresses your little robot that started with nothing will be able to upgrade and use new mechanics in hopes of winning the next round !
         <br/><br/>
         * We only worked for 48 hours since we were working the monday (we took a bit of time on that day to fix small bugs and submit the project)"
-platforms: [Windows]
+platforms: "Windows"
 engines: Unity3D
 tools: [Rewired, ProBuilder]
 duration: "48 hours*"

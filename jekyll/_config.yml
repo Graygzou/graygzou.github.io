@@ -88,6 +88,12 @@ icons_map:
     icon_name: jfrogbintray
   - name: Confluence
     icon_name: confluence
+  - name: Linux
+    icon_name: linux
+  - name: Mac
+    icon_name: apple
+  - name: Nintendo Switch
+    icon_name: nintendoswitch
 
 collections_dir: collections
 collections:

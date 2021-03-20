@@ -48,7 +48,7 @@ pitch: "Native Ruins is a 3D survival game made for a school project at the Univ
         To done it, she will need wood, rope and a sail to build a raft.
         As she goes through her adventure, she will discover totems that will give her more abilities useful to archive her goal."
 platforms: Windows
-engines: Unity 3D
+engines: Unity3D
 tools: [Asset Store, Mixamo, Gimp]
 duration: "1 months"
 team-size:

@@ -32,7 +32,7 @@ pitch: "_The only NeOne_ is a 3D Grid based Maze game.
         <br/>
         We're pround to finish #109 overall for this jam !"
 pinned: true
-platforms: [Windows, WebGL]
+platforms: "Windows, WebGL"
 engines: Unity3D
 tools: [Shader Graph, Rewired, ProGrids]
 duration: "48 hours"
@@ -44,7 +44,7 @@ team-size:
 main-roles: [3Cs Programmer, Gameplay Programmer, Level Designer]
 youtube-link: -BDVJ9IO2uk
 project_links:
-  - name: itch-io
+  - name: itch-dot-io
     url: https://dzamani.itch.io/the-only-neone
 additional-sections:
   - name: goals

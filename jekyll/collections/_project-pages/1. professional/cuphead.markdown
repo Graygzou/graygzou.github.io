@@ -24,18 +24,20 @@ pitch: "_Cuphead_ is a 2D Run and gun game published by StudioMDHR in 2017.
 pinned: true
 platforms: Windows, Linux, Mac, Nintendo Switch
 engines: Unity3D
-tools: [Rewired, TextMeshPro, Git, Steam Upload, JIRA, SDEV (Switch), Paint.net, Jenkins]
+tools: [Rewired, TextMeshPro, Git, Steam Upload, Jira, SDEV (Switch), Paint.net, Jenkins]
 duration: "4 months"
 team-size:
   - role: Programmer
-    amount: 1 (on site)
+    amount: 3 (2 abroad)
   - role: Producer
-    amount: 1 (on site)
+    amount: 2 (1 abroad)
 remote-team: yes
 main-roles: [UI Programmer, Game Programmeur]
 project_links:
-  #- name: steam
-  #  url: todo
+  - name: steam
+    url: "https://store.steampowered.com/app/268910/Cuphead/"
+  - name: gog-dot-com
+    url: "https://www.gog.com/game/cuphead"
 additional-sections:
   - name: tasks
     list: ["Adapt UI and text per language to have",
@@ -59,8 +61,8 @@ The main task were related to the UI but also some bugs:
 
 | UI bugs fixes | UI Integration |
 | UI animations bugs fixes | UI features (make the glow of the boss title) |
-| controllers bugs | UI animations bugs |
-| localization bugs | bring legacy branch up-to-date (git task) |
+| controllers bugs | bring legacy branch up-to-date (git task) |
+| localization bugs |  |
 
 All of the above by keeping an eye on the English version.
 

@@ -7,12 +7,9 @@ languages:
   - name: C#
     percentage: 70.0
     color: "#178600"
-  - name: C#
+  - name: JavaScript
     percentage: 30.0
-    color: "#178600"
-  - name: Javascript
-    percentage: 30.0
-    color: "#178600"
+    color: "#f1e05a"
 tags: ['unity3d', 'Architectures', 'Back-end', 'Bugs fixes', 'Code review']
 category: 'professional'
 pitch: "_F1® Mobile Racing_ est un jeu mobile officiel du championnat _FIA FORMULA ONE WORLD CHAMPIONSHIP™_.
@@ -34,19 +31,19 @@ tools: [Perforce, Swarm, Gamesparks, Git, UnityAds, Jira, Confluence]
 duration: "1 year"
 team-size:
   - role: Programmers
-    amount: 5 (on site)
+    amount: 5
   - role: Designer
-    amount: 1 (on site)
+    amount: 1
   - role: Artists
-    amount: 3 (on site)
+    amount: 3
   - role: Producers
-    amount: 1 (on site)
+    amount: 1
   - role: Build master
-    amount: 1 (on site)
+    amount: 1
   - role: QAs
-    amount: 1 (on site) + 4 (abroad)
+    amount: 5 (4 abroad)
   - role: Supports
-    amount: 2 (on site)
+    amount: 2
 remote-team: yes
 main-roles: [Gameplay Programmer, Back-end Programmer, UI Programmer]
 project_links:
@@ -81,12 +78,12 @@ Indeed, we used git for the server part whereas Perforce was used for the rest o
 
 Later on, I was able to join the server git and even work on it to implements features.
 
-#### What I've done
+### What I've done
 I had the chance to work on several different part of the project.
 I always try to improve the codebase while I was fixing bugs. Sometimes, a whole rework was necessary to make bugs dissapear. 
 In the later case, the starting logic was too ambiguous. 
 
-##### Features
+#### Features
 * Part recycling feature
 * Esport phase 
 * Ghost mode prototype
@@ -95,7 +92,7 @@ In the later case, the starting logic was too ambiguous.
 * Gamertag system (server side)
 * Schumacher/Halloween Event (server side)
 
-##### Code Improvements
+#### Code Improvements
 * Rework of Ads management.
 * Creation of UI systems for similar behavior.
 * Generalisation of tutorial step.
