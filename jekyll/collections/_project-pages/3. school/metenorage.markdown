@@ -1,5 +1,4 @@
 ---
-layout: project-page
 title: Metenorage
 description: A 3D voxel engine (ECS) based on LWJGL and JBullet.
 stargazers-count: 0

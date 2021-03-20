@@ -1,5 +1,4 @@
 ---
-layout: project-page
 title: Native-Ruins
 description: 3D third-person game, made with Unity engine.
 stargazers-count: 3
@@ -48,7 +47,7 @@ pitch: "Native Ruins is a 3D survival game made for a school project at the Univ
         To done it, she will need wood, rope and a sail to build a raft.
         As she goes through her adventure, she will discover totems that will give her more abilities useful to archive her goal."
 platforms: Windows
-engines: Unity3D
+engines: Unity  3D
 tools: [Asset Store, Mixamo, Gimp]
 duration: "1 months"
 team-size:
@@ -59,11 +58,6 @@ youtube-link: 2tzLruIYMcg
 project_links:
   - name: github
     url: https://github.com/Graygzou/native-ruins
-key-dates:
-  - 2019-07-27 20:26:29 -0400
-  - 2019-01-20 20:26:29 -0400
-  - 2019-08-20 20:26:29 -0400
-  - 2019-03-20 20:26:29 -0400
 additional-sections:
   - name: goals
     list: ["Apply basics principles of game development with tools used in industry",

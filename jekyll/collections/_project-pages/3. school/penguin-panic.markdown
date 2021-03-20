@@ -1,5 +1,4 @@
 ---
-layout: project-page
 title: Penguin-Panic
 description: 3D exploration, arcade game made for the Ubisoft Game Lab Competition 2018
 tags: ['unity3d', 'Water Research', 'Adaptative AI']

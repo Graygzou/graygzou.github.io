@@ -1,5 +1,4 @@
 ---
-layout: project-page
 title: Colosseum-overcharge
 description: 2.5D multiplayer brawler game made in 48 hours* for the Ludum Dare 45 (2019).
 color: "#178600"

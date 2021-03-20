@@ -1,5 +1,4 @@
 ---
-layout: project-page
 title: Brain-control
 description: Top down 2D game, made with Unity engine for the WonderJam 2018.
 stargazers-count: 1

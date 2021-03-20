@@ -1,5 +1,4 @@
 ---
-layout: project-page
 title: Dyga-engine
 description: 2D game engine which allows to build platformer and puzzle games.
 stargazers-count: 0

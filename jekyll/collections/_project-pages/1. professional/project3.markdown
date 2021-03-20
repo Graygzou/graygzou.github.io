@@ -1,5 +1,4 @@
 ---
-layout: project-page
 title: Unannonced-title
 description: Tracking and bugs fixes on an unannonced title
 tags: []

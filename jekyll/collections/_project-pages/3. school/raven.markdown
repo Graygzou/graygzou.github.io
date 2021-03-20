@@ -1,5 +1,4 @@
 ---
-layout: project-page
 title: Raven
 description: Top down 2D game, similar to a Quake-style deathmatch.
 stargazers-count: 3

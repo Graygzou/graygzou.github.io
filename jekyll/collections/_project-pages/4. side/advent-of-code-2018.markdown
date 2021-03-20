@@ -1,5 +1,4 @@
 ---
-layout: project-page
 title: Advent-Of-Code-2018
 description: My solutions for the Advent of Code (AoC) challenge, 2018 edition
 stargazers-count: 0

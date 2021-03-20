@@ -1,5 +1,4 @@
 ---
-layout: project-page
 title: F1-Mobile-Racing
 description: Add feature, improvements and bug fixes on both client and server.
 tags: []

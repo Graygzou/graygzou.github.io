@@ -1,5 +1,4 @@
 ---
-layout: project-page
 title: gmtk-2019-statistics
 description: A bunch of statistics from the 2019 edition of the Game Maker ToolKit Game Jam
 stargazers-count: 0

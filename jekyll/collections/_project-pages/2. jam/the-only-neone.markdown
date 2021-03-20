@@ -1,5 +1,4 @@
 ---
-layout: project-page
 title: The-only-neone
 description: 3D Grid based Maze game made in 48 hours for the GMTK GameJam 2019
 color: "#178600"

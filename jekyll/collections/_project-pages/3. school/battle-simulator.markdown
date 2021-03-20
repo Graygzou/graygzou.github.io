@@ -1,5 +1,4 @@
 ---
-layout: project-page
 title: Battle-Simulator
 description: Battle simulator made with JMonkey, using a graph model as back-end
 stargazers-count: 2

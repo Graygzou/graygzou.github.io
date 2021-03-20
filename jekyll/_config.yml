@@ -137,7 +137,14 @@ google_analytics: UA-148345166-1
 # Declare all the paths for carousel images.
 
 defaults:
-  - scope:
+  -
+    scope:
       path: "assets/project-images/*/carousel"
     values:
       carousel: true
+  -
+    scope:
+      path: ""
+      type: "project-pages"
+    values:
+      layout: "project-page"

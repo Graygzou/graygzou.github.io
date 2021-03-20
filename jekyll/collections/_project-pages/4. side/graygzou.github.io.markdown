@@ -1,5 +1,4 @@
 ---
-layout: project-page
 title: graygzou.github.io
 description:  Personal portfolio made with jekyll with my own theme.
 stargazers-count: 0
