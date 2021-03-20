@@ -246,6 +246,7 @@
 
   h3 {
     margin: 0;
+    font-size: 18px;
   }
 
   div {
@@ -445,4 +446,11 @@ object {
     -webkit-animation: fadein 2s, fadeout 2s 3.5s;
     animation: fadein 2s, fadeout 2s 3.5s;
   }
+}
+
+.footer-copyright {
+  @include relative-font-size(0.9375);
+  color: $grey-color;
+  margin: 0;
+  text-align: center;
 }

@@ -147,7 +147,14 @@ layout: default
       </div>
       <hr>
       <div>
-        <span class="table_title">Team Size:</span>
+        <span class="table_title">
+          Team Size:
+          {% assign total = 0 %}
+          {%- for group in page.team-size -%}
+            {% assign total = total | plus: group.amount %}
+          {%- endfor -%}
+          &asymp; {{ total }}
+        </span>
         <ul>
           {%- for group in page.team-size -%}
             <li>{{ group.role }} : {{ group.amount }}</li>
