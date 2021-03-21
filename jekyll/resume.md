@@ -1,7 +1,6 @@
 ---
 layout: resume
 title: Resume
-permalink: /resume/
 order: 3
 allowindex: false
 ---

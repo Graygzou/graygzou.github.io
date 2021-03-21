@@ -47,6 +47,13 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://graygzou.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 use_seo: true
 use_feed: true
+header_pages:
+  - index.md
+  - projects.md
+  - resume.md
+  - blog.md
+  - about.md
+
 social_tags:
   - name: twitter
     path: https://twitter.com/GrayGzou
@@ -99,6 +106,7 @@ collections_dir: collections
 collections:
   project-pages:
     output: true
+    permalink: /:collection/:name
     #sort_by: last_update
   additional-infos:
     output: false

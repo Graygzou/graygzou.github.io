@@ -5,7 +5,7 @@ layout: default
 
   <header class="post-header">
     <div class="project-thumbnail">
-      <h1 class="project-title p-name" itemprop="name">{{ page.title | replace: '-', ' ' | escape }}</h1>
+      <h1 class="project-title p-name" itemprop="name"> {{ page.title | replace: '-', ' ' | escape }}</h1>
       {% capture image_path %}/assets/project-images/{{ page.title | downcase }}/{{ page.title | downcase }}-banner.png{% endcapture %}
       {% capture image_path_webp %}/assets/webp/{{ page.title | downcase }}-banner.webp{% endcapture %}
       {% capture image_alt %}{{ page.title | downcase }}-banner{% endcapture %}

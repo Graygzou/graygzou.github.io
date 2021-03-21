@@ -1,6 +1,6 @@
 ---
 title: graygzou.github.io
-description:  Personal portfolio made with jekyll with my own theme.
+description: Personal portfolio made with jekyll with my own theme.
 stargazers-count: 0
 forks-count: 1
 updated-at: 2019-12-06 02:02:51
