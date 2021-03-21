@@ -90,7 +90,7 @@ def main(pathToFolder):
     if not os.path.exists(pathToFolder + PROJECT_TXT_CONTENT_FOLDER):
         os.makedirs(pathToFolder + PROJECT_TXT_CONTENT_FOLDER)
 
-    ## Iterates on all the project-pages
+    ## Iterates on all the projects
     pathlist = Path(pathToFolder + "projects-content/").glob('**/*.markdown')
     print(str(pathlist))
 

@@ -104,9 +104,9 @@ icons_map:
 
 collections_dir: collections
 collections:
-  project-pages:
+  projects:
     output: true
-    permalink: /:collection/:name
+    permalink: /:collection/:name:output_ext
     #sort_by: last_update
   additional-infos:
     output: false
@@ -153,6 +153,6 @@ defaults:
   -
     scope:
       path: ""
-      type: "project-pages"
+      type: "projects"
     values:
       layout: "project-page"

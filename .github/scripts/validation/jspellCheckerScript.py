@@ -32,7 +32,7 @@ def main(jspellAPIKey, path, outputFolder):
 
     resultsStr = ""
 
-    ## Iterates on all the project-pages
+    ## Iterates on all the projects
     pathlist = Path(path).glob('**/*-minify.markdown')
     for path in pathlist:
         # convert it because path is object not string

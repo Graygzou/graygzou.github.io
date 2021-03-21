@@ -16,7 +16,7 @@ from pathlib import Path
 
 # Static const variables
 endOfFile = '\n'
-FOLDER_REL_PATH = "./jekyll/collections/_project-pages/"
+FOLDER_REL_PATH = "./jekyll/collections/_projects/"
 ADDIT_FM_FOLDER_REL_PATH = "./jekyll/_includes/projects-front-matter/"
 PAGE_LAYOUT = "project-page"
 postFileName = ".markdown"

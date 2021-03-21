@@ -159,7 +159,7 @@ def applyGrammarBotCheck(grammarBotAPIKey, folderPath):
 
     resultsFile = open("grammarBotResults.txt", 'w')
     
-    ## Iterates on all the project-pages
+    ## Iterates on all the projects
     pathlist = Path(folderPath + "projects-content/").glob('**/*.markdown')
     for path in pathlist:
         # because path is object not string

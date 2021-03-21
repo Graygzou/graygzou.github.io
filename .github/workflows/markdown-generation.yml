@@ -46,7 +46,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: project-pages
-          path: jekyll/collections/_project-pages/
+          path: jekyll/collections/_projects/
 
       - name: Upload to branch
         uses: ./.github/actions/upload-to-branch
