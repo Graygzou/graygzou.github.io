@@ -1,12 +1,14 @@
 ---
+layout: project-page
 title: gmtk-2019-statistics
 description: A bunch of statistics from the 2019 edition of the Game Maker ToolKit Game Jam
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-08-14 01:14:49
-last-update-days: 477
+last-update-days: 586
 tags: []
 languages: 
+
 published: false
 category: 'side'
 pitch: "Crawl the site : [GMTK-2019](https://itch.io/jam/gmtk-2019) to get some statistics about the event.
