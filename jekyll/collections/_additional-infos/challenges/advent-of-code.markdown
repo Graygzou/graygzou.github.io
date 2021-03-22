@@ -5,7 +5,7 @@ sub-title: Solve 25 puzzles (one each day during December) composed of two parts
 highlights: [Three consecutives participations, Finished one edition]
 start-dates: [2018, 2019, 2020]
 localisation: At Home
-link: https://adventofcode.com/
+link: https://adventofcode.com/about
 category: 'challenges'
 display: true
 ---
