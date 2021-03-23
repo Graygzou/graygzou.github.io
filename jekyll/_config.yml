@@ -54,6 +54,8 @@ header_pages:
   - blog.md
   - about.md
 
+project_categories_ordered: [professional, jam, school, side]
+
 social_tags:
   - name: twitter
     path: https://twitter.com/GrayGzou

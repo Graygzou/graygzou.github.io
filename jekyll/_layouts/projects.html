@@ -11,31 +11,26 @@ layout: default
 
     <!-- Iterate on the project-page collection -->
     {%- if site.projects.size > 0 -%}
-    {% assign groups = site.projects | group_by: "category" %}
-    {% for group in groups %}
-    {% assign current_color = '#e8e8e880' %}
-    {%- if forloop.index0 != 0 -%}
-    {%- endif -%}
-    <h2 class="page-heading">{{ group.name | capitalize }} projects</h2>
-    <ul class="project-list">
-        <!--{% assign sorted_pages = group.items | sort:"last-update-days" %}-->
-        {% assign sorted_pages = group.items | sort:"priority" %}
-        {%- for project in sorted_pages -%}
-
-        {% assign new_section = forloop.index | minus:1 | modulo:1 %}
-        {%- if new_section == 0 -%}
-        {%- if current_color == '#e8e8e880' -%}
-        {% assign current_color = '#ffffff' %}
-        <li  class="project-li" style="background-color: {{ current_color }} ;">
-        {%- else -%}
-        {% assign current_color = '#e8e8e880' %}
-        <li  class="project-li" style="background-color: {{ current_color }} ;">
-        {%- endif -%}
-        {%- endif -%}
-            {% include project-thumbnail.html %}
-        </li>
+        {% for group in site.project_categories_ordered %}
+            {% assign current_color = '#e8e8e880' %}
+            <h2 class="page-heading">{{ group | capitalize }} projects</h2>
+            <ul class="project-list">
+            {% assign sorted_pages = site.projects | where: "category", group | sort:"priority" %}
+            {%- for project in sorted_pages -%}
+                {% assign new_section = forloop.index | minus:1 | modulo:1 %}
+                {%- if new_section == 0 -%}
+                {%- if current_color == '#e8e8e880' -%}
+                {% assign current_color = '#ffffff' %}
+                <li  class="project-li" style="background-color: {{ current_color }} ;">
+                {%- else -%}
+                {% assign current_color = '#e8e8e880' %}
+                <li  class="project-li" style="background-color: {{ current_color }} ;">
+                {%- endif -%}
+                {%- endif -%}
+                    {% include project-thumbnail.html %}
+                </li>
+            {%- endfor -%}
+            </ul>
         {%- endfor -%}
-    </ul>
-    {%- endfor -%}
     {%- endif -%}
 </div>
