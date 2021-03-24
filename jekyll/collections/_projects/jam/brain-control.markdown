@@ -5,7 +5,7 @@ description: Top down 2D game, made with Unity engine for the WonderJam 2018.
 stargazers-count: 1
 forks-count: 0
 updated-at: 2019-07-24 00:24:25
-last-update-days: 607
+last-update-days: 609
 tags: ['unity', '2d-game', 'survival-game', 'multiplayer-game', 'kill-zombies', 'steering-behaviors']
 languages: 
   - name: C#

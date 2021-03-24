@@ -4,7 +4,7 @@ title: graygzou.github.io
 description:  Personal portfolio made with jekyll with my own theme.
 stargazers-count: 0
 forks-count: 1
-updated-at: 2021-03-22 12:38:34
+updated-at: 2021-03-24 12:45:41
 last-update-days: 0
 tags: ['portfolio', 'html-css', 'javascript', 'python', 'code-generation', 'github-api', 'continuous-integration', 'bash-script']
 languages: 
@@ -27,6 +27,7 @@ languages:
     percentage: 1.9
     color: "#f1e05a"
 
+published: false
 category: 'side'
 pitch: "Wonderful website I made using jekyll and liquid to build what I want. Using Github API also."
 platforms: Web

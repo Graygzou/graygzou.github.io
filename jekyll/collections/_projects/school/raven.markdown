@@ -5,7 +5,7 @@ description: Top down 2D game, similar to a Quake-style deathmatch.
 stargazers-count: 3
 forks-count: 1
 updated-at: 2019-07-22 23:23:09
-last-update-days: 608
+last-update-days: 610
 tags: ['artificial-intelligence', 'top-down-shooter', 'neural-network', 'fuzzilogic', 'goal-oriented-action-planning', 'steering-behaviors']
 languages: 
   - name: C++

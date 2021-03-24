@@ -5,13 +5,14 @@ description: My solutions for the Advent of Code (AoC) challenge, 2018 edition
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-23 02:08:56
-last-update-days: 608
+last-update-days: 610
 tags: ['lua', 'aoc', 'advent-of-code']
 languages: 
   - name: Lua
     percentage: 100.0
     color: "#000080"
 
+published: false
 category: 'side'
 pitch: "Advent of Code is an Advent calendar of small programming puzzles for a variety of skill sets and skill levels that can be solved in any programming language we like.
         People use this event as a speed contest, practice problems, or even to challenge each other.
