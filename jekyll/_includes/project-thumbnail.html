@@ -1,9 +1,10 @@
 <!--
  * /!\ The variable project need to be assign in order to use this sections
  -->
-{%- capture image_path -%}/assets/project-images/{{ project.title | downcase }}/{{ project.title | downcase }}-thumbnail.png{%- endcapture -%}
-{%- capture image_path_webp -%}/assets/webp/{{ project.title | downcase }}-thumbnail.webp{%- endcapture -%}
-{%- capture image_alt -%}{{ project.title | downcase }}-thumbnail{%- endcapture -%}
+{% assign escaped_project_title = project.title | replace:  "(", '' | replace:  ")", '' | downcase %}
+{%- capture image_path -%}/assets/project-images/{{ escaped_project_title }}/{{ escaped_project_title }}-thumbnail.png{%- endcapture -%}
+{%- capture image_path_webp -%}/assets/webp/{{ escaped_project_title }}-thumbnail.webp{%- endcapture -%}
+{%- capture image_alt -%}{{ escaped_project_title }}-thumbnail{%- endcapture -%}
 <!-- Indicate what the main language used in this project  -->
 {%- if project.languages -%}
   {% assign main_language = project.languages | first %}
