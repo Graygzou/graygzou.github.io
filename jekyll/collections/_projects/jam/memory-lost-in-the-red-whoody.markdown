@@ -45,7 +45,7 @@ team-size:
     amount: 1
   - role: Narrative designer
     amount: 1
-main-roles: [3Cs Programmer, Gameplay Programmer, UI Programmer]
+main-roles: [3Cs Programmer, Gameplay Programmer, Project manager]
 youtube-link: -BDVJ9IO2uk
 project_links:
   - name: itch-dot-io
@@ -64,3 +64,46 @@ Gregoire Boiron <gregoire.boiron@gmail.com>
 Copyright (c) 2018-2021 Gregoire Boiron  All Rights Reserved.
 --->
 
+Screenshots
+--------------------
+{% include helpers/project-carousel %}
+
+Detailed Info
+--------------------
+This game jam was my 4th game jam and the first one not knowing my team before the event.
+We decided to go for something as simple as possible to avoid getting lost on complicated things since we couldn't help each other on technical stuffs.
+That's why we went for a point and click.
+
+I decided to code every system we wanted in the game (details below) and stick those simple version yet highly customizable throught Unity editor.
+I'm pretty proud of that and was happy to being able to setup many object with editor instead of having to do them one at the time.
+
+#### Player movement
+TODO
+
+#### Interactables
+The heart of a point and click is the item you can interact with and use to different purpose.
+By realising that right away, I knew I had to do something generic so a lot of works could be done in the editor. 
+Doing it that way garantie to re-use existing fonctinnality without adding more code and bugs. 
+Of course, some item have special behavior, but as soon as I added the feature, another could use it right away and combining it with existing behaviour for example.
+
+The only downside of it was that, every time the limitation was reached, the codebase of this class was starting to get heavier.
+I could split those down by the effort was too time consuming for a jam. 
+
+TODO SCREENSHOT OF EDITOR TOOLS
+
+#### Inventory system
+I made a simple inventory system which allow to store interactable objects. When interacting with an object, the system knows it can be added to the inventory based on the object type. Later we can drag and drop this item onto another game element to create special behavior.
+
+#### Dialogue system 
+Point and click are also famous to tell stories. It's really common to have a global mystery to solve or a quest to accomplished.
+I did something really simple, based on scriptable object. 
+I once again, allow to make it data driven by reading as much data as possible in the scriptable object like the position of the asset when triggering the dialogue
+or option to allow overriding the asset by another one if needed.
+
+#### Asset integration
+I helped my teammates to integrate assets or even sounds into the game to have their work shine and make it pretty. 
+
+#### What we had to give up on
+- We wanted to create many different "scenes" were the player could go back on forth to solve more advanced puzzles. Transitions will be enable with a direction arrow on the each side of the theater. 
+- We wanted to create more puzzles with different "interactions" (clicking on a windows will make an clue drop from it, etc.).
+- Create multiple choice dialogues where the player will be able to choose from possible answers. This will allows alternative ends for example. 
