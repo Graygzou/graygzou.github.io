@@ -71,14 +71,16 @@ Screenshots
 Detailed Info
 --------------------
 This game jam was my 4th game jam and the first one not knowing my team before the event.
+
 We decided to go for something as simple as possible to avoid getting lost on complicated things since we couldn't help each other on technical stuffs.
 That's why we went for a point and click.
 
+One of the member of the team came up with [TOHU](https://www.youtube.com/watch?v=EkzFwtn9Hpg) as an example. It help us see what we wanted to achieve as gameplay but also a bit as a visual idae of what the game could look like.
+
+Tech side
+--------------------
 I decided to code every system we wanted in the game (details below) and stick those simple version yet highly customizable throught Unity editor.
 I'm pretty proud of that and was happy to being able to setup many object with editor instead of having to do them one at the time.
-
-#### Player movement
-TODO
 
 #### Interactables
 The heart of a point and click is the item you can interact with and use to different purpose.
@@ -90,6 +92,9 @@ The only downside of it was that, every time the limitation was reached, the cod
 I could split those down by the effort was too time consuming for a jam. 
 
 TODO SCREENSHOT OF EDITOR TOOLS
+
+#### Player movement
+Point and click games usually include basic character movement. If you click on the ground, the player will move there. That's what we did, with a first iteration making the player move left and right. Sadly, I did not have time to come back on this in order to introduce a more "bouncy", living movements to the character. Plus, a possible improvement would be to adapt the height of the player based on ground variations.
 
 #### Inventory system
 I made a simple inventory system which allow to store interactable objects. When interacting with an object, the system knows it can be added to the inventory based on the object type. Later we can drag and drop this item onto another game element to create special behavior.
@@ -107,3 +112,17 @@ I helped my teammates to integrate assets or even sounds into the game to have t
 - We wanted to create many different "scenes" were the player could go back on forth to solve more advanced puzzles. Transitions will be enable with a direction arrow on the each side of the theater. 
 - We wanted to create more puzzles with different "interactions" (clicking on a windows will make an clue drop from it, etc.).
 - Create multiple choice dialogues where the player will be able to choose from possible answers. This will allows alternative ends for example. 
+
+Post-Mortem
+--------------------
+#### What helped me a lot
+* Think of simple architecture design, yet 
+* Heavy use of Singletons (yes, I know it's bad..)
+* Try to showcase my work to my colleagues with early prototype of features.
+* Communication. Ask each member is personal goal for the jam and his availabilities.
+* Usage of some brainstorm techniques. 
+
+#### What could I do better
+* Try to study ideas without going too deeply to not waste times.
+* Work assignments (the possibility to work in the engine or not for example).
+* Keep more times for polish (the player character was not as appealing as it should be).
