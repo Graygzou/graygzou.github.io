@@ -1,6 +1,12 @@
 name: Test Get latest commit
 
 on:
+  workflow_run:
+    workflows: ["Test2"]
+    branches: [develop]
+    types: 
+      - completed
+
   workflow_dispatch:
 
 jobs:
