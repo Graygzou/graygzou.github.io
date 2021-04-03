@@ -8,6 +8,12 @@ layout: default
 
   {%- include projects.html -%}
 
-  {%- include additional-infos.html -%}
+  {% assign challenges = site.challenges %}
+  {% include additional-infos.html title="Challenges" infoPages=challenges %}
 
+  {% assign experiences = site.experiences %}
+  {% include additional-infos.html title="Experiences" infoPages=experiences %}
+
+  {% assign educations = site.educations %}
+  {% include additional-infos.html title="Educations" infoPages=educations %}
 </div>

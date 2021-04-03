@@ -110,7 +110,11 @@ collections:
     output: true
     permalink: /:collection/:name:output_ext
     #sort_by: last_update
-  additional-infos:
+  challenges:
+    output: true
+  educations:
+    output: false
+  experiences:
     output: false
   others:
     output: false
