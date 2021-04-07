@@ -1,0 +1,84 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.challenges -%}
+    <ul class="project-list">
+      {% assign challengesDoc = site.collections | where: "label", "challenges" | first %}
+      {% assign categoriesDoc = challengesDoc.docs | group_by: 'category' %}
+      {% for challengeCategory in categoriesDoc %}
+      <li>
+        {% assign category = site.challenges-description | where: "ref",challengeCategory.name | first %}
+
+        {% capture image_path %}/assets/images/challenges/{{ category.logo }}{% endcapture %}
+        {% capture image_path_webp %}/assets/webp/{{ category.logo | replace: ".jpg", ".webp" | replace: ".png", ".webp" }}{% endcapture %}
+        {% capture image_alt %}{{ challenge.title }}{% endcapture %}
+
+        <ul class="project-list">
+          <li class="home-li">
+            <a href="{{ category.link }}">
+              {% include images-handler.html filename=image_path webp=image_path_webp alt=image_alt %}
+              <h3 class="thumbnail-title">{{ category.name | escape }}</h3>
+            </a>
+            <div>
+              <ul>
+                {%- if category.description -%}
+                <li class="post-meta">{{ category.description }}</li>
+                {%- endif -%}
+              </ul>
+            </div>
+          </li>
+        {% for challenge in challengeCategory.items %}
+          <li class="home-li">
+            <a>
+              {{ challenge.name }}
+            </a>
+            <div>
+              <ul>
+                <li class="post-meta">
+                  <svg class="svg-icon" width="16px" height="16px">
+                    <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#map-marker"></use>
+                  </svg>
+                  {{ challenge.localisation }}
+                </li>
+                <li class="post-meta">
+                  <svg class="svg-icon" width="16px" height="16px">
+                    <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#calendar"/>
+                  </svg>
+                  {{ challenge.start-dates | join: ', ' }}
+                  {%- if challenge.end-date -%}
+                    -{{ challenge.end-date }}
+                  {%- endif -%}
+                </li>
+                {%- for highlight in challenge.highlights -%}
+                <li class="post-meta">
+                  <svg class="svg-icon" width="16px" height="16px">
+                    <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#star"/>
+                  </svg>
+                  {{- highlight -}}
+                </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+          </li>
+        {% endfor %}
+        </ul>
+      </li>
+
+
+        {% if toto.name == "aoc" %}
+          {{ toto.category }}
+          {{ toto.title }}
+          {{ toto.logo }}
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {%- endif -%}
+</div>

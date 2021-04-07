@@ -50,6 +50,7 @@ use_feed: true
 header_pages:
   - index.md
   - projects.md
+  - challenges.md
   - resume.md
   - blog.md
   - about.md
@@ -147,6 +148,27 @@ google_analytics: UA-148345166-1
 #   - vendor/gems/
 #   - vendor/ruby/
 
+challenges-description:
+  - name: "Advent Of Code"
+    ref: "aoc"
+    logo: aoc.svg
+    description: 'Solve 25 puzzles (one each day during December) composed of two parts.'
+    link: "https://adventofcode.com/about"
+  - name: "Google HashCode"
+    ref: "hashcode"
+    logo: hashcode.svg
+    description: 'Brainstorm and implement a complexe probleme (NP most of the time) submitted by Google in small team.'
+    link: "https://codingcompetitions.withgoogle.com/hashcode"
+  - name: "Nuit de l'info"
+    ref: "nuitinfo"
+    logo: N2i.svg
+    description: 'Brainstorm and implements challenges submitted by companies and schools during a night in small teams.'
+    link: "https://www.nuitdelinfo.com/"
+  - name: "Ubisoft Game Lab Competition"
+    ref: "cubi"
+    logo: ubisoft.svg
+    description: '3 months "game jam" where teams have to make a game prototype following a theme and specific constraints.'
+    link: "https://montreal.ubisoft.com/en/our-engagements/education/game-lab-competition/"
 
 # Declare all the paths for carousel images.
 
@@ -160,5 +182,11 @@ defaults:
     scope:
       path: ""
       type: "projects"
+    values:
+      layout: "project-page"
+  -
+    scope:
+      path: ""
+      type: "challenge"
     values:
       layout: "project-page"

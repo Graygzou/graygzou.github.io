@@ -20,11 +20,11 @@
 {%- endif -%}
   <a href="{{ project.url | relative_url }}">
     {%- include images-handler.html alt=image_alt filename=image_path webp=image_path_webp -%}
-  </a>
-  <div class="project-overview">
     <h3 class="project-heading">
       <span class="post-link">{{ project.title | replace: '-', ' ' | escape }}</a>
     </h3>
+  </a>
+  <div class="project-overview">
     <p class="post-meta">{{ project.description }}</p>
     <ul class="tagsgame">
       {%- for tag in project.tags -%}

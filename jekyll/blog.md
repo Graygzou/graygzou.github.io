@@ -2,7 +2,6 @@
 layout: blog
 title: Blog
 permalink: /blog/
-order: 4
 ---
 
 Here, you will find all my experimentation on differents topics. 

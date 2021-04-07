@@ -1,7 +1,6 @@
 ---
 layout: about
 title: About
-order: 5
 allowindex: false
 ---
 

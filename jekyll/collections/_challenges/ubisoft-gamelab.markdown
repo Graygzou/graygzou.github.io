@@ -1,12 +1,8 @@
 ---
-title: Ubisoft Game Lab Competition
-logo: ubisoft.svg
-sub-title: 3 months "game jam" where teams have to make a game prototype following a theme and specific constraints.
 highlights: [Won "Best technical challenge and innovation" award]
 start-dates: [2018]
 localisation: UQAC, Chicoutimi, CA
-link: https://montreal.ubisoft.com/en/our-engagements/education/game-lab-competition/
-category: 'challenges'
+category: 'cubi'
 display: true
 ---
 <!---
