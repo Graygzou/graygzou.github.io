@@ -1,6 +1,6 @@
 ---
 highlights: [Two participations, Finished 2706th on 2815 teams who submitted a solution.]
-start-dates: [2015, 2016]
+start-dates: [2015]
 localisation: UT3, Toulouse, FR
 category: 'hashcode'
 display: true

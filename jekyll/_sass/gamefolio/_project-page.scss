@@ -565,3 +565,11 @@ pre {
 	  /*border-bottom: 1px solid black;*/
 	}
 }
+
+.challenge-header {
+	display: block;
+	padding: 39px 20px;
+	text-align: center;
+	font-size: x-large;
+	background-color: $tile-background-color;
+}

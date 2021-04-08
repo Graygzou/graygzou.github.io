@@ -1,6 +1,6 @@
 ---
 name: "5th Edition"
-highlights: [Does it in Unreal Engine 4]
+highlights: [Used UE4]
 start-dates: [2019]
 localisation: At Home
 category: aoc

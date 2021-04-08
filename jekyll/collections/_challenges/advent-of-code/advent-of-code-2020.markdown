@@ -1,6 +1,6 @@
 ---
 name: "6th Edition"
-highlights: [Finished it]
+highlights: [Completed all puzzles]
 start-dates: [2020]
 localisation: At Home
 category: aoc
