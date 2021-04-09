@@ -3,54 +3,39 @@
   <h2 class="page-heading">{{ include.title | capitalize }}</h2>
   <div>
     <ul class="post-list">
-      {%- for info in include.infoPages -%}
+      {% assign challengeCategories = include.infoPages.docs | group_by: 'category' %}
+      {%- for challengeCategory in challengeCategories -%}
         <li class="home-li">
-          {% capture image_path %}/assets/images/{{ info.category }}/{{ info.logo }}{% endcapture %}
-          {% capture image_path_webp %}/assets/webp/{{ info.logo | replace: ".jpg", ".webp" | replace: ".png", ".webp" }}{% endcapture %}
-          {% capture image_alt %}{{ info.title }}{% endcapture %}
+          {% assign category = site.challenges-description | where: "ref", challengeCategory.name | first %}
 
-          {% if info.collection == "challenges" %}
-          <a href="{{ info.url }}">
-          {% else %}
-          <a href="{{ info.link }}" target="_blank" rel="noopener noreferrer">
-          {% endif %}
+          {% capture image_path %}/assets/images/challenges/{{ category.logo }}{% endcapture %}
+          {% capture image_path_webp %}/assets/webp/{{ category.logo | replace: ".jpg", ".webp" | replace: ".png", ".webp" }}{% endcapture %}
+          {% capture image_alt %}{{ challenge.title }}{% endcapture %}
+
+          <a href="{{ include.infoPages.relative_directory }}">
             {% include images-handler.html filename=image_path webp=image_path_webp alt=image_alt %}
-            <h3 class="thumbnail-title">{{ info.title | escape }}</h3>
+            <h3 class="thumbnail-title">{{ category.name | escape }}</h3>
           </a>
           <hr>
           <div>
             <ul>
-              <li class="post-meta role">{{ info.sub-title }}</li>
-              {%- if info.description -%}
-              <li class="post-meta">{{ info.description }}</li>
+              {%- if category.sub-title -%}
+              <li class="post-meta role">{{ category.sub-title }}</li>
               {%- endif -%}
-              <li class="post-meta">
-                <svg class="svg-icon" width="16px" height="16px">
-                  <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#map-marker"></use>
-                </svg>
-                {{ info.localisation }}
-              </li>
+              {%- if category.description -%}
+              <li class="post-meta">{{ category.description }}</li>
+              {%- endif -%}
               <li class="post-meta">
                 <svg class="svg-icon" width="16px" height="16px">
                   <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#calendar"/>
                 </svg>
-                {{ info.start-dates | join: ', ' }}
-                {%- if info.end-date -%}
-                  -{{ info.end-date }}
-                {%- endif -%}
+                {% assign dates = nul %}
+                {% for challenge in challengeCategory.items %}
+                  {% assign dates = dates | concat: challenge.start-dates %}
+                {% endfor %}
+                {{ dates | join: ', ' }}
               </li>
-              {%- for highlight in info.highlights -%}
-              <li class="post-meta">
-                <svg class="svg-icon" width="16px" height="16px">
-                  <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#star"/>
-                </svg>
-                {{- highlight -}}
-              </li>
-              {%- endfor -%}
             </ul>
-            {%- if site.show_excerpts -%}
-            {{ info.excerpt }}
-            {%- endif -%}
           </div>
         </li>
       {%- endfor -%}
