@@ -11,9 +11,9 @@ layout: default
   {% assign challenges = site.collections | where: "label", "challenges" | first %}
   {% include challenges-overview.html title="Challenges" infoPages=challenges %}
 
-  {% assign experiences = site.experiences %}
+  {% assign experiences = site.experiences | sort: "end-date","last" | reverse %}
   {% include additional-infos.html title="Experiences" infoPages=experiences %}
 
-  {% assign educations = site.educations %}
+  {% assign educations = site.educations | sort: "end-date","last" | reverse %}
   {% include additional-infos.html title="Educations" infoPages=educations %}
 </div>

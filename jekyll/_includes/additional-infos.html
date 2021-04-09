@@ -37,6 +37,8 @@
                 {{ info.start-dates | join: ', ' }}
                 {%- if info.end-date -%}
                   -{{ info.end-date }}
+                {%- else -%}
+                  -Present
                 {%- endif -%}
               </li>
               {%- for highlight in info.highlights -%}

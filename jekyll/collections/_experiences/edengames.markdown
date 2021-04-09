@@ -5,7 +5,6 @@ localisation: Lyon, France
 logo: edengames.svg
 sub-title: Full Stack Programmer
 start-dates: [2020]
-end-date: Present
 link: https://www.edengames.com/
 description: Working on live mobile title F1 Mobile Racing as a gameplay programmer. Gradually becoming full stack (client & back-end).
 category: 'experiences'
