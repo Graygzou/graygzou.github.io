@@ -8,7 +8,7 @@ layout: default
 
   {%- include projects.html -%}
 
-  {% assign challenges = site.challenges %}
+  {% assign challenges = site.collections | where: "label", "challenges" | first %}
   {% include challenges-overview.html title="Challenges" infoPages=challenges %}
 
   {% assign experiences = site.experiences %}
