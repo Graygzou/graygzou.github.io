@@ -10,72 +10,71 @@ layout: default
   {{ content }}
 
   {%- if site.challenges -%}
-    <ul class="project-list">
-      {% assign challengesDoc = site.collections | where: "label", "challenges" | first %}
-      {% assign categoriesDoc = challengesDoc.docs | group_by: 'category' %}
-      {% for challengeCategory in categoriesDoc %}
-      <li>
-        {% assign category = site.challenges-description | where: "ref",challengeCategory.name | first %}
+    {% assign challengesDoc = site.collections | where: "label", "challenges" | first %}
+    {% assign categoriesDoc = challengesDoc.docs | group_by: 'category' %}
+    {% for challengeCategory in categoriesDoc %}
+    <section class="home-section">
+      {% assign category = site.challenges-description | where: "ref",challengeCategory.name | first %}
 
-        {% capture image_path %}/assets/images/challenges/{{ category.logo }}{% endcapture %}
-        {% capture image_path_webp %}/assets/webp/{{ category.logo | replace: ".jpg", ".webp" | replace: ".png", ".webp" }}{% endcapture %}
-        {% capture image_alt %}{{ challenge.title }}{% endcapture %}
+      {% capture image_path %}/assets/images/challenges/{{ category.logo }}{% endcapture %}
+      {% capture image_path_webp %}/assets/webp/{{ category.logo | replace: ".jpg", ".webp" | replace: ".png", ".webp" }}{% endcapture %}
+      {% capture image_alt %}{{ challenge.title }}{% endcapture %}
 
-        <ul class="project-list">
-          <li class="home-li">
+      {% assign header = category.name | escape %}
+      {% include linkedHeading.html heading=header headerlevel=2 %}
+      <ul class="project-list">
+        <li class="home-li">
+          <a href="{{ category.link }}">
             {% include images-handler.html filename=image_path webp=image_path_webp alt=image_alt %}
-            <a href="{{ category.link }}">
-              <h3 class="thumbnail-title">{{ category.name | escape }}</h3>
-            </a>
-            <div>
-              <ul>
-                {%- if category.description -%}
-                <li class="post-meta">{{ category.description }}</li>
+          </a>
+          <div>
+            <ul>
+              {%- if category.description -%}
+              <li class="post-meta">{{ category.description }}</li>
+              {%- endif -%}
+            </ul>
+          </div>
+        </li>
+      {% for challenge in challengeCategory.items %}
+        <li class="home-li">
+          <a href="{{ challenge.url }}" class="challenge-header">
+          {% if challenge.start-dates.size == 1 %}
+            {{ challenge.start-dates[0] }} Edition
+          {% else %}
+            {{ challenge.name }}
+          {% endif %}
+          </a>
+          <div>
+            <ul>
+              <li class="post-meta">
+                <svg class="svg-icon" width="16px" height="16px">
+                  <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#map-marker"></use>
+                </svg>
+                {{ challenge.localisation }}
+              </li>
+              <li class="post-meta">
+                <svg class="svg-icon" width="16px" height="16px">
+                  <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#calendar"/>
+                </svg>
+                {{ challenge.start-dates | join: ', ' }}
+                {%- if challenge.end-date -%}
+                  -{{ challenge.end-date }}
                 {%- endif -%}
-              </ul>
-            </div>
-          </li>
-        {% for challenge in challengeCategory.items %}
-          <li class="home-li">
-            <a href="{{ challenge.url }}" class="challenge-header">
-            {% if challenge.start-dates.size == 1 %}
-              {{ challenge.start-dates[0] }} Edition
-            {% else %}
-              {{ challenge.name }}
-            {% endif %}
-            </a>
-            <div>
-              <ul>
-                <li class="post-meta">
-                  <svg class="svg-icon" width="16px" height="16px">
-                    <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#map-marker"></use>
-                  </svg>
-                  {{ challenge.localisation }}
-                </li>
-                <li class="post-meta">
-                  <svg class="svg-icon" width="16px" height="16px">
-                    <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#calendar"/>
-                  </svg>
-                  {{ challenge.start-dates | join: ', ' }}
-                  {%- if challenge.end-date -%}
-                    -{{ challenge.end-date }}
-                  {%- endif -%}
-                </li>
-                {%- for highlight in challenge.highlights -%}
-                <li class="post-meta">
-                  <svg class="svg-icon" width="16px" height="16px">
-                    <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#star"/>
-                  </svg>
-                  {{- highlight -}}
-                </li>
-                {%- endfor -%}
-              </ul>
-            </div>
-          </li>
-        {% endfor %}
-        </ul>
-      </li>
+              </li>
+              {%- for highlight in challenge.highlights -%}
+              <li class="post-meta">
+                <svg class="svg-icon" width="16px" height="16px">
+                  <use xlink:href="/assets/icons/gamefolio-regular-icons.svg#star"/>
+                </svg>
+                {{- highlight -}}
+              </li>
+              {%- endfor -%}
+            </ul>
+          </div>
+        </li>
       {% endfor %}
-    </ul>
+      </ul>
+    </section>
+    {% endfor %}
   {%- endif -%}
 </div>
