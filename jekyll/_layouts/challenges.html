@@ -37,7 +37,7 @@ layout: default
           </li>
         {% for challenge in challengeCategory.items %}
           <li class="home-li">
-            <a class="challenge-header">
+            <a href="{{ challenge.url }}" class="challenge-header">
             {% if challenge.start-dates.size == 1 %}
               {{ challenge.start-dates[0] }} Edition
             {% else %}

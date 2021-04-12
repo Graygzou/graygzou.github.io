@@ -113,6 +113,7 @@ collections:
     #sort_by: last_update
   challenges:
     output: true
+    permalink: /:collection/:name:output_ext
   educations:
     output: false
   experiences:
@@ -187,6 +188,6 @@ defaults:
   -
     scope:
       path: ""
-      type: "challenge"
+      type: "challenges"
     values:
       layout: "project-page"

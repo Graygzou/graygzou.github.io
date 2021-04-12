@@ -1,7 +1,7 @@
 ---
-highlights: [Two participations, Finished 2706th on 2815 teams who submitted a solution.]
+highlights: [Finished 2706th on 2815 teams who submitted a solution.]
 start-dates: [2016]
-localisation: UT3, Toulouse, FR
+localisation: ENSEEIHT, Toulouse, FR
 category: 'hashcode'
 display: true
 ---
