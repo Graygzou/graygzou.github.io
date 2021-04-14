@@ -7,9 +7,17 @@ name: Resize Images
 
 on:
   push:
-    branches: [ release ]
+    branches: [ develop ]
+    paths:
+    - '**.jpg'
+    - '**.png'
 
   workflow_dispatch:
+    inputs:
+      create-request-pull:
+        description: 'Create request pull'
+        required: true
+        default: 'false'
 
 jobs:
 
@@ -46,3 +54,4 @@ jobs:
           target-branch: develop
           user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
           user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}
+        if: ${{ github.event.inputs.create-request-pull == 'true' }}
