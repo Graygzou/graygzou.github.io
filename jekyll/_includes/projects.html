@@ -1,5 +1,5 @@
 <section class="home-section">
-  <h2 class="page-heading">Highlighted projects</h2>
+  {% include linkedHeading.html heading="Highlighted projects" headerlevel=2 %}
   <ul class="project-list text-align-center">
     {%- assign current_color = '#e8e8e880' -%}
     {%- assign sorted_pages = site.projects | where: "pinned", "true" -%}

@@ -190,4 +190,4 @@ defaults:
       path: ""
       type: "challenges"
     values:
-      layout: "project-page"
+      layout: "challenge"
