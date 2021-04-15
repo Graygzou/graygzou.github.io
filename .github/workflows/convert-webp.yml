@@ -6,10 +6,18 @@
 name: Convert to webp
 
 on:
-  push:
-    branches: [ release ]
+  workflow_run:
+    workflows: ["Resize Images"]
+    branches: [develop]
+    types: 
+      - completed
 
   workflow_dispatch:
+    inputs:
+      create-request-pull:
+        description: 'Create request pull'
+        required: true
+        default: 'false'
 
 jobs:
   convert:
@@ -63,6 +71,7 @@ jobs:
           target-branch: develop
           user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
           user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}
+        if: ${{ github.event.inputs.create-request-pull == 'true' }}
         
       # Should ALWAYS be the last step.
       - name: Teleconsole launch
