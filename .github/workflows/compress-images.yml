@@ -6,13 +6,20 @@
 name: Compress images
 
 on:
-  pull_request:
-    branches: [ release ]
+  workflow_run:
+    workflows: ["Convert to webp"]
+    branches: [develop]
+    types: 
+      - completed
 
   workflow_dispatch:
+    inputs:
+      create-request-pull:
+        description: 'Create request pull'
+        required: true
+        default: 'false'
 
 jobs:
-
   compress:
     runs-on: ubuntu-latest
     defaults:
@@ -48,3 +55,4 @@ jobs:
           target-branch: github.ref
           user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
           user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}
+        if: ${{ github.event.inputs.create-request-pull == 'true' }}
