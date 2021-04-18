@@ -3,6 +3,8 @@ layout: default
 ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/VideoGame">
 
+  {% include project-nav.html %}
+
   <header class="post-header">
     <div class="project-thumbnail">
       <h1 class="project-title p-name" itemprop="name"> {{ page.title | replace: '-', ' ' | escape }}</h1>
@@ -204,6 +206,8 @@ layout: default
 
     </article>
   </div>
+
+  {% include project-nav.html %}
 
   <!-- The Modal -->
   <div id="myModal" class="modal">

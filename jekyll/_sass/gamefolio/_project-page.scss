@@ -597,3 +597,16 @@ pre {
 .svg-nav {
 	display: block;
 }
+
+.project-nav {
+	display: block;
+	height: 25px;
+
+	.project-nav-previous {
+		float: left;
+	}
+
+	.project-nav-next {
+		float: right;
+	}
+}

@@ -1,0 +1,23 @@
+{% assign previous = nil %}
+{% assign next = nil %}
+{% assign done = false %}
+{% assign sorted_pages = site.projects | where: "category", page.category | sort:"priority" %}  
+{% for test in sorted_pages %}
+  {% if test.title == page.title %}
+    {% assign done = true %}
+  {% elsif done == true %}
+    {% assign next = test %}
+    {% break %}
+  {% else %}
+    {% assign previous = test %}
+  {% endif %}
+{% endfor %}
+
+<nav class="project-nav">
+  {% if previous %}
+  <a class="project-nav-previous" href="{{ previous.url }}">Previous : {{ previous.title }}</a>
+  {% endif %}
+  {% if next %}
+  <a class="project-nav-next" href="{{ next.url }}">Next : {{ next.title }}</a>
+  {% endif %}
+</nav>
