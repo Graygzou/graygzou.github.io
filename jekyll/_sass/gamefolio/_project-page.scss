@@ -573,3 +573,27 @@ pre {
 	font-size: x-large;
 	background-color: $tile-background-color;
 }
+
+.challenge-nav {
+	text-align: center;
+
+	a + a {
+		margin-left: 5%;
+	}
+
+	svg {
+		fill: $grey-color;
+	}
+
+	span {
+		display: inline-block; 
+		width: 125px;
+		height: 3px; 
+		vertical-align: super;
+		background-color: $grey-color;
+	}
+}
+
+.svg-nav {
+	display: block;
+}

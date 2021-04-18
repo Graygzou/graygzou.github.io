@@ -1,5 +1,5 @@
 ---
-highlights: [Three participations, Won 1 challenge about making an API]
+highlights: [Won 1 challenge about making an API]
 start-dates: [2014]
 localisation: UT3, Toulouse, FR
 category: 'nuitinfo'
