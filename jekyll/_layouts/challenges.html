@@ -21,7 +21,7 @@ layout: default
       {% capture image_alt %}{{ challenge.title }}{% endcapture %}
 
       {% assign header = category.name | escape %}
-      {% include linkedHeading.html heading=header headerlevel=2 %}
+      {% include linked-heading.html heading=header headerlevel=2 %}
       <ul class="project-list">
         <li class="home-li">
           <a href="{{ category.link }}">

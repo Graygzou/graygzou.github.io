@@ -1,7 +1,7 @@
 <section class="home-section">
 
   {% assign header = include.title | capitalize %}
-  {% include linkedHeading.html heading=header headerlevel=2 %}
+  {% include linked-heading.html heading=header headerlevel=2 %}
   <div>
     <ul class="post-list">
       {%- for info in include.infoPages -%}

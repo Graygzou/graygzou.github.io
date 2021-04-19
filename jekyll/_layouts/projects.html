@@ -16,7 +16,7 @@ layout: default
             {% assign sorted_pages = site.projects | where: "category", group | sort:"priority" %}
             {%- if sorted_pages.size > 0 -%}
                 {% assign header = group | capitalize | append: ' projects' %}
-                {% include linkedHeading.html heading=header headerlevel=2 %}
+                {% include linked-heading.html heading=header headerlevel=2 %}
                 <ul class="project-list">
                 {%- for project in sorted_pages -%}
                     {% assign new_section = forloop.index | minus:1 | modulo:1 %}
