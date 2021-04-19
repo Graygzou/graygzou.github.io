@@ -8,36 +8,7 @@ layout: default
     <h1 class="post-title">{{ category.name | escape }}</h1>
   </header>
 
-  {% assign nbNavItems = 0 %}
-  <nav class="challenge-nav">
-    {% for challenge in site.challenges %}
-      {% if challenge.categories == page.categories %}
-        {% if challenge.url == page.url %}
-        <a href="#"></a>
-        {% else %}
-        <a href="{{ challenge.url }}">
-        {% endif %}
-          {% if challenge.start-dates.size == 1 %}
-            {{ challenge.start-dates[0] }} Edition
-          {% else %}
-            {{ challenge.name }}
-          {% endif %}
-        </a>
-        {% assign nbNavItems = nbNavItems | plus: 1 %}
-      {% endif %}
-    {% endfor %}
-  </nav>
-  <div class="challenge-nav">
-    {%- for i in (1..nbNavItems) -%}
-      <svg class="svg-icon" width="16px" height="16px">
-        <use xlink:href="{{ '/assets/icons/gamefolio-regular-icons.svg#circle' }}">
-        </use>
-      </svg>
-      {%- if forloop.last == false -%}
-      <span></span>
-      {%- endif -%}
-    {%- endfor -%}
-  </div>
+  {% include challenge-nav.html %}
 
   <div class="post-content">
     {{ content }}

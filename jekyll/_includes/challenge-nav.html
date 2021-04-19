@@ -1,0 +1,36 @@
+{% assign nbNavItems = 0 %}
+<nav class="challenge-nav">
+  {% for challenge in site.challenges %}
+    {% if challenge.categories == page.categories %}
+      {% if challenge.url == page.url %}
+      <span>
+      {% else %}
+      <a href="{{ challenge.url }}">
+      {% endif %}
+        {% if challenge.start-dates.size == 1 %}
+          {{ challenge.start-dates[0] }} Edition
+        {% else %}
+          {{ challenge.name }}
+        {% endif %}
+      {% if challenge.url == page.url %}
+      </span>
+      {% else %}
+      </a>
+      {% endif %}
+      {% assign nbNavItems = nbNavItems | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+</nav>
+
+<!-- Graphical footer -->
+<div class="challenge-nav-footer">
+  {%- for i in (1..nbNavItems) -%}
+    <svg class="svg-icon" width="16px" height="16px">
+      <use xlink:href="{{ '/assets/icons/gamefolio-regular-icons.svg#circle' }}">
+      </use>
+    </svg>
+    {%- if forloop.last == false -%}
+    <span></span>
+    {%- endif -%}
+  {%- endfor -%}
+</div>

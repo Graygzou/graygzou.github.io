@@ -577,13 +577,21 @@ pre {
 .challenge-nav {
 	text-align: center;
 
-	a + a {
+	a, span {
 		margin-left: 5%;
+	}
+
+	:first-child {
+		margin: 0;
 	}
 
 	svg {
 		fill: $grey-color;
 	}
+}
+
+.challenge-nav-footer {
+	text-align: center;
 
 	span {
 		display: inline-block; 
