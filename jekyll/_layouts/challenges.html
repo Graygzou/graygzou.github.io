@@ -18,7 +18,7 @@ layout: default
 
       {% capture image_path %}/assets/images/challenges/{{ category.logo }}{% endcapture %}
       {% capture image_path_webp %}/assets/webp/{{ category.logo | replace: ".jpg", ".webp" | replace: ".png", ".webp" }}{% endcapture %}
-      {% capture image_alt %}{{ challenge.title }}{% endcapture %}
+      {% capture image_alt %}{{ category.name }}{% endcapture %}
 
       {% assign header = category.name | escape %}
       {% include linked-heading.html heading=header headerlevel=2 %}
