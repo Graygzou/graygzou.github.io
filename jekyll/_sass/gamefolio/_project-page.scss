@@ -607,14 +607,12 @@ pre {
 }
 
 .project-nav {
-	display: block;
-	height: 25px;
-
-	.project-nav-previous {
-		float: left;
+	.project-nav {
+		display: inline-block;
 	}
 
-	.project-nav-next {
-		float: right;
+	.project-nav-full {
+		display: inline-block;
+		max-width: 50%;
 	}
 }

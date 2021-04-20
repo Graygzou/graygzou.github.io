@@ -14,10 +14,17 @@
 {% endfor %}
 
 <nav class="project-nav">
-  {% if previous %}
-  <a class="project-nav-previous" href="{{ previous.url }}">Previous : {{ previous.title }}</a>
+  {% if previous and next %}
+  {% if previous.title.size > next.title.size %}
+  <a class="project-nav-full" href="{{ previous.url }}">Previous : {{ previous.title }}</a>
+  <a class="project-nav-full" style="float: right; text-align: right;" href="{{ next.url }}">Next : {{ next.title }}</a>
+  {% else %}
+  <a class="project-nav-full" style="float: left;" href="{{ previous.url }}">Previous : {{ previous.title }}</a>
+  <a class="project-nav-full" href="{{ next.url }}">Next : {{ next.title }}</a>
   {% endif %}
-  {% if next %}
-  <a class="project-nav-next" href="{{ next.url }}">Next : {{ next.title }}</a>
+  {% elsif previous %}
+  <a class="project-nav" href="{{ previous.url }}">Previous : {{ previous.title }}</a>
+  {% elsif next %}
+  <a class="project-nav" style="width:100%; text-align: right;" href="{{ next.url }}">Next : {{ next.title }}</a>
   {% endif %}
 </nav>
