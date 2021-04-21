@@ -10,7 +10,8 @@ Gregoire Boiron <gregoire.boiron@gmail.com>
 Copyright (c) 2018 Gregoire Boiron  All Rights Reserved.
 --->
 
-The project page is also available on this website. If you seek technical details you might want to go checkout it out: [Penguin Panic](/projects/penguin-panic)
+**A more detailed presentation of the project is also available on this website.**   
+If you also seek technical details, feel free to checkout it out at this link: [**Penguin Panic**](/projects/penguin-panic)
 
 ## Before the D-Day
 This challenge allow university students to showcase their abilities in making a game with other university with complementary skills. What they try to achieve is to mix technical universities with artistic one by having 4 "technical" students and 4 "artists" students. I put quotes because some might have to take care of game design and other topic which is not their main specialty.
