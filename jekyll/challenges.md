@@ -4,4 +4,5 @@ title: Challenges
 permalink: /challenges/
 ---
 
-Challenges I participated in.
+Here is a list of challenges I participated in.   
+Some of them have detailed information available, so click on the edition you wish to learn more about.

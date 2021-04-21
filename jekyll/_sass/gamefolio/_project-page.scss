@@ -575,6 +575,11 @@ pre {
 	background-color: $tile-background-color;
 }
 
+.disable {
+	color: $grey-color;
+	background: none;
+}
+
 .challenge-nav {
 	text-align: center;
 

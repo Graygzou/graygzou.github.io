@@ -37,13 +37,14 @@ layout: default
         </li>
       {% for challenge in challengeCategory.items %}
         <li class="home-li">
-          <a href="{{ challenge.url }}" class="challenge-header">
+          {% assign content = challenge.content | strip_newlines %}
+          {% if content != "" %}<a href="{{ challenge.url }}" class="challenge-header">{% else %}<span class="challenge-header disable">{% endif %}
           {% if challenge.start-dates.size == 1 %}
             {{ challenge.start-dates[0] }} Edition
           {% else %}
             {{ challenge.name }}
           {% endif %}
-          </a>
+          {% if content != "" %}</a>{% else %}</span>{% endif %}
           <div>
             <ul>
               <li class="post-meta">

@@ -11,16 +11,16 @@ Gregoire Boiron <gregoire.boiron@gmail.com>
 Copyright (c) 2018-2021 Gregoire Boiron  All Rights Reserved.
 --->
 
-### Why Lua ?
-You might ask yourself why so much pain ?  
-Well, the answer is simple: I wanted learn something new. 
+### Using Lua
+You might ask yourself: why so much pain ?  
+Well, the answer is simple: I wanted learn something new and why not useful in the video game industry too.
 The point of my participation was not to solve fast puzzles but more like finding "beautiful algorithms" to solve them.
 
 I've already seen a bit of lua in a previous project (Raven) but I did not have the chance to really play with it. 
 So I decided it was a good time to do so !
 
 I also heard some companies were using lua as a scripting language for their game / engine. 
-Sp I guess, It's always good to have more than one string to your bow.
+So I guess, It's always good to have more than one string to your bow.
 
 ### The drawbacks
 1) Lua is great in term of scripting. But not so great to deal with some kind of problems. 

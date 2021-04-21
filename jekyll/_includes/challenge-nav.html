@@ -1,22 +1,16 @@
 {% assign nbNavItems = 0 %}
 <nav class="challenge-nav">
   {% for challenge in site.challenges %}
+    {% assign content = challenge.content | strip_newlines %}
     {% if challenge.categories == page.categories %}
-      {% if challenge.url == page.url %}
-      <span>
-      {% else %}
-      <a href="{{ challenge.url }}">
+      {% if challenge.url == page.url %}<span>{% elsif content != "" %}<a href="{{ challenge.url }}">{% else %}<span class="disable">
       {% endif %}
         {% if challenge.start-dates.size == 1 %}
           {{ challenge.start-dates[0] }} Edition
         {% else %}
           {{ challenge.name }}
         {% endif %}
-      {% if challenge.url == page.url %}
-      </span>
-      {% else %}
-      </a>
-      {% endif %}
+      {% if challenge.url == page.url or content == "" %}</span>{% else %}</a>{% endif %}
       {% assign nbNavItems = nbNavItems | plus: 1 %}
     {% endif %}
   {% endfor %}
