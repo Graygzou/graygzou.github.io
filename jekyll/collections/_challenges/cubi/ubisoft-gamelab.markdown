@@ -10,7 +10,6 @@ Gregoire Boiron <gregoire.boiron@gmail.com>
 Copyright (c) 2018 Gregoire Boiron  All Rights Reserved.
 --->
 
-## Technical description
 The project page is also available on this website. If you seek technical details you might want to go checkout it out: [Penguin Panic](/projects/penguin-panic)
 
 ## Before the D-Day
@@ -27,31 +26,35 @@ Plus keeping a consistent art direction could be challenging if assets were made
 
 ## Brainstorm
 This part took place at the Ubisoft Quebec studio.
-The theme was "Change the world".
+
+The theme of this year was **"Change the world"**.
+
 Brainstorming went really smooth and we come up with a lot of ideas. We expended some of them with our mentors.
 Without dedicated designers, we didn't want a topic too sensitive or harmful to avoid creating something unconfortable for players to experience.
 Dealing with wars and immigration for example could have well suited the theme but too risky without a proper design and art.
 
-We finally came up with idea of north pole melting with penguins trying to do something about it. 
-At the same time the art could be "simpler" than other idea, and a lot of gameplay idea were available from that.
+We finally came up with idea of north pole melting with penguins trying to do something about it by trying to move ice chunks back to their place. 
+At the same time the art could be simple, and a lot of gameplay ideas emerged from that initial concept.
 
-## Penguin-Panic
-The production was alright overall with regular meetings and feature tracking.
-A big technical challenge that we did not had time to integrate properly into our game, was the dynamic physic based water:
+## Difficulties
+We held regular meetings and try as much as possible to track features with Trello.
+But we still encounters problems along the way:
+
+- A common problem we face early on was keeping track of feature state and working in pair on it. Sometimes, a person did the ground of an architecture and another had to use to make something else. An example would be the IA controller based on the player one.    
+Since our deadlines were really short, losing a day or two waiting for something that is already ready could cause tensions and unnecessary stress.
+
+- A big technical challenge that we did not had time to integrate properly into our game, was the dynamic physic based water:   
 The final iteration was performanced heavy and moving the "RnD team" as I was part of, to helping with last bugs and polish was more important than trying to optimize it.
 
-
-## Post mortem
+## Personal post mortem
 ### What went well
-- Brainstorm on the theme was well made and the final topic selected was promising.
-- The final version of the game is polished and with a good quality.
+- A lot of ideas came out from the brainstorm session and the final topic selected was promising.
+- The final version of the game is polished and with a good quality overall.
+- The ability of team members to accept decisions (game design or organization one) even if they disagree with it.
 - We won one award. Which was the one we were targetting at first.
 
 ### What could be improved
-#### Technicals
 - Settings more granular deadlines on risky feature to know when to "leave" it.
-
-#### Soft skills
 - Not having discuss personal goals for each member setup cause more and more tension as the project goes on.
 - Making a team from groups with different size, could lead in marginalization of smallest groups during major decisions.
-- Not trusting enough teammates and being resentful about their mistakes (in planning or technicals). Could lead to members giving up.
+- Not trusting enough teammates and being resentful about their mistakes (in planning or technicals). Could lead to members giving up on the project.
