@@ -12,7 +12,3 @@ keywords:
 category: 'educations'
 display: true
 ---
-<!---
-Gregoire Boiron <gregoire.boiron@gmail.com>
-Copyright (c) 2018-2020 Gregoire Boiron  All Rights Reserved.
---->

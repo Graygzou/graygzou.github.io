@@ -1,5 +1,5 @@
 ---
-title: IUT 'A' Paul Sabatier
+title: IUT Paul Sabatier
 logo: iut.jpg
 sub-title: Higher National Diploma in Computer Science
 highlights: [Valedictorian, 2 participation to La Nuit de l'info]
@@ -7,11 +7,7 @@ start-dates: [2013]
 end-date: 2015
 full-name: IUT 'A' Paul Sabatier
 localisation: Toulouse, FR
-link: http://iut.ups-tlse.fr
+link: https://iut.univ-tlse3.fr/accueil-iut-tlse-3-toulouse
 category: 'educations'
 display: true
 ---
-<!---
-Gregoire Boiron <gregoire.boiron@gmail.com>
-Copyright (c) 2018-2020 Gregoire Boiron  All Rights Reserved.
---->

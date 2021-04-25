@@ -26,11 +26,13 @@ Then, the real training exercice was about a robot how wanted to reproduce a pic
 
 ## Qualifying round
 The problem was the give:
-> azefzf
+> Given a description of cache servers, network end points and videos, along with predicted requests for individual videos, decide which videos to put in which cache server in order to minimize the average waiting time for all requests.
 
-We study [Flow network](https://en.wikipedia.org/wiki/Flow_network) in a course called Operational research which quite fitted the problem asked. So we started going down that road just to see what could come up from that.
+We had the idea to re-use something we were studying in a course called [Operations research](https://en.wikipedia.org/wiki/Operations_research): [Flow network](https://en.wikipedia.org/wiki/Flow_network). It quite fitted well the problem asked in our opinion. So we started going down that road just to see what could come up from that.
 
-Unfortunaly, we did not submit another score and knew our chance to go to the final vanished. Still a fun experience with great collaboration around a topic.
+We did score a bit a point with an early prototype of this method.
+
+Unfortunaly, we did not submit another score with a better version and our chance to go to the final vanished. Still a fun experience with great collaboration around a complex topic.
 
 ## Links
-The final leaderboard is available at this adress : [Hashcode 2017 leaderboard](https://codingcompetitions.withgoogle.com/hashcode/archive/2017). Our team was name "Excuse My French" and was ranked 2706
+The final leaderboard is available at this adress : [Hashcode 2017 leaderboard](https://codingcompetitions.withgoogle.com/hashcode/archive/2017). Our team was name `Excuse My French` and was ranked 2706
