@@ -33,10 +33,10 @@ jobs:
         run: chmod +x ./.github/scripts/*/*.sh
 
       - name: pngquant-png-compression
-        run: ./scripts/integration/pngquant-compression.sh
+        run: ./.github/scripts/integration/pngquant-compression.sh
 
       - name: guetzli-jpg-compression
-        run: ./scripts/integration/guetzli-compression.sh
+        run: ./.github/scripts/integration/guetzli-compression.sh
 
       - name: Upload compressed image
         uses: actions/upload-artifact@v1
