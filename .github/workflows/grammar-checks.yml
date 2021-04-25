@@ -33,7 +33,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Make script executables
-        run: chmod +x scripts/*/*.sh
+        run: chmod +x ./.github/scripts/*/*.sh
         
       - name: Run jspell checker
         run: |
@@ -81,7 +81,7 @@ jobs:
           path: content/
 
       - name: Make script executables
-        run: chmod +x scripts/*/*.sh
+        run: chmod +x ./.github/scripts/*/*.sh
 
       - name: Run jspell checker
         run: python ./.github/scripts/validation/jspellCheckerScript.py ${{ secrets.JSPELL_TOKEN }} content/ ${{ env.GRAMMAR-FOLDER_RESULT }}
