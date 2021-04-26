@@ -42,7 +42,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: compressed-image
-          path: jekyll/site/assets/project-images/
+          path: jekyll/assets/
 
       - name: Test
         run: |
