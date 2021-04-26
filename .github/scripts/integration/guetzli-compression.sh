@@ -2,39 +2,27 @@
 
 #############################################################################
 # Grégoire Boiron <gregoire.boiron@gmail.com>
-# Copyright (c) 2018-2019 Grégoire Boiron  All Rights Reserved.
+# Copyright (c) 2018-2021 Grégoire Boiron  All Rights Reserved.
 #############################################################################
 
-# Try to find if any file matching the provided extension
-jpgResult=$( ./scripts/helpers/file-changed-in-last-commit.sh "*.jpg" )
+# Download package
+# curl -L allow to follow the redirection
+echo "::group::download_guetzli"
+curl -L https://github.com/google/guetzli/archive/v1.0.1.tar.gz | tar zx
+sudo apt-get install libpng-dev
+echo "::endgroup::"
 
-echo "$jpgResult"
+echo "::group::install_guetzli"
+echo "install guetzli for jpg compression"
+cd guetzli-1.0.1 && make
+echo "::endgroup::"
 
-if [[ "$jpgResult" -ne 0 ]] ; then
-    # Download package
-    # curl -L allow to follow the redirection
-    echo "travis_fold:start:install_guetzli"
-    echo "install guetzli for jpg compression"
-    curl -L https://github.com/google/guetzli/archive/v1.0.1.tar.gz | tar zx
-    sudo apt-get install libpng-dev
-    cd guetzli-1.0.1 && make
-    echo "travis_fold:end:install_guetzli"
-
-    # Run the package
-    echo "travis_fold:start:run_guetzli"
-    echo "Start run guetzli for jpg compression"
-    # For all the jpg in the project run Guetzli.
-    # See https://github.com/google/guetzli for more info
-    find jekyll/site/assets/ -name "*.jpg" -exec guetzli-1.0.1/bin/Release/guetzli --verbose {} {} \;
-    echo "travis_fold:end:run_guetzli"
-
-    # Upload artifacts to the repo
-    echo "travis_fold:start:push_results"
-    echo "push compressed jpg images to the branch"
-    ./scripts/helpers/upload-new-file.sh "*.jpg"
-    echo "travis_fold:end:push_results"
-else
-    echo "⏭️ No jpg in the last commit. Job skipped."
-fi
+# Run the package
+echo "::group::run_guetzli"
+echo "Start run guetzli for jpg compression"
+# For all the jpg in the project run Guetzli.
+# See https://github.com/google/guetzli for more info
+find jekyll/assets/ -name "*.jpg" ! -path "jekyll/assets/originals/*" -exec guetzli-1.0.1/bin/Release/guetzli --verbose {} {} \;
+echo "::endgroup::"
 
 echo "✅ guetzli-compression.sh script done."
