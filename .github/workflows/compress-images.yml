@@ -55,4 +55,4 @@ jobs:
           target-branch: github.ref
           user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
           user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}
-        if: ${{ github.event.inputs.create-request-pull == 'true' }}
+        if: ${{ github.event_name == 'workflow_run' || github.event.inputs.create-request-pull == 'true' }}
