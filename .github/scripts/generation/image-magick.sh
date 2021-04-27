@@ -39,25 +39,22 @@ if [ "$#" -eq 0 ]; then
 fi
 
 # jekyll/assets/
-root_folder=$1
-extension=$2
 resizing_pattern=".*\[r[0-9]+x[0-9]+\].*"
 crop_pattern=".*\[c[0-9]+x[0-9]+\].*"
 
-# Debug
-echo $extension
-
-asset_path=$(find $root_folder -regex ".*\[[r|c][0-9]+x[0-9]+\]+\.$extension$");
+asset_path=$1;
 for file in $asset_path
 do
   echo "Processing $file file..."
   filename="${file%.*}"
+  extension="${file##*.}"
   
   # Removing relative path to only have filename
   filename=$(echo $filename | sed -E "s/[\.*\/*]*(.*)/\1/")
 
   # Debug
   echo "$filename"
+  echo "$extension"
   
   if [[ "$file" =~ $resizing_pattern ]]; then
     echo "travis_fold:start:imageMagickResize"
