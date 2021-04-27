@@ -10,7 +10,7 @@
 
           {% capture image_path %}/assets/images/challenges/{{ category.logo }}{% endcapture %}
           {% capture image_path_webp %}/assets/webp/{{ category.logo | replace: ".jpg", ".webp" | replace: ".png", ".webp" }}{% endcapture %}
-          {% capture image_alt %}{{ challenge.title }}{% endcapture %}
+          {% capture image_alt %}{{ challengeCategory.name }}{% endcapture %}
 
           <a href="challenges/#{{ category.name | slugify }}">
             {% include images-handler.html filename=image_path webp=image_path_webp alt=image_alt %}
