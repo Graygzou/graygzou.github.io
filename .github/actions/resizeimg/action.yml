@@ -2,17 +2,9 @@ name: file-changed
 author: Grégoire Boiron (Graygzou)
 description: Use image magick to resize images in a given folder.
 inputs:
-  original-folder:
-    description: "folder where the original images are located."
-    required: false
-    default: "jekyll/assets/"
-  extension:
-    description: "extension of the images to convert"
-    required: false
-    default: ""
-  sha:
-    description: "the sha in which to look up files"
-    required: false
+  images-names-file:
+    description: "file containing path of all images to resize"
+    required: true
     default: ""
 runs:
   using: "composite"
@@ -49,23 +41,10 @@ runs:
     - name: Run script with folder and extension
       run: |
         echo "::group::use imagemagick"
-        PATH=$(find ${{ inputs.original-folder }} -regex ".*\[[r|c][0-9]+x[0-9]+\]+\.${{ inputs.extension }}$")
-        echo $PATH
-        ./.github/scripts/generation/image-magick.sh $PATH
+        echo ${{ inputs.images-names-file }}
+        ./.github/scripts/generation/image-magick.sh ${{ inputs.images-names-file }}
         echo "::endgroup::"
       shell: bash
-      if: ${{ inputs.extension != "" }}
-      
-    - name: Run script with github sha
-      run: |
-        echo "::group::use imagemagick"
-        git log --name-only -n 1 ${{ inputs.sha }} --pretty=format:%b > last-commit.txt;
-        PATH=$(find last-commit.txt -regex ".*\[[r|c][0-9]+x[0-9]+\]+\.[png|jpg]$")
-        echo $PATH
-        ./.github/scripts/generation/image-magick.sh $PATH
-        echo "::endgroup::"
-      shell: bash
-      if: ${{ inputs.sha != "" }}
 
     - name: Remove package installed
       run: |
