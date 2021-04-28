@@ -52,7 +52,7 @@ jobs:
       - name: Upload to branch
         uses: ./.github/actions/upload-to-branch
         with:
-          target-branch: github.ref
+          target-branch: ${{ github.ref }}
           user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
           user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}
         if: ${{ github.event_name == 'workflow_run' || github.event.inputs.create-request-pull == 'true' }}
