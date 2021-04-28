@@ -18,6 +18,10 @@ on:
         description: 'Create request pull'
         required: true
         default: 'false'
+      use-sha:
+        description: 'Create request pull'
+        required: true
+        default: 'true'
 
 jobs:
 
@@ -29,18 +33,26 @@ jobs:
     steps:
       - name: Github checkout
         uses: actions/checkout@v2
-
-      - name: Resize jpg images
-        uses: ./.github/actions/resizeimg
-        with:
-          original-folder: "jekyll/assets/"
-          extension: "jpg"
+        
+      - name: Build file from github sha
+        run: |
+          git log --name-only -n 1 $GIT_SHA --pretty=format:%b > last-commit.txt;
+          PATH=$(find last-commit.txt -regex ".*\[[r|c][0-9]+x[0-9]+\]+\.[png|jpg]$")
+          echo $PATH
+          echo "IMAGE_PATH=$PATH" >> $GITHUB_ENV
+        if: ${{ github.event.inputs.use-sha == 'true' || github.event_name == 'push' }}
+        
+      - name: Build file from github sha
+        run: |
+          PATH=$(find jekyll/assets/ -regex ".*\[[r|c][0-9]+x[0-9]+\]+\.[png|jpg]$")
+          echo $PATH
+          echo "IMAGE_PATH=$PATH" >> $GITHUB_ENV
+        if: ${{ github.event.inputs.use-sha == 'false' || github.event_name != 'push' }}
 
       - name: Resize png images
         uses: ./.github/actions/resizeimg
         with:
-          original-folder: "jekyll/assets/"
-          extension: "png"
+          images-names-file: ${{ env.IMAGE_PATH }}
 
       - name: Upload resize image
         uses: actions/upload-artifact@v1
