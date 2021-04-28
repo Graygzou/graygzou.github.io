@@ -1,4 +1,4 @@
-name: file-changed
+name: resize-images
 author: Grégoire Boiron (Graygzou)
 description: Use image magick to resize images in a given folder.
 inputs:

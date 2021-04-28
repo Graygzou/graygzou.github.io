@@ -9,8 +9,8 @@ on:
   push:
     branches: [ develop ]
     paths:
-    - '**.jpg'
-    - '**.png'
+      - '**.jpg'
+      - '**.png'
 
   workflow_dispatch:
     inputs:
@@ -44,26 +44,28 @@ jobs:
         
       - name: Build file from github sha
         run: |
-          PATH=$(find jekyll/assets/ -regex ".*\[[r|c][0-9]+x[0-9]+\]+\.[png|jpg]$")
+          PATH=$(find jekyll/assets/originals -regex ".*\[[r|c][0-9]+x[0-9]+\]+\.[png|jpg]$")
           echo $PATH
           echo "IMAGE_PATH=$PATH" >> $GITHUB_ENV
         if: ${{ github.event.inputs.use-sha == 'false' || github.event_name != 'push' }}
 
       - name: Resize png images
-        uses: ./.github/actions/resizeimg
+        uses: ./.github/actions/resize-img
         with:
           images-names-file: ${{ env.IMAGE_PATH }}
+        if: ${{ env.IMAGE_PATH != '' }}
 
       - name: Upload resize image
         uses: actions/upload-artifact@v1
         with:
           name: resized-image
           path: jekyll/assets/
+        if: ${{ env.IMAGE_PATH != '' }}
 
       - name: Upload to branch
         uses: ./.github/actions/upload-to-branch
         with:
-          target-branch: develop
+          target-branch: ${{ github.ref }}
           user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
           user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}
-        if: ${{ github.event.inputs.create-request-pull == 'true' }}
+        if: ${{ env.IMAGE_PATH != '' && github.event.inputs.create-request-pull == 'true' }}

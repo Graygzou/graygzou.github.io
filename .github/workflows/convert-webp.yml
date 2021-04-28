@@ -68,7 +68,7 @@ jobs:
       - name: Upload to branch
         uses: ./.github/actions/upload-to-branch
         with:
-          target-branch: develop
+          target-branch: ${{ github.ref }}
           user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
           user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}
         if: ${{ github.event.inputs.create-request-pull == 'true' }}

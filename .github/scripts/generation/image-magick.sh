@@ -15,8 +15,8 @@ resize () {
   echo $extension
   identify "$file.$extension"
   # Apply the command to override the image
-  convert "$file.$extension" -resize $(echo $file | sed -e "s/.*r\([0-9]*x[0-9]*\).*/\1/") "$file.$extension"
-  identify "$file.$extension"
+  convert "$file.$extension" -resize $(echo $file | sed -e "s/.*r\([0-9]*x[0-9]*\).*/\1/") "$file-resized.$extension"
+  identify "$file-resized.$extension"
 }
 
 # See http://www.imagemagick.org/Usage/crop/#crop_gravity for more info
@@ -27,8 +27,8 @@ crop_center () {
   echo $extension
   identify "$file.$extension"
   # Apply the command to override the image once again
-  convert "$file.$extension" -gravity Center -crop $(echo $file | sed -e "s/.*c\([0-9]*x[0-9]*\).*/\1/")+0+0 "$file.$extension"
-  identify "$file.$extension"
+  convert "$file.$extension" -gravity Center -crop $(echo $file | sed -e "s/.*c\([0-9]*x[0-9]*\).*/\1/")+0+0 "$file-cropped.$extension"
+  identify "$file-cropped.$extension"
 }
 
 # Parameters check

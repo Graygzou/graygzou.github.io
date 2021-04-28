@@ -24,20 +24,23 @@ runs:
         git config pull.ff only
       shell: bash
 
-    - name: Create branch
-      id: branch-creation
-      run: |
-        branch="github-build-$GITHUB_RUN_ID"
-        git checkout -b $branch
-        echo "::set-output name=branch-name::$branch"
+    - name: Checkout the branch
+      id: branch-checkout
+      run: git checkout -b ${{ inputs.target-branch }}
       shell: bash
 
     - name: Add changement to branch
       run: |
         git add .
         git commit -m "[ignore] Upload files generate by the job #$GITHUB_RUN_ID $GITHUB_ACTION"
-        git push origin HEAD:${{ steps.branch-creation.outputs.branch-name }}
-        git request-pull $GITHUB_SHA "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY" ${{ inputs.target-branch }}
+        git push origin HEAD:${{ inputs.target-branch }}
+      shell: bash
+
+    - name: Create PR link if not develop
+      run: |
+        if [ ${{ inputs.target-branch }} != 'develop' ] then
+          git request-pull $GITHUB_SHA "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY" ${{ inputs.target-branch }}
+        fi
       shell: bash
 
 branding:
