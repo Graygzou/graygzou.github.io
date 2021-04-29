@@ -34,25 +34,29 @@ jobs:
       - name: Github checkout
         uses: actions/checkout@v2
         
-      - name: Build file from github sha
+      - name: Build file from github sha Test1
         run: |
           echo ${{ github.sha }}
           git log --name-only -n 1 ${{ github.sha }} --pretty="format:" ${{ github.GITHUB_REF }} > last-commit.txt
           cat last-commit.txt
-          
+        if: ${{ github.event_name == 'push' || github.event.inputs.use-sha == 'true' }}
+        
+      - name: Test2
+        run: |
           git log --name-only -n 1 --pretty="format:" origin/develop > last-commit2.txt
           cat last-commit2.txt
-          
+        if: ${{ github.event_name == 'push' || github.event.inputs.use-sha == 'true' }}
+        
+      - name: Test3
+        run: |
           git diff --name-only refs/heads/develop refs/heads/develop^ > last-commit3.txt
           cat last-commit3.txt
-          
-          PATH=$(find last-commit.txt -regextype posix-extended -regex "^.*\[[r|c][0-9]+x[0-9]+\]+\..{3}$")
-          echo $PATH
-          
+          PATH=$(find last-commit3.txt -regextype posix-extended -regex "^.*\[[r|c][0-9]+x[0-9]+\]+\..{3}$")	
+          echo $PATH	
           echo "IMAGE_PATH=$PATH" >> $GITHUB_ENV
         if: ${{ github.event_name == 'push' || github.event.inputs.use-sha == 'true' }}
         
-      - name: Build file from github sha
+      - name: Build file from original folder
         run: |
           PATH=$(find jekyll/assets/originals -regex ".*\[[r|c][0-9]+x[0-9]+\]+\..{3}$")
           echo $PATH
