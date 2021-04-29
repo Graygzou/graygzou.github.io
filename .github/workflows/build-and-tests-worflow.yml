@@ -7,6 +7,8 @@ name: Build and Tests
 
 on:
   push:
+    paths-ignore:
+      - '.github/**'
   pull_request:
     branches:
       - develop
