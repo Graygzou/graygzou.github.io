@@ -18,6 +18,10 @@ on:
         description: 'Create request pull'
         required: true
         default: 'false'
+      use-sha:
+        description: 'Use GitHub sha'
+        required: true
+        default: 'true'
 
 jobs:
   convert:
@@ -27,6 +31,8 @@ jobs:
     steps:
       - name: Github checkout
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
         
       - name: Remove previous folder if necessary and create it
         run: |
@@ -36,15 +42,28 @@ jobs:
             rm -vrf ${{ env.TARGET_FOLDER }}
           fi
           mkdir ${{ env.TARGET_FOLDER }}
+          echo "IMAGE_PATH=jekyll/assets/originals" >> $GITHUB_ENV
           echo "::endgroup::"
         shell: bash
+        if: ${{ github.event_name != 'push' && github.event.inputs.use-sha == 'false' }}
+        
+      - name: Build file from github sha Test1
+        run: |
+          echo ${{ github.sha }}
+          git log --name-only -n 1 ${{ github.sha }} --pretty="format:" ${{ github.GITHUB_REF }} > last-commit.txt
+          cat last-commit.txt
+          PATH=$(find last-commit.txt -regextype posix-extended -regex "^.*\.[png|jpg]$")	
+          echo $PATH	
+          echo "IMAGE_PATH=$PATH" >> $GITHUB_ENV
+        shell: bash
+        if: ${{ github.event_name == 'push' || github.event.inputs.use-sha == 'true' }}
         
       - name: Create webp jpg images
         id: create-webp-jpg-images
         uses: ./.github/actions/webp
         with:
           target-folder: ${{ env.TARGET_FOLDER }}
-          original-folder: "jekyll/assets/originals"
+          original-folder: ${{ env.IMAGE_PATH }}
           extensions-regex: "jpg"
           
       - name: Create webp png images
@@ -52,7 +71,7 @@ jobs:
         uses: ./.github/actions/webp
         with:
           target-folder: ${{ env.TARGET_FOLDER }}
-          original-folder: "jekyll/assets/originals"
+          original-folder: ${{ env.IMAGE_PATH }}
           extensions-regex: "png"
           
       - name: Upload webp folders through artifacts
