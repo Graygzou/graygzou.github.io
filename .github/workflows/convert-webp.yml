@@ -45,7 +45,7 @@ jobs:
           echo "IMAGE_PATH=jekyll/assets/originals" >> $GITHUB_ENV
           echo "::endgroup::"
         shell: bash
-        if: ${{ github.event_name != 'push' && github.event.inputs.use-sha == 'false' }}
+        if: ${{ github.event_name != 'workflow_run' && github.event.inputs.use-sha == 'false' }}
         
       - name: Build file from github sha Test1
         run: |
@@ -56,7 +56,7 @@ jobs:
           echo $PATH	
           echo "IMAGE_PATH=$PATH" >> $GITHUB_ENV
         shell: bash
-        if: ${{ github.event_name == 'push' || github.event.inputs.use-sha == 'true' }}
+        if: ${{ github.event_name == 'workflow_run' || github.event.inputs.use-sha == 'true' }}
         
       - name: Create webp jpg images
         id: create-webp-jpg-images
