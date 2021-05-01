@@ -62,11 +62,15 @@ jobs:
           cat image-paths.txt
         if: ${{ github.event_name != 'push' && github.event.inputs.use-sha == 'false' }}
 
+      - name: Install image magick
+        uses: ./.github/actions/install-imagemagick
+        with:
+          install-folder: imagemagick
+        if: ${{ (steps.build-file-sha.outcome == 'success' || steps.build-file.outcome == 'success') && steps.cache-image-magick.outputs.cache-hit != 'true' }}
+
       - name: Resize images
         uses: ./.github/actions/resize-img
         with:
-          install-folder: imagemagick
-          cache-hit: ${{ steps.cache-image-magick.outputs.cache-hit }}
           images-names-file: image-paths.txt
         if: ${{ steps.build-file-sha.outcome == 'success' || steps.build-file.outcome == 'success' }}
 

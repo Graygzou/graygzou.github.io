@@ -1,48 +1,15 @@
 name: resize-images
 author: Grégoire Boiron (Graygzou)
-description: Use image magick to resize images in a given folder.
+description: Use image magick to resize images in a given folder. Required image magick installed. See install-imagemagick action.
 inputs:
   images-names-file:
     description: "file containing path of all images to resize"
     required: true
     default: ""
-  install-folder:
-    description: "folder where image magick will be installed"
-    required: false
-    default: "imagemagick/"
-  cache-hit:
-    description: "Tell if image magick is already in the cache"
-    required: false
-    default: 'false'
 
 runs:
   using: "composite"
   steps:
-    - name: Download package
-      run: |
-        echo "::group::download imagemagick"
-        mkdir ${{ inputs.install-folder }}
-        cd ${{ inputs.install-folder }}
-        wget https://www.imagemagick.org/download/ImageMagick.tar.gz
-        tar xf ImageMagick.tar.gz
-        echo "::endgroup::"
-      shell: bash
-
-    - name: Install packages
-      run: |
-        echo "::group::install imagemagick"
-        cd ${{ inputs.install-folder }}/ImageMagick-7*
-        ./configure
-        make
-        sudo make install
-        sudo ldconfig /usr/local/lib
-        cd
-        echo "::endgroup::"
-      shell: bash
-
-    - name: Version
-      run: identify -version
-      shell: bash
 
     - name: Make script executables
       run: chmod +x ./.github/scripts/*/*.sh
@@ -56,14 +23,6 @@ runs:
         ./.github/scripts/generation/image-magick.sh ${{ inputs.images-names-file }}
         echo "::endgroup::"
       shell: bash
-
-    #- name: Remove package installed
-    #  run: |
-    #    echo "::group::remove imagemagick files"
-    #    rm -vrf ImageMagick-7*
-    #    rm -vrf ImageMagick.tar.gz
-    #    echo "::endgroup::"
-    #  shell: bash
 
 branding:
   icon: cpu
