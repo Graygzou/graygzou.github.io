@@ -36,6 +36,13 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 2
+
+      - name: Cache Primes
+        id: cache-image-magick
+        uses: actions/cache@v2
+        with:
+          path: imagemagick
+          key: ${{ runner.os }}-imagemagick
         
       - name: Build file from github sha Test1
         id: build-file-sha
@@ -43,15 +50,16 @@ jobs:
           echo ${{ github.sha }}
           git log --name-only -n 1 ${{ github.sha }} --pretty="format:" ${{ github.GITHUB_REF }} > last-commit.txt
           cat last-commit.txt
-          PATH=$(find last-commit.txt -regextype posix-extended -regex "^.*\[[r|c][0-9]+x[0-9]+\]+\..{3}$")	
-          echo $PATH	
-          echo "::set-output name=image_path::$PATH"
+          find last-commit.txt -regextype posix-extended -regex "^.*\[[r|c][0-9]+x[0-9]+\]+\..{3}$ > image-paths.txt
+          cat image-paths.txt
         if: ${{ github.event_name == 'push' || github.event.inputs.use-sha == 'true' }}
 
       - name: Resize png images
         uses: ./.github/actions/resize-img
         with:
-          images-names-file: ${{ steps.build-file-sha.outputs.image_path }}
+          install-folder: imagemagick
+          cache-hit: ${{ steps.cache-image-magick.outputs.cache-hit }}
+          images-names-file: image-paths.txt
         if: ${{ steps.build-file-sha.outcome }} == "success"
       
       ###

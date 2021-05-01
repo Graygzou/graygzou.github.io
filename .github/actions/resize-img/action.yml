@@ -6,18 +6,31 @@ inputs:
     description: "file containing path of all images to resize"
     required: true
     default: ""
+  install-folder:
+    description: "folder where image magick will be installed"
+    required: false
+    default: "imagemagick/"
+  cache-hit:
+    description: "Tell if image magick is already in the cache"
+    required: false
+    default: 'false'
+
 runs:
   using: "composite"
   steps:
     - name: Download package
+      if: ${{ inputs.cache-hit != 'true' }}
       run: |
         echo "::group::download imagemagick"
+        mkdir ${{ inputs.install-folder }}
+        cd ${{ inputs.install-folder }}
         wget https://www.imagemagick.org/download/ImageMagick.tar.gz
         tar xf ImageMagick.tar.gz
         echo "::endgroup::"
       shell: bash
 
     - name: Install packages
+      if: ${{ inputs.cache-hit != 'true' }}
       run: |
         echo "::group::install imagemagick"
         cd ImageMagick-7*
@@ -46,13 +59,13 @@ runs:
         echo "::endgroup::"
       shell: bash
 
-    - name: Remove package installed
-      run: |
-        echo "::group::remove imagemagick files"
-        rm -vrf ImageMagick-7*
-        rm -vrf ImageMagick.tar.gz
-        echo "::endgroup::"
-      shell: bash
+    #- name: Remove package installed
+    #  run: |
+    #    echo "::group::remove imagemagick files"
+    #    rm -vrf ImageMagick-7*
+    #    rm -vrf ImageMagick.tar.gz
+    #    echo "::endgroup::"
+    #  shell: bash
 
 branding:
   icon: cpu

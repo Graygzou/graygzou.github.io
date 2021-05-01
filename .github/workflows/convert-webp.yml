@@ -50,6 +50,9 @@ jobs:
       - name: Build file from github sha Test1
         run: |
           echo ${{ github.sha }}
+          echo ${{ github.event.workflow_run.sha }}
+          echo ${{ github.event.workflow_run.head_branch }}
+          echo ${{ github.event.workflow_run.head_ref }}
           git log --name-only -n 1 ${{ github.sha }} --pretty="format:" ${{ github.GITHUB_REF }} > last-commit.txt
           cat last-commit.txt
           PATH=$(find last-commit.txt -regextype posix-extended -regex "^.*\.[png|jpg]$")	
