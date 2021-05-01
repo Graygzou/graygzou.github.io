@@ -71,7 +71,7 @@ jobs:
           install-folder: imagemagick
           cache-hit: ${{ steps.cache-image-magick.outputs.cache-hit }}
           images-names-file: image-paths.txt
-        if: ${{ steps.build-file-sha.outcome == "success" || steps.build-file.outcome == "success" }}
+        if: ${{ steps.build-file-sha.outcome == 'success' || steps.build-file.outcome == 'success' }}
 
       - name: Upload resize image
         uses: actions/upload-artifact@v1
