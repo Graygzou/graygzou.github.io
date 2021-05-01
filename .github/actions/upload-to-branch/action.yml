@@ -41,10 +41,7 @@ runs:
       shell: bash
 
     - name: Create PR link if not develop
-      run: |
-        if [ ${{ inputs.target-branch }} != 'develop' ] then
-          git request-pull $GITHUB_SHA "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY" ${{ inputs.target-branch }}
-        fi
+      run: git request-pull $GITHUB_SHA "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY" ${{ inputs.target-branch }}
       shell: bash
 
 branding:
