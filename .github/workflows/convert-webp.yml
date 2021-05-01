@@ -22,6 +22,10 @@ on:
         description: 'Use GitHub sha'
         required: true
         default: 'true'
+      target-branch:
+        description: 'Branch to upload to'
+        required: false
+        default: 'develop'
 
 jobs:
   convert:
@@ -49,15 +53,9 @@ jobs:
         
       - name: Build file from github sha Test1
         run: |
-          echo ${{ github.sha }}
-          echo ${{ github.event.workflow_run.sha }}
-          echo ${{ github.event.workflow_run.head_branch }}
-          echo ${{ github.event.workflow_run.head_ref }}
           git log --name-only -n 1 ${{ github.sha }} --pretty="format:" ${{ github.GITHUB_REF }} > last-commit.txt
-          cat last-commit.txt
-          PATH=$(find last-commit.txt -regextype posix-extended -regex "^.*\.[png|jpg]$")	
-          echo $PATH	
-          echo "IMAGE_PATH=$PATH" >> $GITHUB_ENV
+          grep -E '^.*[\[r[0-9]+x[0-9]+\]|\[c[0-9]+x[0-9]+\]]\.png|jpg$' last-commit.txt > image-paths.txt
+          cat image-paths.txt
         shell: bash
         if: ${{ github.event_name == 'workflow_run' || github.event.inputs.use-sha == 'true' }}
         
@@ -66,7 +64,7 @@ jobs:
         uses: ./.github/actions/webp
         with:
           target-folder: ${{ env.TARGET_FOLDER }}
-          original-folder: ${{ env.IMAGE_PATH }}
+          original-folder: image-paths.txt
           extensions-regex: "jpg"
           
       - name: Create webp png images
@@ -74,7 +72,7 @@ jobs:
         uses: ./.github/actions/webp
         with:
           target-folder: ${{ env.TARGET_FOLDER }}
-          original-folder: ${{ env.IMAGE_PATH }}
+          original-folder: image-paths.txt
           extensions-regex: "png"
           
       - name: Upload webp folders through artifacts
@@ -86,14 +84,22 @@ jobs:
           ${{ steps.create-webp-jpg-images.outcome }} == "success" &&
           ${{ steps.create-webp-png-images.outcome }} == "success"
 
-
-      - name: Upload to branch
+      - name: Upload to branch workflow_dispatch
         uses: ./.github/actions/upload-to-branch
         with:
-          target-branch: ${{ github.ref }}
+          target-branch: ${{ github.event.target-branch }}
           user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
           user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}
-        if: ${{ github.event.inputs.create-request-pull == 'true' }}
+        if: ${{ success() && github.event_name != 'workflow_run' && github.event.inputs.create-request-pull == 'true' }}
+
+      - name: Upload to branch on workflow_run
+        uses: ./.github/actions/upload-to-branch
+        with:
+          target-branch: convert-webp-$GITHUB_RUN_ID
+          add-pattern: "*.webp"
+          user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
+          user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}
+        if: ${{ success() && github.event_name == 'workflow_run' }}
         
       # Should ALWAYS be the last step.
       - name: Teleconsole launch

@@ -18,6 +18,10 @@ on:
         description: 'Create request pull'
         required: true
         default: 'false'
+      target-branch:
+        description: 'Branch to upload to'
+        required: false
+        default: 'develop'
 
 jobs:
   compress:
@@ -49,10 +53,19 @@ jobs:
           echo github.ref
           echo $GITHUB_REF
 
-      - name: Upload to branch
+      - name: Upload to branch workflow_dispatch
         uses: ./.github/actions/upload-to-branch
         with:
-          target-branch: ${{ github.ref }}
+          target-branch: ${{ github.event.target-branch }}
           user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
           user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}
-        if: ${{ github.event.inputs.create-request-pull == 'true' }}
+        if: ${{ success() && github.event_name != 'workflow_run' && github.event.inputs.create-request-pull == 'true' }}
+
+      - name: Upload to branch on workflow_run
+        uses: ./.github/actions/upload-to-branch
+        with:
+          target-branch: resize-images-$GITHUB_RUN_ID
+          add-pattern: "*.jpg *.png"
+          user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
+          user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}
+        if: ${{ success() && github.event_name == 'workflow_run' }}

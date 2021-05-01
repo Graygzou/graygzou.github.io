@@ -11,3 +11,6 @@ jekyll/vendor/
 # Ignore test python script
 *test.py
 *test.sh
+
+# Ignore stuff imported during github workflow
+imagemagick/*
