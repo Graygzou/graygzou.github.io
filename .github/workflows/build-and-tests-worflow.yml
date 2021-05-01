@@ -37,20 +37,29 @@ jobs:
       # Cache dependencies: will attempt to restore a cache based on the key you provide.
       # shorten build times and decrease load on servers.
       # see https://github.com/actions/cache/blob/main/examples.md#ruby---bundler
-      - name: Github cache
-        uses: actions/cache@v2
+      #- name: Github cache
+      #  uses: actions/cache@v2
+      #  with:
+      #    path: |
+      #      vendor/bundle
+      #      ${{ env.GITHUB_REPOSITORY }}/tmp/.htmlproofer
+      #    key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+      #    restore-keys: | 
+      #      ${{ runner.os }}-gems-
+
+      # See https://github.com/actions/cache/blob/main/examples.md#macos-and-ubuntu
+      - uses: actions/cache@v2
         with:
-          path: |
-            vendor/bundle
-            ${{ env.GITHUB_REPOSITORY }}/tmp/.htmlproofer
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: | 
-            ${{ runner.os }}-gems-
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       - name: Github Set up Ruby 2.6
         uses: actions/setup-ruby@v1
         with:
           ruby-version: 2.6.x
+          bundler-cache: true
 
       # Make sure path match the one declared in actions/cache
       - name: Install Bundler
@@ -80,6 +89,7 @@ jobs:
         uses: actions/setup-ruby@v1
         with:
           ruby-version: 2.6.x
+          bundler-cache: true
 
       - name: Github checkout
         uses: actions/checkout@v2
@@ -121,6 +131,7 @@ jobs:
         uses: actions/setup-ruby@v1
         with:
           ruby-version: 2.6.x
+          bundler-cache: true
 
       - name: Github checkout
         uses: actions/checkout@v2
@@ -169,6 +180,7 @@ jobs:
         uses: actions/setup-ruby@v1
         with:
           ruby-version: 2.6.x
+          bundler-cache: true
 
       - name: Install bundler
         run: gem install bundler
