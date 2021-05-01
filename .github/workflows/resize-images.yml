@@ -89,7 +89,7 @@ jobs:
       - name: Upload to branch on push
         uses: ./.github/actions/upload-to-branch
         with:
-          target-branch: ${{ github.ref }}
+          target-branch: resize-images-$GITHUB_RUN_ID
           user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
           user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}
         if: ${{ success() && github.event_name == 'push' }}
