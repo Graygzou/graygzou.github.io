@@ -2,10 +2,6 @@ name: upload-to-branch
 author: Grégoire Boiron (Graygzou)
 description: Create a branch, push changes to it and print link to the possible PR
 inputs:
-  target-branch:
-    description: "The target branch to push to"
-    required: false
-    default: "develop"
   user-name:
     description: "name of the user pushing to github"
     required: true
@@ -14,6 +10,14 @@ inputs:
     description: "email of the user pushing to github"
     required: true
     default: ""
+  target-branch:
+    description: "The target branch to push to"
+    required: false
+    default: "develop"
+  add-pattern:
+    description: "regex to using when adding files for next commit"
+    required: false
+    default: "."
 runs:
   using: "composite"
   steps:
@@ -31,7 +35,7 @@ runs:
 
     - name: Add changement to branch
       run: |
-        git add .
+        git add ${{ inputs.add-pattern }}
         git commit -m "[ignore] Upload files generate by the job #$GITHUB_RUN_ID $GITHUB_ACTION"
         git push origin HEAD:${{ inputs.target-branch }}
       shell: bash
