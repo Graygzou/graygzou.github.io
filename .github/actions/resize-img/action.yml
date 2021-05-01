@@ -19,7 +19,6 @@ runs:
   using: "composite"
   steps:
     - name: Download package
-      if: ${{ inputs.cache-hit != 'true' }}
       run: |
         echo "::group::download imagemagick"
         mkdir ${{ inputs.install-folder }}
@@ -30,7 +29,6 @@ runs:
       shell: bash
 
     - name: Install packages
-      if: ${{ inputs.cache-hit != 'true' }}
       run: |
         echo "::group::install imagemagick"
         cd ImageMagick-7*
