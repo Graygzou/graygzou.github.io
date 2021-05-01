@@ -22,6 +22,10 @@ on:
         description: 'Use GitHub sha'
         required: true
         default: 'true'
+      target-branch:
+        description: 'Branch to upload to'
+        required: false
+        default: 'develop'
 
 jobs:
 
@@ -34,7 +38,7 @@ jobs:
           fetch-depth: 2
         
       - name: Build file from github sha Test1
-        id: build-file
+        id: build-file-sha
         run: |
           echo ${{ github.sha }}
           git log --name-only -n 1 ${{ github.sha }} --pretty="format:" ${{ github.GITHUB_REF }} > last-commit.txt
@@ -43,7 +47,15 @@ jobs:
           echo $PATH	
           echo "::set-output name=image_path::$PATH"
         if: ${{ github.event_name == 'push' || github.event.inputs.use-sha == 'true' }}
-        
+
+      - name: Resize png images
+        uses: ./.github/actions/resize-img
+        with:
+          images-names-file: ${{ steps.build-file-sha.outputs.image_path }}
+        if: ${{ steps.build-file-sha.outcome }} == "success"
+      
+      ###
+
       - name: Build file from original folder
         id: build-file
         run: |
@@ -58,17 +70,26 @@ jobs:
           images-names-file: ${{ steps.build-file.outputs.image_path }}
         if: ${{ steps.build-file.outcome }} == "success"
 
+      ###
+
       - name: Upload resize image
         uses: actions/upload-artifact@v1
         with:
           name: resized-image
           path: jekyll/assets/
-        if: ${{ steps.build-file.outcome }} == "success"
 
-      - name: Upload to branch
+      - name: Upload to branch workflow dispatch
+        uses: ./.github/actions/upload-to-branch
+        with:
+          target-branch: ${{ github.event.target-branch }}
+          user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
+          user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}
+        if: ${{ success() && github.event_name != 'push' && github.event.inputs.create-request-pull == 'true' }}
+
+      - name: Upload to branch on push
         uses: ./.github/actions/upload-to-branch
         with:
           target-branch: ${{ github.ref }}
           user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
           user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}
-        if: ${{ env.IMAGE_PATH != '' && github.event.inputs.create-request-pull == 'true' }}
+        if: ${{ success() && github.event_name == 'push' }}
