@@ -31,12 +31,12 @@ runs:
     - name: Install packages
       run: |
         echo "::group::install imagemagick"
-        cd ImageMagick-7*
+        cd ${{ inputs.install-folder }}/ImageMagick-7*
         ./configure
         make
         sudo make install
         sudo ldconfig /usr/local/lib
-        cd ..
+        cd
         echo "::endgroup::"
       shell: bash
 
