@@ -18,9 +18,10 @@ jobs:
 
       # Only build the project if it's workflow_dispatch that triggers it
       - name: Github Set up Ruby 2.6
-        uses: actions/setup-ruby@v1
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6.x
+          ruby-version: 2.6
+          bundler-cache: true
         if: ${{ github.event_name == 'workflow_dispatch' }}
 
       - name: jekyll-production-build

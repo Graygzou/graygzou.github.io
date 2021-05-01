@@ -56,9 +56,9 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Github Set up Ruby 2.6
-        uses: actions/setup-ruby@v1
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6.x
+          ruby-version: 2.6
           bundler-cache: true
 
       # Make sure path match the one declared in actions/cache
@@ -86,9 +86,9 @@ jobs:
         shell: bash
     steps:
       - name: Github Set up Ruby 2.6
-        uses: actions/setup-ruby@v1
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6.x
+          ruby-version: 2.6
           bundler-cache: true
 
       - name: Github checkout
@@ -128,9 +128,9 @@ jobs:
         shell: bash
     steps:
       - name: Github Set up Ruby 2.6
-        uses: actions/setup-ruby@v1
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6.x
+          ruby-version: 2.6
           bundler-cache: true
 
       - name: Github checkout
@@ -177,9 +177,9 @@ jobs:
           echo "::endgroup::"
 
       - name: Github Set up Ruby 2.6
-        uses: actions/setup-ruby@v1
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6.x
+          ruby-version: 2.6
           bundler-cache: true
 
       - name: Install bundler
