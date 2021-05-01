@@ -34,34 +34,36 @@ jobs:
           fetch-depth: 2
         
       - name: Build file from github sha Test1
+        id: build-file
         run: |
           echo ${{ github.sha }}
           git log --name-only -n 1 ${{ github.sha }} --pretty="format:" ${{ github.GITHUB_REF }} > last-commit.txt
           cat last-commit.txt
           PATH=$(find last-commit.txt -regextype posix-extended -regex "^.*\[[r|c][0-9]+x[0-9]+\]+\..{3}$")	
           echo $PATH	
-          echo "IMAGE_PATH=$PATH" >> $GITHUB_ENV
+          echo "::set-output name=image_path::$PATH"
         if: ${{ github.event_name == 'push' || github.event.inputs.use-sha == 'true' }}
         
       - name: Build file from original folder
+        id: build-file
         run: |
           PATH=$(find jekyll/assets/originals -regex ".*\[[r|c][0-9]+x[0-9]+\]+\..{3}$")
           echo $PATH
-          echo "IMAGE_PATH=$PATH" >> $GITHUB_ENV
+          echo "::set-output name=image_path::$PATH"
         if: ${{ github.event_name != 'push' && github.event.inputs.use-sha == 'false' }}
 
       - name: Resize png images
         uses: ./.github/actions/resize-img
         with:
-          images-names-file: ${{ env.IMAGE_PATH }}
-        if: ${{ env.IMAGE_PATH != '' }}
+          images-names-file: ${{ steps.build-file.outputs.image_path }}
+        if: ${{ steps.build-file.outcome }} == "success"
 
       - name: Upload resize image
         uses: actions/upload-artifact@v1
         with:
           name: resized-image
           path: jekyll/assets/
-        if: ${{ env.IMAGE_PATH != '' }}
+        if: ${{ steps.build-file.outcome }} == "success"
 
       - name: Upload to branch
         uses: ./.github/actions/upload-to-branch
