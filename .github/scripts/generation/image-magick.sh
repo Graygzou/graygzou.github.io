@@ -42,7 +42,7 @@ fi
 resizing_pattern=".*\[r[0-9]+x[0-9]+\].*"
 crop_pattern=".*\[c[0-9]+x[0-9]+\].*"
 
-asset_path=$1;
+asset_path=$(cat $1)
 for file in $asset_path
 do
   echo "Processing $file file..."
