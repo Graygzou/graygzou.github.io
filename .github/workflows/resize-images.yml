@@ -48,7 +48,7 @@ jobs:
         id: build-file-sha
         run: |
           git log --name-only -n 1 ${{ github.sha }} --pretty="format:" ${{ github.GITHUB_REF }} > last-commit.txt
-          grep -E '^.*[\[r[0-9]+x[0-9]+\]|\[c[0-9]+x[0-9]+\]]\.png|jpg$' last-commit.txt > image-paths.txt
+          grep -E '^jekyll/assets/originals.*[\[r[0-9]+x[0-9]+\]|\[c[0-9]+x[0-9]+\]]\.png|jpg$' last-commit.txt > image-paths.txt
           cat image-paths.txt
         if: ${{ github.event_name == 'push' || github.event.inputs.use-sha == 'true' }}
       
@@ -57,8 +57,7 @@ jobs:
       - name: Build file from original folder
         id: build-file
         run: |
-          PATH=$(find jekyll/assets/originals -regex ".*\[[r|c][0-9]+x[0-9]+\]+\..{3}$")
-          grep -E '^.*[\[r[0-9]+x[0-9]+\]|\[c[0-9]+x[0-9]+\]]\.png|jpg$' last-commit.txt > image-paths.txt
+          find jekyll/assets/originals -regextype posix-extended -regex "^.*\[[r|c][0-9]+x[0-9]+\]\..{3}$" > image-paths.txt
           cat image-paths.txt
         if: ${{ github.event_name != 'push' && github.event.inputs.use-sha == 'false' }}
 

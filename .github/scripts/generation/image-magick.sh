@@ -15,8 +15,8 @@ resize () {
   echo $extension
   identify "$file.$extension"
   # Apply the command to override the image
-  convert "$file.$extension" -resize $(echo $file | sed -e "s/.*r\([0-9]*x[0-9]*\).*/\1/") "$file-resized.$extension"
-  identify "$file-resized.$extension"
+  convert "$file.$extension" -resize $(echo $file | sed -e "s/.*r\([0-9]*x[0-9]*\).*/\1/") "$file.$extension"
+  identify "$file.$extension"
 }
 
 # See http://www.imagemagick.org/Usage/crop/#crop_gravity for more info
@@ -27,8 +27,8 @@ crop_center () {
   echo $extension
   identify "$file.$extension"
   # Apply the command to override the image once again
-  convert "$file.$extension" -gravity Center -crop $(echo $file | sed -e "s/.*c\([0-9]*x[0-9]*\).*/\1/")+0+0 "$file-cropped.$extension"
-  identify "$file-cropped.$extension"
+  convert "$file.$extension" -gravity Center -crop $(echo $file | sed -e "s/.*c\([0-9]*x[0-9]*\).*/\1/")+0+0 "$file.$extension"
+  identify "$file.$extension"
 }
 
 # Parameters check
@@ -38,37 +38,47 @@ if [ "$#" -eq 0 ]; then
   exit
 fi
 
-# jekyll/assets/
+# 
 resizing_pattern=".*\[r[0-9]+x[0-9]+\].*"
 crop_pattern=".*\[c[0-9]+x[0-9]+\].*"
+
+# Create destination folder if not already there
+destination_folder="jekyll/assets/output"
+if [[ ! -d "$destination_folder" ]]
+then
+  mkdir $destination_folder
+fi
 
 asset_path=$(cat $1)
 for file in $asset_path
 do
   echo "Processing $file file..."
-  filename="${file%.*}"
+  filename="${file##*/}"
   extension="${file##*.}"
   
-  # Removing relative path to only have filename
-  filename=$(echo $filename | sed -E "s/[\.*\/*]*(.*)/\1/")
-
   # Debug
   echo "$filename"
   echo "$extension"
+
+  # Removing relative path to only have filename
+  #filename=$(echo $filename | sed -E "s/[\.*\/*]*(.*)/\1/")
+
+  # Copy the file in the output folder
+  copied_file="$destination_folder/$filename.$extension"
+  cp "$file" "$copied_file"
+
+  copied_file="$destination_folder/${copied_file%.*}"
   
   if [[ "$file" =~ $resizing_pattern ]]; then
     echo "travis_fold:start:imageMagickResize"
     echo "Resize the file found"
-    resize "$filename" "$extension"
-    # Change the filename to use to resize filename for the crop part if needed
-    #filename="$filename"
-    echo "$filename"
+    resize "$copied_file" "$extension"
     echo "travis_fold:end:imageMagickResize"
   fi
   if [[ "$file" =~ $crop_pattern ]]; then
     echo "travis_fold:start:imageMagickCrop"
     echo "Crop the file found"
-    crop_center "$filename" "$extension"
+    crop_center "$copied_file" "$extension"
     echo "travis_fold:end:imageMagickCrop"
   fi
 done
