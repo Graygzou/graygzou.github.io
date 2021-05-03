@@ -24,7 +24,7 @@ on:
         default: 'develop'
 
 jobs:
-  compress:
+  compress-png:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -33,25 +33,23 @@ jobs:
       - name: Github checkout
         uses: actions/checkout@v2
 
-      - name: Make script executables
-        run: chmod +x ./.github/scripts/*/*.sh
-
-      - name: pngquant-png-compression
-        run: ./.github/scripts/integration/pngquant-compression.sh
-
-      - name: guetzli-jpg-compression
-        run: ./.github/scripts/integration/guetzli-compression.sh
+      - name: Install
+        run: |
+          echo "::group::installation"
+          sudo apt-get install pngquant
+          echo "::endgroup::"
+        
+      - name: Run
+        run: find ./jekyll/assets/images -name "*.png" -not -name "*-opti.png" -exec pngquant --ext -opti.png {} \;
+        
+      - name: Clean previous image
+        run: find ./jekyll/assets/images/ -name "*.png" -not -name "*-opti.png" -exec rm {} \;
 
       - name: Upload compressed image
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
-          name: compressed-image
-          path: jekyll/assets/
-
-      - name: Test
-        run: |
-          echo github.ref
-          echo $GITHUB_REF
+          name: compressed-png
+          path: jekyll/assets/images
 
       - name: Upload to branch workflow_dispatch
         uses: ./.github/actions/upload-to-branch
@@ -65,7 +63,58 @@ jobs:
         uses: ./.github/actions/upload-to-branch
         with:
           target-branch: resize-images-$GITHUB_RUN_ID
-          add-pattern: "*.jpg *.png"
+          add-pattern: "*.png"
+          user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
+          user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}
+        if: ${{ success() && github.event_name == 'workflow_run' }}
+    
+  compress-jpg:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Github checkout
+        uses: actions/checkout@v2
+
+      - name: Download
+        run: |
+          echo "::group::download"
+          curl -L https://github.com/google/guetzli/archive/v1.0.1.tar.gz | tar zx
+          sudo apt-get install libpng-dev
+          echo "::endgroup::"
+          
+      - name: Install
+        run: |
+          echo "::group::installation"
+          cd guetzli-1.0.1 && make
+          echo "::endgroup::"
+          
+      - name: Run
+        run: |
+          echo "::group::run"
+          find jekyll/assets/images/ -name "*.jpg" ! -path "jekyll/assets/originals/*" -exec guetzli-1.0.1/bin/Release/guetzli --verbose {} {} \;
+          echo "::endgroup::"
+        
+      - name: Upload compressed image
+        uses: actions/upload-artifact@v2
+        with:
+          name: compressed-jpg
+          path: jekyll/assets/images
+          
+      - name: Upload to branch workflow_dispatch
+        uses: ./.github/actions/upload-to-branch
+        with:
+          target-branch: ${{ github.event.target-branch }}
+          user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
+          user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}
+        if: ${{ success() && github.event_name != 'workflow_run' && github.event.inputs.create-request-pull == 'true' }}
+        
+      - name: Upload to branch on workflow_run
+        uses: ./.github/actions/upload-to-branch
+        with:
+          target-branch: resize-images-$GITHUB_RUN_ID
+          add-pattern: "*.jpg"
           user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
           user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}
         if: ${{ success() && github.event_name == 'workflow_run' }}
