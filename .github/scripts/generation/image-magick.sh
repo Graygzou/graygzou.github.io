@@ -67,7 +67,7 @@ do
   copied_file="$destination_folder/$filename.$extension"
   cp "$file" "$copied_file"
 
-  copied_file="$destination_folder/${copied_file%.*}"
+  copied_file="$destination_folder/$filename"
   
   if [[ "$file" =~ $resizing_pattern ]]; then
     echo "travis_fold:start:imageMagickResize"
