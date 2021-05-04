@@ -10,25 +10,21 @@
 # See http://www.imagemagick.org/Usage/resize/#resize for more info
 resize () {
   file=$1
-  extension=$2
   echo $file
-  echo $extension
-  identify "$file.$extension"
+  identify "$file"
   # Apply the command to override the image
-  convert "$file.$extension" -resize $(echo $file | sed -e "s/.*r\([0-9]*x[0-9]*\).*/\1/") "$file.$extension"
-  identify "$file.$extension"
+  convert "$file" -resize $(echo $file | sed -e "s/.*r\([0-9]*x[0-9]*\).*/\1/") "$file"
+  identify "$file"
 }
 
 # See http://www.imagemagick.org/Usage/crop/#crop_gravity for more info
 crop_center () {
   file=$1
-  extension=$2
   echo $file
-  echo $extension
-  identify "$file.$extension"
+  identify "$file"
   # Apply the command to override the image once again
-  convert "$file.$extension" -gravity Center -crop $(echo $file | sed -e "s/.*c\([0-9]*x[0-9]*\).*/\1/")+0+0 "$file.$extension"
-  identify "$file.$extension"
+  convert "$file" -gravity Center -crop $(echo $file | sed -e "s/.*c\([0-9]*x[0-9]*\).*/\1/")+0+0 "$file"
+  identify "$file"
 }
 
 # Parameters check
@@ -64,7 +60,7 @@ do
   #filename=$(echo $filename | sed -E "s/[\.*\/*]*(.*)/\1/")
 
   # Copy the file in the output folder
-  copied_file="$destination_folder/$filename.$extension"
+  copied_file="$destination_folder/$filename"
   cp "$file" "$copied_file"
 
   copied_file="$destination_folder/$filename"
@@ -72,13 +68,13 @@ do
   if [[ "$file" =~ $resizing_pattern ]]; then
     echo "travis_fold:start:imageMagickResize"
     echo "Resize the file found"
-    resize "$copied_file" "$extension"
+    resize "$copied_file"
     echo "travis_fold:end:imageMagickResize"
   fi
   if [[ "$file" =~ $crop_pattern ]]; then
     echo "travis_fold:start:imageMagickCrop"
     echo "Crop the file found"
-    crop_center "$copied_file" "$extension"
+    crop_center "$copied_file"
     echo "travis_fold:end:imageMagickCrop"
   fi
 done
