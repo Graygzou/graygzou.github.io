@@ -90,7 +90,7 @@ jobs:
       - name: Upload to branch on push
         uses: ./.github/actions/upload-to-branch
         with:
-          target-branch: workflow-${{ $GITHUB_SHA }}
+          target-branch: workflow-${{ github.sha }}
           add-pattern: "*.jpg *.png"
           user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
           user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}
