@@ -30,7 +30,7 @@ runs:
 
     - name: Checkout the branch
       id: branch-checkout
-      run: git checkout -b ${{ inputs.target-branch }}
+      run: git switch -c ${{ inputs.target-branch }}
       shell: bash
 
     - name: Add changement to branch
