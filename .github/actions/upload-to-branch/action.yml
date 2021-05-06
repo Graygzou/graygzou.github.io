@@ -30,7 +30,7 @@ runs:
 
     - name: Checkout the branch
       id: branch-checkout
-      run: git switch -c ${{ inputs.target-branch }}
+      run: git checkout $(git show-ref --verify --quiet refs/heads/${{ inputs.target-branch }} || echo '-b') ${{ inputs.target-branch }}
       shell: bash
 
     - name: Add changement to branch
