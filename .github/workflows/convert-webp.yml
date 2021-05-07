@@ -37,7 +37,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 2
-          ref: workflow-${{ github.sha }}
         
       - name: Remove previous folder if necessary and create it
         run: |
@@ -47,7 +46,6 @@ jobs:
             rm -vrf ${{ env.TARGET_FOLDER }}
           fi
           mkdir ${{ env.TARGET_FOLDER }}
-          echo "IMAGE_PATH=jekyll/assets/originals" >> $GITHUB_ENV
           echo "::endgroup::"
         shell: bash
         if: ${{ github.event_name != 'workflow_run' && github.event.inputs.use-sha == 'false' }}
@@ -55,10 +53,18 @@ jobs:
       - name: Build file from github sha Test1
         run: |
           git log --name-only -n 1 ${{ github.sha }} --pretty="format:" ${{ github.GITHUB_REF }} > last-commit.txt
-          grep -E '^.*[\[r[0-9]+x[0-9]+\]|\[c[0-9]+x[0-9]+\]]\.png|jpg$' last-commit.txt > image-paths.txt
+          grep -E '^.*\.png|jpg$' last-commit.txt > image-paths.txt
           cat image-paths.txt
         shell: bash
         if: ${{ github.event_name == 'workflow_run' || github.event.inputs.use-sha == 'true' }}
+        
+      - name: Appends resized file from branch
+        run: |
+          git log --name-only -n 1 ${{ github.sha }} --pretty="format:" refs/heads/workflow-${{ github.sha } >> last-commit.txt
+          grep -E '^.*[\[r[0-9]+x[0-9]+\]|\[c[0-9]+x[0-9]+\]]\.png|jpg$' last-commit.txt > image-paths.txt
+          cat image-paths.txt
+        shell: bash
+        if: ${{ github.event_name == 'workflow_run' || github.event.inputs.use-sha == 'true' && $(git show-ref --verify --quiet refs/heads/workflow-${{ github.sha }} || echo 'true') == 'true' }}
         
       - name: Create webp jpg images
         id: create-webp-jpg-images
