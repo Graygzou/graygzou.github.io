@@ -6,6 +6,10 @@ inputs:
     description: "file containing path of all images to resize"
     required: true
     default: ""
+  destination-folder:
+    description: "folder that will hold transformed images"
+    required: false
+    default: "jekyll/assets/output"
 
 runs:
   using: "composite"
@@ -20,7 +24,7 @@ runs:
       run: |
         echo "::group::use imagemagick"
         echo ${{ inputs.images-names-file }}
-        ./.github/scripts/generation/image-magick.sh ${{ inputs.images-names-file }}
+        ./.github/scripts/generation/image-magick.sh ${{ inputs.images-names-file }} ${{ inputs.destination-folder }} 
         echo "::endgroup::"
       shell: bash
 
