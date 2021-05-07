@@ -2,7 +2,7 @@
 
 #############################################################################
 # Grégoire Boiron <gregoire.boiron@gmail.com>
-# Copyright (c) 2018-2020 Grégoire Boiron  All Rights Reserved.
+# Copyright (c) 2018-2021 Grégoire Boiron  All Rights Reserved.
 #
 # Run ImageMagick algorithms to create different versions of all images
 #############################################################################
@@ -30,7 +30,7 @@ crop_center () {
 # Parameters check
 echo "$#"
 if [ "$#" -eq 0 ]; then
-  echo "you need to provide a root folder and a file extension to run algorithm on it."
+  echo "you need to provide a .txt file and a destination folder to run algorithm on it."
   exit
 fi
 
@@ -38,8 +38,8 @@ fi
 resizing_pattern=".*\[r[0-9]+x[0-9]+\].*"
 crop_pattern=".*\[c[0-9]+x[0-9]+\].*"
 
-# Create destination folder if not already there
-destination_folder="jekyll/assets/output"
+# Create destination folder if not already there (jekyll/assets/output)
+destination_folder=$2
 if [[ ! -d "$destination_folder" ]]
 then
   mkdir $destination_folder
@@ -55,9 +55,6 @@ do
   # Debug
   echo "$filename"
   echo "$extension"
-
-  # Removing relative path to only have filename
-  #filename=$(echo $filename | sed -E "s/[\.*\/*]*(.*)/\1/")
 
   # Copy the file in the output folder
   copied_file="$destination_folder/$filename"
