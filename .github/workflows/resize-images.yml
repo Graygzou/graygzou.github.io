@@ -71,6 +71,7 @@ jobs:
         uses: ./.github/actions/resize-img
         with:
           images-names-file: image-paths.txt
+          destination-folder: "jekyll/assets/output"
         if: ${{ steps.build-file-sha.outcome == 'success' || steps.build-file.outcome == 'success' }}
 
       - name: Upload resize image
