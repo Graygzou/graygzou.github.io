@@ -66,7 +66,7 @@ jobs:
           grep -E '^.*[\[r[0-9]+x[0-9]+\]|\[c[0-9]+x[0-9]+\]]\.png|jpg' last-commit.txt >> image-paths.txt
           cat image-paths.txt
         shell: bash
-        if: ${{ github.event_name == 'workflow_run' || github.event.inputs.use-sha == 'true' && $(git show-ref --verify --quiet refs/heads/workflow-${{ github.sha }} || echo 'true') == 'true' }}
+        if: ${{ github.event_name == 'workflow_run' || github.event.inputs.use-sha == 'true' }}
         
       - name: Create webp jpg images
         id: create-webp-jpg-images
