@@ -32,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TARGET_FOLDER: "jekyll/assets/webp"
-      DEVELOP_BRANCH: "refs/heads/develop"
+      DEVELOP_BRANCH: "develop"
     steps:
       - name: Github checkout
         uses: actions/checkout@v2
