@@ -30,13 +30,17 @@ runs:
         echo "::endgroup::"
       shell: bash
 
+    - name: Make script executables
+      run: chmod +x ./.github/scripts/*/*.sh
+      shell: bash
+
     # Use cwebp to encode all asset images except for the folder ./originals. 
     # for more info on cwebp see https://developers.google.com/speed/webp/docs/precompiled
     - name: 
       run: |
         echo "::group::run cwebp command"
         echo "Start running cwebp for webp image creation"
-        find jekyll/assets/ -type d -path ${{ inputs.original-folder }} -prune -o -regex ".*\.\(${{ inputs.extensions-regex }}\)" -print -exec cwebp {} -o {}.webp \;
+        ./.github/scripts/generation/webp.sh ${{ inputs.original-folder }} ${{ inputs.target-folder }}
         echo "::endgroup::"
       shell: bash
 
