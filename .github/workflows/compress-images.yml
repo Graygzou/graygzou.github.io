@@ -62,7 +62,7 @@ jobs:
       - name: Upload to branch on workflow_run
         uses: ./.github/actions/upload-to-branch
         with:
-          target-branch: compress-png-$GITHUB_RUN_ID
+          target-branch: workflow-${{ github.sha }}
           add-pattern: "*.png"
           user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
           user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}
@@ -113,7 +113,7 @@ jobs:
       - name: Upload to branch on workflow_run
         uses: ./.github/actions/upload-to-branch
         with:
-          target-branch: compress-jpg-$GITHUB_RUN_ID
+          target-branch: workflow-${{ github.sha }}
           add-pattern: "*.jpg"
           user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
           user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}
