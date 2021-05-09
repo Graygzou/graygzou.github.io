@@ -59,23 +59,33 @@ jobs:
         shell: bash
         if: ${{ github.event_name == 'workflow_run' || github.event.inputs.use-sha == 'true' }}
 
+      - name: Create the env variable based on .txt file
+        run: |
+          wc -m image-paths.txt
+          char_number=$(wc -m image-paths.txt)
+          echo "action_state=$char_number" >> $GITHUB_ENV
+
       - name: Install
         run: |
           echo "::group::installation"
+          echo "${{ env.action_state }}"
           sudo apt-get install pngquant
           echo "::endgroup::"
         
       - name: Run
         run: 
           echo "::group::run"
+          chmod +x ./.github/scripts/*/*.sh
           ./.github/scripts/integration/pngquant-compression.sh image-paths.txt ${{ env.TARGET_FOLDER }}
           echo "::endgroup::"
+        if: ${{ env.action_state > 0 }}
 
       - name: Upload compressed image
         uses: actions/upload-artifact@v2
         with:
           name: compressed-png
           path: ${{ env.TARGET_FOLDER }}
+        if: ${{ env.action_state > 0 }}
 
       - name: Upload to branch workflow_dispatch
         uses: ./.github/actions/upload-to-branch
@@ -83,7 +93,7 @@ jobs:
           target-branch: ${{ github.event.target-branch }}
           user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
           user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}
-        if: ${{ success() && github.event_name != 'workflow_run' && github.event.inputs.create-request-pull == 'true' }}
+        if: ${{ success() && github.event_name != 'workflow_run' && github.event.inputs.create-request-pull == 'true' && env.action_state > 0 }}
 
       - name: Upload to branch on workflow_run
         uses: ./.github/actions/upload-to-branch
@@ -92,7 +102,7 @@ jobs:
           add-pattern: "*.png"
           user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
           user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}
-        if: ${{ success() && github.event_name == 'workflow_run' }}
+        if: ${{ success() && github.event_name == 'workflow_run' && env.action_state > 0 }}
     
   compress-jpg:
     runs-on: ubuntu-latest
@@ -141,6 +151,7 @@ jobs:
       - name: Run
         run: |
           echo "::group::run"
+          chmod +x ./.github/scripts/*/*.sh
           ./.github/scripts/integration/guetzli-compression.sh image-paths.txt ${{ env.TARGET_FOLDER }}
           echo "::endgroup::"
         
