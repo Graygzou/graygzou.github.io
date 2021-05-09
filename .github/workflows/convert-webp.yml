@@ -32,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TARGET_FOLDER: "jekyll/assets/webp"
-      DEVELOP_BRANCH: "develop"
+      DEVELOP_BRANCH: "refs/heads/develop"
     steps:
       - name: Github checkout
         uses: actions/checkout@v2
@@ -55,7 +55,7 @@ jobs:
       - name: Build file from github sha Test1
         run: |
           git fetch
-          git log ${{ env.DEVELOP_BRANCH }} --name-only -n 1 ${{ github.sha }} --pretty="format:" > last-commit.txt
+          git log --name-only -n 1 ${{ github.sha }} --pretty="format:" -- ${{ env.DEVELOP_BRANCH }} > last-commit.txt
           grep -E '^.*\.png|jpg' last-commit.txt > image-paths.txt
           cat image-paths.txt
         shell: bash
@@ -63,7 +63,7 @@ jobs:
         
       - name: Appends resized file from branch
         run: |
-          git log {{ github.ref }} --name-only -n 1 ${{ github.sha }} --pretty="format:" > last-commit.txt
+          git log --name-only -n 1 ${{ github.sha }} --pretty="format:" -- {{ github.ref }} > last-commit.txt
           grep -E '^.*[\[r[0-9]+x[0-9]+\]|\[c[0-9]+x[0-9]+\]]\.png|jpg' last-commit.txt >> image-paths.txt
           cat image-paths.txt
         shell: bash
