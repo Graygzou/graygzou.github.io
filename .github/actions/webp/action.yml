@@ -44,22 +44,6 @@ runs:
         echo "::endgroup::"
       shell: bash
 
-    # TODO: Break those into two steps
-    # Move images to another directory and re name it correctly.
-    - name: Rename and move webp images
-      id: finalize-images
-      run: | 
-        echo "::group::rename_webp_images"
-        echo "Renamed new images and move them in a separated folder"
-        find jekyll/assets/ -name "*.webp" -exec mv {} "${{ inputs.target-folder }}/" \;
-        cd "${{ inputs.target-folder }}/"
-        rename -v "s/(${{ inputs.extensions-regex }}).webp/webp/gi" *.webp \;
-        find . -regex '.*\.\(${{ inputs.extensions-regex }}\.webp\)' -exec rm -v {} \;
-        cd ../../..
-        echo "::set-output name=result-folder::$(echo ${{ inputs.target-folder }}/)"
-        echo "::endgroup::"
-      shell: bash
-
 branding:
   icon: edit
   color: orange

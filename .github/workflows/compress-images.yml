@@ -7,7 +7,7 @@ name: Compress images
 
 on:
   workflow_run:
-    workflows: ["Convert to webp"]
+    workflows: ["Resize Images"]
     branches: [develop]
     types: 
       - completed
@@ -18,6 +18,10 @@ on:
         description: 'Create request pull'
         required: true
         default: 'false'
+      use-sha:
+        description: 'Use GitHub sha'
+        required: true
+        default: 'true'
       target-branch:
         description: 'Branch to upload to'
         required: false
@@ -26,12 +30,34 @@ on:
 jobs:
   compress-png:
     runs-on: ubuntu-latest
+    env:
+      TARGET_FOLDER: "jekyll/assets/compressed"
     defaults:
       run:
         shell: bash
     steps:
       - name: Github checkout
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+          ref: workflow-${{ github.sha }}
+
+      - name: Build file from github sha
+        run: |
+          git fetch --depth 2
+          git log --name-only -n 1 ${{ github.sha }} --pretty="format:" > last-commit.txt
+          grep -E '^.*\.png' last-commit.txt > image-paths.txt
+          cat image-paths.txt
+        shell: bash
+        if: ${{ github.event_name == 'workflow_run' || github.event.inputs.use-sha == 'true' }}
+        
+      - name: Appends pushed resized file from current ref
+        run: |
+          git log --name-only -n 1 --pretty="format:" > last-commit.txt
+          grep -E '^.*[\[r[0-9]+x[0-9]+\]|\[c[0-9]+x[0-9]+\]]\.png' last-commit.txt >> image-paths.txt
+          cat image-paths.txt
+        shell: bash
+        if: ${{ github.event_name == 'workflow_run' || github.event.inputs.use-sha == 'true' }}
 
       - name: Install
         run: |
@@ -40,16 +66,28 @@ jobs:
           echo "::endgroup::"
         
       - name: Run
-        run: find ./jekyll/assets/images -name "*.png" -not -name "*-opti.png" -exec pngquant --ext -opti.png {} \;
-        
-      - name: Clean previous image
-        run: find ./jekyll/assets/images/ -name "*.png" -not -name "*-opti.png" -exec rm {} \;
+        run: 
+          echo "::group::run"
+          PATH=$(cat last-commit.txt)
+          for file in $PATH
+          do
+            echo "Processing $file file..."
+            filename="${file##*/}"
+            extension="${file##*.}"
+            name="${filename%.*}"
+            echo "$filename"
+            echo "$extension"
+            echo "$name"
+            pngquant --ext -opti.png "$file"
+            mv "$name-opti.$extension" ${{ end.TARGET_FOLDER }}
+          done
+          echo "::endgroup::"
 
       - name: Upload compressed image
         uses: actions/upload-artifact@v2
         with:
           name: compressed-png
-          path: jekyll/assets/images
+          path: ${{ end.TARGET_FOLDER }}
 
       - name: Upload to branch workflow_dispatch
         uses: ./.github/actions/upload-to-branch
@@ -70,12 +108,34 @@ jobs:
     
   compress-jpg:
     runs-on: ubuntu-latest
+    env:
+      TARGET_FOLDER: "jekyll/assets/compressed"
     defaults:
       run:
         shell: bash
     steps:
       - name: Github checkout
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+          ref: workflow-${{ github.sha }}
+
+      - name: Build file from github sha
+        run: |
+          git fetch --depth 2
+          git log --name-only -n 1 ${{ github.sha }} --pretty="format:" > last-commit.txt
+          grep -E '^.*\.png' last-commit.txt > image-paths.txt
+          cat image-paths.txt
+        shell: bash
+        if: ${{ github.event_name == 'workflow_run' || github.event.inputs.use-sha == 'true' }}
+        
+      - name: Appends pushed resized file from current ref
+        run: |
+          git log --name-only -n 1 --pretty="format:" > last-commit.txt
+          grep -E '^.*[\[r[0-9]+x[0-9]+\]|\[c[0-9]+x[0-9]+\]]\.png' last-commit.txt >> image-paths.txt
+          cat image-paths.txt
+        shell: bash
+        if: ${{ github.event_name == 'workflow_run' || github.event.inputs.use-sha == 'true' }}
 
       - name: Download
         run: |
@@ -93,14 +153,26 @@ jobs:
       - name: Run
         run: |
           echo "::group::run"
-          find jekyll/assets/images/ -name "*.jpg" ! -path "jekyll/assets/originals/*" -exec guetzli-1.0.1/bin/Release/guetzli --verbose {} {} \;
+          PATH=$(cat last-commit.txt)
+          for file in $PATH
+          do
+            echo "Processing $file file..."
+            filename="${file##*/}"
+            extension="${file##*.}"
+            name="${filename%.*}"
+            echo "$filename"
+            echo "$extension"
+            echo "$name"
+            guetzli-1.0.1/bin/Release/guetzli --verbose "$file" "$name-opti.$extension"
+            mv "$name-opti.$extension" ${{ end.TARGET_FOLDER }}
+          done
           echo "::endgroup::"
         
       - name: Upload compressed image
         uses: actions/upload-artifact@v2
         with:
           name: compressed-jpg
-          path: jekyll/assets/images
+          path: ${{ end.TARGET_FOLDER }}
           
       - name: Upload to branch workflow_dispatch
         uses: ./.github/actions/upload-to-branch

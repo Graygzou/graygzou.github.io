@@ -52,7 +52,7 @@ jobs:
         shell: bash
         if: ${{ github.event_name != 'workflow_run' && github.event.inputs.use-sha == 'false' }}
         
-      - name: Build file from github sha Test1
+      - name: Build file from github sha
         run: |
           git fetch --depth 2
           git log --name-only -n 1 ${{ github.sha }} --pretty="format:" > last-commit.txt

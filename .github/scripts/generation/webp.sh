@@ -34,7 +34,7 @@ do
   echo "$extension"
   echo "$name"
 
-  cwebp "$file" -o "$destination_folder$name.webp"
+  cwebp "$file" -o "$destination_folder/$name.webp"
 done
 
 # Debug
