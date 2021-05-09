@@ -32,8 +32,9 @@ do
   # Debug
   echo "$filename"
   echo "$extension"
+  echo "$name"
 
-  cwebp "$file" -o "$name.webp" \;
+  cwebp "$file" -o "$name.webp"
 done
 
 # Debug

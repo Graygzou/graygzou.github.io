@@ -54,7 +54,7 @@ jobs:
         
       - name: Build file from github sha Test1
         run: |
-          git fetch
+          git fetch --depth 2
           git log --name-only -n 1 ${{ github.sha }} --pretty="format:" > last-commit.txt
           grep -E '^.*\.png|jpg' last-commit.txt > image-paths.txt
           cat image-paths.txt
