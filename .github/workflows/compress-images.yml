@@ -87,7 +87,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: compressed-png
-          path: ${{ end.TARGET_FOLDER }}
+          path: ${{ env.TARGET_FOLDER }}
 
       - name: Upload to branch workflow_dispatch
         uses: ./.github/actions/upload-to-branch
@@ -164,7 +164,7 @@ jobs:
             echo "$extension"
             echo "$name"
             guetzli-1.0.1/bin/Release/guetzli --verbose "$file" "$name-opti.$extension"
-            mv "$name-opti.$extension" ${{ end.TARGET_FOLDER }}
+            mv "$name-opti.$extension" ${{ env.TARGET_FOLDER }}
           done
           echo "::endgroup::"
         
@@ -172,7 +172,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: compressed-jpg
-          path: ${{ end.TARGET_FOLDER }}
+          path: ${{ env.TARGET_FOLDER }}
           
       - name: Upload to branch workflow_dispatch
         uses: ./.github/actions/upload-to-branch
