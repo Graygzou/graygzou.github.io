@@ -5,7 +5,7 @@ inputs:
   target-folder:
     description: "folder where the webp images will be saved"
     required: false
-    default: "webp/"
+    default: "jekyll/assets/webp/"
   original-folder:
     description: "folder where the original images are located."
     required: true
