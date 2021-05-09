@@ -7,25 +7,32 @@
 # Script that run pngquant.
 #############################################################################
 
-# Install the package
-echo "::group::install_pngquant"
-echo "install pngquant for png compression"
-sudo apt-get install pngquant
-echo "::endgroup::"
+# Parameters check
+echo "$#"
+if [ "$#" -eq 0 ]; then
+  echo "you need to provide a .txt file and a destination folder to run algorithm on it."
+  exit
+fi
 
-# Run the package
-echo "::group::run_pngquant"
-echo "Run pngquant command"
-# This will create duplicate of images with -fs8 at the end of the file
-find ./jekyll/assets/project-images/ -name "*.png" -not -name "*-opti.png" -exec pngquant --ext -opti.png {} \;
+# Create destination folder if not already there
+destination_folder=$2
+if [[ ! -d "$destination_folder" ]]
+then
+  mkdir $destination_folder
+fi
 
-# Remove the previous image not optimized
-echo "Remove the previous image not optimized"
-find ./jekyll/assets/project-images/ -name "*.png" -not -name "*-opti.png" -exec rm {} \;
-echo "::endgroup::"
+asset_path=$(cat $1)
+for file in $asset_path
+do
+  echo "Processing $file file..."
+  filename="${file##*/}"
+  extension="${file##*.}"
+  name="${filename%.*}"
 
-# Rename the file generate to match previous version
-# echo "Rename compressed images to match declarations"
-# find ./jekyll/assets/project-images/ -name "*.png" -exec rename "s/-fs8//g" {} \;
+  echo "$filename"
+  echo "$extension"
+  echo "$name"
 
-echo "✅ pngquant-compression.sh script done."
+  pngquant --ext -opti.png "$file"
+  mv "$name-opti.$extension" $destination_folder
+done

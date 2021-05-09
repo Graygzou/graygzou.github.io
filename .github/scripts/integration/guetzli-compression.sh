@@ -5,24 +5,32 @@
 # Copyright (c) 2018-2021 Grégoire Boiron  All Rights Reserved.
 #############################################################################
 
-# Download package
-# curl -L allow to follow the redirection
-echo "::group::download_guetzli"
-curl -L https://github.com/google/guetzli/archive/v1.0.1.tar.gz | tar zx
-sudo apt-get install libpng-dev
-echo "::endgroup::"
+# Parameters check
+echo "$#"
+if [ "$#" -eq 0 ]; then
+  echo "you need to provide a .txt file and a destination folder to run algorithm on it."
+  exit
+fi
 
-echo "::group::install_guetzli"
-echo "install guetzli for jpg compression"
-cd guetzli-1.0.1 && make
-echo "::endgroup::"
+# Create destination folder if not already there
+destination_folder=$2
+if [[ ! -d "$destination_folder" ]]
+then
+  mkdir $destination_folder
+fi
 
-# Run the package
-echo "::group::run_guetzli"
-echo "Start run guetzli for jpg compression"
-# For all the jpg in the project run Guetzli.
-# See https://github.com/google/guetzli for more info
-find jekyll/assets/ -name "*.jpg" ! -path "jekyll/assets/originals/*" -exec guetzli-1.0.1/bin/Release/guetzli --verbose {} {} \;
-echo "::endgroup::"
+asset_path=$(cat $1)
+for file in $asset_path
+do
+  echo "Processing $file file..."
+  filename="${file##*/}"
+  extension="${file##*.}"
+  name="${filename%.*}"
 
-echo "✅ guetzli-compression.sh script done."
+  echo "$filename"
+  echo "$extension"
+  echo "$name"
+
+  guetzli-1.0.1/bin/Release/guetzli --verbose "$file" "$name-opti.$extension"
+  mv "$name-opti.$extension" $destination_folder
+done

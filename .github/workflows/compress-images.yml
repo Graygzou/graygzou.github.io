@@ -68,19 +68,7 @@ jobs:
       - name: Run
         run: 
           echo "::group::run"
-          PATH=$(cat last-commit.txt)
-          for file in $PATH
-          do
-            echo "Processing $file file..."
-            filename="${file##*/}"
-            extension="${file##*.}"
-            name="${filename%.*}"
-            echo "$filename"
-            echo "$extension"
-            echo "$name"
-            pngquant --ext -opti.png "$file"
-            mv "$name-opti.$extension" ${{ env.TARGET_FOLDER }}
-          done
+          ./.github/scripts/integration/pngquant-compression.sh image-paths.txt ${{ env.TARGET_FOLDER }}
           echo "::endgroup::"
 
       - name: Upload compressed image
@@ -153,19 +141,7 @@ jobs:
       - name: Run
         run: |
           echo "::group::run"
-          PATH=$(cat last-commit.txt)
-          for file in $PATH
-          do
-            echo "Processing $file file..."
-            filename="${file##*/}"
-            extension="${file##*.}"
-            name="${filename%.*}"
-            echo "$filename"
-            echo "$extension"
-            echo "$name"
-            guetzli-1.0.1/bin/Release/guetzli --verbose "$file" "$name-opti.$extension"
-            mv "$name-opti.$extension" ${{ env.TARGET_FOLDER }}
-          done
+          ./.github/scripts/integration/guetzli-compression.sh image-paths.txt ${{ env.TARGET_FOLDER }}
           echo "::endgroup::"
         
       - name: Upload compressed image
