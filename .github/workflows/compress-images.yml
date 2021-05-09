@@ -79,7 +79,7 @@ jobs:
             echo "$extension"
             echo "$name"
             pngquant --ext -opti.png "$file"
-            mv "$name-opti.$extension" ${{ end.TARGET_FOLDER }}
+            mv "$name-opti.$extension" ${{ env.TARGET_FOLDER }}
           done
           echo "::endgroup::"
 
