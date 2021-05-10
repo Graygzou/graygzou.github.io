@@ -46,21 +46,20 @@ jobs:
         run: |
           git fetch --depth 2
           git log --name-only -n 1 ${{ github.sha }} --pretty="format:" > last-commit.txt
-          grep -E '^.*\.png' last-commit.txt > image-paths.txt
-          cat image-paths.txt
+          grep -E '^.*\.png' last-commit.txt > image-paths.txt || true
         shell: bash
         if: ${{ github.event_name == 'workflow_run' || github.event.inputs.use-sha == 'true' }}
         
       - name: Appends pushed resized file from current ref
         run: |
           git log --name-only -n 1 --pretty="format:" > last-commit.txt
-          grep -E '^.*[\[r[0-9]+x[0-9]+\]|\[c[0-9]+x[0-9]+\]]\.png' last-commit.txt >> image-paths.txt
-          cat image-paths.txt
+          grep -E '^.*[\[r[0-9]+x[0-9]+\]|\[c[0-9]+x[0-9]+\]]\.png' last-commit.txt >> image-paths.txt || true
         shell: bash
         if: ${{ github.event_name == 'workflow_run' || github.event.inputs.use-sha == 'true' }}
 
       - name: Create the env variable based on .txt file
         run: |
+          cat image-paths.txt
           wc -m < image-paths.txt
           char_number=$(wc -m < image-paths.txt)
           echo "action_state=$char_number" >> $GITHUB_ENV
@@ -123,21 +122,20 @@ jobs:
         run: |
           git fetch --depth 2
           git log --name-only -n 1 ${{ github.sha }} --pretty="format:" > last-commit.txt
-          grep -E '^.*\.jpg' last-commit.txt > image-paths.txt
-          cat image-paths.txt
+          grep -E '^.*\.jpg' last-commit.txt > image-paths.txt || true
         shell: bash
         if: ${{ github.event_name == 'workflow_run' || github.event.inputs.use-sha == 'true' }}
         
       - name: Appends pushed resized file from current ref
         run: |
           git log --name-only -n 1 --pretty="format:" > last-commit.txt
-          grep -E '^.*[\[r[0-9]+x[0-9]+\]|\[c[0-9]+x[0-9]+\]]\.jpg' last-commit.txt >> image-paths.txt
-          cat image-paths.txt
+          grep -E '^.*[\[r[0-9]+x[0-9]+\]|\[c[0-9]+x[0-9]+\]]\.jpg' last-commit.txt >> image-paths.txt || true
         shell: bash
         if: ${{ github.event_name == 'workflow_run' || github.event.inputs.use-sha == 'true' }}
         
       - name: Create the env variable based on .txt file
         run: |
+          cat image-paths.txt
           wc -m < image-paths.txt
           char_number=$(wc -m < image-paths.txt)
           echo "action_state=$char_number" >> $GITHUB_ENV
