@@ -35,7 +35,7 @@ runs:
 
     - name: Add changement to branch
       run: |
-        git pull
+        git pull origin HEAD:${{ inputs.target-branch }}
         git add ${{ inputs.add-pattern }}
         git commit -m "[ignore] Upload files generate by the job #$GITHUB_RUN_ID $GITHUB_ACTION"
         git push origin HEAD:${{ inputs.target-branch }}
