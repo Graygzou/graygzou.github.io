@@ -61,8 +61,8 @@ jobs:
 
       - name: Create the env variable based on .txt file
         run: |
-          wc -m image-paths.txt
-          char_number=$(wc -m image-paths.txt)
+          wc -m < image-paths.txt
+          char_number=$(wc -m < image-paths.txt)
           echo "action_state=$char_number" >> $GITHUB_ENV
 
       - name: Install
@@ -71,6 +71,7 @@ jobs:
           echo "${{ env.action_state }}"
           sudo apt-get install pngquant
           echo "::endgroup::"
+        if: ${{ env.action_state != 0 }}
         
       - name: Run
         run: 
@@ -78,14 +79,14 @@ jobs:
           chmod +x ./.github/scripts/*/*.sh
           ./.github/scripts/integration/pngquant-compression.sh image-paths.txt ${{ env.TARGET_FOLDER }}
           echo "::endgroup::"
-        if: ${{ env.action_state > 0 }}
+        if: ${{ env.action_state != 0 }}
 
       - name: Upload compressed image
         uses: actions/upload-artifact@v2
         with:
           name: compressed-png
           path: ${{ env.TARGET_FOLDER }}
-        if: ${{ env.action_state > 0 }}
+        if: ${{ env.action_state != 0 }}
 
       - name: Upload to branch workflow_dispatch
         uses: ./.github/actions/upload-to-branch
@@ -93,7 +94,7 @@ jobs:
           target-branch: ${{ github.event.target-branch }}
           user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
           user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}
-        if: ${{ success() && github.event_name != 'workflow_run' && github.event.inputs.create-request-pull == 'true' && env.action_state > 0 }}
+        if: ${{ success() && github.event_name != 'workflow_run' && github.event.inputs.create-request-pull == 'true' }}
 
       - name: Upload to branch on workflow_run
         uses: ./.github/actions/upload-to-branch
@@ -102,7 +103,7 @@ jobs:
           add-pattern: "*.png"
           user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
           user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}
-        if: ${{ success() && github.event_name == 'workflow_run' && env.action_state > 0 }}
+        if: ${{ success() && github.event_name == 'workflow_run' && env.action_state != 0 }}
     
   compress-jpg:
     runs-on: ubuntu-latest
@@ -122,7 +123,7 @@ jobs:
         run: |
           git fetch --depth 2
           git log --name-only -n 1 ${{ github.sha }} --pretty="format:" > last-commit.txt
-          grep -E '^.*\.png' last-commit.txt > image-paths.txt
+          grep -E '^.*\.jpg' last-commit.txt > image-paths.txt
           cat image-paths.txt
         shell: bash
         if: ${{ github.event_name == 'workflow_run' || github.event.inputs.use-sha == 'true' }}
@@ -130,10 +131,16 @@ jobs:
       - name: Appends pushed resized file from current ref
         run: |
           git log --name-only -n 1 --pretty="format:" > last-commit.txt
-          grep -E '^.*[\[r[0-9]+x[0-9]+\]|\[c[0-9]+x[0-9]+\]]\.png' last-commit.txt >> image-paths.txt
+          grep -E '^.*[\[r[0-9]+x[0-9]+\]|\[c[0-9]+x[0-9]+\]]\.jpg' last-commit.txt >> image-paths.txt
           cat image-paths.txt
         shell: bash
         if: ${{ github.event_name == 'workflow_run' || github.event.inputs.use-sha == 'true' }}
+        
+      - name: Create the env variable based on .txt file
+        run: |
+          wc -m < image-paths.txt
+          char_number=$(wc -m < image-paths.txt)
+          echo "action_state=$char_number" >> $GITHUB_ENV
 
       - name: Download
         run: |
@@ -141,12 +148,14 @@ jobs:
           curl -L https://github.com/google/guetzli/archive/v1.0.1.tar.gz | tar zx
           sudo apt-get install libpng-dev
           echo "::endgroup::"
+        if: ${{ env.action_state != 0 }}
           
       - name: Install
         run: |
           echo "::group::installation"
           cd guetzli-1.0.1 && make
           echo "::endgroup::"
+        if: ${{ env.action_state != 0 }}
           
       - name: Run
         run: |
@@ -160,6 +169,7 @@ jobs:
         with:
           name: compressed-jpg
           path: ${{ env.TARGET_FOLDER }}
+        if: ${{ env.action_state != 0 }}
           
       - name: Upload to branch workflow_dispatch
         uses: ./.github/actions/upload-to-branch
@@ -176,4 +186,4 @@ jobs:
           add-pattern: "*.jpg"
           user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
           user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}
-        if: ${{ success() && github.event_name == 'workflow_run' }}
+        if: ${{ success() && github.event_name == 'workflow_run' && env.action_state != 0 }}
