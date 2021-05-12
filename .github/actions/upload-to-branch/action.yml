@@ -32,7 +32,6 @@ runs:
       id: branch-checkout
       run: |
         git checkout $(git show-ref --verify --quiet refs/heads/${{ inputs.target-branch }} || echo '-b') ${{ inputs.target-branch }}
-        git branch --set-upstream-to=origin/${{ inputs.target-branch }} ${{ inputs.target-branch }}
       shell: bash
 
     - name: Add changements to branch
@@ -46,7 +45,7 @@ runs:
         git fetch
         git pull
         git rebase HEAD:${{ inputs.target-branch }} || true
-        git push origin HEAD:${{ inputs.target-branch }}
+        git pull || git push origin HEAD:${{ inputs.target-branch }}
       shell: bash
 
     - name: Create PR link if not develop
