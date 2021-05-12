@@ -73,7 +73,7 @@ jobs:
         if: ${{ env.action_state != 0 }}
         
       - name: Run
-        run: 
+        run: |
           echo "::group::run_pngquant"
           chmod +x ./.github/scripts/*/*.sh
           ./.github/scripts/integration/pngquant-compression.sh image-paths.txt ${{ env.TARGET_FOLDER }}
