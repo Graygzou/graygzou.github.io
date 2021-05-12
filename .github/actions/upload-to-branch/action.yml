@@ -42,6 +42,7 @@ runs:
     - name: Push changements to branch
       run: |
         git fetch
+        git pull
         git rebase HEAD:${{ inputs.target-branch }} || true
         git push origin HEAD:${{ inputs.target-branch }}
       shell: bash
