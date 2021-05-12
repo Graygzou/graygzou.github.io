@@ -74,7 +74,7 @@ jobs:
         
       - name: Run
         run: 
-          echo "::group::run"
+          echo "::group::run_pngquant"
           chmod +x ./.github/scripts/*/*.sh
           ./.github/scripts/integration/pngquant-compression.sh image-paths.txt ${{ env.TARGET_FOLDER }}
           echo "::endgroup::"
@@ -157,7 +157,7 @@ jobs:
           
       - name: Run
         run: |
-          echo "::group::run"
+          echo "::group::run_guestzli"
           chmod +x ./.github/scripts/*/*.sh
           ./.github/scripts/integration/guetzli-compression.sh image-paths.txt ${{ env.TARGET_FOLDER }}
           echo "::endgroup::"
