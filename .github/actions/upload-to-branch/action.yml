@@ -40,10 +40,10 @@ runs:
         git commit -m "[ignore] Files generate by the $GITHUB_WORKFLOW workflow (run #$GITHUB_RUN_ID)"
       shell: bash
 
+    # $(git show-ref --verify --quiet refs/heads/${{ inputs.target-branch }} && echo 'git pull')
     - name: Push changements to branch
       run: |
         git fetch
-        git pull
         git rebase HEAD:${{ inputs.target-branch }} || true
         git pull || true
         git push origin HEAD:${{ inputs.target-branch }}
