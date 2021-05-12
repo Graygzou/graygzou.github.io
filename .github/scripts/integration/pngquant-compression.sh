@@ -28,11 +28,12 @@ do
   filename="${file##*/}"
   extension="${file##*.}"
   name="${filename%.*}"
+  path=$(dirname $file)
 
   echo "$filename"
   echo "$extension"
   echo "$name"
 
   pngquant --ext -opti.png "$file"
-  mv "$name-opti.$extension" $destination_folder
+  mv "$path/$name-opti.$extension" "$destination_folder"
 done
