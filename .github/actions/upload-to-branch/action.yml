@@ -45,7 +45,7 @@ runs:
       run: |
         git fetch
         git rebase HEAD:${{ inputs.target-branch }} || true
-        git pull || true
+        git pull --rebase || true
         git push origin HEAD:${{ inputs.target-branch }}
       shell: bash
 
