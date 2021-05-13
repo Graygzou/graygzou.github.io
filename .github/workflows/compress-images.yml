@@ -7,7 +7,7 @@ name: Compress images
 
 on:
   workflow_run:
-    workflows: ["Resize Images"]
+    workflows: ["Convert to webp"]
     branches: [develop]
     types: 
       - completed
@@ -39,21 +39,21 @@ jobs:
       - name: Github checkout
         uses: actions/checkout@v2
         with:
-          fetch-depth: 2
+          fetch-depth: 3
           ref: workflow-${{ github.sha }}
 
       - name: Build file from github sha
         run: |
           git fetch --depth 2
           git log --name-only -n 1 ${{ github.sha }} --pretty="format:" > last-commit.txt
-          grep -E '.*\.png' last-commit.txt > image-paths.txt || true
+          grep -E '.*\.png' last-commit.txt | sort --unique > image-paths.txt || true
         shell: bash
         if: ${{ github.event_name == 'workflow_run' || github.event.inputs.use-sha == 'true' }}
         
       - name: Appends pushed resized file from current ref
         run: |
-          git log --name-only -n 1 --pretty="format:" > last-commit.txt
-          grep -E '.*(\[(r|c)[0-9]+x[0-9]+\])+\.png' last-commit.txt >> image-paths.txt || true
+          git log --name-only -n 2 --pretty="format:" > last-commit.txt
+          grep -E '.*(\[(r|c)[0-9]+x[0-9]+\])+\.png' last-commit.txt | sort --unique >> image-paths.txt || true
         shell: bash
         if: ${{ github.event_name == 'workflow_run' || github.event.inputs.use-sha == 'true' }}
 
