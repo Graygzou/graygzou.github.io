@@ -5,13 +5,13 @@ color: "#178600"
 language: C#
 languages:
     - name: C#
-      percentage: 61.4
+      percentage: 90.0
       color: green
     - name: ShaderLab
-      percentage: 20.6
+      percentage: 8.1
       color: yellow
     - name: HLSL
-      percentage: 7.5
+      percentage: 1.4
       color: gray
 tags: ['unity3d', 'gamejam', 'gmtk2019', 'puzzle-game']
 category: 'jam'
@@ -46,7 +46,6 @@ team-size:
   - role: Narrative designer
     amount: 1
 main-roles: [3Cs Programmer, Gameplay Programmer, Project manager]
-youtube-link: -BDVJ9IO2uk
 project_links:
   - name: itch-dot-io
     url: https://graygzou.itch.io/memory-lost-in-the-red-whoody
