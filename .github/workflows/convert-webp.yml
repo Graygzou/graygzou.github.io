@@ -56,7 +56,7 @@ jobs:
         run: |
           git fetch --depth 2
           git log --name-only -n 1 ${{ github.sha }} --pretty="format:" > last-commit.txt
-          grep -E '^.*\.png|jpg' last-commit.txt > image-paths.txt
+          grep -E '^jekyll/assets/originals.*\.png|jpg' last-commit.txt > image-paths.txt
           cat image-paths.txt
         shell: bash
         if: ${{ github.event_name == 'workflow_run' || github.event.inputs.use-sha == 'true' }}
