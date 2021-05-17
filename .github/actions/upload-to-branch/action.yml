@@ -37,7 +37,7 @@ runs:
     - name: Add changements to branch
       run: |
         git add ${{ inputs.add-pattern }}
-        git commit -m "[ignore] Files generate by the $GITHUB_WORKFLOW workflow (run #$GITHUB_RUN_ID)"
+        git commit -m "[skip ci] Files generate by the $GITHUB_WORKFLOW workflow (run #$GITHUB_RUN_ID)"
       shell: bash
 
     # $(git show-ref --verify --quiet refs/heads/${{ inputs.target-branch }} && echo 'git pull')
