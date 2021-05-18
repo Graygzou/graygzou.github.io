@@ -35,8 +35,10 @@ if [ "$#" -eq 0 ]; then
 fi
 
 # 
-resizing_pattern=".*\[r[0-9]+x[0-9]+\].*"
-crop_pattern=".*\[c[0-9]+x[0-9]+\].*"
+resizing_pattern=".*r.*"
+crop_pattern=".*c.*"
+
+pattern=".*(\[.[0-9]+x[0-9]+\])?(\[.[0-9]+x[0-9]+\])?.*"
 
 # Create destination folder if not already there (jekyll/assets/output)
 destination_folder=$2
@@ -62,17 +64,20 @@ do
 
   copied_file="$destination_folder/$filename"
   
-  if [[ "$file" =~ $resizing_pattern ]]; then
-    echo "travis_fold:start:imageMagickResize"
-    echo "Resize the file found"
-    resize "$copied_file"
-    echo "travis_fold:end:imageMagickResize"
-  fi
-  if [[ "$file" =~ $crop_pattern ]]; then
-    echo "travis_fold:start:imageMagickCrop"
-    echo "Crop the file found"
-    crop_center "$copied_file"
-    echo "travis_fold:end:imageMagickCrop"
+  if [[ "$file" =~ $pattern ]]; then
+    for (( i=1; i<${#BASH_REMATCH[@]}; i++ ))
+    for i in ""
+    do
+      echo "$i"
+      echo "${BASH_REMATCH[$i]}"
+      if [[ "${BASH_REMATCH[$i]}" =~ $resizing_pattern ]]; then
+        echo "Resize the file found"
+        resize "$copied_file"
+      elif [[ "${BASH_REMATCH[$i]}" =~ $crop_pattern ]]; then
+        echo "Crop the file found"
+        crop_center "$copied_file"
+      fi
+    done
   fi
 done
 
