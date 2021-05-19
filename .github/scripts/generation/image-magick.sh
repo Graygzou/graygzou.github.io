@@ -65,15 +65,14 @@ do
   copied_file="$destination_folder/$filename"
   
   if [[ "$file" =~ $pattern ]]; then
-    for (( i=1; i<${#BASH_REMATCH[@]}; i++ ))
-    for i in ""
+    for i in ${!BASH_REMATCH[@]}
     do
       echo "$i"
-      echo "${BASH_REMATCH[$i]}"
-      if [[ "${BASH_REMATCH[$i]}" =~ $resizing_pattern ]]; then
+      echo "${BASH_REMATCH[i]}"
+      if [[ "${BASH_REMATCH[i]}" =~ $resizing_pattern ]]; then
         echo "Resize the file found"
         resize "$copied_file"
-      elif [[ "${BASH_REMATCH[$i]}" =~ $crop_pattern ]]; then
+      elif [[ "${BASH_REMATCH[i]}" =~ $crop_pattern ]]; then
         echo "Crop the file found"
         crop_center "$copied_file"
       fi
