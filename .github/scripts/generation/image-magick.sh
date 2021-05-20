@@ -35,10 +35,10 @@ if [ "$#" -eq 0 ]; then
 fi
 
 # 
-resizing_pattern=".*r.*"
-crop_pattern=".*c.*"
-
-pattern=".*(\[.[0-9]+x[0-9]+\])?(\[.[0-9]+x[0-9]+\])?.*"
+resize_only_pattern="[a-z\/]+\[r[0-9]+x[0-9]+\]\..+"
+crop_only_pattern="[a-z\/]+\[c[0-9]+x[0-9]+\]\..+"
+resize_crop_pattern=".+\[r[0-9]+x[0-9]+\]\[c[0-9]+x[0-9]+\]\..+"
+crop_resize_pattern=".+\[c[0-9]+x[0-9]+\]\[r[0-9]+x[0-9]+\]\..+"
 
 # Create destination folder if not already there (jekyll/assets/output)
 destination_folder=$2
@@ -63,20 +63,21 @@ do
   cp "$file" "$copied_file"
 
   copied_file="$destination_folder/$filename"
-  
-  if [[ "$file" =~ $pattern ]]; then
-    for i in ${!BASH_REMATCH[@]}
-    do
-      echo "$i"
-      echo "${BASH_REMATCH[i]}"
-      if [[ "${BASH_REMATCH[i]}" =~ $resizing_pattern ]]; then
-        echo "Resize the file found"
-        resize "$copied_file"
-      elif [[ "${BASH_REMATCH[i]}" =~ $crop_pattern ]]; then
-        echo "Crop the file found"
-        crop_center "$copied_file"
-      fi
-    done
+
+  if [[ "$file" =~ $resize_crop_pattern ]]; then
+    echo "Resize and crop the file found"
+    resize "$copied_file"
+    crop_center "$copied_file"
+  elif [[ "$file" =~ $crop_resize_pattern ]]; then
+    echo "Crop and resize the file found"
+    crop_center "$copied_file"
+    resize "$copied_file"
+  elif [[ "$file" =~ $resize_only_pattern ]]; then
+    echo "Resize the file found"
+    resize "$copied_file"
+  elif [[ "$file" =~ $crop_only_pattern ]]; then
+    echo "Crop the file found"
+    crop_center "$copied_file"
   fi
 done
 
