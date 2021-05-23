@@ -48,7 +48,7 @@ jobs:
         id: build-file-sha
         run: |
           git log --name-only -n 1 ${{ github.sha }} --pretty="format:" ${{ github.GITHUB_REF }} > last-commit.txt
-          grep -E '^jekyll/assets/originals.*[\[r[0-9]+x[0-9]+\]|\[c[0-9]+x[0-9]+\]]\.png|jpg$' last-commit.txt > image-paths.txt || true
+          grep -E '^jekyll/assets/originals.*[\[r[0-9]+x[0-9]+\]|\[c[0-9]+x[0-9]+\]]\.(png|jpg)$' last-commit.txt > image-paths.txt || true
           echo "::set-output name=result::$(cat image-paths.txt)"
         if: ${{ github.event_name == 'push' || github.event.inputs.use-sha == 'true' }}
       

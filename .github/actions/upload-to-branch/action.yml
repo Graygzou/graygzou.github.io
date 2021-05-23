@@ -45,9 +45,9 @@ runs:
     - name: Push changements to branch
       run: |
         git fetch
-        git rebase HEAD:${{ inputs.target-branch }} || true
+        git rebase refs/heads/${{ inputs.target-branch }} || true
         git pull --rebase || true
-        git push origin HEAD:${{ inputs.target-branch }}
+        git push origin refs/heads/${{ inputs.target-branch }}
       shell: bash
 
     - name: Create PR link if not develop
