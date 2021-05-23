@@ -16,7 +16,7 @@ At the end, we took care of essential managers for video games development :
 | Lighting system | Scripting system |
 
 #### The Physics System
-We mainly used [JBullet](http://jbullet.advel.cz/) library to implements the physics of our engine. 
+We mainly used **JBullet** a java port of the [Bullet](https://github.com/bulletphysics/bullet3) library to implements the physics of our engine. 
 We can attach a rigidbody to an entity that apply physics on it. 
 Parameters like the size of the rigidbody or the mass of the object can be modified to create custom behaviors.
 

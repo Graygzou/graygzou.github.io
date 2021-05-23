@@ -38,6 +38,7 @@ runs:
       run: |
         git add ${{ inputs.add-pattern }}
         git commit -m "[skip ci] Files generate by the $GITHUB_WORKFLOW workflow (run #$GITHUB_RUN_ID)"
+        git checkout -- .
       shell: bash
 
     # $(git show-ref --verify --quiet refs/heads/${{ inputs.target-branch }} && echo 'git pull')

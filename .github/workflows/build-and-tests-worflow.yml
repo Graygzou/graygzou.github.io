@@ -148,7 +148,7 @@ jobs:
           bundle-path: vendor/bundle
           bundle-folder: ./jekyll
           html-relative-folder: ../build
-          url-ignore: "https://www.linkedin.com/in/gregoire-boiron/,https://www.latecoere.aero/en/"
+          url-ignore: "https://www.linkedin.com/in/gregoire-boiron/,https://www.latecoere.aero/en/,https://afs.org/"
 
 
   lighthouse-ci:
