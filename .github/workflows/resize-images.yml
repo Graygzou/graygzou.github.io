@@ -48,8 +48,8 @@ jobs:
         id: build-file-sha
         run: |
           git log --name-only -n 1 ${{ github.sha }} --pretty="format:" ${{ github.GITHUB_REF }} > last-commit.txt
-          grep -E '^jekyll/assets/originals.*[\[r[0-9]+x[0-9]+\]|\[c[0-9]+x[0-9]+\]]\.png|jpg$' last-commit.txt > image-paths.txt
-          cat image-paths.txt
+          grep -E '^jekyll/assets/originals.*[\[r[0-9]+x[0-9]+\]|\[c[0-9]+x[0-9]+\]]\.png|jpg$' last-commit.txt > image-paths.txt || true
+          echo "::set-output name=result::$(cat image-paths.txt)"
         if: ${{ github.event_name == 'push' || github.event.inputs.use-sha == 'true' }}
       
       ###
@@ -57,28 +57,30 @@ jobs:
       - name: Build file from original folder
         id: build-file
         run: |
-          find jekyll/assets/originals -regextype posix-extended -regex "^.*\[[r|c][0-9]+x[0-9]+\]\..{3}$" > image-paths.txt
-          cat image-paths.txt
+          find jekyll/assets/originals -regextype posix-extended -regex "^.*\[[r|c][0-9]+x[0-9]+\]\..{3}$" > image-paths.txt || true
+          echo "::set-output name=result::$(cat image-paths.txt)"
         if: ${{ github.event_name != 'push' && github.event.inputs.use-sha == 'false' }}
 
       - name: Install image magick
         uses: ./.github/actions/install-imagemagick
         with:
           install-folder: imagemagick
-        if: ${{ (steps.build-file-sha.outcome == 'success' || steps.build-file.outcome == 'success') && steps.cache-image-magick.outputs.cache-hit != 'true' }}
+        if: ${{ (steps.build-file-sha.outputs.result != '' || steps.build-file.outputs.result != '') && steps.cache-image-magick.outputs.cache-hit != 'true' }}
 
       - name: Resize images
+        id: resize-images
         uses: ./.github/actions/resize-img
         with:
           images-names-file: image-paths.txt
           destination-folder: "jekyll/assets/output"
-        if: ${{ steps.build-file-sha.outcome == 'success' || steps.build-file.outcome == 'success' }}
+        if: ${{ steps.build-file-sha.outputs.result != '' || steps.build-file.outputs.result != '' }}
 
       - name: Upload resize image
         uses: actions/upload-artifact@v1
         with:
           name: resized-image
           path: jekyll/assets/
+        if: ${{ steps.resize-images.outcome == "success" }}
 
       - name: Upload to branch workflow dispatch
         uses: ./.github/actions/upload-to-branch
