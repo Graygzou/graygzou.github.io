@@ -37,6 +37,18 @@ jobs:
         with:
           fetch-depth: 2
 
+      - name: Create output branch with sha
+        run: |
+          git checkout -b workflow-${{ github.sha }}
+          git push --set-upstream origin workflow-${{ github.sha }}
+        if: ${{ github.event_name == 'push' }}
+
+      - name: Create output branch
+        run: |
+          git checkout -b ${{ github.event.target-branch }}
+          git push --set-upstream origin ${{ github.event.target-branch }}
+        if: ${{ github.event_name != 'push' && github.event.inputs.create-request-pull == 'true' }}
+
       - name: Cache image magick
         id: cache-image-magick
         uses: actions/cache@v2
@@ -86,9 +98,10 @@ jobs:
         uses: ./.github/actions/upload-to-branch
         with:
           target-branch: ${{ github.event.target-branch }}
+          add-pattern: "*.jpg *.png"
           user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
           user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}
-        if: ${{ success() && github.event_name != 'push' && github.event.inputs.create-request-pull == 'true' }}
+        if: ${{ steps.build-file.outputs.result != '' && github.event_name != 'push' && github.event.inputs.create-request-pull == 'true' }}
 
       - name: Upload to branch on push
         uses: ./.github/actions/upload-to-branch
@@ -97,4 +110,4 @@ jobs:
           add-pattern: "*.jpg *.png"
           user-name: ${{ secrets.BOT_ACCOUNT_NAME }}
           user-email: ${{ secrets.BOT_ACCOUNT_MAIL }}
-        if: ${{ success() && github.event_name == 'push' }}
+        if: ${{ steps.build-file-sha.outputs.result != '' && github.event_name == 'push' }}
