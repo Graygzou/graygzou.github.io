@@ -1,7 +1,7 @@
 ---
-layout: project-page
-title: spida-phobia
+title: Spida-Phobia
 description: Virtual Reality simulation that helps people suffering from arachnophobia.
+date: 2017-03-03
 stargazers-count: 0
 forks-count: 0
 updated-at: 2019-07-23 01:53:04

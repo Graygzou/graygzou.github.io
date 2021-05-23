@@ -1,6 +1,7 @@
 ---
 title: Cuphead
 description: UI polish and bugs fixes related to the localization of the game
+date: 2018-01-01
 tags: []
 languages:
   - name: C#

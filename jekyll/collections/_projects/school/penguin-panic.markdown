@@ -1,6 +1,7 @@
 ---
 title: Penguin-Panic
 description: 3D exploration, arcade game made for the Ubisoft Game Lab Competition 2018
+date: 2018-12-12
 tags: ['unity3d', 'Water Research', 'Adaptative AI']
 languages: 
   - name: C#
@@ -29,7 +30,6 @@ pitch: "_Penguin Panic_ is a 3D multiplayer exploration game.
         Amazed by what they have in front of them, the two scientists have a revelation: the courage of these little penguins could well inspire the whole world!   
         They decided to launch a broadcast on a real-time streaming platform very popular in recent years: Twatch.tv.   
         You play the leader penguin of this colony. Your mission: return the Glacier to the North Pole to save the Arctic!"
-pinned: true
 platforms: Windows
 engines: Unity3D
 tools: [Asset Store]

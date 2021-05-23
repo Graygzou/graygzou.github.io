@@ -1,7 +1,8 @@
 ---
-layout: project-page
-title: battle-simulator
+published: false
+title: Battle-Simulator
 description: Battle simulator made with JMonkey, using a graph model as back-end
+date: 2017-01-01
 stargazers-count: 2
 forks-count: 0
 updated-at: 2019-07-23 00:54:31

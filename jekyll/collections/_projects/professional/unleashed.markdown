@@ -1,6 +1,7 @@
 ---
 title: Unleashed
 description: UI creation and integration on a 3D post-apocalyptic monsters open world.
+date: 2018-08-08
 tags: []
 languages:
   - name: C#

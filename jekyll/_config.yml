@@ -52,7 +52,6 @@ header_pages:
   - projects.md
   - challenges.md
   - resume.md
-  - blog.md
   - about.md
 
 project_categories_ordered: [professional, jam, school, side]

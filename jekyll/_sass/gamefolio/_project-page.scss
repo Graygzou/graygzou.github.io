@@ -100,6 +100,11 @@
 			vertical-align: top;
 		}
 	}
+
+	.project-language{
+		position: absolute;
+		right: 15px;
+	}
 }
 
 .table_title {
@@ -381,7 +386,7 @@ pre {
   
 .post-link {
 	display: block;
-	@include relative-font-size(1.3);
+	font-size: 100%;
 	width: 100%;
 	position: absolute;
 	top: 50%;

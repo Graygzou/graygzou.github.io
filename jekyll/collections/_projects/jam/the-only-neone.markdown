@@ -1,6 +1,7 @@
 ---
 title: The-only-neone
 description: 3D Grid based Maze game made in 48 hours for the GMTK GameJam 2019
+date: 2019-08-04
 color: "#178600"
 language: C#
 languages:

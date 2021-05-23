@@ -1,6 +1,7 @@
 ---
 title: Unannonced-title
 description: Tracking and bugs fixes on an unannonced title
+date: 2019-05-05
 tags: []
 languages:
   - name: C++
@@ -18,7 +19,6 @@ languages:
 tags: ['Back-end', 'unity3d', 'Analytics implementation',  'Tools', 'Bugs fixes']
 category: 'professional'
 pitch: "I cannot talk about this project since it hasn't been soft launch yet.. Worked during 6 months on an unannounced title."
-pinned: true
 platforms: Android, iOS
 engines: Unity3D
 tools: [Perforce, RabbitMQ, MariaDB, LXC, DeltaDNA, AppsFlyer, JIRA, Confluence]

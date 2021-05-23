@@ -1,7 +1,7 @@
 ---
-layout: project-page
-title: native-ruins
+title: Native-Ruins
 description: 3D third-person game, made with Unity engine.
+date: 2017-05-05
 stargazers-count: 3
 forks-count: 3
 updated-at: 2019-07-23 00:51:26

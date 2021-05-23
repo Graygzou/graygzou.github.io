@@ -13,7 +13,7 @@ layout: default
     {%- if site.projects.size > 0 -%}
         {% for group in site.project_categories_ordered %}
             {% assign current_color = '#e8e8e880' %}
-            {% assign sorted_pages = site.projects | where: "category", group | sort:"priority" %}
+            {% assign sorted_pages = site.projects | where: "category", group | sort:"date" | reverse %}
             {%- if sorted_pages.size > 0 -%}
                 {% assign header = group | capitalize | append: ' projects' %}
                 {% include linked-heading.html heading=header headerlevel=2 %}
