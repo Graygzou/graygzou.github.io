@@ -7,7 +7,7 @@ name: Grammar checks
 
 on:
   pull_request:
-    branches: [ master ]
+    branches: [ release ]
 
   workflow_dispatch:
 

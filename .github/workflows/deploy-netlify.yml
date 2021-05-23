@@ -1,11 +1,8 @@
 name: Deploy to Netlify
 
 on:
-  workflow_run:
-    workflows: ["Run Tests"]
-    branches: [main]
-    types: 
-      - completed
+  pull_request:
+    branches: [ release ]
 
   workflow_dispatch:
 

@@ -1,5 +1,0 @@
-name: Workflow when tagging commit to prepare deploy
-
-on:
-  create:
-    branches: [ release ]
