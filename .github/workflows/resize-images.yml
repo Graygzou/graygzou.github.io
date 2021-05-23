@@ -80,7 +80,7 @@ jobs:
         with:
           name: resized-image
           path: jekyll/assets/
-        if: ${{ steps.resize-images.outcome == "success" }}
+        if: ${{ steps.resize-images.outcome == 'success' }}
 
       - name: Upload to branch workflow dispatch
         uses: ./.github/actions/upload-to-branch
