@@ -8,9 +8,10 @@ layout: default
   <header class="post-header">
     <div class="project-thumbnail">
       <h1 class="project-title p-name" itemprop="name"> {{ page.title | replace: '-', ' ' | escape }}</h1>
-      {% capture image_path %}/assets/project-images/{{ page.title | downcase }}/{{ page.title | downcase }}-banner.png{% endcapture %}
-      {% capture image_path_webp %}/assets/webp/{{ page.title | downcase }}-banner.webp{% endcapture %}
-      {% capture image_alt %}{{ page.title | downcase }}-banner{% endcapture %}
+      {% assign escaped_project_title = page.title | replace:  "(", '' | replace:  ")", '' | downcase %}
+      {% capture image_path %}/assets/project-images/{{ escaped_project_title }}/{{ escaped_project_title }}-banner.png{% endcapture %}
+      {% capture image_path_webp %}/assets/webp/{{ escaped_project_title }}-banner.webp{% endcapture %}
+      {% capture image_alt %}{{ escaped_project_title }}-banner{% endcapture %}
       {% capture resolutions %}356w/930w{% endcapture %}
       {% capture size_text %}(max-width: 400px) 356px, (max-width: 1000px) 100vw, 930px{% endcapture %}
       {% include images-handler.html alt=image_alt filename=image_path webp=image_path_webp res=resolutions sizes=size_text css="thumbnail-img" %}
