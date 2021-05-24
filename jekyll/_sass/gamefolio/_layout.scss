@@ -186,8 +186,10 @@
     text-align: center;
 
     .project-li {
-      margin-bottom: $spacing-unit;
+      margin-bottom: $spacing-unit / 2;
       width: 100%;
+      min-height: inherit;
+
       img {
         float: none;
       }
@@ -222,9 +224,19 @@
 
   > li {
     position: relative;
-    margin-bottom: $spacing-unit;
+    margin-bottom: $spacing-unit / 2;
     text-align: center;
     padding: 1%;
+  }
+
+  @include media-query($on-small-screen) {
+    text-align: center;
+
+    > li {
+      margin-bottom: $spacing-unit / 2;
+      width: 100%;
+      min-height: inherit;
+    }
   }
 }
 
@@ -289,11 +301,11 @@
 }
 
 .project-li {
-  padding: 1%;
-  margin-bottom: 0 !important;
+  padding: 7px;
+  margin-bottom: 0;
   vertical-align: top;
   display: inline-block;
-  width: 160px;
+  width: 151px;
   min-height: 400px;
   text-align: center;
 
@@ -388,7 +400,7 @@
 }
 
 .home-li {
-  margin-bottom: 0 !important;
+  margin-bottom: 0;
   min-height: 150px;
   width: 165px;
   display: inline-block;
