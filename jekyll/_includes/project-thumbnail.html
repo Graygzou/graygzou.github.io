@@ -5,19 +5,6 @@
 {%- capture image_path -%}/assets/project-images/{{ escaped_project_title }}/{{ escaped_project_title }}-thumbnail.png{%- endcapture -%}
 {%- capture image_path_webp -%}/assets/webp/{{ escaped_project_title }}-thumbnail.webp{%- endcapture -%}
 {%- capture image_alt -%}{{ escaped_project_title }}-thumbnail{%- endcapture -%}
-<!-- Indicate what the main language used in this project  -->
-{%- if project.languages -%}
-  {% assign main_language = project.languages | first %}
-  <div class="project-language">
-    <svg class="svg-icon svg-project" width="16px" height="16px" style="fill: {{ main_language.color }}">
-      <use xlink:href="{{ '/assets/icons/gamefolio-regular-icons.svg#circle' }}">
-      </use>
-    </svg>
-    <span>{{ main_language.name }}</span>
-  </div>
-{%- else -%}
-<div class="test-li" style="padding-top: 25px;">
-{%- endif -%}
   <a href="{{ project.url | relative_url }}">
     {%- include images-handler.html alt=image_alt filename=image_path webp=image_path_webp -%}
     <h3 class="project-heading">
@@ -25,13 +12,30 @@
     </h3>
   </a>
   <div class="project-overview">
+    <!-- Indicate what the main language used in this project  -->
+    {%- if project.languages -%}
+      {% assign main_language = project.languages | first %}
+      <div class="project-language">
+        <svg class="svg-icon svg-project" width="16px" height="16px" style="fill: {{ main_language.color }}">
+          <use xlink:href="{{ '/assets/icons/gamefolio-regular-icons.svg#circle' }}">
+          </use>
+        </svg>
+        <span>{{ main_language.name }}</span>
+      </div>
+    {%- endif -%}
+    {%- if project.date -%}
+      <div>
+        <svg class="svg-icon svg-project" width="16px" height="16px">
+          <use xlink:href="{{ '/assets/icons/gamefolio-regular-icons.svg#calendar' }}">
+          </use>
+        </svg>
+        {{ project.date | date: "%Y" }}
+      </div>
+    {%- endif -%}
     <p class="post-meta">{{ project.description }}</p>
     <ul class="tagsgame">
-      {%- for tag in project.tags -%}
+      {%- for tag in project.tags limit:4 -%}
       <li class="tag">{{ tag }}</li>
       {%- endfor -%}
     </ul>
-  {%- if project.languages == nil -%}
-  </div>
-  {%- endif -%}
 </div>

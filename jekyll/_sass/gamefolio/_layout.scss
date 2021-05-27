@@ -199,6 +199,10 @@
 
 .project-overview {
   text-align: left;
+
+  .post-meta {
+    margin: 0;
+  }
 }
 
 /**
@@ -318,16 +322,15 @@
   }
 }
 
-.see-more-button {
-  position: relative;
-  padding: 0;
+.see-more {
+  min-height: inherit;
 }
 
 .project-heading {
   position: relative;
   margin: 0;
   word-break: break-word;
-  min-height: 72px;
+  min-height: 55px;
   a {
     display: inline-block;
     //min-width: 60%;
@@ -402,7 +405,7 @@
 .home-li {
   margin-bottom: 0;
   min-height: 150px;
-  width: 165px;
+  width: 158px;
   display: inline-block;
   vertical-align: top;
 

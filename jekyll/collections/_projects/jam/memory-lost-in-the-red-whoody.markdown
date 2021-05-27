@@ -1,6 +1,6 @@
 ---
 title: Memory-lost-in-the-(Red)-W(h)ood(y)
-description: 3D Grid based Maze game made in 48 hours for the GMTK GameJam 2019
+description: Point and click game made in 48 hours for the Global Game Jam 2021
 date: 2021-01-30
 color: "#178600"
 language: C#
@@ -14,7 +14,7 @@ languages:
     - name: HLSL
       percentage: 1.4
       color: gray
-tags: ['unity3d', 'gamejam', 'gmtk2019', 'puzzle-game']
+tags: ['unity3d', 'gamejam', 'point-and-click', 'solo-dev']
 category: 'jam'
 pitch: "_Memory-lost-in-the-(Red)-W(h)ood(y)_ is a Point and click game. 
         This application has been completed for the Global Game Jam 2021 organized in January.
