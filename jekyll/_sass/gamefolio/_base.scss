@@ -1,3 +1,35 @@
+html {
+  --bg: #{$background-color};
+  --bg-secondary: #{$tile-background-color};
+  --bg-tertiary: #{$grey-color-light};
+  --icon: #{$grey-color};
+  --brand-color: #{$brand-color};
+  --text: #{$text-color};
+  --sub-text: #{$grey-color-dark};
+  --tertiary-text: #{$tertiary-text};
+  --tag-shadow: rgba(32, 33, 36, 0.7);
+}
+
+html[data-theme="dark"] {
+  --bg: #{$dark-background-color};
+  --bg-secondary: #{$dark-tile-background-color};
+  --bg-tertiary: #444;
+  --icon: rgba(232, 233, 236, 1);
+  --brand-color: #{$dark-brand-color};
+  --text: #{$dark-text-color};
+  --sub-text: #9b9dad;
+  --tertiary-text: #{$dark-tertiary-text};
+  --tag-shadow: rgba(232, 233, 236, 0.7);
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+    transition: all 650ms !important;
+    transition-delay: 0 !important;
+}
+
 /**
  * Reset some basic elements
  */
@@ -9,14 +41,13 @@ dl, dd, ol, ul, figure {
 }
 
 
-
 /**
  * Basic styling
  */
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-  color: $text-color;
-  background-color: $background-color;
+  color: var(--text);
+  background-color: var(--bg);
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
@@ -83,15 +114,16 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: $brand-color;
+  color: var(--brand-color);
   text-decoration: none;
 
   &:visited {
-    color: darken($brand-color, 15%);
+    //color: darken(var(--brand-color), 15%);
+    color: var(--brand-color);
   }
 
   &:hover {
-    color: $text-color;
+    color: var(--text);
     text-decoration: underline;
   }
 
@@ -114,6 +146,8 @@ a {
   margin-left: auto;
   padding-right: $spacing-unit;
   padding-left: $spacing-unit;
+  // Positioning context for the mobile navigation icon
+  position: relative;
   @extend %clearfix;
 
   @include media-query($on-laptop) {
@@ -143,7 +177,7 @@ a {
   width: 16px;
   height: 16px;
   display: inline-block;
-  fill: #{$grey-color};
+  fill: var(--icon);
 }
 
 .social-media-list {
@@ -155,8 +189,6 @@ a {
   }
 }
 
-
-
 /**
  * Tables
  */
@@ -164,12 +196,13 @@ table {
   margin-bottom: $spacing-unit;
   width: 100%;
   text-align: $table-text-align;
-  color: lighten($text-color, 18%);
+  //color: lighten(var(--text), 18%);
+  color: var(--text);
   border-collapse: collapse;
-  border: 1px solid $grey-color-light;
+  border: 1px solid var(--bg-tertiary);
   tr {
     &:nth-child(even) {
-      background-color: lighten($grey-color-light, 6%);
+      background-color: var(--bg-tertiary);
     }
   }
   th, td {
@@ -180,11 +213,11 @@ table {
     }
   }
   th {
-    background-color: lighten($grey-color-light, 3%);
-    border: 1px solid darken($grey-color-light, 4%);
-    border-bottom-color: darken($grey-color-light, 12%);
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--bg-tertiary);
+    border-bottom-color: var(--bg-tertiary);
   }
   td {
-    border: 1px solid $grey-color-light;
+    border: 1px solid var(--bg-tertiary);
   }
 }

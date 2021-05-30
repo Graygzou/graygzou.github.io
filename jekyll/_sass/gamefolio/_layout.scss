@@ -1,13 +1,9 @@
 /**
  * Site header
  */
-.site-header {
-  border-top: 5px solid $grey-color-dark;
-  border-bottom: 1px solid $grey-color-light;
+.site-header {  
+  border-bottom: 1px solid var(--bg-tertiary);
   min-height: $spacing-unit * 3.865;
-
-  // Positioning context for the mobile navigation icon
-  position: relative;
 }
 
 .site-title {
@@ -19,13 +15,15 @@
 
   &,
   &:visited {
-    color: $grey-color-dark;
+    color: var(--sub-text);
   }
 }
 
 .site-nav {
-  float: right;
-  line-height: $base-line-height * $base-font-size * 4.55;
+  position: absolute;
+  top: 0px;
+  right: calc(#{$spacing-unit} * 2);
+  line-height: calc(#{$base-line-height} * #{$base-font-size} * 4.55);
 
   .nav-trigger {
       display: none;
@@ -36,7 +34,7 @@
   }
 
   .page-link {
-    color: $text-color;
+    color: var(--text);
     line-height: $base-line-height;
 
     // Gaps between nav items, but not on the last one
@@ -48,9 +46,9 @@
   @include media-query($on-palm) {
     position: absolute;
     top: 9px;
-    right: $spacing-unit / 2;
+    right: 50px;
     background-color: $background-color;
-    border: 1px solid $grey-color-light;
+    border: 1px solid var(--bg-tertiary);
     border-radius: 5px;
     text-align: right;
 
@@ -73,7 +71,7 @@
       text-align: center;
 
       > svg {
-        fill: $grey-color-dark;
+        fill: var(--sub-text);
       }
     }
 
@@ -99,13 +97,23 @@
   }
 }
 
+.theme-toggle {
+  position: absolute;
+  top: 12px;
+  right: $spacing-unit / 3;
+  fill: var(--bg);
+  line-height: calc(#{$base-line-height} * #{$base-font-size} * 4.55);
 
+  @include media-query($on-palm) {
+    line-height: #{$base-line-height};
+  }
+}
 
 /**
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid $grey-color-light;
+  border-top: 1px solid var(--bg-tertiary);
   padding: $spacing-unit 0;
 }
 
@@ -132,7 +140,7 @@
 
 .footer-col-wrapper {
   @include relative-font-size(0.9375);
-  color: $grey-color;
+  color: var(--text);
   margin-left: -$spacing-unit / 2;
   @extend %clearfix;
 }
@@ -246,7 +254,7 @@
 
 .post-meta {
   font-size: $small-font-size;
-  color: $grey-color-dark;
+  color: var(--sub-text);
 
   table {
     width: auto;
@@ -352,7 +360,7 @@
   padding: 0 .1em 0 .1em;
   display: inline-block;
   font-size: 0.75em;
-  color: black;
+  color: var(--text);
   padding-left: 5px;
   padding-right: 5px;
   border-radius: 5px;
@@ -361,7 +369,7 @@
   /*border-radius: 8px;*/
 
   //background-color: rgb(105, 120, 3);
-  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.7);
+  box-shadow: 0 1px 6px 0 var(--tag-shadow);
 }
 
 .repositoryFooter {
@@ -398,7 +406,7 @@
 }
 
 .button-link:hover {
-  background-color: $grey-color-light;
+  background-color: var(--bg-tertiary);
   text-decoration: underline;
 }
 
@@ -411,6 +419,8 @@
 
   img {
     width: 150px;
+    background-color: #fff;
+    border-radius: 15px;
   }
 
   div > ul {
@@ -470,7 +480,7 @@ object {
 
 .footer-copyright {
   @include relative-font-size(0.9375);
-  color: $grey-color;
+  color: var(--sub-text);
   margin: 0;
   text-align: center;
 }

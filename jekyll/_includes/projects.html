@@ -1,16 +1,16 @@
 <section class="home-section">
   {% include linked-heading.html heading="Highlighted projects" headerlevel=2 %}
   <ul class="project-list text-align-center">
-    {%- assign current_color = '#e8e8e880' -%}
+    {%- assign current_color = 'var(--bg-secondary)' -%}
     {%- assign sorted_pages = site.projects | where: "pinned", "true" | sort: "date" | reverse -%}
     {%- for project in sorted_pages -%}
       {%- if forloop.index <= 4 -%}
         {%- assign new_section = forloop.index | minus:1 | modulo:1 -%}
         {%- if new_section == 0 -%}
-          {%- if current_color == '#e8e8e880' -%}
-            {%- assign current_color = '#ffffff' -%}
+          {%- if current_color == 'var(--bg-secondary)' -%}
+            {%- assign current_color = 'var(--bg)' -%}
           {%- else -%}
-            {%- assign current_color = '#e8e8e880' -%}
+            {%- assign current_color = 'var(--bg-secondary)' -%}
           {%- endif -%}
         {%- endif -%}
       <li class="project-li" style="background-color: {{ current_color }} ;">{%- include project-thumbnail.html -%}</li>

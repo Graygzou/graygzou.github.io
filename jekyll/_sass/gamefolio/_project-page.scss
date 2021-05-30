@@ -13,7 +13,7 @@
 .linguist_legend {
 	width: 100%;
 	padding-bottom: 5px;
-	background: #e8e8e8;
+	background: var(--bg-secondary);
 	div {
 		display: inline-block;
 		padding-right: 1%;
@@ -26,7 +26,7 @@
 
 .language_percentage {
 	font-weight: 600;
-	color: #5b636c;
+	color: var(--tertiary-text);
 }
 
 /*  Overview Section    */
@@ -337,7 +337,7 @@ li {
  */
 blockquote {
 	color: $grey-color;
-	border-left: 4px solid $grey-color-light;
+	border-left: 4px solid var(--bg-tertiary);
 	padding-left: $spacing-unit / 2;
 	@include relative-font-size(1.125);
 	letter-spacing: -1px;
@@ -355,9 +355,9 @@ blockquote {
 pre,
 code {
 	@include relative-font-size(0.9375);
-	border: 1px solid $grey-color-light;
+	border: 1px solid var(--bg-secondary);
 	border-radius: 3px;
-	background-color: #eef;
+	background-color: var(--bg-tertiary);
 }
 
 
@@ -577,7 +577,7 @@ pre {
 	padding: 39px 20px;
 	text-align: center;
 	font-size: x-large;
-	background-color: $tile-background-color;
+	background-color: var(--bg-secondary);
 }
 
 .disable {
