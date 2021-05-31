@@ -318,14 +318,13 @@
   vertical-align: top;
   display: inline-block;
   width: 151px;
+  height: auto;
   min-height: 400px;
   text-align: center;
 
   img {
-    max-width: 140px;
-    min-width: 140px;
-    max-height: 140px;
-    min-height: 140px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
   }
 }
