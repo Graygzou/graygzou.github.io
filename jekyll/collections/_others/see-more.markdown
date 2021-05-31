@@ -1,7 +1,7 @@
 ---
 layout: project-page
-title: See-more
-description: Check out more of my project by clicking on the icon
+title: Other-projects
+description: Check out more of my project by clicking here.
 permalink: /projects
 ---
 <!---

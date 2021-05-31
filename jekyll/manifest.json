@@ -11,6 +11,24 @@
       "src": "/assets/ghost-cat%5B512x512%5D.png",
       "type": "image/png",
       "sizes": "512x512"
+    },
+    {
+      "src": "/assets/maskable_icon_x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/maskable_icon_x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/maskable_icon.png",
+      "sizes": "240x240",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ],
   "start_url": "/",
