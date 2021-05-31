@@ -173,7 +173,7 @@ jobs:
       - name: Download lighthouse ci
         run: |
           echo "::group::install_lighthouse_ci"
-          npm install -g @lhci/cli@0.3.x
+          npm install -g @lhci/cli@0.7.x
           echo "::endgroup::"
 
       - name: Github Set up Ruby 2.6
