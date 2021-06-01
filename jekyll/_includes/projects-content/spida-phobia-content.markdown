@@ -13,7 +13,7 @@ We built 4 different levels with progressive difficulty in order to help player 
 * The house
 * The cave
 
-#### Levels description
+### Levels description
 1. The Museum: In this level, you can only see inanimate spiders with glasses.
 
 2. The Playground: Once again, only inanimate spiders are present. 
@@ -33,7 +33,7 @@ We made an extra room called "The Portal" room.
 It allows the player to choose in which level he want to start with
 (in case we want to skip so of them or avoid to start over)
    
-#### Bonus features
+### Bonus features
 
 - Safe Exit:  
 Since we know lost of the players will have this phobia, we offer the possibility to quit at any moment the game.
@@ -45,7 +45,7 @@ The player only have to hold both controller's triggers for 3 seconds to comebac
 In every level, a little flying robot is here to assist you and tell you what to do. 
 It also offers a presence to rely on in case of extreme fear.
 
-#### Post-Mortem
+### Post-Mortem
 The big concern we had with our application was the lack of assets. 
 The only spiders we found was not always realistic one and come from a fantasy video game instead.
 

@@ -82,7 +82,7 @@ Tech side
 I decided to code every system we wanted in the game (details below) and stick those simple version yet highly customizable throught Unity editor.
 I'm pretty proud of that and was happy to being able to setup many object with editor instead of having to do them one at the time.
 
-#### Interactables
+### Interactables
 The heart of a point and click is the item you can interact with and use to different purpose.
 By realising that right away, I knew I had to do something generic so a lot of works could be done in the editor. 
 Doing it that way garantie to re-use existing fonctinnality without adding more code and bugs. 
@@ -93,36 +93,36 @@ I could split those down by the effort was too time consuming for a jam.
 
 TODO SCREENSHOT OF EDITOR TOOLS
 
-#### Player movement
+### Player movement
 Point and click games usually include basic character movement. If you click on the ground, the player will move there. That's what we did, with a first iteration making the player move left and right. Sadly, I did not have time to come back on this in order to introduce a more "bouncy", living movements to the character. Plus, a possible improvement would be to adapt the height of the player based on ground variations.
 
-#### Inventory system
+### Inventory system
 I made a simple inventory system which allow to store interactable objects. When interacting with an object, the system knows it can be added to the inventory based on the object type. Later we can drag and drop this item onto another game element to create special behavior.
 
-#### Dialogue system 
+### Dialogue system 
 Point and click are also famous to tell stories. It's really common to have a global mystery to solve or a quest to accomplished.
 I did something really simple, based on scriptable object. 
 I once again, allow to make it data driven by reading as much data as possible in the scriptable object like the position of the asset when triggering the dialogue
 or option to allow overriding the asset by another one if needed.
 
-#### Asset integration
+### Asset integration
 I helped my teammates to integrate assets or even sounds into the game to have their work shine and make it pretty. 
 
-#### What we had to give up on
+### What we had to give up on
 - We wanted to create many different "scenes" were the player could go back on forth to solve more advanced puzzles. Transitions will be enable with a direction arrow on the each side of the theater. 
 - We wanted to create more puzzles with different "interactions" (clicking on a windows will make an clue drop from it, etc.).
 - Create multiple choice dialogues where the player will be able to choose from possible answers. This will allows alternative ends for example. 
 
 Post-Mortem
 --------------------
-#### What helped me a lot
+### What helped me a lot
 * Think of simple architecture design, yet 
 * Heavy use of Singletons (yes, I know it's bad..)
 * Try to showcase my work to my colleagues with early prototype of features.
 * Communication. Ask each member is personal goal for the jam and his availabilities.
 * Usage of some brainstorm techniques. 
 
-#### What could I do better
+### What could I do better
 * Try to study ideas without going too deeply to not waste times.
 * Work assignments (the possibility to work in the engine or not for example).
 * Keep more times for polish (the player character was not as appealing as it should be).

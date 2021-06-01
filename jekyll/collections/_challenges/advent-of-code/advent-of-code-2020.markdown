@@ -11,13 +11,13 @@ Gregoire Boiron <gregoire.boiron@gmail.com>
 Copyright (c) 2018-2021 Gregoire Boiron  All Rights Reserved.
 --->
 
-### Finish it
+## Finish it
 After two unfinished editions, I wanted this time to at least complete all the puzzles.
 To be able to do that, I decided to stick with something simple : do them in plain C++. Without fancing tools or engines this time.
 
 As always, my goal was not to finish it fast, but making sure my solutions are readable, efficient and simple.
 
-### Favorite puzzles
+## Favorite puzzles
 I might forgot some but here are some:
 
 - [RainRisk](https://adventofcode.com/2020/day/12): This puzzle was funny because you could solved part 2 quickly if your part 1 was using a generic algorithm. In this case, using a rotation matrix right away to make the boat rotate will allow to keep the same logic and adapt it a bit (like adding `round()`) to have both solutions.
@@ -30,7 +30,7 @@ Since my part 1 solution was to convert rules into regexp and simply run every m
 What I did to still use my initial soluion was to modify a bit by hand the input to include regex that still express loops but avoid my algorithm to create some.
 I know the limitation of this method and the potential harm it can cause if my `WARNING` comment is ignored. But I was pretty happy to reuse my part 1 without extra headaches. 
 
-### Bonus: Github actions
+## Bonus: Github actions
 I reached my goals and finished all of them a little bit after christmas.
 Having done that, I took some extra times to setup two GitHub actions workflows to do the following:
 

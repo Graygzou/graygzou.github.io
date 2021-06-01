@@ -17,7 +17,7 @@ Compare to all my co-workers (4 of them) that choose C# or C++ which were the ma
 
 Feel free to check all my solutions for each year in my [Github Repository].
 
-#### Why Lua ?
+### Why Lua ?
 You might ask yourself why so much pain ?  
 Well, the answer is simple: I wanted learn something new. 
 The point of my participation was not to solve fast puzzles but more like finding "beautiful algorithms" to solve them.
@@ -28,7 +28,7 @@ So I decided it was a good time to do so !
 I also heard some companies were using lua as a scripting language for their game / engine. 
 Sp I guess, It's always good to have more than one string to your bow.
 
-#### The counter part
+### The counter part
 1) Lua is great in term of scripting. But not so great to deal with some kind of problems. 
 In fact, sometimes puzzles were easy to solve with a bit of abtraction. 
 And, it's not something really straight forward in lua.
@@ -65,7 +65,7 @@ I find myself not finished the AoC 2018.
 Even if I see it as a bit of a failure, I've learned a lot and challenge myself once again.
 I keep some good memories from this experience and will do the next edition for sure.
 
-#### Links
+### Links
 [Github Repository](https://github.com/Graygzou/advent-of-code-2018)
 [advent of code](https://adventofcode.com/2018/)
 [lua documentation](https://www.lua.org/pil/contents.html)

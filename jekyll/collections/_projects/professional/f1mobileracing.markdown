@@ -99,7 +99,7 @@ In the later case, the starting logic was too ambiguous.
 
 Post-Mortem
 --------------------
-#### What helped me a lot
+### What helped me a lot
 * Drawing diagrams to better understand the interaction of each classes to achieve a goal. 
 * Planning and thinking before starting coding: This allows me to better tackle a system rework that was not planned at first. And justify it to my collegues.
 * Asking my pair about their work: Sometimes existing code made by them was already there that could solve my problem.
@@ -108,7 +108,7 @@ Post-Mortem
 (TODO)
 * Using wisely task streams in Perforce just like I used branching in git to avoid problems.
 
-#### What could I do better
+### What could I do better
 * Include more tests as I was fixing bugs and improving the codebase overall
 * Create more documentation on the systems I made. And updating them at the end of the feature / improvements.
 * Ask for meeting to present ideas like introducing a naming convention, creating good architecture to avoid starting over everytime, or even the need to have as soon as possible automated build like Jenkins.

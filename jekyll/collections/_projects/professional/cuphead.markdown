@@ -66,7 +66,7 @@ The main task were related to the UI but also some bugs:
 
 All of the above by keeping an eye on the English version.
 
-#### What I've done
+### What I've done
 * Multi purpose script to move UI element based on the language.
 * Custom editor to make the usage of this script easily.
 * Deploy test build to steam (throught Steamwork) and GOG to test new controllers (Nintendo Switch and Steam controller).
@@ -81,13 +81,13 @@ In 11 new languages !-->
 
 Post-Mortem
 --------------------
-#### What helps me a lot
+### What helps me a lot
 * Cheats in the game (instant win, instant lose, switching between languages, etc.)
 * Self organisation (with a bloc note / write (huge) comments on JIRA task)
 * TextMeshPro features (font generation parameters, per character spacing (kerning), etc.)
 * Work on my own branch and create side branch for bug (which will be rebase when finished)
 
-#### What could be better (made by me)
+### What could be better (made by me)
 * a lot of tasks involved manual QA from me. Which is painful. 
 * Not use -f (force) when using git command (I guess we all have been there...)
 * A tool that take screenshot automatically of the same configuration in many languages would have been super useful.

@@ -11,7 +11,7 @@ Gregoire Boiron <gregoire.boiron@gmail.com>
 Copyright (c) 2018-2021 Gregoire Boiron  All Rights Reserved.
 --->
 
-### Using Lua
+## Using Lua
 You might ask yourself: why so much pain ?  
 Well, the answer is simple: I wanted learn something new and why not useful in the video game industry too.
 The point of my participation was not to solve fast puzzles but more like finding "beautiful algorithms" to solve them.
@@ -22,7 +22,7 @@ So I decided it was a good time to do so !
 I also heard some companies were using lua as a scripting language for their game / engine. 
 So I guess, It's always good to have more than one string to your bow.
 
-### The drawbacks
+## The drawbacks
 1) Lua is great in term of scripting. But not so great to deal with some kind of problems. 
 In fact, sometimes puzzles were easy to solve with a bit of abtraction. 
 And, it's not something really straight forward in lua.
@@ -33,7 +33,7 @@ Or even apply a function to all element of an array. Those things require extra 
 
 <!-- Include "it's a trap" image -->
 
-### Overcome Lua weaknesses
+## Overcome Lua weaknesses
  - Write a lot of unit test:  
 Since I split my work into many function without any classes, I had to make sure every function was doing what is was supposed to do.
 To solve that problem I commit myself to write unit tests and make sure it pass before submitting something. 
