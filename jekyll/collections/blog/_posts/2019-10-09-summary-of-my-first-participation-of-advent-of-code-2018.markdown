@@ -66,6 +66,6 @@ Even if I see it as a bit of a failure, I've learned a lot and challenge myself 
 I keep some good memories from this experience and will do the next edition for sure.
 
 ### Links
-[Github Repository](https://github.com/Graygzou/advent-of-code-2018)
-[advent of code](https://adventofcode.com/2018/)
-[lua documentation](https://www.lua.org/pil/contents.html)
+- [Github Repository](https://github.com/Graygzou/advent-of-code-2018)
+- [advent of code](https://adventofcode.com/2018/)
+- [lua documentation](https://www.lua.org/pil/contents.html)
