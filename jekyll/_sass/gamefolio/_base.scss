@@ -26,8 +26,12 @@ html.transition,
 html.transition *,
 html.transition *:before,
 html.transition *:after {
-    transition: all 650ms !important;
+    transition: all 550ms !important;
     transition-delay: 0 !important;
+}
+
+* {
+  color: var(--text);
 }
 
 /**
@@ -46,7 +50,6 @@ dl, dd, ol, ul, figure {
  */
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-  color: var(--text);
   background-color: var(--bg);
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
