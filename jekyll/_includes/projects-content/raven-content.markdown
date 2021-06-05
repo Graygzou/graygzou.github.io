@@ -32,7 +32,7 @@ This brain used goal-driven behavior to tell the bot what he should do right now
 #### Goal decomposition
 {% capture image_path %}/assets/project-images/raven/goals-composite.png{% endcapture %}
 {% capture image_path_webp %}/assets/webp/goals-composite.webp{% endcapture %}
-{% include images-handler.html alt="goals-composite" filename=image_path webp=image_path_webp %}
+{% include images-handler.html alt="goals-composite" filename=image_path webp=image_path_webp css="right-side-img" %}
 
 This process works just like the human brain : if you want to achieve something, you will decomposed this goal into many sub-goals easier to solve than the first one. 
 And if it's not enough yet, keep doing this until sub-goals granularity are simple enough to be code by a function or a line of code. 
@@ -72,7 +72,8 @@ By adding fuzzy rules to it, we will be able to compute the final value which wi
 
 #### Neural Network
 Finally, we implemented a neural network in this application to let a bot learned how to shoot. 
-To do so, we used a multi-layer perceptron (MLP) and train it to shoot or not with specific inputs. 
+To do so, we used a multi-layer perceptron (MLP) and train it to shoot or not with specific inputs.
+
 Those inputs were the following :
 * Is the enemy visible ? (0 or 1)
 * Does the enemy has maximum health ? (0 or 1)
@@ -84,6 +85,9 @@ We used the back-propagation to trained the network, which is a traditional supe
 To make sure the net was trained, we made tests with other data than our training data and we analysed results. 
 We've find out that our learning process were doing good and we finally tested it in-game.
 
+The final results were correct since the learning bot shoot at the other bots. 
+We even noticed that his score were slightly higher than the average.
+
 {% capture image_path %}/assets/project-images/raven/network.png{% endcapture %}
 {% capture image_path_webp %}/assets/webp/network.webp{% endcapture %}
 {% include images-handler.html alt="network" filename=image_path webp=image_path_webp %}
@@ -93,6 +97,3 @@ We've find out that our learning process were doing good and we finally tested i
 {% capture image_path_webp %}/assets/webp/results.webp{% endcapture %}
 {% include images-handler.html alt="results" filename=image_path webp=image_path_webp %}
 {: .bloc-images}
-
-The final results were correct since the learning bot shoot at the other bots. 
-We even noticed that his score were slightly higher than the average.

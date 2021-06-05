@@ -90,9 +90,25 @@ img {
   vertical-align: middle;
 }
 
+.right-side-img {
+  float: right;
+  width: calc((#{$content-width} - (#{$spacing-unit} * 2))/3);
+  height: 100%;
+  padding: 5px 8px;
+  min-width: 300px;
 
+  @include media-query($on-palm) {
+    float: none;
+    width: 100%;
+    padding: 0px;
+  }
+}
 
-
+.left-side-img {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
 
 
 

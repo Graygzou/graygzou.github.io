@@ -45,7 +45,10 @@ Since the game is multiplayer, we isolate two behaviors:
 So the AI will study players actions and decisions in order to attribute them a score corresponding to a specific behavior. 
 The below chart summarize the meaning of the score each players can get. 
 If the score is negative it means he's in a collaborative mindset. If the score is positive then the player is considered as competitive.
-![Player behavior](/assets/project-images/penguin-panic/adaptativeAi.png)
+
+{% capture image_path %}/assets/project-images/penguin-panic/adaptativeAi.png{% endcapture %}
+{% capture image_path_webp %}/assets/webp/adaptativeAi.webp{% endcapture %}
+{% include images-handler.html alt="player behavior mapped with scores" filename=image_path webp=image_path_webp css="right-side-img" %}
 
 This score will change depending on the action on each players. 
 For example if the player with the most penguins followers decide to eat a fish his score will increase (competitive). 
