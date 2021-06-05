@@ -7,8 +7,8 @@ allowindex: false
 Hello There !
 ==================
 
-{% capture image_path %}/assets/images/gregoire-boiron[300x300].jpg{% endcapture %}
-{% capture image_path_webp %}/assets/webp/gregoire-boiron[300x300].webp{% endcapture %}
+{% capture image_path %}/assets/images/gregoire-boiron[600x600].jpg{% endcapture %}
+{% capture image_path_webp %}/assets/webp/gregoire-boiron[600x600].webp{% endcapture %}
 {% capture image_alt %}gregoire-boiron-thumbnail{% endcapture %}
 {% include images-handler.html alt=image_alt filename=image_path webp=image_path_webp %}
 
