@@ -1,12 +1,10 @@
 <!--- Grégoire Boiron <gregoire.boiron@gmail.com> --->
 <!--- Copyright (c) 2018-2019 Grégoire Boiron  All Rights Reserved. --->
 
-Screenshots
---------------------
-{% include helpers/project-carousel %}
-
 Detailed Info
 --------------------
+{% include helpers/side-image.md path="/assets/project-images/lode-runner/carousel/monde1-2[r200x200]" basename="monde1-2[r200x200]" css="right-side-img" %}
+
 Lode Runner is a single player game where level can be seen as puzzles. 
 We made 4 levels to test and show our game. 
 We made sure to insert every items and blocs we developed so far. 
@@ -17,6 +15,8 @@ Each level belong to one of the world the player as to go through :
 * Death World
 
 ### Game Features
+{% include helpers/side-image.md path="/assets/project-images/lode-runner/carousel/monde2-3[r200x200]" basename="monde2-3[r200x200]" css="right-side-img" %}
+
 * Player movements (ZQSD)
 * Player abilities (break a dirt cube, pick up an object, use an object)
 * Custom puzzles floor (wood, stone, glue) to make puzzles harder and fun.

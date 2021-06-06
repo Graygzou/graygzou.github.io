@@ -64,12 +64,10 @@ Gregoire Boiron <gregoire.boiron@gmail.com>
 Copyright (c) 2018-2021 Gregoire Boiron  All Rights Reserved.
 --->
 
-Screenshots
---------------------
-{% include helpers/project-carousel %}
-
 Detailed Info
 --------------------
+{% include helpers/side-image.md path="/assets/project-images/memory-lost-in-the-red-whoody/carousel/menu-start[r200x200].png" basename="menu-start[r200x200]" css="right-side-img" %}
+
 This game jam was my 4th game jam and the first one not knowing my team before the event.
 
 We decided to go for something as simple as possible to avoid getting lost on complicated things since we couldn't help each other on technical stuffs.
@@ -83,6 +81,8 @@ I decided to code every system we wanted in the game (details below) and stick t
 I'm pretty proud of that and was happy to being able to setup many object with editor instead of having to do them one at the time.
 
 ### Interactables
+{% include helpers/side-image.md path="/assets/project-images/memory-lost-in-the-red-whoody/carousel/menu-start[r200x200].png" basename="menu-start[r200x200]" css="left-side-img" %}
+
 The heart of a point and click is the item you can interact with and use to different purpose.
 By realising that right away, I knew I had to do something generic so a lot of works could be done in the editor. 
 Doing it that way garantie to re-use existing fonctinnality without adding more code and bugs. 
@@ -99,7 +99,9 @@ Point and click games usually include basic character movement. If you click on 
 ### Inventory system
 I made a simple inventory system which allow to store interactable objects. When interacting with an object, the system knows it can be added to the inventory based on the object type. Later we can drag and drop this item onto another game element to create special behavior.
 
-### Dialogue system 
+### Dialogue system
+{% include helpers/side-image.md path="/assets/project-images/memory-lost-in-the-red-whoody/carousel/menu-start[r200x200].png" basename="menu-start[r200x200]" css="left-side-img" %}
+
 Point and click are also famous to tell stories. It's really common to have a global mystery to solve or a quest to accomplished.
 I did something really simple, based on scriptable object. 
 I once again, allow to make it data driven by reading as much data as possible in the scriptable object like the position of the asset when triggering the dialogue
@@ -115,6 +117,8 @@ I helped my teammates to integrate assets or even sounds into the game to have t
 
 Post-Mortem
 --------------------
+{% include helpers/side-image.md path="/assets/project-images/memory-lost-in-the-red-whoody/carousel/menu-start[r200x200].png" basename="menu-start[r200x200]" css="right-side-img" %}
+
 ### What helped me a lot
 * Think of simple architecture design, yet 
 * Heavy use of Singletons (yes, I know it's bad..)

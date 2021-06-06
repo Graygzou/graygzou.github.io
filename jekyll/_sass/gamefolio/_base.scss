@@ -95,9 +95,20 @@ img {
 
 .right-side-img {
   float: right;
+  padding: 5px 0px 5px 12px;
+  @extend %side-img;
+}
+
+.left-side-img {
+  float: left;
+  padding: 5px 12px 5px 0px;
+  @extend %side-img;
+}
+
+
+%side-img {
   width: calc((#{$content-width} - (#{$spacing-unit} * 2))/3);
   height: 100%;
-  padding: 5px 8px;
   min-width: 300px;
 
   @include media-query($on-palm) {
@@ -106,13 +117,6 @@ img {
     padding: 0px;
   }
 }
-
-.left-side-img {
-  float: left;
-  width: 50%;
-  height: 100%;
-}
-
 
 
 /**

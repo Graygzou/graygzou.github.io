@@ -47,12 +47,10 @@ Gregoire Boiron <gregoire.boiron@gmail.com>
 Copyright (c) 2018-2019 Gregoire Boiron  All Rights Reserved.
 --->
 
-Screenshots
---------------------
-{% include helpers/project-carousel %}
-
 Detailed Info
 --------------------
+{% include helpers/side-image.md path="/assets/project-images/unleashed/carousel/concept-art[r200x200].png" basename="concept-art[r200x200]" css="right-side-img" %}
+
 I only worked less than 2 months on this project because the scope of it has been shortened.
 The new pitch was the following :
 You play as Meiji, a powerful Kaiju who return on his origins as his childhood memory comes back.
@@ -67,6 +65,8 @@ As the story goes one, Meiji will learn about himself by also make decisions tha
 * HUD Animations
 * Communicate with various member of the team with different knowledge.
 
+{% include helpers/side-image.md path="/assets/project-images/unleashed/carousel/environment-skull[r200x200].png" basename="environment-skull[r200x200]" css="right-side-img" %}
+
 #### ECS
 I had to learn a bit what ECS means in Unity. 
 I'd already made a project with the "Entity Component System" paradigm in the past so I knew some of the theory behind it.
@@ -74,6 +74,8 @@ I still have to know more technical stuff like:
 - "You can only declare `mutables types` like integers, byte, etc. in Components. Arrays are forbidden."
 - "You cannot use `mathf`."
 - "You can't have direct references between objects. You can only declare `struct` with a field and find the ref later on to add it to the right field."
+
+{% include helpers/side-image.md path="/assets/project-images/unleashed/carousel/meiju[r200x200].png" basename="meiju[r200x200]" css="left-side-img" %}
 
 The UI was only made with the old GameObject methods since ECS was not ready for that yet. 
 But I had to write code in ECS in order to gather the HUD information I needed.

@@ -1,12 +1,9 @@
 <!--- Grégoire Boiron <gregoire.boiron@gmail.com> --->
 <!--- Copyright (c) 2018-2019 Grégoire Boiron  All Rights Reserved. --->
 
-Screenshots
---------------------
-{% include helpers/project-carousel %}
-
 Detailed Info
 --------------------
+{% include helpers/side-image.md path="/assets/project-images/penguin-panic/carousel/penguin-home-screen[r200x200].png" basename="penguin-home-screen[r200x200]" css="right-side-img" %}
 
 ### What I've done
 
@@ -25,6 +22,8 @@ To have random waves we thought about `Perlin noise`.
 It could create the height map that would correspond on the position of each vertex on given time.
 Halfway through the project, we realize that a technique called that use `Fast Fourier Transform` could generate an ocean.
 But we thought this technique alone will not be enough to deal with waves and water interactions.
+
+{% include helpers/side-image.md path="/assets/project-images/penguin-panic/carousel/tutorial-intro[r200x200]" basename="tutorial-intro[r200x200]" css="left-side-img" %}
 
 We found a paper about `IWave algorithm` and dig more into it. This paper called [Interactive water surface](http://jerrytessendorf.blogspot.com/2011/10/interactive-water-surfaces-jerry.html) is available on Jerry Tessendorf's website at the previous link.
 We also study a physic based buoyancy to match the water perfectly. 

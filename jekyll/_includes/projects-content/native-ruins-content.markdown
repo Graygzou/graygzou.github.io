@@ -14,12 +14,10 @@ For more details about the game and the core mechanics, take a look at the Game 
 
 Click here to take a look at the GDD : [Game Design Document - Native Ruins](/assets/Game Design Document - Native Ruins.pdf).
 
-Screenshots
---------------------
-{% include helpers/project-carousel %}
-
 Detailed Info
 --------------------
+{% include helpers/side-image.md path="/assets/project-images/lode-runner/carousel/Menu[r200x200]" basename="Menu[r200x200]" css="right-side-img" %}
+
 Native Ruins is survival, open world game. 
 The player can have fun discovering the island and also by solving puzzles. 
 It takes around 30 minutes to finish the game if the player doesn't get too lost in the island.
@@ -35,6 +33,8 @@ Here a list of main features we implements in this video game :
 | Fighting system (losing health and apply damages)             | Physics system bag (dropping objects and interact with them) |
 
 ### IA techniques
+{% include helpers/side-image.md path="/assets/project-images/native-ruins/carousel/Bag[r200x200]" basename="Bag[r200x200]" css="left-side-img" %}
+
 #### Steering Behavior
 To make animals move, we decided to implements a steering behavior scripts based on vector forces. 
 By doing that, we did not used the navigation mesh (NavMesh) already implemented in Unity. 
@@ -43,6 +43,8 @@ By doing that, we let the possibility to improve animals movements way easier li
 This movement will not be simple to make only with Unity's NavMesh.
 
 #### Finite State Machine (FSM)
+{% include helpers/side-image.md path="/assets/project-images/native-ruins/carousel/Bow[r200x200]" basename="Bow[r200x200]" css="right-side-img" %}
+
 We also decided to implements a Finite State Machine to describe animals behaviors. 
 This allow to make human like behaviors and make it more realistic.
 
