@@ -45,9 +45,10 @@
 
   @include media-query($on-palm) {
     position: absolute;
+    z-index: 1;
     top: 9px;
     right: 50px;
-    background-color: $background-color;
+    background-color: var(--bg);
     border: 1px solid var(--bg-tertiary);
     border-radius: 5px;
     text-align: right;

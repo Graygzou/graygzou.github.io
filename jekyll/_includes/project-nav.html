@@ -15,13 +15,8 @@
 
 <nav class="project-nav">
   {% if previous and next %}
-  {% if previous.title.size > next.title.size %}
   <a class="project-nav-full" href="{{ previous.url }}">Previous : {{ previous.title }}</a>
   <a class="project-nav-full" style="float: right; text-align: right;" href="{{ next.url }}">Next : {{ next.title }}</a>
-  {% else %}
-  <a class="project-nav-full" style="float: left;" href="{{ previous.url }}">Previous : {{ previous.title }}</a>
-  <a class="project-nav-full" href="{{ next.url }}">Next : {{ next.title }}</a>
-  {% endif %}
   {% elsif previous %}
   <a class="project-nav" href="{{ previous.url }}">Previous : {{ previous.title }}</a>
   {% elsif next %}
