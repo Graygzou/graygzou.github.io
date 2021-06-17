@@ -21,6 +21,13 @@
   {% endif %}
   <!-- Javascript -->
   <script src="/scripts/dark-mode.js"></script>
+
+  <!-- Use https://github.com/ampproject/amphtml/blob/master/extensions/amp-youtube/0.1/test/validator-amp-youtube.html to load youtube video faster -->
+  {% if page.youtube-link and page.youtube-link != "" and page.youtube-link != nil %}
+  <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-latest.js"></script>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  {% endif %}
+
   {%- if site.use_analytics -%}
     {% include google-analytics.html %}
   {%- endif -%}

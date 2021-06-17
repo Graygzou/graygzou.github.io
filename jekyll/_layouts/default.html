@@ -15,12 +15,6 @@
     {%- include footer.html -%}
 
     <script src="/scripts/service-worker-helper.js"></script>
-    <!-- Use https://github.com/ampproject/amphtml/blob/master/extensions/amp-youtube/0.1/test/validator-amp-youtube.html to load youtube video faster -->
-    {% if page.youtube-link and page.youtube-link != "" and page.youtube-link != nil %}
-    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-latest.js"></script>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-    {% endif %}
-
     <div class="offline-ready">Site is Ready for Offline Use</div>
   </body>
 
