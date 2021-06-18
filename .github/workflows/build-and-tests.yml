@@ -230,3 +230,4 @@ jobs:
           echo "::group::kill_local_build"
           pkill -f jekyll
           echo "::endgroup::"
+        if: always()

@@ -37,7 +37,8 @@
       "preset": "lighthouse:recommended",
       "assertions": {
         "offscreen-images": "off",
-        "uses-webp-images": "off"
+        "uses-webp-images": "off",
+        "unused-javascript": ["warn", {"minScore": 1}]
       }
     },
     "upload": {
