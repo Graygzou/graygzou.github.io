@@ -66,7 +66,7 @@ Copyright (c) 2018-2021 Gregoire Boiron  All Rights Reserved.
 
 Detailed Info
 --------------------
-{% include helpers/side-image.md path="/assets/project-images/memory-lost-in-the-red-whoody/carousel/memory-menu-start[r500x500].png" basename="memory-menu-start[r500x500]" css="right-side-img" %}
+{% include helpers/side-image.md path="/assets/project-images/memory-lost-in-the-red-whoody/carousel/memory-start-menu[r500x500].png" basename="memory-start-menu[r500x500]" css="right-side-img" %}
 
 This game jam was my 4th game jam and the first one not knowing my team before the event.
 
@@ -100,10 +100,12 @@ Point and click games usually include basic character movement. If you click on 
 I made a simple inventory system which allow to store interactable objects. When interacting with an object, the system knows it can be added to the inventory based on the object type. Later we can drag and drop this item onto another game element to create special behavior.
 
 ### Dialogue system
-{% include helpers/side-image.md path="/assets/project-images/memory-lost-in-the-red-whoody/carousel/memory-player-dialogue[r500x500].png" basename="memory-player-dialogue[r500x500]" css="left-side-img" %}
+{% include helpers/side-image.md path="/assets/project-images/memory-lost-in-the-red-whoody/carousel/memory-grandma-dialogue[r500x500].png" basename="memory-grandma-dialogue[r500x500]" css="left-side-img" %}
 
 Point and click are also famous to tell stories. It's really common to have a global mystery to solve or a quest to accomplished.
-I did something really simple, based on scriptable object. 
+
+I did something really simple, based on scriptable object.
+
 I once again, allow to make it data driven by reading as much data as possible in the scriptable object like the position of the asset when triggering the dialogue
 or option to allow overriding the asset by another one if needed.
 
@@ -117,14 +119,14 @@ I helped my teammates to integrate assets or even sounds into the game to have t
 
 Post-Mortem
 --------------------
-{% include helpers/side-image.md path="/assets/project-images/memory-lost-in-the-red-whoody/carousel/memory-grandma-dialogue[r500x500].png" basename="memory-grandma-dialogue[r500x500]" css="right-side-img" %}
+{% include helpers/side-image.md path="/assets/project-images/memory-lost-in-the-red-whoody/carousel/memory-credits[r500x500].png" basename="memory-credits[r500x500]" css="right-side-img" %}
 
 ### What helped me a lot
-* Think of simple architecture design, yet 
+* Think of simple architecture design, yet effective.
 * Heavy use of Singletons (yes, I know it's bad..)
 * Try to showcase my work to my colleagues with early prototype of features.
-* Communication. Ask each member is personal goal for the jam and his availabilities.
-* Usage of some brainstorm techniques. 
+* Communication. Ask each member his goal for the jam and his global availabilities.
+* Usage of some brainstorm techniques.
 
 ### What could I do better
 * Try to study ideas without going too deeply to not waste times.
