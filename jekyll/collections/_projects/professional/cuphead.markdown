@@ -17,10 +17,7 @@ pitch: "_Cuphead_ is a 2D Run and gun game published by StudioMDHR in 2017.
          <br/>
          <br/>
          I worked on the major patch of April 2019 which contains, the nintendo switch released, Mugman mode and localization in 11 languages of the game.
-         Most of my work where on the UI to fix bugs related to all the new languages in the game.
-         <br/>
-         <br/>
-         More details of this game can be found here : [wikipedia](https://en.wikipedia.org/wiki/Cuphead)"
+         Most of my work where on the UI to fix bugs related to all the new languages in the game."
 pinned: true
 platforms: Windows, Linux, Mac, Nintendo Switch
 engines: Unity3D
@@ -61,7 +58,7 @@ The main task were related to the UI but also some bugs:
 
 | UI bugs fixes | UI Integration |
 | UI animations bugs fixes | UI features (make the glow of the boss title) |
-| controllers bugs | bring legacy branch up-to-date (git task) |
+| controllers bugs | bring legacy branch up-to-date (git) |
 | localization bugs |  |
 
 All of the above by keeping an eye on the English version.

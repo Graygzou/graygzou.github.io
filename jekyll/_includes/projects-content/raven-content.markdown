@@ -1,10 +1,6 @@
 <!--- Grégoire Boiron <gregoire.boiron@gmail.com> --->
 <!--- Copyright (c) 2018-2019 Gregoire Boiron  All Rights Reserved. --->
 
-Screenshots
---------------------
-{% include helpers/project-carousel %}
-
 Detailed Info
 --------------------
 When starting the game, several bots spawned controlled by similar AI trying to win, by killing as many bots as possible.
@@ -15,7 +11,7 @@ All the below techniques were already in the game or added by the team into Rave
 
 The final goal was to make bots behave like human as much as possible and create the illusion to playing against thinking humans.
 
-### Added Features
+### Features Added
 * A human player and custom controls (ZQSD movement with mouse scroll to switch weapons).
 * Introduce `fuzzy logic` to bots.
 * New weapon in the game : a grenade.

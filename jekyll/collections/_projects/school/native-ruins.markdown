@@ -59,11 +59,6 @@ youtube-link: 2tzLruIYMcg
 project_links:
   - name: github
     url: https://github.com/Graygzou/native-ruins
-key-dates:
-  - 2019-07-27 20:26:29 -0400
-  - 2019-01-20 20:26:29 -0400
-  - 2019-08-20 20:26:29 -0400
-  - 2019-03-20 20:26:29 -0400
 additional-sections:
   - name: goals
     list: ["Apply basics principles of game development with tools used in industry",

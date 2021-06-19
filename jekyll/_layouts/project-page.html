@@ -74,7 +74,7 @@ layout: default
     <ul class="social-media-links project-headers-links">
       {%- if page.project_links -%}{%- for link in page.project_links -%}
       <li>
-        <a href="{{ link.url | escape }}" aria-label="{{ link.name }}">
+        <a href="{{ link.url | escape }}" aria-label="{{ link.name }}" target="_blank" rel="noopener noreferrer">
           <svg class="svg-icon" width="16px" height="16px">
             <use xlink:href="{{ '/assets/icons/gamefolio-social-icons.svg#' | append: link.name | relative_url }}">
             </use>

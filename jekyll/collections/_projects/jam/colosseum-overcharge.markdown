@@ -10,6 +10,7 @@ languages:
       color: green
 tags: ['unity3d', 'gamejam', 'gmtk2019', 'puzzle-game']
 category: 'jam'
+published: false
 pitch: "Colosseum Overcharge is a 2.5D multiplayers brawler. This game has been made for the Ludum Dare 45 (2019). 
         The official website of this event is the following: Ludum dare 45.
         <br/><br/>

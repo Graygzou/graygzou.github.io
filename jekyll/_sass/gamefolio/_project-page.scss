@@ -61,6 +61,7 @@
   	width: $content-aside;
 	vertical-align: top;
 	text-align: left;
+	padding-right: 5px;
 
 	div {
 		margin-bottom: 10px;
@@ -117,6 +118,11 @@
 	max-width: calc((#{$content-width} - (#{$spacing-unit} * 3)));
 	text-align: left;
 	vertical-align: top;
+	overflow: auto;
+
+	@include media-query($on-palm) {
+		overflow: inherit;
+	}
 }
 
 .detailed_description {

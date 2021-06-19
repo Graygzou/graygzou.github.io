@@ -14,7 +14,7 @@ languages:
   - name: GLSL
     percentage: 1.5
     color: "#ccc"
-
+published: false
 category: 'school'
 pitch: "Metenorage is a Java engine made for a school project at the Université du Québec à Chicoutimi (UQAC).
         The course is the following : [Game Engines Principles (8INF871)](http://cours.uqac.ca/8INF871).
