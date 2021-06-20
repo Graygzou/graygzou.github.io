@@ -50,7 +50,7 @@ pitch: "Raven is a top down 2D game, similar to a Quake-style deathmatch.
         It is originaly made by Mat Bucklandin his book, Programming Game AI By Example.
         This application has been completed for a school project at the Université du Québec à Chicoutimi (UQAC).
         
-        The course is the following: [Artificial Intelligence for Video Games (8IAR125)](http://cours.uqac.ca/8IAR125){:target='_blank'}. <br><br>
+        The course is the following: [Artificial Intelligence for Video Games (8IAR125)](http://cours.uqac.ca/8IAR125){:target='_blank' rel='noopener noreferrer'}. <br><br>
 
         The gameplay of Raven is similar of a Quake-style deathmatch.
         When starting the game, severals bots spawned controlled by similar AI trying to win, by killing as many bots as possible.

@@ -19,7 +19,7 @@ category: 'jam'
 pitch: "_Memory-lost-in-the-(Red)-W(h)ood(y)_ is a Point and click game. 
         This application has been completed for the Global Game Jam 2021 organized in January.
         This edition was the first one fully remote due to covid-19.
-        The official website of this event is the following: [Global Game Jam](https://globalgamejam.org/){:target='_blank'}.
+        The official website of this event is the following: [Global Game Jam](https://globalgamejam.org/){:target='_blank' rel='noopener noreferrer'}.
         <br/>
         <br/>
         Observe, Think and interact with your mouse to solve this beautiful and relaxing game.
@@ -73,7 +73,7 @@ This game jam was my 4th game jam and the first one not knowing my team before t
 We decided to go for something as simple as possible to avoid getting lost on complicated things since we couldn't help each other on technical stuffs.
 That's why we went for a point and click.
 
-One of the member of the team came up with [TOHU](https://www.youtube.com/watch?v=EkzFwtn9Hpg){:target='_blank'} as an example. It help us see what we wanted to achieve as gameplay but also a bit as a visual idae of what the game could look like.
+One of the member of the team came up with [TOHU](https://www.youtube.com/watch?v=EkzFwtn9Hpg){:target='_blank' rel='noopener noreferrer'} as an example. It help us see what we wanted to achieve as gameplay but also a bit as a visual idae of what the game could look like.
 
 Tech side
 --------------------
