@@ -22,7 +22,7 @@ pinned: true
 platforms: Windows, Linux, Mac, Nintendo Switch
 engines: Unity3D
 tools: [Rewired, TextMeshPro, Git, Steam Upload, Jira, SDEV (Switch), Paint.net, Jenkins]
-duration: "4 months"
+duration: "6 months"
 team-size:
   - role: Programmer
     amount: 3 (2 abroad)
@@ -51,17 +51,42 @@ Copyright (c) 2018-2019 Gregoire Boiron  All Rights Reserved.
 
 Detailed Info
 --------------------
-I had the chance to work on Cuphead made by the MDHR studio during my internship.
-I had to provide a high level of polish on an already launched game for his new update.
+I had the chance to work on Cuphead made by the MDHR studio during my internship. At this time, the game was already launched.
 
-The main task were related to the UI but also some bugs:
+My mission was to resolve bugs and also polish with extreme the gameto be ready for his new update. In this update, the team ported the game on nintendo switch but also localized it in eleven additional languages. [All information of this update](http://studiomdhr.com/cuphead-is-coming-to-nintendo-switch-plus-new-free-content-for-everyone/){:target="_blank" rel="noopener noreferrer"} can be found in the link.
+
+The main task I worked on were related to UI in general:
+
+{% include helpers/side-image.md path="/assets/project-images/unleashed/carousel/environment-skull[r500x500].png" basename="environment-skull[r500x500]" css="right-side-img" %}
 
 | UI bugs fixes | UI Integration |
 | UI animations bugs fixes | UI features (make the glow of the boss title) |
 | controllers bugs | bring legacy branch up-to-date (git) |
 | localization bugs |  |
 
-All of the above by keeping an eye on the English version.
+All of the above by keeping an eye on the English version. Which create a lot of "back and forth" from English to other languages. 
+
+### Boss glow for images
+This problem arised as soon as some boss titles were not made in TextMeshPro. Boss titles are display just before entering a boss fight. And making them sweet and appealing is a huge deal.
+
+Indeed, japanese, chinese and korean boss titles were images due to the desire to keep hand written style for those.
+
+So the goal here was to fake a glow behind them in some way. The challenge was we did not have artists available to make it.
+
+Luckily we came up with an idea to make it happen. To trick was to create a sprite of the glow "offline" to display it under the boss name. 
+
+{% capture basenames %}environment-skull[r500x500],environment-skull[r500x500],environment-skull[r500x500]{% endcapture %}
+{% include helpers/list-image.md path="/assets/project-images/unleashed/carousel/" basenames=basenames extension="png" %}
+
+To summarize it from my memories, to generate it, we used an empty scene, a camera and a render texture. The camera had a bloom script attached to it. The image of the boss title we wanted to create the glow for was display in the right position on screen.
+
+I created a little script that waited 1 frame just after the play mode. The goal was to save what the camera was rendering and save it as an asset. If we waited more than one frame, the Bloom was expanding on the entire screen, which was not what we wanted.
+
+Once the texture was saved, I had to opened it in a image editing tool to only keep the glow alone and make the rest transparent.
+
+We had to make a couple of iterations on the bloom to make sure it was correctly setup for our needs.
+
+By doing it that way, we avoid having to care about performance issue related to trigger a post effect at runtime. Which is always costly. But we had to add a lot of additional sprites in the project 
 
 ### What I've done
 * Multi purpose script to move UI element based on the language.
@@ -70,21 +95,35 @@ All of the above by keeping an eye on the English version.
 * Communicate with the maximum of people involved to be sure what the game looks like was fine 
 (even if most of the time they were checking, at the beginning at least).
 
+#### Be really accurate
+{% include helpers/side-image.md path="/assets/project-images/unleashed/carousel/environment-skull[r500x500].png" basename="environment-skull[r500x500]" css="left-side-img" %}
+
+What make the process slow was the number of iterations and back and forth I had to make 
+
 <!--
 To give an order of size Cuphead is :
 - 81 death quotes
 - 
 In 11 new languages !-->
 
+Positon well glyphs and make sure hightlighted text is kept between languages.
+Cutscenes.
+Soul contract, player menu, speech bubbles.
+Options
+Tutorial options
+etc.
+
+
 Post-Mortem
 --------------------
-### What helps me a lot
+### What helped me a lot
 * Cheats in the game (instant win, instant lose, switching between languages, etc.)
+* Communicate on bugs I found in the game that were not listed on my side.
 * Self organisation (with a bloc note / write (huge) comments on JIRA task)
 * TextMeshPro features (font generation parameters, per character spacing (kerning), etc.)
 * Work on my own branch and create side branch for bug (which will be rebase when finished)
+* Usage of [Wayback Machine](http://web.archive.org/){:target="_blank"  rel="noopener noreferrer"} to find documentation from an older version of a plugin
 
-### What could be better (made by me)
-* a lot of tasks involved manual QA from me. Which is painful. 
+### What could be better
+* A tool that take screenshot automatically of the same configuration in many languages would have been super useful. Because a lot of tasks involved manual QA from me. Which is painful.
 * Not use -f (force) when using git command (I guess we all have been there...)
-* A tool that take screenshot automatically of the same configuration in many languages would have been super useful.
